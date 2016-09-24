@@ -1,3 +1,6 @@
+/* change bootsrap-vars in here */
+/* override here bootstrap-variables */
+/*$body-bg: #123123;*/
 .blog-navigation .navbar-brand img {
   max-height: 50px; }
 
@@ -9,7 +12,6 @@
 /* full-width */
 /*page page-id-1717 page-template-default logged-in admin-bar no-customize-support*/
 /*page page-id-1717 page-template page-template-template-fullwidth page-template-template-fullwidth-php logged-in admin-bar no-customize-support*/
-/*$body-bg: red;*/
 /* Push main sections down */
 .site-info {
   height: 60px; }
@@ -25,7 +27,7 @@
     .site-info .site-copyright p {
       font-size: .8em; }
 
-/*import bootstrap at the very last end, so we can use it's variables'*/
+/* import bootstrap at the very last end, so we can use it's variables */
 /*!
  * Bootstrap v4.0.0-alpha.4 (http://getbootstrap.com)
  * Copyright 2011-2016 The Bootstrap Authors

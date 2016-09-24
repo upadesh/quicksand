@@ -1,3 +1,4 @@
+<!-- .post-meta --> 
 <div class="post-meta">
     <?php if (has_category()) : ?>
         <p class="text-right">
@@ -6,7 +7,7 @@
     <?php endif; ?>
     <?php if (has_tag()) : ?>
         <p class="text-right">
-            <span class="fa fa-tags"></span><?php the_tags(); ?></p> 
+            <span class="fa fa-tags"></span><?php the_tags(); ?> 
         </p>
     <?php endif; ?> 
     <p>

@@ -32,37 +32,19 @@ get_header();
         endif;
         ?> 
 
+        <?php
+        // navigation: post-list 
+        the_posts_pagination(array(
+            'prev_text' => __('Previous page', 'twentysixteen'),
+            'next_text' => __('Next page', 'twentysixteen'),
+            'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'twentysixteen') . ' </span>',
+        ));
+        ?>
 
-        <!-- navigation: post-list -->
-        <nav class="post-list-navigation">
-            <ul class="pagination">
-                <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item active">
-                    <a class="page-link" href="#">1 
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                <li class="page-item next">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>
-            </ul>
-        </nav> 
     </main><!-- .site-content-area  --> 
 
 
-    <?php get_sidebar(); ?>
+<?php get_sidebar(); ?>
 
 
 </div><!-- row-->

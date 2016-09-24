@@ -22,7 +22,7 @@
         <!--<link rel="icon" href="img/favicon.ico">-->  
         <?php wp_head(); ?>
     </head>
-    <body <?php body_class(); ?> 
+    <body <?php body_class(); ?>> 
 
         <!-- site-main-container --> 
         <div class="container site-main-container"> 
@@ -41,7 +41,7 @@
                             <!--<a class="navbar-brand" href="#">Navbar</a>-->
                             <div class="navbar-header">
                                 <a class="navbar-brand" href="/">
-                                    <img alt="Brand" src="img/deciduous_tree.png">
+                                    <img alt="Brand" src="<?php echo get_template_directory_uri(); ?>/img/logo.png">
                                 </a>
                             </div>
                             <ul class="site-nav-list nav navbar-nav  pull-xs-right">

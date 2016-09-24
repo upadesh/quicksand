@@ -1,8 +1,10 @@
+/* change bootsrap-vars in here */
+@import 'bootstrap-variables';
 @import 'navbar';
 @import 'grids';
 @import 'blog-scaffold';
 @import 'footer-info';
-/*import bootstrap at the very last end, so we can use it's variables'*/
+/* import bootstrap at the very last end, so we can use it's variables */
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 
 
