@@ -76,3 +76,32 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
 
 endif; // wp_bs_theme_simple_setup
 add_action('after_setup_theme', 'wp_bs_theme_simple_setup');
+
+
+
+
+
+/**
+ * Registers a widget area.
+ *
+ * @link https://developer.wordpress.org/reference/functions/register_sidebar/
+ *
+ * @since Twenty Sixteen 1.0
+ */
+if (!function_exists('wp_bs_theme_simple_widgets_init')) :
+
+    function wp_bs_theme_simple_widgets_init() {
+        register_sidebar(array(
+            'name' => __('Sidebar', 'wp_bs_theme_simple'),
+            'id' => 'sidebar-1',
+            'description' => __('Add widgets here to appear in your sidebar.', 'wp_bs_theme_simple'),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
+        ));
+    }
+
+endif;
+
+add_action('widgets_init', 'wp_bs_theme_simple_widgets_init');
