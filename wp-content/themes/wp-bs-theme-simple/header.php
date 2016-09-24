@@ -66,7 +66,7 @@
                 <!-- site-bloginfo -->
                 <?php if (has_header_image()) { ?>
                     <div class="site-bloginfo">  
-                        <a href=" <?php home_url(); ?>">
+                        <a href=" <?php echo home_url(); ?>">
                             <img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( esc_attr(get_bloginfo('title')) ); ?>" class="img-fluid" /> 
                         </a>
                     </div>
