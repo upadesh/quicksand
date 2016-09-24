@@ -30,12 +30,13 @@ module.exports = function (grunt) {
         concat: {
             css: {
                 src: [ 
-                    'node_modules/font-awesome/css/font-awesome.css',
 //                    'node_modules/tether/dist/css/tether.css',
 //                    'node_modules/bootstrap/dist/css/bootstrap.css',
+//                    always app.css first, because of the theme-description
                     'dev/css/app.css',
+                    'node_modules/font-awesome/css/font-awesome.css',
                 ],
-                dest: 'css/<%= pkg.name %>.css'
+                dest: 'css/<%= pkg.name %>.css' 
             },
             js: {
                 src: [
@@ -91,7 +92,7 @@ module.exports = function (grunt) {
                 }
             },
             css: {
-                files: [
+                files: [ 
                     'dev/scss/*.scss',
                     'node_modules/bootstrap/dist/css/*.css'
                 ],

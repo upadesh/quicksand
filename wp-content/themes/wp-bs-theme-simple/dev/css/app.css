@@ -1,5 +1,17 @@
-/*@import 'colors';
-@import 'post';*/
+/*
+Theme Name: wp-bs-theme-simple
+Theme URI: https://github.com/piccard21/wp-bs-theme-simple
+Author: piccard
+Author URI: https://piccard.de/
+Description: a simple bootstrap 4 theme
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, right-sidebar, responsive-layout, fluid-layout, custom-menu
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
 .blog-navigation .navbar-brand img {
   max-height: 50px; }
 
