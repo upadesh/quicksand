@@ -1,7 +1,7 @@
 
 <!-- post --> 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <?php 
+    <?php
     // -- post thumbnail --
     wp_bs_theme_simple_post_thumbnail();
     ?>
@@ -11,26 +11,24 @@
         <!-- .entry-title -->   
         <?php
         if (is_singular()) :
-            the_title('<h1 class="entry-title">', '</h1>'); 
+            the_title('<h1 class="entry-title">', '</h1>');
         endif;
         ?> 
     </header><!-- .entry-header -->   
 
 
     <!-- .entry-content --> 
-    <div class="entry-content"> 
-        <p> 
-            <?php
-            /* translators: %s: Name of current post */
+    <div class="entry-content">  
+        <?php
+        /* translators: %s: Name of current post */
 //            the_content(
 //                    sprintf(
 //                            __('Continue reading %s', 'wp-bs-theme-simple'), the_title('<span class="screen-reader-text">', '</span>', false)
 //                    )
 //            );
 
-                the_content();
-            ?>
-        </p>   
+        the_content();
+        ?> 
     </div><!-- .entry-content -->   
 
 

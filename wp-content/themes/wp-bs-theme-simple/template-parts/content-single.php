@@ -41,8 +41,7 @@
 
 
     <!-- .entry-content --> 
-    <div class="entry-content"> 
-        <p> 
+    <div class="entry-content">  
             <?php
             /* translators: %s: Name of current post */
 //            the_content(
@@ -52,8 +51,7 @@
 //            );
 
             the_content();
-            ?>
-        </p>   
+            ?> 
     </div><!-- .entry-content -->   
 
 
