@@ -31,8 +31,6 @@ get_header();
                 if (comments_open() || get_comments_number()) {
                     comments_template();
                 }
-
-
             endwhile;
         else :
             ?><p><?php _e('Sorry, no posts matched your criteria.', 'wp-bs-theme-simple'); ?></p><?php
@@ -43,11 +41,29 @@ get_header();
 
         <div class = "post-navigation">
             <?php
-            the_post_navigation(array(
-                'next_text' => '%title &raquo;',
-                'prev_text' => '&laquo; %title',
-                'screen_reader_text' => __('Continue Reading'),
-            ));
+//            the_post_navigation(array(
+//                'next_text' => '%title &raquo;',
+//                'prev_text' => '&laquo; %title',
+//                'screen_reader_text' => __('Continue Reading'),
+//            )); 
+
+
+            if (is_singular('attachment')) {
+                // Parent post navigation.
+                the_post_navigation(array(
+                    'prev_text' => _x('<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'wp-bs-theme-simple'),
+                ));
+            } elseif (is_singular('post')) {
+                // Previous/next post navigation.
+                the_post_navigation(array(
+                    'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'wp-bs-theme-simple') . '</span> ' .
+                    '<span class="screen-reader-text">' . __('Next post:', 'wp-bs-theme-simple') . '</span> ' .
+                    '<span class="post-title">%title</span>',
+                    'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'wp-bs-theme-simple') . '</span> ' .
+                    '<span class="screen-reader-text">' . __('Previous post:', 'wp-bs-theme-simple') . '</span> ' .
+                    '<span class="post-title">%title</span>',
+                ));
+            }
             ?>
         </div>
 

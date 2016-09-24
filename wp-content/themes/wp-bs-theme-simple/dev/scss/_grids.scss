@@ -1,10 +1,23 @@
 /* grid-patterns */
-.site-content { 
-    #primary {
-        @extend .col-lg-9;
+
+/* one-column */
+.page-template-default {
+    .site-content { 
+        #primary {
+            @extend .col-lg-9;
+        }
+        #secondary {
+            @extend .col-lg-3;
+        }
     }
-    #secondary {
-        @extend .col-lg-3;
+}
+
+/* full-width */
+.page-template-template-fullwidth { 
+    .site-content { 
+        #primary {
+            @extend .col-lg-12; 
+        } 
     }
 }
 
@@ -29,3 +42,6 @@
         @extend .pull-lg-3;
     }
 }
+
+/*page page-id-1717 page-template-default logged-in admin-bar no-customize-support*/
+/*page page-id-1717 page-template page-template-template-fullwidth page-template-template-fullwidth-php logged-in admin-bar no-customize-support*/

@@ -38,7 +38,7 @@ if (!function_exists('wp_bs_theme_simple_styles')) :
         // Theme stylesheet-description
         wp_enqueue_style('wp-bs-theme-simple', get_stylesheet_uri());
         // Theme stylesheet.
-        wp_enqueue_style('wp-bs-theme-simple2', get_template_directory_uri() . '/css/wp-bs-theme-simple.min.css', array());
+        wp_enqueue_style('wp-bs-theme-simple2', get_template_directory_uri() . '/css/wp-bs-theme-simple.css', array());
     }
 
 endif;
