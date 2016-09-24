@@ -1,17 +1,3 @@
-/*
-Theme Name: wp-bs-theme-simple
-Theme URI: https://github.com/piccard21/wp-bs-theme-simple
-Author: piccard
-Author URI: https://piccard.de/
-Description: a simple bootstrap 4 theme
-Version: 0.1
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: one-column, right-sidebar, responsive-layout, fluid-layout, custom-menu
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-*/
 .blog-navigation .navbar-brand img {
   max-height: 50px; }
 
@@ -4431,8 +4417,8 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-right: 3rem !important; }
 
 .m-b-3, .site-header,
-.site-content, .site-header .post-featured-image,
-.site-content .post-featured-image, .site-header .site-content-area .post .entry-content,
+.site-content, .site-header .post-thumbnail,
+.site-content .post-thumbnail, .site-header .site-content-area .post .entry-content,
 .site-content .site-content-area .post .entry-content, .site-header .site-content-area .post .post-list-navigation,
 .site-header .site-content-area .post .post-single-navigation,
 .site-content .site-content-area .post .post-list-navigation,
