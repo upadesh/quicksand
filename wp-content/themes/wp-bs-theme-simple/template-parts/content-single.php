@@ -2,23 +2,40 @@
 <!-- post --> 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php
-    // -- post excerpt --
-    wp_bs_theme_simple_excerpt();
-    // -- post thumbnail --
-    wp_bs_theme_simple_post_thumbnail();
-    ?>
+    $format = get_post_format();
+    $link = get_url_in_content(get_the_content());
 
-    <!-- .entry-header --> 
-    <header class="entry-header">
-        <!-- .entry-title -->   
+    if ('link' == $format && $link !== FALSE) {
+        ?>
+        <!-- post-thumbnail --> 
+        <div class="post-link">  
+            <h1>
+                <a href="<?php echo $link; ?>"><?php the_title(); ?></a> 
+            </h1>
+        </div><!-- .post-thumbnail -->
+
         <?php
-        if (is_singular()) :
-            the_title('<h1 class="entry-title">', '</h1>'); 
-        endif;
-        ?> 
-    </header><!-- .entry-header -->  
+    } else {
+        // -- post excerpt --
+        wp_bs_theme_simple_excerpt();
+        // -- post thumbnail --
+        wp_bs_theme_simple_post_thumbnail();
+        ?>
+        <!--.entry-header -->
+        <header class = "entry-header">
+            <!--.entry-title -->
+            <?php
+            if (is_singular()) :
+                the_title('<h1 class="entry-title">', '</h1>');
+            endif;
+            ?> 
+        </header><!-- .entry-header -->  
 
 
+
+        <?php
+    } // no-link-post
+    ?>
     <!--post-meta-->
     <?php get_template_part('template-parts/postmeta', get_post_format()); ?>
 
@@ -34,7 +51,7 @@
 //                    )
 //            );
 
-                the_content();
+            the_content();
             ?>
         </p>   
     </div><!-- .entry-content -->   
@@ -44,6 +61,5 @@
     <!-- .entry-footer --> 
     <footer class="entry-footer">
     </footer><!-- .entry-footer -->
-
 </article><!-- .post-->  
 
