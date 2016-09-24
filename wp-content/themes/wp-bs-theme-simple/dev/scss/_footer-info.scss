@@ -1,0 +1,18 @@
+$site-footer-info-height: 60px;
+
+.site-info {
+    height: $site-footer-info-height;
+    .site-social,
+    .site-copyright {
+        height: 100%;
+        max-height: $site-footer-info-height;
+        line-height: $site-footer-info-height; 
+        * {
+            margin-bottom: 0;
+        }
+        p {
+            
+            font-size: .8em;
+        }
+    }
+} 

@@ -1,0 +1,31 @@
+/* grid-patterns */
+.site-content { 
+    #primary {
+        @extend .col-lg-9;
+    }
+    #secondary {
+        @extend .col-lg-3;
+    }
+}
+
+
+
+.site-footer {
+    .site-widgetbar {
+        .site-widget-item {
+            @extend .col-md-6;
+            @extend .col-xl-3;
+        }
+    }
+} 
+
+.site-info {
+    .site-social {
+        @extend .col-lg-3 ;
+        @extend .push-lg-9; 
+    }
+    .site-copyright {
+        @extend .col-lg-9 ;
+        @extend .pull-lg-3;
+    }
+}

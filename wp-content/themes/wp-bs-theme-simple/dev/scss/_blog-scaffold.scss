@@ -1,0 +1,42 @@
+/* Push main sections down */
+.site-header,
+.site-content { 
+    @extend .m-b-3 ;
+
+    .site-navigation { 
+        @extend .m-b-2; 
+    }
+    .post-featured-image {
+        @extend .m-b-3;
+    } 
+    .site-content-area {
+        .post {
+            @extend .m-b-2; 
+            .entry-content {
+                @extend .m-b-3;
+            } 
+            .post-list-navigation, 
+            .post-single-navigation {
+                @extend .m-b-3; 
+            }
+
+            .site-comments-area {
+                .comments-title,
+                .comment-list {
+                    @extend .m-b-2; 
+                }
+            }
+        }
+    }
+    .site-sidebar { 
+        section {
+            @extend .m-b-2;
+        } 
+    } 
+}  
+
+.site-footer {
+    .site-widgetbar {
+        @extend .m-b-2; 
+    }
+}
