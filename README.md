@@ -1,0 +1,1 @@
+# wp-bs-theme-simple
