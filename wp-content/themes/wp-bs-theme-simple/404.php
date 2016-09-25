@@ -7,10 +7,12 @@
  * @since Twenty Sixteen 1.0
  */
 get_header();
-?>
+?> 
 
-<div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+
+<div class="row">
+    <!--  site-content-area -->    
+    <main id="primary" class="site-content-area">  
 
         <section class="error-404 not-found">
             <header class="page-header">
@@ -24,10 +26,10 @@ get_header();
             </div><!-- .page-content -->
         </section><!-- .error-404 -->
 
-    </main><!-- .site-main -->
+    </main><!-- .site-main --> 
 
-    <?php get_sidebar(); ?>
+    <?php get_sidebar(); ?> 
 
-</div><!-- .content-area -->
+</div><!-- row--> 
 
 <?php get_footer(); ?>
