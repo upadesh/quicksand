@@ -17,6 +17,8 @@
     </p> 
     <p>
         <span class="fa fa-comments"></span>
-        <a href="http://wp.local/?p=1704#comments">2 Comments noch zählen </a>
+        <a href="<?php comments_link(); ?>">
+            <?php comments_number( 'no responses', 'one response', '% responses' ); ?>
+        </a>
     </p>
 </div><!-- .post-meta -->  
