@@ -33,6 +33,9 @@
                 )
         );
         ?> 
+        <div> 
+            <a href="<?php the_permalink(); ?>">Read more ...</a>
+        </div>
     </div><!-- .entry-content -->   
 
 

@@ -31,21 +31,37 @@
  * provide it for us.
  */
 
+global $wp_bs_theme_simple_version;
+
+$wp_bs_theme_simple_version = '0.0.1';
+
 if (!function_exists('wp_bs_theme_simple_styles')) :
 
     function wp_bs_theme_simple_styles() {
+
+        global $wp_bs_theme_simple_version;
 
         // Theme stylesheet-description
         wp_enqueue_style('wp-bs-theme-simple-desc', get_stylesheet_uri());
 
         // Theme stylesheet.
-        wp_enqueue_style('wp-bs-theme-simple', get_template_directory_uri() . '/css/wp-bs-theme-simple.css', array());
+        wp_enqueue_style('wp-bs-theme-simple', get_template_directory_uri() . '/css/wp-bs-theme-simple.css', array(), $wp_bs_theme_simple_version);
     }
 
 endif;
 add_action('wp_enqueue_scripts', 'wp_bs_theme_simple_styles');
 
 
+
+if (!function_exists('wp_bs_theme_simple_scripts')) :
+
+    function wp_bs_theme_simple_scripts() {
+        global $wp_bs_theme_simple_version;
+        wp_enqueue_script('wp-bs-theme-simple-script', get_template_directory_uri() . '/js/wp-bs-theme-simple.js', array('jquery'), $wp_bs_theme_simple_version, true);
+    }
+
+endif;
+add_action('wp_enqueue_scripts', 'wp_bs_theme_simple_scripts');
 
 
 
