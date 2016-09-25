@@ -214,3 +214,19 @@ function bs4_remove_tag_body_class($classes) {
     }
     return $classes;
 }
+
+//add_filter( 'body_class', '_twbs_bootstrap_20542', 10, 1 );
+//add_filter( 'post_class', '_twbs_bootstrap_20542', 10, 1 );
+//function _twbs_bootstrap_20542( $classes )
+//{
+//    return array_diff( $classes, array(
+//        'tag',
+//        'tag-pill',
+//        'tag-default',
+//        'tag-info',
+//        'tag-warning',
+//        'tag-danger',
+//        'tag-success',
+//        'tag-primary',
+//    ) );
+//}

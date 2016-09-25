@@ -1,0 +1,15 @@
+
+/* Test: reduce size of massively large image with no alignment.
+ *  http://wp.local/archives/tag/alignment-2
+*/ 
+.entry-content { 
+    .wp-caption {
+        max-width: 100%;
+    }
+
+    img {
+        border: none;
+        height: auto;
+        max-width: 100%; 
+    }
+}
