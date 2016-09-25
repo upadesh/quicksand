@@ -9,8 +9,11 @@
 
 .navbar-nav {
     li {
-        a {
+        .nav-link {
             line-height: 50px;
+        } 
+        .dropdown-item {
+            line-height: 24px;
         } 
     }
 }
