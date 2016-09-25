@@ -23,7 +23,7 @@
 
 .site-footer {
     .site-content-bottom-widgets {
-        .site-widget-item {
+        .widget {
             @extend .col-md-6;
             @extend .col-xl-3;
         }
