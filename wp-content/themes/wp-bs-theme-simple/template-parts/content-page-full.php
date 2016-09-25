@@ -1,4 +1,4 @@
-
+<!--template: content-full-page-->
 <!-- post --> 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="site-full-width">
     <?php

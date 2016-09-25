@@ -1,3 +1,4 @@
+<!--template: postmeta-->
 <!-- .post-meta --> 
 <div class="post-meta">
     <?php if (has_category()) : ?>

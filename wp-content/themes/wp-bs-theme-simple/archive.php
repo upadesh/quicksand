@@ -24,7 +24,8 @@ get_header();
     <!--  site-content-area -->  
     <main id="primary" class="site-content-area">  
 
-        <?php if (have_posts()) : ?>
+        <?php 
+        if (have_posts()) : ?>
 
             <header class="page-header">
                 <?php

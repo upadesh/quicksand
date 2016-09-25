@@ -24,6 +24,7 @@
 .site-footer {
     .site-content-bottom-widgets {
         .widget {
+            @extend .col-xs-12;
             @extend .col-md-6;
             @extend .col-xl-3;
         }
