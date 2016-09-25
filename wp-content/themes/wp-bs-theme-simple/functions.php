@@ -70,7 +70,7 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
         )); 
         
         $customBackgroundArgs = array(
-//            'default-color' => '000000',
+//            'default-color' => '000000',          // is only shown after saving
 //            'default-image' => '%1$s/img/autumn.jpg',
         );
         add_theme_support('custom-background', $customBackgroundArgs);
@@ -113,6 +113,16 @@ if (!function_exists('wp_bs_theme_simple_widgets_init')) :
             'before_title' => '<h2 class="widget-title">',
             'after_title' => '</h2>',
         ));
+
+	register_sidebar( array(
+		'name'          => __( 'Widget Bar Footer', 'wp_bs_theme_simple' ),
+		'id'            => 'sidebar-2',
+		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'wp_bs_theme_simple' ),
+		'before_widget' => '<div class="site-widget-item text-xs-center"><section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section></div> ',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
     }
 
 endif;

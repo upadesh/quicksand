@@ -14,32 +14,11 @@
 </div><!-- site-content-->
 
 
+
 <!-- site-footer -->
 <footer class="site-footer">  
-    <!-- site-widgetbar -->
-    <div class="site-widgetbar">
-        <div class="row">
-            <div class="site-widget-item text-xs-center">
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <span class="tag tag-default tag-pill pull-xs-right">14</span>
-                        Cras justo odio
-                    </li>
-                    <li class="list-group-item">
-                        <span class="tag tag-default tag-pill pull-xs-right">2</span>
-                        Dapibus ac facilisis in
-                    </li>
-                    <li class="list-group-item">
-                        <span class="tag tag-default tag-pill pull-xs-right">1</span>
-                        Morbi leo risus
-                    </li>
-                </ul>
-            </div> 
-            <div class="site-widget-item text-xs-center"></div>  
-            <div class="site-widget-item text-xs-center"></div>  
-            <div class="site-widget-item text-xs-center"></div>  
-        </div><!-- .row -->
-    </div><!-- .site-widgetbar -->  
+    <!-- site-content-bottom-widgets --> 
+    <?php get_sidebar('content-bottom'); ?>   
 </footer><!-- .site-footer -->
 
 </div><!-- .site-main-container -->
