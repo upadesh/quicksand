@@ -12,12 +12,9 @@ if (!is_active_sidebar('sidebar-2')) {
 
 // If we get this far, we have widgets. Let's do this.
 ?>
-<aside id="site-content-bottom-widgets" class="site-content-bottom-widgets" role="complementary">
-    <?php if (is_active_sidebar('sidebar-2')) : ?>
-        <div class="row">
-            <div class="widget-area">
-                <?php dynamic_sidebar('sidebar-2'); ?>
-            </div><!-- .widget-area -->
-        <?php endif; ?> 
-    </div>
-</aside><!-- .content-bottom-widgets --> 
+<!-- .content-bottom-widgets --> 
+<div class="row">
+    <aside class="site-content-bottom-widgets">
+        <?php dynamic_sidebar('sidebar-2'); ?>
+    </aside><!-- .content-bottom-widgets --> 
+</div>  
