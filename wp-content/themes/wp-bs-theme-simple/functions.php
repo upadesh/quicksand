@@ -31,6 +31,8 @@
  * provide it for us.
  */
 
+include_once 'lib/wp-bs-theme-simple-navwalker.php';
+
 global $wp_bs_theme_simple_version;
 
 $wp_bs_theme_simple_version = '0.0.1';
@@ -102,7 +104,7 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
 
 
         register_nav_menus(array(
-            'primary' => __('Main Menu', 'wp_bs_theme_simple'),
+            'primary' => __('Primary Menu', 'wp_bs_theme_simple'),
             'secondary' => __('Secondary Menu', 'wp_bs_theme_simple'), 
             'social'  => __( 'Social Links Menu', 'wp_bs_theme_simple' ),
         ));

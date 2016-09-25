@@ -28,69 +28,10 @@
         <div class="container site-main-container"> 
 
             <!-- site-header >-->
-            <header class="site-header">
+            <header class="site-header"> 
 
-                <?php if (has_nav_menu('primary')) : ?>
-                    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e('Primary Menu', 'twentysixteen'); ?>">
-                        <?php
-//                        wp_nav_menu(array(
-//                            'theme_location' => 'primary',
-//                            'menu_class' => 'primary-menu',
-//                        )); 
-                        ?>
-                    </nav><!-- .main-navigation -->
-                <?php endif; ?>
                 <!-- site-navigation -->
-                <div class="site-navigation"> 
-                    <nav class="navbar navbar-light bg-faded site-nav">
-                        <button class="navbar-toggler hidden-lg-up pull-xs-right" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                            &#9776;
-                        </button>
-
-                        <div class="collapse navbar-toggleable-md" id="collapsing-navbar">
-                            <!--<a class="navbar-brand" href="#">Navbar</a>-->
-                            <div class="navbar-header">
-                                <a class="navbar-brand" href="/">
-                                    <img alt="Brand" src="<?php echo get_template_directory_uri(); ?>/img/logo.png">
-                                </a>
-                            </div>
-                            <ul class="site-nav-list nav navbar-nav  pull-xs-right">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Features</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Pricing</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#">Active</a>
-                                </li> 
-                                                                <li class="nav-item dropdown">
-                                                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                                                    <div class="dropdown-menu">
-                                                                        <a class="dropdown-item" href="#">Action</a>
-                                                                        <a class="dropdown-item" href="#">Another action</a>
-                                                                        <a class="dropdown-item" href="#">Something else here</a>
-                                                                        <div class="dropdown-divider"></div>
-                                                                        <a class="dropdown-item" href="#">Separated link</a>
-                                                                    </div>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link" href="#">Link</a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link disabled" href="#">Disabled</a>
-                                                                </li>
-                            </ul>
-                        </div> 
-                    </nav>
-                </div><!-- .site-navigation -->  
-
+                <?php get_template_part('template-parts/navigation', 'main'); ?>  
 
                 <!-- site-bloginfo -->
                 <?php if (has_header_image()) { ?>
