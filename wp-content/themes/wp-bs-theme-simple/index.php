@@ -28,7 +28,7 @@ get_header();
             endwhile;
 //            bootstrap_four_the_posts_pagination();
         else :
-            ?><p><?php _e('Sorry, no posts matched your criteria.', 'wp-bs-theme-simple'); ?></p><?php
+            get_template_part('template-parts/content', 'none');
         endif;
         ?> 
 
