@@ -197,17 +197,20 @@ if (!function_exists('wp_bs_theme_simple_excerpt')) :
         endif;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 endif;
+
+
+/**
+ * Workaround for the bootstrap-wordpress-tag-bug
+ * 
+ * the tag-class is already occupied by bootstrap, so when wordpress
+ * generates it in the body-class, it breaks the layout.
+ */
+add_filter('body_class', 'bs4_remove_tag_body_class');
+
+function bs4_remove_tag_body_class($classes) {
+    if (false !== ( $class = array_search('tag', $classes) )) {
+        unset($classes[$class]);
+    }
+    return $classes;
+}

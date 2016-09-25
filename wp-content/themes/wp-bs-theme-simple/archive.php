@@ -18,56 +18,54 @@
 get_header();
 ?>
 
-<div id="primary" class="content-area"> 
+<!--template: archive-->
+<div class="row">
 
-    <div class="row">
+    <!--  site-content-area -->  
+    <main id="primary" class="site-content-area">  
 
-        <!--  site-content-area -->  
-        <main id="primary" class="site-content-area">  
+        <?php if (have_posts()) : ?>
 
-            <?php if (have_posts()) : ?>
-
-                <header class="page-header">
-                    <?php
-                    the_archive_title('<h1 class="page-title">', '</h1>');
-                    the_archive_description('<div class="taxonomy-description">', '</div>');
-                    ?>
-                </header><!-- .page-header -->
-
+            <header class="page-header">
                 <?php
-                // Start the Loop.
-                while (have_posts()) : the_post();
+                the_archive_title('<h1 class="page-title">', '</h1>');
+                the_archive_description('<div class="taxonomy-description">', '</div>');
+                ?>
+            </header><!-- .page-header -->
 
-                    /*
-                     * Include the Post-Format-specific template for the content.
-                     * If you want to override this in a child theme, then include a file
-                     * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                     */
-                    get_template_part('template-parts/content', get_post_format());
+            <?php
+            // Start the Loop.
+            while (have_posts()) : the_post();
 
-                // End the loop.
-                endwhile;
- 
-                // Previous/next post navigation. 
-                the_post_navigation(array(
-                    'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'wp-bs-theme-simple') . '</span> ' .
-                    '<span class="screen-reader-text">' . __('Next post:', 'wp-bs-theme-simple') . '</span> ' .
-                    '<span class="post-title">%title</span>',
-                    'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'wp-bs-theme-simple') . '</span> ' .
-                    '<span class="screen-reader-text">' . __('Previous post:', 'wp-bs-theme-simple') . '</span> ' .
-                    '<span class="post-title">%title</span>',
-                ));
+                /*
+                 * Include the Post-Format-specific template for the content.
+                 * If you want to override this in a child theme, then include a file
+                 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                 */
+                get_template_part('template-parts/content', get_post_format());
 
-            // If no content, include the "No posts found" template.
-            else :
-                get_template_part('template-parts/content', 'none');
+            // End the loop.
+            endwhile;
 
-            endif;
-            ?>
+            // Previous/next post navigation. 
+            the_post_navigation(array(
+                'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'wp-bs-theme-simple') . '</span> ' .
+                '<span class="screen-reader-text">' . __('Next post:', 'wp-bs-theme-simple') . '</span> ' .
+                '<span class="post-title">%title</span>',
+                'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'wp-bs-theme-simple') . '</span> ' .
+                '<span class="screen-reader-text">' . __('Previous post:', 'wp-bs-theme-simple') . '</span> ' .
+                '<span class="post-title">%title</span>',
+            ));
 
-        </main><!-- .site-main -->
-    </div>
-</div><!-- .content-area -->
+        // If no content, include the "No posts found" template.
+        else :
+            get_template_part('template-parts/content', 'none');
 
-<?php get_sidebar(); ?>
+        endif;
+        ?>
+
+    </main><!--  .site-content-area --> 
+    <?php get_sidebar(); ?>
+</div> 
+
 <?php get_footer(); ?>

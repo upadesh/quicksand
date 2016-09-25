@@ -15,7 +15,7 @@
  */
 get_header();
 ?>
-
+<!--template: index-->
 <div class="row">
     <!--  site-content-area -->  
     <main id="primary" class="site-content-area">  
