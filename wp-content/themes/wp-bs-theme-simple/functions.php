@@ -31,7 +31,7 @@
  * provide it for us.
  */
 
-include_once 'lib/wp-bs-theme-simple-navwalker.php';
+include_once 'lib/WP-bs-theme-simple-navwalker.php';
 
 global $wp_bs_theme_simple_version;
 

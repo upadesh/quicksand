@@ -22,10 +22,10 @@ $primary_nav_options = array(
             <!--<a class="navbar-brand" href="#">Navbar</a>-->
             <div class="navbar-header">
                 <a class="navbar-brand" href="/">
-                    <img alt="Brand" src="<?php echo get_template_directory_uri(); ?>/img/logo.png">
+                    <img alt="Brand" class="logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png">
                 </a>
             </div>
-            <div class="pull-xs-right"> 
+            <div class="nav-wrapper pull-xs-right"> 
                 <?php wp_nav_menu($primary_nav_options); ?> 
             </div>
         </div> 

@@ -31,7 +31,7 @@
             <header class="site-header"> 
 
                 <!-- site-navigation -->
-                <?php get_template_part('template-parts/navigation', 'main'); ?>  
+                <?php get_template_part('template-parts/navigation', 'primary'); ?>  
 
                 <!-- site-bloginfo -->
                 <?php if (has_header_image()) { ?>

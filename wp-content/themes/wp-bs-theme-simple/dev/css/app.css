@@ -1,14 +1,18 @@
 /* change bootsrap-vars in here */
 /* override here bootstrap-variables */
 /*$body-bg: #123123;*/
-.blog-navigation .navbar-brand img {
+.site-navigation .navbar-brand .logo {
   max-height: 50px; }
 
-.navbar-nav li .nav-link {
+@media (min-width: 768px) {
+  .site-navigation .nav-wrapper {
+    max-height: 50px; } }
+
+.site-navigation .navbar-nav li .nav-link {
   line-height: 50px; }
 
-.navbar-nav li .dropdown-item {
-  line-height: 24px; }
+.site-navigation .navbar-nav li .dropdown-item {
+  line-height: 25px; }
 
 /* Test: reduce size of massively large image with no alignment.
  *  http://wp.local/archives/tag/alignment-2

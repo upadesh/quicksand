@@ -1,19 +1,27 @@
-.blog-navigation { 
+$navbar-height: 50px;
+
+.site-navigation { 
     .navbar-brand {
-        img {
-            max-height: 50px;
+        .logo {
+            max-height: $navbar-height;
         } 
-    }
-}
+    }  
 
-
-.navbar-nav {
-    li {
-        .nav-link {
-            line-height: 50px;
-        } 
-        .dropdown-item {
-            line-height: 24px;
-        } 
+    @media (min-width: 768px) {
+        .nav-wrapper { 
+            max-height: $navbar-height; 
+        }
     }
+
+    .navbar-nav {
+        li {
+            .nav-link {
+                line-height: $navbar-height;
+            } 
+            .dropdown-item {
+                line-height: $navbar-height / 2;
+            } 
+        }
+    }
+
 }
