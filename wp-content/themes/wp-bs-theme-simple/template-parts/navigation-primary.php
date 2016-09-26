@@ -21,9 +21,9 @@ $primary_nav_options = array(
         <div class="collapse navbar-toggleable-md" id="collapsing-navbar">
             <!--<a class="navbar-brand" href="#">Navbar</a>-->
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">
-                    <img alt="Brand" class="logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png">
-                </a>
+                <div class="navbar-brand" href="/">
+                    <?php wp_bs_theme_simple_the_custom_logo(); ?>
+                </div>
             </div>
             <div class="nav-wrapper pull-xs-right"> 
                 <?php wp_nav_menu($primary_nav_options); ?> 

@@ -1,7 +1,7 @@
 /* change bootsrap-vars in here */
 /* override here bootstrap-variables */
 /*$body-bg: #123123;*/
-.site-navigation .navbar-brand .logo {
+.site-navigation .navbar-brand .custom-logo {
   max-height: 50px; }
 
 @media (min-width: 768px) {

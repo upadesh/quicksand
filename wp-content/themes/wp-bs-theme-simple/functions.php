@@ -31,11 +31,110 @@
  * provide it for us.
  */
 
-include_once 'lib/WP-bs-theme-simple-navwalker.php';
+include_once  get_template_directory() . '/inc/WP-bs-theme-simple-navwalker.php';
 
 global $wp_bs_theme_simple_version;
+global $wp_min_version;
 
 $wp_bs_theme_simple_version = '0.0.1';
+ $wp_min_version = '4.4';
+
+
+
+
+/**
+ * wp-bs-theme-simple only works in WordPress 4.4 or later.
+ */
+if ( version_compare( $GLOBALS['wp_version'], $wp_min_version, '<' ) ) {
+	require get_template_directory() . '/inc/back-compat.php';
+}
+
+
+
+
+if (!function_exists('wp_bs_theme_simple_setup')) :
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * Note that this function is hooked into the after_setup_theme hook, which
+ * runs before the init hook. The init hook is too late for some features, such
+ * as indicating support for post thumbnails.
+ *
+ * Create your own wp_bs_theme_simple_setup() function to override in a child theme.
+ *
+ * @since Twenty Sixteen 1.0
+ */
+
+    function wp_bs_theme_simple_setup() {
+	/*
+	 * Make theme available for translation.  
+	 */ 
+	load_theme_textdomain( 'wp-bs-theme-simple', get_template_directory() . '/languages'  );
+
+
+	// Add default posts and comments RSS feed links to head.
+	add_theme_support( 'automatic-feed-links');
+
+	/*
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	 */
+	add_theme_support( 'title-tag' );
+
+	/*
+	 * Enable support for custom logo 
+	 */
+	add_theme_support( 'custom-logo', array(
+		'height'      => 50,
+		'width'       => 50,
+		'flex-height' => true,
+	) );
+        
+        
+        
+
+        add_theme_support('post-thumbnails'); 
+        add_theme_support('post-formats', array(
+            'link'
+        ));
+
+        add_theme_support('html5', array(
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+        ));
+
+        $customBackgroundArgs = array(
+//            'default-color' => '000000',          // is only shown after saving
+//            'default-image' => '%1$s/img/autumn.jpg',
+        );
+        add_theme_support('custom-background', $customBackgroundArgs);
+
+        $customHeaderArgs = array(
+//            'default-image' => '%1$s/img/autumn.jpg',
+        );
+        add_theme_support('custom-header', $customHeaderArgs);
+
+
+        // sidebars
+        register_nav_menus(array(
+            'primary' => __('Primary Menu', 'wp_bs_theme_simple'),
+            'secondary' => __('Secondary Menu', 'wp_bs_theme_simple'), 
+            'social'  => __( 'Social Links Menu', 'wp_bs_theme_simple' ),
+        ));
+    }
+
+endif; // wp_bs_theme_simple_setup
+add_action('after_setup_theme', 'wp_bs_theme_simple_setup');
+
+
+
+
+//====================================================================
 
 
 
@@ -69,49 +168,6 @@ endif;
 add_action('wp_enqueue_scripts', 'wp_bs_theme_simple_scripts');
 
 
-
-if (!function_exists('wp_bs_theme_simple_setup')) :
-
-    function wp_bs_theme_simple_setup() {
-
-        add_theme_support('automatic-feed-links');
-
-        add_theme_support('post-thumbnails');
-        add_theme_support('title-tag');
-        add_theme_support('post-formats', array(
-            'link'
-        ));
-
-        add_theme_support('html5', array(
-            'search-form',
-            'comment-form',
-            'comment-list',
-            'gallery',
-            'caption',
-        ));
-
-        $customBackgroundArgs = array(
-//            'default-color' => '000000',          // is only shown after saving
-//            'default-image' => '%1$s/img/autumn.jpg',
-        );
-        add_theme_support('custom-background', $customBackgroundArgs);
-
-        $customHeaderArgs = array(
-//            'default-image' => '%1$s/img/autumn.jpg',
-        );
-        add_theme_support('custom-header', $customHeaderArgs);
-
-
-
-        register_nav_menus(array(
-            'primary' => __('Primary Menu', 'wp_bs_theme_simple'),
-            'secondary' => __('Secondary Menu', 'wp_bs_theme_simple'), 
-            'social'  => __( 'Social Links Menu', 'wp_bs_theme_simple' ),
-        ));
-    }
-
-endif; // wp_bs_theme_simple_setup
-add_action('after_setup_theme', 'wp_bs_theme_simple_setup');
 
 
 
@@ -253,3 +309,11 @@ function bs4_remove_tag_body_class($classes) {
 //        'tag-primary',
 //    ) );
 //}
+
+
+
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
