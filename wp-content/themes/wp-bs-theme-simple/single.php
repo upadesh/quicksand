@@ -16,6 +16,7 @@
 get_header();
 ?>
 
+<!--template: single-->
 <div class="row">
     <!--  site-content-area -->  
     <main id="primary" class="site-content-area">  
