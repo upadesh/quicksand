@@ -22,31 +22,19 @@ get_header();
 
         <!-- post-list -->
         <?php
-        if (have_posts()) :
-            while (have_posts()) : the_post();
-                get_template_part('template-parts/content', 'single');
+        while (have_posts()) : the_post();
+            get_template_part('template-parts/content', 'single');
 
+            // If comments are open or we have at least one comment, load up the comment template.
+            if (comments_open() || get_comments_number()) {
+                comments_template();
+            }
 
-                // If comments are open or we have at least one comment, load up the comment template.
-                if (comments_open() || get_comments_number()) {
-                    comments_template();
-                }
-            endwhile;
-        else :
-            get_template_part('template-parts/content', 'none');
-        endif;
-        ?> 
-
-
+        endwhile;
+        ?>  
 
         <div class = "post-navigation">
-            <?php
-//            the_post_navigation(array(
-//                'next_text' => '%title &raquo;',
-//                'prev_text' => '&laquo; %title',
-//                'screen_reader_text' => __('Continue Reading'),
-//            )); 
-
+            <?php 
 
             if (is_singular('attachment')) {
                 // Parent post navigation.
@@ -67,14 +55,10 @@ get_header();
             ?>
         </div>
 
-    </main><!-- .site-content-area  --> 
+    </main><!-- .site-content-area  -->  
 
+    <?php get_sidebar(); ?> 
 
-    <?php get_sidebar(); ?>
-
-
-</div><!-- row-->
-
-
+</div><!-- row--> 
 
 <?php get_footer(); ?>
