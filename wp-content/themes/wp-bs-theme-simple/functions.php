@@ -109,6 +109,7 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
         register_nav_menus(array(
             'primary' => __('Primary Menu', 'wp_bs_theme_simple'),
             'secondary' => __('Secondary Menu', 'wp_bs_theme_simple'), 
+            // TODO: social-menu
         ));
 
 	/*

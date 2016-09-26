@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @since WP-bs-theme-simple 1.0
  */
 ?>
 
@@ -58,9 +58,21 @@
                     </ul> 
                 </div>
             </div>
-            <div class="site-copyright ">
+            <div class="site-copyright "> 
+                <?php
+                /**
+                 * Fires before the wp-bs-theme-simple footer text for footer customization.
+                 *
+                 * @since WP-bs-theme-simple 1.0
+                 */
+                do_action('wp_bs_theme_simple_credits');
+                ?> 
                 <div class="site-info text-xs-center text-lg-left">
-                    <p class="text-muted lead">Copyright &copy;2016 <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
+                    <p class="text-muted lead">Copyright &copy;2016 
+                        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+                            <?php bloginfo('name'); ?>
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
