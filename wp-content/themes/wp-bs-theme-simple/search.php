@@ -3,8 +3,8 @@
  * The template for displaying search results pages
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @subpackage wp-bs-theme-simple
+ * @since WP-bs-theme-simple 1.0
  */
 get_header();
 ?>
@@ -35,15 +35,13 @@ get_header();
             // End the loop.
             endwhile;
 
-            // Previous/next post navigation. 
-            the_post_navigation(array(
-                'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'wp-bs-theme-simple') . '</span> ' .
-                '<span class="screen-reader-text">' . __('Next post:', 'wp-bs-theme-simple') . '</span> ' .
-                '<span class="post-title">%title</span>',
-                'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'wp-bs-theme-simple') . '</span> ' .
-                '<span class="screen-reader-text">' . __('Previous post:', 'wp-bs-theme-simple') . '</span> ' .
-                '<span class="post-title">%title</span>',
+            // Previous/next page navigation.
+            the_posts_pagination(array(
+                'prev_text' => __('Previous page', 'wp-bs-theme-simple'),
+                'next_text' => __('Next page', 'wp-bs-theme-simple'),
+                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'wp-bs-theme-simple') . ' </span>',
             ));
+            
         // If no content, include the "No posts found" template.
         else :
             get_template_part('template-parts/content', 'none');
@@ -52,7 +50,9 @@ get_header();
         ?>
 
     </main><!-- .site-main -->
+    
     <?php get_sidebar(); ?>
+    
 </div> 
 
 <?php get_footer(); ?>
