@@ -4332,7 +4332,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   .pull-xl-none {
     float: none !important; } }
 
-.sr-only {
+.sr-only, .screen-reader-text {
   position: absolute;
   width: 1px;
   height: 1px;

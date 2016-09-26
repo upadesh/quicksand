@@ -27,7 +27,7 @@
         <!-- site-main-container --> 
         <div class="container site-main-container"> 
 
-            <a class="skip-link sr-only" href="#content"><?php _e('Skip to content', 'wp_bs_theme_simple'); ?></a>
+            <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', 'wp_bs_theme_simple'); ?></a>
 
             <!-- site-header >-->
             <header class="site-header"> 

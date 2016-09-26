@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Sixteen functions and definitions
+ * WP-bs-theme-simple functions and definitions
  *
  * Set up the theme and provides some helper functions, which are used in the
  * theme as custom template tags. Others are attached to action and filter
@@ -22,7 +22,7 @@
  *
  * @package WordPress
  * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @since WP-bs-theme-simple 1.0
  */
 /*
  * Let WordPress manage the document title.
@@ -63,7 +63,7 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
      *
      * Create your own wp_bs_theme_simple_setup() function to override in a child theme.
      *
-     * @since Twenty Sixteen 1.0
+     * @since WP-bs-theme-simple 1.0
      */
     function wp_bs_theme_simple_setup() {
         /*
@@ -147,6 +147,7 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
         
         
         
+        //====================================================================
         
 
         $customBackgroundArgs = array(
@@ -211,7 +212,7 @@ add_action('wp_enqueue_scripts', 'wp_bs_theme_simple_scripts');
  *
  * @link https://developer.wordpress.org/reference/functions/register_sidebar/
  *
- * @since Twenty Sixteen 1.0
+ * @since WP-bs-theme-simple 1.0
  */
 if (!function_exists('wp_bs_theme_simple_widgets_init')) :
 
@@ -246,70 +247,6 @@ add_action('widgets_init', 'wp_bs_theme_simple_widgets_init');
 
 
 
-
-if (!function_exists('wp_bs_theme_simple_post_thumbnail')) :
-
-    /**
-     * Displays an optional post thumbnail.
-     *
-     * Wraps the post thumbnail in an anchor element on index views, or a div
-     * element when on single views.
-     *
-     * Create your own wp_bs_theme_simple_post_thumbnail() function to override in a child theme.
-     *
-     * @since Twenty Sixteen 1.0
-     */
-    function wp_bs_theme_simple_post_thumbnail() {
-        if (post_password_required() || is_attachment() || !has_post_thumbnail()) {
-            return;
-        }
-
-        if (is_singular()) :
-            ?>
-
-            <!-- post-thumbnail --> 
-            <div class="post-thumbnail">   
-                <?php the_post_thumbnail('full', array('class' => 'img-fluid')); ?>
-            </div><!-- .post-thumbnail -->
-
-        <?php else : ?>
-
-            <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-                <?php the_post_thumbnail('full', array('alt' => the_title_attribute('echo=0'))); ?>
-            </a>
-
-        <?php
-        endif; // End is_singular()
-    }
-
-endif;
-
-if (!function_exists('wp_bs_theme_simple_excerpt')) :
-
-    /**
-     * Displays the optional excerpt.
-     *
-     * Wraps the excerpt in a div element.
-     *
-     * Create your own wp_bs_theme_simple_excerpt() function to override in a child theme.
-     *
-     * @since Twenty Sixteen 1.0
-     *
-     * @param string $class Optional. Class string of the div element. Defaults to 'entry-summary'.
-     */
-    function wp_bs_theme_simple_excerpt($class = 'entry-summary') {
-        $class = esc_attr($class);
-
-        if (has_excerpt() || is_search()) :
-            ?>
-            <div class="<?php echo $class; ?>">
-                <?php the_excerpt(); ?>
-            </div><!-- .<?php echo $class; ?> -->
-            <?php
-        endif;
-    }
-
-endif;
 
 
 /**
