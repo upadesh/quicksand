@@ -11,10 +11,11 @@
  * @since Twenty Sixteen 1.0
  */
 get_header();
-?>
+?> 
 
+<!--template: page-->
 <div class="row">
-    
+
     <!--  site-content-area -->  
     <main id="primary" class="site-content-area">  
 
@@ -35,13 +36,10 @@ get_header();
         endwhile;
         ?> 
 
-    </main><!-- .site-content-area  --> 
+    </main><!-- .site-content-area  -->  
 
+    <?php get_sidebar(); ?> 
 
-    <?php get_sidebar(); ?>
-
-
-</div><!-- row--> 
-
+</div><!-- row-->  
 
 <?php get_footer(); ?>

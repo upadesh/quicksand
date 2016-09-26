@@ -11,8 +11,7 @@
  */
 ?>
 
-<!--template: content-single-->
-<!-- post --> 
+<!--template: content-single--> 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <!-- entry-header --> 
