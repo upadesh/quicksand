@@ -31,13 +31,13 @@
  * provide it for us.
  */
 
-include_once  get_template_directory() . '/inc/WP-bs-theme-simple-navwalker.php';
+include_once get_template_directory() . '/inc/WP-bs-theme-simple-navwalker.php';
 
 global $wp_bs_theme_simple_version;
 global $wp_min_version;
 
 $wp_bs_theme_simple_version = '0.0.1';
- $wp_min_version = '4.4';
+$wp_min_version = '4.4';
 
 
 
@@ -45,68 +45,109 @@ $wp_bs_theme_simple_version = '0.0.1';
 /**
  * wp-bs-theme-simple only works in WordPress 4.4 or later.
  */
-if ( version_compare( $GLOBALS['wp_version'], $wp_min_version, '<' ) ) {
-	require get_template_directory() . '/inc/back-compat.php';
+if (version_compare($GLOBALS['wp_version'], $wp_min_version, '<')) {
+    require get_template_directory() . '/inc/back-compat.php';
 }
 
 
 
 
 if (!function_exists('wp_bs_theme_simple_setup')) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- *
- * Create your own wp_bs_theme_simple_setup() function to override in a child theme.
- *
- * @since Twenty Sixteen 1.0
- */
 
+    /**
+     * Sets up theme defaults and registers support for various WordPress features.
+     *
+     * Note that this function is hooked into the after_setup_theme hook, which
+     * runs before the init hook. The init hook is too late for some features, such
+     * as indicating support for post thumbnails.
+     *
+     * Create your own wp_bs_theme_simple_setup() function to override in a child theme.
+     *
+     * @since Twenty Sixteen 1.0
+     */
     function wp_bs_theme_simple_setup() {
+        /*
+         * Make theme available for translation.  
+         */
+        load_theme_textdomain('wp-bs-theme-simple', get_template_directory() . '/languages');
+
+
+        // Add default posts and comments RSS feed links to head.
+        add_theme_support('automatic-feed-links');
+
+        /*
+         * Let WordPress manage the document title.
+         * By adding theme support, we declare that this theme does not use a
+         * hard-coded <title> tag in the document head, and expect WordPress to
+         * provide it for us.
+         */
+        add_theme_support('title-tag');
+
+        /*
+         * Enable support for custom logo 
+         */
+        add_theme_support('custom-logo', array(
+            'height' => 50,
+            'width' => 50,
+            'flex-height' => true,
+        ));
+
+        /*
+         * Enable support for Post Thumbnails on posts and pages.
+         *
+         * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+         */
+        add_theme_support('post-thumbnails');
+        set_post_thumbnail_size(1200, 9999);
+
+
+
+        /*
+         * sidebars 
+         * This theme uses wp_nav_menu() in 3 locations.
+         */
+        register_nav_menus(array(
+            'primary' => __('Primary Menu', 'wp_bs_theme_simple'),
+            'secondary' => __('Secondary Menu', 'wp_bs_theme_simple'), 
+        ));
+
 	/*
-	 * Make theme available for translation.  
-	 */ 
-	load_theme_textdomain( 'wp-bs-theme-simple', get_template_directory() . '/languages'  );
-
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links');
-
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
+	 * Switch default core markup for search form, comment form, and comments
+	 * to output valid HTML5.
 	 */
-	add_theme_support( 'title-tag' );
-
-	/*
-	 * Enable support for custom logo 
-	 */
-	add_theme_support( 'custom-logo', array(
-		'height'      => 50,
-		'width'       => 50,
-		'flex-height' => true,
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
 	) );
-        
-        
-        
 
-        add_theme_support('post-thumbnails'); 
-        add_theme_support('post-formats', array(
-            'link'
-        ));
-
-        add_theme_support('html5', array(
-            'search-form',
-            'comment-form',
-            'comment-list',
-            'gallery',
-            'caption',
-        ));
+	/*
+	 * Enable support for Post Formats.
+         * 
+         * Inside the index-file a template-part is called with get_post_format(),
+         * so the propper template is assembled. If not available, the normal content.php is used.
+	 *
+	 * See: https://codex.wordpress.org/Post_Formats
+	 */
+	add_theme_support( 'post-formats', array(
+		'aside',
+		'image',
+		'video',
+		'quote',
+		'link',
+		'gallery',
+		'status',
+		'audio',
+		'chat',
+	) ); 
+        
+        
+        
+        
+        
+        
 
         $customBackgroundArgs = array(
 //            'default-color' => '000000',          // is only shown after saving
@@ -118,14 +159,6 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
 //            'default-image' => '%1$s/img/autumn.jpg',
         );
         add_theme_support('custom-header', $customHeaderArgs);
-
-
-        // sidebars
-        register_nav_menus(array(
-            'primary' => __('Primary Menu', 'wp_bs_theme_simple'),
-            'secondary' => __('Secondary Menu', 'wp_bs_theme_simple'), 
-            'social'  => __( 'Social Links Menu', 'wp_bs_theme_simple' ),
-        ));
     }
 
 endif; // wp_bs_theme_simple_setup
