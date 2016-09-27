@@ -1,4 +1,5 @@
 <?php
+
 /**
  * WP-bs-theme-simple functions and definitions
  *
@@ -21,7 +22,7 @@
  * {@link https://codex.wordpress.org/Plugin_API}
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
+ * @subpackage WP-bs-theme-simple
  * @since WP-bs-theme-simple 1.0
  */
 /*
@@ -35,7 +36,7 @@ global $wp_bs_theme_simple_version;
 global $wp_min_version;
 
 $wp_bs_theme_simple_version = '0.0.1';
-$wp_min_version = '4.4'; 
+$wp_min_version = '4.4';
 
 
 
@@ -44,7 +45,7 @@ $wp_min_version = '4.4';
  */
 if (version_compare($GLOBALS['wp_version'], $wp_min_version, '<')) {
     require get_template_directory() . '/inc/back-compat.php';
-} 
+}
 
 
 if (!function_exists('wp_bs_theme_simple_setup')) :
@@ -96,55 +97,59 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
         set_post_thumbnail_size(1200, 9999);
 
 
-
         /*
          * sidebars 
          * This theme uses wp_nav_menu() in 3 locations.
          */
         register_nav_menus(array(
             'primary' => __('Primary Menu', 'wp_bs_theme_simple'),
-            'secondary' => __('Secondary Menu', 'wp_bs_theme_simple'), 
-            // TODO: social-menu
+            'secondary' => __('Secondary Menu', 'wp_bs_theme_simple'),
+                // TODO: social-menu
         ));
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
+        /*
+         * Switch default core markup for search form, comment form, and comments
+         * to output valid HTML5.
+         */
+        add_theme_support('html5', array(
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+        ));
 
-	/*
-	 * Enable support for Post Formats.
+        /*
+         * Enable support for Post Formats.
          * 
          * Inside the index-file a template-part is called with get_post_format(),
          * so the propper template is assembled. If not available, the normal content.php is used.
-	 *
-	 * See: https://codex.wordpress.org/Post_Formats
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-		'gallery',
-		'status',
-		'audio',
-		'chat',
-	) ); 
-        
-        
-        
-        
-        
+         *
+         * See: https://codex.wordpress.org/Post_Formats
+         */
+        add_theme_support('post-formats', array(
+            'aside',
+            'image',
+            'video',
+            'quote',
+            'link',
+            'gallery',
+            'status',
+            'audio',
+            'chat',
+        ));
+
+
+
+
+        /*
+         * This theme styles the visual editor to resemble the theme style,
+         * specifically font, colors, icons, and column width.
+         */
+//	add_editor_style( array( 'css/editor-style.css', wp_bs_theme_simple_fonts_url() ) ); 
+
         //====================================================================
-        
+
 
         $customBackgroundArgs = array(
 //            'default-color' => '000000',          // is only shown after saving
@@ -163,6 +168,58 @@ add_action('after_setup_theme', 'wp_bs_theme_simple_setup');
 
 
 
+if (!function_exists('wp_bs_theme_simple_fonts_url')) :
+
+    /**
+     * Register Google fonts for WP-bs-theme-simple.
+     *
+     * Create your own wp_bs_theme_simple_fonts_url() function to override in a child theme.
+     *
+     * @since WP-bs-theme-simple 1.0
+     *
+     * @return string Google fonts URL for the theme.
+     */
+    function wp_bs_theme_simple_fonts_url() {
+        $fonts_url = '';
+        $fonts = array();
+        $subsets = 'latin,latin-ext';
+
+        /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
+        if ('off' !== _x('on', 'Raleway font: on or off', 'wp-bs-theme-simple')) {
+            $fonts[] = 'Raleway:400,700,900,400italic,700italic,900italic';
+        }
+        
+        if ('off' !== _x('on', 'Titillium Web font: on or off', 'wp-bs-theme-simple')) {
+            $fonts[] = 'Titillium Web:400,700,900,400italic,700italic,900italic';
+        }
+
+        /* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
+        if ('off' !== _x('on', 'Dosis font: on or off', 'wp-bs-theme-simple')) {
+            $fonts[] = 'Dosis:400,700';
+        }
+
+        /* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
+        if ('off' !== _x('on', 'Inconsolata font: on or off', 'wp-bs-theme-simple')) {
+            $fonts[] = 'Inconsolata:400';
+        }
+
+        if ($fonts) {
+            $fonts_url = add_query_arg(array(
+                'family' => urlencode(implode('|', $fonts)),
+                'subset' => urlencode($subsets),
+                    ), 'https://fonts.googleapis.com/css');
+        }
+
+        return $fonts_url;
+    }
+
+endif;
+
+function wp_bs_theme_simple_get_google_fonts() {
+    wp_enqueue_style('wp_bs_theme_simple-fonts', wp_bs_theme_simple_fonts_url(), array(), null);
+}
+
+add_action('wp_enqueue_scripts', 'wp_bs_theme_simple_get_google_fonts');
 
 //====================================================================
 
