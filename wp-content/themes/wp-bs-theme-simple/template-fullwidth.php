@@ -3,6 +3,7 @@
 get_header();
 ?>
 
+<!--template: page-full-->
 <div class="row">
     
     <!--  site-content-area -->  

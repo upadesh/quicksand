@@ -14,7 +14,11 @@ if (!is_active_sidebar('sidebar-2')) {
 ?>
 <!-- .content-bottom-widgets --> 
 <div class="row">
-    <aside class="site-content-bottom-widgets">
-        <?php dynamic_sidebar('sidebar-2'); ?>
+    <aside class="site-content-bottom-widgets"> 
+	<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+		<div class="widget-area">
+			<?php dynamic_sidebar( 'sidebar-2' ); ?>
+		</div><!-- .widget-area -->
+	<?php endif; ?>
     </aside><!-- .content-bottom-widgets --> 
 </div>  
