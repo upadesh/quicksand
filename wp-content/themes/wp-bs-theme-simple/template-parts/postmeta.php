@@ -1,3 +1,5 @@
+<!--Not needed right now, only if you choose to include meta-data via get-template-part()-->
+
 <!--template: postmeta-->
 <!-- .post-meta --> 
 <div class="post-meta">

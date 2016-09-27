@@ -34,7 +34,7 @@
 
     <?php
     $format = get_post_format();
-    
+
     // include here your special template
     switch ($format) {
 //        case 'aside':
@@ -73,7 +73,7 @@
                 ));
 
                 if ('' !== get_the_author_meta('description')) {
-//            get_template_part('template-parts/biography');
+                    get_template_part('template-parts/biography');
                 }
                 ?> 
             </div><!-- .entry-content -->  

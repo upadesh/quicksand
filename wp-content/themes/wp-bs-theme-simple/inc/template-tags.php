@@ -128,8 +128,6 @@ if (!function_exists('wp_bs_theme_simple_categorized_blog')) :
 endif;
 
 
-
-
 if (!function_exists('wp_bs_theme_simple_the_custom_logo')) :
 
     /**
@@ -154,7 +152,6 @@ if (!function_exists('wp_bs_theme_simple_the_custom_logo')) :
     }
 
 endif;
-
 
 
 if (!function_exists('wp_bs_theme_simple_post_thumbnail')) :
@@ -200,6 +197,7 @@ if (!function_exists('wp_bs_theme_simple_post_thumbnail')) :
 
 endif;
 
+
 if (!function_exists('wp_bs_theme_simple_excerpt')) :
 
     /**
@@ -223,22 +221,6 @@ if (!function_exists('wp_bs_theme_simple_excerpt')) :
             </div><!-- .<?php echo $class; ?> -->
             <?php
         endif;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    } 
+    
 endif;

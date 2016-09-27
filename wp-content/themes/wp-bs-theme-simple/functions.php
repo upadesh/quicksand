@@ -31,14 +31,11 @@
  * provide it for us.
  */
 
-include_once get_template_directory() . '/inc/WP-bs-theme-simple-navwalker.php';
-
 global $wp_bs_theme_simple_version;
 global $wp_min_version;
 
 $wp_bs_theme_simple_version = '0.0.1';
-$wp_min_version = '4.4';
-
+$wp_min_version = '4.4'; 
 
 
 
@@ -47,9 +44,7 @@ $wp_min_version = '4.4';
  */
 if (version_compare($GLOBALS['wp_version'], $wp_min_version, '<')) {
     require get_template_directory() . '/inc/back-compat.php';
-}
-
-
+} 
 
 
 if (!function_exists('wp_bs_theme_simple_setup')) :
@@ -288,3 +283,8 @@ function bs4_remove_tag_body_class($classes) {
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Custom walker for the navbar 
+ */
+require get_template_directory() . '/inc/WP-bs-theme-simple-navwalker.php';

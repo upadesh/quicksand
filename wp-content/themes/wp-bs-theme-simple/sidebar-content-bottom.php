@@ -1,10 +1,10 @@
 <?php
 /**
- * The template for the content bottom widget areas on posts and pages
+ * The template for the content bottom widget area 
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @subpackage wp-bs-theme-simple
+ * @since WP-bs-theme-simple 1.0
  */
 if (!is_active_sidebar('sidebar-2')) {
     return;

@@ -8,6 +8,7 @@
  */
 ?>
 
+<!--template: searchform-->
 <form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
     <div class="input-group">
         <div class="input-group">

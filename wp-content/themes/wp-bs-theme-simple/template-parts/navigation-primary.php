@@ -1,4 +1,4 @@
-
+<!--template: navigation-primary-->
 <?php if (has_nav_menu('primary')) : ?>
 
     <?php
@@ -12,7 +12,6 @@
         'walker' => new WP_bs_theme_simple_navbar_navwalker()
     );
     ?> 
-
 
     <div class="site-navigation"> 
         <nav class="navbar navbar-light bg-faded site-nav">
