@@ -10,14 +10,15 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @subpackage wp-bs-theme-simple
+ * @since WP-bs-theme-simple 1.0
  */
 get_header();
 ?>
 
 <!--template: single-->
 <div class="row">
+    
     <!--  site-content-area -->  
     <main id="primary" class="site-content-area">  
 
@@ -36,11 +37,11 @@ get_header();
 
         <div class = "post-navigation">
             <?php 
-
+            // When is this needed???
             if (is_singular('attachment')) {
                 // Parent post navigation.
                 the_post_navigation(array(
-                    'prev_text' => _x('<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'wp-bs-theme-simple'),
+                    'prev_text' => _x('<span class="meta-nav">Published in </span><span class="post-title">%title</span>', 'Parent post link', 'wp-bs-theme-simple'),
                 ));
             } elseif (is_singular('post')) {
                 // Previous/next post navigation.
