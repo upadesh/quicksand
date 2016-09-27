@@ -1,4 +1,13 @@
 <?php
+/**
+ * Custom Twenty Sixteen template tags
+ *
+ * Eventually, some of the functionality here could be replaced by core features.
+ *
+ * @package WordPress
+ * @subpackage Twenty_Sixteen
+ * @since WP-bs-theme-simple 0.0.1
+ */
 if (!function_exists('wp_bs_theme_simple_entry_meta')) :
 
     /**
@@ -6,7 +15,7 @@ if (!function_exists('wp_bs_theme_simple_entry_meta')) :
      *
      * Create your own wp_bs_theme_simple_entry_meta() function to override in a child theme.
      *
-     * @since Twenty Sixteen 1.0
+     * @since WP-bs-theme-simple 0.0.1
      */
     function wp_bs_theme_simple_entry_meta() {
         if ('post' === get_post_type()) {
@@ -46,7 +55,7 @@ if (!function_exists('wp_bs_theme_simple_entry_date')) :
      *
      * Create your own wp_bs_theme_simple_entry_date() function to override in a child theme.
      *
-     * @since Twenty Sixteen 1.0
+     * @since WP-bs-theme-simple 0.0.1
      */
     function wp_bs_theme_simple_entry_date() {
         $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
@@ -70,7 +79,7 @@ if (!function_exists('wp_bs_theme_simple_entry_taxonomies')) :
      *
      * Create your own wp_bs_theme_simple_entry_taxonomies() function to override in a child theme.
      *
-     * @since Twenty Sixteen 1.0
+     * @since WP-bs-theme-simple 0.0.1
      */
     function wp_bs_theme_simple_entry_taxonomies() {
         $categories_list = get_the_category_list(_x(', ', 'Used between list items, there is a space after the comma.', 'wp_bs_theme_simple'));
@@ -89,69 +98,6 @@ if (!function_exists('wp_bs_theme_simple_entry_taxonomies')) :
 endif;
 
 
-
-if (!function_exists('wp_bs_theme_simple_categorized_blog')) :
-
-    /**
-     * Determines whether blog/site has more than one category.
-     *
-     * Create your own wp_bs_theme_simple_categorized_blog() function to override in a child theme.
-     *
-     * @since Twenty Sixteen 1.0
-     *
-     * @return bool True if there is more than one category, false otherwise.
-     */
-    function wp_bs_theme_simple_categorized_blog() {
-        if (false === ( $all_the_cool_cats = get_transient('wp_bs_theme_simple_categories') )) {
-            // Create an array of all the categories that are attached to posts.
-            $all_the_cool_cats = get_categories(array(
-                'fields' => 'ids',
-                // We only need to know if there is more than one category.
-                'number' => 2,
-            ));
-
-            // Count the number of categories that are attached to the posts.
-            $all_the_cool_cats = count($all_the_cool_cats);
-
-            set_transient('wp_bs_theme_simple_categories', $all_the_cool_cats);
-        }
-
-        if ($all_the_cool_cats > 1) {
-            // This blog has more than 1 category so wp_bs_theme_simple_categorized_blog should return true.
-            return true;
-        } else {
-            // This blog has only 1 category so wp_bs_theme_simple_categorized_blog should return false.
-            return false;
-        }
-    }
-
-endif;
-
-
-if (!function_exists('wp_bs_theme_simple_the_custom_logo')) :
-
-    /**
-     * Displays the optional custom logo
-     *
-     * if logo is not available it uses the default image
-     *
-     * @since WP-bs-theme-simple 0.0.1
-     */
-    function wp_bs_theme_simple_the_custom_logo() {
-        if (function_exists('the_custom_logo')) :
-            if (has_custom_logo()) {
-                the_custom_logo();
-            } else {
-                // this is very very custom
-                echo '<a href="/" class="custom-logo-link" rel="home" itemprop="url">'
-                . '<img width="50" height="50" src="' . get_template_directory_uri() . '/img/logo.png" '
-                . 'class="custom-logo" alt="logo" itemprop="logo" >'
-                . '</a>';
-            }
-        endif;
-    }
-
-endif;
 
 
 if (!function_exists('wp_bs_theme_simple_post_thumbnail')) :
@@ -221,6 +167,111 @@ if (!function_exists('wp_bs_theme_simple_excerpt')) :
             </div><!-- .<?php echo $class; ?> -->
             <?php
         endif;
-    } 
+    }
+
+endif;
+
+if (!function_exists('wp_bs_theme_simple_excerpt_more') && !is_admin()) :
+
+    /**
+     * Replaces "[...]" (appended to automatically generated excerpts) with ... and
+     * a 'Continue reading' link.
+     *
+     * Create your own wp_bs_theme_simple_excerpt_more() function to override in a child theme.
+     *
+     * @since WP-bs-theme-simple 0.0.1
+     *
+     * @return string 'Continue reading' link prepended with an ellipsis.
+     */
+    function wp_bs_theme_simple_excerpt_more() {
+        $link = sprintf('<a href="%1$s" class="more-link">%2$s</a>', esc_url(get_permalink(get_the_ID())),
+                /* translators: %s: Name of current post */ sprintf(__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'wp-bs-theme-simple'), get_the_title(get_the_ID()))
+        );
+        return ' &hellip; ' . $link;
+    }
+
+    add_filter('excerpt_more', 'wp_bs_theme_simple_excerpt_more');
+endif;
+
+
+if (!function_exists('wp_bs_theme_simple_categorized_blog')) :
+
+    /**
+     * Determines whether blog/site has more than one category.
+     *
+     * Create your own wp_bs_theme_simple_categorized_blog() function to override in a child theme.
+     *
+     * @since WP-bs-theme-simple 0.0.1
+     *
+     * @return bool True if there is more than one category, false otherwise.
+     */
+    function wp_bs_theme_simple_categorized_blog() {
+        if (false === ( $all_the_cool_cats = get_transient('wp_bs_theme_simple_categories') )) {
+            // Create an array of all the categories that are attached to posts.
+            $all_the_cool_cats = get_categories(array(
+                'fields' => 'ids',
+                // We only need to know if there is more than one category.
+                'number' => 2,
+            ));
+
+            // Count the number of categories that are attached to the posts.
+            $all_the_cool_cats = count($all_the_cool_cats);
+
+            set_transient('wp_bs_theme_simple_categories', $all_the_cool_cats);
+        }
+
+        if ($all_the_cool_cats > 1) {
+            // This blog has more than 1 category so wp_bs_theme_simple_categorized_blog should return true.
+            return true;
+        } else {
+            // This blog has only 1 category so wp_bs_theme_simple_categorized_blog should return false.
+            return false;
+        }
+    }
+
+endif;
+
+/**
+ * Flushes out the transients used in wp_bs_theme_simple_categorized_blog().
+ *
+ * @since WP-bs-theme-simple 0.0.1
+ */
+function wp_bs_theme_simple_category_transient_flusher() {
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+        return;
+    }
+    // Like, beat it. Dig?
+    delete_transient('wp_bs_theme_simple_categories');
+}
+
+add_action('edit_category', 'wp_bs_theme_simple_category_transient_flusher');
+add_action('save_post', 'wp_bs_theme_simple_category_transient_flusher');
+
+
+
+if (!function_exists('wp_bs_theme_simple_the_custom_logo')) :
+
+    /**
+     * Displays the optional custom logo
+     *
+     * if logo is not available it uses the default image
+     *
+     * @since WP-bs-theme-simple 0.0.1
+     */
+    function wp_bs_theme_simple_the_custom_logo() {
+        if (function_exists('the_custom_logo')) :
+            if (has_custom_logo()) {
+                the_custom_logo();
+            } else {
+                // this is very very custom
+                echo '<a href="/" class="custom-logo-link" rel="home" itemprop="url">'
+                . '<img width="50" height="50" src="' . get_template_directory_uri() . '/img/logo.png" '
+                . 'class="custom-logo" alt="logo" itemprop="logo" >'
+                . '</a>';
+            }
+        endif;
+    }
+
+
     
 endif;
