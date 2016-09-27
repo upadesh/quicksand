@@ -35,7 +35,7 @@
                 <!-- site-navigation -->
                 <?php get_template_part('template-parts/navigation', 'primary'); ?>  
 
-                <!-- site-bloginfo -->
+                <!-- site-info -->
                 <?php if (has_header_image()) { ?>
                     <?php
                     /**
@@ -49,18 +49,18 @@
                      */
                     $custom_header_sizes = apply_filters('wp_bs_theme_simple_custom_header_sizes', '(max-width: 709px) 85vw, (max-width: 909px) 81vw, (max-width: 1362px) 88vw, 1200px');
                     ?>
-                    <div class="site-bloginfo">  
+                    <div class="site-info">  
                         <a href=" <?php echo esc_url(home_url('/')); ?>"> 
                             <img class="img-fluid" src="<?php header_image(); ?>" srcset="<?php echo esc_attr(wp_get_attachment_image_srcset(get_custom_header()->attachment_id)); ?>" sizes="<?php echo esc_attr($custom_header_sizes); ?>" width="<?php echo esc_attr(get_custom_header()->width); ?>" height="<?php echo esc_attr(get_custom_header()->height); ?>" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
                         </a>
                     </div>
 
                 <?php } else { ?> 
-                    <div class="site-bloginfo">  
+                    <div class="site-info">  
                         <div class="jumbotron">
-                            <h1 class="display-3 blog-title"><?php bloginfo('name'); ?></h1>
+                            <h1 class="display-3 site-title"><?php bloginfo('name'); ?></h1>
                             <hr class="m-y-2">
-                            <p class="lead blog-description"><?php bloginfo('description', 'display'); ?></p>
+                            <p class="lead site-description"><?php bloginfo('description', 'display'); ?></p>
                         </div>  
                     </div>
 

@@ -112,16 +112,16 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
     $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
 
     if (isset($wp_customize->selective_refresh)) {
-        $wp_customize->selective_refresh->add_partial('blogname', array(
-            'selector' => '.site-title a',
-            'container_inclusive' => false,
-            'render_callback' => 'wp_bs_theme_simple_customize_partial_blogname',
-        ));
-        $wp_customize->selective_refresh->add_partial('blogdescription', array(
-            'selector' => '.site-description',
-            'container_inclusive' => false,
-            'render_callback' => 'wp_bs_theme_simple_customize_partial_blogdescription',
-        ));
+//        $wp_customize->selective_refresh->add_partial('blogname', array(
+//            'selector' => '.blog-title a',
+//            'container_inclusive' => false,
+//            'render_callback' => 'wp_bs_theme_simple_customize_partial_blogname',
+//        ));
+//        $wp_customize->selective_refresh->add_partial('blogdescription', array(
+//            'selector' => '.site-description',
+//            'container_inclusive' => false,
+//            'render_callback' => 'wp_bs_theme_simple_customize_partial_blogdescription',
+//        ));
     }
 
     // Add color scheme setting and control.

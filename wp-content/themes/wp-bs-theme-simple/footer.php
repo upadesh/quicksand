@@ -25,7 +25,7 @@
 
 <!-- site-info -->
 <div class="container-fluid">
-    <div class="site-info">
+    <div class="site-footer-info">
         <div class="row">
             <div class="site-social">
                 <div class="text-xs-center text-lg-right"> 
@@ -66,7 +66,7 @@
                  */
                 do_action('wp_bs_theme_simple_credits');
                 ?> 
-                <div class="site-info text-xs-center text-lg-left">
+                <div class="text-xs-center text-lg-left">
                     <p class="text-muted lead">Copyright &copy;2016 
                         <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
                             <?php bloginfo('name'); ?>
