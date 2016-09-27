@@ -3,20 +3,23 @@
  * The template for displaying 404 pages (not found)
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @subpackage wp-bs-theme-simple
+ * @since WP-bs-theme-simple 0.0.1
  */
 get_header();
 ?> 
  
 <!--template: 404-->
 <div class="row">
+    
     <!--  site-content-area -->    
     <main id="primary" class="site-content-area">  
 
         <section class="error-404 not-found">
             <header class="page-header">
-                <h1 class="page-title"><?php _e('Oops! That page can&rsquo;t be found.', 'wp-bs-theme-simple'); ?></h1>
+                <h1 class="page-title">
+                    <?php _e('Oops! That page can&rsquo;t be found.', 'wp-bs-theme-simple'); ?>
+                </h1>
             </header><!-- .page-header -->
 
             <div class="page-content">
