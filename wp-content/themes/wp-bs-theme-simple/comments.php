@@ -6,8 +6,8 @@
  * and the comment form.
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @subpackage wp-bs-theme-simple
+ * @since WP-bs-theme-simple 0.0.1
  */
 
 /*
@@ -20,6 +20,7 @@ if ( post_password_required() ) {
 }
 ?>
 
+<!--template: comments-->
 <div id="comments" class="comments-area">
 
 	<?php if ( have_comments() ) : ?>
