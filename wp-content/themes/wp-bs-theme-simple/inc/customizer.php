@@ -112,16 +112,16 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
     $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
 
     if (isset($wp_customize->selective_refresh)) {
-//        $wp_customize->selective_refresh->add_partial('blogname', array(
-//            'selector' => '.blog-title a',
-//            'container_inclusive' => false,
-//            'render_callback' => 'wp_bs_theme_simple_customize_partial_blogname',
-//        ));
-//        $wp_customize->selective_refresh->add_partial('blogdescription', array(
-//            'selector' => '.site-description',
-//            'container_inclusive' => false,
-//            'render_callback' => 'wp_bs_theme_simple_customize_partial_blogdescription',
-//        ));
+        $wp_customize->selective_refresh->add_partial('blogname', array(
+            'selector' => '.site-info .site-title',
+            'container_inclusive' => false,
+            'render_callback' => 'wp_bs_theme_simple_customize_partial_blogname',
+        ));
+        $wp_customize->selective_refresh->add_partial('blogdescription', array( 
+            'selector' => '.site-info .site-description',
+            'container_inclusive' => false,
+            'render_callback' => 'wp_bs_theme_simple_customize_partial_blogdescription',
+        ));
     }
 
     // Add color scheme setting and control.
@@ -191,16 +191,11 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
     )));
 }
 
-add_action('customize_register', 'wp_bs_theme_simple_customize_register', 11);
+/*
+ * define first the colors of your color-schemes in wp_bs_theme_simple_get_color_schemes
+ */
 
-
-
-
-
-
-
-
-
+//add_action('customize_register', 'wp_bs_theme_simple_customize_register', 11);
 
 
 /**
@@ -226,6 +221,8 @@ function wp_bs_theme_simple_customize_partial_blogname() {
 function wp_bs_theme_simple_customize_partial_blogdescription() {
     bloginfo('description');
 }
+ 
+
 
 /**
  * Registers color schemes for WP-bs-theme-simple.
@@ -248,6 +245,7 @@ function wp_bs_theme_simple_get_color_schemes() {
      * Filter the color schemes registered for use with WP-bs-theme-simple.
      *
      * The default schemes include 'default', 'dark', 'gray', 'red', and 'yellow'.
+     * Adjust yout CSS-below
      *
      * @since WP-bs-theme-simple 0.0.1
      *
