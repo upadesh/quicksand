@@ -494,7 +494,7 @@ require get_template_directory() . '/inc/WP-bs-theme-simple-navwalker.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+//require get_template_directory() . '/inc/customizer.php';
 
 /**
  * integrate a scoial-media-menu
@@ -512,7 +512,7 @@ function wp_bs_theme_simple_social_media_array() {
 
 function wp_bs_theme_simple_add_social_sites_customizer($wp_customize) {
 
-    $wp_customize->add_section('my_social_settings', array(
+    $wp_customize->add_section('wp_bs_theme_simple_social_settings', array(
         'title' => __('Social Media Icons', 'text-domain'),
         'priority' => 35,
     ));
@@ -530,7 +530,7 @@ function wp_bs_theme_simple_add_social_sites_customizer($wp_customize) {
 
         $wp_customize->add_control($social_site, array(
             'label' => __("$social_site url:", 'text-domain'),
-            'section' => 'my_social_settings',
+            'section' => 'wp_bs_theme_simple_social_settings',
             'type' => 'text',
             'priority' => $priority,
         ));
