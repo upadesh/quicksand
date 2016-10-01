@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     timer.init(grunt);
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-          copy: {
+        copy: {
             main: {
                 // font-awesome
                 files: [
@@ -27,26 +27,36 @@ module.exports = function (grunt) {
                 }
             }
         },
+        postcss: {
+            options: { 
+                processors: [
+                    require('pixrem')(), // add fallbacks for rem units
+                    require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes 
+                ]
+            },
+            dist: {
+                src: 'dev/css/app.css', 
+            }
+        },
         concat: {
             css: {
-                src: [ 
+                src: [
 //                    'node_modules/tether/dist/css/tether.css',
 //                    'node_modules/bootstrap/dist/css/bootstrap.css',
 //                    always app.css first, because of the theme-description
                     'dev/css/app.css',
                     'node_modules/font-awesome/css/font-awesome.css',
                 ],
-                dest: 'css/<%= pkg.name %>.css' 
+                dest: 'css/<%= pkg.name %>.css'
             },
             js: {
-                src: [
-//                    'node_modules/jquery/dist/jquery.js',
+                src: [  
                     'node_modules/tether/dist/js/tether.js',
                     'node_modules/bootstrap/dist/js/bootstrap.js',
                     'dev/js/*.js',
                 ],
                 dest: 'js/<%= pkg.name %>.js'
-            }
+            } 
         },
         cssmin: {
             css: {
@@ -60,14 +70,13 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'js/<%= pkg.name %>.min.js': '<%= concat.js.dest %>'
+                    'js/<%= pkg.name %>.min.js': '<%= concat.js.dest %>',
                 }
             }
         },
         clean: {
-          dist:  ['css/*', 'js/*', 'fonts'],
-          dev:  ['dev/css/app.css', 'fonts'],
-          
+            dist: ['css/*', 'js/*', 'fonts'],
+            dev: ['dev/css/app.css', 'fonts'],
         },
         jshint: {
             files: ['Gruntfile.js', 'dev/js/*.js'],
@@ -92,7 +101,7 @@ module.exports = function (grunt) {
                 }
             },
             css: {
-                files: [ 
+                files: [
                     'dev/scss/*.scss',
                     'node_modules/bootstrap/dist/css/*.css'
                 ],
@@ -104,6 +113,7 @@ module.exports = function (grunt) {
         }
     });
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -112,6 +122,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.registerTask('test', ['jshint']);
-    grunt.registerTask("default", ['clean', 'sass', 'copy', 'concat', 'watch']);
-    grunt.registerTask('build', ['clean', 'sass', 'copy', 'concat', 'cssmin', 'uglify']);
+    grunt.registerTask("default", ['clean', 'sass', 'postcss', 'copy', 'concat', 'watch']);
+    grunt.registerTask('build', ['clean', 'sass', 'postcss', 'copy', 'concat', 'cssmin', 'uglify']);
 };
