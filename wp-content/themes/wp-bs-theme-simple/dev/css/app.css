@@ -31,6 +31,20 @@ $body-color: $gray-light;*/
   height: auto;
   max-width: 100%; }
 
+.site-info.custom-header-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: table;
+  width: 100%; }
+  .site-info.custom-header-image .warpme {
+    display: table-cell;
+    vertical-align: middle; }
+    .site-info.custom-header-image .warpme * {
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.2);
+      color: #fff;
+      padding: 20px; }
+
 /* grid-patterns */
 /* one-column */
 /* 

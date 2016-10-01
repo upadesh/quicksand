@@ -127,27 +127,24 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
          * See: https://codex.wordpress.org/Post_Formats
          */
         add_theme_support('post-formats', array(
-            'aside',
-            'image',
-            'video',
-            'quote',
+//            'aside',
+//            'image',
+//            'video',
+//            'quote',
             'link',
-            'gallery',
-            'status',
-            'audio',
-            'chat',
+//            'gallery',
+//            'status',
+//            'audio',
+//            'chat',
         ));
 
+        $customBackgroundArgs = array(
+            'default-color' => 'ffffff', 
+        );
+        add_theme_support('custom-background', $customBackgroundArgs);
 
-
-
-        /*
-         * This theme styles the visual editor to resemble the theme style,
-         * specifically font, colors, icons, and column width.
-         */
-//	add_editor_style( array( 'css/editor-style.css', wp_bs_theme_simple_fonts_url() ) ); 
-        // Indicate widget sidebars can use selective refresh in the Customizer.
-        add_theme_support('customize-selective-refresh-widgets');
+        $customHeaderArgs = array();
+        add_theme_support('custom-header', $customHeaderArgs); 
     }
 
 endif; // wp_bs_theme_simple_setup

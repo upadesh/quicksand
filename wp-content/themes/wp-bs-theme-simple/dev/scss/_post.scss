@@ -17,3 +17,22 @@
 .screen-reader-text {
     @extend .sr-only;
 } 
+
+
+
+.site-info.custom-header-image { 
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: table;
+    width: 100%;
+    .warpme {
+        display: table-cell;
+        vertical-align: middle;
+        * {
+            display: inline-block;
+            background: rgba(0,0,0,.2);
+            color: #fff;
+            padding: 20px;
+        }
+    }
+}

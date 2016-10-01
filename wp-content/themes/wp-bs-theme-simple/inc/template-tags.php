@@ -1,11 +1,11 @@
 <?php
 /**
- * Custom Twenty Sixteen template tags
+ * Custom WP-bs-theme-simple template tags
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
+ * @subpackage WP-bs-theme-simple
  * @since WP-bs-theme-simple 0.0.1
  */
 if (!function_exists('wp_bs_theme_simple_entry_meta')) :
