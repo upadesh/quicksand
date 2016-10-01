@@ -1,5 +1,4 @@
 <?php
-
 /**
  * WP-bs-theme-simple functions and definitions
  *
@@ -139,16 +138,41 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
         ));
 
         $customBackgroundArgs = array(
-            'default-color' => 'ffffff', 
+            'default-color' => 'ffffff',
         );
         add_theme_support('custom-background', $customBackgroundArgs);
 
         $customHeaderArgs = array();
-        add_theme_support('custom-header', $customHeaderArgs); 
+        add_theme_support('custom-header', $customHeaderArgs);
     }
 
 endif; // wp_bs_theme_simple_setup
 add_action('after_setup_theme', 'wp_bs_theme_simple_setup');
+
+
+
+/**
+ * include customizer-settings in new style-script
+ */
+function wp_bs_theme_simple_customizer_css() { 
+    ?>
+    <style type="text/css"> 
+        .site-main-container { 
+            background: <?php echo get_theme_mod('wbts_background_color'); ?>;
+            color: <?php echo get_theme_mod('wbts_text_color'); ?>;
+        }
+        .site-main-container  a  { 
+            background: <?php echo get_theme_mod('wbts_link_color'); ?>;
+        } 
+        /*bloginfo('name/description');*/
+    </style>
+    <?php
+}
+
+add_action('wp_head', 'wp_bs_theme_simple_customizer_css');
+
+
+
 
 
 /**

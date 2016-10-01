@@ -20,21 +20,7 @@
         <?php endif; ?> 
         <!--[if IE]><link rel="shortcut icon" href="img/favicon.ico"><![endif]-->
         <!--<link rel="icon" href="img/favicon.ico">-->  
-        <?php wp_head(); ?>
-
-        <?php
-        // custom-settings
-        $content_text_color = get_option('content_text_color');
-        $content_link_color = get_option('content_link_color');
-        $content_background_color = get_option('content_background_color');
-        ?>
-        <style> 
-            .site-main-container { 
-                color:  <?php echo $content_text_color; ?>; 
-                background: <?php echo $content_background_color; ?>;
-            }
-            .site-main-container a { color:  <?php echo $content_link_color; ?>; }
-        </style>
+        <?php wp_head(); ?> 
     </head>
     <body <?php body_class(); ?>>  
 

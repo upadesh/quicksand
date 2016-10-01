@@ -18,15 +18,26 @@
         value.bind(function (to) { 
             $('.site-description').text(to);
         });
+    }); 
+ 
+    wp.customize( 'wbts_background_color', function( value ) {
+        value.bind( function( to ) {
+            $( '.site-main-container' ).css( 'background', to );
+        } );
     });
-    wp.customize('content_background_color', function (value) {  
-        value.bind(function (to) {
-            $('body').css({
-                'backgound': to
-            }); 
-        });
+    
+    wp.customize( 'wbts_text_color', function( value ) {
+        value.bind( function( to ) {
+            $( '.site-main-container' ).css( 'color', to );
+        } );
     });
-
+    
+    wp.customize( 'wbts_link_color', function( value ) {
+        value.bind( function( to ) {
+            $( '.site-main-container a' ).css( 'color', to );
+        } );
+    }); 
+    
     // Header text color.
     wp.customize('header_textcolor', function (value) {
         value.bind(function (to) {
