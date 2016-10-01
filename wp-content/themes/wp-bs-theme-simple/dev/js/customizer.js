@@ -10,51 +10,38 @@
 
     // Site title and description.
     wp.customize('blogname', function (value) {
-        value.bind(function (to) { 
+        value.bind(function (to) {
             $('.site-title').text(to);
         });
     });
     wp.customize('blogdescription', function (value) {
-        value.bind(function (to) { 
+        value.bind(function (to) {
             $('.site-description').text(to);
         });
-    }); 
- 
-    wp.customize( 'wbts_background_color', function( value ) {
-        value.bind( function( to ) {
-            $( '.site-main-container' ).css( 'background', to );
-        } );
     });
-    
-    wp.customize( 'wbts_text_color', function( value ) {
-        value.bind( function( to ) {
-            $( '.site-main-container' ).css( 'color', to );
-        } );
-    });
-    
-    wp.customize( 'wbts_link_color', function( value ) {
-        value.bind( function( to ) {
-            $( '.site-main-container a' ).css( 'color', to );
-        } );
-    }); 
-    
-    // Header text color.
+
     wp.customize('header_textcolor', function (value) {
         value.bind(function (to) {
-            if ('blank' === to) {
-                $('.site-title, .site-description').css({
-                    'clip': 'rect(1px, 1px, 1px, 1px)',
-                    'position': 'absolute'
-                });
-            } else {
-                $('.site-title, .site-description').css({
-                    'clip': 'auto',
-                    'position': 'relative'
-                });
-                $('.site-title, .site-description').css({
-                    'color': to
-                });
-            }
+            $('.site-title').css('color', to);
+            $('.site-description').css('color', to);
+        });
+    }); 
+
+    wp.customize('wbts_background_color', function (value) {
+        value.bind(function (to) {
+            $('.site-main-container').css('background', to);
+        });
+    });
+
+    wp.customize('wbts_text_color', function (value) {
+        value.bind(function (to) {
+            $('.site-main-container').css('color', to);
+        });
+    });
+
+    wp.customize('wbts_link_color', function (value) {
+        value.bind(function (to) {
+            $('.site-main-container a').css('color', to);
         });
     });
 })(jQuery);
