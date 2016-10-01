@@ -485,4 +485,4 @@ require get_template_directory() . '/inc/WP-bs-theme-simple-navwalker.php';
 /**
  * Customizer additions.
  */
-//require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/customizer.php';
