@@ -25,10 +25,10 @@
     background-repeat: no-repeat;
     display: table;
     width: 100%;
-    .warpme {
+    .site-info-wrapper {
         display: table-cell;
         vertical-align: middle;
-        * {
+        h1, p {
             display: inline-block;
             background: rgba(0,0,0,.2);
             color: #fff;

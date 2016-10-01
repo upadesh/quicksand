@@ -50,7 +50,7 @@
                     $custom_header_sizes = apply_filters('wp_bs_theme_simple_custom_header_sizes', '(max-width: 709px) 85vw, (max-width: 909px) 81vw, (max-width: 1362px) 88vw, 1200px');
                     ?>
                     <div class="site-info custom-header-image" style="background: url(<?php header_image(); ?>); height:<?php echo esc_attr(get_custom_header()->height); ?>px;">  
-                        <div  class="warpme">
+                        <div  class="site-info-wrapper">
                             <h1 class="display-3 site-title"><?php bloginfo('name'); ?></h1> 
                             <br>
                             <p class="lead site-description" ><?php bloginfo('description', 'display'); ?></p> 

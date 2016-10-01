@@ -162,8 +162,13 @@ function wp_bs_theme_simple_customizer_css() {
             color: <?php echo get_theme_mod('wbts_text_color'); ?>;
         }
         .site-main-container  a  { 
-            background: <?php echo get_theme_mod('wbts_link_color'); ?>;
+            color: <?php echo get_theme_mod('wbts_link_color'); ?>;
         } 
+        
+        .site-title,
+        .site-description {
+            color: <?php echo get_option('header_textcolor'); ?> !important;
+        }
         /*bloginfo('name/description');*/
     </style>
     <?php
