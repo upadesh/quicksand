@@ -1,4 +1,5 @@
 <?php
+
 /**
  * WP-bs-theme-simple functions and definitions
  *
@@ -102,8 +103,7 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
          */
         register_nav_menus(array(
             'primary' => __('Primary Menu', 'wp_bs_theme_simple'),
-            'secondary' => __('Secondary Menu', 'wp_bs_theme_simple'),
-                // TODO: social-menu
+            'secondary' => __('Secondary Menu', 'wp_bs_theme_simple')
         ));
 
         /*
@@ -314,12 +314,6 @@ if (!function_exists('wp_bs_theme_simple_scripts')) :
 endif;
 add_action('wp_enqueue_scripts', 'wp_bs_theme_simple_scripts');
 
-
-
-
-
-//==================================================================== 
-
 /**
  * Adds custom classes to the array of body classes.
  *
@@ -495,98 +489,3 @@ require get_template_directory() . '/inc/WP-bs-theme-simple-navwalker.php';
  * Customizer additions.
  */
 //require get_template_directory() . '/inc/customizer.php';
-
-/**
- * integrate a scoial-media-menu
- * 
- * @see https://www.competethemes.com/blog/social-icons-wordpress-menu-theme-customizer/
- * 
- * @return string
- */
-function wp_bs_theme_simple_social_media_array() {
-    /* store social site names in array */
-    $social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'email');
-
-    return $social_sites;
-}
-
-function wp_bs_theme_simple_add_social_sites_customizer($wp_customize) {
-
-    $wp_customize->add_section('wp_bs_theme_simple_social_settings', array(
-        'title' => __('Social Media Icons', 'text-domain'),
-        'priority' => 35,
-    ));
-
-    $social_sites = wp_bs_theme_simple_social_media_array();
-    $priority = 5;
-
-    foreach ($social_sites as $social_site) {
-
-        $wp_customize->add_setting("$social_site", array(
-            'type' => 'theme_mod',
-            'capability' => 'edit_theme_options',
-            'sanitize_callback' => 'esc_url_raw'
-        ));
-
-        $wp_customize->add_control($social_site, array(
-            'label' => __("$social_site url:", 'text-domain'),
-            'section' => 'wp_bs_theme_simple_social_settings',
-            'type' => 'text',
-            'priority' => $priority,
-        ));
-
-        $priority = $priority + 5;
-    }
-}
-
-/* add settings to create various social media text areas. */
-add_action('customize_register', 'wp_bs_theme_simple_add_social_sites_customizer');
-
-
-/* takes user input from the customizer and outputs linked social media icons */
-
-function wp_bs_theme_simple_social_media_icons() {
-
-    $social_sites = wp_bs_theme_simple_social_media_array();
-
-    /* any inputs that aren't empty are stored in $active_sites array */
-    foreach ($social_sites as $social_site) {
-        if (strlen(get_theme_mod($social_site)) > 0) {
-            $active_sites[] = $social_site;
-        }
-    }
-
-    /* for each active social site, add it as a list item */
-    if (!empty($active_sites)) {
-        echo '<ul class="list-inline">';
-
-        foreach ($active_sites as $active_site) {
-
-            /* setup the class */
-            $class = 'fa fa-' . $active_site;
-
-            if ($active_site == 'email') {
-                ?>                 
-                <li class="d-inline">
-                    <a  class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url(get_theme_mod($active_site)); ?>">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-envelope fa-stack-1x fa-inverse" title="<?php printf(__('%s icon', 'text-domain'), $active_site); ?>"></i>
-                        </span>
-                    </a>
-                </li> 
-            <?php } else { ?> 
-                <li class="d-inline">
-                    <a  class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url(get_theme_mod($active_site)); ?>">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa <?php echo esc_attr($class); ?> fa-stack-1x fa-inverse" title="<?php printf(__('%s icon', 'text-domain'), $active_site); ?>"></i>
-                        </span>
-                    </a>
-                </li> 
-                <?php
-            }
-        }
-        echo "</ul>";
-    }
-}
