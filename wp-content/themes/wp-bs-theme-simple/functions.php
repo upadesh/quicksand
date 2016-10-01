@@ -1,5 +1,4 @@
 <?php
-
 /**
  * WP-bs-theme-simple functions and definitions
  *
@@ -355,7 +354,7 @@ function wp_bs_theme_simple_body_classes($classes) {
 
 add_filter('body_class', 'wp_bs_theme_simple_body_classes');
 
- 
+
 
 /**
  * Workaround for the Bootstrap-Wordpress-tag-bug
@@ -390,8 +389,6 @@ function bs4_remove_tag_body_class($classes) {
 //    ) );
 //}
 
-
-
 /**
  * Converts a HEX value to RGB. 
  *
@@ -401,25 +398,23 @@ function bs4_remove_tag_body_class($classes) {
  * @return array Array containing RGB (red, green, and blue) values for the given
  *               HEX code, empty array otherwise.
  */
-function wp_bs_theme_simple_hex2rgb( $color ) {
-	$color = trim( $color, '#' );
+function wp_bs_theme_simple_hex2rgb($color) {
+    $color = trim($color, '#');
 
-	if ( strlen( $color ) === 3 ) {
-		$r = hexdec( substr( $color, 0, 1 ).substr( $color, 0, 1 ) );
-		$g = hexdec( substr( $color, 1, 1 ).substr( $color, 1, 1 ) );
-		$b = hexdec( substr( $color, 2, 1 ).substr( $color, 2, 1 ) );
-	} else if ( strlen( $color ) === 6 ) {
-		$r = hexdec( substr( $color, 0, 2 ) );
-		$g = hexdec( substr( $color, 2, 2 ) );
-		$b = hexdec( substr( $color, 4, 2 ) );
-	} else {
-		return array();
-	}
+    if (strlen($color) === 3) {
+        $r = hexdec(substr($color, 0, 1) . substr($color, 0, 1));
+        $g = hexdec(substr($color, 1, 1) . substr($color, 1, 1));
+        $b = hexdec(substr($color, 2, 1) . substr($color, 2, 1));
+    } else if (strlen($color) === 6) {
+        $r = hexdec(substr($color, 0, 2));
+        $g = hexdec(substr($color, 2, 2));
+        $b = hexdec(substr($color, 4, 2));
+    } else {
+        return array();
+    }
 
-	return array( 'red' => $r, 'green' => $g, 'blue' => $b );
+    return array('red' => $r, 'green' => $g, 'blue' => $b);
 }
-
-
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
@@ -432,21 +427,22 @@ function wp_bs_theme_simple_hex2rgb( $color ) {
  *                      values in pixels (in that order).
  * @return string A source size value for use in a content image 'sizes' attribute.
  */
-function wp_bs_theme_simple_content_image_sizes_attr( $sizes, $size ) {
-	$width = $size[0];
+function wp_bs_theme_simple_content_image_sizes_attr($sizes, $size) {
+    $width = $size[0];
 
-	840 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px';
+    840 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px';
 
-	if ( 'page' === get_post_type() ) {
-		840 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
-	} else {
-		840 > $width && 600 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 600px';
-		600 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
-	}
+    if ('page' === get_post_type()) {
+        840 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
+    } else {
+        840 > $width && 600 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 600px';
+        600 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
+    }
 
-	return $sizes;
+    return $sizes;
 }
-add_filter( 'wp_calculate_image_sizes', 'wp_bs_theme_simple_content_image_sizes_attr', 10 , 2 );
+
+add_filter('wp_calculate_image_sizes', 'wp_bs_theme_simple_content_image_sizes_attr', 10, 2);
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
@@ -459,14 +455,15 @@ add_filter( 'wp_calculate_image_sizes', 'wp_bs_theme_simple_content_image_sizes_
  * @param array $size Registered image size or flat array of height and width dimensions.
  * @return string A source size value for use in a post thumbnail 'sizes' attribute.
  */
-function wp_bs_theme_simple_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
-	if ( 'post-thumbnail' === $size ) {
-		is_active_sidebar( 'sidebar-1' ) && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
-		! is_active_sidebar( 'sidebar-1' ) && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px';
-	}
-	return $attr;
+function wp_bs_theme_simple_post_thumbnail_sizes_attr($attr, $attachment, $size) {
+    if ('post-thumbnail' === $size) {
+        is_active_sidebar('sidebar-1') && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
+        !is_active_sidebar('sidebar-1') && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px';
+    }
+    return $attr;
 }
-add_filter( 'wp_get_attachment_image_attributes', 'wp_bs_theme_simple_post_thumbnail_sizes_attr', 10 , 3 );
+
+add_filter('wp_get_attachment_image_attributes', 'wp_bs_theme_simple_post_thumbnail_sizes_attr', 10, 3);
 
 /**
  * Modifies tag cloud widget arguments to have all tags in the widget same font size.
@@ -484,8 +481,6 @@ add_filter( 'wp_get_attachment_image_attributes', 'wp_bs_theme_simple_post_thumb
 //}
 //add_filter( 'widget_tag_cloud_args', 'wp_bs_theme_simple_widget_tag_cloud_args' );
 
-
-
 /**
  * Custom template tags for this theme.
  */
@@ -499,4 +494,99 @@ require get_template_directory() . '/inc/WP-bs-theme-simple-navwalker.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php'; 
+require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * integrate a scoial-media-menu
+ * 
+ * @see https://www.competethemes.com/blog/social-icons-wordpress-menu-theme-customizer/
+ * 
+ * @return string
+ */
+function wp_bs_theme_simple_social_media_array() {
+    /* store social site names in array */
+    $social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'email');
+
+    return $social_sites;
+}
+
+function wp_bs_theme_simple_add_social_sites_customizer($wp_customize) {
+
+    $wp_customize->add_section('my_social_settings', array(
+        'title' => __('Social Media Icons', 'text-domain'),
+        'priority' => 35,
+    ));
+
+    $social_sites = wp_bs_theme_simple_social_media_array();
+    $priority = 5;
+
+    foreach ($social_sites as $social_site) {
+
+        $wp_customize->add_setting("$social_site", array(
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => 'esc_url_raw'
+        ));
+
+        $wp_customize->add_control($social_site, array(
+            'label' => __("$social_site url:", 'text-domain'),
+            'section' => 'my_social_settings',
+            'type' => 'text',
+            'priority' => $priority,
+        ));
+
+        $priority = $priority + 5;
+    }
+}
+
+/* add settings to create various social media text areas. */
+add_action('customize_register', 'wp_bs_theme_simple_add_social_sites_customizer');
+
+
+/* takes user input from the customizer and outputs linked social media icons */
+
+function wp_bs_theme_simple_social_media_icons() {
+
+    $social_sites = wp_bs_theme_simple_social_media_array();
+
+    /* any inputs that aren't empty are stored in $active_sites array */
+    foreach ($social_sites as $social_site) {
+        if (strlen(get_theme_mod($social_site)) > 0) {
+            $active_sites[] = $social_site;
+        }
+    }
+
+    /* for each active social site, add it as a list item */
+    if (!empty($active_sites)) {
+        echo '<ul class="list-inline">';
+
+        foreach ($active_sites as $active_site) {
+
+            /* setup the class */
+            $class = 'fa fa-' . $active_site;
+
+            if ($active_site == 'email') {
+                ?>                 
+                <li class="d-inline">
+                    <a  class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url(get_theme_mod($active_site)); ?>">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-envelope fa-stack-1x fa-inverse" title="<?php printf(__('%s icon', 'text-domain'), $active_site); ?>"></i>
+                        </span>
+                    </a>
+                </li> 
+            <?php } else { ?> 
+                <li class="d-inline">
+                    <a  class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url(get_theme_mod($active_site)); ?>">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa <?php echo esc_attr($class); ?> fa-stack-1x fa-inverse" title="<?php printf(__('%s icon', 'text-domain'), $active_site); ?>"></i>
+                        </span>
+                    </a>
+                </li> 
+                <?php
+            }
+        }
+        echo "</ul>";
+    }
+}

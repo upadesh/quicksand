@@ -29,32 +29,7 @@
         <div class="row">
             <div class="site-social">
                 <div class="text-xs-center text-lg-right"> 
-                    <ul class="list-inline">
-                        <li class="d-inline">
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="d-inline">
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="d-inline">
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul> 
+                    <?php wp_bs_theme_simple_social_media_icons(); ?>
                 </div>
             </div>
             <div class="site-copyright "> 
@@ -62,7 +37,7 @@
                 /**
                  * Fires before the wp-bs-theme-simple footer text for footer customization.
                  *
-                 * @since WP-bs-theme-simple 1.0
+                 * @since WP-bs-theme-simple 0.0.1
                  */
                 do_action('wp_bs_theme_simple_credits');
                 ?> 

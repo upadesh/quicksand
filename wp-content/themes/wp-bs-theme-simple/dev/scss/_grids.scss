@@ -38,11 +38,11 @@
 
 .site-footer-info {
     .site-social {
-        @extend .col-lg-3 ;
-        @extend .push-lg-9; 
+        @extend .col-lg-9 ;
+        @extend .push-lg-3; 
     }
     .site-copyright {
-        @extend .col-lg-9 ;
-        @extend .pull-lg-3;
+        @extend .col-lg-3 ;
+        @extend .pull-lg-9;
     }
 }
