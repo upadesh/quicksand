@@ -1,11 +1,13 @@
 /* Push main sections down */
+
+.site-navigation { 
+    @extend .m-b-2; 
+}
+
 .site-header,
 .site-content { 
     @extend .m-b-3 ;
 
-    .site-navigation { 
-        @extend .m-b-2; 
-    }
     .post-thumbnail {
         @extend .m-b-3;
     } 
