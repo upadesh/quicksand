@@ -41,7 +41,7 @@
 
     wp.customize('wbts_link_color', function (value) {
         value.bind(function (to) {
-            $('.site-main-container a').css('color', to);
+            $('a').css('color', to);
         });
     });
 })(jQuery);
