@@ -70,22 +70,23 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         );
     }
 
-    // === Theme Section ===
-    // header fullwidth
-    // transport: rush
+    /* Theme Section */
+    
+    /* header fullwidth
+     * transport: refresh */
     $wp_customize->add_section('wp_bs_theme_simple_theme', array(
         'title' => __('Theme Options', 'wp-bs-theme-simple'),
         'priority' => 35,
     ));
 
-
     $wp_customize->add_setting("wp_bs_theme_simple_header_fullwidth", array(
         'type' => 'theme_mod',
+        'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field'
     ));
 
     $wp_customize->add_control('wp_bs_theme_simple_header_fullwidth', array(
-        'label' => __("Header Fullwidth:", 'text-domain'),
+        'label' => __("Header Fullwidth:", 'wp-bs-theme-simple'),
         'section' => 'wp_bs_theme_simple_theme',
         'type' => 'checkbox',
         'settings' => 'wp_bs_theme_simple_header_fullwidth',
@@ -93,6 +94,7 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
     ));
 
     // Google Fonts
+    // eiegenes Object erstellen
 //    $fonts = array();
 //
 //    function get_font_name($font) {

@@ -24,16 +24,17 @@
     </head>
     <body <?php body_class(); ?>>  
 
+        <!-- site-navigation -->
+        <?php get_template_part('template-parts/navigation', 'primary'); ?> 
+        
         <!-- site-main-container --> 
         <div class="container site-main-container"> 
 
             <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', 'wp_bs_theme_simple'); ?></a>
 
             <!-- site-header >-->
-            <header class="site-header"> 
+            <header id="masthead" class="site-header"> 
 
-                <!-- site-navigation -->
-                <?php get_template_part('template-parts/navigation', 'primary'); ?>  
 
                 <!-- site-info -->
                 <?php if (has_header_image()) { ?>
