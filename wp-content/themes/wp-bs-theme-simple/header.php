@@ -23,10 +23,12 @@
         <?php wp_head(); ?> 
     </head>
     <body <?php body_class(); ?>>  
+        <!-- site-main-container --> 
+        <div class="<?php echo get_theme_mod('wp_bs_theme_simple_nav_fullwidth') ? '' : 'container'; ?>  site-nav-container">
+                <!-- site-navigation -->
+                <?php get_template_part('template-parts/navigation', 'primary'); ?>  
+        </div>
 
-        <!-- site-navigation -->
-        <?php get_template_part('template-parts/navigation', 'primary'); ?> 
-        
         <!-- site-main-container --> 
         <div class="container site-main-container"> 
 
@@ -34,6 +36,7 @@
 
             <!-- site-header >-->
             <header id="masthead" class="site-header"> 
+
 
 
                 <!-- site-info -->

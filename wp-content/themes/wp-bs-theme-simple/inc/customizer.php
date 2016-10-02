@@ -79,17 +79,17 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         'priority' => 35,
     ));
 
-    $wp_customize->add_setting("wp_bs_theme_simple_header_fullwidth", array(
+    $wp_customize->add_setting("wp_bs_theme_simple_nav_fullwidth", array(
         'type' => 'theme_mod',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field'
     ));
 
-    $wp_customize->add_control('wp_bs_theme_simple_header_fullwidth', array(
-        'label' => __("Header Fullwidth:", 'wp-bs-theme-simple'),
+    $wp_customize->add_control('wp_bs_theme_simple_nav_fullwidth', array(
+        'label' => __("Navigation Fullwidth:", 'wp-bs-theme-simple'),
         'section' => 'wp_bs_theme_simple_theme',
         'type' => 'checkbox',
-        'settings' => 'wp_bs_theme_simple_header_fullwidth',
+        'settings' => 'wp_bs_theme_simple_nav_fullwidth',
         'priority' => 12,
     ));
 
