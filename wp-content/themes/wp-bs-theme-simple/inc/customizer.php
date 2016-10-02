@@ -46,9 +46,10 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
 
     // Section: Colors  
     // Add color scheme  
+    // @see http://www.deluxeblogtips.com/2016/01/add-color-schemes-wordpress-theme.html
     $wp_customize->add_setting('color_scheme', array(
         'default' => 'default',
-//        'sanitize_callback' => 'wp_bs_theme_simple_sanitize_color_scheme',
+        'sanitize_callback' => 'wp_bs_theme_simple_sanitize_color_scheme',
         'transport' => 'postMessage',
     ));
 
