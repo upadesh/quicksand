@@ -137,6 +137,8 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
 //            'chat',
         ));
 
+        
+        $colorSchemeDefault = wp_bs_theme_simple_get_color_schemes()['default']['colors'];
         $customBackgroundArgs = array(
             'default-color' => 'ffffff',
         );
