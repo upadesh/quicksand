@@ -140,12 +140,12 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
         
         $colorSchemeDefault = wp_bs_theme_simple_get_color_schemes()['default']['colors'];
         $customBackgroundArgs = array(
-            'default-color' => 'ffffff',
+            'default-color' => $colorSchemeDefault[0],
         );
         add_theme_support('custom-background', $customBackgroundArgs);
 
         $customHeaderArgs = array(
-            'default-text-color' => 'ffffff',
+            'default-text-color' => $colorSchemeDefault[4],
         );
         add_theme_support('custom-header', $customHeaderArgs);
     }

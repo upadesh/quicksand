@@ -15,7 +15,7 @@
  */
 function wp_bs_theme_simple_customize_control_js() {
     wp_enqueue_script('color-scheme-control', get_template_directory_uri() . '/js/color-scheme-control.js', array('customize-controls', 'iris', 'underscore', 'wp-util'), 'wp-bs-theme-simple', true);
-    wp_localize_script('color-scheme-control', 'colorScheme', wp_bs_theme_simple_get_color_schemes()); 
+    wp_localize_script('color-scheme-control', 'colorScheme', wp_bs_theme_simple_get_color_schemes());
 }
 
 add_action('customize_controls_enqueue_scripts', 'wp_bs_theme_simple_customize_control_js');
@@ -45,8 +45,12 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
     $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
 
     // Section: Colors  
-    // Add color scheme  
-    // @see http://www.deluxeblogtips.com/2016/01/add-color-schemes-wordpress-theme.html
+    /*
+     *  Add color scheme 
+     * Right now it only updates the 7 defined colors ... no extra css is loaded
+     * 
+     * @see http://www.deluxeblogtips.com/2016/01/add-color-schemes-wordpress-theme.html 
+     */
     $wp_customize->add_setting('color_scheme', array(
         'default' => 'default',
         'sanitize_callback' => 'wp_bs_theme_simple_sanitize_color_scheme',
@@ -59,33 +63,33 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         'type' => 'select',
         'choices' => wp_bs_theme_simple_get_color_scheme_choices(),
         'priority' => 1,
-    )); 
-    
+    ));
+
     $colorSchemeDefault = wp_bs_theme_simple_get_color_schemes()['default']['colors'];
     $colors = array();
     $colors[] = array(
-        'slug' => 'wbts_background_color', 
+        'slug' => 'wbts_background_color',
         'default' => $colorSchemeDefault[1],
         'label' => __('Content Background Color', 'wp-bs-theme-simple')
     );
     $colors[] = array(
-        'slug' => 'wbts_link_color', 
+        'slug' => 'wbts_link_color',
         'default' => $colorSchemeDefault[2],
         'label' => __('Content Link Color', 'wp-bs-theme-simple')
     );
     $colors[] = array(
-        'slug' => 'wbts_text_color', 
+        'slug' => 'wbts_text_color',
         'default' => $colorSchemeDefault[3],
         'label' => __('Content Text Color', 'wp-bs-theme-simple')
     );
-    
+
     $colors[] = array(
-        'slug' => 'wbts_nav_background_color', 
+        'slug' => 'wbts_nav_background_color',
         'default' => $colorSchemeDefault[5],
         'label' => __('Navbar Background Color', 'wp-bs-theme-simple')
     );
     $colors[] = array(
-        'slug' => 'wbts_nav_link_color', 
+        'slug' => 'wbts_nav_link_color',
         'default' => $colorSchemeDefault[6],
         'label' => __('Navbar Link Color', 'wp-bs-theme-simple')
     );
@@ -106,7 +110,7 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
             'settings' => $color['slug'])
                 )
         );
-    } 
+    }
 
 
     // Section: Theme  
@@ -127,7 +131,7 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         'type' => 'checkbox',
         'settings' => 'wp_bs_theme_simple_nav_fullwidth',
         'priority' => 12,
-    )); 
+    ));
 }
 
 add_action('customize_register', 'wp_bs_theme_simple_customize_register');
@@ -287,7 +291,7 @@ function wp_bs_theme_simple_get_color_schemes() {
         'dark' => array(
             'label' => __('Dark', 'wp-bs-theme-simple'),
             'colors' => array(
-                '#000000',
+                '#321123',
                 '#ffffff',
                 '#cecece',
                 '#686868',
@@ -299,7 +303,7 @@ function wp_bs_theme_simple_get_color_schemes() {
         'gray' => array(
             'label' => __('Gray', 'wp-bs-theme-simple'),
             'colors' => array(
-                '#000000',
+                '#322311',
                 '#ffffff',
                 '#cecece',
                 '#686868',
@@ -323,7 +327,7 @@ function wp_bs_theme_simple_get_color_schemes() {
         'yellow' => array(
             'label' => __('Yellow', 'wp-bs-theme-simple'),
             'colors' => array(
-                '#000000',
+                '#222111',
                 '#ffffff',
                 '#cecece',
                 '#686868',
@@ -406,7 +410,9 @@ if (!function_exists('wp_bs_theme_simple_sanitize_color_scheme')) :
         }
 
         return $value;
-    } 
+    }
+
+ 
     
 endif; // wp_bs_theme_simple_sanitize_color_scheme
  
