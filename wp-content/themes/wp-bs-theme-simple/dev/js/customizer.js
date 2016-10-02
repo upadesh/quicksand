@@ -7,7 +7,12 @@
  */
 
 (function ($) {
-
+    
+    // if not in design-mode, don't go any further
+    if (typeof wp.customize !== 'function')  {
+        return;
+    } 
+    
     // Site title and description.
     wp.customize('blogname', function (value) {
         value.bind(function (to) {
