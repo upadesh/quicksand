@@ -15,24 +15,18 @@
  */
 function wp_bs_theme_simple_customize_register($wp_customize) {
     $wp_customize->get_setting('blogname')->transport = 'postMessage';
-    $wp_customize->get_setting('blogdescription')->transport = 'postMessage';  
+    $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
     $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
-
-}
-
-add_action('customize_register', 'wp_bs_theme_simple_customize_register');
-
-function wp_bs_theme_simple_theme_customize_register($wp_customize) {
 
     $colors = array();
     $colors[] = array(
         'slug' => 'wbts_text_color',
-        'default' => '#000000',
+        'default' => '#686868',
         'label' => __('Content Text Color', 'wp-bs-theme-simple')
     );
     $colors[] = array(
         'slug' => 'wbts_link_color',
-        'default' => '#000000',
+        'default' => '#cecece',
         'label' => __('Content Link Color', 'wp-bs-theme-simple')
     );
     $colors[] = array(
@@ -62,7 +56,7 @@ function wp_bs_theme_simple_theme_customize_register($wp_customize) {
     }
 }
 
-add_action('customize_register', 'wp_bs_theme_simple_theme_customize_register');
+add_action('customize_register', 'wp_bs_theme_simple_customize_register');
 
 /**
  * integrate a scoial-media-menu
