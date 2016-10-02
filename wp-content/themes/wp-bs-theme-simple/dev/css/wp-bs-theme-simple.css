@@ -4457,8 +4457,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-right: 24px !important;
   margin-right: 1.5rem !important; }
 
-.m-b-2, .site-header .site-navigation,
-.site-content .site-navigation, .site-header .site-content-area .post,
+.m-b-2, .site-navigation, .site-header .site-content-area .post,
 .site-content .site-content-area .post, .site-header .site-content-area .post .site-comments-area .comments-title,
 .site-header .site-content-area .post .site-comments-area .comment-list,
 .site-content .site-content-area .post .site-comments-area .comments-title,

@@ -183,7 +183,7 @@ function wp_bs_theme_simple_customizer_css() {
 
 add_action('wp_head', 'wp_bs_theme_simple_customizer_css');
 
-
+// wp_add_inline_Style ... include anderes css
 
 
 
@@ -336,13 +336,41 @@ if (!function_exists('wp_bs_theme_simple_styles')) :
      */
     function wp_bs_theme_simple_styles() {
 
+//    TODO: registrieren und dann abhängigkeiten
+//        
+//          /*   REGISTER ALL JS FOR SITE */
+//    wp_register_script('pr_cycle_all',get_stylesheet_directory_uri().'/js/pr-slider.js');
+//    wp_register_script('pr_slider',get_stylesheet_directory_uri().'/js/jquery.cycle.all.min.js');
+//    wp_register_script('pr_validation_engine',get_stylesheet_directory_uri().'/js/jquery.validationEngine-en.js');
+//    wp_register_script('pr_validation_locale',get_stylesheet_directory_uri().'/js/jquery.validationEngine.js');
+//    wp_register_script('stylethemes',get_stylesheet_directory_uri().'/js/stylethemes.js');
+//    wp_register_script('pr-jquery-ui',get_stylesheet_directory_uri().'/js/jquery-ui.js');
+//    wp_register_script('main-js',get_stylesheet_directory_uri().'/js/main.js');
+//    wp_register_script('pr-galleriffic',get_stylesheet_directory_uri().'/js/jquery.galleriffic.js');
+//    wp_register_script('pr-rollover',get_stylesheet_directory_uri().'/js/jquery.opacityrollover.js');
+//    wp_register_script('pr_colorbox',get_stylesheet_directory_uri().'/js/jquery.colorbox.js');
+//    wp_register_script('pr_jcarousel_js',get_stylesheet_directory_uri().'/js/jquery.jcarousel.min.js'); 
+//    //wp_register_script('google-map-api','https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'); 
+//
+//    /*   REGISTER ALL CSS FOR SITE */
+//    wp_register_style('pr_woocommerce',get_stylesheet_directory_uri().'/css/_woocommerce.css');
+//    wp_register_style('pr_mobile',get_stylesheet_directory_uri().'/css/mobile.css');
+//    wp_register_style('pr_sec_teal_grey',get_stylesheet_directory_uri().'/css/secondary-teal-grey.css');
+//    wp_register_style('pr_site_options',get_stylesheet_directory_uri().'/css/site-options.css');
+//    wp_register_style('pr_teal_grey',get_stylesheet_directory_uri().'/css/teal-grey.css');
+//    wp_register_style('validation_css',get_stylesheet_directory_uri().'/css/validationEngine.jquery.css');
+//    wp_register_style('galleriffic_css',get_stylesheet_directory_uri().'/css/galleriffic.css');
+//    wp_register_style('pr_colorbox_style',get_stylesheet_directory_uri().'/css/colorbox.css');
+// 
+
         global $wp_bs_theme_simple_version;
 
         // Theme stylesheet-description
         wp_enqueue_style('wp-bs-theme-simple-desc-style', get_stylesheet_uri());
 
         // Theme stylesheet
-        wp_enqueue_style('wp-bs-theme-simple-style', get_template_directory_uri() . '/css/wp-bs-theme-simple.css', array(), $wp_bs_theme_simple_version);
+        wp_enqueue_style('wp-bs-theme-simple-style-font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array(), $wp_bs_theme_simple_version);
+        wp_enqueue_style('wp-bs-theme-simple-style-theme', get_template_directory_uri() . '/css/wp-bs-theme-simple.css', array(), $wp_bs_theme_simple_version);
     }
 
 endif;
@@ -359,7 +387,10 @@ if (!function_exists('wp_bs_theme_simple_scripts')) :
      */
     function wp_bs_theme_simple_scripts() {
         global $wp_bs_theme_simple_version;
-        wp_enqueue_script('wp-bs-theme-simple-script', get_template_directory_uri() . '/js/wp-bs-theme-simple.js', array('jquery'), $wp_bs_theme_simple_version, true);
+        wp_enqueue_script('wp-bs-theme-simple-script-tether', get_template_directory_uri() . '/js/tether.js', array(), $wp_bs_theme_simple_version, true);
+        wp_enqueue_script('wp-bs-theme-simple-script-bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), $wp_bs_theme_simple_version, true);
+        wp_enqueue_script('wp-bs-theme-simple-script-customizer', get_template_directory_uri() . '/js/customizer.js', array('jquery'), $wp_bs_theme_simple_version, true);
+        wp_enqueue_script('wp-bs-theme-simple-script-color-scheme-control', get_template_directory_uri() . '/js/color-scheme-control.js', array('jquery'), $wp_bs_theme_simple_version, true);
     }
 
 endif;
