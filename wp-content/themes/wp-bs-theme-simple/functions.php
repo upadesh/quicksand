@@ -439,6 +439,9 @@ add_filter('body_class', 'wp_bs_theme_simple_body_classes');
  * 
  * the tag-class is already occupied by bootstrap, so when wordpress
  * generates it in the body-class, it breaks the layout.
+ * 
+ * @param mixed $classes
+ * @return mixed
  */
 add_filter('body_class', 'bs4_remove_tag_body_class');
 
@@ -465,10 +468,6 @@ function bs4_remove_tag_body_class($classes) {
 //    ) );
 //}
 
-
-
-
-
 /**
  * same treatment like fields in bootstrap4_comment_form_fields
  * 
@@ -489,6 +488,8 @@ add_filter('comment_form_defaults', 'bootstrap4_comment_form');
 
 /**
  * customize comment form
+ * 
+ * these fields are not shown, when you're logged in
  * 
  * @see http://www.codecheese.com/2013/11/wordpress-comment-form-with-twitter-bootstrap-3-supports/
  * 
@@ -520,9 +521,6 @@ add_filter('comment_form_default_fields', 'bootstrap4_comment_form_fields');
 
 
 //============================================================================================================
-
-
-
 
 /**
  * Converts a HEX value to RGB. 
