@@ -470,7 +470,7 @@ function bs4_remove_tag_body_class($classes) {
 
 
 /**
- * textarea needs some special treatment in BS
+ * same treatment like fields in bootstrap4_comment_form_fields
  * 
  * @param type $args
  * @return string
