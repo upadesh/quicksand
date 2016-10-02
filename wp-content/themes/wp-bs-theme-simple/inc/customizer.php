@@ -7,6 +7,31 @@
  */
 
 /**
+ * Binds the JS listener to make Customizer color_scheme control.
+ *
+ * Passes color scheme data as colorScheme global.
+ *
+ * @since WP-bs-theme-simple1.0
+ */
+function wp_bs_theme_simple_customize_control_js() {
+    wp_enqueue_script('color-scheme-control', get_template_directory_uri() . '/js/color-scheme-control.js', array('customize-controls', 'iris', 'underscore', 'wp-util'), 'wp-bs-theme-simple', true);
+    wp_localize_script('color-scheme-control', 'colorScheme', wp_bs_theme_simple_get_color_schemes()); 
+}
+
+add_action('customize_controls_enqueue_scripts', 'wp_bs_theme_simple_customize_control_js');
+
+/**
+ * Binds JS handlers to make the Customizer preview reload changes asynchronously.
+ *
+ * @since WP-bs-theme-simple1.0
+ */
+function wp_bs_theme_simple_customize_preview_js() {
+    wp_enqueue_script('wp-bs-theme-simple-customize-preview', get_template_directory_uri() . '/js/customize-preview.js', array('customize-preview'), 'wp-bs-theme-simple', true);
+}
+
+add_action('customize_preview_init', 'wp_bs_theme_simple_customize_preview_js');
+
+/**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
  * @see https://codex.wordpress.org/Theme_Customization_API
@@ -63,8 +88,7 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
             'settings' => $color['slug'])
                 )
         );
-    }
-
+    } 
 
 
     // Add color scheme  
@@ -397,6 +421,10 @@ if (!function_exists('wp_bs_theme_simple_sanitize_color_scheme')) :
 
         return $value;
     }
+
+
+
+
 
 
 

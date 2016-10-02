@@ -131,7 +131,7 @@ module.exports = function (grunt) {
                     'dev/js/*.js'
                 ],
 //                tasks: ['concat:js', 'jshint'],
-                tasks: ['jshint'],
+                tasks: ['clean', 'sass', 'postcss', 'copy'],
                 options: {
                     livereload: true,
                 }

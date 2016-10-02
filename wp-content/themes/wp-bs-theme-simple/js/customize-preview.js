@@ -6,8 +6,7 @@
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
 
-(function ($) {
-    
+(function ($) { 
     // if not in design-mode, don't go any further
     if (typeof wp.customize !== 'function')  {
         return;
