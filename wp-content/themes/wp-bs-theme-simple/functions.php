@@ -143,20 +143,18 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
         add_theme_support('custom-background', $customBackgroundArgs);
 
         $customHeaderArgs = array(
-            'default-text-color'     => 'ffffff',
-            );
+            'default-text-color' => 'ffffff',
+        );
         add_theme_support('custom-header', $customHeaderArgs);
     }
 
 endif; // wp_bs_theme_simple_setup
 add_action('after_setup_theme', 'wp_bs_theme_simple_setup');
 
-
-
 /**
  * include customizer-settings in new style-script
  */
-function wp_bs_theme_simple_customizer_css() { 
+function wp_bs_theme_simple_customizer_css() {
     ?>
     <style type="text/css"> 
         .site-main-container { 
@@ -166,19 +164,19 @@ function wp_bs_theme_simple_customizer_css() {
         a  { 
             color: <?php echo get_theme_mod('wbts_link_color'); ?>;
         } 
-        
+
         .site-main-container .site-info-wrapper .site-title,
         .site-main-container .site-info-wrapper .site-description {
             color: #<?php echo get_header_textcolor(); ?>;
         } 
-        
+
         nav.navbar  {
             background: <?php echo get_theme_mod('wbts_nav_background_color'); ?>;
         }
         nav.navbar #menu-primary .nav-item .nav-link {
             color: <?php echo get_theme_mod('wbts_nav_link_color'); ?>;
         } 
-        
+
     </style>
     <?php
 }
@@ -242,6 +240,42 @@ endif;
 add_action('widgets_init', 'wp_bs_theme_simple_widgets_init');
 
 
+if (!function_exists('wp_bs_theme_simple_get_google_fonts')) :
+
+    /**
+     * define here the google fonts you want to use
+     * 
+     * @since WP-bs-theme-simple 0.0.1
+     * 
+     * @return string
+     */
+    function wp_bs_theme_simple_get_google_fonts() {
+
+        $fonts = array();
+
+        /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
+        if ('off' !== _x('on', 'Raleway font: on or off', 'wp-bs-theme-simple')) {
+            $fonts[] = 'Raleway:400,700,900,400italic,700italic,900italic';
+        }
+
+        if ('off' !== _x('on', 'Titillium Web font: on or off', 'wp-bs-theme-simple')) {
+            $fonts[] = 'Titillium Web:400,700,900,400italic,700italic,900italic';
+        }
+
+        if ('off' !== _x('on', 'Dosis font: on or off', 'wp-bs-theme-simple')) {
+            $fonts[] = 'Dosis:400,700,900,400italic,700italic,900italic';
+        }
+
+        if ('off' !== _x('on', 'Inconsolata font: on or off', 'wp-bs-theme-simple')) {
+            $fonts[] = 'Inconsolata:400,700,900,400italic,700italic,900italic';
+        }
+
+        return $fonts;
+    }
+
+endif;
+
+
 if (!function_exists('wp_bs_theme_simple_fonts_url')) :
 
     /**
@@ -254,28 +288,10 @@ if (!function_exists('wp_bs_theme_simple_fonts_url')) :
      * @return string Google fonts URL for the theme.
      */
     function wp_bs_theme_simple_fonts_url() {
+
+        $fonts = wp_bs_theme_simple_get_google_fonts();
         $fonts_url = '';
-        $fonts = array();
         $subsets = 'latin,latin-ext';
-
-        /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-        if ('off' !== _x('on', 'Raleway font: on or off', 'wp-bs-theme-simple')) {
-            $fonts[] = 'Raleway:400,700,900,400italic,700italic,900italic';
-        }
-
-        if ('off' !== _x('on', 'Titillium Web font: on or off', 'wp-bs-theme-simple')) {
-            $fonts[] = 'Titillium Web:400,700,900,400italic,700italic,900italic';
-        }
-
-        /* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
-        if ('off' !== _x('on', 'Dosis font: on or off', 'wp-bs-theme-simple')) {
-            $fonts[] = 'Dosis:400,700';
-        }
-
-        /* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
-        if ('off' !== _x('on', 'Inconsolata font: on or off', 'wp-bs-theme-simple')) {
-            $fonts[] = 'Inconsolata:400';
-        }
 
         if ($fonts) {
             $fonts_url = add_query_arg(array(
@@ -289,11 +305,11 @@ if (!function_exists('wp_bs_theme_simple_fonts_url')) :
 
 endif;
 
-function wp_bs_theme_simple_get_google_fonts() {
+function wp_bs_theme_simple_get_fonts() {
     wp_enqueue_style('wp_bs_theme_simple-fonts', wp_bs_theme_simple_fonts_url(), array(), null);
 }
 
-add_action('wp_enqueue_scripts', 'wp_bs_theme_simple_get_google_fonts');
+add_action('wp_enqueue_scripts', 'wp_bs_theme_simple_get_fonts');
 
 
 
