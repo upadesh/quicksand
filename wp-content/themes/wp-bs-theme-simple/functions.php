@@ -171,6 +171,14 @@ function wp_bs_theme_simple_customizer_css() {
         .site-main-container .site-info-wrapper .site-description {
             color: #<?php echo get_header_textcolor(); ?>;
         } 
+        
+        nav.navbar  {
+            background: <?php echo get_theme_mod('wbts_nav_background_color'); ?>;
+        }
+        nav.navbar #menu-primary .nav-item .nav-link {
+            color: <?php echo get_theme_mod('wbts_nav_link_color'); ?>;
+        } 
+        
     </style>
     <?php
 }

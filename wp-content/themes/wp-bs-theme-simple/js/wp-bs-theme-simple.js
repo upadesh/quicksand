@@ -5426,4 +5426,15 @@ var Popover = (function ($) {
             $('a').css('color', to);
         });
     });
+
+    wp.customize('wbts_nav_link_color', function (value) {
+        value.bind(function (to) {
+            $('nav.navbar #menu-primary .nav-item .nav-link').css('color', to);
+        });
+    });
+    wp.customize('wbts_nav_background_color', function (value) {
+        value.bind(function (to) {
+            $('nav.navbar').css('background-color', to);
+        });
+    });
 })(jQuery);

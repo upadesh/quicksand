@@ -14,10 +14,12 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function wp_bs_theme_simple_customize_register($wp_customize) {
+    // build-in 
     $wp_customize->get_setting('blogname')->transport = 'postMessage';
     $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
     $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
 
+    // Colors Section
     $colors = array();
     $colors[] = array(
         'slug' => 'wbts_text_color',
@@ -34,14 +36,27 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         'default' => '#ffffff',
         'label' => __('Content Background Color', 'wp-bs-theme-simple')
     );
+    $colors[] = array(
+        'slug' => 'wbts_background_color',
+        'default' => '#ffffff',
+        'label' => __('Content Background Color', 'wp-bs-theme-simple')
+    );
+    $colors[] = array(
+        'slug' => 'wbts_nav_link_color',
+        'default' => '#ffffff',
+        'label' => __('Navbar Link Color', 'wp-bs-theme-simple')
+    );
+    $colors[] = array(
+        'slug' => 'wbts_nav_background_color',
+        'default' => '#cecece',
+        'label' => __('Navbar Background Color', 'wp-bs-theme-simple')
+    );
 
     foreach ($colors as $color) {
         $wp_customize->add_setting(
                 $color['slug'], array(
             'default' => $color['default'],
-//            'type' => 'option',
             'transport' => 'postMessage',
-//            'capability' => 'edit_theme_options'
                 )
         );
 
@@ -54,6 +69,30 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
                 )
         );
     }
+
+
+    // Theme Section 
+
+    // header fullwidth
+    // transport: rush
+    $wp_customize->add_section('wp_bs_theme_simple_theme', array(
+        'title' => __('Theme Options', 'wp-bs-theme-simple'),
+        'priority' => 35,
+    ));
+
+
+    $wp_customize->add_setting("wp_bs_theme_simple_header_fullwidth", array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+
+    $wp_customize->add_control('aaa', array(
+        'label' => __("Header Fullwidth:", 'text-domain'),
+        'section' => 'wp_bs_theme_simple_theme',
+        'type' => 'checkbox',
+        'settings' => 'wp_bs_theme_simple_header_fullwidth',
+        'priority' => 12,
+    ));
 }
 
 add_action('customize_register', 'wp_bs_theme_simple_customize_register');
