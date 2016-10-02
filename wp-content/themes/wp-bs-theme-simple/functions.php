@@ -163,7 +163,7 @@ function wp_bs_theme_simple_customizer_css() {
             background: <?php echo get_theme_mod('wbts_background_color'); ?>;
             color: <?php echo get_theme_mod('wbts_text_color'); ?>;
         }
-        .site-main-container  a  { 
+        a  { 
             color: <?php echo get_theme_mod('wbts_link_color'); ?>;
         } 
         
