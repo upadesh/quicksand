@@ -1,10 +1,6 @@
 <!--template: content-->
 <!-- post --> 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <?php
-    // Post thumbnail.
-    // the_post_thumbnail();
-    ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> 
 
     <!-- .entry-header --> 
     <header class="entry-header">
@@ -19,9 +15,6 @@
     </header><!-- .entry-header -->  
 
     <!--post-meta-->
-    <?php
-//    get_template_part('template-parts/postmeta', get_post_format());
-    ?>
     <?php wp_bs_theme_simple_entry_meta(); ?>
 
     <!--post excerpt-->

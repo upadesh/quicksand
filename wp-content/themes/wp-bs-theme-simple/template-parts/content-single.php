@@ -45,8 +45,9 @@
 //            break;
 //        case 'quote':
 //            break;
-//        case 'link':
-//            break;
+        case 'link': 
+            get_template_part('template-parts/content-single', get_post_format());
+            break;
 //        case 'gallery':
 //            break;
 //        case 'status':
