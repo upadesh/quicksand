@@ -22,13 +22,6 @@ get_header();
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-                <nav id="image-navigation" class="navigation image-navigation">
-                    <div class="nav-links">
-                        <div class="nav-previous"><?php previous_image_link(false, __('Previous Image', 'twentysixteen')); ?></div>
-                        <div class="nav-next"><?php next_image_link(false, __('Next Image', 'twentysixteen')); ?></div>
-                    </div><!-- .nav-links -->
-                </nav><!-- .image-navigation -->
-
                 <header class="entry-header">
                     <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
                 </header><!-- .entry-header -->
@@ -38,7 +31,7 @@ get_header();
                     <div class="entry-attachment">
                         <?php
                         /**
-                         * Filter the default twentysixteen image attachment size.
+                         * Filter the default wp-bs-theme-simple image attachment size.
                          *
                          * @since Twenty Sixteen 1.0
                          *
@@ -55,24 +48,36 @@ get_header();
 
                     <?php
                     the_content();
+                    
                     wp_link_pages(array(
-                        'before' => '<div class="page-links"><span class="page-links-title">' . __('Pages:', 'twentysixteen') . '</span>',
+                        'before' => '<div class="page-links"><span class="page-links-title">' . __('Pages:', 'wp-bs-theme-simple') . '</span>',
                         'after' => '</div>',
                         'link_before' => '<span>',
                         'link_after' => '</span>',
-                        'pagelink' => '<span class="screen-reader-text">' . __('Page', 'twentysixteen') . ' </span>%',
+                        'pagelink' => '<span class="screen-reader-text">' . __('Page', 'wp-bs-theme-simple') . ' </span>%',
                         'separator' => '<span class="screen-reader-text">, </span>',
                     ));
                     ?>
                 </div><!-- .entry-content -->
 
+
+                <nav id="image-navigation" class="navigation image-navigation">
+                    <div class="nav-links">
+                        <i class="fa fa-backward" aria-hidden="true"></i> 
+                        <span class="nav-previous"><?php previous_image_link(false, __('Previous Image', 'wp-bs-theme-simple')); ?></span>
+                        <span class="nav-next"><?php next_image_link(false, __('Next Image', 'wp-bs-theme-simple')); ?></span> 
+                        <i class="fa fa-forward" aria-hidden="true"></i>
+                    </div><!-- .nav-links -->
+                </nav><!-- .image-navigation --> 
+                
+                
                 <footer class="entry-footer">
                     <?php wp_bs_theme_simple_entry_meta(); ?>
                     <?php
                     // Retrieve attachment metadata.
                     $metadata = wp_get_attachment_metadata();
                     if ($metadata) {
-                        printf('<span class="full-size-link"><span class="screen-reader-text">%1$s </span><a href="%2$s">%3$s &times; %4$s</a></span>', esc_html_x('Full size', 'Used before full size attachment link.', 'twentysixteen'), esc_url(wp_get_attachment_url()), absint($metadata['width']), absint($metadata['height'])
+                        printf('<span class="full-size-link"><span class="screen-reader-text">%1$s </span><a href="%2$s">%3$s &times; %4$s</a></span>', esc_html_x('Full size', 'Used before full size attachment link.', 'wp-bs-theme-simple'), esc_url(wp_get_attachment_url()), absint($metadata['width']), absint($metadata['height'])
                         );
                     }
                     ?>
@@ -80,7 +85,7 @@ get_header();
                     edit_post_link(
                             sprintf(
                                     /* translators: %s: Name of current post */
-                                    __('Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen'), get_the_title()
+                                    __('Edit<span class="screen-reader-text"> "%s"</span>', 'wp-bs-theme-simple'), get_the_title()
                             ), '<span class="edit-link">', '</span>'
                     );
                     ?>
@@ -93,7 +98,7 @@ get_header();
                 comments_template();
             }
 
-            // Parent post navigation
+            // TODO: Parent post navigation
             the_posts_pagination(array(
                 'prev_text' => '<i class="fa fa-backward" aria-hidden="true"></i>',
                 'next_text' => '<i class="fa fa-forward" aria-hidden="true"></i>',
