@@ -100,8 +100,6 @@ $gray-lightest:             #81d742!default;
 HINT: hier def. Farben können mit der Lifevorschau in die Quere kommen!
 */
 .site-info.custom-header-image {
-  background-size: contain;
-  background-repeat: no-repeat;
   display: table;
   width: 100%; }
   .site-info.custom-header-image .site-info-wrapper {
