@@ -1,30 +1,10 @@
 $navbar-height: 50px;
 
-.site-navigation { 
-    .navbar-header {
-        line-height: $navbar-height;
-    }
-    .navbar-brand {
-        .custom-logo {
-            max-height: $navbar-height;
-        } 
-    }  
-
-    @media (min-width: 768px) {
-        .nav-wrapper { 
-            max-height: $navbar-height; 
-        }
-    }
-
-    .navbar-nav {
-        li {
-            .nav-link {
-                line-height: $navbar-height;
-            } 
-            .dropdown-item {
-                line-height: $navbar-height / 2;
-            } 
-        }
-    }
-
+.navbar-nav li a {
+    line-height: $navbar-height;
 }
+.navbar-brand {
+    .custom-logo-link {
+        line-height: $navbar-height;
+    }  
+}  

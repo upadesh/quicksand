@@ -15,21 +15,11 @@ $gray-lighter:              #81d742 !default;
 $gray-lightest:             #81d742!default;
 
 */
-.site-navigation .navbar-header {
+.navbar-nav li a {
   line-height: 50px; }
 
-.site-navigation .navbar-brand .custom-logo {
-  max-height: 50px; }
-
-@media (min-width: 768px) {
-  .site-navigation .nav-wrapper {
-    max-height: 50px; } }
-
-.site-navigation .navbar-nav li .nav-link {
+.navbar-brand .custom-logo-link {
   line-height: 50px; }
-
-.site-navigation .navbar-nav li .dropdown-item {
-  line-height: 25px; }
 
 /* Test: reduce size of massively large image with no alignment.
  *  http://wp.local/archives/tag/alignment-2

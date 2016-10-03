@@ -21,11 +21,19 @@
 
             <div class="collapse navbar-toggleable-md" id="collapsing-navbar">
                 <!--<a class="navbar-brand" href="#">Navbar</a>-->
-                <div class="navbar-header">
-                    <div class="navbar-brand" href="/">
-                        <?php wp_bs_theme_simple_the_custom_logo(); ?>
-                    </div>
-                </div>
+                <?php
+                if (function_exists('the_custom_logo')) :
+                    if (has_custom_logo()) {
+                        ?>
+                        <div class="navbar-header">
+                            <div class="navbar-brand" href="/">
+                                <?php wp_bs_theme_simple_the_custom_logo(); ?>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                endif;
+                ?>
                 <div class="nav-wrapper pull-xs-right"> 
                     <?php wp_nav_menu($primary_nav_options); ?> 
                 </div>
