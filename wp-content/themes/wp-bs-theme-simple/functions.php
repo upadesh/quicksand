@@ -168,8 +168,8 @@ function wp_bs_theme_simple_customizer_css() {
             color: <?php echo get_theme_mod('wbts_link_color'); ?>;
         } 
 
-        .site-main-container .site-info-wrapper .site-title,
-        .site-main-container .site-info-wrapper .site-description {
+        .site-info-wrapper .site-title,
+        .site-info-wrapper .site-description {
             color: #<?php echo get_header_textcolor(); ?>;
         } 
 
@@ -183,6 +183,9 @@ function wp_bs_theme_simple_customizer_css() {
         nav.navbar #menu-primary .nav-item .nav-link {
             color: <?php echo get_theme_mod('wbts_nav_link_color'); ?>;
         } 
+        .site-info-wrapper.jumbotron  {
+            background: <?php echo get_theme_mod('wbts_header_background_color'); ?>;
+        }
 
     </style>
     <?php
