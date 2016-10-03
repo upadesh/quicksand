@@ -4507,7 +4507,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin: 16px 16px !important;
   margin: 1rem 1rem !important; }
 
-.m-t-1, .site-content .post-thumbnail img {
+.m-t-1 {
   margin-top: 16px !important;
   margin-top: 1rem !important; }
 
@@ -4515,7 +4515,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-right: 16px !important;
   margin-right: 1rem !important; }
 
-.m-b-1, .site-content .post-thumbnail img {
+.m-b-1, .site-content .post-meta-data, .site-content .post-thumbnail img {
   margin-bottom: 16px !important;
   margin-bottom: 1rem !important; }
 

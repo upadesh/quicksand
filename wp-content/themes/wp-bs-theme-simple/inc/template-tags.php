@@ -18,6 +18,7 @@ if (!function_exists('wp_bs_theme_simple_entry_meta')) :
      * @since WP-bs-theme-simple 0.0.1
      */
     function wp_bs_theme_simple_entry_meta() {
+        echo '<div class="post-meta-data">';
         if ('post' === get_post_type()) {
             $author_avatar_size = apply_filters('wp_bs_theme_simple_author_avatar_size', 49);
             printf('<span class="byline"><span class="author vcard">%1$s<span class="screen-reader-text">%2$s </span> <a class="url fn n" href="%3$s">%4$s</a></span></span>', get_avatar(get_the_author_meta('user_email'), $author_avatar_size), _x('Author', 'Used before post author name.', 'wp-bs-theme-simple'), esc_url(get_author_posts_url(get_the_author_meta('ID'))), get_the_author()
@@ -43,6 +44,7 @@ if (!function_exists('wp_bs_theme_simple_entry_meta')) :
             comments_popup_link(sprintf(__('Leave a comment<span class="screen-reader-text"> on %s</span>', 'wp-bs-theme-simple'), get_the_title()));
             echo '</span>';
         }
+        echo "</div>";
     }
 
 endif;
@@ -260,8 +262,12 @@ if (!function_exists('wp_bs_theme_simple_the_custom_logo')) :
         if (function_exists('the_custom_logo')) :
             if (has_custom_logo()) {
                 the_custom_logo();
-            } 
+            }
         endif;
     }
+
+
+
+
 
 endif;

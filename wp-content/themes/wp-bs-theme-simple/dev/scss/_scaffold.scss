@@ -19,9 +19,12 @@
 
 .site-content { 
     padding: 30px;
+    
+    .post-meta-data {
+        @extend .m-b-1;
+    }
 
-    .post-thumbnail img {
-        @extend .m-t-1;
+    .post-thumbnail img { 
         @extend .m-b-1;
     } 
 
