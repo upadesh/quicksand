@@ -29,9 +29,11 @@
         @extend .m-b-3;
     } 
 
-    .site-sidebar { 
+    .site-sidebar {  
         section.widget {
             @extend .m-b-2;
+            @extend .text-md-left; 
+            @extend .text-xs-center; 
         } 
     } 
 }  
@@ -39,5 +41,13 @@
 .site-footer {
     .site-widgetbar {
         @extend .m-b-2; 
+    }
+}
+
+
+.site-content-bottom-widgets {
+    .widget {
+        @extend .text-md-left; 
+        @extend .text-xs-center; 
     }
 }

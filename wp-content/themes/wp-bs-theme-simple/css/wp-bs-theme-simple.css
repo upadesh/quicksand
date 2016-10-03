@@ -4742,7 +4742,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .text-xs-right {
   text-align: right !important; }
 
-.text-xs-center {
+.text-xs-center, .site-content .site-sidebar section.widget, .site-content-bottom-widgets .widget {
   text-align: center !important; }
 
 @media (min-width: 544px) {
@@ -4754,7 +4754,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
     text-align: center !important; } }
 
 @media (min-width: 768px) {
-  .text-md-left {
+  .text-md-left, .site-content .site-sidebar section.widget, .site-content-bottom-widgets .widget {
     text-align: left !important; }
   .text-md-right {
     text-align: right !important; }
