@@ -48,7 +48,7 @@ get_header();
 
                     <?php
                     the_content();
-                    
+
                     wp_link_pages(array(
                         'before' => '<div class="page-links"><span class="page-links-title">' . __('Pages:', 'wp-bs-theme-simple') . '</span>',
                         'after' => '</div>',
@@ -60,17 +60,15 @@ get_header();
                     ?>
                 </div><!-- .entry-content -->
 
-
+                <!-- image-navigation -->
                 <nav id="image-navigation" class="navigation image-navigation">
-                    <div class="nav-links">
-                        <i class="fa fa-backward" aria-hidden="true"></i> 
-                        <span class="nav-previous"><?php previous_image_link(false, __('Previous Image', 'wp-bs-theme-simple')); ?></span>
-                        <span class="nav-next"><?php next_image_link(false, __('Next Image', 'wp-bs-theme-simple')); ?></span> 
-                        <i class="fa fa-forward" aria-hidden="true"></i>
+                    <div class="nav-links"> 
+                        <span class="nav-previous"><?php previous_image_link(false, __('&laquo; Previous Image', 'wp-bs-theme-simple')); ?></span>
+                        <span class="nav-next"><?php next_image_link(false, __('Next Image &raquo;', 'wp-bs-theme-simple')); ?></span>  
                     </div><!-- .nav-links -->
                 </nav><!-- .image-navigation --> 
-                
-                
+
+
                 <footer class="entry-footer">
                     <?php wp_bs_theme_simple_entry_meta(); ?>
                     <?php
@@ -98,11 +96,9 @@ get_header();
                 comments_template();
             }
 
-            // TODO: Parent post navigation
-            the_posts_pagination(array(
-                'prev_text' => '<i class="fa fa-backward" aria-hidden="true"></i>',
-                'next_text' => '<i class="fa fa-forward" aria-hidden="true"></i>',
-                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'wp_bs_theme_simple') . ' </span>',
+            // Parent post navigation
+            the_post_navigation(array(
+                'prev_text' => _x('<span class="meta-nav">Published in </span><span class="post-title">%title</span>', 'Parent post link', 'wp-bs-theme-simple'),
             ));
         // End the loop.
         endwhile;
