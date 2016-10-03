@@ -99,8 +99,7 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
 
 
         /*
-         * sidebars 
-         * This theme uses wp_nav_menu() in 3 locations.
+         * menus
          */
         register_nav_menus(array(
             'primary' => __('Primary Menu', 'wp_bs_theme_simple'),
@@ -238,14 +237,14 @@ if (!function_exists('wp_bs_theme_simple_widgets_init')) :
         ));
 
         register_sidebar(array(
-            'name' => __('Widget Bar Footer', 'wp-bs-theme-simple'),
+            'name' => __('Content-Footer', 'wp-bs-theme-simple'),
             'id' => 'sidebar-2',
             'description' => __('Appears at the bottom of the content on posts and pages.', 'simple'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget' => '</section>',
             'before_title' => '<h2 class="widget-title">',
             'after_title' => '</h2>',
-        ));
+        )); 
     }
 
 endif;

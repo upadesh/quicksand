@@ -122,6 +122,15 @@ HINT: hier def. Farben können mit der Lifevorschau in die Quere kommen!
     .site-footer-info .site-copyright p {
       font-size: .8em; }
 
+/*center navbar-items in mobile-mode*/
+@media (max-width: 992px) {
+  .site-footer-info .navbar-nav {
+    width: 100%;
+    text-align: center; }
+    .site-footer-info .navbar-nav > li {
+      float: none;
+      display: inline-block; } }
+
 /* import bootstrap at the very last end, so we can use it's variables */
 /*!
  * Bootstrap v4.0.0-alpha.4 (http://getbootstrap.com)
@@ -795,7 +804,7 @@ pre {
     display: table;
     clear: both; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .site-footer .site-content-bottom-widgets .widget, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .site-content #secondary, .site-footer-info .site-copyright, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .site-content #primary, .site-footer-info .site-social, .col-lg-10, .col-lg-11, .col-lg-12, .page-template-template-fullwidth .site-content #primary, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .site-footer .site-content-bottom-widgets .widget, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .site-content #secondary, .col-lg-4, .col-lg-5, .col-lg-6, .site-footer-info .site-social, .site-footer-info .site-copyright, .col-lg-7, .col-lg-8, .col-lg-9, .site-content #primary, .col-lg-10, .col-lg-11, .col-lg-12, .page-template-template-fullwidth .site-content #primary, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
@@ -1195,7 +1204,7 @@ pre {
   .col-lg-2 {
     float: left;
     width: 16.6666666667%; }
-  .col-lg-3, .site-content #secondary, .site-footer-info .site-copyright {
+  .col-lg-3, .site-content #secondary {
     float: left;
     width: 25%; }
   .col-lg-4 {
@@ -1204,7 +1213,7 @@ pre {
   .col-lg-5 {
     float: left;
     width: 41.6666666667%; }
-  .col-lg-6 {
+  .col-lg-6, .site-footer-info .site-social, .site-footer-info .site-copyright {
     float: left;
     width: 50%; }
   .col-lg-7 {
@@ -1213,7 +1222,7 @@ pre {
   .col-lg-8 {
     float: left;
     width: 66.6666666667%; }
-  .col-lg-9, .site-content #primary, .site-footer-info .site-social {
+  .col-lg-9, .site-content #primary {
     float: left;
     width: 75%; }
   .col-lg-10 {
@@ -1237,13 +1246,13 @@ pre {
     right: 33.3333333333%; }
   .pull-lg-5 {
     right: 41.6666666667%; }
-  .pull-lg-6 {
+  .pull-lg-6, .site-footer-info .site-copyright {
     right: 50%; }
   .pull-lg-7 {
     right: 58.3333333333%; }
   .pull-lg-8 {
     right: 66.6666666667%; }
-  .pull-lg-9, .site-footer-info .site-copyright {
+  .pull-lg-9 {
     right: 75%; }
   .pull-lg-10 {
     right: 83.3333333333%; }
@@ -1257,13 +1266,13 @@ pre {
     left: 8.3333333333%; }
   .push-lg-2 {
     left: 16.6666666667%; }
-  .push-lg-3, .site-footer-info .site-social {
+  .push-lg-3 {
     left: 25%; }
   .push-lg-4 {
     left: 33.3333333333%; }
   .push-lg-5 {
     left: 41.6666666667%; }
-  .push-lg-6 {
+  .push-lg-6, .site-footer-info .site-social {
     left: 50%; }
   .push-lg-7 {
     left: 58.3333333333%; }
