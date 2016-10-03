@@ -93,7 +93,7 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
          * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
          */
         add_theme_support('post-thumbnails');
-        set_post_thumbnail_size(1200, 9999); 
+        set_post_thumbnail_size(1200, 9999);
 
 
         /*
@@ -173,6 +173,7 @@ function wp_bs_theme_simple_customizer_css() {
             color: #<?php echo get_header_textcolor(); ?>;
         } 
 
+        /*TODO: CSS anpassen*/
         .menu-toggle:hover, .menu-toggle:focus, a, .main-navigation a:hover, .main-navigation a:focus, .dropdown-toggle:hover, .dropdown-toggle:focus, .social-navigation a:hover:before, .social-navigation a:focus:before, .post-navigation a:hover .post-title, .post-navigation a:focus .post-title, .tagcloud a:hover, .tagcloud a:focus, .site-branding .site-title a:hover, .site-branding .site-title a:focus, .entry-title a:hover, .entry-title a:focus, .entry-footer a:hover, .entry-footer a:focus, .comment-metadata a:hover, .comment-metadata a:focus, .pingback .comment-edit-link:hover, .pingback .comment-edit-link:focus, .comment-reply-link, .comment-reply-link:hover, .comment-reply-link:focus, .required, .site-info a:hover, .site-info a:focus {
             color: <?php echo get_theme_mod('wbts_secondary_text_color'); ?>;
         }
@@ -374,13 +375,22 @@ if (!function_exists('wp_bs_theme_simple_styles')) :
 // 
 
         global $wp_bs_theme_simple_version;
+ 
+        // check if custom-thememod exists 
+        $currentThemeMod = get_theme_mod('color_scheme', 'default');
+        $currentThemeMod = $currentThemeMod === 'default' ? '' : '-' . $currentThemeMod;
+        $styleSheetToLoad = get_template_directory_uri() . '/css/wp-bs-theme-simple' . $currentThemeMod . '.css'; 
+        if (!file_exists( get_template_directory() .  '/css/wp-bs-theme-simple' . $currentThemeMod . '.css')) { 
+            // not available, load the defsault one instead
+            $styleSheetToLoad = get_template_directory_uri() . '/css/wp-bs-theme-simple.css';
+        }
 
         // Theme stylesheet-description
         wp_enqueue_style('wp-bs-theme-simple-desc-style', get_stylesheet_uri());
 
         // Theme stylesheet
         wp_enqueue_style('wp-bs-theme-simple-style-font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array(), $wp_bs_theme_simple_version);
-        wp_enqueue_style('wp-bs-theme-simple-style-theme', get_template_directory_uri() . '/css/wp-bs-theme-simple.css', array(), $wp_bs_theme_simple_version);
+        wp_enqueue_style('wp-bs-theme-simple-style-theme', $styleSheetToLoad, array(), $wp_bs_theme_simple_version);
     }
 
 endif;

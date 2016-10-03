@@ -54,7 +54,7 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
     $wp_customize->add_setting('color_scheme', array(
         'default' => 'default',
         'sanitize_callback' => 'wp_bs_theme_simple_sanitize_color_scheme',
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
     ));
 
     $wp_customize->add_control('color_scheme', array(
