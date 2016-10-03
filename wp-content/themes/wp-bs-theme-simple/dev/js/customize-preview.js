@@ -66,4 +66,9 @@
             $('nav.navbar').css('background-color', to);
         });
     });
+    wp.customize('wbts_header_background_color', function (value) {
+        value.bind(function (to) {
+            $('.site-info-wrapper.jumbotron').css('background-color', to);
+        });
+    });
 })(jQuery);

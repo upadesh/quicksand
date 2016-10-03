@@ -98,6 +98,11 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         'default' => $colorSchemeDefault[7],
         'label' => __('Navbar Link Color', 'wp-bs-theme-simple')
     );
+    $colors[] = array(
+        'slug' => 'wbts_header_background_color',
+        'default' => $colorSchemeDefault[8],
+        'label' => __('Header Background Color', 'wp-bs-theme-simple')
+    );
 
     foreach ($colors as $color) {
         $wp_customize->add_setting(
@@ -307,6 +312,7 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#ffffff',
                 '#cecece',
                 '#ffffff',
+                '#e55050',
             ),
         ),
         'dark' => array(
@@ -320,6 +326,7 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#ffffff',
                 '#cecece',
                 '#ffffff',
+                '#333333',
             ),
         ),
         'gray' => array(
@@ -333,6 +340,7 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#ffffff',
                 '#cecece',
                 '#ffffff',
+                '#333333',
             ),
         ),
         'red' => array(
@@ -346,6 +354,7 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#e0e0e0',
                 '#f23737',
                 '#c1c1c1',
+                '#333333',
             ),
         ),
         'green' => array(
@@ -359,6 +368,7 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#96f24b',
                 '#29842a',
                 '#81d742',
+                '#333333',
             ),
         ),
     ));

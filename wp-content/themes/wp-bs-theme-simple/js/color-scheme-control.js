@@ -61,6 +61,12 @@
                     api.control('wbts_nav_link_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
+                    
+                    color = colors[8];
+                    api('wbts_header_background_color').set(color);
+                    api.control('wbts_header_background_color').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color);
  
                 });
             }

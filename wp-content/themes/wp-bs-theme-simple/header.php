@@ -29,7 +29,6 @@
             <?php get_template_part('template-parts/navigation', 'primary'); ?>  
         </div>
 
-
         <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', 'wp_bs_theme_simple'); ?></a>
 
         <!-- site-header >-->
@@ -59,11 +58,11 @@
 
             <?php } else { ?> 
                 <div class="site-info">  
-                    <div class="jumbotron">
+                    <div  class="site-info-wrapper jumbotron"> 
                         <h1 class="display-3 site-title"><?php bloginfo('name'); ?></h1>
                         <hr class="m-y-2">
-                        <p class="lead site-description"><?php bloginfo('description', 'display'); ?></p>
-                    </div>  
+                        <p class="lead site-description"><?php bloginfo('description', 'display'); ?></p> 
+                    </div>
                 </div>
 
             <?php } ?><!--End header image check-->
