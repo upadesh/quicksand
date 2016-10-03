@@ -1,4 +1,4 @@
-$navbar-height: 50px;
+$navbar-height: 50px; 
 
 .navbar-nav li a {
     line-height: $navbar-height;
@@ -7,6 +7,10 @@ $navbar-height: 50px;
     .custom-logo-link {
         line-height: $navbar-height;
     }  
+    .custom-logo {
+        max-height: $navbar-height;
+        width: auto;
+    } 
 }  
 .navbar-nav {
     li { 

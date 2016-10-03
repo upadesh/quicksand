@@ -21,6 +21,10 @@ $gray-lightest:             #81d742!default;
 .navbar-brand .custom-logo-link {
   line-height: 50px; }
 
+.navbar-brand .custom-logo {
+  max-height: 50px;
+  width: auto; }
+
 .navbar-nav li .dropdown-menu {
   /*align the dropdown*/
   margin: 7px 0 0; }
