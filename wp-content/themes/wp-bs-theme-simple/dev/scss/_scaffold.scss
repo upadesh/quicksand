@@ -1,38 +1,36 @@
-/* Push main sections down */
+/* Push main sections */
 
-/*only push down when not fullwidth*/ 
-.site-nav-container.container { 
+/* lways push down content after header */
+.site-header {
+    @extend .m-b-3; 
+}
+
+/*stick to the navbar when fullwidth*/ 
+.site-header.container {
+    @extend .m-t-2; 
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*always leave some space to the footer*/
+.site-main-container {
     @extend .m-b-2; 
 }
 
-.site-header,
 .site-content { 
-    @extend .m-b-3 ;
+    padding: 30px;
 
-    .post-thumbnail {
+    .post-thumbnail img {
+        @extend .m-t-1;
+        @extend .m-b-1;
+    } 
+
+    article {
         @extend .m-b-3;
     } 
-    .site-content-area {
-        .post {
-            @extend .m-b-2; 
-            .entry-content {
-                @extend .m-b-3;
-            } 
-            .post-list-navigation, 
-            .post-single-navigation {
-                @extend .m-b-3; 
-            }
 
-            .site-comments-area {
-                .comments-title,
-                .comment-list {
-                    @extend .m-b-2; 
-                }
-            }
-        }
-    }
     .site-sidebar { 
-        section {
+        section.widget {
             @extend .m-b-2;
         } 
     } 
