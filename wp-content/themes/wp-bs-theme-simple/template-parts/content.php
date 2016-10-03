@@ -39,7 +39,7 @@
             'link_before' => '<span>',
             'link_after' => '</span>',
             'pagelink' => '<span class="screen-reader-text">' . __('Page', 'wp-bs-theme-simple') . ' </span>%',
-            'separator' => '<span class="screen-reader-text">, </span>',
+            'separator' => '<span class="screen-reader-text">, </span>',  
         ));
         ?> 
     </div><!-- .entry-content -->   
