@@ -182,6 +182,11 @@ function wp_bs_theme_simple_customizer_css() {
             background: <?php echo get_theme_mod('wbts_nav_background_color'); ?>;
         }
 
+        #menu-primary .nav-item .nav-link, 
+        #menu-primary .nav-item .dropdown-item {
+            color: <?php echo get_theme_mod('wbts_nav_link_color'); ?>;
+        } 
+
         .site-main-container { 
             background: <?php echo get_theme_mod('wbts_background_color'); ?>;
             color: <?php echo get_theme_mod('wbts_main_text_color'); ?>;
@@ -199,10 +204,6 @@ function wp_bs_theme_simple_customizer_css() {
         .menu-toggle:hover, .menu-toggle:focus, a, .main-navigation a:hover, .main-navigation a:focus, .dropdown-toggle:hover, .dropdown-toggle:focus, .social-navigation a:hover:before, .social-navigation a:focus:before, .post-navigation a:hover .post-title, .post-navigation a:focus .post-title, .tagcloud a:hover, .tagcloud a:focus, .site-branding .site-title a:hover, .site-branding .site-title a:focus, .entry-title a:hover, .entry-title a:focus, .entry-footer a:hover, .entry-footer a:focus, .comment-metadata a:hover, .comment-metadata a:focus, .pingback .comment-edit-link:hover, .pingback .comment-edit-link:focus, .comment-reply-link, .comment-reply-link:hover, .comment-reply-link:focus, .required, .site-info a:hover, .site-info a:focus {
             color: <?php echo get_theme_mod('wbts_secondary_text_color'); ?>;
         }
-
-        nav.navbar #menu-primary .nav-item .nav-link {
-            color: <?php echo get_theme_mod('wbts_nav_link_color'); ?>;
-        } 
         .site-info-wrapper.jumbotron  {
             background: <?php echo get_theme_mod('wbts_header_background_color'); ?>;
         }
