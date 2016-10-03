@@ -33,9 +33,7 @@
         <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', 'wp_bs_theme_simple'); ?></a>
 
         <!-- site-header >-->
-        <header id="masthead" class="site-header"> 
-
-
+        <header id="masthead" class="site-header <?php echo get_theme_mod('wp_bs_theme_simple_header_fullwidth') ? '' : 'container'; ?>"> 
 
             <!-- site-info -->
             <?php if (has_header_image()) { ?>
