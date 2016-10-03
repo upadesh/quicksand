@@ -15,6 +15,9 @@ $gray-lighter:              #81d742 !default;
 $gray-lightest:             #81d742!default;
 
 */
+.site-navigation .navbar-header {
+  line-height: 50px; }
+
 .site-navigation .navbar-brand .custom-logo {
   max-height: 50px; }
 

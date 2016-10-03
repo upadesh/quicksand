@@ -1,6 +1,9 @@
 $navbar-height: 50px;
 
 .site-navigation { 
+    .navbar-header {
+        line-height: $navbar-height;
+    }
     .navbar-brand {
         .custom-logo {
             max-height: $navbar-height;
