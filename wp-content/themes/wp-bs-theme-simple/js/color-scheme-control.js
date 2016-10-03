@@ -32,8 +32,8 @@
                             .wpColorPicker('defaultColor', color); 
                     
                     color = colors[3];
-                    api('wbts_text_color').set(color);
-                    api.control('wbts_text_color').container.find('.color-picker-hex')
+                    api('wbts_main_text_color').set(color);
+                    api.control('wbts_main_text_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
  

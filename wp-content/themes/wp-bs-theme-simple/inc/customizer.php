@@ -78,10 +78,15 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         'label' => __('Content Link Color', 'wp-bs-theme-simple')
     );
     $colors[] = array(
-        'slug' => 'wbts_text_color',
+        'slug' => 'wbts_main_text_color',
         'default' => $colorSchemeDefault[3],
         'label' => __('Content Text Color', 'wp-bs-theme-simple')
     );
+//    $colors[] = array(
+//        'slug' => 'wbts_secondary_text_color',
+//        'default' => $colorSchemeDefault[3],
+//        'label' => __('Content Text Color', 'wp-bs-theme-simple')
+//    );
 
     $colors[] = array(
         'slug' => 'wbts_nav_background_color',
@@ -244,7 +249,7 @@ function wp_bs_theme_simple_social_media_icons() {
  * 1. Main Background Color - background_color
  * 2. Page Background Color - wbts_background_color
  * 3. Link Color            - wbts_link_color
- * 4. Main Text Color.      - wbts_text_color
+ * 4. Main Text Color.      - wbts_main_text_color
  * 5. Header Text Color     - header_textcolor
  * 6. Navigation Background Color - wbts_nav_background_color
  * 7. Navigation Link Color - wbts_nav_link_color
