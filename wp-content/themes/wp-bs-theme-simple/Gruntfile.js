@@ -142,7 +142,7 @@ module.exports = function (grunt) {
                     'node_modules/bootstrap/dist/css/*.css'
                 ],
 //                tasks: ['sass', 'concat:css'],
-                tasks: ['sass'],
+                tasks: ['clean', 'sass', 'postcss', 'copy'],
                 options: {
                     livereload: true,
                 }

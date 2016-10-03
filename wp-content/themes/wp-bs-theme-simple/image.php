@@ -93,18 +93,20 @@ get_header();
                 comments_template();
             }
 
-            // Parent post navigation.
-            the_post_navigation(array(
-                'prev_text' => _x('<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'twentysixteen'),
+            // Parent post navigation
+            the_posts_pagination(array(
+                'prev_text' => '<i class="fa fa-backward" aria-hidden="true"></i>',
+                'next_text' => '<i class="fa fa-forward" aria-hidden="true"></i>',
+                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'wp_bs_theme_simple') . ' </span>',
             ));
         // End the loop.
         endwhile;
         ?>
 
     </main><!-- .content-area -->  
-    
+
     <?php get_sidebar(); ?>
-    
+
 </div><!-- .row -->
 
 <?php get_footer(); ?>

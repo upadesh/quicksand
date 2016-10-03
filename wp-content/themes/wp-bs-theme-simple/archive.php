@@ -47,11 +47,10 @@ get_header();
             // End the loop.
             endwhile;
 
-            // Previous/next page navigation.
             the_posts_pagination(array(
-                'prev_text' => __('Previous page', 'wp-bs-theme-simple'),
-                'next_text' => __('Next page', 'wp-bs-theme-simple'),
-                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'wp-bs-theme-simple') . ' </span>',
+                'prev_text' => '<i class="fa fa-backward" aria-hidden="true"></i>',
+                'next_text' => '<i class="fa fa-forward" aria-hidden="true"></i>',
+                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'wp_bs_theme_simple') . ' </span>',
             ));
 
         // If no content, include the "No posts found" template.
