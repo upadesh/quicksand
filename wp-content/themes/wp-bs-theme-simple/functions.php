@@ -170,8 +170,7 @@ add_action('after_setup_theme', 'wp_bs_theme_simple_setup');
 
 /**
  * include customizer-settings in new style-script
- */
-//TODO: wp_add_inline_style
+ */ 
 function wp_bs_theme_simple_customizer_css() {
     ?>
     <style type="text/css"> 
@@ -194,7 +193,7 @@ function wp_bs_theme_simple_customizer_css() {
             color: #<?php echo get_header_textcolor(); ?>;
         } 
 
-        /*TODO: CSS anpassen*/
+        /*TODO: adjust CSS */
         .menu-toggle:hover, .menu-toggle:focus, a, .main-navigation a:hover, .main-navigation a:focus, .dropdown-toggle:hover, .dropdown-toggle:focus, .social-navigation a:hover:before, .social-navigation a:focus:before, .post-navigation a:hover .post-title, .post-navigation a:focus .post-title, .tagcloud a:hover, .tagcloud a:focus, .site-branding .site-title a:hover, .site-branding .site-title a:focus, .entry-title a:hover, .entry-title a:focus, .entry-footer a:hover, .entry-footer a:focus, .comment-metadata a:hover, .comment-metadata a:focus, .pingback .comment-edit-link:hover, .pingback .comment-edit-link:focus, .comment-reply-link, .comment-reply-link:hover, .comment-reply-link:focus, .required, .site-info a:hover, .site-info a:focus {
             color: <?php echo get_theme_mod('wbts_secondary_text_color'); ?>;
         }
@@ -210,9 +209,7 @@ function wp_bs_theme_simple_customizer_css() {
     <?php
 }
 
-add_action('wp_head', 'wp_bs_theme_simple_customizer_css');
-
-// wp_add_inline_Style ... include anderes css
+add_action('wp_head', 'wp_bs_theme_simple_customizer_css'); 
 
 
 

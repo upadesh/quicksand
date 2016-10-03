@@ -4547,7 +4547,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-right: 24px !important;
   margin-right: 1.5rem !important; }
 
-.m-b-2, .site-main-container, .site-content .site-sidebar section.widget, .site-footer .site-widgetbar {
+.m-b-2, .site-header, .site-main-container, .site-content .site-sidebar section.widget, .site-footer .site-widgetbar {
   margin-bottom: 24px !important;
   margin-bottom: 1.5rem !important; }
 
@@ -4579,7 +4579,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-right: 48px !important;
   margin-right: 3rem !important; }
 
-.m-b-3, .site-header, .site-content article {
+.m-b-3, .site-content article {
   margin-bottom: 48px !important;
   margin-bottom: 3rem !important; }
 
