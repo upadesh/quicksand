@@ -21,6 +21,12 @@ $gray-lightest:             #81d742!default;
 .navbar-brand .custom-logo-link {
   line-height: 50px; }
 
+.navbar-nav li .dropdown-menu {
+  /*align the dropdown*/
+  margin: 7px 0 0; }
+  .navbar-nav li .dropdown-menu .dropdown-item {
+    line-height: 25px; }
+
 /* Test: reduce size of massively large image with no alignment.
  *  http://wp.local/archives/tag/alignment-2
 */
@@ -94,7 +100,7 @@ $gray-lightest:             #81d742!default;
  * 'page-template-' + template-fullwidth.php
  */
 /*
-HINT: hier def. Farben können mit der Lifevorschau in die Quere kommen!
+TODO: hier def. Farben können mit der Lifevorschau in die Quere kommen!
 */
 .site-info.custom-header-image {
   display: table;
