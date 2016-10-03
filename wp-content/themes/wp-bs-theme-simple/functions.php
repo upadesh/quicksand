@@ -38,6 +38,20 @@ $wp_bs_theme_simple_version = '0.0.1';
 $wp_min_version = '4.4';
 
 
+/**
+ * make videos responsive
+ * 
+ * @param type $html
+ * @param type $url
+ * @param type $attr
+ * @param type $post_id
+ * 
+ * @return string html
+ */
+function my_embed_oembed_html($html, $url, $attr, $post_id) { 
+    return '<div class="video-container">' . $html . '</div>';
+}
+add_filter('embed_oembed_html', 'my_embed_oembed_html', 99, 4);
 
 /**
  * wp-bs-theme-simple only works in WordPress 4.4 or later.
