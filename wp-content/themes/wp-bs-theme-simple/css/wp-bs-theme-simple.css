@@ -118,6 +118,7 @@ TODO: hier def. Farben können mit der Lifevorschau in die Quere kommen!
       padding: 20px; }
 
 /* Push main sections down */
+/*only push down when not fullwidth*/
 .site-footer-info {
   height: 60px; }
   .site-footer-info .site-social,
@@ -4520,7 +4521,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-right: 24px !important;
   margin-right: 1.5rem !important; }
 
-.m-b-2, .site-navigation, .site-header .site-content-area .post,
+.m-b-2, .site-nav-container.container, .site-header .site-content-area .post,
 .site-content .site-content-area .post, .site-header .site-content-area .post .site-comments-area .comments-title,
 .site-header .site-content-area .post .site-comments-area .comment-list,
 .site-content .site-content-area .post .site-comments-area .comments-title,

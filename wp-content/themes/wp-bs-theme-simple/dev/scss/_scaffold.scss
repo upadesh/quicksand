@@ -1,6 +1,7 @@
 /* Push main sections down */
 
-.site-navigation { 
+/*only push down when not fullwidth*/ 
+.site-nav-container.container { 
     @extend .m-b-2; 
 }
 
