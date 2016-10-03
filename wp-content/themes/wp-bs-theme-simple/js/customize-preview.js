@@ -63,7 +63,7 @@
     });
     wp.customize('wbts_nav_background_color', function (value) {
         value.bind(function (to) {
-            $('.site-nav-container, .site-nav-container nav.navbar').css('background-color', to); 
+            $('.site-nav-container, .site-nav-container nav.navbar, .site-nav-container .dropdown-menu').css('background-color', to); 
         });
     });
     wp.customize('wbts_header_background_color', function (value) {

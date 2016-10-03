@@ -37,7 +37,6 @@ global $wp_min_version;
 $wp_bs_theme_simple_version = '0.0.1';
 $wp_min_version = '4.4';
 
-
 /**
  * make videos responsive
  * 
@@ -48,9 +47,10 @@ $wp_min_version = '4.4';
  * 
  * @return string html
  */
-function my_embed_oembed_html($html, $url, $attr, $post_id) { 
+function my_embed_oembed_html($html, $url, $attr, $post_id) {
     return '<div class="video-container">' . $html . '</div>';
 }
+
 add_filter('embed_oembed_html', 'my_embed_oembed_html', 99, 4);
 
 /**
@@ -171,16 +171,17 @@ add_action('after_setup_theme', 'wp_bs_theme_simple_setup');
 /**
  * include customizer-settings in new style-script
  * triggered after wp_enque_script
- */ 
+ */
 function wp_bs_theme_simple_customizer_css() {
     ?>
     <style type="text/css"> 
-        
+
         .site-nav-container,
-        .site-nav-container .navbar {
+        .site-nav-container .navbar,
+        .site-nav-container .dropdown-menu {
             background: <?php echo get_theme_mod('wbts_nav_background_color'); ?>;
         }
-        
+
         .site-main-container { 
             background: <?php echo get_theme_mod('wbts_background_color'); ?>;
             color: <?php echo get_theme_mod('wbts_main_text_color'); ?>;
@@ -210,7 +211,7 @@ function wp_bs_theme_simple_customizer_css() {
     <?php
 }
 
-add_action('wp_head', 'wp_bs_theme_simple_customizer_css'); 
+add_action('wp_head', 'wp_bs_theme_simple_customizer_css');
 
 
 
@@ -259,7 +260,7 @@ if (!function_exists('wp_bs_theme_simple_widgets_init')) :
             'after_widget' => '</section>',
             'before_title' => '<h2 class="widget-title">',
             'after_title' => '</h2>',
-        )); 
+        ));
     }
 
 endif;
@@ -391,12 +392,12 @@ if (!function_exists('wp_bs_theme_simple_styles')) :
 // 
 
         global $wp_bs_theme_simple_version;
- 
+
         // check if custom-thememod exists 
         $currentThemeMod = get_theme_mod('color_scheme', 'default');
         $currentThemeMod = $currentThemeMod === 'default' ? '' : '-' . $currentThemeMod;
-        $styleSheetToLoad = get_template_directory_uri() . '/css/wp-bs-theme-simple' . $currentThemeMod . '.css'; 
-        if (!file_exists( get_template_directory() .  '/css/wp-bs-theme-simple' . $currentThemeMod . '.css')) { 
+        $styleSheetToLoad = get_template_directory_uri() . '/css/wp-bs-theme-simple' . $currentThemeMod . '.css';
+        if (!file_exists(get_template_directory() . '/css/wp-bs-theme-simple' . $currentThemeMod . '.css')) {
             // not available, load the defsault one instead
             $styleSheetToLoad = get_template_directory_uri() . '/css/wp-bs-theme-simple.css';
         }
