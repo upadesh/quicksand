@@ -38,19 +38,25 @@
                             .wpColorPicker('defaultColor', color);
  
                     color = colors[4];
+                    api('wbts_secondary_text_color').set(color);
+                    api.control('wbts_secondary_text_color').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color);
+ 
+                    color = colors[5];
                     api('header_textcolor').set(color);
                     api.control('header_textcolor').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
                     
  
-                    color = colors[5];
+                    color = colors[6];
                     api('wbts_nav_background_color').set(color);
                     api.control('wbts_nav_background_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
                     
-                    color = colors[6];
+                    color = colors[7];
                     api('wbts_nav_link_color').set(color);
                     api.control('wbts_nav_link_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
