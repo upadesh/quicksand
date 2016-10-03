@@ -39,6 +39,10 @@ $gray-lightest:             #81d742!default;
   height: auto;
   max-width: 100%; }
 
+/* let it stretch 100% */
+.post-thumbnail img {
+  width: 100%; }
+
 /**
  * Galleries
  */

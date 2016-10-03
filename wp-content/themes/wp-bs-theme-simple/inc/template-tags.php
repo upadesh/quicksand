@@ -129,11 +129,9 @@ if (!function_exists('wp_bs_theme_simple_post_thumbnail')) :
 
             <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
                 <?php
-                // in list-view the height of the post-thumbnail is max. 300px
-                set_post_thumbnail_size( 1200, 300, array( 'left', 'top')  );
-                the_post_thumbnail('post-thumbnail', array(
+                // in list-view the height of the post-thumbnail is max. 300px 
+                the_post_thumbnail('wp-bs-theme-simple-featured_image', array(
                     'alt' => the_title_attribute('echo=0'),
-                    'class' => 'img-fluid'
                         )
                 );
                 ?>
