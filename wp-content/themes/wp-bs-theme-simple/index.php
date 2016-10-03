@@ -10,9 +10,10 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @subpackage wp-bs-theme-simple
+ * @since WP-bs-theme-simple 1.0
  */
+//phpinfo();
 get_header();
 ?>
 <!--template: index-->

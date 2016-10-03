@@ -19,10 +19,7 @@
         <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
     </header><!-- .entry-header -->
 
-    <!--post-meta-->
-    <?php
-//    get_template_part('template-parts/postmeta', get_post_format());
-    ?>
+    <!--post-meta--> 
     <?php wp_bs_theme_simple_entry_meta(); ?>
 
     <!--post excerpt-->

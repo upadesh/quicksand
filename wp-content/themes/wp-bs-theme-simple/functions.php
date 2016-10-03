@@ -93,7 +93,7 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
          * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
          */
         add_theme_support('post-thumbnails');
-        set_post_thumbnail_size(1200, 9999);
+        set_post_thumbnail_size(1200, 9999); 
 
 
         /*
