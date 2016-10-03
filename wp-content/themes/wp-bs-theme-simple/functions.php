@@ -170,6 +170,7 @@ add_action('after_setup_theme', 'wp_bs_theme_simple_setup');
 
 /**
  * include customizer-settings in new style-script
+ * triggered after wp_enque_script
  */ 
 function wp_bs_theme_simple_customizer_css() {
     ?>
