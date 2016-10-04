@@ -46,9 +46,9 @@ get_header();
             } elseif (is_singular('post')) {
                 // Previous/next post navigation.
                 the_post_navigation(array(
-                    'prev_text' => '<i class="fa fa-backward" aria-hidden="true"></i> <span class="meta-nav" aria-hidden="true">%title</span> ' .
+                    'prev_text' => '<span class="meta-nav" aria-hidden="true">%title</span> ' .
                     '<span class="screen-reader-text">' . __('Previous post:', 'wp-bs-theme-simple') . '</span> ' ,
-                    'next_text' => '<span class="meta-nav" aria-hidden="true">%title</span> <i class="fa fa-forward" aria-hidden="true"></i>' .
+                    'next_text' => '<span class="meta-nav" aria-hidden="true">%title</span>' .
                     '<span class="screen-reader-text">' . __('Next post:', 'wp-bs-theme-simple') . '</span> ' , 
                 ));
             }

@@ -153,26 +153,6 @@
             content: "\f112";
         }
     }
-    .nav-previous {
-        @extend .text-xs-left;
-        display: inline-block;
-        width: 50%;
-        a:before {
-            font-family: FontAwesome; 
-            padding-right: 3px;
-            content: "\f0d9";
-        }
-    }
-    .nav-next {
-        @extend .text-xs-right;
-        display: inline-block;
-        width: 50%;
-        a:after {
-            font-family: FontAwesome; 
-            padding-left: 3px;
-            content: "\f0da";
-        }
-    }
     .comment-metadata {
         @extend .m-b-1; 
     }
@@ -190,4 +170,32 @@
 .sticky-post {
     @extend .tag;
     @extend .tag-danger; 
+}
+
+
+/* maybe to adjust all nav-links is not right */
+.nav-links {
+    display: table;
+    .nav-previous {
+        @extend .text-xs-left; 
+        display: table-cell;
+        vertical-align: top; 
+        width: 50%;
+        a:before {
+            font-family: FontAwesome; 
+            padding-right: 3px;
+            content: "\f0d9";
+        }
+    }
+    .nav-next {
+        @extend .text-xs-right; 
+        display: table-cell;
+        vertical-align: top; 
+        width: 50%;
+        a:after {
+            font-family: FontAwesome; 
+            padding-left: 3px;
+            content: "\f0da";
+        }
+    }
 }

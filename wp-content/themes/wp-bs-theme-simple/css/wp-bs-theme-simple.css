@@ -139,22 +139,6 @@ $gray-lightest:             #81d742!default;
     padding-right: 3px;
     content: "\f112"; }
 
-.comments-area .nav-previous {
-  display: inline-block;
-  width: 50%; }
-  .comments-area .nav-previous a:before {
-    font-family: FontAwesome;
-    padding-right: 3px;
-    content: "\f0d9"; }
-
-.comments-area .nav-next {
-  display: inline-block;
-  width: 50%; }
-  .comments-area .nav-next a:after {
-    font-family: FontAwesome;
-    padding-left: 3px;
-    content: "\f0da"; }
-
 /* all edit-links */
 .comment-edit-link:before,
 .post-edit-link:before {
@@ -163,6 +147,26 @@ $gray-lightest:             #81d742!default;
   content: "\f040"; }
 
 /** featured sticky post */
+/* maybe to adjust all nav-links is not right */
+.nav-links {
+  display: table; }
+  .nav-links .nav-previous {
+    display: table-cell;
+    vertical-align: top;
+    width: 50%; }
+    .nav-links .nav-previous a:before {
+      font-family: FontAwesome;
+      padding-right: 3px;
+      content: "\f0d9"; }
+  .nav-links .nav-next {
+    display: table-cell;
+    vertical-align: top;
+    width: 50%; }
+    .nav-links .nav-next a:after {
+      font-family: FontAwesome;
+      padding-left: 3px;
+      content: "\f0da"; }
+
 /* grid-patterns */
 /* one-column */
 /* 
@@ -4782,10 +4786,10 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.text-xs-left, .comments-area .nav-previous {
+.text-xs-left, .nav-links .nav-previous {
   text-align: left !important; }
 
-.text-xs-right, .comments-area .nav-next {
+.text-xs-right, .nav-links .nav-next {
   text-align: right !important; }
 
 .text-xs-center, .site-content .site-sidebar section.widget, .site-content-bottom-widgets .widget {
