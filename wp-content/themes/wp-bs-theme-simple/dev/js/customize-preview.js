@@ -44,15 +44,14 @@
     });
 
     wp.customize('wbts_secondary_text_color', function (value) {
-        value.bind(function (to) {
-//            TODO: das nochmals gegenprüfen
-            $('.menu-toggle:hover, .menu-toggle:focus, a, .main-navigation a:hover, .main-navigation a:focus, .dropdown-toggle:hover, .dropdown-toggle:focus, .social-navigation a:hover:before, .social-navigation a:focus:before, .post-navigation a:hover .post-title, .post-navigation a:focus .post-title, .tagcloud a:hover, .tagcloud a:focus, .site-branding .site-title a:hover, .site-branding .site-title a:focus, .entry-title a:hover, .entry-title a:focus, .entry-footer a:hover, .entry-footer a:focus, .comment-metadata a:hover, .comment-metadata a:focus, .pingback .comment-edit-link:hover, .pingback .comment-edit-link:focus, .comment-reply-link, .comment-reply-link:hover, .comment-reply-link:focus, .required, .site-info a:hover, .site-info a:focus').css('color', to);
+        value.bind(function (to) { 
+            $('.site-main-container .site-content h1, .site-main-container .site-content h2, .site-main-container .site-content h3, .site-main-container .site-content h4, .site-main-container .site-content h5, .site-main-container .site-content h6,         .site-main-container .site-content h1>a, .site-main-container .site-content h2>a, .site-main-container .site-content h3>a, .site-main-container .site-content h4>a, .site-main-container .site-content h5>a, .site-main-container .site-content h6>a').css('color', to);
         });
     });
 
     wp.customize('wbts_link_color', function (value) {
         value.bind(function (to) {
-            $('.site-main-container a').css('color', to);
+            $('.site-main-container a, .site-footer-info a').css('color', to);
         });
     });
 

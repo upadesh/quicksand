@@ -1,22 +1,15 @@
 $site-footer-info-height: 60px;
 
 .site-footer-info {
-    height: $site-footer-info-height;
+    margin: 0;
     .site-social,
     .site-copyright {
-        height: 100%;
-        max-height: $site-footer-info-height;
         line-height: $site-footer-info-height; 
         * {
             margin-bottom: 0;
         }
-        p {
-
-            font-size: .8em;
-        } 
     }
-} 
-
+}  
 
 /*center navbar-items in mobile-mode*/
 @media (max-width: 992px) {

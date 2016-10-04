@@ -216,12 +216,12 @@ function wp_bs_theme_simple_customizer_css() {
         .site-main-container .site-content h4,
         .site-main-container .site-content h5,
         .site-main-container .site-content h6, 
-        .site-main-container .site-content h1 *,
-        .site-main-container .site-content h2 *,
-        .site-main-container .site-content h3 *,
-        .site-main-container .site-content h4 *,
-        .site-main-container .site-content h5 *,
-        .site-main-container .site-content h6 * {
+        .site-main-container .site-content h1>a,
+        .site-main-container .site-content h2>a,
+        .site-main-container .site-content h3>a,
+        .site-main-container .site-content h4>a,
+        .site-main-container .site-content h5>a,
+        .site-main-container .site-content h6>a {
             color: <?php echo get_theme_mod('wbts_secondary_text_color'); ?>;
         }
  
