@@ -48,23 +48,14 @@ get_header();
 
                     <?php
                     the_content();
-
-                    wp_link_pages(array(
-                        'before' => '<div class="page-links"><span class="page-links-title">' . __('Pages:', 'wp-bs-theme-simple') . '</span>',
-                        'after' => '</div>',
-                        'link_before' => '<span>',
-                        'link_after' => '</span>',
-                        'pagelink' => '<span class="screen-reader-text">' . __('Page', 'wp-bs-theme-simple') . ' </span>%',
-                        'separator' => '<span class="screen-reader-text">, </span>',
-                    ));
                     ?>
                 </div><!-- .entry-content -->
 
                 <!-- image-navigation -->
                 <nav id="image-navigation" class="navigation image-navigation">
                     <div class="nav-links"> 
-                        <span class="nav-previous"><?php previous_image_link(false, __('&laquo; Previous Image', 'wp-bs-theme-simple')); ?></span>
-                        <span class="nav-next"><?php next_image_link(false, __('Next Image &raquo;', 'wp-bs-theme-simple')); ?></span>  
+                        <span class="nav-previous"><?php previous_image_link(false, __('Previous Image', 'wp-bs-theme-simple')); ?></span>
+                        <span class="nav-next"><?php next_image_link(false, __('Next Image', 'wp-bs-theme-simple')); ?></span>  
                     </div><!-- .nav-links -->
                 </nav><!-- .image-navigation --> 
 

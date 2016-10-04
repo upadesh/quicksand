@@ -172,10 +172,16 @@
     @extend .tag-danger; 
 }
 
+/*more space between paged-post pagination*/
+.paged-link {
+    padding-left: .3rem;
+    padding-right: .3rem;
+}
 
-/* maybe to adjust all nav-links is not right */
+/* maybe to adjust all pagination-links is not right */
 .nav-links {
     display: table;
+    width: 100%;
     .nav-previous {
         @extend .text-xs-left; 
         display: table-cell;

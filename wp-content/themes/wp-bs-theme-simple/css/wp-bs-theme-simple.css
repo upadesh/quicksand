@@ -147,9 +147,17 @@ $gray-lightest:             #81d742!default;
   content: "\f040"; }
 
 /** featured sticky post */
-/* maybe to adjust all nav-links is not right */
+/*more space between paged-post pagination*/
+.paged-link {
+  padding-left: 4.8px;
+  padding-left: .3rem;
+  padding-right: 4.8px;
+  padding-right: .3rem; }
+
+/* maybe to adjust all pagination-links is not right */
 .nav-links {
-  display: table; }
+  display: table;
+  width: 100%; }
   .nav-links .nav-previous {
     display: table-cell;
     vertical-align: top;
