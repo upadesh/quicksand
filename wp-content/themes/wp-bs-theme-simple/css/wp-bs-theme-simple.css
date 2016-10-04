@@ -112,6 +112,40 @@ $gray-lightest:             #81d742!default;
   width: 100%;
   height: 100%; }
 
+/* Post Meta */
+.post-meta-data .posted-on a:before {
+  font-family: FontAwesome;
+  padding-right: 3px;
+  content: "\f017"; }
+
+.post-meta-data .cat-links a:before {
+  font-family: FontAwesome;
+  padding-right: 3px;
+  content: "\f07c"; }
+
+.post-meta-data .comments-link a:before {
+  font-family: FontAwesome;
+  padding-right: 3px;
+  content: "\f075"; }
+
+.post-meta-data span:not(:last-of-type):after {
+  content: ' | '; }
+
+/* Comments */
+.comments-area ol {
+  list-style-type: none; }
+  .comments-area ol .comment-reply-link:before {
+    font-family: FontAwesome;
+    padding-right: 3px;
+    content: "\f112"; }
+
+/* edit-link*/
+.comment-edit-link:before,
+.post-edit-link:before {
+  font-family: FontAwesome;
+  padding-right: 3px;
+  content: "\f040"; }
+
 /* grid-patterns */
 /* one-column */
 /* 

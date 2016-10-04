@@ -31,8 +31,7 @@ if (!function_exists('wp_bs_theme_simple_entry_meta')) :
 
         $format = get_post_format();
         if (current_theme_supports('post-formats', $format)) {
-            printf('<span class="entry-format">%1$s<a href="%2$s">%3$s</a></span>', sprintf('<span class="screen-reader-text">%s </span>', _x('Format', 'Used before post format.', 'wp-bs-theme-simple')), esc_url(get_post_format_link($format)), get_post_format_string($format)
-            );
+            printf('<span class="entry-format">%1$s<a href="%2$s">%3$s</a></span>', sprintf('<span class="screen-reader-text">%s </span>', _x('Format', 'Used before post format.', 'wp-bs-theme-simple')), esc_url(get_post_format_link($format)), get_post_format_string($format));
         }
 
         if ('post' === get_post_type()) {
@@ -40,9 +39,9 @@ if (!function_exists('wp_bs_theme_simple_entry_meta')) :
         }
 
         if (!is_singular() && !post_password_required() && ( comments_open() || get_comments_number() )) {
-            echo '<span class="comments-link">';
+            echo '<div class="comments-link">';
             comments_popup_link(sprintf(__('Leave a comment<span class="screen-reader-text"> on %s</span>', 'wp-bs-theme-simple'), get_the_title()));
-            echo '</span>';
+            echo '</div>';
         }
         echo "</div>";
     }
@@ -62,9 +61,10 @@ if (!function_exists('wp_bs_theme_simple_entry_date')) :
     function wp_bs_theme_simple_entry_date() {
         $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
-        if (get_the_time('U') !== get_the_modified_time('U')) {
-            $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-        }
+        // Update-time:
+//        if (get_the_time('U') !== get_the_modified_time('U')) {
+//            $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+//        }
 
         $time_string = sprintf($time_string, esc_attr(get_the_date('c')), get_the_date(), esc_attr(get_the_modified_date('c')), get_the_modified_date());
 
@@ -265,6 +265,8 @@ if (!function_exists('wp_bs_theme_simple_the_custom_logo')) :
             }
         endif;
     }
+
+
 
 
 

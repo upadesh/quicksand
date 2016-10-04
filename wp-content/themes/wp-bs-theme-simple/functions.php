@@ -176,8 +176,7 @@ function wp_bs_theme_simple_customizer_css() {
 
     $colorScheme = wp_bs_theme_simple_get_color_scheme();
     ?>
-    <style type="text/css"> 
-
+    <style type="text/css">  
         /*navigation*/
         .site-nav-container,
         .site-nav-container nav.navbar,
@@ -212,7 +211,9 @@ function wp_bs_theme_simple_customizer_css() {
             color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
         } 
 
-        /*bootstrap pagination*/ 
+        /*bootstrap pagination
+            TODO: hmmmm ... 
+        */ 
         .site-main-container .navigation.pagination .nav-links .page-numbers {
             color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
             background-color: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
@@ -227,6 +228,9 @@ function wp_bs_theme_simple_customizer_css() {
         }
 
 
+        /*2nd text color
+            TODO: hmmmm ... 
+        */ 
         .site-main-container .site-content h1,
         .site-main-container .site-content h2,
         .site-main-container .site-content h3,
