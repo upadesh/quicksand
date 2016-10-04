@@ -75,44 +75,6 @@ module.exports = function (grunt) {
                 src: 'dev/css/<%= pkg.name %>.css',
             }
         },
-//        concat: {
-//            css: {
-//                src: [
-//                    'node_modules/tether/dist/css/tether.css',
-//                    'node_modules/bootstrap/dist/css/bootstrap.css',
-//                    always app.css first, because of the theme-description
-//                    'dev/css/<%= pkg.name %>.css',
-//                    'dev/css/font-awesome.css',
-//                ],
-//                dest: 'css/<%= pkg.name %>.css'
-//            },
-//            js: {
-//                src: [
-//                    'node_modules/tether/dist/js/tether.js',
-//                    'node_modules/bootstrap/dist/js/bootstrap.js',
-//                    'dev/js/*.js',
-//                    'dev/js/customizer.js',
-//                    'dev/js/color-scheme-control.js',
-//                ],
-//                dest: 'js/<%= pkg.name %>.js'
-//            }
-//        },
-//        cssmin: {
-//            css: {
-//                src: '<%= concat.css.dest %>',
-//                dest: 'css/<%= pkg.name %>.min.css',
-//            }
-//        },
-//        uglify: {
-//            options: {
-//                banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
-//            },
-//            dist: {
-//                files: {
-//                    'js/<%= pkg.name %>.min.js': '<%= concat.js.dest %>',
-//                }
-//            }
-//        },
         jshint: {
             files: ['Gruntfile.js', 'dev/js/*.js'],
             options: {
@@ -127,7 +89,7 @@ module.exports = function (grunt) {
             js: {
                 files: [
                     'Gruntfile.js',
-                    'node_modules/bootstrap/dist/js/*.js',
+//                    'node_modules/bootstrap/dist/js/*.js',
                     'dev/js/*.js'
                 ],
 //                tasks: ['concat:js', 'jshint'],

@@ -20,8 +20,8 @@
                     
                     
                     color = colors[1];
-                    api('wbts_background_color').set(color);
-                    api.control('wbts_background_color').container.find('.color-picker-hex')
+                    api('wbts_background_content_color').set(color);
+                    api.control('wbts_background_content_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
  

@@ -175,37 +175,39 @@ add_action('after_setup_theme', 'wp_bs_theme_simple_setup');
 function wp_bs_theme_simple_customizer_css() {
     ?>
     <style type="text/css"> 
-
+ 
         .site-nav-container,
-        .site-nav-container .navbar,
+        .site-nav-container nav.navbar,
         .site-nav-container .dropdown-menu {
-            background: <?php echo get_theme_mod('wbts_nav_background_color'); ?>;
+            background-color: <?php echo get_theme_mod('wbts_nav_background_color'); ?>;
         }
 
-        #menu-primary .nav-item .nav-link, 
-        #menu-primary .nav-item .dropdown-item {
+        #menu-primary .menu-item .nav-link , 
+        #menu-primary .menu-item .dropdown-item {
             color: <?php echo get_theme_mod('wbts_nav_link_color'); ?>;
         } 
 
-        .site-main-container { 
-            background: <?php echo get_theme_mod('wbts_background_color'); ?>;
-            color: <?php echo get_theme_mod('wbts_main_text_color'); ?>;
-        }
-        a  { 
+        .site-main-container a  { 
             color: <?php echo get_theme_mod('wbts_link_color'); ?>;
         } 
+        
+        .site-main-container { 
+            background: <?php echo get_theme_mod('wbts_background_content_color'); ?>;
+            color: <?php echo get_theme_mod('wbts_main_text_color'); ?>;
+        }
 
         .site-info-wrapper .site-title,
         .site-info-wrapper .site-description {
             color: #<?php echo get_header_textcolor(); ?>;
         } 
+        
+        .site-info-wrapper.jumbotron  {
+            background: <?php echo get_theme_mod('wbts_header_background_color'); ?>;
+        }
 
         /*TODO: adjust CSS */
         .menu-toggle:hover, .menu-toggle:focus, a, .main-navigation a:hover, .main-navigation a:focus, .dropdown-toggle:hover, .dropdown-toggle:focus, .social-navigation a:hover:before, .social-navigation a:focus:before, .post-navigation a:hover .post-title, .post-navigation a:focus .post-title, .tagcloud a:hover, .tagcloud a:focus, .site-branding .site-title a:hover, .site-branding .site-title a:focus, .entry-title a:hover, .entry-title a:focus, .entry-footer a:hover, .entry-footer a:focus, .comment-metadata a:hover, .comment-metadata a:focus, .pingback .comment-edit-link:hover, .pingback .comment-edit-link:focus, .comment-reply-link, .comment-reply-link:hover, .comment-reply-link:focus, .required, .site-info a:hover, .site-info a:focus {
             color: <?php echo get_theme_mod('wbts_secondary_text_color'); ?>;
-        }
-        .site-info-wrapper.jumbotron  {
-            background: <?php echo get_theme_mod('wbts_header_background_color'); ?>;
         }
 
     </style>

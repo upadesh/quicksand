@@ -68,7 +68,7 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
     $colorSchemeDefault = wp_bs_theme_simple_get_color_schemes()['default']['colors'];
     $colors = array();
     $colors[] = array(
-        'slug' => 'wbts_background_color',
+        'slug' => 'wbts_background_content_color',
         'default' => $colorSchemeDefault[1],
         'label' => __('Content Background Color', 'wp-bs-theme-simple')
     );
@@ -266,7 +266,7 @@ function wp_bs_theme_simple_social_media_icons() {
  *
  * The order of colors in a colors array:
  * 1. Main Background Color - background_color
- * 2. Page Background Color - wbts_background_color
+ * 2. Page Background Color - wbts_background_content_color
  * 3. Link Color            - wbts_link_color
  * 4. Main Text Color.      - wbts_main_text_color
  * 5. Secondary Text Color  - wbts_secondary_text_color

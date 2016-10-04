@@ -135,7 +135,7 @@ TODO: hier def. Farben können mit der Lifevorschau in die Quere kommen!
       padding: 20px; }
 
 /* Push main sections */
-/* lways push down content after header */
+/* always push down content after header */
 /*stick to the navbar when fullwidth*/
 .site-header.container {
   padding-left: 0;

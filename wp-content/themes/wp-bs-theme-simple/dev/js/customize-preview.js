@@ -31,7 +31,7 @@
         });
     }); 
 
-    wp.customize('wbts_background_color', function (value) {
+    wp.customize('wbts_background_content_color', function (value) {
         value.bind(function (to) {
             $('.site-main-container').css('background', to);
         });
@@ -52,7 +52,7 @@
 
     wp.customize('wbts_link_color', function (value) {
         value.bind(function (to) {
-            $('a').css('color', to);
+            $('.site-main-container a').css('color', to);
         });
     });
 
