@@ -119,12 +119,15 @@
             content: "\f017";
         }
     }
-    .cat-links{
-        span:before {
-            font-family: FontAwesome; 
-            padding-right: 3px;
-            content: "\f07c";
-        }
+    .cat-links:before {
+        font-family: FontAwesome; 
+        padding-right: 3px;
+        content: "\f07c"; 
+    }
+    .tags-links:before {
+        font-family: FontAwesome; 
+        padding-right: 3px;
+        content: "\f02c"; 
     }
     .comments-link {
         @extend .m-t-1;

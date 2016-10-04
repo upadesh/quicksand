@@ -187,7 +187,8 @@ function wp_bs_theme_simple_customizer_css() {
         #menu-primary .menu-item .nav-link , 
         #menu-primary .menu-item .dropdown-item {
             color: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[7]); ?>;
-        } 
+        }  
+        
 
         /*site-header*/
         .site-info-wrapper .site-title,
@@ -253,6 +254,15 @@ function wp_bs_theme_simple_customizer_css() {
         .site-footer-info a {  
             color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
         } 
+        .site-footer-info a:hover {  
+            color: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>;
+            background-color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
+        } 
+        
+        
+        /*a:link, a:visited, a:hover, a:active*/ 
+        
+        
 
     </style>
     <?php
