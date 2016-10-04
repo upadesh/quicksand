@@ -112,13 +112,13 @@ $gray-lightest:             #81d742!default;
   width: 100%;
   height: 100%; }
 
-/* Post Meta */
+/* post-meta */
 .post-meta-data .posted-on a:before {
   font-family: FontAwesome;
   padding-right: 3px;
   content: "\f017"; }
 
-.post-meta-data .cat-links a:before {
+.post-meta-data .cat-links span:before {
   font-family: FontAwesome;
   padding-right: 3px;
   content: "\f07c"; }
@@ -131,7 +131,7 @@ $gray-lightest:             #81d742!default;
 .post-meta-data span:not(:last-of-type):after {
   content: ' | '; }
 
-/* Comments */
+/* comments */
 .comments-area ol {
   list-style-type: none; }
   .comments-area ol .comment-reply-link:before {
@@ -139,13 +139,30 @@ $gray-lightest:             #81d742!default;
     padding-right: 3px;
     content: "\f112"; }
 
-/* edit-link*/
+.comments-area .nav-previous {
+  display: inline-block;
+  width: 50%; }
+  .comments-area .nav-previous a:before {
+    font-family: FontAwesome;
+    padding-right: 3px;
+    content: "\f0d9"; }
+
+.comments-area .nav-next {
+  display: inline-block;
+  width: 50%; }
+  .comments-area .nav-next a:after {
+    font-family: FontAwesome;
+    padding-left: 3px;
+    content: "\f0da"; }
+
+/* all edit-links */
 .comment-edit-link:before,
 .post-edit-link:before {
   font-family: FontAwesome;
   padding-right: 3px;
   content: "\f040"; }
 
+/** featured sticky post */
 /* grid-patterns */
 /* one-column */
 /* 
@@ -427,7 +444,7 @@ textarea {
   .btn > .caret,
   .dropup > .btn > .caret {
     border-top-color: #000 !important; }
-  .tag {
+  .tag, .sticky-post {
     border: 1px solid #000; }
   .table {
     border-collapse: collapse !important; }
@@ -3440,7 +3457,7 @@ input[type="button"].btn-block {
   font-size: 14px;
   font-size: 0.875rem; }
 
-.tag {
+.tag, .sticky-post {
   display: inline-block;
   padding: 0.25em 0.4em;
   font-size: 75%;
@@ -3450,14 +3467,14 @@ input[type="button"].btn-block {
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline; }
-  .tag:empty {
+  .tag:empty, .sticky-post:empty {
     display: none; }
 
-.btn .tag {
+.btn .tag, .btn .sticky-post {
   position: relative;
   top: -1px; }
 
-a.tag:focus, a.tag:hover {
+a.tag:focus, a.sticky-post:focus, a.tag:hover, a.sticky-post:hover {
   color: #fff;
   text-decoration: none;
   cursor: pointer; }
@@ -3491,9 +3508,9 @@ a.tag:focus, a.tag:hover {
   .tag-warning[href]:focus, .tag-warning[href]:hover {
     background-color: #ec971f; }
 
-.tag-danger {
+.tag-danger, .sticky-post {
   background-color: #d9534f; }
-  .tag-danger[href]:focus, .tag-danger[href]:hover {
+  .tag-danger[href]:focus, [href].sticky-post:focus, .tag-danger[href]:hover, [href].sticky-post:hover {
     background-color: #c9302c; }
 
 .jumbotron {
@@ -4536,7 +4553,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin: 16px 16px !important;
   margin: 1rem 1rem !important; }
 
-.m-t-1 {
+.m-t-1, .post-meta-data .comments-link {
   margin-top: 16px !important;
   margin-top: 1rem !important; }
 
@@ -4544,7 +4561,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-right: 16px !important;
   margin-right: 1rem !important; }
 
-.m-b-1, .site-content .post-meta-data, .site-content .post-thumbnail img {
+.m-b-1, .comments-area .comment-metadata, .site-content .post-meta-data, .site-content .post-thumbnail img {
   margin-bottom: 16px !important;
   margin-bottom: 1rem !important; }
 
@@ -4568,7 +4585,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin: 24px 24px !important;
   margin: 1.5rem 1.5rem !important; }
 
-.m-t-2, .site-header.container {
+.m-t-2, .comments-area .comment-respond, .site-header.container {
   margin-top: 24px !important;
   margin-top: 1.5rem !important; }
 
@@ -4765,10 +4782,10 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.text-xs-left {
+.text-xs-left, .comments-area .nav-previous {
   text-align: left !important; }
 
-.text-xs-right {
+.text-xs-right, .comments-area .nav-next {
   text-align: right !important; }
 
 .text-xs-center, .site-content .site-sidebar section.widget, .site-content-bottom-widgets .widget {

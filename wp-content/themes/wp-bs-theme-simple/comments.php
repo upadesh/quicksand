@@ -38,12 +38,7 @@ if (post_password_required()) {
                 );
             }
             ?>
-        </h2>
-
-        <?php the_comments_navigation(array(
-                'prev_text' => '<i class="fa fa-backward" aria-hidden="true"></i> ' . __('Older Comments', 'wp-bs-theme-simple'),
-                'next_text' =>  __('Newer Comments', 'wp-bs-theme-simple') . ' <i class="fa fa-forward" aria-hidden="true"></i>',
-        )); ?>
+        </h2> 
 
         <ol class="comment-list">
             <?php
@@ -55,10 +50,12 @@ if (post_password_required()) {
             ?>
         </ol><!-- .comment-list -->
 
-        <?php the_comments_navigation(array(
-                'prev_text' => '<i class="fa fa-backward" aria-hidden="true"></i> ' . __('Older Comments', 'wp-bs-theme-simple'),
-                'next_text' =>  __('Newer Comments', 'wp-bs-theme-simple') . ' <i class="fa fa-forward" aria-hidden="true"></i>',
-        )); ?>
+        <?php
+        the_comments_navigation(array(
+            'prev_text' => __('Older Comments', 'wp-bs-theme-simple'),
+            'next_text' => __('Newer Comments', 'wp-bs-theme-simple'),
+        ));
+        ?>
 
     <?php endif; // Check for have_comments(). ?>
 
@@ -72,7 +69,7 @@ if (post_password_required()) {
 
     <?php
     comment_form(
-            array('fields' => apply_filters('comment_form_default_fields', array()))); 
+            array('fields' => apply_filters('comment_form_default_fields', array())));
     ?>
 
 </div><!-- .comments-area -->

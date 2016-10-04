@@ -107,7 +107,10 @@
     height: 100%;
 }
 
-/* Post Meta */
+
+
+
+/* post-meta */
 .post-meta-data { 
     .posted-on{
         a:before {
@@ -117,13 +120,14 @@
         }
     }
     .cat-links{
-        a:before {
+        span:before {
             font-family: FontAwesome; 
             padding-right: 3px;
             content: "\f07c";
         }
     }
     .comments-link {
+        @extend .m-t-1;
         a:before {
             font-family: FontAwesome; 
             padding-right: 3px;
@@ -136,8 +140,11 @@
 }
 
 
-/* Comments */
+/* comments */
 .comments-area  {
+    .comment-respond {
+        @extend .m-t-2;
+    }
     ol {
         list-style-type: none;
         .comment-reply-link:before {
@@ -146,12 +153,41 @@
             content: "\f112";
         }
     }
-}
+    .nav-previous {
+        @extend .text-xs-left;
+        display: inline-block;
+        width: 50%;
+        a:before {
+            font-family: FontAwesome; 
+            padding-right: 3px;
+            content: "\f0d9";
+        }
+    }
+    .nav-next {
+        @extend .text-xs-right;
+        display: inline-block;
+        width: 50%;
+        a:after {
+            font-family: FontAwesome; 
+            padding-left: 3px;
+            content: "\f0da";
+        }
+    }
+    .comment-metadata {
+        @extend .m-b-1; 
+    }
+} 
 
-/* edit-link*/
+/* all edit-links */
 .comment-edit-link:before,
 .post-edit-link:before {
     font-family: FontAwesome; 
     padding-right: 3px;
     content: "\f040";
+}
+
+/** featured sticky post */
+.sticky-post {
+    @extend .tag;
+    @extend .tag-danger; 
 }
