@@ -45,24 +45,27 @@ get_header();
                 get_template_part('template-parts/content', get_post_format());
 
             endwhile;
+            ?> 
+ 
+            <div class="bs-pagination">
+                <?php
+                // navigation: post-list 
+                the_posts_pagination(array(
+                    'mid_size' => 2,
+                    'prev_text' => '<i class="fa fa-backward" aria-hidden="true"></i>',
+                    'next_text' => '<i class="fa fa-forward" aria-hidden="true"></i>',
+                    'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'wp_bs_theme_simple') . ' </span>',
+                ));
+                ?>
+            </div>
+            <?php
         else :
             get_template_part('template-parts/content', 'none');
         endif;
         ?> 
-
-        <?php
-        // navigation: post-list 
-        the_posts_pagination(array(
-            'mid_size' => 2,
-            'prev_text' => '<i class="fa fa-backward" aria-hidden="true"></i>',
-            'next_text' => '<i class="fa fa-forward" aria-hidden="true"></i>',
-            'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'wp_bs_theme_simple') . ' </span>',
-        ));
-        ?>
-
     </main><!-- .site-content-area  -->  
 
-    <?php get_sidebar(); ?>
+<?php get_sidebar(); ?>
 
 </div><!-- row--> 
 

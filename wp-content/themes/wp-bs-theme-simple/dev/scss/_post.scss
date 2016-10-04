@@ -178,6 +178,13 @@
     padding-right: .3rem;
 }
 
+/*no bullets in lists*/
+.widget ul,
+.widget ol {
+    list-style-type: none;
+    padding: 0;
+}
+
 /* maybe to adjust all pagination-links is not right */
 .nav-links {
     display: table;
