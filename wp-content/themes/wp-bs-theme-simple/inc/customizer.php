@@ -340,6 +340,7 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#e0e0e0',
                 '#f23737',
                 '#c1c1c1',
+                '#123123',
                 '#ffffff',
                 '#000000',
             ),

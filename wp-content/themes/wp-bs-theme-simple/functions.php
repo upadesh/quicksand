@@ -174,7 +174,7 @@ add_action('after_setup_theme', 'wp_bs_theme_simple_setup');
  */
 function wp_bs_theme_simple_customizer_css() {
 
-    $colorScheme = wp_bs_theme_simple_get_color_scheme(); 
+    $colorScheme = wp_bs_theme_simple_get_color_scheme();
     ?>
     <style type="text/css"> 
 
@@ -207,10 +207,25 @@ function wp_bs_theme_simple_customizer_css() {
         }
 
         .site-main-container a, 
-        .site-footer-info a
+        .site-footer-info a 
         { 
             color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
         } 
+
+        /*bootstrap pagination*/ 
+        .site-main-container .navigation.pagination .nav-links .page-numbers {
+            color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
+            background-color: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
+            border-color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
+        }  
+
+        .site-main-container .navigation.pagination .nav-links a:hover.page-numbers ,
+        .site-main-container .navigation.pagination .nav-links .page-numbers.current {
+            color: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
+            background-color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
+            border-color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
+        }
+
 
         .site-main-container .site-content h1,
         .site-main-container .site-content h2,
