@@ -178,11 +178,20 @@
     padding-right: .3rem;
 }
 
-/*no bullets in lists*/
-.widget ul,
-.widget ol {
-    list-style-type: none;
-    padding: 0;
+/*widgets*/
+.widget { 
+    /* calendar-widget bugfix */ 
+    @media (max-width: 768px) {
+        #wp-calendar {
+            margin: 0 auto;
+        }
+    }
+    /*no bullets in lists*/
+    ul, ol {
+        list-style-type: none;
+        padding: 0;
+
+    }
 }
 
 /* maybe to adjust all pagination-links is not right */
