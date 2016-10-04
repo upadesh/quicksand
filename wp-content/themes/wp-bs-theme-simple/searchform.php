@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage wp-bs-theme-simple
- * @since WP-bs-theme-simple 1.0
+ * @since WP-bs-theme-simple 0.0.1
  */
 ?>
 
@@ -15,8 +15,8 @@
             <input type="search" class="form-control" placeholder="<?php echo _x( 'Search for:', 'label', 'wp-bs-theme-simple' ); ?>" value="<?php echo get_search_query(); ?>" name="s" >
             <span class="input-group-btn"> 
                 <button class="btn btn-secondary" type="submit">
-                    <span class=""><?php echo _x( 'Search', 'submit button', 'twentysixteen' ); ?></span>
-                    <span class="screen-reader-text"><?php echo _x( 'Search', 'submit button', 'twentysixteen' ); ?></span>
+                    <span class=""><?php echo _x( 'Search', 'submit button', 'wp-bs-theme-simple' ); ?></span>
+                    <span class="screen-reader-text"><?php echo _x( 'Search', 'submit button', 'wp-bs-theme-simple' ); ?></span>
                 </button>
             </span>
         </div>

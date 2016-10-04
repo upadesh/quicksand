@@ -112,7 +112,7 @@ if (!function_exists('wp_bs_theme_simple_post_thumbnail')) :
      *
      * Create your own wp_bs_theme_simple_post_thumbnail() function to override in a child theme.
      *
-     * @since WP-bs-theme-simple 1.0
+     * @since WP-bs-theme-simple 0.0.1
      */
     function wp_bs_theme_simple_post_thumbnail() {
         if (post_password_required() || is_attachment() || !has_post_thumbnail()) {

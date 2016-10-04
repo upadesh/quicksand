@@ -11,7 +11,7 @@
  *
  * @package WordPress
  * @subpackage wp-bs-theme-simple
- * @since WP-bs-theme-simple 1.0
+ * @since WP-bs-theme-simple 0.0.1
  */
 get_header();
 ?>

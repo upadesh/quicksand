@@ -72,7 +72,7 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
      *
      * Create your own wp_bs_theme_simple_setup() function to override in a child theme.
      *
-     * @since WP-bs-theme-simple 1.0
+     * @since WP-bs-theme-simple 0.0.1
      */
     function wp_bs_theme_simple_setup() {
         /*
@@ -681,23 +681,7 @@ function wp_bs_theme_simple_post_thumbnail_sizes_attr($attr, $attachment, $size)
 add_filter('wp_get_attachment_image_attributes', 'wp_bs_theme_simple_post_thumbnail_sizes_attr', 10, 3);
 
 
-
-
-/**
- * Modifies tag cloud widget arguments to have all tags in the widget same font size.
- *
- * @since Twenty Sixteen 1.1
- *
- * @param array $args Arguments for tag cloud widget.
- * @return array A new modified arguments.
- */
-//function wp_bs_theme_simple_widget_tag_cloud_args( $args ) {
-//	$args['largest'] = 1;
-//	$args['smallest'] = 1;
-//	$args['unit'] = 'em';
-//	return $args;
-//}
-//add_filter( 'widget_tag_cloud_args', 'wp_bs_theme_simple_widget_tag_cloud_args' );
+ 
 
 /**
  * Custom template tags for this theme.

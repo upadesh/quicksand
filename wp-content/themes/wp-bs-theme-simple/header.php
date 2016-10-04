@@ -3,10 +3,10 @@
  * The template for displaying the header
  *
  * Displays all of the head element and everything up until the "site-content" div.
- *
+ * 
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since WP-bs-theme-simple 1.0
+ * @subpackage wp-bs-theme-simple
+ * @since WP-bs-theme-simple 0.0.1
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">

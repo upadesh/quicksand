@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage wp-bs-theme-simple
- * @since WP-bs-theme-simple 1.0
+ * @since WP-bs-theme-simple 0.0.1
  */
 if (!is_active_sidebar('sidebar-2')) {
     return;

@@ -33,7 +33,7 @@ get_header();
                         /**
                          * Filter the default wp-bs-theme-simple image attachment size.
                          *
-                         * @since Twenty Sixteen 1.0
+                         * @since WP-bs-theme-simple 0.0.1
                          *
                          * @param string $image_size Image size. Default 'large'.
                          */

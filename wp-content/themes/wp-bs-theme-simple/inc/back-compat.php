@@ -9,7 +9,7 @@
  *
  * @package WordPress
  * @subpackage wp-bs-theme-simple
- * @since WP-bs-theme-simple 1.0
+ * @since WP-bs-theme-simple 0.0.1
  */
 
 /**
@@ -35,7 +35,7 @@ add_action('after_switch_theme', 'wp_bs_theme_simple_switch_theme');
  * Prints an update nag after an unsuccessful attempt to switch to
  * WP-bs-theme-simple on WordPress versions prior to $wp_min_version.
  *
- * @since WP-bs-theme-simple 1.0
+ * @since WP-bs-theme-simple 0.0.1
  *
  * @global string $wp_version WordPress version.
  */
@@ -48,7 +48,7 @@ function wp_bs_theme_simple_upgrade_notice() {
 /**
  * Prevents the Customizer from being loaded on WordPress versions prior to $wp_min_version.
  *   
- * @since WP-bs-theme-simple 1.0
+ * @since WP-bs-theme-simple 0.0.1
  *
  * @global string $wp_version WordPress version.
  */
@@ -65,7 +65,7 @@ add_action('load-customize.php', 'wp_bs_theme_simple_customize');
 /**
  * Prevents the Theme Preview from being loaded on WordPress versions prior to $wp_min_version.
  *
- * @since WP-bs-theme-simple 1.0
+ * @since WP-bs-theme-simple 0.0.1
  *
  * @global string $wp_version WordPress version.
  */

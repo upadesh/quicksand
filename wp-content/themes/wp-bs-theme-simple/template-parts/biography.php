@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage WP-bs-theme-simple
- * @since WP-bs-theme-simple 1.0
+ * @since WP-bs-theme-simple 0.0.1
  */
 ?>
 
@@ -14,7 +14,7 @@
 		/**
 		 * Filter the WP-bs-theme-simple author bio avatar size.
 		 *
-		 * @since WP-bs-theme-simple 1.0
+		 * @since WP-bs-theme-simple 0.0.1
 		 *
 		 * @param int $size The avatar height and width size in pixels.
 		 */
