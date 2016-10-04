@@ -24,7 +24,7 @@
 
 <?php
 $secondary_nav_options = array(
-    'theme_location' => 'primary',
+    'theme_location' => 'secondary',
     'depth' => 1,
     'container' => '',
     'container_class' => '',

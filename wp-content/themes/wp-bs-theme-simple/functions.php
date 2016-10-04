@@ -173,19 +173,21 @@ add_action('after_setup_theme', 'wp_bs_theme_simple_setup');
  * triggered after wp_enque_script
  */
 function wp_bs_theme_simple_customizer_css() {
+
+    $colorScheme = wp_bs_theme_simple_get_color_scheme(); 
     ?>
     <style type="text/css"> 
- 
+
         /*navigation*/
         .site-nav-container,
         .site-nav-container nav.navbar,
         .site-nav-container .dropdown-menu {
-            background-color: <?php echo get_theme_mod('wbts_nav_background_color'); ?>;
+            background-color: <?php echo get_theme_mod('wbts_nav_background_color', $colorScheme[6]); ?>;
         }
 
         #menu-primary .menu-item .nav-link , 
         #menu-primary .menu-item .dropdown-item {
-            color: <?php echo get_theme_mod('wbts_nav_link_color'); ?>;
+            color: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[7]); ?>;
         } 
 
         /*site-header*/
@@ -193,23 +195,23 @@ function wp_bs_theme_simple_customizer_css() {
         .site-info-wrapper .site-description {
             color: #<?php echo get_header_textcolor(); ?>;
         } 
-        
+
         .site-info-wrapper.jumbotron  {
-            background: <?php echo get_theme_mod('wbts_header_background_color'); ?>;
+            background: <?php echo get_theme_mod('wbts_header_background_color', $colorScheme[8]); ?>;
         }
-        
+
         /*content*/
         .site-main-container { 
-            background: <?php echo get_theme_mod('wbts_background_content_color'); ?>;
-            color: <?php echo get_theme_mod('wbts_main_text_color'); ?>;
+            background: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
+            color: <?php echo get_theme_mod('wbts_main_text_color', $colorScheme[3]); ?>;
         }
 
         .site-main-container a, 
         .site-footer-info a
         { 
-            color: <?php echo get_theme_mod('wbts_link_color'); ?>;
+            color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
         } 
- 
+
         .site-main-container .site-content h1,
         .site-main-container .site-content h2,
         .site-main-container .site-content h3,
@@ -222,9 +224,17 @@ function wp_bs_theme_simple_customizer_css() {
         .site-main-container .site-content h4>a,
         .site-main-container .site-content h5>a,
         .site-main-container .site-content h6>a {
-            color: <?php echo get_theme_mod('wbts_secondary_text_color'); ?>;
+            color: <?php echo get_theme_mod('wbts_secondary_text_color', $colorScheme[4]); ?>;
         }
- 
+
+        /*footer*/ 
+        .site-footer-info .row { 
+            background: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>; 
+        }
+        .site-footer-info a {  
+            color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
+        } 
+
     </style>
     <?php
 }

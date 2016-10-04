@@ -103,6 +103,16 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         'default' => $colorSchemeDefault[8],
         'label' => __('Header Background Color', 'wp-bs-theme-simple')
     );
+    $colors[] = array(
+        'slug' => 'wbts_footer_background_color',
+        'default' => $colorSchemeDefault[9],
+        'label' => __('Footer Background Color', 'wp-bs-theme-simple')
+    );
+    $colors[] = array(
+        'slug' => 'wbts_footer_link_color',
+        'default' => $colorSchemeDefault[10],
+        'label' => __('Footer Link Color', 'wp-bs-theme-simple')
+    );
 
     foreach ($colors as $color) {
         $wp_customize->add_setting(
@@ -265,14 +275,16 @@ function wp_bs_theme_simple_social_media_icons() {
  * Can be filtered with {@see 'wp_bs_theme_simple_color_schemes'}.
  *
  * The order of colors in a colors array:
- * 1. Main Background Color - background_color
- * 2. Page Background Color - wbts_background_content_color
- * 3. Link Color            - wbts_link_color
- * 4. Main Text Color.      - wbts_main_text_color
- * 5. Secondary Text Color  - wbts_secondary_text_color
- * 6. Header Text Color     - header_textcolor
- * 7. Navigation Background Color - wbts_nav_background_color
- * 8. Navigation Link Color - wbts_nav_link_color
+ * 1. Main Background Color         - background_color
+ * 2. Page Background Color         - wbts_background_content_color
+ * 3. Link Color                    - wbts_link_color
+ * 4. Main Text Color.              - wbts_main_text_color
+ * 5. Secondary Text Color          - wbts_secondary_text_color
+ * 6. Header Text Color               - header_textcolor
+ * 7. Navigation Background Color   - wbts_nav_background_color
+ * 8. Navigation Link Color         - wbts_nav_link_color
+ * 9. Footer Background Color       - wbts_footer_background_color
+ * 10. Footer Link Color            - wbts_footer_link_color
  *
  * @since WP-bs-theme-simple 0.0.1
  *
@@ -313,34 +325,8 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#cecece',
                 '#ffffff',
                 '#e55050',
-            ),
-        ),
-        'dark' => array(
-            'label' => __('Dark', 'wp-bs-theme-simple'),
-            'colors' => array(
-                '#321123',
                 '#ffffff',
-                '#cecece',
-                '#686868',
-                '#123123',
-                '#ffffff',
-                '#cecece',
-                '#ffffff',
-                '#333333',
-            ),
-        ),
-        'gray' => array(
-            'label' => __('Gray', 'wp-bs-theme-simple'),
-            'colors' => array(
-                '#322311',
-                '#ffffff',
-                '#cecece',
-                '#686868',
-                '#123123',
-                '#ffffff',
-                '#cecece',
-                '#ffffff',
-                '#333333',
+                '#000000',
             ),
         ),
         'red' => array(
@@ -354,7 +340,8 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#e0e0e0',
                 '#f23737',
                 '#c1c1c1',
-                '#333333',
+                '#ffffff',
+                '#000000',
             ),
         ),
         'green' => array(
@@ -369,8 +356,42 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#29842a',
                 '#81d742',
                 '#333333',
+                '#ffffff',
+                '#000000',
             ),
         ),
+        'dark' => array(
+            'label' => __('Dark', 'wp-bs-theme-simple'),
+            'colors' => array(
+                '#321123',
+                '#ffffff',
+                '#cecece',
+                '#686868',
+                '#123123',
+                '#ffffff',
+                '#cecece',
+                '#ffffff',
+                '#333333',
+                '#ffffff',
+                '#000000',
+            ),
+        ),
+        'gray' => array(
+            'label' => __('Gray', 'wp-bs-theme-simple'),
+            'colors' => array(
+                '#322311',
+                '#ffffff',
+                '#cecece',
+                '#686868',
+                '#123123',
+                '#ffffff',
+                '#cecece',
+                '#ffffff',
+                '#333333',
+                '#ffffff',
+                '#000000',
+            ),
+        )
     ));
 }
 

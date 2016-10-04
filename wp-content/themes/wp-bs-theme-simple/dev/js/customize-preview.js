@@ -70,4 +70,14 @@
             $('.site-info-wrapper.jumbotron').css('background-color', to);
         });
     });
+    wp.customize('wbts_footer_background_color', function (value) {
+        value.bind(function (to) {
+            $('.site-footer-info .row').css('background-color', to);
+        });
+    });
+    wp.customize('wbts_footer_link_color', function (value) {
+        value.bind(function (to) {
+            $('.site-footer-info a').css('color', to);
+        });
+    });
 })(jQuery); 
