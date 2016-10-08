@@ -254,7 +254,7 @@ function wp_bs_theme_simple_customizer_css() {
         }
 
         /*footer*/ 
-        .site-footer-info { 
+        .site-footer-info .row { 
             background: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>; 
         } 
         
