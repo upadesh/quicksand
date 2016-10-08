@@ -42,25 +42,10 @@ $secondary_nav_options = array(
                 <?php wp_bs_theme_simple_social_media_icons(); ?>
             </div>
         </div>
-        <div class="site-copyright "> 
-            <?php
-            /**
-             * Fires before the wp-bs-theme-simple footer text for footer customization.
-             *
-             * @since WP-bs-theme-simple 0.0.1
-             */
-            do_action('wp_bs_theme_simple_credits');
-            ?> 
-
-
+        <div class="nav-wrapper">
             <div class="text-xs-center text-lg-left">
                 <!--secondary navigation-->
-                <?php wp_nav_menu($secondary_nav_options); ?> 
-<!--                    <p class="text-muted lead">Copyright &copy;2016 
-                    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                <?php bloginfo('name'); ?>
-                    </a>
-                </p>-->
+                <?php wp_nav_menu($secondary_nav_options); ?>
             </div>
         </div>
     </div>

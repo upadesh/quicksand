@@ -14,22 +14,6 @@ $gray-lighter:              #81d742 !default;
 $gray-lightest:             #81d742!default;
 
 */
-.navbar-nav li a {
-  line-height: 50px; }
-
-.navbar-brand .custom-logo-link {
-  line-height: 50px; }
-
-.navbar-brand .custom-logo {
-  max-height: 50px;
-  width: auto; }
-
-.navbar-nav li .dropdown-menu {
-  /*align the dropdown*/
-  margin: 7px 0 0; }
-  .navbar-nav li .dropdown-menu .dropdown-item {
-    line-height: 25px; }
-
 /* Test: reduce size of massively large image with no alignment.
  *  http://wp.local/archives/tag/alignment-2
 */
@@ -222,10 +206,10 @@ $gray-lightest:             #81d742!default;
 .site-footer-info {
   margin: 0; }
   .site-footer-info .site-social,
-  .site-footer-info .site-copyright {
+  .site-footer-info .nav-wrapper {
     line-height: 60px; }
     .site-footer-info .site-social *,
-    .site-footer-info .site-copyright * {
+    .site-footer-info .nav-wrapper * {
       margin-bottom: 0; }
 
 /*center navbar-items in mobile-mode*/
@@ -910,7 +894,7 @@ pre {
     display: table;
     clear: both; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .site-footer .site-content-bottom-widgets .widget, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .site-content #secondary, .col-lg-4, .col-lg-5, .col-lg-6, .site-footer-info .site-social, .site-footer-info .site-copyright, .col-lg-7, .col-lg-8, .col-lg-9, .site-content #primary, .col-lg-10, .col-lg-11, .col-lg-12, .page-template-template-fullwidth .site-content #primary, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .site-footer .site-content-bottom-widgets .widget, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .site-content #secondary, .col-lg-4, .col-lg-5, .col-lg-6, .site-footer-info .site-social, .site-footer-info .nav-wrapper, .col-lg-7, .col-lg-8, .col-lg-9, .site-content #primary, .col-lg-10, .col-lg-11, .col-lg-12, .page-template-template-fullwidth .site-content #primary, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
@@ -1319,7 +1303,7 @@ pre {
   .col-lg-5 {
     float: left;
     width: 41.6666666667%; }
-  .col-lg-6, .site-footer-info .site-social, .site-footer-info .site-copyright {
+  .col-lg-6, .site-footer-info .site-social, .site-footer-info .nav-wrapper {
     float: left;
     width: 50%; }
   .col-lg-7 {
@@ -1352,7 +1336,7 @@ pre {
     right: 33.3333333333%; }
   .pull-lg-5 {
     right: 41.6666666667%; }
-  .pull-lg-6, .site-footer-info .site-copyright {
+  .pull-lg-6, .site-footer-info .nav-wrapper {
     right: 50%; }
   .pull-lg-7 {
     right: 58.3333333333%; }
@@ -4989,3 +4973,35 @@ a.text-danger:focus, a.text-danger:hover {
       cursor: default;
       background-color: #0275d8;
       border-color: #0275d8; }
+
+@media (min-width: 544px) {
+  .navbar-nav li a {
+    line-height: 50px; }
+  .navbar-brand .custom-logo-link {
+    line-height: 50px; }
+  .navbar-brand .custom-logo {
+    max-height: 50px;
+    width: auto; }
+  .navbar-nav li .dropdown-menu {
+    /*align the dropdown*/
+    margin: 7px 0 0; }
+    .navbar-nav li .dropdown-menu .dropdown-item {
+      line-height: 25px; } }
+
+@media (max-width: 767px) {
+  .navbar-header {
+    display: none; }
+  .navbar .nabvar-wrapper {
+    float: left !important; }
+  .navbar .navbar-toggler {
+    float: none !important; }
+  .navbar .nav-item + .nav-item {
+    margin-left: 0; }
+  .navbar .dropdown {
+    position: initial; }
+  .navbar .dropdown-menu {
+    position: initial;
+    z-index: initial;
+    float: initial;
+    border: initial;
+    border-radius: initial; } }

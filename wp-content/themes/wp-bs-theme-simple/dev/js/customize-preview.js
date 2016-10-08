@@ -113,14 +113,14 @@
     });
     wp.customize('wbts_footer_background_color', function (value) {
         value.bind(function (to) {
-            $('.site-footer-info .site-copyright a:hover').css('color', to);
+            $('.site-footer-info .nav-wrapper a:hover').css('color', to);
             $('.site-footer-info .row').css('background', to);
         });
     });
     wp.customize('wbts_footer_link_color', function (value) {
         value.bind(function (to) {
-            $('.site-footer-info .site-copyright a ').css('color', to);
-            $('.site-footer-info .site-copyright a:hover').css('color', to);
+            $('.site-footer-info .nav-wrapper a ').css('color', to);
+            $('.site-footer-info .nav-wrapper a:hover').css('color', to);
         });
     });
 })(jQuery); 
