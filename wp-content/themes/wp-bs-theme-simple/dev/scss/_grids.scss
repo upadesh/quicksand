@@ -37,12 +37,20 @@
 } 
 
 .site-footer-info {
-    .site-social {
+/*    .site-social {
         @extend .col-lg-6 ;
         @extend .push-lg-6; 
     }
     .nav-wrapper {
         @extend .col-lg-6 ;
         @extend .pull-lg-6;
+    }*/
+    .site-social {
+        @extend .col-lg-4 ;
+        @extend .push-lg-8; 
+    }
+    .nav-wrapper {
+        @extend .col-lg-8 ;
+        @extend .pull-lg-4;
     }
 } 

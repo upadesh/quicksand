@@ -254,13 +254,14 @@ function wp_bs_theme_simple_customizer_css() {
         }
 
         /*footer*/ 
-        .site-footer-info .row { 
+        .site-footer-info { 
             background: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>; 
         } 
         
         /*footer-menu*/
         .site-footer-info .nav-wrapper a {  
             color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
+            padding: 0 .6rem;
         }  
         .site-footer-info .nav-wrapper a:hover {  
             color: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>;
