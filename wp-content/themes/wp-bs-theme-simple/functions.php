@@ -188,13 +188,13 @@ function wp_bs_theme_simple_customizer_css() {
         #menu-primary .menu-item .dropdown-item {
             color: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[7]); ?>;
         }  
-        
-         
+
+
         #menu-primary .menu-item .dropdown-item:hover {
             color: <?php echo get_theme_mod('wbts_nav_background_color', $colorScheme[7]); ?>;
             background: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[7]); ?>;
         }
-        
+
 
         /*site-header*/
         .site-info-wrapper .site-title,
@@ -257,7 +257,7 @@ function wp_bs_theme_simple_customizer_css() {
         .site-footer-info .row { 
             background: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>; 
         } 
-        
+
         /*footer-menu*/
         .site-footer-info .nav-wrapper a {  
             color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
@@ -267,19 +267,18 @@ function wp_bs_theme_simple_customizer_css() {
             color: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>;
             background-color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
         } 
-         
-        /*footer-social-menu
-        .site-footer-info .site-social a {
+
+        /*footer-social-menu*/
+        .site-footer-info .site-social .fa-circle {
             color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>; 
         }
-        .site-footer-info .site-social a:hover { 
-            color: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>; 
-        } 
-        */
-        
+        .site-footer-info .site-social .fa-stack:hover .fa-circle {
+            color: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
+        }
+
         /*a:link, a:visited, a:hover, a:active*/ 
-        
-        
+
+
 
     </style>
     <?php
@@ -708,7 +707,7 @@ function wp_bs_theme_simple_post_thumbnail_sizes_attr($attr, $attachment, $size)
 add_filter('wp_get_attachment_image_attributes', 'wp_bs_theme_simple_post_thumbnail_sizes_attr', 10, 3);
 
 
- 
+
 
 /**
  * Custom template tags for this theme.
