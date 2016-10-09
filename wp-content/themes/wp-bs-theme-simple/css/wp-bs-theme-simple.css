@@ -4993,10 +4993,8 @@ a.text-danger:focus, a.text-danger:hover {
       line-height: 25px; } }
 
 @media (max-width: 767px) {
-  .navbar-header {
+  .navbar-brand {
     display: none; }
-  .navbar .navbar-wrapper {
-    float: left !important; }
   .navbar .navbar-toggler {
     float: none !important; }
   .navbar .nav-item + .nav-item {

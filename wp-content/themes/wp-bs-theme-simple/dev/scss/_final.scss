@@ -37,11 +37,8 @@
 
 
 @include media-breakpoint-up(sm) {
-    @extend .pull-xs-right;
     $navbar-height: 50px; 
-
     .site-navigation  {
-
         .navbar-nav li a {
             line-height: $navbar-height;
         }
@@ -65,29 +62,23 @@
                 }
             }
         } 
-
     }
 }
 
-@include media-breakpoint-down(sm) {
-    .navbar-header {
+@include media-breakpoint-down(sm) { 
+    .navbar-brand {
         display: none;
     }
-    .navbar {
-        .navbar-wrapper {
-            float: left !important;
-        }
+    .navbar { 
         .navbar-toggler { 
             float: none !important;
         } 
         .nav-item + .nav-item {
             margin-left: 0;
         }
-
         .dropdown {
             position: initial;
         }
-
         .dropdown-menu {
             position: initial;
             z-index: initial;
