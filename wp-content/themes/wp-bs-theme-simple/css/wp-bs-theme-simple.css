@@ -233,6 +233,9 @@ $gray-lightest:             #81d742!default;
       float: none;
       display: inline-block; } }
 
+.widget-area ul, .widget-area ol {
+  padding-left: 0; }
+
 /* import bootstrap at the very last end, so we can use it's variables */
 /*!
  * Bootstrap v4.0.0-alpha.4 (http://getbootstrap.com)

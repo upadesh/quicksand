@@ -168,122 +168,128 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
 endif; // wp_bs_theme_simple_setup
 add_action('after_setup_theme', 'wp_bs_theme_simple_setup');
 
-/**
- * include customizer-settings in new style-script
- * triggered after wp_enque_script
- */
-function wp_bs_theme_simple_customizer_css() {
-
-    $colorScheme = wp_bs_theme_simple_get_color_scheme();
-    ?>
-    <style type="text/css">  
-        /*navigation*/
-        .site-nav-container,
-        .site-nav-container nav.navbar,
-        .site-nav-container .dropdown-menu {
-            background-color: <?php echo get_theme_mod('wbts_nav_background_color', $colorScheme[6]); ?>;
-        }
-
-        #menu-primary .menu-item .nav-link , 
-        #menu-primary .menu-item .dropdown-item {
-            color: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[7]); ?>;
-        }  
 
 
-        #menu-primary .menu-item .dropdown-item:hover {
-            color: <?php echo get_theme_mod('wbts_nav_background_color', $colorScheme[7]); ?>;
-            background: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[7]); ?>;
-        }
+if (!function_exists('wp_bs_theme_simple_customizer_css')) :
+
+    /**
+     * include customizer-settings in new style-script
+     * triggered after wp_enque_script
+     */
+    function wp_bs_theme_simple_customizer_css() {
+
+        $colorScheme = wp_bs_theme_simple_get_color_scheme();
+        ?>
+        <style type="text/css">  
+            /*navigation*/
+            .site-nav-container,
+            .site-nav-container nav.navbar,
+            .site-nav-container .dropdown-menu {
+                background: <?php echo get_theme_mod('wbts_nav_background_color', $colorScheme[6]); ?>;
+            }
+
+            #menu-primary .menu-item .nav-link , 
+            #menu-primary .menu-item .dropdown-item {
+                color: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[7]); ?>;
+            }  
+            
+            #menu-primary .menu-item .dropdown-item.active {
+                color: <?php echo get_theme_mod('wbts_nav_background_color', $colorScheme[7]); ?>;
+                background: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[7]); ?>;
+            }
 
 
-        /*site-header*/
-        .site-info-wrapper .site-title,
-        .site-info-wrapper .site-description {
-            color: #<?php echo get_header_textcolor(); ?>;
-        } 
-
-        .site-info-wrapper.jumbotron  {
-            background: <?php echo get_theme_mod('wbts_header_background_color', $colorScheme[8]); ?>;
-        }
-
-        /*content*/
-        .site-main-container { 
-            background: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
-            color: <?php echo get_theme_mod('wbts_main_text_color', $colorScheme[3]); ?>;
-        }
-
-        .site-main-container a, 
-        .site-footer-info a 
-        { 
-            color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
-        } 
-
-        /*bootstrap pagination
-            TODO: hmmmm ... 
-        */ 
-        .site-main-container .navigation.pagination .nav-links .page-numbers {
-            color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
-            background-color: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
-            border-color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
-        }  
-
-        .site-main-container .navigation.pagination .nav-links a:hover.page-numbers ,
-        .site-main-container .navigation.pagination .nav-links .page-numbers.current {
-            color: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
-            background-color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
-            border-color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
-        }
+            #menu-primary .menu-item .dropdown-item:hover {
+                color: <?php echo get_theme_mod('wbts_nav_background_color', $colorScheme[7]); ?>;
+                background: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[7]); ?>;
+            }
 
 
-        /*2nd text color
-            TODO: hmmmm ... 
-        */ 
-        .site-main-container .site-content h1,
-        .site-main-container .site-content h2,
-        .site-main-container .site-content h3,
-        .site-main-container .site-content h4,
-        .site-main-container .site-content h5,
-        .site-main-container .site-content h6, 
-        .site-main-container .site-content h1>a,
-        .site-main-container .site-content h2>a,
-        .site-main-container .site-content h3>a,
-        .site-main-container .site-content h4>a,
-        .site-main-container .site-content h5>a,
-        .site-main-container .site-content h6>a {
-            color: <?php echo get_theme_mod('wbts_secondary_text_color', $colorScheme[4]); ?>;
-        }
+            /*site-header*/
+            .site-info-wrapper .site-title,
+            .site-info-wrapper .site-description {
+                color: #<?php echo get_header_textcolor(); ?>;
+            } 
 
-        /*footer*/ 
-        .site-footer-info .row { 
-            background: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>; 
-        } 
+            .site-info-wrapper.jumbotron  {
+                background: <?php echo get_theme_mod('wbts_header_background_color', $colorScheme[8]); ?>;
+            }
 
-        /*footer-menu*/
-        .site-footer-info .nav-wrapper a {  
-            color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
-            padding: 0 .6rem;
-        }  
-        .site-footer-info .nav-wrapper a:hover {  
-            color: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>;
-            background-color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
-        } 
+            /*content*/
+            .site-main-container { 
+                background: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
+                color: <?php echo get_theme_mod('wbts_main_text_color', $colorScheme[3]); ?>;
+            }
 
-        /*footer-social-menu*/
-        .site-footer-info .site-social .fa-circle {
-            color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>; 
-        }
-        .site-footer-info .site-social .fa-stack:hover .fa-circle {
-            color: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
-        }
+            .site-main-container a, 
+            .site-footer-info a 
+            { 
+                color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
+            } 
 
-        /*a:link, a:visited, a:hover, a:active*/ 
+            /*bootstrap pagination*/ 
+            .site-main-container .navigation.pagination .nav-links .page-numbers {
+                color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
+                background-color: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
+                border-color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
+            }  
+
+            .site-main-container .navigation.pagination .nav-links a:hover.page-numbers ,
+            .site-main-container .navigation.pagination .nav-links .page-numbers.current {
+                color: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
+                background-color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
+                border-color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
+            }
 
 
+            /*2nd text color*/ 
+            .site-main-container .site-content h1,
+            .site-main-container .site-content h2,
+            .site-main-container .site-content h3,
+            .site-main-container .site-content h4,
+            .site-main-container .site-content h5,
+            .site-main-container .site-content h6, 
+            .site-main-container .site-content h1>a,
+            .site-main-container .site-content h2>a,
+            .site-main-container .site-content h3>a,
+            .site-main-container .site-content h4>a,
+            .site-main-container .site-content h5>a,
+            .site-main-container .site-content h6>a {
+                color: <?php echo get_theme_mod('wbts_secondary_text_color', $colorScheme[4]); ?>;
+            }
 
-    </style>
-    <?php
-}
+            /*footer*/ 
+            .site-footer-info .row { 
+                background: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>; 
+            } 
 
+            /*footer-menu*/
+            .site-footer-info .nav-wrapper a {  
+                color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
+                padding: 0 .6rem;
+            }  
+            .site-footer-info .nav-wrapper a:hover {  
+                color: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>;
+                background-color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
+            } 
+
+            /*footer-social-menu*/
+            .site-footer-info .site-social .fa-circle {
+                color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>; 
+            }
+            .site-footer-info .site-social .fa-stack:hover .fa-circle {
+                color: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
+            }
+
+            /*a:link, a:visited, a:hover, a:active*/ 
+
+
+
+        </style>
+        <?php
+    }
+
+endif; //wp_bs_theme_simple_customizer_css
 add_action('wp_head', 'wp_bs_theme_simple_customizer_css');
 
 
