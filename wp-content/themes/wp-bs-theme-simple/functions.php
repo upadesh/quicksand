@@ -160,14 +160,16 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
         add_theme_support('custom-background', $customBackgroundArgs);
 
         /**
-         * propose a default-height of 200px
-         * while uploading you can crop the image 
+         * By default, the user will have to crop any images they upload to fit in the width and height you specify. 
+         * However, you can let users upload images of any height and width by specifying ‘flex-width’ and ‘flex-height’ as true. 
+         * This will let the user skip the cropping step when they upload a new photo.
          */ 
         $customHeaderArgs = array(
             'default-text-color' => $colorSchemeDefault[5],
             'flex-width' => true, 
             'flex-height' => true,
             'height' => 200,
+            'width' => 1200,
         );
         add_theme_support('custom-header', $customHeaderArgs);
     }
