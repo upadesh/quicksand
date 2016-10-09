@@ -230,14 +230,14 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
             /*bootstrap pagination*/ 
             .site-main-container .navigation.pagination .nav-links .page-numbers {
                 color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
-                background-color: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
+                background: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
                 border-color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
             }  
 
             .site-main-container .navigation.pagination .nav-links a:hover.page-numbers ,
             .site-main-container .navigation.pagination .nav-links .page-numbers.current {
                 color: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
-                background-color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
+                background: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
                 border-color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
             }
 
@@ -270,7 +270,7 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
             }  
             .site-footer-info .nav-wrapper a:hover {  
                 color: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>;
-                background-color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
+                background: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
             } 
 
             /*footer-social-menu*/
@@ -278,7 +278,8 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
                 color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>; 
             }
             .site-footer-info .site-social .fa-stack:hover .fa-circle {
-                color: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
+                /*opacity*/
+                opacity:0.5;
             }
 
             /*a:link, a:visited, a:hover, a:active*/ 
