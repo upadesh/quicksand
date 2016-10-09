@@ -159,8 +159,15 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
         );
         add_theme_support('custom-background', $customBackgroundArgs);
 
+        /**
+         * propose a default-height of 200px
+         * inside the customizer the user can crop too large images
+         */ 
         $customHeaderArgs = array(
             'default-text-color' => $colorSchemeDefault[5],
+            'flex-width' => true, 
+            'flex-height' => true,
+            'height' => 200,
         );
         add_theme_support('custom-header', $customHeaderArgs);
     }
@@ -192,7 +199,7 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
             #menu-primary .menu-item .dropdown-item {
                 color: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[7]); ?>;
             }  
-            
+
             #menu-primary .menu-item .dropdown-item.active {
                 color: <?php echo get_theme_mod('wbts_nav_background_color', $colorScheme[7]); ?>;
                 background: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[7]); ?>;
@@ -243,6 +250,7 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
 
 
             /*2nd text color*/ 
+            /*TODO: evtl body besser*/
             .site-main-container .site-content h1,
             .site-main-container .site-content h2,
             .site-main-container .site-content h3,
