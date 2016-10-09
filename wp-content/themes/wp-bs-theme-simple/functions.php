@@ -107,7 +107,7 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
          * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
          */ 
         add_theme_support('post-thumbnails');
-        // in list-view crop the image to a max-height of 200px
+        // in list-view crop the image to a max-height of 300px
         add_image_size('wp-bs-theme-simple-featured_image', 1200, 300, array('top', 'left'));
         set_post_thumbnail_size(1200, 9999);
 
@@ -161,7 +161,7 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
 
         /**
          * propose a default-height of 200px
-         * inside the customizer the user can crop too large images
+         * while uploading you can crop the image 
          */ 
         $customHeaderArgs = array(
             'default-text-color' => $colorSchemeDefault[5],
@@ -602,7 +602,7 @@ function bootstrap4_comment_form($args) {
             <label for="comment">' . _x('Comment', 'noun') . '</label> 
             <textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
         </div>';
-    $args['class_submit'] = 'btn btn-default'; // since WP 4.1 
+    $args['class_submit'] = 'btn btn-primary'; // since WP 4.1 
 
     return $args;
 }

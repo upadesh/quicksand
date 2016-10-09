@@ -25,10 +25,6 @@ $gray-lightest:             #81d742!default;
   height: auto;
   max-width: 100%; }
 
-/* let it stretch 100% */
-.post-thumbnail img {
-  width: 100%; }
-
 /**
  * Galleries
  */
@@ -173,6 +169,27 @@ $gray-lightest:             #81d742!default;
       padding-left: 3px;
       content: "\f0da"; }
 
+/* stretch postthumbnail to 100% */
+.post-thumbnail img {
+  width: 100%; }
+
+/*postthumbnail postthumbnailin list-view*/
+.crop-thumbnail {
+  max-height: 300px;
+  overflow: hidden; }
+
+/*$gray-dark:                 #77271b !default;
+$gray:                      #963222 !default;
+$gray-light:                #b23f29 !default;
+$gray-lighter:              #d34030 !default;
+$gray-lightest:             #f74b38 !default; 
+
+$brand-primary:             #77271b !default;
+$brand-success:             #963222 !default;
+$brand-info:                #b23f29 !default;
+$brand-warning:             #d34030 !default;
+$brand-danger:              #f74b38 !default;
+$brand-inverse:             $gray-dark !default; */
 /* grid-patterns */
 /* one-column */
 /* 
