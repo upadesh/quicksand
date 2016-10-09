@@ -105,7 +105,7 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
          * Enable support for Post Thumbnails on posts and pages.
          *
          * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-         */ 
+         */
         add_theme_support('post-thumbnails');
         // in list-view crop the image to a max-height of 300px
         add_image_size('wp-bs-theme-simple-featured_image', 1200, 300, array('top', 'left'));
@@ -163,10 +163,10 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
          * By default, the user will have to crop any images they upload to fit in the width and height you specify. 
          * However, you can let users upload images of any height and width by specifying ‘flex-width’ and ‘flex-height’ as true. 
          * This will let the user skip the cropping step when they upload a new photo.
-         */ 
+         */
         $customHeaderArgs = array(
             'default-text-color' => $colorSchemeDefault[5],
-            'flex-width' => true, 
+            'flex-width' => true,
             'flex-height' => true,
             'height' => 200,
             'width' => 1200,
@@ -242,9 +242,10 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
                 background: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
                 border-color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
             }  
-
-            .site-main-container .navigation.pagination .nav-links a:hover.page-numbers ,
-            .site-main-container .navigation.pagination .nav-links .page-numbers.current {
+            .bs-pagination .navigation.pagination .nav-links .page-numbers:focus,
+            .bs-pagination .navigation.pagination .nav-links a:hover.page-numbers ,
+            .bs-pagination .navigation.pagination .nav-links .page-numbers.current,
+            .bs-pagination .navigation.pagination .nav-links .page-numbers.current:hover {
                 color: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
                 background: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
                 border-color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
