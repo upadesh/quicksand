@@ -196,7 +196,8 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
             .site-nav-container .dropdown-menu {
                 background: <?php echo get_theme_mod('wbts_nav_background_color', $colorScheme[6]); ?>;
             }
-
+            
+            .navbar-toggler,
             #menu-primary .menu-item .nav-link , 
             #menu-primary .menu-item .dropdown-item {
                 color: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[7]); ?>;
