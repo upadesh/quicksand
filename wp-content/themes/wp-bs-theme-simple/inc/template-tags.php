@@ -130,13 +130,15 @@ if (!function_exists('wp_bs_theme_simple_post_thumbnail')) :
         <?php else : ?>
 
             <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+                <div class="crop-thumbnail">
                 <?php
                 // in list-view the height of the post-thumbnail is max. 300px 
                 the_post_thumbnail('wp-bs-theme-simple-featured_image', array(
                     'alt' => the_title_attribute('echo=0'),
-                        )
-                );
+                    'class' => 'img-fluid'
+                ));
                 ?>
+                    </div>
             </a>
 
         <?php
@@ -265,6 +267,10 @@ if (!function_exists('wp_bs_theme_simple_the_custom_logo')) :
             }
         endif;
     }
+
+
+
+
 
 
 

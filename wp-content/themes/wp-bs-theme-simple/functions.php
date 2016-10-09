@@ -105,9 +105,9 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
          * Enable support for Post Thumbnails on posts and pages.
          *
          * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-         */
+         */ 
         add_theme_support('post-thumbnails');
-        // in list-view crop the image to a max-height of 300px
+        // in list-view crop the image to a max-height of 200px
         add_image_size('wp-bs-theme-simple-featured_image', 1200, 300, array('top', 'left'));
         set_post_thumbnail_size(1200, 9999);
 
@@ -683,6 +683,7 @@ function wp_bs_theme_simple_hex2rgb($color) {
  *                      values in pixels (in that order).
  * @return string A source size value for use in a content image 'sizes' attribute.
  */
+//TODO
 function wp_bs_theme_simple_content_image_sizes_attr($sizes, $size) {
     $width = $size[0];
 

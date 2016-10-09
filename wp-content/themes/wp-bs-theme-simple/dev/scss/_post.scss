@@ -18,13 +18,6 @@
     @extend .sr-only;
 } 
 
-/* let it stretch 100% */
-.post-thumbnail {
-    img {
-        width: 100%; 
-    }
-}
-
 
 /**
  * Galleries
@@ -223,3 +216,19 @@
         }
     }
 }
+
+
+
+
+/* stretch postthumbnail to 100% */
+.post-thumbnail {
+    img {
+        width: 100%; 
+    }
+}
+
+/*postthumbnail postthumbnailin list-view*/
+.crop-thumbnail {
+    max-height: 300px;
+    overflow: hidden;
+} 
