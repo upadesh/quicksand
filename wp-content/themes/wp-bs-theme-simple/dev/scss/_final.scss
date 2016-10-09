@@ -1,7 +1,4 @@
 /*pagination: bootstrap-style*/
-
-
-/*BS-style pagination*/
 .bs-pagination {
     /*@extend text-xs-xenter*/
     width: 100%;
@@ -40,7 +37,7 @@
 
 
 @include media-breakpoint-up(sm) {
-
+    @extend .pull-xs-right;
     $navbar-height: 50px; 
 
     .site-navigation  {
@@ -77,7 +74,7 @@
         display: none;
     }
     .navbar {
-        .nabvar-wrapper {
+        .navbar-wrapper {
             float: left !important;
         }
         .navbar-toggler { 

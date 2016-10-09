@@ -15,7 +15,7 @@
 
     <div class="site-navigation"> 
         <nav class="navbar navbar-light bg-faded site-nav">
-            <button class="navbar-toggler hidden-lg-up pull-xs-right" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler hidden-lg-up pull-xs-left pull-md-right" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 &#9776;
             </button>
 
@@ -34,7 +34,7 @@
                     }
                 endif;
                 ?>
-                <div class="nav-wrapper pull-xs-right"> 
+                <div class="nav-wrapper pull-xs-left pull-md-right"> 
                     <?php wp_nav_menu($primary_nav_options); ?> 
                 </div>
             </div> 

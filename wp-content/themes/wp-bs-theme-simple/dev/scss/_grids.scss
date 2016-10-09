@@ -36,15 +36,7 @@
     }
 } 
 
-.site-footer-info {
-/*    .site-social {
-        @extend .col-lg-6 ;
-        @extend .push-lg-6; 
-    }
-    .nav-wrapper {
-        @extend .col-lg-6 ;
-        @extend .pull-lg-6;
-    }*/
+.site-footer-info { 
     .site-social {
         @extend .col-lg-4 ;
         @extend .push-lg-8; 
