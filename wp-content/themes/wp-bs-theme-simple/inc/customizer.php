@@ -352,24 +352,7 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#2cb5b1',
                 '#d1d1d1',
             ),
-        ),
-        'green' => array(
-            'label' => __('Green', 'wp-bs-theme-simple'),
-            'colors' => array(
-                '#55963c',
-                '#6eb237',
-                '#81d742',
-                '#81d742',
-                '#27660f',
-                '#96f24b',
-                '#29842a',
-                '#81d742',
-                '#333333',
-                '#4f4f4f',
-                '#2cb5b1',
-                '#d1d1d1',
-            ), 
-        )
+        ), 
     ));
 }
 

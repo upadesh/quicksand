@@ -24,34 +24,11 @@
  * @subpackage WP-bs-theme-simple
  * @since WP-bs-theme-simple 0.0.1
  */
-/*
- * Let WordPress manage the document title.
- * By adding theme support, we declare that this theme does not use a
- * hard-coded <title> tag in the document head, and expect WordPress to
- * provide it for us.
- */
-
 global $wp_bs_theme_simple_version;
 global $wp_min_version;
 
 $wp_bs_theme_simple_version = '0.0.1';
 $wp_min_version = '4.4';
-
-/**
- * make videos responsive
- * 
- * @param type $html
- * @param type $url
- * @param type $attr
- * @param type $post_id
- * 
- * @return string html
- */
-function my_embed_oembed_html($html, $url, $attr, $post_id) {
-    return '<div class="video-container">' . $html . '</div>';
-}
-
-add_filter('embed_oembed_html', 'my_embed_oembed_html', 99, 4);
 
 /**
  * wp-bs-theme-simple only works in WordPress 4.4 or later.
@@ -81,7 +58,9 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
         load_theme_textdomain('wp-bs-theme-simple', get_template_directory() . '/languages');
 
 
-        // Add default posts and comments RSS feed links to head.
+        /*
+         * Add default posts and comments RSS feed links to head 
+         */
         add_theme_support('automatic-feed-links');
 
         /*
@@ -153,6 +132,9 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
         ));
 
 
+        /*
+         * Enable support for Custom Background
+         */
         $colorSchemeDefault = wp_bs_theme_simple_get_color_schemes()['default']['colors'];
         $customBackgroundArgs = array(
             'default-color' => $colorSchemeDefault[0],
@@ -196,7 +178,7 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
             .site-nav-container .dropdown-menu {
                 background: <?php echo get_theme_mod('wbts_nav_background_color', $colorScheme[6]); ?>;
             }
-            
+
             .navbar-toggler,
             #menu-primary .menu-item .nav-link , 
             #menu-primary .menu-item .dropdown-item {
@@ -275,7 +257,7 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
                 background: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>; 
                 color: <?php echo get_theme_mod('wbts_footer_text_color', $colorScheme[11]); ?>;
             }  
-            
+
             .site-footer-widgetbar a,
             .site-footer .nav-wrapper a {  
                 color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
@@ -290,8 +272,7 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
             .site-footer .site-social .fa-circle {
                 color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>; 
             }
-            .site-footer .site-social .fa-stack:hover .fa-circle {
-                /*opacity*/
+            .site-footer .site-social .fa-stack:hover .fa-circle { 
                 opacity:0.5;
             }
         </style>
@@ -352,7 +333,6 @@ if (!function_exists('wp_bs_theme_simple_widgets_init')) :
     }
 
 endif;
-
 add_action('widgets_init', 'wp_bs_theme_simple_widgets_init');
 
 
@@ -452,31 +432,15 @@ if (!function_exists('wp_bs_theme_simple_styles')) :
      */
     function wp_bs_theme_simple_styles() {
 
-//    TODO: registrieren und dann abhängigkeiten
+//    TODO: wp_head registrieren und  abhängigkeiten
 //        
 //          /*   REGISTER ALL JS FOR SITE */
 //    wp_register_script('pr_cycle_all',get_stylesheet_directory_uri().'/js/pr-slider.js');
-//    wp_register_script('pr_slider',get_stylesheet_directory_uri().'/js/jquery.cycle.all.min.js');
-//    wp_register_script('pr_validation_engine',get_stylesheet_directory_uri().'/js/jquery.validationEngine-en.js');
-//    wp_register_script('pr_validation_locale',get_stylesheet_directory_uri().'/js/jquery.validationEngine.js');
-//    wp_register_script('stylethemes',get_stylesheet_directory_uri().'/js/stylethemes.js');
-//    wp_register_script('pr-jquery-ui',get_stylesheet_directory_uri().'/js/jquery-ui.js');
-//    wp_register_script('main-js',get_stylesheet_directory_uri().'/js/main.js');
-//    wp_register_script('pr-galleriffic',get_stylesheet_directory_uri().'/js/jquery.galleriffic.js');
-//    wp_register_script('pr-rollover',get_stylesheet_directory_uri().'/js/jquery.opacityrollover.js');
-//    wp_register_script('pr_colorbox',get_stylesheet_directory_uri().'/js/jquery.colorbox.js');
-//    wp_register_script('pr_jcarousel_js',get_stylesheet_directory_uri().'/js/jquery.jcarousel.min.js'); 
-//    //wp_register_script('google-map-api','https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'); 
+//    wp_register_script('pr_slider',get_stylesheet_directory_uri().'/js/jquery.cycle.all.min.js'); 
 //
 //    /*   REGISTER ALL CSS FOR SITE */
 //    wp_register_style('pr_woocommerce',get_stylesheet_directory_uri().'/css/_woocommerce.css');
-//    wp_register_style('pr_mobile',get_stylesheet_directory_uri().'/css/mobile.css');
-//    wp_register_style('pr_sec_teal_grey',get_stylesheet_directory_uri().'/css/secondary-teal-grey.css');
-//    wp_register_style('pr_site_options',get_stylesheet_directory_uri().'/css/site-options.css');
-//    wp_register_style('pr_teal_grey',get_stylesheet_directory_uri().'/css/teal-grey.css');
-//    wp_register_style('validation_css',get_stylesheet_directory_uri().'/css/validationEngine.jquery.css');
-//    wp_register_style('galleriffic_css',get_stylesheet_directory_uri().'/css/galleriffic.css');
-//    wp_register_style('pr_colorbox_style',get_stylesheet_directory_uri().'/css/colorbox.css');
+//    wp_register_style('pr_mobile',get_stylesheet_directory_uri().'/css/mobile.css'); 
 // 
 
         global $wp_bs_theme_simple_version;
@@ -486,7 +450,7 @@ if (!function_exists('wp_bs_theme_simple_styles')) :
         $currentThemeMod = $currentThemeMod === 'default' ? '' : '-' . $currentThemeMod;
         $styleSheetToLoad = get_template_directory_uri() . '/css/wp-bs-theme-simple' . $currentThemeMod . '.css';
         if (!file_exists(get_template_directory() . '/css/wp-bs-theme-simple' . $currentThemeMod . '.css')) {
-            // not available, load the defsault one instead
+            // not available, load the default one instead
             $styleSheetToLoad = get_template_directory_uri() . '/css/wp-bs-theme-simple.css';
         }
 
@@ -553,8 +517,6 @@ function wp_bs_theme_simple_body_classes($classes) {
 
 add_filter('body_class', 'wp_bs_theme_simple_body_classes');
 
-
-
 /**
  * Workaround for the Bootstrap-Wordpress-tag-bug
  *
@@ -566,14 +528,15 @@ add_filter('body_class', 'wp_bs_theme_simple_body_classes');
  * @param mixed $classes
  * @return mixed
  */
-add_filter('body_class', 'bs4_remove_tag_body_class');
-
 function bs4_remove_tag_body_class($classes) {
     if (false !== ( $class = array_search('tag', $classes) )) {
         unset($classes[$class]);
     }
     return $classes;
 }
+
+add_filter('body_class', 'bs4_remove_tag_body_class');
+
 
 //add_filter( 'body_class', '_twbs_bootstrap_20542', 10, 1 );
 //add_filter( 'post_class', '_twbs_bootstrap_20542', 10, 1 );
@@ -591,56 +554,67 @@ function bs4_remove_tag_body_class($classes) {
 //    ) );
 //}
 
-/**
- * same treatment like fields in bootstrap4_comment_form_fields
- * 
- * @param type $args
- * @return string
- */
-function bootstrap4_comment_form($args) {
-    $args['comment_field'] = '<div class="form-group comment-form-comment">
+
+
+
+if (!function_exists('bootstrap4_comment_form')) :
+
+    /**
+     * same treatment like fields in bootstrap4_comment_form_fields
+     * 
+     * @param type $args
+     * @return string
+     */
+    function bootstrap4_comment_form($args) {
+        $args['comment_field'] = '<div class="form-group comment-form-comment">
             <label for="comment">' . _x('Comment', 'noun') . '</label> 
             <textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
         </div>';
-    $args['class_submit'] = 'btn btn-secondary'; // since WP 4.1 
+        $args['class_submit'] = 'btn btn-secondary'; // since WP 4.1 
 
-    return $args;
-}
+        return $args;
+    }
 
+endif;
 add_filter('comment_form_defaults', 'bootstrap4_comment_form');
 
-/**
- * customize comment form
- * 
- * these fields are not shown, when you're logged in
- * 
- * @see http://www.codecheese.com/2013/11/wordpress-comment-form-with-twitter-bootstrap-3-supports/
- * 
- * @param array $fields
- * @return string
- */
-function bootstrap4_comment_form_fields($fields) {
-    $commenter = wp_get_current_commenter();
 
-    $req = get_option('require_name_email');
-    $aria_req = ( $req ? " aria-required='true'" : '' );
-    $html5 = current_theme_supports('html5', 'comment-form') ? 1 : 0;
 
-    $fields = array(
-        'author' => '<div class="form-group comment-form-author">' . '<label for="author">' . __('Name') . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-        '<input class="form-control" id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' /></div>',
-        'email' => '<div class="form-group comment-form-email"><label for="email">' . __('Email') . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-        '<input class="form-control" id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr($commenter['comment_author_email']) . '" size="30"' . $aria_req . ' /></div>',
-        'url' => '<div class="form-group comment-form-url"><label for="url">' . __('Website') . '</label> ' .
-        '<input class="form-control" id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr($commenter['comment_author_url']) . '" size="30" /></div>'
-    );
 
-    return $fields;
-}
 
+if (!function_exists('bootstrap4_comment_form_fields')) :
+
+    /**
+     * customize comment form
+     * 
+     * these fields are not shown, when you're logged in
+     * 
+     * @see http://www.codecheese.com/2013/11/wordpress-comment-form-with-twitter-bootstrap-3-supports/
+     * 
+     * @param array $fields
+     * @return string
+     */
+    function bootstrap4_comment_form_fields($fields) {
+        $commenter = wp_get_current_commenter();
+
+        $req = get_option('require_name_email');
+        $aria_req = ( $req ? " aria-required='true'" : '' );
+        $html5 = current_theme_supports('html5', 'comment-form') ? 1 : 0;
+
+        $fields = array(
+            'author' => '<div class="form-group comment-form-author">' . '<label for="author">' . __('Name') . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+            '<input class="form-control" id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' /></div>',
+            'email' => '<div class="form-group comment-form-email"><label for="email">' . __('Email') . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+            '<input class="form-control" id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr($commenter['comment_author_email']) . '" size="30"' . $aria_req . ' /></div>',
+            'url' => '<div class="form-group comment-form-url"><label for="url">' . __('Website') . '</label> ' .
+            '<input class="form-control" id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr($commenter['comment_author_url']) . '" size="30" /></div>'
+        );
+
+        return $fields;
+    }
+
+endif;
 add_filter('comment_form_default_fields', 'bootstrap4_comment_form_fields');
-
-
 
 /**
  * Converts a HEX value to RGB. 
@@ -669,11 +643,24 @@ function wp_bs_theme_simple_hex2rgb($color) {
     return array('red' => $r, 'green' => $g, 'blue' => $b);
 }
 
+if (!function_exists('wp_bs_theme_simple_embed_oembed_html')) :
 
+    /**
+     * make videos responsive
+     * 
+     * @param type $html
+     * @param type $url
+     * @param type $attr
+     * @param type $post_id
+     * 
+     * @return string html
+     */
+    function wp_bs_theme_simple_embed_oembed_html($html, $url, $attr, $post_id) {
+        return '<div class="video-container">' . $html . '</div>';
+    }
 
-//============================================================================================================
-
-
+endif;
+add_filter('embed_oembed_html', 'wp_bs_theme_simple_embed_oembed_html', 99, 4);
 
 
 /**
