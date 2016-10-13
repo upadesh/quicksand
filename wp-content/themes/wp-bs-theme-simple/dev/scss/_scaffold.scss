@@ -45,8 +45,7 @@
 
 
 
-.site-footer-widgetbar { 
-    @extend .m-b-1;  
+.site-footer-widgetbar {  
     .widget {
         @extend .text-md-left; 
         @extend .text-xs-center; 
