@@ -24,7 +24,7 @@
     </head>
     <body <?php body_class(); ?>>  
         <!-- site-main-container --> 
-        <div class="<?php echo get_theme_mod('wp_bs_theme_simple_nav_fullwidth') ? '' : 'container'; ?>  site-nav-container">
+        <div class="<?php echo esc_attr( get_theme_mod('wp_bs_theme_simple_nav_fullwidth') ? '' : 'container');  ?>  site-nav-container">
             <!-- site-navigation -->
             <?php get_template_part('template-parts/navigation', 'primary'); ?>  
         </div>
@@ -32,36 +32,24 @@
         <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', 'wp_bs_theme_simple'); ?></a>
 
         <!-- site-header >-->
-        <header id="masthead" class="site-header <?php echo get_theme_mod('wp_bs_theme_simple_header_fullwidth') ? '' : 'container'; ?>"> 
+        <header id="masthead" class="site-header <?php echo  esc_attr( get_theme_mod('wp_bs_theme_simple_header_fullwidth') ? '' : 'container'); ?>"> 
 
             <!-- site-info -->
             <?php if (has_header_image()) { ?>
-                <?php
-                /**
-                 * Filter the default wp_bs_theme_simple custom header sizes attribute.
-                 *
-                 * @since WP-bs-theme-simple 0.0.1
-                 *
-                 * @param string $custom_header_sizes sizes attribute
-                 * for Custom Header. Default '(max-width: 709px) 85vw,
-                 * (max-width: 909px) 81vw, (max-width: 1362px) 88vw, 1200px'.
-                 */
-                $custom_header_sizes = apply_filters('wp_bs_theme_simple_custom_header_sizes', '(max-width: 709px) 85vw, (max-width: 909px) 81vw, (max-width: 1362px) 88vw, 1200px');
-                ?>
                 <div class="site-info custom-header-image" style="background: url(<?php header_image(); ?>); background-repeat: no-repeat; background-size: cover; height:<?php echo esc_attr(get_custom_header()->height); ?>px;">  
                     <div  class="site-info-wrapper">
-                        <h1 class="display-3 site-title"><?php bloginfo('name'); ?></h1> 
+                        <h1 class="display-3 site-title"><?php esc_html( bloginfo('name') ); ?></h1> 
                         <br>
-                        <p class="lead site-description" ><?php bloginfo('description', 'display'); ?></p> 
+                        <p class="lead site-description" ><?php esc_html( bloginfo('description', 'display') ); ?></p> 
                     </div>
                 </div>
 
             <?php } else { ?> 
                 <div class="site-info">  
                     <div  class="site-info-wrapper jumbotron"> 
-                        <h1 class="display-3 site-title"><?php bloginfo('name'); ?></h1>
+                        <h1 class="display-3 site-title"><?php esc_html( bloginfo('name') ); ?></h1>
                         <hr class="m-y-2">
-                        <p class="lead site-description"><?php bloginfo('description', 'display'); ?></p> 
+                        <p class="lead site-description"><?php esc_html( bloginfo('description', 'display') ); ?></p> 
                     </div>
                 </div>
 

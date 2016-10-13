@@ -68,6 +68,11 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
     $colorSchemeDefault = wp_bs_theme_simple_get_color_schemes()['default']['colors'];
     $colors = array();
     $colors[] = array(
+        'slug' => 'wbts_header_background_color',
+        'default' => $colorSchemeDefault[8],
+        'label' => __('Header Background Color', 'wp-bs-theme-simple')
+    );
+    $colors[] = array(
         'slug' => 'wbts_background_content_color',
         'default' => $colorSchemeDefault[1],
         'label' => __('Content Background Color', 'wp-bs-theme-simple')
@@ -86,8 +91,7 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         'slug' => 'wbts_secondary_text_color',
         'default' => $colorSchemeDefault[4],
         'label' => __('Secondary Text Color', 'wp-bs-theme-simple')
-    );
-
+    ); 
     $colors[] = array(
         'slug' => 'wbts_nav_background_color',
         'default' => $colorSchemeDefault[6],
@@ -97,11 +101,6 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         'slug' => 'wbts_nav_link_color',
         'default' => $colorSchemeDefault[7],
         'label' => __('Navbar Link Color', 'wp-bs-theme-simple')
-    );
-    $colors[] = array(
-        'slug' => 'wbts_header_background_color',
-        'default' => $colorSchemeDefault[8],
-        'label' => __('Header Background Color', 'wp-bs-theme-simple')
     );
     $colors[] = array(
         'slug' => 'wbts_footer_background_color',
@@ -285,9 +284,10 @@ function wp_bs_theme_simple_social_media_icons() {
  * 3. Link Color                    - wbts_link_color
  * 4. Main Text Color.              - wbts_main_text_color
  * 5. Secondary Text Color          - wbts_secondary_text_color
- * 6. Header Text Color               - header_textcolor
+ * 6. Header Text Color             - header_textcolor
  * 7. Navigation Background Color   - wbts_nav_background_color
  * 8. Navigation Link Color         - wbts_nav_link_color
+ * 6. Header Background Color       - header_textcolor
  * 9. Footer Background Color       - wbts_footer_background_color
  * 10. Footer Link Color            - wbts_footer_link_color
  * 11. Footer Text Color            - wbts_footer_text_color
@@ -300,7 +300,7 @@ function wp_bs_theme_simple_get_color_schemes() {
     /**
      * Filter the color schemes registered for use with WP-bs-theme-simple.
      *
-     * The default schemes include 'default', 'dark', 'gray', 'red', and 'yellow'.
+     * The default schemes include 'default', 'quicksand' 
      * Adjust your CSS-below
      *
      * @since WP-bs-theme-simple 0.0.1
@@ -322,32 +322,32 @@ function wp_bs_theme_simple_get_color_schemes() {
         'default' => array(
             'label' => __('Default', 'wp-bs-theme-simple'),
             'colors' => array(
-                '#ffffff',
+                '#ffffff', 
                 '#ffffff',
                 '#cecece',
                 '#686868',
                 '#2cb5b1',
                 '#ffffff',
-                '#cecece',
+                '#2cb5b1',
                 '#ffffff',
-                '#e55050',
+                '#2cb5b1',
                 '#4f4f4f',
                 '#2cb5b1',
                 '#d1d1d1',
             ),
         ),
-        'red' => array(
-            'label' => __('Red', 'wp-bs-theme-simple'),
+        'quicksand' => array(
+            'label' => __('Quicksand', 'wp-bs-theme-simple'),
             'colors' => array(
-                '#dd3333',
-                '#c62d2d',
-                '#c1c1c1',
-                '#e0e0e0',
-                '#a3a3a3',
-                '#e0e0e0',
-                '#f23737',
-                '#c1c1c1',
-                '#123123',
+                '#dd9933',
+                '#eda12f',
+                '#f2d976',
+                '#d37130',
+                '#84401e',
+                '#8e1d1d',
+                '#eda12f',
+                '#84401e',
+                '#dd9933',
                 '#4f4f4f',
                 '#2cb5b1',
                 '#d1d1d1',
