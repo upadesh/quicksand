@@ -266,7 +266,7 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
             .site-main-container  h4>a,
             .site-main-container  h5>a,
             .site-main-container  h6>a { 
-                color: <?php echo get_theme_mod('wbts_secondary_text_color', $colorScheme[4]); ?> !important;
+                color: <?php echo get_theme_mod('wbts_secondary_text_color', $colorScheme[4]); ?>;
             }
 
             /*footer*/ 
