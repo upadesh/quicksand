@@ -79,6 +79,12 @@
                     api.control('wbts_footer_link_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
+                    
+                    color = colors[11];
+                    api('wbts_footer_text_color').set(color);
+                    api.control('wbts_footer_text_color').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color);
  
                 });
             }

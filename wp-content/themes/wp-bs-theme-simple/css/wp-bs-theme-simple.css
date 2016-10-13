@@ -240,8 +240,11 @@ $brand-inverse:             $gray-dark !default; */
       float: none;
       display: inline-block; } }
 
-.site-footer-widgetbar .widget-area ul, .site-footer-widgetbar .widget-area ol {
-  padding-left: 0; }
+.site-footer-widgetbar {
+  padding: 16px;
+  padding: 1rem; }
+  .site-footer-widgetbar .widget-area ul, .site-footer-widgetbar .widget-area ol {
+    padding-left: 0; }
 
 /* import bootstrap at the very last end, so we can use it's variables */
 /*!
@@ -4590,7 +4593,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-right: 16px !important;
   margin-right: 1rem !important; }
 
-.m-b-1, .comments-area .comment-metadata, .site-content .post-meta-data, .site-content .post-thumbnail img, .site-footer-widgetbar {
+.m-b-1, .comments-area .comment-metadata, .site-content .post-meta-data, .site-content .post-thumbnail img {
   margin-bottom: 16px !important;
   margin-bottom: 1rem !important; }
 

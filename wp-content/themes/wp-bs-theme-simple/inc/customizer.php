@@ -113,6 +113,11 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         'default' => $colorSchemeDefault[10],
         'label' => __('Footer Link Color', 'wp-bs-theme-simple')
     );
+    $colors[] = array(
+        'slug' => 'wbts_footer_text_color',
+        'default' => $colorSchemeDefault[11],
+        'label' => __('Footer Text Color', 'wp-bs-theme-simple')
+    );
 
     foreach ($colors as $color) {
         $wp_customize->add_setting(
@@ -285,6 +290,7 @@ function wp_bs_theme_simple_social_media_icons() {
  * 8. Navigation Link Color         - wbts_nav_link_color
  * 9. Footer Background Color       - wbts_footer_background_color
  * 10. Footer Link Color            - wbts_footer_link_color
+ * 10. Footer Text Color            - wbts_footer_text_color
  *
  * @since WP-bs-theme-simple 0.0.1
  *
@@ -327,6 +333,7 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#e55050',
                 '#ffffff',
                 '#2cb5b1',
+                '#686868',
             ),
         ),
         'red' => array(
@@ -343,6 +350,7 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#123123',
                 '#ffffff',
                 '#818a91',
+                '#686868',
             ),
         ),
         'green' => array(
@@ -359,39 +367,8 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#333333',
                 '#ffffff',
                 '#000000',
-            ),
-        ),
-        'dark' => array(
-            'label' => __('Dark', 'wp-bs-theme-simple'),
-            'colors' => array(
-                '#321123',
-                '#ffffff',
-                '#cecece',
                 '#686868',
-                '#123123',
-                '#ffffff',
-                '#cecece',
-                '#ffffff',
-                '#333333',
-                '#ffffff',
-                '#000000',
-            ),
-        ),
-        'gray' => array(
-            'label' => __('Gray', 'wp-bs-theme-simple'),
-            'colors' => array(
-                '#322311',
-                '#ffffff',
-                '#cecece',
-                '#686868',
-                '#123123',
-                '#ffffff',
-                '#cecece',
-                '#ffffff',
-                '#333333',
-                '#ffffff',
-                '#000000',
-            ),
+            ), 
         )
     ));
 }

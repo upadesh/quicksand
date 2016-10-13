@@ -270,11 +270,13 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
             }
 
             /*footer*/ 
+            .site-footer-widgetbar,
             .site-footer .row { 
                 background: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>; 
             } 
 
             /*footer-menu*/
+            .site-footer-widgetbar a,
             .site-footer .nav-wrapper a {  
                 color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
                 padding: 0 .6rem;
@@ -292,11 +294,6 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
                 /*opacity*/
                 opacity:0.5;
             }
-
-            /*a:link, a:visited, a:hover, a:active*/ 
-
-
-
         </style>
         <?php
     }
