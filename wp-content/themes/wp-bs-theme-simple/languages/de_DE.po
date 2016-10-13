@@ -2,331 +2,492 @@
 # This file is distributed under the same license as the Twenty Sixteen package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-09-26 17:09+0200\n"
+"Project-Id-Version: WP-bs-theme-simple\n"
+"POT-Creation-Date: 2016-10-14 00:00+0200\n"
+"PO-Revision-Date: 2016-10-14 00:11+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 1.8.8\n"
-"Project-Id-Version: Twenty Sixteen\n"
-"POT-Creation-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: de_DE\n"
-
-#. Description of the plugin/theme
-msgid "Twenty Sixteen is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere."
-msgstr "WP-bs-theme-simple ist die moderne Interpretation eines allzeit beliebten WordPress-Layouts – einer horizontalen Kopfzeile mit einer optionalen rechten Sidebar die gleichermaßen bei Blogs wie klassischen Websites perfekt funktioniert. Das Theme bietet Einstellungsmöglichkeiten für individuelle​ Farben mit schönen Standard-Farbvorlagen​, ein harmonisches, flexibles​ Raster mit einem Mobile-First-Ansatz und einem makellosen Schliff in jedem Detail. WP-bs-theme-simple sorgt für einen tollen Look ​bei​ all Ihren WordPress-Websites."
-
-#. Theme Name of the plugin/theme
-msgid "Twenty Sixteen"
-msgstr "WP-bs-theme-simple"
-
-#. translators: %s: Name of current post
-#: image.php:84 template-parts/content-page.php:37
-#: template-parts/content-search.php:28 template-parts/content-search.php:43
-#: template-parts/content-single.php:45 template-parts/content.php:49
-msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "<span class=\"screen-reader-text\">&#8222;%s&#8220;</span> bearbeiten"
-
-#. translators: %s: Name of current post
-#: inc/template-tags.php:184 template-parts/content.php:28
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "<span class=\"screen-reader-text\">&#8222;%s&#8220; </span>weiterlesen"
-
-#: inc/customizer.php:283
-msgid "Red"
-msgstr "Rot"
-
-#. translators: %s: post title
-#: comments.php:31
-msgctxt "comments title"
-msgid "One thought on &ldquo;%s&rdquo;"
-msgstr "Ein Gedanke zu &#8222;%s&#8220;"
-
-#: searchform.php:16
-msgctxt "submit button"
-msgid "Search"
-msgstr "Suche"
-
-#: searchform.php:14
-msgctxt "placeholder"
-msgid "Search &hellip;"
-msgstr "Suche&#160;&hellip;"
-
-#: searchform.php:13
-msgctxt "label"
-msgid "Search for:"
-msgstr "Suche nach:"
-
-#: footer.php:17
-msgid "Footer Primary Menu"
-msgstr "Footer-Hauptmenü"
-
-#: footer.php:28
-msgid "Footer Social Links Menu"
-msgstr "Footer-Social-Links-Menü"
-
-#: functions.php:158
-msgid "Add widgets here to appear in your sidebar."
-msgstr "Widgets hier hinzufügen, um sie in die Seitenleiste einzubauen."
-
-#: template-parts/content.php:14
-msgid "Featured"
-msgstr "Empfohlen"
-
-#: template-parts/content-none.php:28
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
-msgstr "Es sieht so aus, als ob wir nicht das finden könnten, wonach Sie gesucht haben. Möglicherweise hilft eine Suche."
-
-#: template-parts/content-none.php:23
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
-msgstr "Es gibt keine passenden Suchergebnisse. Bitte versuchen Sie es mit anderen Suchbegriffen."
-
-#: template-parts/content-none.php:19
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Bereit, um Ihren ersten Beitrag zu veröffentlichen? <a href=\"%1$s\">Starten Sie hier </a>."
-
-#: template-parts/content-none.php:13
-msgid "Nothing Found"
-msgstr "Nichts gefunden"
-
-#: template-parts/biography.php:33
-msgid "View all posts by %s"
-msgstr "Zeige alle Beiträge von %s"
-
-#: template-parts/biography.php:28
-msgid "Author:"
-msgstr "Autor:"
-
-#: single.php:38
-msgid "Previous post:"
-msgstr "Vorheriger Beitrag:"
-
-#: single.php:35
-msgid "Next post:"
-msgstr "Nächster Beitrag:"
-
-#: single.php:37
-msgid "Previous"
-msgstr "Zurück"
-
-#: single.php:34
-msgid "Next"
-msgstr "Weiter"
-
-#: search.php:18
-msgid "Search Results for: %s"
-msgstr "Suchergebnisse für: %s"
-
-#: inc/template-tags.php:106
-msgctxt "Used before tag names."
-msgid "Tags"
-msgstr "Tags"
-
-#: inc/template-tags.php:98
-msgctxt "Used before category names."
-msgid "Categories"
-msgstr "Kategorien"
-
-#: inc/template-tags.php:95 inc/template-tags.php:103
-msgctxt "Used between list items, there is a space after the comma."
-msgid ", "
-msgstr ", "
-
-#: inc/template-tags.php:79
-msgctxt "Used before publish date."
-msgid "Posted on"
-msgstr "Veröffentlicht am"
-
-#: inc/template-tags.php:50
-msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr "Schreiben Sie einen Kommentar<span class=\"screen-reader-text\"> zu %s</span> "
-
-#: inc/template-tags.php:38
-msgctxt "Used before post format."
-msgid "Format"
-msgstr "Format"
-
-#: inc/template-tags.php:25
-msgctxt "Used before post author name."
-msgid "Author"
-msgstr "Autor"
-
-#: inc/customizer.php:293
-msgid "Yellow"
-msgstr "Gelb"
-
-#: inc/customizer.php:273
-msgid "Gray"
-msgstr "Grau"
-
-#: inc/customizer.php:263
-msgid "Dark"
-msgstr "Dunkel"
-
-#: inc/customizer.php:184
-msgid "Secondary Text Color"
-msgstr "Zweite Textfarbe"
-
-#: inc/customizer.php:253
-msgid "Default"
-msgstr "Standard"
-
-#: inc/customizer.php:172
-msgid "Main Text Color"
-msgstr "Textfarbe"
-
-#: inc/customizer.php:145
-msgid "Page Background Color"
-msgstr "Hintergrundfarbe"
-
-#: inc/customizer.php:160
-msgid "Link Color"
-msgstr "Linkfarbe"
-
-#: inc/customizer.php:130
-msgid "Base Color Scheme"
-msgstr "Basis-Farbvorlage"
-
-#: inc/back-compat.php:41 inc/back-compat.php:53 inc/back-compat.php:68
-msgid "Twenty Sixteen requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again."
-msgstr "WP-bs-theme-simple benötigt mindestens WordPress-Version 4.4. Sie verwenden Version %s. Bitte aktualisieren Sie WordPress und versuchen Sie es erneut."
-
-#: image.php:102 single.php:29
-msgctxt "Parent post link"
-msgid "<span class=\"meta-nav\">Published in</span><span class=\"post-title\">%title</span>"
-msgstr "<span class=\"meta-nav\">Veröffentlicht in</span><span class=\"post-title\">%title</span>"
-
-#: image.php:73
-msgctxt "Used before full size attachment link."
-msgid "Full size"
-msgstr "Volle Größe"
-
-#: image.php:56 template-parts/content-page.php:23
-#: template-parts/content-single.php:25 template-parts/content.php:33
-msgid "Pages:"
-msgstr "Seiten:"
-
-#: image.php:25
-msgid "Next Image"
-msgstr "Nächstes Bild"
-
-#: image.php:24
-msgid "Previous Image"
-msgstr "Vorheriges Bild"
-
-#: header.php:47
-msgid "Menu"
-msgstr "Menü"
-
-#: header.php:27
-msgid "Skip to content"
-msgstr "Zum Inhalt springen"
-
-#: functions.php:285
-msgid "collapse child menu"
-msgstr "Untermenü verbergen"
-
-#: functions.php:284
-msgid "expand child menu"
-msgstr "Untermenü anzeigen"
-
-#. translators: If there are characters in your language that are not supported
-#. by Montserrat, translate this to 'off'. Do not translate into your own
-#. language.
-#: functions.php:208
-msgctxt "Montserrat font: on or off"
-msgid "on"
-msgstr "on"
-
-#. translators: If there are characters in your language that are not supported
-#. by Merriweather, translate this to 'off'. Do not translate into your own
-#. language.
-#: functions.php:203
-msgctxt "Merriweather font: on or off"
-msgid "on"
-msgstr "on"
-
-#: functions.php:176
-msgid "Content Bottom 2"
-msgstr "Unterhalb des Inhalts 2"
-
-#: functions.php:168 functions.php:178
-msgid "Appears at the bottom of the content on posts and pages."
-msgstr "Erscheint unterhalb des Inhalts von Beiträgen und Seiten."
-
-#: functions.php:166
-msgid "Content Bottom 1"
-msgstr "Unterhalb des Inhalts 1"
-
-#. translators: If there are characters in your language that are not supported
-#. by Inconsolata, translate this to 'off'. Do not translate into your own
-#. language.
-#: functions.php:213
-msgctxt "Inconsolata font: on or off"
-msgid "on"
-msgstr "on"
-
-#: functions.php:156
-msgid "Sidebar"
-msgstr "Seitenleiste"
-
-#: functions.php:89 header.php:62
-msgid "Social Links Menu"
-msgstr "Social-Links-Menü"
-
-#: functions.php:88 header.php:51
-msgid "Primary Menu"
-msgstr "Primäres Menü"
-
-#: footer.php:51
-msgid "Proudly powered by %s"
-msgstr "Stolz präsentiert von %s"
-
-#: comments.php:69
-msgid "Comments are closed."
-msgstr "Kommentare sind geschlossen."
-
-#. translators: 1: number of comments, 2: post title
-#: comments.php:35
-msgctxt "comments title"
-msgid "%1$s thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "%1$s Gedanke zu &#8222;%2$s&#8220;"
-msgstr[1] "%1$s Gedanken zu &#8222;%2$s&#8220;"
-
-#: archive.php:51 image.php:60 index.php:48 search.php:39
-#: template-parts/content-page.php:27 template-parts/content-single.php:29
-#: template-parts/content.php:37
-msgid "Page"
-msgstr "Seite"
-
-#: archive.php:50 index.php:47 search.php:38
-msgid "Next page"
-msgstr "Nächste Seite"
-
-#: archive.php:49 index.php:46 search.php:37
-msgid "Previous page"
-msgstr "Vorherige Seite"
+"X-Poedit-KeywordsList: __;_e;__ngettext;_n;__ngettext_noop;_n_noop;_x;_nx;"
+"_nx_noop;_ex;esc_attr__;esc_attr_e;esc_attr_x;esc_html__;esc_html_e;"
+"esc_html_x\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: css\n"
+"X-Poedit-SearchPathExcluded-2: dev\n"
+"X-Poedit-SearchPathExcluded-3: fonts\n"
+"X-Poedit-SearchPathExcluded-4: img\n"
+"X-Poedit-SearchPathExcluded-5: js\n"
+"X-Poedit-SearchPathExcluded-6: languages\n"
 
 #: 404.php:21
-msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr "Wie es aussieht, wurde an dieser Stelle nichts gefunden. Möchten Sie eine Suche starten?"
-
-#: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Diese Seite konnte leider nicht gefunden werden."
 
-#. Author of the plugin/theme
-msgid "the WordPress team"
-msgstr "dem WordPress Team"
+#: 404.php:26
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Wie es aussieht, wurde an dieser Stelle nichts gefunden. Möchten Sie eine "
+"Suche starten?"
 
-#. Theme URI of the plugin/theme
-msgid "https://wordpress.org/themes/twentysixteen/"
-msgstr "https://wordpress.org/themes/twentysixteen/"
+#: archive.php:58 index.php:57 search.php:47 template-parts/content-link.php:43
+#: template-parts/content-page-full.php:30 template-parts/content-page.php:30
+#: template-parts/content-single-link.php:25
+#: template-parts/content-single.php:70 template-parts/content.php:41
+msgid "Page"
+msgstr "Seite"
 
-#. Author URI of the plugin/theme
-#: footer.php:51
-msgid "https://wordpress.org/"
-msgstr "https://wordpress.org/"
+#: comments.php:31
+#, php-format
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr "Ein Gedanke zu &ldquo;%s&rdquo;"
+
+#: comments.php:36
+#, php-format
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgstr "%1$s meinte zu &ldquo;%2$s&rdquo;"
+
+#: comments.php:55
+msgid "Older Comments"
+msgstr "Ältere Kommentare"
+
+#: comments.php:56
+msgid "Newer Comments"
+msgstr "Neuere Kommentare"
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr "Kommentare sind geschlossen."
+
+#: functions.php:98
+msgid "Primary Menu"
+msgstr "Primäres Menü"
+
+#: functions.php:99
+msgid "Secondary Menu"
+msgstr "Sekundäres Menu"
+
+#: functions.php:315
+msgid "Sidebar"
+msgstr "Seitenleiste"
+
+#: functions.php:317
+msgid "Add widgets here to appear in your sidebar."
+msgstr "Widgets hier hinzufügen, um sie in die Seitenleiste einzubauen."
+
+#: functions.php:325
+msgid "Sidebar-Footer"
+msgstr "Seitenleiste-Footer"
+
+#: functions.php:327
+msgid "Appears at the bottom of the content on posts and pages."
+msgstr "Erscheint unterhalb des Inhalts von Beiträgen und Seiten."
+
+#: functions.php:353 functions.php:357 functions.php:361 functions.php:365
+msgid "on"
+msgstr "am"
+
+#: functions.php:570
+msgid "Comment"
+msgstr "Kommentar"
+
+#: functions.php:605
+msgid "Name"
+msgstr "Name"
+
+#: functions.php:607
+msgid "Email"
+msgstr "Email"
+
+#: functions.php:609
+msgid "Website"
+msgstr "Webseite"
+
+#: header.php:32
+msgid "Skip to content"
+msgstr "Zum Inhalt springen"
+
+#: image.php:57
+msgid "Previous Image"
+msgstr "Vorheriges Bild"
+
+#: image.php:58
+msgid "Next Image"
+msgstr "Nächstes Bild"
+
+#: image.php:69
+msgid "Full size"
+msgstr "Volle Größe"
+
+#: image.php:77 template-parts/content-link.php:57
+#: template-parts/content-page-full.php:40 template-parts/content-page.php:40
+#: template-parts/content-single.php:91 template-parts/content.php:55
+#, php-format
+msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "<span class=\"screen-reader-text\">&#8222;%s&#8220;</span> bearbeiten"
+
+#: image.php:92 single.php:44
+msgid ""
+"<span class=\"meta-nav\">Published in </span><span class=\"post-title\">"
+"%title</span>"
+msgstr ""
+"<span class=\"meta-nav\">Veröffentlicht in</span><span class=\"post-title\">"
+"%title</span>"
+
+#: inc/back-compat.php:44 inc/back-compat.php:57 inc/back-compat.php:75
+#, php-format
+msgid ""
+"WP-bs-theme-simple requires at least WordPress version %s. You are running "
+"version %s. Please upgrade and try again."
+msgstr ""
+"WP-bs-theme-simple benötigt mindestens die WordPress Version %s. Sie haben "
+"die Version %s. Bitte updaten und nochmals versuchen. "
+
+#: inc/customizer.php:61
+msgid "Base Color Scheme"
+msgstr "Basis-Farbvorlage"
+
+#: inc/customizer.php:73
+msgid "Header Background Color"
+msgstr "Header Hintergrundfarbe"
+
+#: inc/customizer.php:78
+msgid "Content Background Color"
+msgstr "Inhalt Hintergrundfarbe"
+
+#: inc/customizer.php:83
+msgid "Content Link Color"
+msgstr "Inhalt Linkfarbe"
+
+#: inc/customizer.php:88
+msgid "Content Text Color"
+msgstr "Inhalt Textfarbe"
+
+#: inc/customizer.php:93
+msgid "Secondary Text Color"
+msgstr "Zweite Textfarbe"
+
+#: inc/customizer.php:98
+msgid "Navbar Background Color"
+msgstr "Navbar Hintergrundfarbe"
+
+#: inc/customizer.php:103
+msgid "Navbar Link Color"
+msgstr "Navbar Linkfarbe"
+
+#: inc/customizer.php:108
+msgid "Footer Background Color"
+msgstr "Footer Hintergrundfarbe"
+
+#: inc/customizer.php:113
+msgid "Footer Link Color"
+msgstr "Footer Linkfarbe"
+
+#: inc/customizer.php:118
+msgid "Footer Text Color"
+msgstr "Footer Textfarbe"
+
+#: inc/customizer.php:142
+msgid "Theme Options"
+msgstr "Theme Einstellungen"
+
+#: inc/customizer.php:153
+msgid "Navigation Fullwidth:"
+msgstr "Navigation volle Breite"
+
+#: inc/customizer.php:167
+msgid "Header Fullwidth:"
+msgstr "Header volle Breite"
+
+#: inc/customizer.php:194
+msgid "Social Media Icons"
+msgstr "Social Media Icons"
+
+#: inc/customizer.php:256 inc/customizer.php:265
+#, php-format
+msgid "%s icon"
+msgstr "%s icon"
+
+#: inc/customizer.php:323
+msgid "Default"
+msgstr "Standard"
+
+#: inc/customizer.php:340
+msgid "Quicksand"
+msgstr "Quicksand"
+
+#: inc/template-tags.php:24
+msgid "Author"
+msgstr "Autor"
+
+#: inc/template-tags.php:34
+msgid "Format"
+msgstr "Format"
+
+#: inc/template-tags.php:43
+#, php-format
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+"Schreiben Sie einen Kommentar<span class=\"screen-reader-text\"> zu %s</span> "
+
+#: inc/template-tags.php:71
+msgid "Posted on"
+msgstr "Veröffentlicht am"
+
+#: inc/template-tags.php:87 inc/template-tags.php:93
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:89
+msgid "Categories"
+msgstr "Categories"
+
+#: inc/template-tags.php:95
+msgid "Tags"
+msgstr "Tags"
+
+#: inc/template-tags.php:192 template-parts/content-link.php:33
+#: template-parts/content.php:31
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "<span class=\"screen-reader-text\">&#8222;%s&#8220; </span>weiterlesen"
+
+#: search.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Suchergebnisse für: %s"
+
+#: searchform.php:15
+msgid "..."
+msgstr "…"
+
+#: searchform.php:18 searchform.php:19
+msgid "Search"
+msgstr "Suche"
+
+#: single.php:50
+msgid "Previous post:"
+msgstr "Vorheriger Beitrag:"
+
+#: single.php:52
+msgid "Next post:"
+msgstr "Nächster Beitrag:"
+
+#: template-parts/biography.php:30
+msgid "Author:"
+msgstr "Autor:"
+
+#: template-parts/biography.php:37
+#, php-format
+msgid "View all posts by %s"
+msgstr "Zeige alle Beiträge von %s"
+
+#: template-parts/content-link.php:7 template-parts/content.php:8
+msgid "Featured"
+msgstr "Empfohlen"
+
+#: template-parts/content-link.php:39 template-parts/content-page-full.php:26
+#: template-parts/content-page.php:26 template-parts/content-single-link.php:21
+#: template-parts/content-single.php:66 template-parts/content.php:37
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: template-parts/content-none.php:16
+msgid "Nothing Found"
+msgstr "Nichts gefunden"
+
+#: template-parts/content-none.php:22
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Bereit, um Ihren ersten Beitrag zu veröffentlichen? <a href=\"%1$s\">Starten "
+"Sie hier </a>."
+
+#: template-parts/content-none.php:26
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Es gibt keine passenden Suchergebnisse. Bitte versuchen Sie es mit anderen "
+"Suchbegriffen."
+
+#: template-parts/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
+msgstr ""
+"Es sieht so aus, als ob wir nicht das finden könnten, wonach Sie gesucht "
+"haben. Möglicherweise hilft eine Suche."
+
+#~ msgid ""
+#~ "Twenty Sixteen is a modernized take on an ever-popular WordPress layout — "
+#~ "the horizontal masthead with an optional right sidebar that works "
+#~ "perfectly for blogs and websites. It has custom color options with "
+#~ "beautiful default color schemes, a harmonious fluid grid using a mobile-"
+#~ "first approach, and impeccable polish in every detail. Twenty Sixteen will "
+#~ "make your WordPress look beautiful everywhere."
+#~ msgstr ""
+#~ "WP-bs-theme-simple ist die moderne Interpretation eines allzeit beliebten "
+#~ "WordPress-Layouts – einer horizontalen Kopfzeile mit einer optionalen "
+#~ "rechten Sidebar die gleichermaßen bei Blogs wie klassischen Websites "
+#~ "perfekt funktioniert. Das Theme bietet Einstellungsmöglichkeiten für "
+#~ "individuelle​ Farben mit schönen Standard-Farbvorlagen​, ein harmonisches, "
+#~ "flexibles​ Raster mit einem Mobile-First-Ansatz und einem makellosen "
+#~ "Schliff in jedem Detail. WP-bs-theme-simple sorgt für einen tollen Look ​"
+#~ "bei​ all Ihren WordPress-Websites."
+
+#~ msgid "Twenty Sixteen"
+#~ msgstr "WP-bs-theme-simple"
+
+#~ msgid "Red"
+#~ msgstr "Rot"
+
+#~ msgctxt "comments title"
+#~ msgid "One thought on &ldquo;%s&rdquo;"
+#~ msgstr "Ein Gedanke zu &#8222;%s&#8220;"
+
+#~ msgctxt "submit button"
+#~ msgid "Search"
+#~ msgstr "Suche"
+
+#~ msgctxt "placeholder"
+#~ msgid "Search &hellip;"
+#~ msgstr "Suche&#160;&hellip;"
+
+#~ msgctxt "label"
+#~ msgid "Search for:"
+#~ msgstr "Suche nach:"
+
+#~ msgid "Footer Primary Menu"
+#~ msgstr "Footer-Hauptmenü"
+
+#~ msgid "Footer Social Links Menu"
+#~ msgstr "Footer-Social-Links-Menü"
+
+#~ msgid "Previous"
+#~ msgstr "Zurück"
+
+#~ msgid "Next"
+#~ msgstr "Weiter"
+
+#~ msgctxt "Used before tag names."
+#~ msgid "Tags"
+#~ msgstr "Tags"
+
+#~ msgctxt "Used before category names."
+#~ msgid "Categories"
+#~ msgstr "Kategorien"
+
+#~ msgctxt "Used between list items, there is a space after the comma."
+#~ msgid ", "
+#~ msgstr ", "
+
+#~ msgctxt "Used before publish date."
+#~ msgid "Posted on"
+#~ msgstr "Veröffentlicht am"
+
+#~ msgctxt "Used before post format."
+#~ msgid "Format"
+#~ msgstr "Format"
+
+#~ msgctxt "Used before post author name."
+#~ msgid "Author"
+#~ msgstr "Autor"
+
+#~ msgid "Yellow"
+#~ msgstr "Gelb"
+
+#~ msgid "Gray"
+#~ msgstr "Grau"
+
+#~ msgid "Dark"
+#~ msgstr "Dunkel"
+
+#~ msgid "Main Text Color"
+#~ msgstr "Textfarbe"
+
+#~ msgid "Page Background Color"
+#~ msgstr "Hintergrundfarbe"
+
+#~ msgid "Link Color"
+#~ msgstr "Linkfarbe"
+
+#~ msgid ""
+#~ "Twenty Sixteen requires at least WordPress version 4.4. You are running "
+#~ "version %s. Please upgrade and try again."
+#~ msgstr ""
+#~ "WP-bs-theme-simple benötigt mindestens WordPress-Version 4.4. Sie "
+#~ "verwenden Version %s. Bitte aktualisieren Sie WordPress und versuchen Sie "
+#~ "es erneut."
+
+#~ msgctxt "Parent post link"
+#~ msgid ""
+#~ "<span class=\"meta-nav\">Published in</span><span class=\"post-title\">"
+#~ "%title</span>"
+#~ msgstr ""
+#~ "<span class=\"meta-nav\">Veröffentlicht in</span><span class=\"post-title"
+#~ "\">%title</span>"
+
+#~ msgctxt "Used before full size attachment link."
+#~ msgid "Full size"
+#~ msgstr "Volle Größe"
+
+#~ msgid "Menu"
+#~ msgstr "Menü"
+
+#~ msgid "collapse child menu"
+#~ msgstr "Untermenü verbergen"
+
+#~ msgid "expand child menu"
+#~ msgstr "Untermenü anzeigen"
+
+#~ msgctxt "Montserrat font: on or off"
+#~ msgid "on"
+#~ msgstr "on"
+
+#~ msgctxt "Merriweather font: on or off"
+#~ msgid "on"
+#~ msgstr "on"
+
+#~ msgid "Content Bottom 2"
+#~ msgstr "Unterhalb des Inhalts 2"
+
+#~ msgid "Content Bottom 1"
+#~ msgstr "Unterhalb des Inhalts 1"
+
+#~ msgctxt "Inconsolata font: on or off"
+#~ msgid "on"
+#~ msgstr "on"
+
+#~ msgid "Social Links Menu"
+#~ msgstr "Social-Links-Menü"
+
+#~ msgid "Proudly powered by %s"
+#~ msgstr "Stolz präsentiert von %s"
+
+#~ msgctxt "comments title"
+#~ msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "%1$s Gedanke zu &#8222;%2$s&#8220;"
+#~ msgstr[1] "%1$s Gedanken zu &#8222;%2$s&#8220;"
+
+#~ msgid "Next page"
+#~ msgstr "Nächste Seite"
+
+#~ msgid "Previous page"
+#~ msgstr "Vorherige Seite"
+
+#~ msgid "the WordPress team"
+#~ msgstr "dem WordPress Team"
+
+#~ msgid "https://wordpress.org/themes/twentysixteen/"
+#~ msgstr "https://wordpress.org/themes/twentysixteen/"
+
+#~ msgid "https://wordpress.org/"
+#~ msgstr "https://wordpress.org/"

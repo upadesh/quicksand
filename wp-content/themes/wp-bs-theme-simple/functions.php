@@ -75,8 +75,8 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
          * Enable support for custom logo 
          */
         add_theme_support('custom-logo', array(
-            'height' => 50,
-            'width' => 50,
+            'height' => 240,
+            'width' => 720,
             'flex-height' => true,
         ));
 

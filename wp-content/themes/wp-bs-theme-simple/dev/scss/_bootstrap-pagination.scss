@@ -15,33 +15,6 @@
         text-align: center; 
         .nav-links {
             @extend .pagination;
-            
-            /* adjust all pagination-links */
-            display: table;
-            width: 100%;
-            .nav-previous {
-                @extend .text-xs-left; 
-                display: table-cell;
-                vertical-align: top; 
-                width: 50%;
-                a:before {
-                    font-family: FontAwesome; 
-                    padding-right: 3px;
-                    content: "\f0d9";
-                }
-            }
-            .nav-next {
-                @extend .text-xs-right; 
-                display: table-cell;
-                vertical-align: top; 
-                width: 50%;
-                a:after {
-                    font-family: FontAwesome; 
-                    padding-left: 3px;
-                    content: "\f0da";
-                }
-            }
-            
             /* bootstrap-style pagination*/
             .page-numbers {
                 @extend .page-link;
@@ -66,4 +39,32 @@
     }
 } 
 
- 
+
+
+/* adjust all pagination-links */
+.nav-links {
+    display: table;
+    width: 100%;
+    .nav-previous {
+        @extend .text-xs-left; 
+        display: table-cell;
+        vertical-align: top; 
+        width: 50%;
+        a:before {
+            font-family: FontAwesome; 
+            padding-right: 3px;
+            content: "\f0d9";
+        }
+    }
+    .nav-next {
+        @extend .text-xs-right; 
+        display: table-cell;
+        vertical-align: top; 
+        width: 50%;
+        a:after {
+            font-family: FontAwesome; 
+            padding-left: 3px;
+            content: "\f0da";
+        }
+    }
+}

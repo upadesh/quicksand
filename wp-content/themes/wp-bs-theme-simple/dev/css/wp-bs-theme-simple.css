@@ -27,17 +27,17 @@ $gray-lightest:             #81d742!default;
 /*normal navigation*/
 @media (min-width: 767px) {
   .site-navigation .navbar-nav li a {
-    line-height: 50px; }
+    line-height: 60px; }
   .site-navigation .navbar-brand .custom-logo-link {
-    line-height: 50px; }
+    line-height: 60px; }
   .site-navigation .navbar-brand .custom-logo {
-    max-height: 50px;
+    max-height: 60px;
     width: auto; }
   .site-navigation .navbar-nav li .dropdown-menu {
     /*align the dropdown*/
     margin: 7px 0 0; }
     .site-navigation .navbar-nav li .dropdown-menu .dropdown-item {
-      line-height: 25px; } }
+      line-height: 30px; } }
 
 /*mobile navigation*/
 @media (max-width: 767px) {
@@ -4856,10 +4856,10 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.text-xs-left, .bs-pagination .navigation.pagination .nav-links .nav-previous {
+.text-xs-left, .nav-links .nav-previous {
   text-align: left !important; }
 
-.text-xs-right, .bs-pagination .navigation.pagination .nav-links .nav-next {
+.text-xs-right, .nav-links .nav-next {
   text-align: right !important; }
 
 .text-xs-center, .site-content .site-sidebar section.widget, .site-footer-widgetbar .widget {
@@ -5037,26 +5037,7 @@ a.text-danger:focus, a.text-danger:hover {
     /*@include center-block;*/
     text-align: center; }
     .bs-pagination .navigation.pagination .nav-links {
-      /* adjust all pagination-links */
-      display: table;
-      width: 100%;
       /* bootstrap-style pagination*/ }
-      .bs-pagination .navigation.pagination .nav-links .nav-previous {
-        display: table-cell;
-        vertical-align: top;
-        width: 50%; }
-        .bs-pagination .navigation.pagination .nav-links .nav-previous a:before {
-          font-family: FontAwesome;
-          padding-right: 3px;
-          content: "\f0d9"; }
-      .bs-pagination .navigation.pagination .nav-links .nav-next {
-        display: table-cell;
-        vertical-align: top;
-        width: 50%; }
-        .bs-pagination .navigation.pagination .nav-links .nav-next a:after {
-          font-family: FontAwesome;
-          padding-left: 3px;
-          content: "\f0da"; }
       .bs-pagination .navigation.pagination .nav-links .page-numbers:first-child {
         margin-left: 0; }
       .bs-pagination .navigation.pagination .nav-links .page-numbers.current, .bs-pagination .navigation.pagination .nav-links .page-numbers.current:focus, .bs-pagination .navigation.pagination .nav-links .page-numbers.current:hover {
@@ -5065,3 +5046,24 @@ a.text-danger:focus, a.text-danger:hover {
         cursor: default;
         background-color: #0275d8;
         border-color: #0275d8; }
+
+/* adjust all pagination-links */
+.nav-links {
+  display: table;
+  width: 100%; }
+  .nav-links .nav-previous {
+    display: table-cell;
+    vertical-align: top;
+    width: 50%; }
+    .nav-links .nav-previous a:before {
+      font-family: FontAwesome;
+      padding-right: 3px;
+      content: "\f0d9"; }
+  .nav-links .nav-next {
+    display: table-cell;
+    vertical-align: top;
+    width: 50%; }
+    .nav-links .nav-next a:after {
+      font-family: FontAwesome;
+      padding-left: 3px;
+      content: "\f0da"; }
