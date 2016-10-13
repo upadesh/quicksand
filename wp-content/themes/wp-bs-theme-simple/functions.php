@@ -232,7 +232,7 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
             }
 
             .site-main-container a, 
-            .site-footer-info a 
+            .site-footer a 
             { 
                 color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
             } 
@@ -270,25 +270,25 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
             }
 
             /*footer*/ 
-            .site-footer-info .row { 
+            .site-footer .row { 
                 background: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>; 
             } 
 
             /*footer-menu*/
-            .site-footer-info .nav-wrapper a {  
+            .site-footer .nav-wrapper a {  
                 color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
                 padding: 0 .6rem;
             }  
-            .site-footer-info .nav-wrapper a:hover {  
+            .site-footer .nav-wrapper a:hover {  
                 color: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>;
                 background: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
             } 
 
             /*footer-social-menu*/
-            .site-footer-info .site-social .fa-circle {
+            .site-footer .site-social .fa-circle {
                 color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>; 
             }
-            .site-footer-info .site-social .fa-stack:hover .fa-circle {
+            .site-footer .site-social .fa-stack:hover .fa-circle {
                 /*opacity*/
                 opacity:0.5;
             }
@@ -344,7 +344,7 @@ if (!function_exists('wp_bs_theme_simple_widgets_init')) :
         ));
 
         register_sidebar(array(
-            'name' => __('Content-Footer', 'wp-bs-theme-simple'),
+            'name' => __('Sidebar-Footer', 'wp-bs-theme-simple'),
             'id' => 'sidebar-2',
             'description' => __('Appears at the bottom of the content on posts and pages.', 'simple'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -645,9 +645,6 @@ add_filter('comment_form_default_fields', 'bootstrap4_comment_form_fields');
 
 
 
-
-//============================================================================================================
-
 /**
  * Converts a HEX value to RGB. 
  *
@@ -675,6 +672,13 @@ function wp_bs_theme_simple_hex2rgb($color) {
     return array('red' => $r, 'green' => $g, 'blue' => $b);
 }
 
+
+
+//============================================================================================================
+
+
+
+
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
  * for content images
@@ -687,22 +691,22 @@ function wp_bs_theme_simple_hex2rgb($color) {
  * @return string A source size value for use in a content image 'sizes' attribute.
  */
 //TODO
-function wp_bs_theme_simple_content_image_sizes_attr($sizes, $size) {
-    $width = $size[0];
-
-    840 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px';
-
-    if ('page' === get_post_type()) {
-        840 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
-    } else {
-        840 > $width && 600 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 600px';
-        600 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
-    }
-
-    return $sizes;
-}
-
-add_filter('wp_calculate_image_sizes', 'wp_bs_theme_simple_content_image_sizes_attr', 10, 2);
+//function wp_bs_theme_simple_content_image_sizes_attr($sizes, $size) {
+//    $width = $size[0];
+//
+//    840 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px';
+//
+//    if ('page' === get_post_type()) {
+//        840 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
+//    } else {
+//        840 > $width && 600 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 600px';
+//        600 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
+//    }
+//
+//    return $sizes;
+//}
+//
+//add_filter('wp_calculate_image_sizes', 'wp_bs_theme_simple_content_image_sizes_attr', 10, 2);
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
@@ -715,15 +719,15 @@ add_filter('wp_calculate_image_sizes', 'wp_bs_theme_simple_content_image_sizes_a
  * @param array $size Registered image size or flat array of height and width dimensions.
  * @return string A source size value for use in a post thumbnail 'sizes' attribute.
  */
-function wp_bs_theme_simple_post_thumbnail_sizes_attr($attr, $attachment, $size) {
-    if ('post-thumbnail' === $size) {
-        is_active_sidebar('sidebar-1') && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
-        !is_active_sidebar('sidebar-1') && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px';
-    }
-    return $attr;
-}
-
-add_filter('wp_get_attachment_image_attributes', 'wp_bs_theme_simple_post_thumbnail_sizes_attr', 10, 3);
+//function wp_bs_theme_simple_post_thumbnail_sizes_attr($attr, $attachment, $size) {
+//    if ('post-thumbnail' === $size) {
+//        is_active_sidebar('sidebar-1') && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
+//        !is_active_sidebar('sidebar-1') && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px';
+//    }
+//    return $attr;
+//}
+//
+//add_filter('wp_get_attachment_image_attributes', 'wp_bs_theme_simple_post_thumbnail_sizes_attr', 10, 3);
 
 
 

@@ -25,55 +25,6 @@ $gray-lightest:             #81d742!default;
   height: auto;
   max-width: 100%; }
 
-/**
- * Galleries
- */
-.gallery {
-  margin: 0 -1.1666667%;
-  padding: 0; }
-
-.gallery .gallery-item {
-  display: inline-block;
-  max-width: 33.33%;
-  padding: 0 1.1400652% 2.2801304%;
-  text-align: center;
-  vertical-align: top;
-  width: 100%; }
-
-.gallery-columns-1 .gallery-item {
-  max-width: 100%; }
-
-.gallery-columns-2 .gallery-item {
-  max-width: 50%; }
-
-.gallery-columns-4 .gallery-item {
-  max-width: 25%; }
-
-.gallery-columns-5 .gallery-item {
-  max-width: 20%; }
-
-.gallery-columns-6 .gallery-item {
-  max-width: 16.66%; }
-
-.gallery-columns-7 .gallery-item {
-  max-width: 14.28%; }
-
-.gallery-columns-8 .gallery-item {
-  max-width: 12.5%; }
-
-.gallery-columns-9 .gallery-item {
-  max-width: 11.11%; }
-
-.gallery .gallery-caption {
-  font-size: 13px;
-  margin: 0; }
-
-.gallery-columns-6 .gallery-caption,
-.gallery-columns-7 .gallery-caption,
-.gallery-columns-8 .gallery-caption,
-.gallery-columns-9 .gallery-caption {
-  display: none; }
-
 /* Responsive Videos */
 .video-container {
   position: relative;
@@ -190,6 +141,55 @@ $brand-info:                #b23f29 !default;
 $brand-warning:             #d34030 !default;
 $brand-danger:              #f74b38 !default;
 $brand-inverse:             $gray-dark !default; */
+/**
+ * Galleries
+ */
+.gallery {
+  margin: 0 -1.1666667%;
+  padding: 0; }
+
+.gallery .gallery-item {
+  display: inline-block;
+  max-width: 33.33%;
+  padding: 0 1.1400652% 2.2801304%;
+  text-align: center;
+  vertical-align: top;
+  width: 100%; }
+
+.gallery-columns-1 .gallery-item {
+  max-width: 100%; }
+
+.gallery-columns-2 .gallery-item {
+  max-width: 50%; }
+
+.gallery-columns-4 .gallery-item {
+  max-width: 25%; }
+
+.gallery-columns-5 .gallery-item {
+  max-width: 20%; }
+
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%; }
+
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%; }
+
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%; }
+
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%; }
+
+.gallery .gallery-caption {
+  font-size: 13px;
+  margin: 0; }
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+  display: none; }
+
 /* grid-patterns */
 /* one-column */
 /* 
@@ -216,31 +216,31 @@ $brand-inverse:             $gray-dark !default; */
   padding-left: 0;
   padding-right: 0; }
 
-/*always leave some space to the footer*/
+/*always leave some space to the footer-widgetbar*/
 .site-content {
   padding: 30px; }
 
-.site-footer-info {
+.site-footer {
   height: 60px; }
-  .site-footer-info .nav-wrapper a {
+  .site-footer .nav-wrapper a {
     display: inline-block;
     line-height: 60px; }
-  .site-footer-info .site-social ul {
+  .site-footer .site-social ul {
     margin-bottom: 0; }
-    .site-footer-info .site-social ul a {
+    .site-footer .site-social ul a {
       display: inline-block;
       line-height: 60px; }
 
 /*center navbar-items in mobile-mode*/
 @media (max-width: 992px) {
-  .site-footer-info .navbar-nav {
+  .site-footer .navbar-nav {
     width: 100%;
     text-align: center; }
-    .site-footer-info .navbar-nav > li {
+    .site-footer .navbar-nav > li {
       float: none;
       display: inline-block; } }
 
-.widget-area ul, .widget-area ol {
+.site-footer-widgetbar .widget-area ul, .site-footer-widgetbar .widget-area ol {
   padding-left: 0; }
 
 /* import bootstrap at the very last end, so we can use it's variables */
@@ -916,7 +916,7 @@ pre {
     display: table;
     clear: both; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .site-footer .site-content-bottom-widgets .widget, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .site-content #secondary, .col-lg-4, .site-footer-info .site-social, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .site-footer-info .nav-wrapper, .col-lg-9, .site-content #primary, .col-lg-10, .col-lg-11, .col-lg-12, .page-template-template-fullwidth .site-content #primary, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .site-footer-widgetbar .widget, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .site-content #secondary, .col-lg-4, .site-footer .site-social, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .site-footer .nav-wrapper, .col-lg-9, .site-content #primary, .col-lg-10, .col-lg-11, .col-lg-12, .page-template-template-fullwidth .site-content #primary, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
@@ -966,7 +966,7 @@ pre {
   float: left;
   width: 91.6666666667%; }
 
-.col-xs-12, .site-footer .site-content-bottom-widgets .widget {
+.col-xs-12, .site-footer-widgetbar .widget {
   float: left;
   width: 100%; }
 
@@ -1211,7 +1211,7 @@ pre {
   .col-md-5 {
     float: left;
     width: 41.6666666667%; }
-  .col-md-6, .site-footer .site-content-bottom-widgets .widget {
+  .col-md-6, .site-footer-widgetbar .widget {
     float: left;
     width: 50%; }
   .col-md-7 {
@@ -1319,7 +1319,7 @@ pre {
   .col-lg-3, .site-content #secondary {
     float: left;
     width: 25%; }
-  .col-lg-4, .site-footer-info .site-social {
+  .col-lg-4, .site-footer .site-social {
     float: left;
     width: 33.3333333333%; }
   .col-lg-5 {
@@ -1331,7 +1331,7 @@ pre {
   .col-lg-7 {
     float: left;
     width: 58.3333333333%; }
-  .col-lg-8, .site-footer-info .nav-wrapper {
+  .col-lg-8, .site-footer .nav-wrapper {
     float: left;
     width: 66.6666666667%; }
   .col-lg-9, .site-content #primary {
@@ -1354,7 +1354,7 @@ pre {
     right: 16.6666666667%; }
   .pull-lg-3 {
     right: 25%; }
-  .pull-lg-4, .site-footer-info .nav-wrapper {
+  .pull-lg-4, .site-footer .nav-wrapper {
     right: 33.3333333333%; }
   .pull-lg-5 {
     right: 41.6666666667%; }
@@ -1388,7 +1388,7 @@ pre {
     left: 50%; }
   .push-lg-7 {
     left: 58.3333333333%; }
-  .push-lg-8, .site-footer-info .site-social {
+  .push-lg-8, .site-footer .site-social {
     left: 66.6666666667%; }
   .push-lg-9 {
     left: 75%; }
@@ -1430,7 +1430,7 @@ pre {
   .col-xl-2 {
     float: left;
     width: 16.6666666667%; }
-  .col-xl-3, .site-footer .site-content-bottom-widgets .widget {
+  .col-xl-3, .site-footer-widgetbar .widget {
     float: left;
     width: 25%; }
   .col-xl-4 {
@@ -4590,7 +4590,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-right: 16px !important;
   margin-right: 1rem !important; }
 
-.m-b-1, .comments-area .comment-metadata, .site-content .post-meta-data, .site-content .post-thumbnail img {
+.m-b-1, .comments-area .comment-metadata, .site-content .post-meta-data, .site-content .post-thumbnail img, .site-footer-widgetbar {
   margin-bottom: 16px !important;
   margin-bottom: 1rem !important; }
 
@@ -4622,7 +4622,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-right: 24px !important;
   margin-right: 1.5rem !important; }
 
-.m-b-2, .site-header, .site-main-container, .site-content .site-sidebar section.widget, .site-footer .site-widgetbar {
+.m-b-2, .site-header, .site-main-container, .site-content .site-sidebar section.widget {
   margin-bottom: 24px !important;
   margin-bottom: 1.5rem !important; }
 
@@ -4817,7 +4817,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .text-xs-right, .nav-links .nav-next {
   text-align: right !important; }
 
-.text-xs-center, .site-content .site-sidebar section.widget, .site-content-bottom-widgets .widget {
+.text-xs-center, .site-content .site-sidebar section.widget, .site-footer-widgetbar .widget {
   text-align: center !important; }
 
 @media (min-width: 544px) {
@@ -4829,7 +4829,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
     text-align: center !important; } }
 
 @media (min-width: 768px) {
-  .text-md-left, .site-content .site-sidebar section.widget, .site-content-bottom-widgets .widget {
+  .text-md-left, .site-content .site-sidebar section.widget, .site-footer-widgetbar .widget {
     text-align: left !important; }
   .text-md-right {
     text-align: right !important; }

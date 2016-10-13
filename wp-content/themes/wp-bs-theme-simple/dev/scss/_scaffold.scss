@@ -12,7 +12,7 @@
     padding-right: 0;
 }
 
-/*always leave some space to the footer*/
+/*always leave some space to the footer-widgetbar*/
 .site-main-container {
     @extend .m-b-2; 
 }
@@ -20,7 +20,7 @@
 
 .site-content { 
     padding: 30px;
-    
+
     .post-meta-data {
         @extend .m-b-1;
     }
@@ -42,14 +42,11 @@
     } 
 }  
 
-.site-footer {
-    .site-widgetbar {
-        @extend .m-b-2; 
-    }
-}
 
 
-.site-content-bottom-widgets {
+
+.site-footer-widgetbar { 
+    @extend .m-b-1;  
     .widget {
         @extend .text-md-left; 
         @extend .text-xs-center; 

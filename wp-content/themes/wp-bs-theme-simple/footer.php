@@ -12,15 +12,15 @@
 
 
 </div><!-- site-content--> 
-
-
-<!-- site-footer -->
-<footer class="site-footer">  
-    <!-- site-content-bottom-widgets --> 
-    <?php get_sidebar('content-bottom'); ?>   
-</footer><!-- .site-footer -->
-
 </div><!-- .site-main-container -->
+
+
+<!-- site-footer-widgetbar -->
+<div class="container site-footer-widgetbar">  
+    <!-- site-sidebar widget-area --> 
+    <?php get_sidebar('content-bottom'); ?>   
+</div><!-- .site-sidebar.widget-area -->
+
 
 <?php
 $secondary_nav_options = array(
@@ -35,7 +35,7 @@ $secondary_nav_options = array(
 ?> 
 
 <!-- site-info --> 
-<div class="container-fluid site-footer-info">
+<footer class="container-fluid site-footer">
     <div class="row">
         <div class="site-social">
             <div class="text-xs-center text-lg-right"> 
@@ -49,7 +49,7 @@ $secondary_nav_options = array(
             </div>
         </div>
     </div>
-</div><!-- site-info --> 
+</footer><!-- site-info --> 
 <?php wp_footer(); ?>
 </body>
 </html>

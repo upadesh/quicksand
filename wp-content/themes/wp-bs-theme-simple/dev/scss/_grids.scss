@@ -25,18 +25,16 @@
 }
 
 
- 
-.site-footer {
-    .site-content-bottom-widgets {
-        .widget {
-            @extend .col-xs-12;
-            @extend .col-md-6;
-            @extend .col-xl-3; 
-        }
-    }
+
+.site-footer-widgetbar { 
+    .widget {
+        @extend .col-xs-12;
+        @extend .col-md-6;
+        @extend .col-xl-3; 
+    } 
 } 
 
-.site-footer-info { 
+.site-footer { 
     .site-social {
         @extend .col-lg-4 ;
         @extend .push-lg-8; 
