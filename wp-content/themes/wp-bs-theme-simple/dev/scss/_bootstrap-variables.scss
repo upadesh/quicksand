@@ -1,9 +1,10 @@
-// Bootstrap overrides
-//
-// Copy variables from `_variables.scss` to this file to override default values
-// without modifying source files.
+/**
+ * Copy variables from `_variables.scss` to this file to override default values
+ * without modifying source files.
+ */  
 
-/*$gray-dark:                 #373a3c !default;
+/*
+$gray-dark:                 #373a3c !default;
 $gray:                      #55595c !default;
 $gray-light:                #818a91 !default;
 $gray-lighter:              #eceeef !default;
@@ -16,7 +17,7 @@ $gray:                      #81d742 !default;
 $gray-light:                #81d742 !default;
 $gray-lighter:              #81d742 !default;
 $gray-lightest:             #81d742!default;
-
 */ 
+
 $enable-rounded: false;
 

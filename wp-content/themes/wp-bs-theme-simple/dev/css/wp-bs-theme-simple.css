@@ -1,5 +1,13 @@
+/**
+ * write your scss-code in a sepereted file
+ */
 /* change bootsrap-vars in here */
-/*$gray-dark:                 #373a3c !default;
+/**
+ * Copy variables from `_variables.scss` to this file to override default values
+ * without modifying source files.
+ */
+/*
+$gray-dark:                 #373a3c !default;
 $gray:                      #55595c !default;
 $gray-light:                #818a91 !default;
 $gray-lighter:              #eceeef !default;
@@ -12,11 +20,95 @@ $gray:                      #81d742 !default;
 $gray-light:                #81d742 !default;
 $gray-lighter:              #81d742 !default;
 $gray-lightest:             #81d742!default;
+*/
+/**
+ * primary navigation 
+ */
+/*normal navigation*/
+@media (min-width: 767px) {
+  .site-navigation .navbar-nav li a {
+    line-height: 50px; }
+  .site-navigation .navbar-brand .custom-logo-link {
+    line-height: 50px; }
+  .site-navigation .navbar-brand .custom-logo {
+    max-height: 50px;
+    width: auto; }
+  .site-navigation .navbar-nav li .dropdown-menu {
+    /*align the dropdown*/
+    margin: 7px 0 0; }
+    .site-navigation .navbar-nav li .dropdown-menu .dropdown-item {
+      line-height: 25px; } }
 
-*/
-/* Test: reduce size of massively large image with no alignment.
+/*mobile navigation*/
+@media (max-width: 767px) {
+  .navbar-brand {
+    display: none; }
+  .navbar .navbar-toggler {
+    float: none !important; }
+  .navbar .nav-item + .nav-item {
+    margin-left: 0; }
+  .navbar .dropdown {
+    position: initial; }
+  .navbar .dropdown-menu {
+    position: initial;
+    z-index: initial;
+    float: initial;
+    border: initial;
+    border-radius: initial; } }
+
+/**
+ * Fonts
+ */
+/**
+ * Main file for post-layout
+ */
+/* only for screen-readers */
+/* featured sticky post */
+/*
+ * post-meta 
+ */
+.post-meta-data .posted-on a:before {
+  font-family: FontAwesome;
+  padding-right: 3px;
+  content: "\f017"; }
+
+.post-meta-data .cat-links:before {
+  font-family: FontAwesome;
+  padding-right: 3px;
+  content: "\f07c"; }
+
+.post-meta-data .tags-links:before {
+  font-family: FontAwesome;
+  padding-right: 3px;
+  content: "\f02c"; }
+
+.post-meta-data .comments-link a:before {
+  font-family: FontAwesome;
+  padding-right: 3px;
+  content: "\f075"; }
+
+.post-meta-data span:not(:last-of-type):after {
+  content: ' | '; }
+
+/*
+ * thumbnail
+ */
+/* stretch postthumbnail to 100% */
+.post-thumbnail img {
+  width: 100%; }
+
+/* crop thumbnail in list-view */
+.crop-thumbnail {
+  max-height: 300px;
+  overflow: hidden; }
+
+/*
+ * content
+ */
+/* 
+ * for the WP-Test: reduce size of massively large image with no alignment.
  *  http://wp.local/archives/tag/alignment-2
-*/
+ */
 .entry-content .wp-caption {
   max-width: 100%; }
 
@@ -42,31 +134,16 @@ $gray-lightest:             #81d742!default;
   width: 100%;
   height: 100%; }
 
-/* post-meta */
-.post-meta-data .posted-on a:before {
-  font-family: FontAwesome;
-  padding-right: 3px;
-  content: "\f017"; }
+/*more space between paged-post pagination (<!-- nextpage -->)*/
+.paged-link {
+  padding-left: 4.8px;
+  padding-left: .3rem;
+  padding-right: 4.8px;
+  padding-right: .3rem; }
 
-.post-meta-data .cat-links:before {
-  font-family: FontAwesome;
-  padding-right: 3px;
-  content: "\f07c"; }
-
-.post-meta-data .tags-links:before {
-  font-family: FontAwesome;
-  padding-right: 3px;
-  content: "\f02c"; }
-
-.post-meta-data .comments-link a:before {
-  font-family: FontAwesome;
-  padding-right: 3px;
-  content: "\f075"; }
-
-.post-meta-data span:not(:last-of-type):after {
-  content: ' | '; }
-
-/* comments */
+/*
+ * comments
+ */
 .comments-area ol {
   list-style-type: none; }
   .comments-area ol .comment-reply-link:before {
@@ -81,66 +158,6 @@ $gray-lightest:             #81d742!default;
   padding-right: 3px;
   content: "\f040"; }
 
-/** featured sticky post */
-/*more space between paged-post pagination*/
-.paged-link {
-  padding-left: 4.8px;
-  padding-left: .3rem;
-  padding-right: 4.8px;
-  padding-right: .3rem; }
-
-/*widgets*/
-.widget {
-  /* calendar-widget bugfix */
-  /*no bullets in lists*/ }
-  @media (max-width: 768px) {
-    .widget #wp-calendar {
-      margin: 0 auto; } }
-  .widget ul, .widget ol {
-    list-style-type: none; }
-
-/* maybe to adjust all pagination-links is not right */
-.nav-links {
-  display: table;
-  width: 100%; }
-  .nav-links .nav-previous {
-    display: table-cell;
-    vertical-align: top;
-    width: 50%; }
-    .nav-links .nav-previous a:before {
-      font-family: FontAwesome;
-      padding-right: 3px;
-      content: "\f0d9"; }
-  .nav-links .nav-next {
-    display: table-cell;
-    vertical-align: top;
-    width: 50%; }
-    .nav-links .nav-next a:after {
-      font-family: FontAwesome;
-      padding-left: 3px;
-      content: "\f0da"; }
-
-/* stretch postthumbnail to 100% */
-.post-thumbnail img {
-  width: 100%; }
-
-/*postthumbnail postthumbnailin list-view*/
-.crop-thumbnail {
-  max-height: 300px;
-  overflow: hidden; }
-
-/*$gray-dark:                 #77271b !default;
-$gray:                      #963222 !default;
-$gray-light:                #b23f29 !default;
-$gray-lighter:              #d34030 !default;
-$gray-lightest:             #f74b38 !default; 
-
-$brand-primary:             #77271b !default;
-$brand-success:             #963222 !default;
-$brand-info:                #b23f29 !default;
-$brand-warning:             #d34030 !default;
-$brand-danger:              #f74b38 !default;
-$brand-inverse:             $gray-dark !default; */
 /**
  * Galleries
  */
@@ -190,13 +207,18 @@ $brand-inverse:             $gray-dark !default; */
 .gallery-columns-9 .gallery-caption {
   display: none; }
 
-/* grid-patterns */
+/**
+ * grid-patterns
+ */
 /* one-column */
 /* 
  * template-full-width
  *
  * class is generated by body_class() and is named after file-name
  * 'page-template-' + template-fullwidth.php
+ */
+/**
+ * header
  */
 .site-info.custom-header-image {
   display: table;
@@ -209,7 +231,9 @@ $brand-inverse:             $gray-dark !default; */
       background: rgba(0, 0, 0, 0.2);
       padding: 20px; }
 
-/* Push main sections */
+/**
+ * Create some space & push main sections 
+ */
 /* always push down content after header */
 /*stick to the navbar when fullwidth*/
 .site-header.container {
@@ -220,6 +244,21 @@ $brand-inverse:             $gray-dark !default; */
 .site-content {
   padding: 30px; }
 
+/*
+ * widgets
+ */
+.widget {
+  /* calendar-widget bugfix */
+  /*no bullets in lists*/ }
+  @media (max-width: 767px) {
+    .widget #wp-calendar {
+      margin: 0 auto; } }
+  .widget ul, .widget ol {
+    list-style-type: none; }
+
+/**
+ * footer
+ */
 .site-footer {
   height: 60px; }
   .site-footer .nav-wrapper a {
@@ -232,7 +271,7 @@ $brand-inverse:             $gray-dark !default; */
       line-height: 60px; }
 
 /*center navbar-items in mobile-mode*/
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .site-footer .navbar-nav {
     width: 100%;
     text-align: center; }
@@ -240,6 +279,9 @@ $brand-inverse:             $gray-dark !default; */
       float: none;
       display: inline-block; } }
 
+/**
+ * Widgetbar in footer
+ */
 .site-footer-widgetbar {
   padding: 16px;
   padding: 1rem; }
@@ -4814,10 +4856,10 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.text-xs-left, .nav-links .nav-previous {
+.text-xs-left, .bs-pagination .navigation.pagination .nav-links .nav-previous {
   text-align: left !important; }
 
-.text-xs-right, .nav-links .nav-next {
+.text-xs-right, .bs-pagination .navigation.pagination .nav-links .nav-next {
   text-align: right !important; }
 
 .text-xs-center, .site-content .site-sidebar section.widget, .site-footer-widgetbar .widget {
@@ -4980,7 +5022,12 @@ a.text-danger:focus, a.text-danger:hover {
     display: none !important; } }
 
 /* if you want to use mixins of bootstrap, it only works afterwards*/
-/*pagination: bootstrap-style*/
+/**
+ * pagination: bootstrap-style
+
+ * because mixins are used, this file has to be anchored behind 
+ * the import of bootstrap ("node_modules/bootstrap/scss/bootstrap.scss")
+ */
 .bs-pagination {
   /*@extend text-xs-xenter*/
   width: 100%;
@@ -4989,41 +5036,32 @@ a.text-danger:focus, a.text-danger:hover {
     display: inline-block;
     /*@include center-block;*/
     text-align: center; }
-    .bs-pagination .navigation.pagination .nav-links .page-numbers:first-child {
-      margin-left: 0; }
-    .bs-pagination .navigation.pagination .nav-links .page-numbers.current, .bs-pagination .navigation.pagination .nav-links .page-numbers.current:focus, .bs-pagination .navigation.pagination .nav-links .page-numbers.current:hover {
-      z-index: 2;
-      color: #fff;
-      cursor: default;
-      background-color: #0275d8;
-      border-color: #0275d8; }
-
-@media (min-width: 544px) {
-  .site-navigation .navbar-nav li a {
-    line-height: 50px; }
-  .site-navigation .navbar-brand .custom-logo-link {
-    line-height: 50px; }
-  .site-navigation .navbar-brand .custom-logo {
-    max-height: 50px;
-    width: auto; }
-  .site-navigation .navbar-nav li .dropdown-menu {
-    /*align the dropdown*/
-    margin: 7px 0 0; }
-    .site-navigation .navbar-nav li .dropdown-menu .dropdown-item {
-      line-height: 25px; } }
-
-@media (max-width: 767px) {
-  .navbar-brand {
-    display: none; }
-  .navbar .navbar-toggler {
-    float: none !important; }
-  .navbar .nav-item + .nav-item {
-    margin-left: 0; }
-  .navbar .dropdown {
-    position: initial; }
-  .navbar .dropdown-menu {
-    position: initial;
-    z-index: initial;
-    float: initial;
-    border: initial;
-    border-radius: initial; } }
+    .bs-pagination .navigation.pagination .nav-links {
+      /* adjust all pagination-links */
+      display: table;
+      width: 100%;
+      /* bootstrap-style pagination*/ }
+      .bs-pagination .navigation.pagination .nav-links .nav-previous {
+        display: table-cell;
+        vertical-align: top;
+        width: 50%; }
+        .bs-pagination .navigation.pagination .nav-links .nav-previous a:before {
+          font-family: FontAwesome;
+          padding-right: 3px;
+          content: "\f0d9"; }
+      .bs-pagination .navigation.pagination .nav-links .nav-next {
+        display: table-cell;
+        vertical-align: top;
+        width: 50%; }
+        .bs-pagination .navigation.pagination .nav-links .nav-next a:after {
+          font-family: FontAwesome;
+          padding-left: 3px;
+          content: "\f0da"; }
+      .bs-pagination .navigation.pagination .nav-links .page-numbers:first-child {
+        margin-left: 0; }
+      .bs-pagination .navigation.pagination .nav-links .page-numbers.current, .bs-pagination .navigation.pagination .nav-links .page-numbers.current:focus, .bs-pagination .navigation.pagination .nav-links .page-numbers.current:hover {
+        z-index: 2;
+        color: #fff;
+        cursor: default;
+        background-color: #0275d8;
+        border-color: #0275d8; }

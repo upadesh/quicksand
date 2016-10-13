@@ -290,7 +290,7 @@ function wp_bs_theme_simple_social_media_icons() {
  * 8. Navigation Link Color         - wbts_nav_link_color
  * 9. Footer Background Color       - wbts_footer_background_color
  * 10. Footer Link Color            - wbts_footer_link_color
- * 10. Footer Text Color            - wbts_footer_text_color
+ * 11. Footer Text Color            - wbts_footer_text_color
  *
  * @since WP-bs-theme-simple 0.0.1
  *
@@ -331,9 +331,9 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#cecece',
                 '#ffffff',
                 '#e55050',
-                '#ffffff',
+                '#4f4f4f',
                 '#2cb5b1',
-                '#686868',
+                '#d1d1d1',
             ),
         ),
         'red' => array(
@@ -348,9 +348,9 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#f23737',
                 '#c1c1c1',
                 '#123123',
-                '#ffffff',
-                '#818a91',
-                '#686868',
+                '#4f4f4f',
+                '#2cb5b1',
+                '#d1d1d1',
             ),
         ),
         'green' => array(
@@ -365,9 +365,9 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#29842a',
                 '#81d742',
                 '#333333',
-                '#ffffff',
-                '#000000',
-                '#686868',
+                '#4f4f4f',
+                '#2cb5b1',
+                '#d1d1d1',
             ), 
         )
     ));

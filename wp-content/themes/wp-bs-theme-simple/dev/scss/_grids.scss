@@ -1,4 +1,6 @@
-/* grid-patterns */
+/**
+ * grid-patterns
+ */   
 
 /* one-column */ 
 .site-content { 
@@ -22,8 +24,7 @@
             @extend .col-lg-12; 
         } 
     }
-}
-
+} 
 
 
 .site-footer-widgetbar { 
@@ -33,6 +34,7 @@
         @extend .col-xl-3; 
     } 
 } 
+
 
 .site-footer { 
     .site-social {

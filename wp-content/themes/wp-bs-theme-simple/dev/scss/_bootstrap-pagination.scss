@@ -1,0 +1,69 @@
+/**
+ * pagination: bootstrap-style
+
+ * because mixins are used, this file has to be anchored behind 
+ * the import of bootstrap ("node_modules/bootstrap/scss/bootstrap.scss")
+ */   
+
+.bs-pagination {
+    /*@extend text-xs-xenter*/
+    width: 100%;
+    text-align: center;
+    .navigation.pagination {
+        display: inline-block;
+        /*@include center-block;*/
+        text-align: center; 
+        .nav-links {
+            @extend .pagination;
+            
+            /* adjust all pagination-links */
+            display: table;
+            width: 100%;
+            .nav-previous {
+                @extend .text-xs-left; 
+                display: table-cell;
+                vertical-align: top; 
+                width: 50%;
+                a:before {
+                    font-family: FontAwesome; 
+                    padding-right: 3px;
+                    content: "\f0d9";
+                }
+            }
+            .nav-next {
+                @extend .text-xs-right; 
+                display: table-cell;
+                vertical-align: top; 
+                width: 50%;
+                a:after {
+                    font-family: FontAwesome; 
+                    padding-left: 3px;
+                    content: "\f0da";
+                }
+            }
+            
+            /* bootstrap-style pagination*/
+            .page-numbers {
+                @extend .page-link;
+                &:first-child {
+                    margin-left: 0;
+                    @include border-left-radius($border-radius);
+                }
+                &:last-child {
+                    @include border-right-radius($border-radius);
+                }
+                &.current {
+                    @include plain-hover-focus {
+                        z-index: 2;
+                        color: $pagination-active-color;
+                        cursor: default;
+                        background-color: $pagination-active-bg;
+                        border-color: $pagination-active-border;
+                    }
+                }
+            }
+        }
+    }
+} 
+
+ 

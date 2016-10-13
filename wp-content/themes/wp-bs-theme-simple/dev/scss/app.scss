@@ -1,3 +1,7 @@
+/**
+ * write your scss-code in a sepereted file
+ */ 
+
 /* change bootsrap-vars in here */
 @import 'bootstrap-variables';
 @import 'navbar';
@@ -7,9 +11,10 @@
 @import 'grids';
 @import 'header';
 @import 'scaffold';
+@import 'widgets';
 @import 'footer';
 @import 'footer-sidebar';
 /* import bootstrap at the very last end, so we can use it's variables */
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 /* if you want to use mixins of bootstrap, it only works afterwards*/
-@import "final.scss";
+@import "bootstrap-pagination.scss";

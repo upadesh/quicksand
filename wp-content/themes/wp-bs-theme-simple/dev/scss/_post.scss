@@ -1,49 +1,23 @@
+/**
+ * Main file for post-layout
+ */
 
-/* Test: reduce size of massively large image with no alignment.
- *  http://wp.local/archives/tag/alignment-2
-*/ 
-.entry-content { 
-    .wp-caption {
-        max-width: 100%;
-    }
-
-    img {
-        border: none;
-        height: auto;
-        max-width: 100%; 
-    }
-}
-
+/* only for screen-readers */
 .screen-reader-text {
     @extend .sr-only;
-} 
+}  
+ 
 
-
-
-
-/* Responsive Videos */
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
+/* featured sticky post */
+.sticky-post {
+    @extend .tag;
+    @extend .tag-danger; 
 }
 
-.video-container iframe,
-.video-container object,
-.video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+/*
+ * post-meta 
+ */
 
-
-
-
-/* post-meta */
 .post-meta-data { 
     .posted-on{
         a:before {
@@ -74,9 +48,87 @@
         content: ' | ';
     }
 }
+ 
+
+/*
+ * thumbnail
+ */
+
+/* stretch postthumbnail to 100% */
+.post-thumbnail {
+    img {
+        width: 100%; 
+    }
+}
+
+/* crop thumbnail in list-view */
+.crop-thumbnail {
+    max-height: 300px;
+    overflow: hidden;
+}  
 
 
-/* comments */
+
+
+
+
+/*
+ * content
+ */
+
+/* 
+ * for the WP-Test: reduce size of massively large image with no alignment.
+ *  http://wp.local/archives/tag/alignment-2
+ */ 
+.entry-content { 
+    .wp-caption {
+        max-width: 100%;
+    }
+
+    img {
+        border: none;
+        height: auto;
+        max-width: 100%; 
+    }
+}
+
+
+
+
+/* Responsive Videos */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*more space between paged-post pagination (<!-- nextpage -->)*/
+.paged-link {
+    padding-left: .3rem;
+    padding-right: .3rem;
+}
+
+
+
+
+/*
+ * comments
+ */
+ 
 .comments-area  {
     .comment-respond {
         @extend .m-t-2;
@@ -102,89 +154,5 @@
     content: "\f040";
 }
 
-/** featured sticky post */
-.sticky-post {
-    @extend .tag;
-    @extend .tag-danger; 
-}
-
-/*more space between paged-post pagination*/
-.paged-link {
-    padding-left: .3rem;
-    padding-right: .3rem;
-}
-
-/*widgets*/
-.widget { 
-    /* calendar-widget bugfix */ 
-    @media (max-width: 768px) {
-        #wp-calendar {
-            margin: 0 auto;
-        }
-    }
-    /*no bullets in lists*/
-    ul, ol {
-        list-style-type: none; 
-
-    }
-}
-
-/* maybe to adjust all pagination-links is not right */
-.nav-links {
-    display: table;
-    width: 100%;
-    .nav-previous {
-        @extend .text-xs-left; 
-        display: table-cell;
-        vertical-align: top; 
-        width: 50%;
-        a:before {
-            font-family: FontAwesome; 
-            padding-right: 3px;
-            content: "\f0d9";
-        }
-    }
-    .nav-next {
-        @extend .text-xs-right; 
-        display: table-cell;
-        vertical-align: top; 
-        width: 50%;
-        a:after {
-            font-family: FontAwesome; 
-            padding-left: 3px;
-            content: "\f0da";
-        }
-    }
-}
 
 
-
-
-/* stretch postthumbnail to 100% */
-.post-thumbnail {
-    img {
-        width: 100%; 
-    }
-}
-
-/*postthumbnail postthumbnailin list-view*/
-.crop-thumbnail {
-    max-height: 300px;
-    overflow: hidden;
-} 
-
-
-// Colors for schemes
-
-/*$gray-dark:                 #77271b !default;
-$gray:                      #963222 !default;
-$gray-light:                #b23f29 !default;
-$gray-lighter:              #d34030 !default;
-$gray-lightest:             #f74b38 !default; 
-
-$brand-primary:             #77271b !default;
-$brand-success:             #963222 !default;
-$brand-info:                #b23f29 !default;
-$brand-warning:             #d34030 !default;
-$brand-danger:              #f74b38 !default;
-$brand-inverse:             $gray-dark !default; */
