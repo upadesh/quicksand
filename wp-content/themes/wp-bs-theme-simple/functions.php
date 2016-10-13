@@ -273,9 +273,9 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
             .site-footer-widgetbar,
             .site-footer .row { 
                 background: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>; 
-            } 
-
-            /*footer-menu*/
+                color: <?php echo get_theme_mod('wbts_footer_text_color', $colorScheme[11]); ?>;
+            }  
+            
             .site-footer-widgetbar a,
             .site-footer .nav-wrapper a {  
                 color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
