@@ -21,7 +21,7 @@ function wp_bs_theme_simple_customize_control_js() {
 add_action('customize_controls_enqueue_scripts', 'wp_bs_theme_simple_customize_control_js');
 
 /**
- * Binds JS handlers to make the Customizer preview reload changes asynchronously.
+ * Binds JS handlers to the customizer preview 
  *
  * @since WP-bs-theme-simple1.0
  */
