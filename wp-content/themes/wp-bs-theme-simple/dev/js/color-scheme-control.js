@@ -19,27 +19,27 @@
                             .wpColorPicker('defaultColor', color);
                     
                     
-                    color = colors[1];
-                    api('wbts_background_content_color').set(color);
-                    api.control('wbts_background_content_color').container.find('.color-picker-hex')
+                    color = colors[1]; 
+                    api('wbts_content_background_color').set(color);
+                    api.control('wbts_content_background_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
  
                     color = colors[2];
-                    api('wbts_link_color').set(color);
-                    api.control('wbts_link_color').container.find('.color-picker-hex')
+                    api('wbts_content_link_color').set(color);
+                    api.control('wbts_content_link_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color); 
                     
                     color = colors[3];
-                    api('wbts_main_text_color').set(color);
-                    api.control('wbts_main_text_color').container.find('.color-picker-hex')
+                    api('wbts_content_text_color').set(color);
+                    api.control('wbts_content_text_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
  
                     color = colors[4];
-                    api('wbts_secondary_text_color').set(color);
-                    api.control('wbts_secondary_text_color').container.find('.color-picker-hex')
+                    api('wbts_content_secondary_text_color').set(color);
+                    api.control('wbts_content_secondary_text_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
  

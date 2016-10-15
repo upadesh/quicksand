@@ -39,16 +39,46 @@ add_action('customize_preview_init', 'wp_bs_theme_simple_customize_preview_js');
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function wp_bs_theme_simple_customize_register($wp_customize) {
-    // build-in 
+    // define transport-method for build-ins
     $wp_customize->get_setting('blogname')->transport = 'postMessage';
     $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
     $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
 
+
+
+
+    /* Main option Settings Panel */
+    $wp_customize->add_panel('wp_bs_theme_simple_main_options', array(
+        'priority' => 10,
+        'capability' => 'edit_theme_options',
+        'theme_supports' => '',
+        'title' => __('Theme Options', 'wp-bs-theme-simple'),
+        'description' => __('Panel to update theme options', 'sparkling'), // Include html tags such as <p>.
+    ));
+
+
     /*
-     *  Add color scheme  
+     * TODO
+      Textfarbe
+      Hintergrundfarbe
+     */
+
+
+ 
+    /**
+     *  Section: Color Schemes
      * 
      * @see http://www.deluxeblogtips.com/2016/01/add-color-schemes-wordpress-theme.html 
      */
+    // get default-values 
+    $colorSchemeDefault = wp_bs_theme_simple_get_color_schemes()['default']['colors'];
+
+    $wp_customize->add_section('wp_bs_theme_simple_color_schemes', array(
+        'title' => __('Color Schemes', 'wp-bs-theme-simple'),
+        'priority' => 10,
+        'panel' => 'wp_bs_theme_simple_main_options',
+    ));
+
     $wp_customize->add_setting('color_scheme', array(
         'default' => 'default',
         'sanitize_callback' => 'wp_bs_theme_simple_sanitize_color_scheme',
@@ -56,118 +86,202 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('color_scheme', array(
-        'label' => __('Base Color Scheme', 'wp-bs-theme-simple'),
-        'section' => 'colors',
+        'label' => __('Color Schemes', 'wp-bs-theme-simple'),
+        'section' => 'wp_bs_theme_simple_color_schemes',
         'type' => 'select',
         'choices' => wp_bs_theme_simple_get_color_scheme_choices(),
         'priority' => 1,
     ));
 
-    $colorSchemeDefault = wp_bs_theme_simple_get_color_schemes()['default']['colors'];
-    $colors = array();
-    $colors[] = array(
-        'slug' => 'wbts_header_background_color',
-        'default' => $colorSchemeDefault[8],
-        'label' => __('Header Background Color', 'wp-bs-theme-simple')
-    );
-    $colors[] = array(
-        'slug' => 'wbts_background_content_color',
-        'default' => $colorSchemeDefault[1],
-        'label' => __('Content Background Color', 'wp-bs-theme-simple')
-    );
-    $colors[] = array(
-        'slug' => 'wbts_link_color',
-        'default' => $colorSchemeDefault[2],
-        'label' => __('Content Link Color', 'wp-bs-theme-simple')
-    );
-    $colors[] = array(
-        'slug' => 'wbts_main_text_color',
-        'default' => $colorSchemeDefault[3],
-        'label' => __('Content Text Color', 'wp-bs-theme-simple')
-    );
-    $colors[] = array(
-        'slug' => 'wbts_secondary_text_color',
-        'default' => $colorSchemeDefault[4],
-        'label' => __('Secondary Text Color', 'wp-bs-theme-simple')
-    );
-    $colors[] = array(
-        'slug' => 'wbts_nav_background_color',
-        'default' => $colorSchemeDefault[6],
-        'label' => __('Navbar Background Color', 'wp-bs-theme-simple')
-    );
-    $colors[] = array(
-        'slug' => 'wbts_nav_link_color',
-        'default' => $colorSchemeDefault[7],
-        'label' => __('Navbar Link Color', 'wp-bs-theme-simple')
-    );
-    $colors[] = array(
-        'slug' => 'wbts_footer_background_color',
-        'default' => $colorSchemeDefault[9],
-        'label' => __('Footer Background Color', 'wp-bs-theme-simple')
-    );
-    $colors[] = array(
-        'slug' => 'wbts_footer_link_color',
-        'default' => $colorSchemeDefault[10],
-        'label' => __('Footer Link Color', 'wp-bs-theme-simple')
-    );
-    $colors[] = array(
-        'slug' => 'wbts_footer_text_color',
-        'default' => $colorSchemeDefault[11],
-        'label' => __('Footer Text Color', 'wp-bs-theme-simple')
-    );
-
-    foreach ($colors as $color) {
-        $wp_customize->add_setting(
-                $color['slug'], array(
-            'default' => $color['default'],
-            'transport' => 'postMessage',
-                )
-        );
-
-        $wp_customize->add_control(
-                new WP_Customize_Color_Control(
-                $wp_customize, $color['slug'], array(
-            'label' => $color['label'],
-            'section' => 'colors',
-            'settings' => $color['slug'])
-                )
-        );
-    }
-
-
-    // Section: Theme  
-    $wp_customize->add_section('wp_bs_theme_simple_theme', array(
-        'title' => __('Theme Options', 'wp-bs-theme-simple'),
-        'priority' => 35,
+    /* Section: Navigation */
+    $wp_customize->add_section('wp_bs_theme_simple_nav', array(
+        'title' => __('Navigation', 'wp-bs-theme-simple'),
+        'priority' => 10,
+        'panel' => 'wp_bs_theme_simple_main_options',
     ));
 
-    $wp_customize->add_setting("wp_bs_theme_simple_nav_fullwidth", array(
+    // fullwidth
+    $wp_customize->add_setting("wbts_nav_fullwidth", array(
         'type' => 'theme_mod',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_text_field'
+        'transport' => 'refresh', 
+        'sanitize_callback' => 'wp_bs_theme_simple_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('wp_bs_theme_simple_nav_fullwidth', array(
-        'label' => __("Navigation Fullwidth:", 'wp-bs-theme-simple'),
-        'section' => 'wp_bs_theme_simple_theme',
+        'label' => __("Navigation Fullwidth", 'wp-bs-theme-simple'),
+        'section' => 'wp_bs_theme_simple_nav',
         'type' => 'checkbox',
-        'settings' => 'wp_bs_theme_simple_nav_fullwidth',
-        'priority' => 12,
+        'settings' => 'wbts_nav_fullwidth',
+        'priority' => 10,
     ));
 
-    $wp_customize->add_setting("wp_bs_theme_simple_header_fullwidth", array(
+    // link-color
+    $wp_customize->add_setting('wbts_nav_link_color', array(
+        'default' => $colorSchemeDefault[7],
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'wp_bs_theme_simple_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'wbts_nav_link_color', array(
+        'label' => __('Navbar Link Color', 'wp-bs-theme-simple'),
+//        'description' => __('Default used if no color is selected', 'wp-bs-theme-simple'),
+        'section' => 'wp_bs_theme_simple_nav',
+        'settings' => 'wbts_nav_link_color'
+    )));
+
+    // bg-color
+    $wp_customize->add_setting('wbts_nav_background_color', array(
+        'default' => $colorSchemeDefault[6],
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'wp_bs_theme_simple_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'wbts_nav_background_color', array(
+        'label' => __('Navbar Background Color', 'wp-bs-theme-simple'),
+//        'description' => __('Default used if no color is selected', 'wp-bs-theme-simple'), 
+        'section' => 'wp_bs_theme_simple_nav',
+        'settings' => 'wbts_nav_background_color'
+    )));
+
+
+
+
+    /* Section: Header */
+    $wp_customize->add_section('wp_bs_theme_simple_header', array(
+        'title' => __('Header', 'wp-bs-theme-simple'),
+        'priority' => 20,
+        'panel' => 'wp_bs_theme_simple_main_options',
+    ));
+
+    // fullwidth
+    $wp_customize->add_setting("wbts_header_fullwidth", array(
         'type' => 'theme_mod',
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_text_field'
+        'sanitize_callback' => 'wp_bs_theme_simple_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('wp_bs_theme_simple_header_fullwidth', array(
-        'label' => __("Header Fullwidth:", 'wp-bs-theme-simple'),
-        'section' => 'wp_bs_theme_simple_theme',
+        'label' => __("Header Fullwidth", 'wp-bs-theme-simple'),
+        'section' => 'wp_bs_theme_simple_header',
         'type' => 'checkbox',
-        'settings' => 'wp_bs_theme_simple_header_fullwidth',
+        'settings' => 'wbts_header_fullwidth',
         'priority' => 12,
     ));
+
+    // bg-color
+    $wp_customize->add_setting('wbts_header_background_color', array(
+        'default' => $colorSchemeDefault[8],
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'wp_bs_theme_simple_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'wbts_header_background_color', array(
+        'label' => __('Header Background Color', 'wp-bs-theme-simple'),
+        'description' => __('Default used if no color is selected', 'wp-bs-theme-simple'),
+        'section' => 'wp_bs_theme_simple_header',
+        'settings' => 'wbts_header_background_color'
+    )));
+
+
+
+
+
+    /* Section: Content */
+    $wp_customize->add_section('wp_bs_theme_simple_content', array(
+        'title' => __('Content', 'wp-bs-theme-simple'),
+        'priority' => 30,
+        'panel' => 'wp_bs_theme_simple_main_options',
+    ));
+
+    // bg-color
+    $wp_customize->add_setting('wbts_content_background_color', array(
+        'default' => $colorSchemeDefault[1],
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'wp_bs_theme_simple_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'wbts_content_background_color', array(
+        'label' => __('Content Background Color', 'wp-bs-theme-simple'),
+        'section' => 'wp_bs_theme_simple_content',
+        'settings' => 'wbts_content_background_color'
+    )));
+
+    // link-color
+    $wp_customize->add_setting('wbts_content_link_color', array(
+        'default' => $colorSchemeDefault[2],
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'wp_bs_theme_simple_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'wbts_content_link_color', array(
+        'label' => __('Content Link Color', 'wp-bs-theme-simple'),
+        'section' => 'wp_bs_theme_simple_content',
+        'settings' => 'wbts_content_link_color'
+    )));
+
+
+    // text-color
+    $wp_customize->add_setting('wbts_content_text_color', array(
+        'default' => $colorSchemeDefault[3],
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'wp_bs_theme_simple_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'wbts_content_text_color', array(
+        'label' => __('Content Text Color', 'wp-bs-theme-simple'),
+        'section' => 'wp_bs_theme_simple_content',
+        'settings' => 'wbts_content_text_color'
+    )));
+
+    // 2nd-text-color
+    $wp_customize->add_setting('wbts_content_secondary_text_color', array(
+        'default' => $colorSchemeDefault[4],
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'wp_bs_theme_simple_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'wbts_content_secondary_text_color', array(
+        'label' => __('Secondary Text Color', 'wp-bs-theme-simple'),
+        'section' => 'wp_bs_theme_simple_content',
+        'settings' => 'wbts_content_secondary_text_color'
+    )));
+
+
+    /* Section: Footer */
+    $wp_customize->add_section('wp_bs_theme_simple_footer', array(
+        'title' => __('Footer', 'wp-bs-theme-simple'),
+        'priority' => 40,
+        'panel' => 'wp_bs_theme_simple_main_options',
+    ));
+
+    // bg-color
+    $wp_customize->add_setting('wbts_footer_background_color', array(
+        'default' => $colorSchemeDefault[9],
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'wp_bs_theme_simple_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'wbts_footer_background_color', array(
+        'label' => __('Navbar Background Color', 'wp-bs-theme-simple'),
+        'section' => 'wp_bs_theme_simple_footer',
+        'settings' => 'wbts_footer_background_color'
+    )));
+
+    // link-color
+    $wp_customize->add_setting('wbts_footer_link_color', array(
+        'default' => $colorSchemeDefault[10],
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'wp_bs_theme_simple_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'wbts_footer_link_color', array(
+        'label' => __('Navbar Link Color', 'wp-bs-theme-simple'),
+        'section' => 'wp_bs_theme_simple_footer',
+        'settings' => 'wbts_footer_link_color'
+    )));
+
+    // text-color
+    $wp_customize->add_setting('wbts_footer_text_color', array(
+        'default' => $colorSchemeDefault[11],
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'wp_bs_theme_simple_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'wbts_footer_text_color', array(
+        'label' => __('Footer Text Color', 'wp-bs-theme-simple'),
+        'section' => 'wp_bs_theme_simple_footer',
+        'settings' => 'wbts_footer_text_color'
+    )));
 }
 
 add_action('customize_register', 'wp_bs_theme_simple_customize_register');
@@ -179,7 +293,7 @@ add_action('customize_register', 'wp_bs_theme_simple_customize_register');
  *
  * The order of colors in a colors array:
  * 1. Main Background Color         - background_color
- * 2. Page Background Color         - wbts_background_content_color
+ * 2. Page Background Color         - wbts_content_background_color
  * 3. Link Color                    - wbts_link_color
  * 4. Main Text Color.              - wbts_main_text_color
  * 5. Secondary Text Color          - wbts_secondary_text_color
@@ -326,6 +440,39 @@ if (!function_exists('wp_bs_theme_simple_sanitize_color_scheme')) :
         }
 
         return $value;
+    }
+
+endif; // wp_bs_theme_simple_sanitize_color_scheme
+
+
+
+
+if (!function_exists('wp_bs_theme_simple_sanitize_checkbox')) :
+
+    /**
+     * Sanitzie checkbox for WordPress customizer
+     */
+    function wp_bs_theme_simple_sanitize_checkbox($input) {
+        if ($input == 1) {
+            return 1;
+        } else {
+            return '';
+        }
+    }
+
+endif; // wp_bs_theme_simple_sanitize_color_scheme
+
+
+if (!function_exists('wp_bs_theme_simple_sanitize_hexcolor')) :
+
+    /**
+     * Adds sanitization callback function: colors
+     * @package WP-bs-theme-simple
+     */
+    function wp_bs_theme_simple_sanitize_hexcolor($color) {
+        if ($unhashed = sanitize_hex_color_no_hash($color))
+            return '#' . $unhashed;
+        return $color;
     }
 
 endif; // wp_bs_theme_simple_sanitize_color_scheme

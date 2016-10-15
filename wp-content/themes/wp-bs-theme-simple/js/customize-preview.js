@@ -30,26 +30,26 @@
         });
     });
 
-    wp.customize('wbts_background_content_color', function (value) {
+    wp.customize('wbts_content_background_color', function (value) {
         value.bind(function (to) {
             $('.site-main-container .navigation.pagination .nav-links a:hover.page-numbers ,.site-main-container .navigation.pagination .nav-links .page-numbers.current').css('color', to);
             $('.site-main-container, .site-main-container .navigation.pagination .nav-links .page-numbers').css('background', to);
         });
     });
 
-    wp.customize('wbts_main_text_color', function (value) {
+    wp.customize('wbts_content_text_color', function (value) {
         value.bind(function (to) {
             $('.site-main-container').css('color', to);
         });
     });
 
-    wp.customize('wbts_secondary_text_color', function (value) {
+    wp.customize('wbts_content_secondary_text_color', function (value) {
         value.bind(function (to) {
             $('.site-main-container .site-content h1, .site-main-container .site-content h2, .site-main-container .site-content h3, .site-main-container .site-content h4, .site-main-container .site-content h5, .site-main-container .site-content h6,         .site-main-container .site-content h1>a, .site-main-container .site-content h2>a, .site-main-container .site-content h3>a, .site-main-container .site-content h4>a, .site-main-container .site-content h5>a, .site-main-container .site-content h6>a').css('color', to);
         });
     });
 
-    wp.customize('wbts_link_color', function (value) {
+    wp.customize('wbts_content_link_color', function (value) {
         value.bind(function (to) {
             $('.site-main-container a, .site-main-container .navigation.pagination .nav-links .page-numbers,.site-main-container .navigation.pagination .nav-links a:hover.page-numbers , .site-main-container .navigation.pagination .nav-links .page-numbers.current ').css('color', to);
             $('.site-main-container .navigation.pagination .nav-links .page-numbers, .site-main-container .navigation.pagination .nav-links a:hover.page-numbers , .site-main-container .navigation.pagination .nav-links .page-numbers.current').css('border-color', to);
@@ -118,7 +118,7 @@
     
     var customizeFooterHover = function(wbts_footer_background_color, wbts_footer_link_color) { 
             var style, el;  
-            var wbts_background_content_color = wp.customize.value('wbts_background_content_color')(); 
+            var wbts_content_background_color = wp.customize.value('wbts_content_background_color')(); 
             
             style = '<style class="hover-styles">'
                     + '.site-footer-widgetbar, .site-footer .row {'
@@ -136,7 +136,7 @@
                     + 'color: ' + wbts_footer_link_color + ';'
                     + '}'
                     + '.site-footer .site-social .fa-stack:hover .fa-circle{ '
-                    + 'color: ' + wbts_background_content_color + ' !;' 
+                    + 'color: ' + wbts_content_background_color + ' !;' 
                     + '}'
                     + '</style>';
 
