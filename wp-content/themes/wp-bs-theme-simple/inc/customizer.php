@@ -39,13 +39,6 @@ add_action('customize_preview_init', 'wp_bs_theme_simple_customize_preview_js');
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function wp_bs_theme_simple_customize_register($wp_customize) {
-    // define transport-method for build-ins
-    $wp_customize->get_setting('blogname')->transport = 'postMessage';
-    $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
-    $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
-
-
-
 
     /* Main option Settings Panel */
     $wp_customize->add_panel('wp_bs_theme_simple_main_options', array(
@@ -55,15 +48,8 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         'title' => __('Theme Options', 'wp-bs-theme-simple'),
         'description' => __('Panel to update theme options', 'sparkling'), // Include html tags such as <p>.
     ));
-
-
-    /*
-     * TODO
-      Textfarbe
-      Hintergrundfarbe
-     */
-
-
+     
+ 
  
     /**
      *  Section: Color Schemes
@@ -163,7 +149,7 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         'section' => 'wp_bs_theme_simple_header',
         'type' => 'checkbox',
         'settings' => 'wbts_header_fullwidth',
-        'priority' => 12,
+        'priority' => 1,
     ));
 
     // bg-color
@@ -177,11 +163,8 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         'description' => __('Default used if no color is selected', 'wp-bs-theme-simple'),
         'section' => 'wp_bs_theme_simple_header',
         'settings' => 'wbts_header_background_color'
-    )));
-
-
-
-
+    ))); 
+    
 
     /* Section: Content */
     $wp_customize->add_section('wp_bs_theme_simple_content', array(
@@ -282,6 +265,17 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         'section' => 'wp_bs_theme_simple_footer',
         'settings' => 'wbts_footer_text_color'
     )));
+    
+    
+
+
+    /* Default WordPress Theme Customization */
+    $wp_customize->get_setting('blogname')->transport = 'postMessage';
+    $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
+    $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
+    
+    // move header-text-color to Theme-Options-Section 'Header'
+    $wp_customize->get_control('header_textcolor' )->section = 'wp_bs_theme_simple_header';
 }
 
 add_action('customize_register', 'wp_bs_theme_simple_customize_register');
@@ -294,16 +288,16 @@ add_action('customize_register', 'wp_bs_theme_simple_customize_register');
  * The order of colors in a colors array:
  * 1. Main Background Color         - background_color
  * 2. Page Background Color         - wbts_content_background_color
- * 3. Link Color                    - wbts_link_color
- * 4. Main Text Color.              - wbts_main_text_color
- * 5. Secondary Text Color          - wbts_secondary_text_color
+ * 3. Link Color                    - wbts_content_link_color
+ * 4. Main Text Color.              - wbts_content_text_color
+ * 5. Secondary Text Color          - wbts_content_secondary_text_color
  * 6. Header Text Color             - header_textcolor
  * 7. Navigation Background Color   - wbts_nav_background_color
  * 8. Navigation Link Color         - wbts_nav_link_color
- * 6. Header Background Color       - header_textcolor
- * 9. Footer Background Color       - wbts_footer_background_color
- * 10. Footer Link Color            - wbts_footer_link_color
- * 11. Footer Text Color            - wbts_footer_text_color
+ * 9. Header Background Color       - wbts_header_background_color
+ * 10. Footer Background Color      - wbts_footer_background_color
+ * 11. Footer Link Color            - wbts_footer_link_color
+ * 12. Footer Text Color            - wbts_footer_text_color
  *
  * @since WP-bs-theme-simple 0.0.1
  *
