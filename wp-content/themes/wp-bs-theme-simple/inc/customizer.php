@@ -237,7 +237,7 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         'sanitize_callback' => 'wp_bs_theme_simple_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'wbts_footer_background_color', array(
-        'label' => __('Navbar Background Color', 'wp-bs-theme-simple'),
+        'label' => __('Footer Background Color', 'wp-bs-theme-simple'),
         'section' => 'wp_bs_theme_simple_footer',
         'settings' => 'wbts_footer_background_color'
     )));
@@ -249,7 +249,7 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         'sanitize_callback' => 'wp_bs_theme_simple_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'wbts_footer_link_color', array(
-        'label' => __('Navbar Link Color', 'wp-bs-theme-simple'),
+        'label' => __('Footer Link Color', 'wp-bs-theme-simple'),
         'section' => 'wp_bs_theme_simple_footer',
         'settings' => 'wbts_footer_link_color'
     )));

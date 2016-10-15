@@ -60,7 +60,7 @@
      * add style-tag to head for hover-effect
      * because the css()-function adds an inline style, it is not possible
      * to add a :hover function
-     * Instead a whole style-tag including is added or replaced
+     * Instead a whole style-tag is added or replaced
      * 
      * @param {type} wbts_nav_background_color
      * @param {type} wbts_nav_link_color 
