@@ -209,29 +209,29 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
 
             /*content*/
             .site-main-container { 
-                background: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
-                color: <?php echo get_theme_mod('wbts_main_text_color', $colorScheme[3]); ?>;
+                background: <?php echo get_theme_mod('wbts_content_background_color', $colorScheme[1]); ?>;
+                color: <?php echo get_theme_mod('wbts_content_text_color', $colorScheme[3]); ?>;
             }
 
             .site-main-container a, 
             .site-footer a 
             { 
-                color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
+                color: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[4]); ?>;
             } 
 
             /*bootstrap pagination*/ 
             .site-main-container .navigation.pagination .nav-links .page-numbers {
-                color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
-                background: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
-                border-color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
+                color: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[4]); ?>;
+                background: <?php echo get_theme_mod('wbts_content_background_color', $colorScheme[1]); ?>;
+                border-color: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[4]); ?>;
             }  
             .bs-pagination .navigation.pagination .nav-links .page-numbers:focus,
             .bs-pagination .navigation.pagination .nav-links a:hover.page-numbers ,
             .bs-pagination .navigation.pagination .nav-links .page-numbers.current,
             .bs-pagination .navigation.pagination .nav-links .page-numbers.current:hover {
-                color: <?php echo get_theme_mod('wbts_background_content_color', $colorScheme[1]); ?>;
-                background: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
-                border-color: <?php echo get_theme_mod('wbts_link_color', $colorScheme[4]); ?>;
+                color: <?php echo get_theme_mod('wbts_content_background_color', $colorScheme[1]); ?>;
+                background: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[4]); ?>;
+                border-color: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[4]); ?>;
             }
 
 
@@ -248,7 +248,7 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
             .site-main-container  h4>a,
             .site-main-container  h5>a,
             .site-main-container  h6>a { 
-                color: <?php echo get_theme_mod('wbts_secondary_text_color', $colorScheme[4]); ?>;
+                color: <?php echo get_theme_mod('wbts_content_secondary_text_color', $colorScheme[4]); ?>;
             }
 
             /*footer*/ 
