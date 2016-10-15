@@ -1,4 +1,3 @@
-
 var timer = require("grunt-timer");
 
 module.exports = function (grunt) {
@@ -6,7 +5,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         clean: {
-            dev: ['dev/css/<%= pkg.name %>.css'],
+            dev: ['dev/css/*.css'],
             dist: ['css/*', 'js/*', 'fonts/*'],
         },
         copy: {
@@ -16,15 +15,18 @@ module.exports = function (grunt) {
                         cwd: 'dev/js',
                         src: ['*'],
                         dest: 'js/'
-                    }]
+                    }, {
+                        expand: true,
+                        cwd: 'dev/css/',
+                        src: ['*'],
+                        dest: 'css/',
+                        rename: function (dest, src) {
+                            return dest + src.replace(/\.css$/, ".min.css");
+                        }
+                    }],
             },
             dist: {
                 files: [{
-                        expand: true,
-                        cwd: 'dev/js',
-                        src: ['*'],
-                        dest: 'js/'
-                    }, {
                         // Fonts: Font-Awesome
                         expand: true,
                         cwd: 'node_modules/font-awesome/fonts',
@@ -53,7 +55,8 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     // use @import in main file
-                    'dev/css/<%= pkg.name %>.css': 'dev/scss/app.scss'
+                    'dev/css/<%= pkg.name %>.css': 'dev/scss/app.scss',
+                    'dev/css/<%= pkg.name %>-quicksand.css': 'dev/scss/app-quicksand.scss'
                 }
             }
         },
@@ -70,9 +73,7 @@ module.exports = function (grunt) {
                 ]
             },
             dist: {
-                src: 'dev/css/<%= pkg.name %>.css',
-                dest: 'css/<%= pkg.name %>.min.css'
-
+                src: 'dev/css/*.css'
             }
         },
         jshint: {
@@ -115,6 +116,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.registerTask('build', ['clean', 'copy', 'sass', 'postcss']);
+    grunt.registerTask('build', ['clean', 'sass', 'postcss', 'copy']);
     grunt.registerTask("default", ['clean:dev', 'copy:dev', 'sass', 'postcss', 'watch']);
 };
