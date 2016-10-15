@@ -6,8 +6,47 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         clean: {
-            dist: ['css/*', 'js/*', 'fonts'],
-            dev: ['dev/css/<%= pkg.name %>.css', 'fonts'],
+            dev: ['dev/css/<%= pkg.name %>.css'],
+            dist: ['css/*', 'js/*', 'fonts/*'],
+        },
+        copy: {
+            dev: {
+                files: [{
+                        expand: true,
+                        cwd: 'dev/js',
+                        src: ['*'],
+                        dest: 'js/'
+                    }]
+            },
+            dist: {
+                files: [{
+                        expand: true,
+                        cwd: 'dev/js',
+                        src: ['*'],
+                        dest: 'js/'
+                    }, {
+                        // Fonts: Font-Awesome
+                        expand: true,
+                        cwd: 'node_modules/font-awesome/fonts',
+                        src: ['*'],
+                        dest: 'fonts/'
+                    }, {
+                        // CSS- Font-Awesome
+                        src: 'node_modules/font-awesome/css/font-awesome.min.css',
+                        dest: 'css/font-awesome.min.css',
+                    }, {
+                        // JS- Tether
+                        src: 'node_modules/tether/dist/js/tether.min.js',
+                        dest: 'js/tether.min.js',
+                    }, {
+                        // JS - Bootstrap
+                        src: 'node_modules/bootstrap/dist/js/bootstrap.js',
+                        dest: 'js/bootstrap.min.js',
+                    }
+                ]
+
+
+            }
         },
         sass: {
             // custom css
@@ -18,61 +57,22 @@ module.exports = function (grunt) {
                 }
             }
         },
-        copy: {
-            dev: {
-                files: [
-                    {
-                        // Fonts: Font-Awesome
-                        expand: true,
-                        cwd: 'node_modules/font-awesome/fonts',
-                        src: ['*'],
-                        dest: 'fonts/'
-                    }, {
-                        // CSS- Font-Awesome
-                        src: 'node_modules/font-awesome/css/font-awesome.css',
-                        dest: 'dev/css/font-awesome.css',
-                    }, {
-                        // JS- Tether
-                        src: 'node_modules/tether/dist/js/tether.js',
-                        dest: 'dev/js/tether.js',
-                    }, {
-                        // JS - Bootstrap
-                        src: 'node_modules/bootstrap/dist/js/bootstrap.js',
-                        dest: 'dev/js/bootstrap.js',
-                    }
-                ]
-
-
-            },
-            dist: {
-                files: [
-                    {
-                        // CSS -all
-                        expand: true,
-                        cwd: 'dev/css',
-                        src: ['*'],
-                        dest: 'css/'
-                    }, {
-                        // JS - all
-                        expand: true,
-                        cwd: 'dev/js',
-                        src: ['*'],
-                        dest: 'js/'
-                    },
-                ]
-
-
-            }
-        },
         postcss: {
             options: {
+                map: {
+                    inline: false, // save all sourcemaps as separate files...
+                    annotation: 'css/maps/' // ...to the specified directory
+                },
                 processors: [
                     require('pixrem')(), // add fallbacks for rem units
-                    require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes 
+                    require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+                    require('cssnano')() // minify the result
                 ]
             },
             dist: {
                 src: 'dev/css/<%= pkg.name %>.css',
+                dest: 'css/<%= pkg.name %>.min.css'
+
             }
         },
         jshint: {
@@ -88,23 +88,18 @@ module.exports = function (grunt) {
         watch: {
             js: {
                 files: [
-                    'Gruntfile.js',
-//                    'node_modules/bootstrap/dist/js/*.js',
                     'dev/js/*.js'
                 ],
-//                tasks: ['concat:js', 'jshint'],
-                tasks: ['clean', 'sass', 'postcss', 'copy'],
+                tasks: ['copy:dev'],
                 options: {
                     livereload: true,
                 }
             },
             css: {
                 files: [
-                    'dev/scss/*.scss',
-                    'node_modules/bootstrap/dist/css/*.css'
+                    'dev/scss/*.scss'
                 ],
-//                tasks: ['sass', 'concat:css'],
-                tasks: ['clean', 'sass', 'postcss', 'copy'],
+                tasks: ['clean:dev', 'sass', 'postcss'],
                 options: {
                     livereload: true,
                 }
@@ -120,9 +115,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
-//    grunt.registerTask('test', ['jshint']);
-//    grunt.registerTask("default", ['clean', 'sass', 'postcss', 'copy', 'concat', 'watch']);
-//    grunt.registerTask('build', ['clean', 'sass', 'postcss', 'copy', 'concat', 'cssmin', 'uglify']);
-
-    grunt.registerTask("default", ['clean', 'sass', 'postcss', 'copy', 'watch']);
+    grunt.registerTask('build', ['clean', 'copy', 'sass', 'postcss']);
+    grunt.registerTask("default", ['clean:dev', 'copy:dev', 'sass', 'postcss', 'watch']);
 };

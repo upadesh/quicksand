@@ -448,17 +448,17 @@ if (!function_exists('wp_bs_theme_simple_styles')) :
         // check if custom-thememod exists 
         $currentThemeMod = get_theme_mod('color_scheme', 'default');
         $currentThemeMod = $currentThemeMod === 'default' ? '' : '-' . $currentThemeMod;
-        $styleSheetToLoad = get_template_directory_uri() . '/css/wp-bs-theme-simple' . $currentThemeMod . '.css';
-        if (!file_exists(get_template_directory() . '/css/wp-bs-theme-simple' . $currentThemeMod . '.css')) {
+        $styleSheetToLoad = get_template_directory_uri() . '/css/wp-bs-theme-simple' . $currentThemeMod . '.min.css';
+        if (!file_exists(get_template_directory() . '/css/wp-bs-theme-simple' . $currentThemeMod . '.min.css')) {
             // not available, load the default one instead
-            $styleSheetToLoad = get_template_directory_uri() . '/css/wp-bs-theme-simple.css';
+            $styleSheetToLoad = get_template_directory_uri() . '/css/wp-bs-theme-simple.min.css';
         }
 
         // Theme stylesheet-description
         wp_enqueue_style('wp-bs-theme-simple-desc-style', get_stylesheet_uri());
 
         // Theme stylesheet
-        wp_enqueue_style('wp-bs-theme-simple-style-font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array(), $wp_bs_theme_simple_version);
+        wp_enqueue_style('wp-bs-theme-simple-style-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), $wp_bs_theme_simple_version);
         wp_enqueue_style('wp-bs-theme-simple-style-theme', $styleSheetToLoad, array(), $wp_bs_theme_simple_version);
     }
 
@@ -477,8 +477,8 @@ if (!function_exists('wp_bs_theme_simple_scripts')) :
     function wp_bs_theme_simple_scripts() {
         global $wp_bs_theme_simple_version;
         // tether is needed by bs for tooltips
-        wp_enqueue_script('wp-bs-theme-simple-script-tether', get_template_directory_uri() . '/js/tether.js', array(), $wp_bs_theme_simple_version, true);
-        wp_enqueue_script('wp-bs-theme-simple-script-bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), $wp_bs_theme_simple_version, true);
+        wp_enqueue_script('wp-bs-theme-simple-script-tether', get_template_directory_uri() . '/js/tether.min.js', array(), $wp_bs_theme_simple_version, true);
+        wp_enqueue_script('wp-bs-theme-simple-script-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), $wp_bs_theme_simple_version, true);
     }
 
 endif;
