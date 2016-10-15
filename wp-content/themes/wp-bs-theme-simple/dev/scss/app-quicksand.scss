@@ -1,9 +1,11 @@
 /**
- * write your scss-code in a sepereted file
+ * main file for color-scheme: quicksand
+ * 
+ * write your scss-code in a separeted file
  */ 
 
 /* change bootsrap-vars in here */
-@import 'bootstrap-variables';
+@import 'bootstrap-variables-quicksand';
 @import 'navbar';
 @import 'fonts';
 @import 'post';

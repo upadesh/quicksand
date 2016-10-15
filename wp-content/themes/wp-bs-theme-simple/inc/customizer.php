@@ -289,7 +289,7 @@ add_action('customize_register', 'wp_bs_theme_simple_customize_register');
  * 1. Main Background Color         - background_color
  * 2. Page Background Color         - wbts_content_background_color
  * 3. Link Color                    - wbts_content_link_color
- * 4. Main Text Color.              - wbts_content_text_color
+ * 4. Content Text Color            - wbts_content_text_color
  * 5. Secondary Text Color          - wbts_content_secondary_text_color
  * 6. Header Text Color             - header_textcolor
  * 7. Navigation Background Color   - wbts_nav_background_color
@@ -343,19 +343,20 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#d1d1d1',
             ),
         ),
+//        https://www.mediaevent.de/tutorial/farbcodes.html
         'quicksand' => array(
             'label' => __('Quicksand', 'wp-bs-theme-simple'),
             'colors' => array(
-                '#dd9933',
-                '#f2d976',
-                '#a33e25',
-                '#84401e',
-                '#680404',
-                '#dd9933',
-                '#f2d976',
-                '#84401e',
-                '#f2d976',
-                '#510000',
+                '#ffdead',
+                '#faebd7',
+                '#deb887',
+                '#cd853f',
+                '#f4a460',
+                '#deb887',
+                '#faebd7',
+                '#cd853f',
+                '#faebd7',
+                '#350000',
                 '#dd9933',
                 '#a33e25',
             ),

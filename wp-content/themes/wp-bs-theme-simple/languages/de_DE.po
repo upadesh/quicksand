@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-bs-theme-simple\n"
-"POT-Creation-Date: 2016-10-14 00:00+0200\n"
-"PO-Revision-Date: 2016-10-14 00:11+0200\n"
+"POT-Creation-Date: 2016-10-15 21:44+0200\n"
+"PO-Revision-Date: 2016-10-15 21:47+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -93,19 +93,19 @@ msgstr "Erscheint unterhalb des Inhalts von Beiträgen und Seiten."
 msgid "on"
 msgstr "am"
 
-#: functions.php:570
+#: functions.php:571
 msgid "Comment"
 msgstr "Kommentar"
 
-#: functions.php:605
+#: functions.php:606
 msgid "Name"
 msgstr "Name"
 
-#: functions.php:607
+#: functions.php:608
 msgid "Email"
 msgstr "Email"
 
-#: functions.php:609
+#: functions.php:610
 msgid "Website"
 msgstr "Webseite"
 
@@ -149,78 +149,94 @@ msgstr ""
 "WP-bs-theme-simple benötigt mindestens die WordPress Version %s. Sie haben "
 "die Version %s. Bitte updaten und nochmals versuchen. "
 
-#: inc/customizer.php:61
-msgid "Base Color Scheme"
-msgstr "Basis-Farbvorlage"
-
-#: inc/customizer.php:73
-msgid "Header Background Color"
-msgstr "Header Hintergrundfarbe"
-
-#: inc/customizer.php:78
-msgid "Content Background Color"
-msgstr "Inhalt Hintergrundfarbe"
-
-#: inc/customizer.php:83
-msgid "Content Link Color"
-msgstr "Inhalt Linkfarbe"
-
-#: inc/customizer.php:88
-msgid "Content Text Color"
-msgstr "Inhalt Textfarbe"
-
-#: inc/customizer.php:93
-msgid "Secondary Text Color"
-msgstr "Zweite Textfarbe"
-
-#: inc/customizer.php:98
-msgid "Navbar Background Color"
-msgstr "Navbar Hintergrundfarbe"
-
-#: inc/customizer.php:103
-msgid "Navbar Link Color"
-msgstr "Navbar Linkfarbe"
-
-#: inc/customizer.php:108
-msgid "Footer Background Color"
-msgstr "Footer Hintergrundfarbe"
-
-#: inc/customizer.php:113
-msgid "Footer Link Color"
-msgstr "Footer Linkfarbe"
-
-#: inc/customizer.php:118
-msgid "Footer Text Color"
-msgstr "Footer Textfarbe"
-
-#: inc/customizer.php:142
+#: inc/customizer.php:48
 msgid "Theme Options"
 msgstr "Theme Einstellungen"
 
-#: inc/customizer.php:153
-msgid "Navigation Fullwidth:"
+#: inc/customizer.php:49
+msgid "Panel to update theme options"
+msgstr "Panel um Theme-Einstellungen zu bearbeiten"
+
+#: inc/customizer.php:63 inc/customizer.php:75
+msgid "Color Schemes"
+msgstr "Farb-Schematas"
+
+#: inc/customizer.php:84
+msgid "Navigation"
+msgstr "Navigation"
+
+#: inc/customizer.php:97
+msgid "Navigation Fullwidth"
 msgstr "Navigation volle Breite"
 
-#: inc/customizer.php:167
-msgid "Header Fullwidth:"
+#: inc/customizer.php:111 inc/customizer.php:252
+msgid "Navbar Link Color"
+msgstr "Navbar Linkfarbe"
+
+#: inc/customizer.php:124 inc/customizer.php:240
+msgid "Navbar Background Color"
+msgstr "Navbar Hintergrundfarbe"
+
+#: inc/customizer.php:135
+msgid "Header"
+msgstr "Header"
+
+#: inc/customizer.php:148
+msgid "Header Fullwidth"
 msgstr "Header volle Breite"
 
-#: inc/customizer.php:194
-msgid "Social Media Icons"
-msgstr "Social Media Icons"
+#: inc/customizer.php:162
+msgid "Header Background Color"
+msgstr "Header Hintergrundfarbe"
 
-#: inc/customizer.php:256 inc/customizer.php:265
-#, php-format
-msgid "%s icon"
-msgstr "%s icon"
+#: inc/customizer.php:163
+msgid "Default used if no color is selected"
+msgstr "Default-Farbe, wenn keine andere selektiert ist"
 
-#: inc/customizer.php:323
+#: inc/customizer.php:171
+msgid "Content"
+msgstr "Inhalt"
+
+#: inc/customizer.php:183
+msgid "Content Background Color"
+msgstr "Inhalt Hintergrundfarbe"
+
+#: inc/customizer.php:195
+msgid "Content Link Color"
+msgstr "Inhalt Linkfarbe"
+
+#: inc/customizer.php:208
+msgid "Content Text Color"
+msgstr "Inhalt Textfarbe"
+
+#: inc/customizer.php:220
+msgid "Secondary Text Color"
+msgstr "Zweite Textfarbe"
+
+#: inc/customizer.php:228
+msgid "Footer"
+msgstr "Footer"
+
+#: inc/customizer.php:264
+msgid "Footer Text Color"
+msgstr "Footer Textfarbe"
+
+#: inc/customizer.php:330
 msgid "Default"
 msgstr "Standard"
 
-#: inc/customizer.php:340
+#: inc/customizer.php:347
 msgid "Quicksand"
 msgstr "Quicksand"
+
+#: inc/customizer.php:491
+msgid "Social Media Icons"
+msgstr "Social Media Icons"
+
+#: inc/customizer.php:555 inc/customizer.php:564
+#, php-format
+msgid "%s icon"
+msgstr "%s icon"
 
 #: inc/template-tags.php:24
 msgid "Author"
@@ -324,6 +340,21 @@ msgid ""
 msgstr ""
 "Es sieht so aus, als ob wir nicht das finden könnten, wonach Sie gesucht "
 "haben. Möglicherweise hilft eine Suche."
+
+#~ msgid "Base Color Scheme"
+#~ msgstr "Basis-Farbvorlage"
+
+#~ msgid "Footer Background Color"
+#~ msgstr "Footer Hintergrundfarbe"
+
+#~ msgid "Footer Link Color"
+#~ msgstr "Footer Linkfarbe"
+
+#~ msgid "Navigation Fullwidth:"
+#~ msgstr "Navigation volle Breite"
+
+#~ msgid "Header Fullwidth:"
+#~ msgstr "Header volle Breite"
 
 #~ msgid ""
 #~ "Twenty Sixteen is a modernized take on an ever-popular WordPress layout — "
