@@ -180,18 +180,18 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
             }
 
             .navbar-toggler,
-            #menu-primary .menu-item .nav-link , 
-            #menu-primary .menu-item .dropdown-item {
+            .nav-wrapper .menu-item .nav-link , 
+            .nav-wrapper .menu-item .dropdown-item {
                 color: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[7]); ?>;
             }  
 
-            #menu-primary .menu-item .dropdown-item.active {
+            .nav-wrapper .menu-item .dropdown-item.active {
                 color: <?php echo get_theme_mod('wbts_nav_background_color', $colorScheme[7]); ?>;
                 background: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[7]); ?>;
             }
 
 
-            #menu-primary .menu-item .dropdown-item:hover {
+            .nav-wrapper .menu-item .dropdown-item:hover {
                 color: <?php echo get_theme_mod('wbts_nav_background_color', $colorScheme[7]); ?>;
                 background: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[7]); ?>;
             }
