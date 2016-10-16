@@ -354,34 +354,14 @@ if (!function_exists('wp_bs_theme_simple_get_google_fonts')) :
         /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
         if ('off' !== _x('on', 'Raleway font: on or off', 'wp-bs-theme-simple')) {
             $fonts[] = 'Raleway:400,700,900,400italic,700italic,900italic';
-        }
-
-        if ('off' !== _x('on', 'Titillium Web font: on or off', 'wp-bs-theme-simple')) {
-            $fonts[] = 'Titillium Web:400,700,900,400italic,700italic,900italic';
-        }
+        } 
 
         if ('off' !== _x('on', 'Rokkitt font: on or off', 'wp-bs-theme-simple')) {
             $fonts[] = 'Rokkitt:400,700,900,400italic,700italic,900italic';
         }
         if ('off' !== _x('on', 'Source Code Pro: on or off', 'wp-bs-theme-simple')) {
             $fonts[] = 'Source Code Pro:400,700,900,400italic,700italic,900italic';
-        }
-
-        if ('off' !== _x('on', 'Dosis font: on or off', 'wp-bs-theme-simple')) {
-            $fonts[] = 'Dosis:400,700,900,400italic,700italic,900italic';
-        }
-
-        if ('off' !== _x('on', 'Inconsolata font: on or off', 'wp-bs-theme-simple')) {
-            $fonts[] = 'Inconsolata:400,700,900,400italic,700italic,900italic';
-        }
-
-        if ('off' !== _x('on', 'Rubik font: on or off', 'wp-bs-theme-simple')) {
-            $fonts[] = 'Rubik:400,700,900,400italic,700italic,900italic';
-        }
-
-        if ('off' !== _x('on', 'Cabin font: on or off', 'wp-bs-theme-simple')) {
-            $fonts[] = 'Cabin:400,700,900,400italic,700italic,900italic';
-        }
+        } 
 
         return $fonts;
     }
