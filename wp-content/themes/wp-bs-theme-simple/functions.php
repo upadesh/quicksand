@@ -367,6 +367,21 @@ if (!function_exists('wp_bs_theme_simple_get_google_fonts')) :
             $fonts[] = 'Inconsolata:400,700,900,400italic,700italic,900italic';
         }
 
+        if ('off' !== _x('on', 'Rubik font: on or off', 'wp-bs-theme-simple')) {
+            $fonts[] = 'Rubik:400,700,900,400italic,700italic,900italic';
+        }
+
+        if ('off' !== _x('on', 'Cabin font: on or off', 'wp-bs-theme-simple')) {
+            $fonts[] = 'Cabin:400,700,900,400italic,700italic,900italic';
+        }
+
+        if ('off' !== _x('on', 'Rokkitt font: on or off', 'wp-bs-theme-simple')) {
+            $fonts[] = 'Rokkitt:400,700,900,400italic,700italic,900italic';
+        }
+        if ('off' !== _x('on', 'Anonymous Pro font: on or off', 'wp-bs-theme-simple')) {
+            $fonts[] = 'Anonymous Pro:400,700,900,400italic,700italic,900italic';
+        }
+
         return $fonts;
     }
 
