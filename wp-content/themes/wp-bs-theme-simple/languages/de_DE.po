@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-bs-theme-simple\n"
-"POT-Creation-Date: 2016-10-15 21:44+0200\n"
-"PO-Revision-Date: 2016-10-15 21:47+0200\n"
+"POT-Creation-Date: 2016-10-16 19:47+0200\n"
+"PO-Revision-Date: 2016-10-16 19:48+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -39,7 +39,7 @@ msgstr ""
 #: archive.php:58 index.php:57 search.php:47 template-parts/content-link.php:43
 #: template-parts/content-page-full.php:30 template-parts/content-page.php:30
 #: template-parts/content-single-link.php:25
-#: template-parts/content-single.php:70 template-parts/content.php:41
+#: template-parts/content-single.php:70 template-parts/content.php:40
 msgid "Page"
 msgstr "Seite"
 
@@ -73,43 +73,48 @@ msgstr "Primäres Menü"
 msgid "Secondary Menu"
 msgstr "Sekundäres Menu"
 
-#: functions.php:315
+#: functions.php:317
 msgid "Sidebar"
 msgstr "Seitenleiste"
 
-#: functions.php:317
+#: functions.php:319
 msgid "Add widgets here to appear in your sidebar."
 msgstr "Widgets hier hinzufügen, um sie in die Seitenleiste einzubauen."
 
-#: functions.php:325
+#: functions.php:327
 msgid "Sidebar-Footer"
 msgstr "Seitenleiste-Footer"
 
-#: functions.php:327
+#: functions.php:329
 msgid "Appears at the bottom of the content on posts and pages."
 msgstr "Erscheint unterhalb des Inhalts von Beiträgen und Seiten."
 
-#: functions.php:353 functions.php:357 functions.php:361 functions.php:365
+#: functions.php:355 functions.php:359 functions.php:362
 msgid "on"
 msgstr "am"
 
-#: functions.php:571
+#: functions.php:585
 msgid "Comment"
 msgstr "Kommentar"
 
-#: functions.php:606
+#: functions.php:620
 msgid "Name"
 msgstr "Name"
 
-#: functions.php:608
+#: functions.php:622
 msgid "Email"
 msgstr "Email"
 
-#: functions.php:610
+#: functions.php:624
 msgid "Website"
 msgstr "Webseite"
 
-#: header.php:32
+#: functions.php:644
+msgid "To view this protected post, enter the password below:"
+msgstr ""
+"Geben Sie bitte Ihr Kennwort ein, um diesen geschützten Beitrag zu sehen"
+
+#: header.php:30
 msgid "Skip to content"
 msgstr "Zum Inhalt springen"
 
@@ -127,7 +132,7 @@ msgstr "Volle Größe"
 
 #: image.php:77 template-parts/content-link.php:57
 #: template-parts/content-page-full.php:40 template-parts/content-page.php:40
-#: template-parts/content-single.php:91 template-parts/content.php:55
+#: template-parts/content-single.php:91 template-parts/content.php:54
 #, php-format
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "<span class=\"screen-reader-text\">&#8222;%s&#8220;</span> bearbeiten"
@@ -169,11 +174,11 @@ msgstr "Navigation"
 msgid "Navigation Fullwidth"
 msgstr "Navigation volle Breite"
 
-#: inc/customizer.php:111 inc/customizer.php:252
+#: inc/customizer.php:111
 msgid "Navbar Link Color"
 msgstr "Navbar Linkfarbe"
 
-#: inc/customizer.php:124 inc/customizer.php:240
+#: inc/customizer.php:124
 msgid "Navbar Background Color"
 msgstr "Navbar Hintergrundfarbe"
 
@@ -217,6 +222,14 @@ msgstr "Zweite Textfarbe"
 msgid "Footer"
 msgstr "Footer"
 
+#: inc/customizer.php:240
+msgid "Footer Background Color"
+msgstr "Footer Hintergrundfarbe"
+
+#: inc/customizer.php:252
+msgid "Footer Link Color"
+msgstr "Footer Linkfarbe"
+
 #: inc/customizer.php:264
 msgid "Footer Text Color"
 msgstr "Footer Textfarbe"
@@ -225,15 +238,15 @@ msgstr "Footer Textfarbe"
 msgid "Default"
 msgstr "Standard"
 
-#: inc/customizer.php:347
+#: inc/customizer.php:348
 msgid "Quicksand"
 msgstr "Quicksand"
 
-#: inc/customizer.php:491
+#: inc/customizer.php:492
 msgid "Social Media Icons"
 msgstr "Social Media Icons"
 
-#: inc/customizer.php:555 inc/customizer.php:564
+#: inc/customizer.php:556 inc/customizer.php:565
 #, php-format
 msgid "%s icon"
 msgstr "%s icon"
@@ -268,7 +281,7 @@ msgstr "Categories"
 msgid "Tags"
 msgstr "Tags"
 
-#: inc/template-tags.php:192 template-parts/content-link.php:33
+#: inc/template-tags.php:190 template-parts/content-link.php:33
 #: template-parts/content.php:31
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
@@ -279,13 +292,9 @@ msgstr "<span class=\"screen-reader-text\">&#8222;%s&#8220; </span>weiterlesen"
 msgid "Search Results for: %s"
 msgstr "Suchergebnisse für: %s"
 
-#: searchform.php:15
+#: searchform.php:14
 msgid "..."
 msgstr "…"
-
-#: searchform.php:18 searchform.php:19
-msgid "Search"
-msgstr "Suche"
 
 #: single.php:50
 msgid "Previous post:"
@@ -310,7 +319,7 @@ msgstr "Empfohlen"
 
 #: template-parts/content-link.php:39 template-parts/content-page-full.php:26
 #: template-parts/content-page.php:26 template-parts/content-single-link.php:21
-#: template-parts/content-single.php:66 template-parts/content.php:37
+#: template-parts/content-single.php:66 template-parts/content.php:36
 msgid "Pages:"
 msgstr "Seiten:"
 
@@ -341,14 +350,11 @@ msgstr ""
 "Es sieht so aus, als ob wir nicht das finden könnten, wonach Sie gesucht "
 "haben. Möglicherweise hilft eine Suche."
 
+#~ msgid "Search"
+#~ msgstr "Suche"
+
 #~ msgid "Base Color Scheme"
 #~ msgstr "Basis-Farbvorlage"
-
-#~ msgid "Footer Background Color"
-#~ msgstr "Footer Hintergrundfarbe"
-
-#~ msgid "Footer Link Color"
-#~ msgstr "Footer Linkfarbe"
 
 #~ msgid "Navigation Fullwidth:"
 #~ msgstr "Navigation volle Breite"
