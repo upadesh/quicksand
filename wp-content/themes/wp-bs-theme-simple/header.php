@@ -17,9 +17,7 @@
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <?php if (is_singular() && pings_open(get_queried_object())) : ?>
             <link rel="pingback" href="<?php esc_attr(bloginfo('pingback_url')); ?>">
-        <?php endif; ?> 
-        <!--[if IE]><link rel="shortcut icon" href="img/favicon.ico"><![endif]-->
-        <!--<link rel="icon" href="img/favicon.ico">-->  
+        <?php endif; ?>  
         <?php wp_head(); ?> 
     </head>
     <body <?php body_class(); ?>>  

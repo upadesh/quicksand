@@ -505,7 +505,7 @@ function wp_bs_theme_simple_add_social_sites_customizer($wp_customize) {
         ));
 
         $wp_customize->add_control($social_site, array(
-            'label' => __("$social_site url:", 'wp-bs-theme-simple'),
+            'label' => $social_site ."url:",
             'section' => 'wp_bs_theme_simple_social_settings',
             'type' => 'text',
             'priority' => $priority,
