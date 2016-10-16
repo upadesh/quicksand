@@ -1,0 +1,40 @@
+/*
+ * widgets
+ */
+.widget { 
+    /* calendar-widget bugfix */ 
+    @media (max-width: 767px) {
+        #wp-calendar {
+            margin: 0 auto;
+        }
+    }
+    /*no bullets in lists*/
+    ul, ol {
+        list-style-type: none; 
+
+    }
+}
+
+/*stlye widgets in sidebar*/
+/*#secondary {
+    .widget {
+        ul {
+            @extend .list-group;
+            li {
+                @extend .list-group-item; 
+                ul { 
+                    li {
+                        border: none;
+                    }  
+                }
+            }  
+        }
+    } 
+}*/
+
+/*Table Bug*/
+.site-footer-widgetbar {
+    section.widget_calendar { 
+        overflow: hidden;
+    }
+}

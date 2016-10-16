@@ -1,0 +1,35 @@
+{
+  "name": "quicksand",
+  "version": "0.2.1",
+  "description": "Wordpress theme built with Bootstrap 4 ",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/piccard21/quicksand.git"
+  },
+  "author": "piccard@web.de",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "autoprefixer": "^6.5.0",
+    "bootstrap": "^4.0.0-alpha.4",
+    "cssnano": "^3.7.5",
+    "font-awesome": "^4.6.3",
+    "grunt": "latest",
+    "grunt-cli": "latest",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "latest",
+    "grunt-timer": "latest",
+    "pixrem": "^3.0.2",
+    "tether": "^1.1.1"
+  }
+}

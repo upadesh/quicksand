@@ -1,0 +1,46 @@
+/**
+ * color-scheme: quicksand
+ * 
+ * Copy variables from `_variables.scss` to this file to override default values
+ * without modifying source files.
+ *
+ * This is a custom color-scheme-file
+ * Copy 'bootstrap-variables.scss' and modify it to your gusto.
+ */  
+
+$enable-rounded: false; 
+
+/* main colors */
+$gray-dark:                 #a38566 !default;
+$gray:                      #ba9a75 !default;
+$gray-light:                #e8c892 !default;
+$gray-lighter:              #deb887 !default;
+$gray-lightest:             #faebd7 !default; 
+
+/* btn colors */
+$btn-secondary-color:            $gray-dark !default;
+$btn-secondary-bg:               $gray-light !default;
+$btn-secondary-border:           $gray;
+
+/*$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             $btn-primary-bg !default;
+
+
+$btn-info-color:                 #fff !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                $btn-info-bg !default;
+
+$btn-success-color:              #fff !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             $btn-success-bg !default;
+
+$btn-warning-color:              #fff !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             $btn-warning-bg !default;
+
+$btn-danger-color:               #fff !default;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              $btn-danger-bg !default;
+
+$btn-link-disabled-color:        $gray-light !default;*/
