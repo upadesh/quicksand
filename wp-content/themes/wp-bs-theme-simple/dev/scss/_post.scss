@@ -1,7 +1,7 @@
 /**
  * Main file for post-layout
  */
- 
+
 
 /* featured sticky post */
 .sticky-post {
@@ -43,7 +43,7 @@
         content: ' | ';
     }
 }
- 
+
 
 /*
  * thumbnail
@@ -89,6 +89,23 @@
         height: auto;
         max-width: 100%; 
     }
+
+    .page-links  {
+        a {
+            @extend .btn;
+            @extend .btn-outline-secondary;
+            margin-right: .3rem;
+            color: $gray;
+            background-image: none;
+            background-color: transparent;
+            border-color: $gray-light;
+        }
+        a:hover {
+            color: $gray-light;
+            background-color: $gray;
+            border-color: $gray;
+        }
+    }
 }
 
 
@@ -130,7 +147,7 @@
 /*
  * comments
  */
- 
+
 .comments-area  {
     .comment-respond {
         @extend .m-t-2;
