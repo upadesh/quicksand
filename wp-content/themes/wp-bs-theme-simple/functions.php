@@ -632,7 +632,7 @@ if (!function_exists('wp_bs_theme_simple_bootstrap4_comment_form_fields')) :
 
 endif;
 add_filter('comment_form_default_fields', 'wp_bs_theme_simple_bootstrap4_comment_form_fields');
- 
+
 
 if (!function_exists('wp_bs_theme_simple_password_form')) :
 
@@ -684,7 +684,7 @@ function wp_bs_theme_simple_hex2rgb($color) {
     return array('red' => $r, 'green' => $g, 'blue' => $b);
 }
 
-if (!function_exists('wp_bs_theme_simple_embed_oembed_html')) :
+if (!function_exists('wp_bs_theme_simple_bootstrap_wrap_oembed')) :
 
     /**
      * make videos responsive
@@ -696,12 +696,13 @@ if (!function_exists('wp_bs_theme_simple_embed_oembed_html')) :
      * 
      * @return string html
      */
-    function wp_bs_theme_simple_embed_oembed_html($html, $url, $attr, $post_id) {
-        return '<div class="video-container">' . $html . '</div>';
+    function wp_bs_theme_simple_bootstrap_wrap_oembed($html) {
+        $html = preg_replace('/(width|height)="\d*"\s/', "", $html); // Strip width and height #1
+        return'<div class="embed-responsive embed-responsive-16by9">' . $html . '</div>'; // Wrap in div element and return #3 and #4
     }
 
 endif;
-add_filter('embed_oembed_html', 'wp_bs_theme_simple_embed_oembed_html', 99, 4);
+add_filter('embed_oembed_html', 'wp_bs_theme_simple_bootstrap_wrap_oembed', 99, 4);
 
 
 /**
