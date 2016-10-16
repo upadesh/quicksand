@@ -49,14 +49,8 @@ get_header();
                 ?>
             </div>
             <?php
-        // If no content, include the "No posts found" template.
         else :
-            ?>  
-            <div class="bs-pagination"> 
-                get_template_part('template-parts/content', 'none'); 
-                ?> 
-            </div>
-        <?php
+            get_template_part('template-parts/content', 'none');
         endif;
         ?> 
     </main><!-- .site-main -->

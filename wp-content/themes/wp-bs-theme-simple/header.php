@@ -38,7 +38,10 @@
             <?php if (has_header_image()) { ?>
                 <div class="site-info custom-header-image" style="background: url(<?php header_image(); ?>); background-repeat: no-repeat; background-size: cover; height:<?php echo esc_attr(get_custom_header()->height); ?>px;">  
                     <div  class="site-info-wrapper">
-                        <h1 class="display-3 site-title"><?php esc_html( bloginfo('name') ); ?></h1> 
+                
+                        <h1 class="display-3 site-title">
+                           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                        </h1> 
                         <br>
                         <p class="lead site-description" ><?php esc_html( bloginfo('description', 'display') ); ?></p> 
                     </div>
@@ -47,7 +50,9 @@
             <?php } else { ?> 
                 <div class="site-info">  
                     <div  class="site-info-wrapper jumbotron"> 
-                        <h1 class="display-3 site-title"><?php esc_html( bloginfo('name') ); ?></h1>
+                        <h1 class="display-3 site-title">
+                           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                        </h1> 
                         <hr class="m-y-2">
                         <p class="lead site-description"><?php esc_html( bloginfo('description', 'display') ); ?></p> 
                     </div>

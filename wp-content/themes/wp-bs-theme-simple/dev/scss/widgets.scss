@@ -16,3 +16,9 @@
 }
 
 
+/*Table Bug*/
+.site-footer-widgetbar {
+    section.widget_calendar { 
+        overflow: hidden;
+    }
+}

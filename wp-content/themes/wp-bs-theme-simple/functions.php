@@ -198,6 +198,7 @@ if (!function_exists('wp_bs_theme_simple_customizer_css')) :
 
 
             /*site-header*/
+            .site-info-wrapper a,
             .site-info-wrapper .site-title,
             .site-info-wrapper .site-description {
                 color: #<?php echo get_header_textcolor(); ?>;
@@ -555,7 +556,7 @@ add_filter('body_class', 'wp_bs_theme_simple_body_classes');
 //add_filter('body_class', 'wp_bs_theme_simple_bs4_remove_tag_body_class');
 
 
-if (!function_exists('wp_bs_theme_simple_bootstrap4_comment_form')) :
+if (!function_exists('wp_bs_theme_simple_bs4_remove_tag_classes')) :
     /**
      * fix for the tag-bug. 
      * Unfortunately WP defines tag-classes, which are also
@@ -564,7 +565,7 @@ if (!function_exists('wp_bs_theme_simple_bootstrap4_comment_form')) :
      * 
      * @param type $classes 
      */
-    function _twbs_bootstrap_20542($classes) {
+    function wp_bs_theme_simple_bs4_remove_tag_classes($classes) {
         return array_diff($classes, array(
             'tag',
             'tag-pill',
