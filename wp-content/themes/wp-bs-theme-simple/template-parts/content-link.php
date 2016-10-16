@@ -11,7 +11,7 @@
         <!-- post-link --> 
         <div class="post-link">  
             <h1>
-                <a href="<?php echo get_url_in_content(get_the_content()); ?>">LINK: <?php the_title(); ?></a> 
+                <a href="<?php echo get_url_in_content(get_the_content()); ?>"><i class="fa fa-link" aria-hidden="true"></i> <?php the_title(); ?></a> 
             </h1>
         </div><!-- .post-link --> 
     </header><!-- .entry-header -->  

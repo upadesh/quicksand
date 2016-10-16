@@ -545,31 +545,40 @@ add_filter('body_class', 'wp_bs_theme_simple_body_classes');
  * @param mixed $classes
  * @return mixed
  */
-function bs4_remove_tag_body_class($classes) {
-    if (false !== ( $class = array_search('tag', $classes) )) {
-        unset($classes[$class]);
-    }
-    return $classes;
-}
-
-add_filter('body_class', 'bs4_remove_tag_body_class');
-
-
-//add_filter( 'body_class', '_twbs_bootstrap_20542', 10, 1 );
-//add_filter( 'post_class', '_twbs_bootstrap_20542', 10, 1 );
-//function _twbs_bootstrap_20542( $classes )
-//{
-//    return array_diff( $classes, array(
-//        'tag',
-//        'tag-pill',
-//        'tag-default',
-//        'tag-info',
-//        'tag-warning',
-//        'tag-danger',
-//        'tag-success',
-//        'tag-primary',
-//    ) );
+//function wp_bs_theme_simple_bs4_remove_tag_body_class($classes) {
+//    if (false !== ( $class = array_search('tag', $classes) )) {
+//        unset($classes[$class]);
+//    }
+//    return $classes;
 //}
+//
+//add_filter('body_class', 'wp_bs_theme_simple_bs4_remove_tag_body_class');
+
+
+if (!function_exists('wp_bs_theme_simple_bootstrap4_comment_form')) :
+    /**
+     * fix for the tag-bug. 
+     * Unfortunately WP defines tag-classes, which are also
+     * predefined in BS. So, just terminate them ;-)
+     * @param type $classes
+     * @return type
+     */
+    function _twbs_bootstrap_20542($classes) {
+        return array_diff($classes, array(
+            'tag',
+            'tag-pill',
+            'tag-default',
+            'tag-info',
+            'tag-warning',
+            'tag-danger',
+            'tag-success',
+            'tag-primary',
+                ));
+    }
+
+endif;
+add_filter('body_class', 'wp_bs_theme_simple_bs4_remove_tag_classes', 10, 1);
+add_filter('post_class', 'wp_bs_theme_simple_bs4_remove_tag_classes', 10, 1);
 
 
 
