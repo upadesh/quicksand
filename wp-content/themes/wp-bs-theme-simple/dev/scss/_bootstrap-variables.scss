@@ -13,16 +13,17 @@ $gray-dark:                 #373a3c !default;
 $gray:                      #55595c !default;
 $gray-light:                #818a91 !default;
 $gray-lighter:              #eceeef !default;
-$gray-lightest:             #f7f7f9 !default; 
-/*$gray-lightest:             #2cb5b1 !default;*/ 
+/*$gray-lightest:             #f7f7f9 !default;*/ 
+$gray-lightest:             #2cb5b1 !default; 
 
 
 
 
 /* btn colors */
-$btn-secondary-color:            $gray-dark !default;
-$btn-secondary-bg:               $gray-lightest !default;
-$btn-secondary-border:           $gray-light;
+/*use secondary for all submit & input-group buttons*/
+$btn-secondary-color:            #fff !default;
+$btn-secondary-bg:               $gray-lightest !default; 
+$btn-secondary-border:           $gray-lightest;
 
 /*$btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;

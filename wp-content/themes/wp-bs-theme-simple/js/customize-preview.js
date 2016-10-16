@@ -26,7 +26,7 @@
 
     wp.customize('header_textcolor', function (value) {
         value.bind(function (to) {
-            $('.site-info-wrapper .site-title, .site-info-wrapper .site-description').css('color', to);
+            $('.site-info-wrapper .site-title a, .site-info-wrapper .site-description').css('color', to);
         });
     });
 
