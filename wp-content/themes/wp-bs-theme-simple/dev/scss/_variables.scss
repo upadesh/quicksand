@@ -1,21 +1,35 @@
 /**
  * variables
- */    
+ */ 
 
+
+
+/* only for screen-readers */
+.screen-reader-text {
+    @extend .sr-only;
+}     
+
+ 
+/* alignment classes for img-floating */
 .aligncenter {
     @extend .m-x-auto;
+    margin: 0 auto 1.75em;
 }
 .alignright {
     @extend .pull-sm-right;
+    margin: 0.375em 0 1.75em 1.75em;
 }
 .alignleft {
     @extend .pull-sm-left;
+    margin: 0.375em 1.75em 1.75em 0;
 }
 
+
+/* blockquote & blockquote-footer */
 blockquote {
     @extend .blockquote;
     border-left: .25rem solid $gray-dark !important;
-}
+} 
 
 cite {
     @extend .blockquote-footer;

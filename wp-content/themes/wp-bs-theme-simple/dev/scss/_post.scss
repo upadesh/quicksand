@@ -1,11 +1,6 @@
 /**
  * Main file for post-layout
  */
-
-/* only for screen-readers */
-.screen-reader-text {
-    @extend .sr-only;
-}  
  
 
 /* featured sticky post */
@@ -67,14 +62,12 @@
     overflow: hidden;
 }  
 
-
-
-
-
-
 /*
- * content
+ * entries
  */
+.entry-title {
+    font-weight: bold;
+}
 
 /* 
  * for the WP-Test: reduce size of massively large image with no alignment.
