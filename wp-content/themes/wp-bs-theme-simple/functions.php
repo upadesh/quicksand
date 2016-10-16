@@ -87,7 +87,7 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
          */
         add_theme_support('post-thumbnails');
         // in list-view crop the image to a max-height of 300px
-        add_image_size('wp-bs-theme-simple-featured_image', 1200, 300, array('top', 'left'));
+//        add_image_size('wp-bs-theme-simple-featured_image', 1200, 300, array('top', 'left'));
         set_post_thumbnail_size(1200, 9999);
 
 
@@ -574,15 +574,15 @@ add_filter('body_class', 'bs4_remove_tag_body_class');
 
 
 
-if (!function_exists('bootstrap4_comment_form')) :
+if (!function_exists('wp_bs_theme_simple_bootstrap4_comment_form')) :
 
     /**
-     * same treatment like fields in bootstrap4_comment_form_fields
+     * same treatment like fields in wp_bs_theme_simple_bootstrap4_comment_form_fields
      * 
      * @param type $args
      * @return string
      */
-    function bootstrap4_comment_form($args) {
+    function wp_bs_theme_simple_bootstrap4_comment_form($args) {
         $args['comment_field'] = '<div class="form-group comment-form-comment">
             <label for="comment">' . _x('Comment', 'noun') . '</label> 
             <textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
@@ -593,13 +593,13 @@ if (!function_exists('bootstrap4_comment_form')) :
     }
 
 endif;
-add_filter('comment_form_defaults', 'bootstrap4_comment_form');
+add_filter('comment_form_defaults', 'wp_bs_theme_simple_bootstrap4_comment_form');
 
 
 
 
 
-if (!function_exists('bootstrap4_comment_form_fields')) :
+if (!function_exists('wp_bs_theme_simple_bootstrap4_comment_form_fields')) :
 
     /**
      * customize comment form
@@ -611,7 +611,7 @@ if (!function_exists('bootstrap4_comment_form_fields')) :
      * @param array $fields
      * @return string
      */
-    function bootstrap4_comment_form_fields($fields) {
+    function wp_bs_theme_simple_bootstrap4_comment_form_fields($fields) {
         $commenter = wp_get_current_commenter();
 
         $req = get_option('require_name_email');
@@ -631,7 +631,31 @@ if (!function_exists('bootstrap4_comment_form_fields')) :
     }
 
 endif;
-add_filter('comment_form_default_fields', 'bootstrap4_comment_form_fields');
+add_filter('comment_form_default_fields', 'wp_bs_theme_simple_bootstrap4_comment_form_fields');
+ 
+
+if (!function_exists('wp_bs_theme_simple_password_form')) :
+
+    /**
+     * customize password form
+     * 
+     * for password-protected posts  
+     */
+    function wp_bs_theme_simple_password_form() {
+        $o = '<form action="' . esc_url(site_url('wp-login.php?action=postpass', 'login_post')) . '" method="post" >'
+                . __("To view this protected post, enter the password below:")
+                . '<div class="input-group">'
+                . '<input type="password" class="form-control" name="post_password" size="20" maxlength="20">'
+                . '<span class="input-group-btn"> '
+                . '<button class="btn btn-secondary" href="#" type="submit">'
+                . '<i class="fa fa-unlock fa-lg"></i>'
+                . '</button></span></div>'
+                . '</form>';
+        return $o;
+    }
+
+endif;
+add_filter('the_password_form', 'wp_bs_theme_simple_password_form');
 
 /**
  * Converts a HEX value to RGB. 

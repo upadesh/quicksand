@@ -57,10 +57,10 @@
 }
 
 /* crop thumbnail in list-view */
-.crop-thumbnail {
+/*.crop-thumbnail {
     max-height: 300px;
     overflow: hidden;
-}  
+}  */
 
 /*
  * entries
@@ -91,6 +91,9 @@
     }
 
     .page-links  {
+        >.paged-link {
+            margin-right: .3rem;
+        }
         a {
             @extend .btn;
             @extend .btn-outline-secondary;
@@ -112,7 +115,7 @@
 
 
 /* Responsive Videos */
-.video-container {
+/*.video-container {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px;
@@ -128,7 +131,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-}
+}*/
 
 
 
@@ -136,10 +139,10 @@
 
 
 /*more space between paged-post pagination (<!-- nextpage -->)*/
-.paged-link {
+/*.paged-link {
     padding-left: .3rem;
     padding-right: .3rem;
-}
+}*/
 
 
 
