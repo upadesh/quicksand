@@ -15,7 +15,7 @@
 
     <div class="site-navigation"> 
         <nav class="navbar navbar-light bg-faded site-nav">
-            <button class="navbar-toggler hidden-md-up pull-md-left" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler hidden-md-up pull-md-left" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsing-navbar" aria-expanded="false" aria-label="Toggle navigation">
                 &#9776;
             </button>
 
