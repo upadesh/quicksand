@@ -11,14 +11,11 @@
 <!--template: searchform-->
 <form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
     <div class="input-group">
-        <div class="input-group">
-            <input type="search" class="form-control" placeholder="<?php echo _x( '...', 'label', 'wp-bs-theme-simple' ); ?>" value="<?php echo get_search_query(); ?>" name="s" >
-            <span class="input-group-btn"> 
-                <button class="btn btn-secondary" type="submit">
-                    <span class=""><?php echo _x( 'Search', 'submit button', 'wp-bs-theme-simple' ); ?></span>
-                    <span class="screen-reader-text"><?php echo _x( 'Search', 'submit button', 'wp-bs-theme-simple' ); ?></span>
-                </button>
-            </span>
-        </div>
-    </div>
+        <input type="text" class="form-control" placeholder="<?php echo _x('...', 'label', 'wp-bs-theme-simple'); ?>" value="<?php echo get_search_query(); ?>" name="s" >
+        <span class="input-group-btn"> 
+            <button class="btn btn-secondary" href="#" type="submit">
+                <i class="fa fa-search fa-lg"></i>
+            </button>
+        </span>
+    </div> 
 </form>
