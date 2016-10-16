@@ -359,6 +359,13 @@ if (!function_exists('wp_bs_theme_simple_get_google_fonts')) :
             $fonts[] = 'Titillium Web:400,700,900,400italic,700italic,900italic';
         }
 
+        if ('off' !== _x('on', 'Rokkitt font: on or off', 'wp-bs-theme-simple')) {
+            $fonts[] = 'Rokkitt:400,700,900,400italic,700italic,900italic';
+        }
+        if ('off' !== _x('on', 'Source Code Pro: on or off', 'wp-bs-theme-simple')) {
+            $fonts[] = 'Source Code Pro:400,700,900,400italic,700italic,900italic';
+        }
+
         if ('off' !== _x('on', 'Dosis font: on or off', 'wp-bs-theme-simple')) {
             $fonts[] = 'Dosis:400,700,900,400italic,700italic,900italic';
         }
@@ -373,13 +380,6 @@ if (!function_exists('wp_bs_theme_simple_get_google_fonts')) :
 
         if ('off' !== _x('on', 'Cabin font: on or off', 'wp-bs-theme-simple')) {
             $fonts[] = 'Cabin:400,700,900,400italic,700italic,900italic';
-        }
-
-        if ('off' !== _x('on', 'Rokkitt font: on or off', 'wp-bs-theme-simple')) {
-            $fonts[] = 'Rokkitt:400,700,900,400italic,700italic,900italic';
-        }
-        if ('off' !== _x('on', 'Anonymous Pro font: on or off', 'wp-bs-theme-simple')) {
-            $fonts[] = 'Anonymous Pro:400,700,900,400italic,700italic,900italic';
         }
 
         return $fonts;

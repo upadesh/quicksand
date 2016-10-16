@@ -28,8 +28,7 @@
         <?php
         /* translators: %s: Name of current post */
         the_content(sprintf(
-                        __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'wp-bs-theme-simple'), get_the_title()
-                )
+                        __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'wp-bs-theme-simple'), get_the_title())
         );
 
         /* Displays page links for paginated posts (i.e. includes the <!–nextpage–>) */
@@ -39,7 +38,7 @@
             'link_before' => '<span>',
             'link_after' => '</span>',
             'pagelink' => '<span class="screen-reader-text">' . __('Page', 'wp-bs-theme-simple') . ' </span>%',
-            'separator' => '<span class="screen-reader-text">, </span>',  
+            'separator' => '<span class="screen-reader-text">, </span>',
         ));
         ?> 
     </div><!-- .entry-content -->   

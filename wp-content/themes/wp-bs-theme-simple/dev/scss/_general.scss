@@ -28,9 +28,18 @@
 /* blockquote & blockquote-footer */
 blockquote {
     @extend .blockquote;
+    font-style: italic;
     border-left: .25rem solid $gray-dark !important;
 } 
 
 cite {
+    display: inline !important;
     @extend .blockquote-footer;
+}
+
+
+/* table */
+
+table {
+    @extend .table;
 }
