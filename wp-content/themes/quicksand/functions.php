@@ -147,7 +147,8 @@ if (!function_exists('quicksand_setup')) :
          * This will let the user skip the cropping step when they upload a new photo.
          */
         $customHeaderArgs = array(
-            'default-text-color' => $colorSchemeDefault[5],
+//            'default-text-color' => $colorSchemeDefault[5],
+            'default-text-color' => '#ffffff',
             'flex-width' => true,
             'flex-height' => true,
             'height' => 200,
@@ -185,25 +186,23 @@ if (!function_exists('quicksand_customizer_css')) :
                 color: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[7]); ?>;
             }  
 
-            .nav-wrapper .menu-item .dropdown-item.active {
-                color: <?php echo get_theme_mod('wbts_nav_background_color', $colorScheme[7]); ?>;
-                background: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[8]); ?>;
+            .nav-wrapper .menu-item .dropdown-item.active { 
+                background: <?php echo get_theme_mod('wbts_header_background_color', $colorScheme[9]); ?>;
             }
 
 
             .nav-wrapper .menu-item .dropdown-item:hover {
-                color: <?php echo get_theme_mod('wbts_nav_background_color', $colorScheme[7]); ?>;
-                background: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[8]); ?>;
+                background: <?php echo get_theme_mod('wbts_header_background_color', $colorScheme[9]); ?>;
             }
 
 
             /*site-header*/
             .site-info-wrapper a,
-            .site-info-wrapper .site-title,
-            .site-info-wrapper .site-description {
-                /*color: #<?php echo get_header_textcolor(); ?>;*/
-                color: <?php echo get_theme_mod('header_textcolor', $colorScheme[5]); ?>; 
-
+            .site-info-wrapper .site-description {  
+                /*this way the default schema-coloris used
+                color: <?php echo get_theme_mod('header_textcolor', $colorScheme[5]); ?>;
+                /*this way 'default-text-color' of add_theme_support('custom-header',... is used*/
+                /*color: <?php echo get_header_textcolor(); ?>;*/
             } 
 
             .site-info-wrapper.jumbotron  {
