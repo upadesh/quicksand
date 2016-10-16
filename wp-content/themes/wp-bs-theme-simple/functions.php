@@ -325,7 +325,7 @@ if (!function_exists('wp_bs_theme_simple_widgets_init')) :
 
         register_sidebar(array(
             'name' => __('Sidebar-Footer', 'wp-bs-theme-simple'),
-            'id' => 'sidebar-2',
+            'id' => 'sidebar-2', 
             'description' => __('Appears at the bottom of the content on posts and pages.', 'simple'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget' => '</section>',

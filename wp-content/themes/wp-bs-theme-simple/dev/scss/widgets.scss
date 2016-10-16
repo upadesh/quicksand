@@ -15,6 +15,22 @@
     }
 }
 
+/*stlye widgets in sidebar*/
+/*#secondary {
+    .widget {
+        ul {
+            @extend .list-group;
+            li {
+                @extend .list-group-item; 
+                ul { 
+                    li {
+                        border: none;
+                    }  
+                }
+            }  
+        }
+    } 
+}*/
 
 /*Table Bug*/
 .site-footer-widgetbar {
