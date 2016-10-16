@@ -559,9 +559,10 @@ if (!function_exists('wp_bs_theme_simple_bootstrap4_comment_form')) :
     /**
      * fix for the tag-bug. 
      * Unfortunately WP defines tag-classes, which are also
-     * predefined in BS. So, just terminate them ;-)
-     * @param type $classes
-     * @return type
+     * predefined in BS. So, lest's just terminate them ;-)
+     * Exterminate! Exterminate! Exterminate! 
+     * 
+     * @param type $classes 
      */
     function _twbs_bootstrap_20542($classes) {
         return array_diff($classes, array(
