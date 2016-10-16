@@ -68,7 +68,7 @@ if (!function_exists('wp_bs_theme_simple_entry_date')) :
 
         $time_string = sprintf($time_string, esc_attr(get_the_date('c')), get_the_date(), esc_attr(get_the_modified_date('c')), get_the_modified_date());
 
-        printf('<span class="posted-on"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>', _x('Posted on', 'Used before publish date.', 'wp_bs_theme_simple'), esc_url(get_permalink()), $time_string
+        printf('<span class="posted-on"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>', _x('Posted on', 'Used before publish date.', 'wp-bs-theme-simple'), esc_url(get_permalink()), $time_string
         );
     }
 
@@ -84,15 +84,15 @@ if (!function_exists('wp_bs_theme_simple_entry_taxonomies')) :
      * @since WP-bs-theme-simple 0.0.1
      */
     function wp_bs_theme_simple_entry_taxonomies() {
-        $categories_list = get_the_category_list(_x(', ', 'Used between list items, there is a space after the comma.', 'wp_bs_theme_simple'));
+        $categories_list = get_the_category_list(_x(', ', 'Used between list items, there is a space after the comma.', 'wp-bs-theme-simple'));
         if ($categories_list && wp_bs_theme_simple_categorized_blog()) {
-            printf('<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span>', _x('Categories', 'Used before category names.', 'wp_bs_theme_simple'), $categories_list
+            printf('<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span>', _x('Categories', 'Used before category names.', 'wp-bs-theme-simple'), $categories_list
             );
         }
 
-        $tags_list = get_the_tag_list('', _x(', ', 'Used between list items, there is a space after the comma.', 'wp_bs_theme_simple'));
+        $tags_list = get_the_tag_list('', _x(', ', 'Used between list items, there is a space after the comma.', 'wp-bs-theme-simple'));
         if ($tags_list) {
-            printf('<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>', _x('Tags', 'Used before tag names.', 'wp_bs_theme_simple'), $tags_list
+            printf('<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>', _x('Tags', 'Used before tag names.', 'wp-bs-theme-simple'), $tags_list
             );
         }
     }

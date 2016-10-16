@@ -29,7 +29,7 @@
             <?php get_template_part('template-parts/navigation', 'primary'); ?>  
         </div>
 
-        <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', 'wp_bs_theme_simple'); ?></a>
+        <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', 'wp-bs-theme-simple'); ?></a>
 
         <!-- site-header >-->
         <header id="masthead" class="site-header <?php echo  esc_attr( get_theme_mod('wbts_header_fullwidth') ? '' : 'container'); ?>"> 

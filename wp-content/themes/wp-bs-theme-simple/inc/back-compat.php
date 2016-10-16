@@ -41,7 +41,7 @@ add_action('after_switch_theme', 'wp_bs_theme_simple_switch_theme');
  */
 function wp_bs_theme_simple_upgrade_notice() {
     global $wp_min_version;
-    $message = sprintf(__('WP-bs-theme-simple requires at least WordPress version %s. You are running version %s. Please upgrade and try again.', 'wp_bs_theme_simple'), $wp_min_version, $GLOBALS['wp_version']);
+    $message = sprintf(__('WP-bs-theme-simple requires at least WordPress version %s. You are running version %s. Please upgrade and try again.', 'wp-bs-theme-simple'), $wp_min_version, $GLOBALS['wp_version']);
     printf('<div class="error"><p>%s</p></div>', $message);
 }
 
@@ -54,7 +54,7 @@ function wp_bs_theme_simple_upgrade_notice() {
  */
 function wp_bs_theme_simple_customize() {
     global $wp_min_version;
-    wp_die(sprintf(__('WP-bs-theme-simple requires at least WordPress version %s. You are running version %s. Please upgrade and try again.', 'wp_bs_theme_simple'), $wp_min_version, $GLOBALS['wp_version']), '', array(
+    wp_die(sprintf(__('WP-bs-theme-simple requires at least WordPress version %s. You are running version %s. Please upgrade and try again.', 'wp-bs-theme-simple'), $wp_min_version, $GLOBALS['wp_version']), '', array(
         'back_link' => true,
     ));
 }
@@ -72,7 +72,7 @@ add_action('load-customize.php', 'wp_bs_theme_simple_customize');
 function wp_bs_theme_simple_preview() {
     global $wp_min_version;
     if (isset($_GET['preview'])) {
-        wp_die(sprintf(__('WP-bs-theme-simple requires at least WordPress version %s. You are running version %s. Please upgrade and try again.', 'wp_bs_theme_simple'), $wp_min_version, $GLOBALS['wp_version']));
+        wp_die(sprintf(__('WP-bs-theme-simple requires at least WordPress version %s. You are running version %s. Please upgrade and try again.', 'wp-bs-theme-simple'), $wp_min_version, $GLOBALS['wp_version']));
     }
 }
 

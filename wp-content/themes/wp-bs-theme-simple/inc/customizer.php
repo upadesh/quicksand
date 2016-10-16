@@ -46,7 +46,7 @@ function wp_bs_theme_simple_customize_register($wp_customize) {
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
         'title' => __('Theme Options', 'wp-bs-theme-simple'),
-        'description' => __('Panel to update theme options', 'sparkling'), // Include html tags such as <p>.
+        'description' => __('Panel to update theme options', 'wp-bs-theme-simple'), // Include html tags such as <p>.
     ));
      
  
@@ -335,7 +335,7 @@ function wp_bs_theme_simple_get_color_schemes() {
                 '#686868',
                 '#2cb5b1',
                 '#ffffff',
-                '#2cb5b1',
+                '#2dbfbf',
                 '#ffffff',
                 '#2cb5b1',
                 '#4f4f4f',
@@ -489,7 +489,7 @@ function wp_bs_theme_simple_social_media_array() {
 function wp_bs_theme_simple_add_social_sites_customizer($wp_customize) {
 
     $wp_customize->add_section('wp_bs_theme_simple_social_settings', array(
-        'title' => __('Social Media Icons', 'text-domain'),
+        'title' => __('Social Media Icons', 'wp-bs-theme-simple'),
         'priority' => 35,
     ));
 
@@ -505,7 +505,7 @@ function wp_bs_theme_simple_add_social_sites_customizer($wp_customize) {
         ));
 
         $wp_customize->add_control($social_site, array(
-            'label' => __("$social_site url:", 'text-domain'),
+            'label' => __("$social_site url:", 'wp-bs-theme-simple'),
             'section' => 'wp_bs_theme_simple_social_settings',
             'type' => 'text',
             'priority' => $priority,
@@ -553,7 +553,7 @@ function wp_bs_theme_simple_social_media_icons() {
                     <a  class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url(get_theme_mod($active_site)); ?>">
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-envelope fa-stack-1x fa-inverse" title="<?php printf(__('%s icon', 'text-domain'), $active_site); ?>"></i>
+                            <i class="fa fa-envelope fa-stack-1x fa-inverse" title="<?php printf(__('%s icon', 'wp-bs-theme-simple'), $active_site); ?>"></i>
                         </span>
                     </a>
                 </li> 
@@ -562,7 +562,7 @@ function wp_bs_theme_simple_social_media_icons() {
                     <a  class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url(get_theme_mod($active_site)); ?>">
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa <?php echo esc_attr($class); ?> fa-stack-1x fa-inverse" title="<?php printf(__('%s icon', 'text-domain'), $active_site); ?>"></i>
+                            <i class="fa <?php echo esc_attr($class); ?> fa-stack-1x fa-inverse" title="<?php printf(__('%s icon', 'wp-bs-theme-simple'), $active_site); ?>"></i>
                         </span>
                     </a>
                 </li> 

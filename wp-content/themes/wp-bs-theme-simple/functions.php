@@ -95,8 +95,8 @@ if (!function_exists('wp_bs_theme_simple_setup')) :
          * menus
          */
         register_nav_menus(array(
-            'primary' => __('Primary Menu', 'wp_bs_theme_simple'),
-            'secondary' => __('Secondary Menu', 'wp_bs_theme_simple')
+            'primary' => __('Primary Menu', 'wp-bs-theme-simple'),
+            'secondary' => __('Secondary Menu', 'wp-bs-theme-simple')
         ));
 
         /*
@@ -295,10 +295,10 @@ add_action('wp_head', 'wp_bs_theme_simple_customizer_css');
  *
  * @since WP-bs-theme-simple 0.0.1
  */
-//function wp_bs_theme_simple_content_width() {
-//	$GLOBALS['content_width'] = apply_filters( 'wp_bs_theme_simple_content_width', 840 );
-//}
-//add_action( 'after_setup_theme', 'wp_bs_theme_simple_content_width', 0 );
+function wp_bs_theme_simple_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'wp_bs_theme_simple_content_width', 992 );
+}
+add_action( 'after_setup_theme', 'wp_bs_theme_simple_content_width', 0 );
 
 
 
@@ -316,7 +316,7 @@ if (!function_exists('wp_bs_theme_simple_widgets_init')) :
         register_sidebar(array(
             'name' => __('Sidebar', 'wp-bs-theme-simple'),
             'id' => 'sidebar-1',
-            'description' => __('Add widgets here to appear in your sidebar.', 'simple'),
+            'description' => __('Add widgets here to appear in your sidebar.', 'wp-bs-theme-simple'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget' => '</section>',
             'before_title' => '<h2 class="widget-title">',
@@ -326,7 +326,7 @@ if (!function_exists('wp_bs_theme_simple_widgets_init')) :
         register_sidebar(array(
             'name' => __('Sidebar-Footer', 'wp-bs-theme-simple'),
             'id' => 'sidebar-2', 
-            'description' => __('Appears at the bottom of the content on posts and pages.', 'simple'),
+            'description' => __('Appears at the bottom of the content on posts and pages.', 'wp-bs-theme-simple'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget' => '</section>',
             'before_title' => '<h2 class="widget-title">',
@@ -595,7 +595,7 @@ if (!function_exists('wp_bs_theme_simple_bootstrap4_comment_form')) :
      */
     function wp_bs_theme_simple_bootstrap4_comment_form($args) {
         $args['comment_field'] = '<div class="form-group comment-form-comment">
-            <label for="comment">' . _x('Comment', 'noun') . '</label> 
+            <label for="comment">' . _x('Comment', 'noun', 'wp-bs-theme-simple') . '</label> 
             <textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
         </div>';
         $args['class_submit'] = 'btn btn-secondary'; // since WP 4.1 

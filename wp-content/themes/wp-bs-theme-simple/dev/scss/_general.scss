@@ -43,3 +43,14 @@ cite {
 table {
     @extend .table;
 }
+
+
+
+/* classes needed by WP*/ 
+
+.bypostauthor {
+    color: #686868;
+}
+.wp-caption-text {
+    color: #686868;
+}
