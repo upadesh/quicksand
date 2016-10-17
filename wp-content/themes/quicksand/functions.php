@@ -147,8 +147,7 @@ if (!function_exists('quicksand_setup')) :
          * This will let the user skip the cropping step when they upload a new photo.
          */
         $customHeaderArgs = array(
-//            'default-text-color' => $colorSchemeDefault[5],
-            'default-text-color' => '#ffffff',
+            'default-text-color' => $colorSchemeDefault[5],  
             'flex-width' => true,
             'flex-height' => true,
             'height' => 200,
@@ -187,23 +186,20 @@ if (!function_exists('quicksand_customizer_css')) :
             }  
 
             .nav-wrapper .menu-item .dropdown-item.active { 
-                background: <?php echo get_theme_mod('wbts_header_background_color', $colorScheme[9]); ?>;
+                background: <?php echo get_theme_mod('wbts_header_background_color', $colorScheme[8]); ?>;
             }
 
 
             .nav-wrapper .menu-item .dropdown-item:hover {
-                background: <?php echo get_theme_mod('wbts_header_background_color', $colorScheme[9]); ?>;
+                background: <?php echo get_theme_mod('wbts_header_background_color', $colorScheme[8]); ?>;
             }
 
 
             /*site-header*/
             .site-info-wrapper a,
             .site-info-wrapper .site-description {  
-                /*this way the default schema-coloris used
-                color: <?php echo get_theme_mod('header_textcolor', $colorScheme[5]); ?>;
-                /*this way 'default-text-color' of add_theme_support('custom-header',... is used*/
-                /*color: <?php echo get_header_textcolor(); ?>;*/
-            } 
+                color: #<?php echo preg_replace('/^#/', '', get_header_textcolor()); ?>; 
+            }
 
             .site-info-wrapper.jumbotron  {
                 background: <?php echo get_theme_mod('wbts_header_background_color', $colorScheme[8]); ?>;
