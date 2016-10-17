@@ -22,7 +22,7 @@
 </div><!-- .site-sidebar.widget-area -->
 
 
-<?php
+<?php 
 $secondary_nav_options = array(
     'theme_location' => 'secondary',
     'depth' => 1,
@@ -35,21 +35,25 @@ $secondary_nav_options = array(
 ?> 
 
 <!-- site-info --> 
-<footer class="container-fluid site-footer">
-    <div class="row">
-        <div class="site-social">
-            <div class="text-xs-center text-lg-right"> 
-                <?php quicksand_social_media_icons(); ?>
+<?php if (!empty(quicksand_get_active_social_sites()) || has_nav_menu('secondary') ) : ?>
+    <footer class="container-fluid site-footer">
+        <div class="row">
+            <div class="site-social">
+                <div class="text-xs-center text-lg-right"> 
+                    <?php quicksand_social_media_icons(); ?>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <div class="text-xs-center text-lg-left">
+                    <!--secondary navigation-->
+                    <?php wp_nav_menu($secondary_nav_options); ?>
+                </div>
             </div>
         </div>
-        <div class="nav-wrapper">
-            <div class="text-xs-center text-lg-left">
-                <!--secondary navigation-->
-                <?php wp_nav_menu($secondary_nav_options); ?>
-            </div>
-        </div>
-    </div>
-</footer><!-- site-info --> 
+    </footer><!-- site-info --> 
+
+<?php endif; ?> 
+
 <?php wp_footer(); ?>
 </body>
 </html>

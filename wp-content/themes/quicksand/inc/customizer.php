@@ -521,14 +521,8 @@ add_action('customize_register', 'quicksand_add_social_sites_customizer');
 
 
 
-/*
- * template-tag:
- * 
- * takes user input from the customizer and outputs linked social media icons 
- */
-
-function quicksand_social_media_icons() {
-
+function quicksand_get_active_social_sites() {
+    $active_sites = array();
     $social_sites = quicksand_social_media_array();
 
     /* any inputs that aren't empty are stored in $active_sites array */
@@ -537,7 +531,22 @@ function quicksand_social_media_icons() {
             $active_sites[] = $social_site;
         }
     }
+    
+    return $active_sites;
+    
+}
 
+
+/*
+ * template-tag:
+ * 
+ * takes user input from the customizer and outputs linked social media icons 
+ */
+
+function quicksand_social_media_icons() {
+
+    $active_sites = quicksand_get_active_social_sites();
+    
     /* for each active social site, add it as a list item */
     if (!empty($active_sites)) {
         echo '<ul class="list-inline">';
