@@ -108,11 +108,23 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_nav_link_color', array(
-        'label' => __('Navbar Link Color', 'quicksand'),
-//        'description' => __('Default used if no color is selected', 'quicksand'),
+        'label' => __('Navbar Link Color', 'quicksand'), 
         'section' => 'quicksand_nav',
         'settings' => 'qs_nav_link_color'
     )));
+    
+    // link-hover-color
+    $wp_customize->add_setting('qs_nav_link_hover_color', array(
+        'default' => $colorSchemeDefault[16],
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'quicksand_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_nav_link_hover_color', array(
+        'label' => __('Navbar Link Hover Color', 'quicksand'), 
+        'section' => 'quicksand_nav',
+        'settings' => 'qs_nav_link_hover_color'
+    )));
+
 
     // bg-color
     $wp_customize->add_setting('qs_nav_background_color', array(
@@ -126,7 +138,6 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_nav',
         'settings' => 'qs_nav_background_color'
     )));
-
 
 
 
@@ -164,6 +175,8 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_header',
         'settings' => 'qs_header_background_color'
     ))); 
+    
+    
     
 
     /* Section: Content */
@@ -221,6 +234,72 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_content',
         'settings' => 'qs_content_secondary_text_color'
     )));
+    
+    
+    
+    
+    
+
+    /* Section: Sidebar */
+    $wp_customize->add_section('quicksand_sidebar', array(
+        'title' => __('Sidebar', 'quicksand'),
+        'priority' => 30,
+        'panel' => 'quicksand_main_options',
+    ));
+
+    // bg-color
+    $wp_customize->add_setting('qs_sidebar_background_color', array(
+        'default' => $colorSchemeDefault[12], 
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'quicksand_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_background_color', array(
+        'label' => __('Sidebar Background Color', 'quicksand'),
+        'section' => 'quicksand_sidebar',
+        'settings' => 'qs_sidebar_background_color'
+    )));
+
+    // color
+    $wp_customize->add_setting('qs_sidebar_text_color', array(
+        'default' => $colorSchemeDefault[13], 
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'quicksand_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_text_color', array(
+        'label' => __('Sidebar Text Color', 'quicksand'),
+        'section' => 'quicksand_sidebar',
+        'settings' => 'qs_sidebar_text_color'
+    )));
+
+    // link
+    $wp_customize->add_setting('qs_sidebar_link_color', array(
+        'default' => $colorSchemeDefault[14], 
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'quicksand_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_link_color', array(
+        'label' => __('Sidebar Link Color', 'quicksand'),
+        'section' => 'quicksand_sidebar',
+        'settings' => 'qs_sidebar_link_color'
+    )));
+
+    // border
+    $wp_customize->add_setting('qs_sidebar_border_color', array(
+        'default' => $colorSchemeDefault[14], 
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'quicksand_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_border_color', array(
+        'label' => __('Sidebar Border Color', 'quicksand'),
+        'section' => 'quicksand_sidebar',
+        'settings' => 'qs_sidebar_border_color'
+    )));
+    
+    
+    
+    
+    
+    
 
 
     /* Section: Footer */
@@ -298,6 +377,11 @@ add_action('customize_register', 'quicksand_customize_register');
  * 10. Footer Background Color      - qs_footer_background_color
  * 11. Footer Link Color            - qs_footer_link_color
  * 12. Footer Text Color            - qs_footer_text_color
+ * 13. Sidebar Background Color     - qs_sidebar_background_color
+ * 14. Sidebar Text Color           - qs_sidebar_text_color
+ * 15. Sidebar Link Color           - qs_sidebar_link_color
+ * 16. Sidebar Border Color         - qs_sidebar_border_color
+ * 17. Navigation Link HoverColor   - qs_nav_link_hover_color
  *
  * @since Quicksand 0.2.1
  *
@@ -341,6 +425,12 @@ function quicksand_get_color_schemes() {
                 '#4f4f4f',
                 '#2cb5b1',
                 '#d1d1d1',
+                
+                '#7c7c7c', 
+                '#ffffff',
+                '#ffffff',
+                '#ffffff',
+                '#2cb5b1', 
             ),
         ),
 //        https://www.mediaevent.de/tutorial/farbcodes.html
@@ -358,7 +448,18 @@ function quicksand_get_color_schemes() {
                 '#ba9a75',
                 '#ba9a75',
                 '#e8c892',
-                '#91745b',
+                '#91745b', 
+                // sidebar: hell               
+                '#ffffff',
+                '#9e7b63',
+                '#9e7b63',
+                '#faebd7' ,
+                // sidebar: dunkel            
+                // '#ddc9a6',
+                // '#9e7b63',
+                // '#9e7b63',
+                // '#faebd7', 
+                '#ba9a75', 
             ),
         ),
     ));

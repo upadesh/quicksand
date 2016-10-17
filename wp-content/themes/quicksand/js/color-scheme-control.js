@@ -86,6 +86,36 @@
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
  
+                    color = colors[12];
+                    api('qs_sidebar_background_color').set(color);
+                    api.control('qs_sidebar_background_color').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color); 
+                    
+                    color = colors[13];
+                    api('qs_sidebar_text_color').set(color);
+                    api.control('qs_sidebar_text_color').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color);
+ 
+ 
+                    color = colors[14];
+                    api('qs_sidebar_link_color').set(color);
+                    api.control('qs_sidebar_link_color').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color); 
+ 
+                    color = colors[15];
+                    api('qs_sidebar_border_color').set(color);
+                    api.control('qs_sidebar_border_color').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color);
+ 
+                    color = colors[16];
+                    api('qs_nav_link_hover_color').set(color);
+                    api.control('qs_nav_link_hover_color').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color);
                 });
             }
         }

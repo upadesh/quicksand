@@ -186,12 +186,12 @@ if (!function_exists('quicksand_customizer_css')) :
             }  
 
             .nav-wrapper .menu-item .dropdown-item.active { 
-                background: <?php echo get_theme_mod('qs_header_background_color', $colorScheme[8]); ?>;
+                background: <?php echo get_theme_mod('qs_nav_link_hover_color', $colorScheme[16]); ?>;
             }
 
 
             .nav-wrapper .menu-item .dropdown-item:hover {
-                background: <?php echo get_theme_mod('qs_header_background_color', $colorScheme[8]); ?>;
+                background: <?php echo get_theme_mod('qs_nav_link_hover_color', $colorScheme[16]); ?>;
             }
 
 
@@ -251,11 +251,24 @@ if (!function_exists('quicksand_customizer_css')) :
             }
 
             /*sidebar*/ 
+            #secondary .widget table,
             #secondary .widget li {
-                color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme[2]); ?>; 
-/*                background: <?php echo get_theme_mod('qs_content_text_color', $colorScheme[3]); ?>; 
-                border: 1px solid <?php echo get_theme_mod('qs_header_background_color', $colorScheme[8]); ?>;   */
+                color: <?php echo get_theme_mod('qs_sidebar_text_color', $colorScheme[13]); ?>; 
+                background: <?php echo get_theme_mod('qs_sidebar_background_color', $colorScheme[12]); ?>;  
+                border: 1px solid <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme[14]); ?>;   
             } 
+            #secondary .widget li a {
+                color: <?php echo get_theme_mod('qs_sidebar_link_color', $colorScheme[14]); ?>;    
+            } 
+            
+            #secondary .widget li  li {
+                border-top: 1px solid <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme[15]); ?>;  
+                border-bottom: none;
+                border-right: none;
+                border-left: none;
+            } 
+            
+                
 
             /*footer*/ 
             .site-footer-widgetbar,
@@ -264,7 +277,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 color: <?php echo get_theme_mod('qs_footer_text_color', $colorScheme[11]); ?>;
             }   
             .site-footer-widgetbar .widget li {
-                color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme[2]); ?>;
+                color: <?php echo get_theme_mod('qs_footer_link_color', $colorScheme[2]); ?>;
                 background: <?php echo get_theme_mod('qs_footer_background_color', $colorScheme[9]); ?>; 
                 border: none;
             } 
