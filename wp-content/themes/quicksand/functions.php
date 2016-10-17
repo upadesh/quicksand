@@ -176,22 +176,22 @@ if (!function_exists('quicksand_customizer_css')) :
             .site-nav-container,
             .site-nav-container nav.navbar,
             .site-nav-container .dropdown-menu {
-                background: <?php echo get_theme_mod('wbts_nav_background_color', $colorScheme[6]); ?>;
+                background: <?php echo get_theme_mod('qs_nav_background_color', $colorScheme[6]); ?>;
             }
 
             .navbar-toggler,
             .nav-wrapper .menu-item .nav-link , 
             .nav-wrapper .menu-item .dropdown-item {
-                color: <?php echo get_theme_mod('wbts_nav_link_color', $colorScheme[7]); ?>;
+                color: <?php echo get_theme_mod('qs_nav_link_color', $colorScheme[7]); ?>;
             }  
 
             .nav-wrapper .menu-item .dropdown-item.active { 
-                background: <?php echo get_theme_mod('wbts_header_background_color', $colorScheme[8]); ?>;
+                background: <?php echo get_theme_mod('qs_header_background_color', $colorScheme[8]); ?>;
             }
 
 
             .nav-wrapper .menu-item .dropdown-item:hover {
-                background: <?php echo get_theme_mod('wbts_header_background_color', $colorScheme[8]); ?>;
+                background: <?php echo get_theme_mod('qs_header_background_color', $colorScheme[8]); ?>;
             }
 
 
@@ -202,35 +202,35 @@ if (!function_exists('quicksand_customizer_css')) :
             }
 
             .site-info-wrapper.jumbotron  {
-                background: <?php echo get_theme_mod('wbts_header_background_color', $colorScheme[8]); ?>;
+                background: <?php echo get_theme_mod('qs_header_background_color', $colorScheme[8]); ?>;
             }
 
             /*content*/
             .site-main-container { 
-                background: <?php echo get_theme_mod('wbts_content_background_color', $colorScheme[1]); ?>;
-                color: <?php echo get_theme_mod('wbts_content_text_color', $colorScheme[3]); ?>;
+                background: <?php echo get_theme_mod('qs_content_background_color', $colorScheme[1]); ?>;
+                color: <?php echo get_theme_mod('qs_content_text_color', $colorScheme[3]); ?>;
             }
 
             .site-main-container a, 
             .site-footer a 
             { 
-                color: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[2]); ?>;
+                color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme[2]); ?>;
             } 
 
             /*bootstrap pagination*/ 
             .site-main-container .navigation.pagination .nav-links .page-numbers {
-                color: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[2]); ?>;
-                background: <?php echo get_theme_mod('wbts_content_background_color', $colorScheme[1]); ?>;
-                border-color: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[2]); ?>;
+                color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme[2]); ?>;
+                background: <?php echo get_theme_mod('qs_content_background_color', $colorScheme[1]); ?>;
+                border-color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme[2]); ?>;
             }  
             .bs-pagination .navigation.pagination .nav-links .page-numbers:focus,
             .bs-pagination .navigation.pagination .nav-links a:hover.page-numbers ,
             .bs-pagination .navigation.pagination .nav-links .page-numbers.current,
             .bs-pagination .navigation.pagination .nav-links .page-numbers:hover,
             .bs-pagination .navigation.pagination .nav-links .page-numbers.current:hover {
-                color: <?php echo get_theme_mod('wbts_content_background_color', $colorScheme[1]); ?>;
-                background: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[2]); ?>;
-                border-color: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[2]); ?>;
+                color: <?php echo get_theme_mod('qs_content_background_color', $colorScheme[1]); ?>;
+                background: <?php echo get_theme_mod('qs_content_link_color', $colorScheme[2]); ?>;
+                border-color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme[2]); ?>;
             }
 
 
@@ -247,29 +247,29 @@ if (!function_exists('quicksand_customizer_css')) :
             .site-main-container  h4>a,
             .site-main-container  h5>a,
             .site-main-container  h6>a { 
-                color: <?php echo get_theme_mod('wbts_content_secondary_text_color', $colorScheme[4]); ?>;
+                color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme[4]); ?>;
             }
 
             /*footer*/ 
             .site-footer-widgetbar,
             .site-footer .row { 
-                background: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>; 
-                color: <?php echo get_theme_mod('wbts_footer_text_color', $colorScheme[11]); ?>;
+                background: <?php echo get_theme_mod('qs_footer_background_color', $colorScheme[9]); ?>; 
+                color: <?php echo get_theme_mod('qs_footer_text_color', $colorScheme[11]); ?>;
             }  
 
             .site-footer-widgetbar a,
             .site-footer .nav-wrapper a {  
-                color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
+                color: <?php echo get_theme_mod('qs_footer_link_color', $colorScheme[10]); ?>;
                 padding: 0 .6rem;
             }  
             .site-footer .nav-wrapper a:hover {  
-                color: <?php echo get_theme_mod('wbts_footer_background_color', $colorScheme[9]); ?>;
-                background: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>;
+                color: <?php echo get_theme_mod('qs_footer_background_color', $colorScheme[9]); ?>;
+                background: <?php echo get_theme_mod('qs_footer_link_color', $colorScheme[10]); ?>;
             } 
 
             /*footer-social-menu*/
             .site-footer .site-social .fa-circle {
-                color: <?php echo get_theme_mod('wbts_footer_link_color', $colorScheme[10]); ?>; 
+                color: <?php echo get_theme_mod('qs_footer_link_color', $colorScheme[10]); ?>; 
             }
             .site-footer .site-social .fa-stack:hover .fa-circle { 
                 opacity:0.5;
