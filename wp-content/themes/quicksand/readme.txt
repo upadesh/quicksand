@@ -1,7 +1,7 @@
 /*========= About Theme =========*/
 
 Theme Name: Quicksand
-Theme URI: https://github.com/piccard21/wp-bs-theme-simple
+Theme URI: https://github.com/piccard21/quicksand
 Version: 0.0.1
 Tested up to: WP 4.6
 
@@ -23,7 +23,7 @@ Quicksand theme uses:
 
 /*========= Description =========*/
 
-Quicksand is a simple, minimal, clean, and responsive WordPress theme, well suited for a variety of application possibilities. Use the Theme Options inside your Customizer to modify the theme for your needs. Its responsive design is based on Bootstrap 4, so your page will always look fine on any device. The theme also comes with social icon integration, using the fantastic fonts from font-awesome.
+Quicksand is a simple, minimal, clean, and responsive based on the standard theme TwentySixteen. Use the Theme Options inside your Customizer to modify the theme for your needs. Its responsive design is based on Bootstrap 4, so your page will always look fine on any device. The theme also comes with social icon integration, using the fantastic fonts of font-awesome. For the nerds of you, there are also sass-files and a grunt-file included.
 
 /*========= Installation =========*/
 
