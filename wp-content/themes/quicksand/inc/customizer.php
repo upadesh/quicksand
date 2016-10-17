@@ -344,8 +344,8 @@ function quicksand_get_color_schemes() {
             ),
         ),
 //        https://www.mediaevent.de/tutorial/farbcodes.html
-        'quicksand' => array(
-            'label' => __('Quicksand', 'quicksand'),
+        'dune' => array(
+            'label' => __('Dune', 'quicksand'),
             'colors' => array(
                 '#faebd7',
                 '#faebd7',

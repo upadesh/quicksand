@@ -56,7 +56,7 @@ module.exports = function (grunt) {
                 files: {
                     // use @import in main file
                     'dev/css/<%= pkg.name %>.css': 'dev/scss/app.scss',
-                    'dev/css/<%= pkg.name %>-quicksand.css': 'dev/scss/app-quicksand.scss'
+                    'dev/css/<%= pkg.name %>-dune.css': 'dev/scss/app-dune.scss'
                 }
             }
         },
