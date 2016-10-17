@@ -147,7 +147,7 @@ if (!function_exists('quicksand_setup')) :
          * This will let the user skip the cropping step when they upload a new photo.
          */
         $customHeaderArgs = array(
-            'default-text-color' => $colorSchemeDefault[5],  
+            'default-text-color' => $colorSchemeDefault[5],
             'flex-width' => true,
             'flex-height' => true,
             'height' => 200,
@@ -250,12 +250,24 @@ if (!function_exists('quicksand_customizer_css')) :
                 color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme[4]); ?>;
             }
 
+            /*sidebar*/ 
+            #secondary .widget li {
+                color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme[2]); ?>; 
+/*                background: <?php echo get_theme_mod('qs_content_text_color', $colorScheme[3]); ?>; 
+                border: 1px solid <?php echo get_theme_mod('qs_header_background_color', $colorScheme[8]); ?>;   */
+            } 
+
             /*footer*/ 
             .site-footer-widgetbar,
             .site-footer .row { 
                 background: <?php echo get_theme_mod('qs_footer_background_color', $colorScheme[9]); ?>; 
                 color: <?php echo get_theme_mod('qs_footer_text_color', $colorScheme[11]); ?>;
-            }  
+            }   
+            .site-footer-widgetbar .widget li {
+                color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme[2]); ?>;
+                background: <?php echo get_theme_mod('qs_footer_background_color', $colorScheme[9]); ?>; 
+                border: none;
+            } 
 
             .site-footer-widgetbar a,
             .site-footer .nav-wrapper a {  

@@ -8,13 +8,12 @@
             margin: 0 auto;
         }
     } 
-    
+
     ul, ol {
         list-style-type: none;  
         @extend .list-group; 
-        li {
+        li { 
             @extend .list-group-item;
-            
             li {
                 border:none;
                 border-top: 1px solid $gray-lightest;
@@ -23,6 +22,62 @@
 
     }
 } 
+
+
+#third { 
+    .widget {  
+        li {
+            padding: .1rem !important;
+        } 
+    }
+}
+
+
+
+
+/* === Font Awesome for some widgets === */
+/*recent posts*/
+.widget.widget_recent_entries {
+    li:before {
+        font-family: FontAwesome; 
+        padding-right: .5rem;
+        content: "\f0f6";
+    }
+}
+
+/*recent comments*/
+.widget.widget_recent_comments {
+    li:before {
+        font-family: FontAwesome; 
+        padding-right: .5rem;
+        content: "\f0e5";
+
+    }
+}
+
+/*archive*/
+.widget.widget_archive {
+    li:before {
+        font-family: FontAwesome; 
+        padding-right: .5rem;
+        content: "\f133";
+
+    }
+}  
+
+
+/*categories*/
+.widget.widget_categories {
+    li:before {
+        font-family: FontAwesome; 
+        padding-right: .5rem;
+        content: "\f115";
+
+    }
+}  
+
+
+
 
 /*Table Bug*/
 .site-footer-widgetbar {
