@@ -27,8 +27,8 @@
 global $quicksand_version;
 global $wp_min_version;
 
-$quicksand_version = '0.0.1';
-$wp_min_version = '4.4';
+$quicksand_version = '0.2.1';
+$wp_min_version = '4.6';
 
 /**
  * quicksand only works in WordPress 4.4 or later.

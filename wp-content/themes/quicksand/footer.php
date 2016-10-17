@@ -30,7 +30,7 @@ $secondary_nav_options = array(
     'container_class' => '',
     'menu_class' => 'nav navbar-nav',
     'fallback_cb' => 'QuicksandNavwalker::fallback',
-    'walker' => new QuicksandNavbarNavwalker()
+    'walker' => new QuicksandNavwalker()
 );
 ?> 
 
