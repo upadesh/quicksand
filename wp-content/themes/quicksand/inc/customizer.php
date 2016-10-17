@@ -321,6 +321,18 @@ function quicksand_customize_register($wp_customize) {
         'settings' => 'qs_footer_background_color'
     )));
 
+    // text-color
+    $wp_customize->add_setting('qs_footer_text_color', array(
+        'default' => $colorSchemeDefault[11],
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'quicksand_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_footer_text_color', array(
+        'label' => __('Footer Text Color', 'quicksand'),
+        'section' => 'quicksand_footer',
+        'settings' => 'qs_footer_text_color'
+    )));
+
     // link-color
     $wp_customize->add_setting('qs_footer_link_color', array(
         'default' => $colorSchemeDefault[10],
@@ -333,19 +345,21 @@ function quicksand_customize_register($wp_customize) {
         'settings' => 'qs_footer_link_color'
     )));
 
-    // text-color
-    $wp_customize->add_setting('qs_footer_text_color', array(
-        'default' => $colorSchemeDefault[11],
+    // link-hover-color
+    $wp_customize->add_setting('qs_footer_link_hover_color', array(
+        'default' => $colorSchemeDefault[10],
         'transport' => 'postMessage',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_footer_text_color', array(
-        'label' => __('Footer Text Color', 'quicksand'),
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_footer_link_hover_color', array(
+        'label' => __('Footer Link Hover Color', 'quicksand'),
         'section' => 'quicksand_footer',
-        'settings' => 'qs_footer_text_color'
+        'settings' => 'qs_footer_link_hover_color'
     )));
     
     
+                
+                
 
 
     /* Default WordPress Theme Customization */
@@ -381,7 +395,8 @@ add_action('customize_register', 'quicksand_customize_register');
  * 14. Sidebar Text Color           - qs_sidebar_text_color
  * 15. Sidebar Link Color           - qs_sidebar_link_color
  * 16. Sidebar Border Color         - qs_sidebar_border_color
- * 17. Navigation Link HoverColor   - qs_nav_link_hover_color
+ * 17. Navigation Link Hover Color  - qs_nav_link_hover_color
+ * 18. Footer Link Hover Color      - qs_footer_link_hover_color
  *
  * @since Quicksand 0.2.1
  *
@@ -431,6 +446,7 @@ function quicksand_get_color_schemes() {
                 '#ffffff',
                 '#ffffff',
                 '#2cb5b1', 
+                '#777777', 
             ),
         ),
 //        https://www.mediaevent.de/tutorial/farbcodes.html
@@ -460,6 +476,7 @@ function quicksand_get_color_schemes() {
                 // '#9e7b63',
                 // '#faebd7', 
                 '#ba9a75', 
+                '#664000', 
             ),
         ),
     ));

@@ -116,6 +116,12 @@
                     api.control('qs_nav_link_hover_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
+ 
+                    color = colors[17];
+                    api('qs_footer_link_hover_color').set(color);
+                    api.control('qs_footer_link_hover_color').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color);
                 });
             }
         }
