@@ -214,14 +214,14 @@ if (!function_exists('quicksand_customizer_css')) :
             .site-main-container a, 
             .site-footer a 
             { 
-                color: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[4]); ?>;
+                color: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[2]); ?>;
             } 
 
             /*bootstrap pagination*/ 
             .site-main-container .navigation.pagination .nav-links .page-numbers {
-                color: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[4]); ?>;
+                color: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[2]); ?>;
                 background: <?php echo get_theme_mod('wbts_content_background_color', $colorScheme[1]); ?>;
-                border-color: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[4]); ?>;
+                border-color: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[2]); ?>;
             }  
             .bs-pagination .navigation.pagination .nav-links .page-numbers:focus,
             .bs-pagination .navigation.pagination .nav-links a:hover.page-numbers ,
@@ -229,8 +229,8 @@ if (!function_exists('quicksand_customizer_css')) :
             .bs-pagination .navigation.pagination .nav-links .page-numbers:hover,
             .bs-pagination .navigation.pagination .nav-links .page-numbers.current:hover {
                 color: <?php echo get_theme_mod('wbts_content_background_color', $colorScheme[1]); ?>;
-                background: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[4]); ?>;
-                border-color: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[4]); ?>;
+                background: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[2]); ?>;
+                border-color: <?php echo get_theme_mod('wbts_content_link_color', $colorScheme[2]); ?>;
             }
 
 

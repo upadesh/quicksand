@@ -1,25 +1,32 @@
 /**
  * color-scheme: quicksand
- * 
- * Copy variables from `_variables.scss` to this file to override default values
- * without modifying source files.
  *
- * This is a custom color-scheme-file
- * Copy 'bootstrap-variables.scss' and modify it to your gusto.
- */  
+ * Copy variables from bootstrap's `_variables.scss` to this file to override default values 
+ *
+ * Define also your scheme-color specific variables in here 
+ */   
 
-$enable-rounded: false; 
 
-/* main colors */
+/* === custom variables === */  
+ 
+
+
+/* === bootstrap variables === */
+$enable-rounded: false;
+ 
+/*main colors*/
 $gray-dark:                 #a38566 !default;
 $gray:                      #ba9a75 !default;
 $gray-light:                #e8c892 !default;
 $gray-lighter:              #deb887 !default;
 $gray-lightest:             #faebd7 !default; 
 
+ 
 /* btn colors */
-$btn-secondary-color:            $gray-dark !default;
-$btn-secondary-bg:               $gray-light !default;
+
+/*use secondary for all submit & input-group buttons*/
+$btn-secondary-color:            $gray-dark;
+$btn-secondary-bg:               $gray-light;
 $btn-secondary-border:           $gray;
 
 /*$btn-primary-color:              #fff !default;

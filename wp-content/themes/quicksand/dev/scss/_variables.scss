@@ -1,29 +1,38 @@
+
 /**
- * Copy variables from `_variables.scss` to this file to override default values
- * without modifying source files.
- *
  * This is the default file, if no color-scheme is selected or a custom bootstrap-variables-COLORSCHEME isn't present.
- */  
+ *
+ * Copy variables from bootstrap's `_variables.scss` to this file to override default values 
+ *
+ * Define also your scheme-color specific variables in here 
+ */   
 
 
+/* === custom variables === */ 
+$turquoise:             #2cb5b1; 
+$white:                 #fff; 
+ 
+
+
+/* === bootstrap variables === */
 $enable-rounded: false;
-
+ 
+/*main colors*/
 
 $gray-dark:                 #373a3c !default;
 $gray:                      #55595c !default;
 $gray-light:                #818a91 !default;
 $gray-lighter:              #eceeef !default;
-/*$gray-lightest:             #f7f7f9 !default;*/ 
-$gray-lightest:             #2cb5b1 !default; 
+$gray-lightest:             #f7f7f9 !default; 
 
 
-
-
+ 
 /* btn colors */
 /*use secondary for all submit & input-group buttons*/
-$btn-secondary-color:            #fff !default;
-$btn-secondary-bg:               $gray-lightest !default; 
-$btn-secondary-border:           $gray-lightest;
+$btn-secondary-color:            $white;
+$btn-secondary-bg:               $turquoise; 
+$btn-secondary-border:           $turquoise;
+
 
 /*$btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
