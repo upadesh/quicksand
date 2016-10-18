@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         clean: {
-            dev: ['dev/css/*.css'],
+            dev: ['dev/css/*'],
             dist: ['css/*', 'js/*', 'fonts/*'],
         },
         copy: {
@@ -18,32 +18,53 @@ module.exports = function (grunt) {
                     }, {
                         expand: true,
                         cwd: 'dev/css/',
-                        src: ['*'],
+                        src: ['*.min.css'],
                         dest: 'css/',
-                        rename: function (dest, src) {
-                            return dest + src.replace(/\.css$/, ".min.css");
-                        }
                     }],
             },
             dist: {
                 files: [{
-                        // Fonts: Font-Awesome
+                        // Fonts - Font-Awesome
                         expand: true,
                         cwd: 'node_modules/font-awesome/fonts',
                         src: ['*'],
                         dest: 'fonts/'
                     }, {
-                        // CSS- Font-Awesome
+                        // CSS - Font-Awesome
+                        src: 'node_modules/font-awesome/css/font-awesome.css',
+                        dest: 'css/font-awesome.css',
+                    }, {
+                        // CSS - Font-Awesome minified
                         src: 'node_modules/font-awesome/css/font-awesome.min.css',
                         dest: 'css/font-awesome.min.css',
                     }, {
                         // JS- Tether
+                        src: 'node_modules/tether/dist/js/tether.js',
+                        dest: 'js/tether.js',
+                    }, {
+                        // JS- Tether minified
                         src: 'node_modules/tether/dist/js/tether.min.js',
                         dest: 'js/tether.min.js',
                     }, {
                         // JS - Bootstrap
                         src: 'node_modules/bootstrap/dist/js/bootstrap.js',
+                        dest: 'js/bootstrap.js',
+                    }, {
+                        // JS - Bootstrap minified
+                        src: 'node_modules/bootstrap/dist/js/bootstrap.min.js',
                         dest: 'js/bootstrap.min.js',
+                    }, {
+                        // CSS - all custom css
+                        expand: true,
+                        cwd: 'dev/css',
+                        src: ['*'],
+                        dest: 'css/'
+                    }, {
+                        // JS - all custom js
+                        expand: true,
+                        cwd: 'dev/js',
+                        src: ['*'],
+                        dest: 'js/'
                     }
                 ]
 
@@ -62,18 +83,28 @@ module.exports = function (grunt) {
         },
         postcss: {
             options: {
-                map: {
-                    inline: false, // save all sourcemaps as separate files...
-                    annotation: 'css/maps/' // ...to the specified directory
-                },
                 processors: [
                     require('pixrem')(), // add fallbacks for rem units
-                    require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
-                    require('cssnano')() // minify the result
+                    require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes 
                 ]
             },
             dist: {
                 src: 'dev/css/*.css'
+            }
+        },
+        cssmin: {
+            options: {
+                sourceMap: true,
+                banner: '/*! Quicksand | Andreas Stephan| GPL3 Licensed */'
+            },
+            minify: {
+                files: [{
+                        expand: true,
+                        cwd: 'dev/css/',
+                        src: ['*.css'],
+                        dest: 'css/',
+                        ext: '.min.css'
+                    }]
             }
         },
         jshint: {
@@ -100,7 +131,8 @@ module.exports = function (grunt) {
                 files: [
                     'dev/scss/*.scss'
                 ],
-                tasks: ['clean:dev', 'sass', 'postcss', 'copy:dev'],
+                // TODO
+                tasks: ['clean:dev', 'sass', 'postcss', 'cssmin', 'copy:dev'],
                 options: {
                     livereload: true,
                 }
@@ -116,6 +148,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.registerTask('build', ['clean', 'sass', 'postcss', 'copy']);
-    grunt.registerTask("default", ['clean:dev', 'copy:dev', 'sass', 'postcss', 'watch']);
+    grunt.registerTask('build', ['clean', 'sass', 'postcss', 'cssmin', 'copy:dist']);
+    grunt.registerTask("default", ['clean:dev', 'sass', 'postcss', 'cssmin', 'copy:dev', 'watch']);
 };
