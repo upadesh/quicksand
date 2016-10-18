@@ -48,9 +48,9 @@
      * @param {type} qs_nav_background_color
      * @param {type} qs_nav_link_color 
      */
-    var customizeNavbarHover = function (qs_nav_background_color, qs_nav_link_color, qs_nav_link_hover_color) {
+    var customizeNavbarHover = function (qs_nav_background_color, qs_nav_link_color, qs_nav_link_hover_background_color) {
         var style, el;
-
+console.info(qs_nav_link_hover_background_color);
         style = '<style class="hover-styles">'
                 + '.site-nav-container, '
                 + '.site-nav-container nav.navbar,'
@@ -62,7 +62,7 @@
                 + 'color: ' + qs_nav_link_color + ' !important;'
                 + '}'
                 + '.nav-wrapper .menu-item .dropdown-item:hover { '
-                + 'background: ' + qs_nav_link_hover_color + ' !important;'
+                + 'background: ' + qs_nav_link_hover_background_color + ' !important;'
                 + '}'
                 + '</style>';
 
@@ -80,23 +80,23 @@
     wp.customize('qs_nav_background_color', function (value) {
         value.bind(function (qs_nav_background_color) {
             var qs_nav_link_color = wp.customize.value('qs_nav_link_color')();   
-            var qs_nav_link_hover_color = wp.customize.value('qs_nav_link_hover_color')();
-            customizeNavbarHover(qs_nav_background_color, qs_nav_link_color, qs_nav_link_hover_color);
+            var qs_nav_link_hover_background_color = wp.customize.value('qs_nav_link_hover_background_color')();
+            customizeNavbarHover(qs_nav_background_color, qs_nav_link_color, qs_nav_link_hover_background_color);
         });
     }); 
     wp.customize('qs_nav_link_color', function (value) {
         value.bind(function (qs_nav_link_color) {
             var qs_nav_background_color = wp.customize.value('qs_nav_background_color')(); 
-            var qs_nav_link_hover_color = wp.customize.value('qs_nav_link_hover_color')();
-            customizeNavbarHover(qs_nav_background_color, qs_nav_link_color, qs_nav_link_hover_color);
+            var qs_nav_link_hover_background_color = wp.customize.value('qs_nav_link_hover_background_color')();
+            customizeNavbarHover(qs_nav_background_color, qs_nav_link_color, qs_nav_link_hover_background_color);
 
         });
     });
-    wp.customize('qs_nav_link_hover_color', function (value) {
-        value.bind(function (qs_nav_link_hover_color) {
+    wp.customize('qs_nav_link_hover_background_color', function (value) {
+        value.bind(function (qs_nav_link_hover_background_color) {
             var qs_nav_background_color = wp.customize.value('qs_nav_background_color')(); 
             var qs_nav_link_color = wp.customize.value('qs_nav_link_color')();   
-            customizeNavbarHover(qs_nav_background_color, qs_nav_link_color, qs_nav_link_hover_color);
+            customizeNavbarHover(qs_nav_background_color, qs_nav_link_color, qs_nav_link_hover_background_color);
         });
     });
 

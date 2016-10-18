@@ -186,12 +186,12 @@ if (!function_exists('quicksand_customizer_css')) :
             }  
 
             .nav-wrapper .menu-item .dropdown-item.active { 
-                background: <?php echo get_theme_mod('qs_nav_link_hover_color', $colorScheme[16]); ?>;
+                background: <?php echo get_theme_mod('qs_nav_link_hover_background_color', $colorScheme[16]); ?>;
             }
 
 
             .nav-wrapper .menu-item .dropdown-item:hover {
-                background: <?php echo get_theme_mod('qs_nav_link_hover_color', $colorScheme[16]); ?>;
+                background: <?php echo get_theme_mod('qs_nav_link_hover_background_color', $colorScheme[16]); ?>;
             }
 
 

@@ -117,5 +117,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.registerTask('build', ['clean', 'sass', 'postcss', 'copy']);
-    grunt.registerTask("default", ['clean:dev', 'copy:dev', 'sass', 'postcss', 'copy:dev', 'watch']);
+    grunt.registerTask("default", ['clean:dev', 'copy:dev', 'sass', 'postcss', 'watch']);
 };

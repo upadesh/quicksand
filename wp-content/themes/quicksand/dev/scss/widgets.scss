@@ -78,9 +78,13 @@
 
 
 
-/*Table Bug*/
-.site-footer-widgetbar {
-    section.widget_calendar { 
-        overflow: hidden;
-    }
-}
+/*
+    Table Bug
+    ... eher spalten verkleinern?
+*/ 
+section.widget_calendar { 
+    overflow: hidden;
+/*    td {
+        padding: 3px;
+    }*/
+} 

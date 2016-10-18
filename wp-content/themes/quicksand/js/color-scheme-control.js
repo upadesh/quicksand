@@ -112,8 +112,8 @@
                             .wpColorPicker('defaultColor', color);
  
                     color = colors[16];
-                    api('qs_nav_link_hover_color').set(color);
-                    api.control('qs_nav_link_hover_color').container.find('.color-picker-hex')
+                    api('qs_nav_link_hover_background_color').set(color);
+                    api.control('qs_nav_link_hover_background_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
  

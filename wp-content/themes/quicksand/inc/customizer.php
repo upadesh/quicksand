@@ -114,15 +114,15 @@ function quicksand_customize_register($wp_customize) {
     )));
     
     // link-hover-color
-    $wp_customize->add_setting('qs_nav_link_hover_color', array(
+    $wp_customize->add_setting('qs_nav_link_hover_background_color', array(
         'default' => $colorSchemeDefault[16],
         'transport' => 'postMessage',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_nav_link_hover_color', array(
-        'label' => __('Navbar Link Hover Color', 'quicksand'), 
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_nav_link_hover_background_color', array(
+        'label' => __('Navbar Link Hover Background Color', 'quicksand'), 
         'section' => 'quicksand_nav',
-        'settings' => 'qs_nav_link_hover_color'
+        'settings' => 'qs_nav_link_hover_background_color'
     )));
 
 
@@ -395,7 +395,7 @@ add_action('customize_register', 'quicksand_customize_register');
  * 14. Sidebar Text Color           - qs_sidebar_text_color
  * 15. Sidebar Link Color           - qs_sidebar_link_color
  * 16. Sidebar Border Color         - qs_sidebar_border_color
- * 17. Navigation Link Hover Color  - qs_nav_link_hover_color
+ * 17. Navigation Link Hover Color  - qs_nav_link_hover_background_color
  * 18. Footer Link Hover Color      - qs_footer_link_hover_color
  *
  * @since Quicksand 0.2.1
