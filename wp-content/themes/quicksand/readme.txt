@@ -2,7 +2,7 @@
 
 Theme Name: Quicksand
 Theme URI: https://github.com/piccard21/quicksand
-Version: 0.0.1
+Version: 0.2.1
 Tested up to: WP 4.6
 
 Author: Andreas Stephan
