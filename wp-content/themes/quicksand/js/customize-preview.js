@@ -46,8 +46,8 @@
     });
 
     wp.customize('qs_content_post_border_color', function (value) {
-        value.bind(function (qs_content_post_border_color) {
-            $('.site-content-area article').css('border', qs_content_post_border_color); 
+        value.bind(function (qs_content_post_border_color) { 
+            $('.site-content-area article').css('border', '1px solid ' + qs_content_post_border_color);
         });
     });
 
