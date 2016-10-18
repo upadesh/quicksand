@@ -153,6 +153,10 @@
         value.bind(function (qs_sidebar_border_color) {
             $('#secondary .widget li').css('border', '1px solid ' + qs_sidebar_border_color);
             $('#secondary .widget table').css('border', '1px solid ' + qs_sidebar_border_color);
+            $('#secondary .widget li  li ').css('border-top', '1px solid ' + qs_sidebar_border_color); 
+            $('#secondary .widget li  li ').css('border-bottom', 'none');
+            $('#secondary .widget li  li ').css('border-left', 'none');
+            $('#secondary .widget li  li ').css('border-right', 'none');
         });
     });
 
@@ -175,7 +179,7 @@
                 + '}' 
         
                 + '.site-footer .nav-wrapper a:hover { '
-                + 'color: ' + qs_footer_background_color + ';'
+//                + 'color: ' + qs_footer_background_color + ';'
                 + 'background: ' + qs_footer_link_hover_color + ';'
                 + '}'
         

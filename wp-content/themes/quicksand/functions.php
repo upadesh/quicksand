@@ -296,7 +296,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 padding: 0 .6rem;
             }  
             .site-footer .nav-wrapper a:hover {  
-                color: <?php echo get_theme_mod('qs_footer_background_color', $colorScheme[9]); ?>;
+                /*color: <?php echo get_theme_mod('qs_footer_background_color', $colorScheme[9]); ?>;*/
                 background: <?php echo get_theme_mod('qs_footer_link_hover_color', $colorScheme[17]); ?>;
             }  
 

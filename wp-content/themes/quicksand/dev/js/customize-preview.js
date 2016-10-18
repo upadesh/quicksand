@@ -179,7 +179,7 @@
                 + '}' 
         
                 + '.site-footer .nav-wrapper a:hover { '
-                + 'color: ' + qs_footer_background_color + ';'
+//                + 'color: ' + qs_footer_background_color + ';'
                 + 'background: ' + qs_footer_link_hover_color + ';'
                 + '}'
         
