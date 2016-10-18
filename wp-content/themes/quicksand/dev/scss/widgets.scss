@@ -78,13 +78,12 @@
 
 
 
-/*
-    Table Bug
-    ... eher spalten verkleinern?
-*/ 
+
+
+/*TODO: calendar-table-fix*/ 
 section.widget_calendar { 
-    overflow: hidden;
-/*    td {
-        padding: 3px;
-    }*/
+    overflow: hidden; 
+    td {
+        padding: .5rem;
+    }
 } 

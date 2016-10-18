@@ -40,12 +40,12 @@
             @extend .m-b-2;
             @extend .text-md-left; 
             h2 {
+                @extend .text-lg-left; 
                 @extend .text-xs-center; 
             }
         } 
     } 
 }   
-
 
 .site-footer-widgetbar {  
     section.widget {
