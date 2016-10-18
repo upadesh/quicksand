@@ -234,6 +234,30 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_content',
         'settings' => 'qs_content_secondary_text_color'
     )));
+
+    // post background color
+    $wp_customize->add_setting('qs_content_post_bg_color', array(
+        'default' => $colorSchemeDefault[4],
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'quicksand_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_post_bg_color', array(
+        'label' => __('Post Background Color', 'quicksand'),
+        'section' => 'quicksand_content',
+        'settings' => 'qs_content_post_bg_color'
+    )));
+
+    // post border color
+    $wp_customize->add_setting('qs_content_post_border_color', array(
+        'default' => $colorSchemeDefault[14], 
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'quicksand_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_post_border_color', array(
+        'label' => __('Post Border Color', 'quicksand'),
+        'section' => 'quicksand_content', 
+        'settings' => 'qs_content_post_border_color'
+    )));
     
     
     
@@ -398,6 +422,8 @@ add_action('customize_register', 'quicksand_customize_register');
  * 16. Sidebar Border Color         - qs_sidebar_border_color
  * 17. Navigation Link Hover Color  - qs_nav_link_hover_background_color
  * 18. Footer Link Hover Color      - qs_footer_link_hover_color
+ * 19. Post Background Color        - qs_content_post_bg_color
+ * 20. Post Border Color            - qs_content_post_border_color
  *
  * @since Quicksand 0.2.1
  *
@@ -448,6 +474,9 @@ function quicksand_get_color_schemes() {
                 '#ffffff',
                 '#2cb5b1', 
                 '#777777', 
+                
+                '#ffffff',
+                '#ffffff',
             ),
         ),
 //        https://www.mediaevent.de/tutorial/farbcodes.html
@@ -478,6 +507,9 @@ function quicksand_get_color_schemes() {
                 // '#faebd7', 
                 '#ba9a75', 
                 '#ad8d6d', 
+                
+                '#ffffff',
+                '#e2d4bb',
             ),
         ),
     ));

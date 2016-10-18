@@ -111,6 +111,10 @@ cite {
  * Main file for post-layout
  */
 /* featured sticky post */
+.site-content-area article {
+  padding: 32px;
+  padding: 2rem; }
+
 /*
  * post-meta 
  */

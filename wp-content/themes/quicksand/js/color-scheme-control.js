@@ -122,6 +122,18 @@
                     api.control('qs_footer_link_hover_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
+ 
+                    color = colors[18];
+                    api('qs_content_post_bg_color').set(color);
+                    api.control('qs_content_post_bg_color').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color);
+ 
+                    color = colors[19];
+                    api('qs_content_post_border_color').set(color);
+                    api.control('qs_content_post_border_color').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color);
                 });
             }
         }

@@ -262,6 +262,13 @@ if (!function_exists('quicksand_customizer_css')) :
                 color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme[4]); ?>;
             }
 
+            /*post*/
+            .site-content-area article {
+                background: <?php echo get_theme_mod('qs_content_post_bg_color', $colorScheme[18]); ?>;
+                border: 1px solid <?php echo get_theme_mod('qs_content_post_border_color', $colorScheme[19]); ?>;
+                padding: 2rem;
+            }
+
             /*sidebar*/ 
             #secondary .widget table,
             #secondary .widget li {

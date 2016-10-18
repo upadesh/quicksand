@@ -39,6 +39,18 @@
         });
     });
 
+    wp.customize('qs_content_post_bg_color', function (value) {
+        value.bind(function (qs_content_post_bg_color) {
+            $('.site-content-area article').css('background', qs_content_post_bg_color); 
+        });
+    });
+
+    wp.customize('qs_content_post_border_color', function (value) {
+        value.bind(function (qs_content_post_border_color) {
+            $('.site-content-area article').css('border', qs_content_post_border_color); 
+        });
+    });
+
     /**
      * add style-tag to head for hover-effect
      * because the css()-function adds an inline style, it is not possible
@@ -50,7 +62,7 @@
      */
     var customizeNavbarHover = function (qs_nav_background_color, qs_nav_link_color, qs_nav_link_hover_background_color) {
         var style, el;
-        
+
         style = '<style class="hover-styles">'
                 + '.site-nav-container, '
                 + '.site-nav-container nav.navbar,'
@@ -83,14 +95,14 @@
     // navigation
     wp.customize('qs_nav_background_color', function (value) {
         value.bind(function (qs_nav_background_color) {
-            var qs_nav_link_color = wp.customize.value('qs_nav_link_color')();   
+            var qs_nav_link_color = wp.customize.value('qs_nav_link_color')();
             var qs_nav_link_hover_background_color = wp.customize.value('qs_nav_link_hover_background_color')();
             customizeNavbarHover(qs_nav_background_color, qs_nav_link_color, qs_nav_link_hover_background_color);
         });
-    }); 
+    });
     wp.customize('qs_nav_link_color', function (value) {
         value.bind(function (qs_nav_link_color) {
-            var qs_nav_background_color = wp.customize.value('qs_nav_background_color')(); 
+            var qs_nav_background_color = wp.customize.value('qs_nav_background_color')();
             var qs_nav_link_hover_background_color = wp.customize.value('qs_nav_link_hover_background_color')();
             customizeNavbarHover(qs_nav_background_color, qs_nav_link_color, qs_nav_link_hover_background_color);
 
@@ -98,8 +110,8 @@
     });
     wp.customize('qs_nav_link_hover_background_color', function (value) {
         value.bind(function (qs_nav_link_hover_background_color) {
-            var qs_nav_background_color = wp.customize.value('qs_nav_background_color')(); 
-            var qs_nav_link_color = wp.customize.value('qs_nav_link_color')();   
+            var qs_nav_background_color = wp.customize.value('qs_nav_background_color')();
+            var qs_nav_link_color = wp.customize.value('qs_nav_link_color')();
             customizeNavbarHover(qs_nav_background_color, qs_nav_link_color, qs_nav_link_hover_background_color);
         });
     });
@@ -134,7 +146,7 @@
     wp.customize('qs_sidebar_background_color', function (value) {
         value.bind(function (qs_sidebar_background_color) {
             $('#secondary .widget li').css('background', qs_sidebar_background_color);
-            $('#secondary .widget table').css('background', qs_sidebar_background_color); 
+            $('#secondary .widget table').css('background', qs_sidebar_background_color);
         });
     });
     wp.customize('qs_sidebar_text_color', function (value) {
@@ -153,7 +165,7 @@
         value.bind(function (qs_sidebar_border_color) {
             $('#secondary .widget li').css('border', '1px solid ' + qs_sidebar_border_color);
             $('#secondary .widget table').css('border', '1px solid ' + qs_sidebar_border_color);
-            $('#secondary .widget li  li ').css('border-top', '1px solid ' + qs_sidebar_border_color); 
+            $('#secondary .widget li  li ').css('border-top', '1px solid ' + qs_sidebar_border_color);
             $('#secondary .widget li  li ').css('border-bottom', 'none');
             $('#secondary .widget li  li ').css('border-left', 'none');
             $('#secondary .widget li  li ').css('border-right', 'none');
@@ -168,25 +180,25 @@
 
         style = '<style class="hover-styles">'
                 + '.site-footer-widgetbar, .site-footer-widgetbar .widget li, .site-footer .row {'
-                + 'background: ' + qs_footer_background_color + ';' 
+                + 'background: ' + qs_footer_background_color + ';'
                 + 'color: ' + qs_footer_text_color + ';'
                 + 'border: none;'
                 + '}'
-        
+
                 + '.site-footer-widgetbar a, .site-footer .nav-wrapper a {'
                 + 'color: ' + qs_footer_link_color + ';'
                 + 'padding: 0 .6rem;'
-                + '}' 
-        
+                + '}'
+
                 + '.site-footer .nav-wrapper a:hover { '
 //                + 'color: ' + qs_footer_background_color + ';'
                 + 'background: ' + qs_footer_link_hover_color + ';'
                 + '}'
-        
+
                 + '.site-footer .site-social .fa-circle { '
                 + 'color: ' + qs_footer_link_color + ';'
                 + '}'
-        
+
                 + '.site-footer .site-social .fa-stack:hover .fa-circle { '
                 + 'color: ' + qs_content_background_color + ' !;'
                 + '}'
@@ -203,7 +215,7 @@
     }
 
     wp.customize('qs_footer_background_color', function (value) {
-        value.bind(function (qs_footer_background_color) { 
+        value.bind(function (qs_footer_background_color) {
             var qs_footer_text_color = wp.customize.value('qs_footer_text_color')();
             var qs_footer_link_color = wp.customize.value('qs_footer_link_color')();
             var qs_footer_link_hover_color = wp.customize.value('qs_footer_link_hover_color')();
@@ -225,9 +237,9 @@
             var qs_footer_background_color = wp.customize.value('qs_footer_background_color')();
             customizeFooterHover(qs_footer_background_color, qs_footer_link_color, qs_footer_link_hover_color, qs_footer_text_color);
         });
-    }); 
+    });
     wp.customize('qs_footer_text_color', function (value) {
-        value.bind(function (qs_footer_text_color) { 
+        value.bind(function (qs_footer_text_color) {
             var qs_footer_link_hover_color = wp.customize.value('qs_footer_link_hover_color')();
             var qs_footer_link_color = wp.customize.value('qs_footer_link_color')();
             var qs_footer_background_color = wp.customize.value('qs_footer_background_color')();

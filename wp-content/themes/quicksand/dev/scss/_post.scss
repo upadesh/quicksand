@@ -9,6 +9,14 @@
     @extend .tag-danger; 
 }
 
+
+.site-content-area {
+    article { 
+        padding: 2rem;
+    }
+}
+
+
 /*
  * post-meta 
  */
@@ -111,7 +119,7 @@
     }
 } 
 
- 
+
 /*.author-info {
   
 } */
