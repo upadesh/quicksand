@@ -463,9 +463,9 @@ function quicksand_get_color_schemes() {
                 '#a38566',
                 '#faebd7',
                 '#ba9a75',
-                '#ba9a75',
+                '#7c5f4c',
                 '#e8c892',
-                '#91745b', 
+                '#ad8d6d', 
                 // sidebar: hell               
                 '#ffffff',
                 '#9e7b63',
@@ -477,7 +477,7 @@ function quicksand_get_color_schemes() {
                 // '#9e7b63',
                 // '#faebd7', 
                 '#ba9a75', 
-                '#664000', 
+                '#ad8d6d', 
             ),
         ),
     ));
