@@ -16,13 +16,16 @@
 
 
 <!-- site-footer-widgetbar -->
-<div class="container site-footer-widgetbar">  
-    <!-- site-sidebar widget-area --> 
-    <?php get_sidebar('content-bottom'); ?>   
-</div><!-- .site-sidebar.widget-area -->
+<?php if (is_active_sidebar('sidebar-2')) : ?> 
+    <div class="container site-footer-widgetbar">  <h2>asdkasdlkajlk</h2>
+        <!-- site-sidebar widget-area --> 
+        <?php get_sidebar('content-bottom'); ?>   
+    </div><!-- .site-sidebar.widget-area --> 
+<?php endif; ?> 
 
 
-<?php 
+
+<?php
 $secondary_nav_options = array(
     'theme_location' => 'secondary',
     'depth' => 1,
@@ -34,8 +37,11 @@ $secondary_nav_options = array(
 );
 ?> 
 
-<!-- site-info --> 
-<?php if (!empty(quicksand_get_active_social_sites()) || has_nav_menu('secondary') ) : ?>
+<!-- site-footer --> 
+<?php
+$activeSites = quicksand_get_active_social_sites();
+if (!empty($activeSites) || has_nav_menu('secondary')) :
+    ?>
     <footer class="container-fluid site-footer">
         <div class="row">
             <div class="site-social">
@@ -50,7 +56,7 @@ $secondary_nav_options = array(
                 </div>
             </div>
         </div>
-    </footer><!-- site-info --> 
+    </footer><!-- site-footer --> 
 
 <?php endif; ?> 
 
