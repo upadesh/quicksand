@@ -292,6 +292,7 @@ function quicksand_customize_register($wp_customize) {
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_border_color', array(
         'label' => __('Sidebar Border Color', 'quicksand'),
         'section' => 'quicksand_sidebar',
+        'description' => __('For a nice effect choose the same color like Content-Background', 'quicksand'), 
         'settings' => 'qs_sidebar_border_color'
     )));
     
