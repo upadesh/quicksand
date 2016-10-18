@@ -1,7 +1,7 @@
 /**
  * Create some space & push main sections 
  */   
- 
+
 /* always push down content after header */
 .site-header {
     @extend .m-b-2; 
@@ -21,7 +21,7 @@
 
 
 .site-content { 
-    padding: 30px;
+    padding: .6rem;
 
     .post-meta-data {
         @extend .m-b-1;
@@ -39,17 +39,17 @@
         section.widget {
             @extend .m-b-2;
             @extend .text-md-left; 
-            @extend .text-xs-center; 
+            h2 {
+                @extend .text-xs-center; 
+            }
         } 
     } 
-}  
-
-
+}   
 
 
 .site-footer-widgetbar {  
-    .widget {
+    section.widget {
+        @extend .m-b-2;
         @extend .text-md-left; 
-        @extend .text-xs-center; 
     }
 }
