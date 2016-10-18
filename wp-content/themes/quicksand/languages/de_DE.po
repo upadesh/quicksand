@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Quicksand\n"
-"POT-Creation-Date: 2016-10-16 19:47+0200\n"
-"PO-Revision-Date: 2016-10-16 19:48+0200\n"
+"POT-Creation-Date: 2016-10-18 21:00+0200\n"
+"PO-Revision-Date: 2016-10-18 21:03+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -73,43 +73,43 @@ msgstr "Primäres Menü"
 msgid "Secondary Menu"
 msgstr "Sekundäres Menu"
 
-#: functions.php:317
+#: functions.php:346 inc/customizer.php:245
 msgid "Sidebar"
 msgstr "Seitenleiste"
 
-#: functions.php:319
+#: functions.php:348
 msgid "Add widgets here to appear in your sidebar."
 msgstr "Widgets hier hinzufügen, um sie in die Seitenleiste einzubauen."
 
-#: functions.php:327
+#: functions.php:356
 msgid "Sidebar-Footer"
 msgstr "Seitenleiste-Footer"
 
-#: functions.php:329
-msgid "Appears at the bottom of the content on posts and pages."
-msgstr "Erscheint unterhalb des Inhalts von Beiträgen und Seiten."
+#: functions.php:358
+msgid "Add widgets here to appear at the bottom."
+msgstr "Füge Widgets hier hinzu, damit sie im Footer erscheinen."
 
-#: functions.php:355 functions.php:359 functions.php:362
+#: functions.php:384 functions.php:388 functions.php:391
 msgid "on"
 msgstr "am"
 
-#: functions.php:585
+#: functions.php:615
 msgid "Comment"
 msgstr "Kommentar"
 
-#: functions.php:620
+#: functions.php:650
 msgid "Name"
 msgstr "Name"
 
-#: functions.php:622
+#: functions.php:652
 msgid "Email"
 msgstr "Email"
 
-#: functions.php:624
+#: functions.php:654
 msgid "Website"
 msgstr "Webseite"
 
-#: functions.php:644
+#: functions.php:674
 msgid "To view this protected post, enter the password below:"
 msgstr ""
 "Geben Sie bitte Ihr Kennwort ein, um diesen geschützten Beitrag zu sehen"
@@ -148,11 +148,11 @@ msgstr ""
 #: inc/back-compat.php:44 inc/back-compat.php:57 inc/back-compat.php:75
 #, php-format
 msgid ""
-"Quicksand requires at least WordPress version %s. You are running "
-"version %s. Please upgrade and try again."
+"Quicksand requires at least WordPress version %s. You are running version %s. "
+"Please upgrade and try again."
 msgstr ""
-"Quicksand benötigt mindestens die WordPress Version %s. Sie haben "
-"die Version %s. Bitte updaten und nochmals versuchen. "
+"Quicksand benötigt mindestens die WordPress Version %s. Sie haben die Version "
+"%s. Bitte updaten und nochmals versuchen. "
 
 #: inc/customizer.php:48
 msgid "Theme Options"
@@ -178,75 +178,104 @@ msgstr "Navigation volle Breite"
 msgid "Navbar Link Color"
 msgstr "Navbar Linkfarbe"
 
-#: inc/customizer.php:124
+#: inc/customizer.php:123
+msgid "Navbar Link Hover Background Color"
+msgstr ""
+
+#: inc/customizer.php:136
 msgid "Navbar Background Color"
 msgstr "Navbar Hintergrundfarbe"
 
-#: inc/customizer.php:135
+#: inc/customizer.php:146
 msgid "Header"
 msgstr "Header"
 
-#: inc/customizer.php:148
+#: inc/customizer.php:159
 msgid "Header Fullwidth"
 msgstr "Header volle Breite"
 
-#: inc/customizer.php:162
+#: inc/customizer.php:173
 msgid "Header Background Color"
 msgstr "Header Hintergrundfarbe"
 
-#: inc/customizer.php:163
+#: inc/customizer.php:174
 msgid "Default used if no color is selected"
 msgstr "Default-Farbe, wenn keine andere selektiert ist"
 
-#: inc/customizer.php:171
+#: inc/customizer.php:184
 msgid "Content"
 msgstr "Inhalt"
 
-#: inc/customizer.php:183
+#: inc/customizer.php:196
 msgid "Content Background Color"
 msgstr "Inhalt Hintergrundfarbe"
 
-#: inc/customizer.php:195
+#: inc/customizer.php:208
 msgid "Content Link Color"
 msgstr "Inhalt Linkfarbe"
 
-#: inc/customizer.php:208
+#: inc/customizer.php:221
 msgid "Content Text Color"
 msgstr "Inhalt Textfarbe"
 
-#: inc/customizer.php:220
+#: inc/customizer.php:233
 msgid "Secondary Text Color"
 msgstr "Zweite Textfarbe"
 
-#: inc/customizer.php:228
+#: inc/customizer.php:257
+msgid "Widget Background Color"
+msgstr "Widget Backgroundfarbe"
+
+#: inc/customizer.php:269
+msgid "Widget Text Color"
+msgstr "Widget Textfarbe"
+
+#: inc/customizer.php:281
+msgid "Widget Link Color"
+msgstr "Widget Linkfarbe"
+
+#: inc/customizer.php:293
+msgid "Widget Border Color"
+msgstr "Widget Rahmenfarbe"
+
+#: inc/customizer.php:295
+msgid "For a nice effect choose the same color like Content-Background"
+msgstr ""
+"Für einen netten Effekt, wähle dieselbe Farbe wie der Hintergrund von Inhalt."
+
+#: inc/customizer.php:308
 msgid "Footer"
 msgstr "Footer"
 
-#: inc/customizer.php:240
+#: inc/customizer.php:320
 msgid "Footer Background Color"
 msgstr "Footer Hintergrundfarbe"
 
-#: inc/customizer.php:252
-msgid "Footer Link Color"
-msgstr "Footer Linkfarbe"
-
-#: inc/customizer.php:264
+#: inc/customizer.php:332
 msgid "Footer Text Color"
 msgstr "Footer Textfarbe"
 
-#: inc/customizer.php:330
+#: inc/customizer.php:344
+msgid "Footer Link Color"
+msgstr "Footer Linkfarbe"
+
+#: inc/customizer.php:356
+msgid "Footer Link Hover Color"
+msgstr "Footer Link-Hover-Farbe"
+
+#: inc/customizer.php:430
 msgid "Default"
 msgstr "Standard"
 
-#: inc/customizer.php:348
-msgid "Quicksand"
-msgstr "Quicksand"
+#: inc/customizer.php:455
+msgid "Dune"
+msgstr "Dune"
 
-#: inc/customizer.php:492
+#: inc/customizer.php:611
 msgid "Social Media Icons"
 msgstr "Social Media Icons"
 
-#: inc/customizer.php:556 inc/customizer.php:565
+#: inc/customizer.php:684 inc/customizer.php:693
 #, php-format
 msgid "%s icon"
 msgstr "%s icon"
@@ -350,6 +379,12 @@ msgstr ""
 "Es sieht so aus, als ob wir nicht das finden könnten, wonach Sie gesucht "
 "haben. Möglicherweise hilft eine Suche."
 
+#~ msgid "Appears at the bottom of the content on posts and pages."
+#~ msgstr "Erscheint unterhalb des Inhalts von Beiträgen und Seiten."
+
+#~ msgid "Quicksand"
+#~ msgstr "Quicksand"
+
 #~ msgid "Search"
 #~ msgstr "Suche"
 
@@ -370,14 +405,14 @@ msgstr ""
 #~ "first approach, and impeccable polish in every detail. Twenty Sixteen will "
 #~ "make your WordPress look beautiful everywhere."
 #~ msgstr ""
-#~ "Quicksand ist die moderne Interpretation eines allzeit beliebten "
-#~ "WordPress-Layouts – einer horizontalen Kopfzeile mit einer optionalen "
-#~ "rechten Sidebar die gleichermaßen bei Blogs wie klassischen Websites "
-#~ "perfekt funktioniert. Das Theme bietet Einstellungsmöglichkeiten für "
-#~ "individuelle​ Farben mit schönen Standard-Farbvorlagen​, ein harmonisches, "
-#~ "flexibles​ Raster mit einem Mobile-First-Ansatz und einem makellosen "
-#~ "Schliff in jedem Detail. Quicksand sorgt für einen tollen Look ​"
-#~ "bei​ all Ihren WordPress-Websites."
+#~ "Quicksand ist die moderne Interpretation eines allzeit beliebten WordPress-"
+#~ "Layouts – einer horizontalen Kopfzeile mit einer optionalen rechten "
+#~ "Sidebar die gleichermaßen bei Blogs wie klassischen Websites perfekt "
+#~ "funktioniert. Das Theme bietet Einstellungsmöglichkeiten für individuelle​ "
+#~ "Farben mit schönen Standard-Farbvorlagen​, ein harmonisches, flexibles​ "
+#~ "Raster mit einem Mobile-First-Ansatz und einem makellosen Schliff in jedem "
+#~ "Detail. Quicksand sorgt für einen tollen Look ​bei​ all Ihren WordPress-"
+#~ "Websites."
 
 #~ msgid "Twenty Sixteen"
 #~ msgstr "Quicksand"
@@ -459,9 +494,8 @@ msgstr ""
 #~ "Twenty Sixteen requires at least WordPress version 4.4. You are running "
 #~ "version %s. Please upgrade and try again."
 #~ msgstr ""
-#~ "Quicksand benötigt mindestens WordPress-Version 4.4. Sie "
-#~ "verwenden Version %s. Bitte aktualisieren Sie WordPress und versuchen Sie "
-#~ "es erneut."
+#~ "Quicksand benötigt mindestens WordPress-Version 4.4. Sie verwenden Version "
+#~ "%s. Bitte aktualisieren Sie WordPress und versuchen Sie es erneut."
 
 #~ msgctxt "Parent post link"
 #~ msgid ""
