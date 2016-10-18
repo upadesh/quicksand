@@ -442,7 +442,7 @@ function quicksand_get_color_schemes() {
                 '#2cb5b1',
                 '#d1d1d1',
                 
-                '#7c7c7c', 
+                '#9cbaba', 
                 '#ffffff',
                 '#ffffff',
                 '#ffffff',
@@ -466,12 +466,12 @@ function quicksand_get_color_schemes() {
                 '#7c5f4c',
                 '#e8c892',
                 '#ad8d6d', 
-                // sidebar: hell               
+                // sidebar: light               
                 '#ffffff',
                 '#9e7b63',
                 '#9e7b63',
                 '#faebd7' ,
-                // sidebar: dunkel            
+                // sidebar: dark            
                 // '#ddc9a6',
                 // '#9e7b63',
                 // '#9e7b63',
