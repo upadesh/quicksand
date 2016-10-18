@@ -50,18 +50,22 @@
      */
     var customizeNavbarHover = function (qs_nav_background_color, qs_nav_link_color, qs_nav_link_hover_background_color) {
         var style, el;
-console.info(qs_nav_link_hover_background_color);
+        
         style = '<style class="hover-styles">'
                 + '.site-nav-container, '
                 + '.site-nav-container nav.navbar,'
                 + '.site-nav-container .dropdown-menu { '
                 + 'background: ' + qs_nav_background_color + ' !important;'
                 + '}'
-                + '.nav-wrapper .menu-item .nav-link,'
-                + '.nav-wrapper .menu-item .dropdown-item { '
+                + '.site-nav-container,'
+                + '.site-nav-container .menu-item .nav-link,'
+                + '.site-nav-container .menu-item .dropdown-item { '
                 + 'color: ' + qs_nav_link_color + ' !important;'
                 + '}'
-                + '.nav-wrapper .menu-item .dropdown-item:hover { '
+                + '.site-nav-container .menu-item .dropdown-item.active { '
+                + 'background: ' + qs_nav_link_hover_background_color + ' !important;'
+                + '}'
+                + '.site-nav-container .menu-item .dropdown-item:hover { '
                 + 'background: ' + qs_nav_link_hover_background_color + ' !important;'
                 + '}'
                 + '</style>';
@@ -154,33 +158,33 @@ console.info(qs_nav_link_hover_background_color);
 
 
 
-    var customizeFooterHover = function (qs_footer_background_color, qs_footer_link_color, qs_footer_link_hover_color) {
+    var customizeFooterHover = function (qs_footer_background_color, qs_footer_link_color, qs_footer_link_hover_color, qs_footer_text_color) {
         var style, el;
         var qs_content_background_color = wp.customize.value('qs_content_background_color')();
 
         style = '<style class="hover-styles">'
-                + '.site-footer-widgetbar, .site-footer .row {'
-                + 'background: ' + qs_footer_background_color + ';'
+                + '.site-footer-widgetbar, .site-footer-widgetbar .widget li, .site-footer .row {'
+                + 'background: ' + qs_footer_background_color + ';' 
+                + 'color: ' + qs_footer_text_color + ';'
+                + 'border: none;'
                 + '}'
+        
                 + '.site-footer-widgetbar a, .site-footer .nav-wrapper a {'
                 + 'color: ' + qs_footer_link_color + ';'
                 + 'padding: 0 .6rem;'
-                + '}'
+                + '}' 
+        
                 + '.site-footer .nav-wrapper a:hover { '
                 + 'color: ' + qs_footer_background_color + ';'
                 + 'background: ' + qs_footer_link_hover_color + ';'
                 + '}'
+        
                 + '.site-footer .site-social .fa-circle { '
                 + 'color: ' + qs_footer_link_color + ';'
                 + '}'
+        
                 + '.site-footer .site-social .fa-stack:hover .fa-circle { '
                 + 'color: ' + qs_content_background_color + ' !;'
-                + '}'
-
-                + '.site-footer-widgetbar .widget li {'
-                + 'color: ' + qs_footer_link_color + ';'
-                + 'background: ' + qs_footer_background_color + ';'
-                + 'border: none;'
                 + '}'
 
                 + '</style>';
@@ -195,29 +199,35 @@ console.info(qs_nav_link_hover_background_color);
     }
 
     wp.customize('qs_footer_background_color', function (value) {
-        value.bind(function (qs_footer_background_color) {
+        value.bind(function (qs_footer_background_color) { 
+            var qs_footer_text_color = wp.customize.value('qs_footer_text_color')();
             var qs_footer_link_color = wp.customize.value('qs_footer_link_color')();
             var qs_footer_link_hover_color = wp.customize.value('qs_footer_link_hover_color')();
-            customizeFooterHover(qs_footer_background_color, qs_footer_link_color, qs_footer_link_hover_color);
+            customizeFooterHover(qs_footer_background_color, qs_footer_link_color, qs_footer_link_hover_color, qs_footer_text_color);
         });
     });
     wp.customize('qs_footer_link_color', function (value) {
         value.bind(function (qs_footer_link_color) {
+            var qs_footer_text_color = wp.customize.value('qs_footer_text_color')();
             var qs_footer_background_color = wp.customize.value('qs_footer_background_color')();
             var qs_footer_link_hover_color = wp.customize.value('qs_footer_link_hover_color')();
-            customizeFooterHover(qs_footer_background_color, qs_footer_link_color, qs_footer_link_hover_color);
+            customizeFooterHover(qs_footer_background_color, qs_footer_link_color, qs_footer_link_hover_color, qs_footer_text_color);
         });
     });
     wp.customize('qs_footer_link_hover_color', function (value) {
         value.bind(function (qs_footer_link_hover_color) {
+            var qs_footer_text_color = wp.customize.value('qs_footer_text_color')();
             var qs_footer_link_color = wp.customize.value('qs_footer_link_color')();
             var qs_footer_background_color = wp.customize.value('qs_footer_background_color')();
-            customizeFooterHover(qs_footer_background_color, qs_footer_link_color, qs_footer_link_hover_color);
+            customizeFooterHover(qs_footer_background_color, qs_footer_link_color, qs_footer_link_hover_color, qs_footer_text_color);
         });
     }); 
     wp.customize('qs_footer_text_color', function (value) {
-        value.bind(function (to) {
-            $('.site-footer-widgetbar').css('color', to);
+        value.bind(function (qs_footer_text_color) { 
+            var qs_footer_link_hover_color = wp.customize.value('qs_footer_link_hover_color')();
+            var qs_footer_link_color = wp.customize.value('qs_footer_link_color')();
+            var qs_footer_background_color = wp.customize.value('qs_footer_background_color')();
+            customizeFooterHover(qs_footer_background_color, qs_footer_link_color, qs_footer_link_hover_color, qs_footer_text_color);
         });
     });
 
