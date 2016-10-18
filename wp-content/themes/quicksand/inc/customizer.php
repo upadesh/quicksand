@@ -254,7 +254,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_background_color', array(
-        'label' => __('Sidebar Background Color', 'quicksand'),
+        'label' => __('Widget Background Color', 'quicksand'),
         'section' => 'quicksand_sidebar',
         'settings' => 'qs_sidebar_background_color'
     )));
@@ -266,7 +266,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_text_color', array(
-        'label' => __('Sidebar Text Color', 'quicksand'),
+        'label' => __('Widget Text Color', 'quicksand'),
         'section' => 'quicksand_sidebar',
         'settings' => 'qs_sidebar_text_color'
     )));
@@ -278,7 +278,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_link_color', array(
-        'label' => __('Sidebar Link Color', 'quicksand'),
+        'label' => __('Widget Link Color', 'quicksand'),
         'section' => 'quicksand_sidebar',
         'settings' => 'qs_sidebar_link_color'
     )));
@@ -290,7 +290,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_border_color', array(
-        'label' => __('Sidebar Border Color', 'quicksand'),
+        'label' => __('Widget Border Color', 'quicksand'),
         'section' => 'quicksand_sidebar',
         'description' => __('For a nice effect choose the same color like Content-Background', 'quicksand'), 
         'settings' => 'qs_sidebar_border_color'
