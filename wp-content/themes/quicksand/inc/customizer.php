@@ -639,12 +639,15 @@ add_action('customize_register', 'quicksand_add_social_sites_customizer');
 
 
 
-
+/**
+ * returns all active social sites
+ * 
+ * @return type mixed
+ */
 function quicksand_get_active_social_sites() {
     $active_sites = array();
     $social_sites = quicksand_social_media_array();
-
-    /* any inputs that aren't empty are stored in $active_sites array */
+ 
     foreach ($social_sites as $social_site) {
         if (strlen(get_theme_mod($social_site)) > 0) {
             $active_sites[] = $social_site;
