@@ -181,7 +181,19 @@ if (!function_exists('quicksand_customizer_css')) :
 
             .site-nav-container,
             .site-nav-container .menu-item .nav-link , 
-            .site-nav-container .menu-item .dropdown-item {
+            .site-nav-container .menu-item .dropdown-item, 
+            /* is there a possibility to overwrite all pseudos at once??? */
+            .navbar-light .navbar-nav .nav-link,
+            .navbar-light .navbar-nav .nav-link:hover,
+            .navbar-light .navbar-nav .nav-link:focus,
+            .navbar-light .navbar-nav .nav-link:active,  
+            .navbar-light .navbar-nav .nav-link:visited,  
+            .navbar-light .navbar-nav .open>.nav-link,
+            .navbar-light .navbar-nav .open>.nav-link:hover,
+            .navbar-light .navbar-nav .open>.nav-link:visited,
+            .navbar-light .navbar-nav .open>.nav-link:focus,
+            .navbar-light .navbar-nav .open>.nav-link:active 
+            {
                 color: <?php echo get_theme_mod('qs_nav_link_color', $colorScheme[7]); ?>;
             }  
 
