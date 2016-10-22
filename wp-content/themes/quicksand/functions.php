@@ -355,9 +355,9 @@ if (!function_exists('quicksand_widgets_init')) :
             'name' => __('Sidebar', 'quicksand'),
             'id' => 'sidebar-content-right',
             'description' => __('Add widgets here to appear in your sidebar.', 'quicksand'),
-            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'before_widget' => '<section id="%1$s" class="card widget %2$s">',
             'after_widget' => '</section>',
-            'before_title' => '<h2 class="widget-title">',
+            'before_title' => '<h2 class="card-header widget-title">',
             'after_title' => '</h2>',
         ));
 
