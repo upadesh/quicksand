@@ -38,7 +38,7 @@ if (post_password_required()) {
         }
         ?>
     </div>
-    <div id="comments" class="comments-area card-block">
+    <div id="comments" class="card-block comments-area">
 
         <?php if (have_comments()) : ?>   
             <ol class="comment-list">
@@ -64,7 +64,7 @@ if (post_password_required()) {
         // If comments are closed and there are comments, let's leave a little note, shall we?
         if (!comments_open() && get_comments_number() && post_type_supports(get_post_type(), 'comments')) :
             ?>
-            <p class="no-comments"><?php _e('Comments are closed.', 'quicksand'); ?></p>
+            <p class="card-text no-comments"><?php _e('Comments are closed.', 'quicksand'); ?></p>
         <?php endif; ?> 
 
         <?php
