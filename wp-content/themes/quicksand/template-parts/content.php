@@ -14,7 +14,7 @@
     <?php quicksand_entry_meta(); ?>
 
     <!--post-content--> 
-    <?php quicksand_single_entry_content(); ?> 
+    <?php quicksand_entry_content_single(); ?> 
     
     <!--edit-link-->
     <?php quicksand_edit_post(); ?> 

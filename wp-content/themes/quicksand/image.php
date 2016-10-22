@@ -66,13 +66,23 @@ get_header();
                     }
                     ?> 
                 </div> 
+                
+                
+                
+<!--                the_post_navigation(array(
+                    'prev_text' => '<span class="meta-nav btn btn-outline-secondary" post-last-link aria-hidden="true"><i class="fa fa-long-arrow-left"></i>%title</span>' .
+                    '<span class="screen-reader-text">' . __('Previous post:', 'quicksand') . '</span> ',
+                    'next_text' => '<span class="meta-nav btn btn-outline-secondary post-next-link " aria-hidden="true">%title<i class="fa fa-long-arrow-right"></i></span>' .
+                    '<span class="screen-reader-text">' . __('Next post:', 'quicksand') . '</span> ',
+                ));-->
+
 
                 <!-- image-navigation -->
                 <nav id="image-navigation" class="card-block navigation image-navigation">
                     <div class="nav-links">  
-                        <!--TODO; btns -->
-                        <span class="nav-previous"><?php previous_image_link(false, __('Previous Image', 'quicksand')); ?></span>
-                        <span class="nav-next"><?php next_image_link(false, __('Next Image', 'quicksand')); ?></span>  
+                        <!--TODO; btns ausrichten & größe --> 
+                        <span class="nav-previous btn btn-outline-secondary"><i class="fa fa-long-arrow-left"></i><?php previous_image_link(false, __('Previous Image', 'quicksand')); ?></span>
+                        <span class="nav-next btn btn-outline-secondary"><?php next_image_link(false, __('Next Image', 'quicksand')); ?><i class="fa fa-long-arrow-right"></i></span> 
                     </div><!-- .nav-links -->
                 </nav><!-- .image-navigation --> 
 
