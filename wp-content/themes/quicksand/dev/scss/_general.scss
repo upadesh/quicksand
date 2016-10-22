@@ -11,7 +11,7 @@
 
  
 /* alignment classes for img-floating */
-.aligncenter {
+/*.aligncenter {
     @extend .m-x-auto;
     margin: 0 auto 1.75em;
 }
@@ -25,7 +25,7 @@
 }
 
 
-/* blockquote & blockquote-footer */
+ blockquote & blockquote-footer 
 blockquote {
     @extend .blockquote;
     font-style: italic;
@@ -38,7 +38,7 @@ cite {
 }
 
 
-/* table */
+ table 
 
 table {
     @extend .table;
@@ -46,11 +46,10 @@ table {
 
 
 
-/* classes needed by WP*/ 
-
+ classes needed by WP  
 .bypostauthor {
     color: #686868;
 }
 .wp-caption-text {
     color: #686868;
-}
+}*/

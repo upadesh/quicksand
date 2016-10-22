@@ -7,20 +7,12 @@
 .sticky-post {
     @extend .tag;
     @extend .tag-danger; 
-}
+} 
 
 
-/*.site-content-area {
-    article { 
-        padding: 2rem;
-    }
-}*/
-
-
-/*
+/**
  * post-meta 
- */
-
+ */ 
 .post-meta-data { 
     .posted-on:before {
         font-family: FontAwesome; 
@@ -59,19 +51,11 @@
  */
 
 /* stretch postthumbnail to 100% */
-.post-thumbnail { 
+/*.post-thumbnail { 
     width:100%;
     height:auto; 
-}
-
-/* crop thumbnail in list-view
-    TODO: wo word das gesetzt?
-*/
-/*.crop-thumbnail {
-    max-height: 300px;
-    overflow: hidden;
-}  */
-
+}*/
+  
 /*
  * entries
  */
@@ -80,16 +64,16 @@
 }*/
 
 /* excerpt */
-.entry-summary {
+/*.entry-summary {
     color: $gray;
     font-style: italic;
-}
+}*/
 
 /* 
  * for the WP-Test: reduce size of massively large image with no alignment.
  *  http://wp.local/archives/tag/alignment-2
  */ 
-.entry-content { 
+/*.entry-content { 
     .wp-caption {
         max-width: 100%;
     }
@@ -119,7 +103,7 @@
             border-color: $gray;
         }
     }
-} 
+} */
 
 
 /*.author-info {
@@ -132,7 +116,7 @@
  * comments
  */
 
-.comments-area  {
+/*.comments-area  {
     .comment-respond {
         @extend .m-t-2;
     }
@@ -147,7 +131,7 @@
     .comment-metadata {
         @extend .m-b-1; 
     }
-} 
+} */
 
 /* all edit-links */
 /*.comment-edit-link:before,

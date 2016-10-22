@@ -1,0 +1,42 @@
+/*
+ * widgets
+ */
+#secondary {
+
+    .widget { 
+
+        /* calendar-widget bugfix */ 
+        /*    @media (max-width: 767px) {
+                #wp-calendar {
+                    margin: 0 auto;
+                }
+            } */
+        .widget-title {
+            margin-bottom: 0;
+        }
+
+        ul, ol {
+            list-style-type: none;  
+            @extend .list-group; 
+            li { 
+                @extend .list-group-item;
+
+                border-left: none !important;
+                border-right: none !important;
+
+                &:first-of-type {
+                    border-top: none;
+                }
+                &:last-of-type {
+                    border-bottom: none;
+                }
+                li {
+                    border:none;
+                    padding-bottom: 0;
+                }
+            }
+
+        }
+    } 
+} 
+

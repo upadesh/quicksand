@@ -169,8 +169,7 @@ if (!function_exists('quicksand_entry_title')) :
      *
      * @param string $class Optional. Class string of the header element.  
      */
-    function quicksand_entry_title($class = 'entry-title') {
-        $class = esc_attr($class);
+    function quicksand_entry_title($class = 'entry-title') { 
         ?>
 
         <!-- entry-header --> 
@@ -187,7 +186,7 @@ if (!function_exists('quicksand_entry_title')) :
 
                 <?php
             else :
-                the_title(sprintf('<h1 class="entry-title' . $class . '"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h1>');
+                the_title(sprintf('<h1 class="%s"><a href="%s" rel="bookmark">', esc_attr($class), esc_url(get_permalink())), '</a></h1>');
                 ?> 
             <?php endif; ?>
         </header><!-- .entry-header --> 
@@ -220,7 +219,7 @@ if (!function_exists('quicksand_entry_title_postformat_link')) :
             <?php endif; ?>
 
             <div class="post-link">  
-                <h1 class="card-title <?php echo $class; ?>">
+                <h1 class="<?php echo $class; ?>">
                     <a href="<?php echo get_url_in_content(get_the_content()); ?>" target="_blank"><i class="fa fa-link" aria-hidden="true"></i> <?php the_title(); ?></a> 
                 </h1> 
             </div><!-- .post-link -->

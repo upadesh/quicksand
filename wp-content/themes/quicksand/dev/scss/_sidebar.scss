@@ -1,37 +1,7 @@
 /*
- * widgets
+ * main sidebar / widget file
+ * place in here all rules which should be assigned to all sidebars
  */
-.widget { 
-    /* calendar-widget bugfix */ 
-    @media (max-width: 767px) {
-        #wp-calendar {
-            margin: 0 auto;
-        }
-    } 
-
-    ul, ol {
-        list-style-type: none;  
-        @extend .list-group; 
-        li { 
-            @extend .list-group-item;
-            li {
-                border:none;
-            }
-        }
-
-    }
-} 
-
-
-#third { 
-    .widget {  
-        li {
-            padding: .1rem !important;
-        } 
-    }
-}
-
-
 
 
 /* === Font Awesome for some widgets === */
@@ -80,10 +50,21 @@
 
 
 
+/* === adjust certain widgets === */
+.widget_search {
+    border: none !important;
+}
+
+
+
+
+
+
+
 /*TODO: calendar-table-fix*/ 
-section.widget_calendar { 
+/*section.widget_calendar { 
     overflow: hidden; 
     td {
         padding: .5rem;
     }
-} 
+} */

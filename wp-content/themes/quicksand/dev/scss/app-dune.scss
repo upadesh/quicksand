@@ -5,7 +5,7 @@
  */ 
 
 /* change bootsrap-vars in here */
-@import 'variables-dune';
+/*@import 'variables-dune';
 @import 'general';
 @import 'navbar';
 @import 'fonts';
@@ -17,7 +17,7 @@
 @import 'widgets';
 @import 'footer';
 @import 'footer-sidebar';
-/* import bootstrap at the very last end, so we can use it's variables */
+ import bootstrap at the very last end, so we can use it's variables 
 @import "node_modules/bootstrap/scss/bootstrap.scss";
-/* if you want to use mixins of bootstrap, it only works afterwards*/
-@import "bootstrap-pagination.scss";
+ if you want to use mixins of bootstrap, it only works afterwards
+@import "bootstrap-pagination.scss";*/

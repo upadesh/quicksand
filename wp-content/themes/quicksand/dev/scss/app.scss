@@ -3,18 +3,23 @@
  */ 
 
 /* change bootsrap-vars in here */
-@import 'variables';
-@import 'general';
-@import 'navbar';
-@import 'fonts';
-@import 'post';
-@import 'gallery';
 @import 'grids';
+/*@import 'colors';*/
+@import 'variables';
+
+@import 'fonts';
+@import 'navbar';
 @import 'header';
-@import 'scaffold';
-@import 'widgets';
+@import 'gallery';
 @import 'footer';
-@import 'footer-sidebar';
+@import 'sidebar';
+@import 'sidebar-right';
+@import 'sidebar-footer'; 
+@import 'general';
+@import 'post';
+/*
+@import 'scaffold';
+*/
 /* import bootstrap at the very last end, so we can use it's variables */
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 /* if you want to use mixins of bootstrap, it only works afterwards*/
