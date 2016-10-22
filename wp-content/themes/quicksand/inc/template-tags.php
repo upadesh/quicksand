@@ -221,7 +221,7 @@ if (!function_exists('quicksand_entry_title_postformat_link')) :
 
             <div class="post-link">  
                 <h1 class="card-title <?php echo $class; ?>">
-                    <a href="<?php echo get_url_in_content(get_the_content()); ?>"><i class="fa fa-link" aria-hidden="true"></i> <?php the_title(); ?></a> 
+                    <a href="<?php echo get_url_in_content(get_the_content()); ?>" target="_blank"><i class="fa fa-link" aria-hidden="true"></i> <?php the_title(); ?></a> 
                 </h1> 
             </div><!-- .post-link -->
         </header><!-- .entry-header --> 
@@ -259,7 +259,7 @@ if (!function_exists('quicksand_entry_content_single')) :
 //                break;
 //            break;
             case 'link':
-                // Nothing todo, because there's no possibilty to go into single-view in link post-format
+            // Nothing todo, because there's no possibilty to go into single-view in link post-format
 //        case 'gallery':
 //            break;
 //        case 'status':
@@ -309,6 +309,36 @@ if (!function_exists('quicksand_paginated_posts_paginator')) :
 
 endif;
 
+
+
+
+if (!function_exists('quicksand_bs_style_paginator')) :
+
+    /**
+     * Displays bs-style pagination 
+     *
+     * Create your own quicksand_paginated_posts_paginator() function to override in a child theme.
+     *
+     * @since Quicksand 0.2.1
+     */
+    function quicksand_bs_style_paginator() {
+        ?>
+        <div class="bs-pagination">
+            <?php
+            // navigation: post-list 
+            the_posts_pagination(array(
+                'mid_size' => 2,
+                'prev_text' => '<i class="fa fa-backward" aria-hidden="true"></i>',
+                'next_text' => '<i class="fa fa-forward" aria-hidden="true"></i>',
+                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'quicksand') . ' </span>',
+            ));
+            ?>
+        </div>
+
+        <?php
+    }
+
+endif;
 
 
 
@@ -480,6 +510,10 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
+
+
 
 
 

@@ -15,11 +15,8 @@
     <?php quicksand_entry_meta(); ?>
 
     <!--post-content--> 
-    <?php quicksand_entry_content_single(); ?>
-
-    <!--author-biography-->
-    <?php quicksand_author_biography(); ?>
-
+    <?php quicksand_entry_content_single(); ?> 
+    
     <!--edit-link-->
     <?php quicksand_edit_post(); ?> 
 
