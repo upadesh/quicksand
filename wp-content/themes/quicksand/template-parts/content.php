@@ -17,6 +17,6 @@
     <?php quicksand_single_entry_content(); ?> 
     
     <!--edit-link-->
-    <?php quicksand_entry_footer(); ?> 
+    <?php quicksand_edit_post(); ?> 
 
 </article><!-- .post-->  

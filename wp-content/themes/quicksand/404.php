@@ -15,15 +15,15 @@ get_header();
     <!--  site-content-area -->    
     <main id="primary" class="site-content-area">  
 
-        <section class="error-404 not-found">
-            <header class="page-header">
-                <h1 class="page-title">
+        <section class="error-404 not-found card">
+            <header class="card-block page-header">
+                <h1 class="card-title page-title">
                     <?php _e('Oops! That page can&rsquo;t be found.', 'quicksand'); ?>
                 </h1>
             </header><!-- .page-header -->
 
-            <div class="page-content">
-                <p><?php _e('It looks like nothing was found at this location. Maybe try a search?', 'quicksand'); ?></p>
+            <div class="card-block page-content">
+                <p class="card-text"><?php _e('It looks like nothing was found at this location. Maybe try a search?', 'quicksand'); ?></p>
 
                 <?php get_search_form(); ?>
             </div><!-- .page-content -->

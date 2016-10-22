@@ -279,18 +279,18 @@ endif;
 
 
 
-if (!function_exists('quicksand_entry_footer')) :
+if (!function_exists('quicksand_edit_post')) :
 
     /**
      * edit-link for logged in users & maybe more
      *
-     * Create your own quicksand_entry_footer() function to override in a child theme.
+     * Create your own quicksand_edit_post() function to override in a child theme.
      *
      * @since Quicksand 0.2.1
      */
-    function quicksand_entry_footer() {
+    function quicksand_edit_post() {
         ?>
-        <footer class="entry-footer card-block">
+        <div class="entry-footer card-block">
             <?php
             edit_post_link(
                     sprintf(
@@ -299,7 +299,7 @@ if (!function_exists('quicksand_entry_footer')) :
                     ), '<span class="card-link edit-link">', '</span>'
             );
             ?>
-        </footer><!-- .entry-footer -->
+        </div><!-- .entry-footer -->
         <?php
     }
 

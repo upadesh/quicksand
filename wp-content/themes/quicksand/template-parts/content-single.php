@@ -36,7 +36,7 @@
     <?php quicksand_author_biography(); ?>
 
     <!--edit-link-->
-    <?php quicksand_entry_footer(); ?> 
+    <?php quicksand_edit_post(); ?> 
 
 </article><!-- .post-->  
 

@@ -20,13 +20,15 @@ get_header();
         while (have_posts()) : the_post();
             ?>
 
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <article id="post-<?php the_ID(); ?>" <?php post_class('card'); ?>>
 
-                <header class="entry-header">
-                    <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+                <header class="card-block entry-header">
+                    <?php the_title('<h1 class="card-title entry-title">', '</h1>'); ?>
                 </header><!-- .entry-header -->
 
-                <div class="entry-content">
+                <?php quicksand_entry_meta(); ?>
+
+                <div class="card-block entry-content">
 
                     <div class="entry-attachment">
                         <?php
@@ -42,26 +44,19 @@ get_header();
                         echo wp_get_attachment_image(get_the_ID(), $image_size);
                         ?>
 
-                        <?php quicksand_entry_excerpt('entry-caption'); ?>
+                        <?php quicksand_entry_excerpt('card-text entry-caption'); ?>
 
                     </div><!-- .entry-attachment -->
+
 
                     <?php
                     the_content();
                     ?>
                 </div><!-- .entry-content -->
 
-                <!-- image-navigation -->
-                <nav id="image-navigation" class="navigation image-navigation">
-                    <div class="nav-links"> 
-                        <span class="nav-previous"><?php previous_image_link(false, __('Previous Image', 'quicksand')); ?></span>
-                        <span class="nav-next"><?php next_image_link(false, __('Next Image', 'quicksand')); ?></span>  
-                    </div><!-- .nav-links -->
-                </nav><!-- .image-navigation --> 
 
-
-                <footer class="entry-footer">
-                    <?php quicksand_entry_meta(); ?>
+                <!--full-size image-link-->
+                <div class="card-block entry-footer">
                     <?php
                     // Retrieve attachment metadata.
                     $metadata = wp_get_attachment_metadata();
@@ -69,16 +64,20 @@ get_header();
                         printf('<span class="full-size-link"><span class="screen-reader-text">%1$s </span><a href="%2$s">%3$s &times; %4$s</a></span>', esc_html_x('Full size', 'Used before full size attachment link.', 'quicksand'), esc_url(wp_get_attachment_url()), absint($metadata['width']), absint($metadata['height'])
                         );
                     }
-                    ?>
-                    <?php
-                    edit_post_link(
-                            sprintf(
-                                    /* translators: %s: Name of current post */
-                                    __('Edit<span class="screen-reader-text"> "%s"</span>', 'quicksand'), get_the_title()
-                            ), '<span class="edit-link">', '</span>'
-                    );
-                    ?>
-                </footer><!-- .entry-footer -->
+                    ?> 
+                </div> 
+
+                <!-- image-navigation -->
+                <nav id="image-navigation" class="card-block navigation image-navigation">
+                    <div class="nav-links">  
+                        <!--TODO; btns -->
+                        <span class="nav-previous"><?php previous_image_link(false, __('Previous Image', 'quicksand')); ?></span>
+                        <span class="nav-next"><?php next_image_link(false, __('Next Image', 'quicksand')); ?></span>  
+                    </div><!-- .nav-links -->
+                </nav><!-- .image-navigation --> 
+
+                <!--edit link-->
+                <?php quicksand_edit_post(); ?> 
             </article><!-- #post-## -->
 
             <?php
@@ -87,7 +86,7 @@ get_header();
                 comments_template();
             }
 
-            // Parent post navigation
+            // parent post link
             the_post_navigation(array(
                 'prev_text' => _x('<span class="meta-nav">Published in </span><span class="post-title">%title</span>', 'Parent post link', 'quicksand'),
             ));
