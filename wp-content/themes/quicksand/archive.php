@@ -26,6 +26,7 @@ get_header();
 
         <?php if (have_posts()) : ?>
 
+            <!--Month: February 2016-->
             <header class="page-header">
                 <?php
                 the_archive_title('<h1 class="page-title">', '</h1>');
@@ -33,8 +34,7 @@ get_header();
                 ?>
             </header><!-- .page-header -->
 
-            <?php
-            // Start the Loop.
+            <?php 
             while (have_posts()) : the_post();
 
                 /*

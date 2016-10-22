@@ -24,6 +24,7 @@ get_header();
         <!-- post-list -->
         <?php
         if (have_posts()) :
+            // header for screen-readers
             if (is_home() && !is_front_page()) :
                 ?>
                 <header>

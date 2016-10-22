@@ -137,13 +137,13 @@ if (!function_exists('quicksand_entry_thumbnail')) :
             ?>
 
             <!-- post-thumbnail: featured image --> 
-            <div class="post-thumbnail">   
+            <div class="card-img-top post-thumbnail">   
                 <?php the_post_thumbnail('post-thumbnail', array('class' => 'card-img-top img-fluid post-thumbnail')); ?>
             </div><!-- .post-thumbnail -->
 
         <?php else : ?>
             <!--TODO: card-->
-            <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true"> 
+            <a class="card-img-top post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true"> 
                 <?php
                 the_post_thumbnail('quicksand-featured_image', array(
                     'alt' => the_title_attribute('echo=0'),

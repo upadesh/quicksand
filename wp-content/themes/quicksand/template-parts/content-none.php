@@ -10,25 +10,25 @@
 ?>
 
 <!--template: content-none-->
-<section class="no-results not-found">
+<section class="card no-results not-found">
     
-    <header class="page-header">
-        <h1 class="page-title"><?php _e('Nothing Found', 'quicksand'); ?></h1>
+    <header class="card-block page-header">
+        <h1 class="card-title page-title"><?php _e('Nothing Found', 'quicksand'); ?></h1>
     </header><!-- .page-header -->
 
-    <div class="page-content">
+    <div class="card-block page-content">
         <?php if (is_home() && current_user_can('publish_posts')) : ?>
 
-            <p><?php printf(__('Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'quicksand'), esc_url(admin_url('post-new.php'))); ?></p>
+            <p class="card-text"><?php printf(__('Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'quicksand'), esc_url(admin_url('post-new.php'))); ?></p>
 
         <?php elseif (is_search()) : ?>
 
-            <p><?php _e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'quicksand'); ?></p>
+            <p class="card-text"><?php _e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'quicksand'); ?></p>
             <?php get_search_form(); ?>
 
         <?php else : ?>
 
-            <p><?php _e('It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'quicksand'); ?></p>
+            <p class="card-text"><?php _e('It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'quicksand'); ?></p>
             <?php get_search_form(); ?>
 
         <?php endif; ?>
