@@ -721,25 +721,28 @@ function quicksand_hex2rgb($color) {
     return array('red' => $r, 'green' => $g, 'blue' => $b);
 }
 
-//if (!function_exists('quicksand_bootstrap_wrap_oembed')) :
-//
-//    /**
-//     * make videos responsive
-//     * 
-//     * @param type $html
-//     * @param type $url
-//     * @param type $attr
-//     * @param type $post_id
-//     * 
-//     * @return string html
-//     */
-//    function quicksand_bootstrap_wrap_oembed($html) {
-//        $html = preg_replace('/(width|height)="\d*"\s/', "", $html); // Strip width and height #1
-//        return'<div class="embed-responsive embed-responsive-16by9">' . $html . '</div>'; // Wrap in div element and return #3 and #4
-//    }
-//
-//endif;
-//add_filter('embed_oembed_html', 'quicksand_bootstrap_wrap_oembed', 99, 4);
+if (!function_exists('quicksand_bootstrap_wrap_oembed')) :
+
+    /**
+     * make videos responsive
+     * 
+     * @param type $html
+     * @param type $url
+     * @param type $attr
+     * @param type $post_id
+     * 
+     * @return string html
+     */
+    function quicksand_bootstrap_wrap_oembed($html) {
+        // strip width and height 
+        $html = preg_replace('/(width|height)="\d*"\s/', "", $html);
+        
+        // wrap in div element & add a cresponsive-class
+        return'<div class="">' . $html . '</div>';
+    }
+
+endif;
+add_filter('embed_oembed_html', 'quicksand_bootstrap_wrap_oembed', 99, 4);
 
 
 /**
