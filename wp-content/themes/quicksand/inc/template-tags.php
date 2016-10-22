@@ -141,8 +141,7 @@ if (!function_exists('quicksand_entry_thumbnail')) :
                 <?php the_post_thumbnail('post-thumbnail', array('class' => 'card-img-top img-fluid post-thumbnail')); ?>
             </div><!-- .post-thumbnail -->
 
-        <?php else : ?>
-            <!--TODO: card-->
+        <?php else : ?> 
             <a class="card-img-top post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true"> 
                 <?php
                 the_post_thumbnail('quicksand-featured_image', array(
@@ -179,7 +178,7 @@ if (!function_exists('quicksand_entry_title')) :
             <!--stick post-->
             <?php if (is_sticky() && is_home() && !is_paged()) : ?>
                 <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
-            <?php
+                <?php
             endif;
 
             if (is_singular()) :
@@ -188,9 +187,43 @@ if (!function_exists('quicksand_entry_title')) :
 
                 <?php
             else :
-                the_title(sprintf('<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h1>');
+                the_title(sprintf('<h1 class="entry-title' . $class . '"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h1>');
                 ?> 
             <?php endif; ?>
+        </header><!-- .entry-header --> 
+        <?php
+    }
+
+endif;
+
+
+if (!function_exists('quicksand_entry_title_postformat_link')) :
+
+    /**
+     * Displays the title for post-format: link 
+     *
+     * Create your own quicksand_entry_title_postformat_link() function to override in a child theme.
+     *
+     * @since Quicksand 0.2.1
+     *
+     * @param string $class Optional. Class string of the header element.  
+     */
+    function quicksand_entry_title_postformat_link($class = 'entry-title') {
+        $class = esc_attr($class);
+        ?> 
+
+        <!-- entry-header --> 
+        <header class="card-block entry-header">
+            <!--stick post-->
+            <?php if (is_sticky() && is_home() && !is_paged()) : ?>
+                <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
+            <?php endif; ?>
+
+            <div class="post-link">  
+                <h1 class="card-title <?php echo $class; ?>">
+                    <a href="<?php echo get_url_in_content(get_the_content()); ?>"><i class="fa fa-link" aria-hidden="true"></i> <?php the_title(); ?></a> 
+                </h1> 
+            </div><!-- .post-link -->
         </header><!-- .entry-header --> 
         <?php
     }
@@ -222,11 +255,11 @@ if (!function_exists('quicksand_entry_content_single')) :
 //        case 'video':
 //            break;
 //        case 'quote':
+//                get_template_part('template-parts/content-single', get_post_format());
+//                break;
 //            break;
             case 'link':
-                // TODO: cards
-                get_template_part('template-parts/content-single', get_post_format());
-                break;
+                // Nothing todo, because there's no possibilty to go into single-view in link post-format
 //        case 'gallery':
 //            break;
 //        case 'status':
@@ -447,6 +480,8 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
 
 
 
