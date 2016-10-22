@@ -10,5 +10,5 @@
 
 <!--  site-sidebar  -->
 <aside id="secondary" class="site-sidebar widget-area"> 
-    <?php dynamic_sidebar('sidebar-1'); ?> 
+    <?php dynamic_sidebar('sidebar-content-right'); ?> 
 </aside><!-- .site-sidebar .widget-area --> 

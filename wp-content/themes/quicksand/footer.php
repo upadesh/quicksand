@@ -16,10 +16,10 @@
 
 
 <!-- site-footer-widgetbar -->
-<?php if (is_active_sidebar('sidebar-2')) : ?> 
-    <div class="container site-footer-widgetbar">  <h2>asdkasdlkajlk</h2>
+<?php if (is_active_sidebar('sidebar-footer-bottom')) : ?>
+    <div class="container site-footer-widgetbar"> 
         <!-- site-sidebar widget-area --> 
-        <?php get_sidebar('content-bottom'); ?>   
+        <?php dynamic_sidebar('sidebar-footer-bottom'); ?>   
     </div><!-- .site-sidebar.widget-area --> 
 <?php endif; ?> 
 

@@ -259,7 +259,7 @@ if (!function_exists('quicksand_entry_content_single')) :
 //                break;
 //            break;
             case 'link':
-            // Nothing todo, because there's no possibilty to go into single-view in link post-format
+            // normal template is enough
 //        case 'gallery':
 //            break;
 //        case 'status':
