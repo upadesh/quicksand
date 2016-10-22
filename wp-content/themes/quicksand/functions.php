@@ -173,7 +173,7 @@ if (!function_exists('quicksand_customizer_css')) :
         ?>
         <style type="text/css">  
             /*navigation*/
-            .site-nav-container,
+/*            .site-nav-container,
             .site-nav-container nav.navbar,
             .site-nav-container .dropdown-menu {
                 background: <?php echo get_theme_mod('qs_nav_background_color', $colorScheme[6]); ?>;
@@ -182,7 +182,7 @@ if (!function_exists('quicksand_customizer_css')) :
             .site-nav-container,
             .site-nav-container .menu-item .nav-link , 
             .site-nav-container .menu-item .dropdown-item, 
-            /* is there a possibility to overwrite all pseudos at once??? */
+             is there a possibility to overwrite all pseudos at once??? 
             .navbar-light .navbar-nav .nav-link,
             .navbar-light .navbar-nav .nav-link:hover,
             .navbar-light .navbar-nav .nav-link:focus,
@@ -207,7 +207,7 @@ if (!function_exists('quicksand_customizer_css')) :
             }
 
 
-            /*site-header*/
+            site-header
             .site-info-wrapper a,
             .site-info-wrapper .site-description {  
                 color: #<?php echo preg_replace('/^#/', '', get_header_textcolor()); ?>; 
@@ -217,7 +217,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 background: <?php echo get_theme_mod('qs_header_background_color', $colorScheme[8]); ?>;
             }
 
-            /*content*/
+            content
             .site-main-container { 
                 background: <?php echo get_theme_mod('qs_content_background_color', $colorScheme[1]); ?>;
                 color: <?php echo get_theme_mod('qs_content_text_color', $colorScheme[3]); ?>;
@@ -229,7 +229,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme[2]); ?>;
             } 
 
-            /*bootstrap pagination*/ 
+            bootstrap pagination 
             .site-main-container .navigation.pagination .nav-links .page-numbers {
                 color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme[2]); ?>;
                 background: <?php echo get_theme_mod('qs_content_background_color', $colorScheme[1]); ?>;
@@ -246,7 +246,7 @@ if (!function_exists('quicksand_customizer_css')) :
             }
 
 
-            /*2nd text color*/  
+            2nd text color  
             .site-main-container  h1,
             .site-main-container  h2,
             .site-main-container  h3,
@@ -262,16 +262,16 @@ if (!function_exists('quicksand_customizer_css')) :
                 color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme[4]); ?>;
             }
 
-            /*post*/
+            post
             .site-content-area article {
                 background: <?php echo get_theme_mod('qs_content_post_bg_color', $colorScheme[18]); ?>;
-                /*border: 1px solid <?php echo get_theme_mod('qs_content_post_border_color', $colorScheme[19]); ?>;*/ 
+                border: 1px solid <?php echo get_theme_mod('qs_content_post_border_color', $colorScheme[19]); ?>; 
             }
             .site-content-area article .card {
-                /*background: <?php echo get_theme_mod('qs_content_post_bg_color', $colorScheme[18]); ?>;*/ 
+                background: <?php echo get_theme_mod('qs_content_post_bg_color', $colorScheme[18]); ?>; 
             }
 
-            /*sidebar*/ 
+            sidebar 
             #secondary .widget table,
             #secondary .widget li {
                 color: <?php echo get_theme_mod('qs_sidebar_text_color', $colorScheme[13]); ?>; 
@@ -291,7 +291,7 @@ if (!function_exists('quicksand_customizer_css')) :
 
 
 
-            /*footer*/ 
+            footer 
             .site-footer-widgetbar,
             .site-footer-widgetbar .widget li,
             .site-footer .row { 
@@ -305,17 +305,17 @@ if (!function_exists('quicksand_customizer_css')) :
                 padding: 0 .6rem;
             }  
             .site-footer .nav-wrapper a:hover {  
-                /*color: <?php echo get_theme_mod('qs_footer_background_color', $colorScheme[9]); ?>;*/
+                color: <?php echo get_theme_mod('qs_footer_background_color', $colorScheme[9]); ?>;
                 background: <?php echo get_theme_mod('qs_footer_link_hover_color', $colorScheme[17]); ?>;
             }  
 
-            /*footer-social-menu*/
+            footer-social-menu
             .site-footer .site-social .fa-circle {
                 color: <?php echo get_theme_mod('qs_footer_link_color', $colorScheme[10]); ?>; 
             }
             .site-footer .site-social .fa-stack:hover .fa-circle { 
                 opacity:0.5;
-            }
+            }*/
         </style>
         <?php
     }
