@@ -41,7 +41,7 @@ if (!function_exists('quicksand_entry_meta')) :
         if ('post' === get_post_type()) {
             $quicksandEntryTaxonomies = get_quicksand_entry_taxonomies();
             echo $quicksandEntryTaxonomies['categories'];
-            echo $quicksandEntryTaxonomies['tags'];
+//            echo $quicksandEntryTaxonomies['tags'];
         }
 
         // comments
@@ -54,6 +54,31 @@ if (!function_exists('quicksand_entry_meta')) :
     }
 
 endif;
+
+
+if (!function_exists('quicksand_entry_tags')) :
+
+    /**
+     * Prints HTML with date information for current post.
+     *
+     * Create your own quicksand_entry_tags() function to override in a child theme.
+     *
+     * @since Quicksand 0.2.1
+     */
+    function quicksand_entry_tags() {
+        $taxonomies = get_quicksand_entry_taxonomies();
+
+        if (!empty($taxonomies['tags'])) {
+            ?> 
+            <div class="entry-footer card-footer text-muted"> 
+                <?php echo $taxonomies['tags']; ?>
+            </div>
+            <?php
+        }
+    }
+
+endif;
+
 
 
 if (!function_exists('get_quicksand_entry_date')) :
@@ -169,7 +194,7 @@ if (!function_exists('quicksand_entry_title')) :
      *
      * @param string $class Optional. Class string of the header element.  
      */
-    function quicksand_entry_title($class = 'entry-title') { 
+    function quicksand_entry_title($class = 'entry-title') {
         ?>
 
         <!-- entry-header --> 
@@ -351,18 +376,20 @@ if (!function_exists('quicksand_edit_post')) :
      * @since Quicksand 0.2.1
      */
     function quicksand_edit_post() {
-        ?>
-        <div class="entry-footer card-footer text-muted">
-            <?php
-            edit_post_link(
-                    sprintf(
-                            /* translators: %s: Name of current post */
-                            __('Edit<span class="screen-reader-text"> "%s"</span>', 'quicksand'), get_the_title()
-                    ), '<span class="card-link edit-link">', '</span>'
-            );
+        if (current_user_can('edit_posts', get_the_ID())) :
             ?>
-        </div><!-- .entry-footer -->
-        <?php
+            <div class="entry-footer card-footer text-muted">
+                <?php
+                edit_post_link(
+                        sprintf(
+                                /* translators: %s: Name of current post */
+                                __('Edit<span class="screen-reader-text"> "%s"</span>', 'quicksand'), get_the_title()
+                        ), '<span class="card-link edit-link">', '</span>'
+                );
+                ?>
+            </div><!-- .entry-footer -->
+            <?php
+        endif;
     }
 
 endif;
@@ -509,6 +536,14 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
+
+
+
+
+
+
 
 
 

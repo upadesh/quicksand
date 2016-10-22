@@ -5,10 +5,10 @@
 /* one-column */ 
 .site-content { 
     #primary {
-        @extend .col-lg-9;
+        @extend .col-xl-9;
     }
     #secondary {
-        @extend .col-lg-3;
+        @extend .col-xl-3;
     }
 } 
 
@@ -21,21 +21,26 @@
 .page-template-template-fullwidth { 
     .site-content { 
         #primary {
-            @extend .col-lg-12; 
+            @extend .col-xs-12; 
         } 
     }
 } 
 
 
+/* 
+ * sidebar footer
+ */
 .site-footer-widgetbar { 
     .widget {
-        @extend .col-xs-12;
-        @extend .col-lg-6;
-        @extend .col-xl-3; 
+        @extend .col-xs-12; 
+        @extend .col-lg-4; 
     } 
 } 
 
 
+/* 
+ * menus footer
+ */
 .site-footer { 
     .site-social {
         @extend .col-lg-4 ;

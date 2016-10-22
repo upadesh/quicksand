@@ -1,13 +1,33 @@
 /**
- * variables
- */ 
-
-
+ * non-bs-variables
+ */  
 
 /* only for screen-readers */
 .screen-reader-text {
     @extend .sr-only;
-}     
+}    
+
+/* blockquote & blockquote-footer */
+blockquote {
+    @extend .blockquote;
+    font-style: italic;
+    /*border-left: .25rem solid $gray-dark !important;*/
+} 
+
+cite {
+    display: inline !important;
+    @extend .blockquote-footer;
+}
+
+
+/* table */
+
+table {
+    @extend .table;
+}
+
+
+ 
 
  
 /* alignment classes for img-floating */
@@ -22,29 +42,7 @@
 .alignleft {
     @extend .pull-sm-left;
     margin: 0.375em 1.75em 1.75em 0;
-}
-
-
- blockquote & blockquote-footer 
-blockquote {
-    @extend .blockquote;
-    font-style: italic;
-    border-left: .25rem solid $gray-dark !important;
 } 
-
-cite {
-    display: inline !important;
-    @extend .blockquote-footer;
-}
-
-
- table 
-
-table {
-    @extend .table;
-}
-
-
 
  classes needed by WP  
 .bypostauthor {

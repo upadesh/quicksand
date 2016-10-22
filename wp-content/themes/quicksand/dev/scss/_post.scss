@@ -116,10 +116,10 @@
  * comments
  */
 
-/*.comments-area  {
-    .comment-respond {
+.comments-area  {
+/*    .comment-respond {
         @extend .m-t-2;
-    }
+    }*/
     ol {
         list-style-type: none;
         .comment-reply-link:before {
@@ -128,10 +128,10 @@
             content: "\f112";
         }
     }
-    .comment-metadata {
+/*    .comment-metadata {
         @extend .m-b-1; 
-    }
-} */
+    }*/
+} 
 
 /* all edit-links */
 /*.comment-edit-link:before,
