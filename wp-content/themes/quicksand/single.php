@@ -18,7 +18,7 @@ get_header();
 
 <!--template: single-->
 <div class="row">
-    
+
     <!--  site-content-area -->  
     <main id="primary" class="site-content-area">  
 
@@ -33,23 +33,24 @@ get_header();
             }
 
         endwhile;
-        ?>  
-
+        ?>   
+        <!--posts-navigation-->
         <div class = "post-navigation">
-            <?php 
-            // When is this needed???
+            <?php
+            // TODO: test, auslagern zum child überschreiben & weils übersichtlicher ist
             if (is_singular('attachment')) {
                 // Parent post navigation.
                 the_post_navigation(array(
-                    'prev_text' => _x('<span class="meta-nav">Published in </span><span class="post-title">%title</span>', 'Parent post link', 'quicksand'),
+                    'prev_text' => _x('<span class="meta-nav btn btn-outline-secondary">Published in </span><span class="post-title">%title</span>', 'Parent post link', 'quicksand'),
                 ));
-            } elseif (is_singular('post')) {
+            }  
+            elseif (is_singular('post')) {
                 // Previous/next post navigation.
                 the_post_navigation(array(
-                    'prev_text' => '<span class="meta-nav" aria-hidden="true">%title</span> ' .
-                    '<span class="screen-reader-text">' . __('Previous post:', 'quicksand') . '</span> ' ,
-                    'next_text' => '<span class="meta-nav" aria-hidden="true">%title</span>' .
-                    '<span class="screen-reader-text">' . __('Next post:', 'quicksand') . '</span> ' , 
+                    'prev_text' => '<span class="meta-nav btn btn-outline-secondary" post-last-link aria-hidden="true"><i class="fa fa-long-arrow-left"></i>%title</span>' .
+                    '<span class="screen-reader-text">' . __('Previous post:', 'quicksand') . '</span> ',
+                    'next_text' => '<span class="meta-nav btn btn-outline-secondary post-next-link " aria-hidden="true">%title<i class="fa fa-long-arrow-right"></i></span>' .
+                    '<span class="screen-reader-text">' . __('Next post:', 'quicksand') . '</span> ',
                 ));
             }
             ?>

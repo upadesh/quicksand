@@ -18,30 +18,37 @@ if (!function_exists('quicksand_entry_meta')) :
      * @since Quicksand 0.2.1
      */
     function quicksand_entry_meta() {
-        echo '<div class="post-meta-data">';
-        if ('post' === get_post_type()) {
-            $author_avatar_size = apply_filters('quicksand_author_avatar_size', 49);
-            printf('<span class="byline"><span class="author vcard">%1$s<span class="screen-reader-text">%2$s </span> <a class="url fn n" href="%3$s">%4$s</a></span></span>', get_avatar(get_the_author_meta('user_email'), $author_avatar_size), _x('Author', 'Used before post author name.', 'quicksand'), esc_url(get_author_posts_url(get_the_author_meta('ID'))), get_the_author()
-            );
-        }
+        echo '<div class="card-block post-meta-data">';
 
+        // date
         if (in_array(get_post_type(), array('post', 'attachment'))) {
-            quicksand_entry_date();
+            $quicksand_entry_date = get_quicksand_entry_date();
+            echo $quicksand_entry_date;
         }
 
+        // author
+        $author = sprintf('<span class="post-author"><a href="%s">%s</a></span>', get_the_author_link(), get_the_author());
+        echo $author;
+
+        // post-format
         $format = get_post_format();
         if (current_theme_supports('post-formats', $format)) {
-            printf('<span class="entry-format">%1$s<a href="%2$s">%3$s</a></span>', sprintf('<span class="screen-reader-text">%s </span>', _x('Format', 'Used before post format.', 'quicksand')), esc_url(get_post_format_link($format)), get_post_format_string($format));
+            $post_format_string = sprintf('<span class="entry-format">%1$s<a href="%2$s">%3$s</a></span>', sprintf('<span class="screen-reader-text">%s </span>', _x('Format', 'Used before post format.', 'quicksand')), esc_url(get_post_format_link($format)), get_post_format_string($format));
+            echo $post_format_string;
         }
 
+        // taxonomies
         if ('post' === get_post_type()) {
-            quicksand_entry_taxonomies();
+            $quicksandEntryTaxonomies = get_quicksand_entry_taxonomies();
+            echo $quicksandEntryTaxonomies['categories'];
+            echo $quicksandEntryTaxonomies['tags'];
         }
 
+        // comments
         if (!is_singular() && !post_password_required() && ( comments_open() || get_comments_number() )) {
-            echo '<div class="comments-link">';
+            echo '<span class="comments-link">';
             comments_popup_link(sprintf(__('Leave a comment<span class="screen-reader-text"> on %s</span>', 'quicksand'), get_the_title()));
-            echo '</div>';
+            echo '</span>';
         }
         echo "</div>";
     }
@@ -49,16 +56,16 @@ if (!function_exists('quicksand_entry_meta')) :
 endif;
 
 
-if (!function_exists('quicksand_entry_date')) :
+if (!function_exists('get_quicksand_entry_date')) :
 
     /**
      * Prints HTML with date information for current post.
      *
-     * Create your own quicksand_entry_date() function to override in a child theme.
+     * Create your own get_quicksand_entry_date() function to override in a child theme.
      *
      * @since Quicksand 0.2.1
      */
-    function quicksand_entry_date() {
+    function get_quicksand_entry_date() {
         $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
         // Update-time:
@@ -68,33 +75,40 @@ if (!function_exists('quicksand_entry_date')) :
 
         $time_string = sprintf($time_string, esc_attr(get_the_date('c')), get_the_date(), esc_attr(get_the_modified_date('c')), get_the_modified_date());
 
-        printf('<span class="posted-on"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>', _x('Posted on', 'Used before publish date.', 'quicksand'), esc_url(get_permalink()), $time_string
+        return sprintf('<span class="posted-on"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>', _x('Posted on', 'Used before publish date.', 'quicksand'), esc_url(get_permalink()), $time_string
         );
     }
 
 endif;
 
-if (!function_exists('quicksand_entry_taxonomies')) :
+
+if (!function_exists('get_quicksand_entry_taxonomies')) :
 
     /**
      * Prints HTML with category and tags for current post.
      *
-     * Create your own quicksand_entry_taxonomies() function to override in a child theme.
+     * Create your own get_quicksand_entry_taxonomies() function to override in a child theme.
      *
      * @since Quicksand 0.2.1
      */
-    function quicksand_entry_taxonomies() {
+    function get_quicksand_entry_taxonomies() {
+        $taxonomies = array(
+            'categories' => NULL,
+            'tags' => NULL,
+        );
+
         $categories_list = get_the_category_list(_x(', ', 'Used between list items, there is a space after the comma.', 'quicksand'));
         if ($categories_list && quicksand_categorized_blog()) {
-            printf('<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span>', _x('Categories', 'Used before category names.', 'quicksand'), $categories_list
+            $taxonomies['categories'] = sprintf('<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span>', _x('Categories', 'Used before category names.', 'quicksand'), $categories_list
             );
         }
 
-        $tags_list = get_the_tag_list('', _x(', ', 'Used between list items, there is a space after the comma.', 'quicksand'));
-        if ($tags_list) {
-            printf('<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>', _x('Tags', 'Used before tag names.', 'quicksand'), $tags_list
-            );
+        $tag_list = get_the_tag_list('<span class="tag tag-pill tag-default">', '</span><span class="tag tag-default">', '</span>');
+        if ($tag_list) {
+            $taxonomies['tags'] = sprintf('<span class="tag-links"><span class="screen-reader-text">%1$s </span>%2$s</span>', _x('Tags', 'Used before tag names.', 'quicksand'), $tag_list);
         }
+
+        return $taxonomies;
     }
 
 endif;
@@ -102,7 +116,7 @@ endif;
 
 
 
-if (!function_exists('quicksand_post_thumbnail')) :
+if (!function_exists('quicksand_entry_thumbnail')) :
 
     /**
      * Displays an optional post thumbnail.
@@ -110,11 +124,11 @@ if (!function_exists('quicksand_post_thumbnail')) :
      * Wraps the post thumbnail in an anchor element on index views, or a div
      * element when on single views.
      *
-     * Create your own quicksand_post_thumbnail() function to override in a child theme.
+     * Create your own quicksand_entry_thumbnail() function to override in a child theme.
      *
      * @since Quicksand 0.2.1
      */
-    function quicksand_post_thumbnail() {
+    function quicksand_entry_thumbnail() {
         if (post_password_required() || is_attachment() || !has_post_thumbnail()) {
             return;
         }
@@ -122,15 +136,15 @@ if (!function_exists('quicksand_post_thumbnail')) :
         if (is_singular()) :
             ?>
 
-            <!-- post-thumbnail --> 
+            <!-- post-thumbnail: featured image --> 
             <div class="post-thumbnail">   
-                <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                <?php the_post_thumbnail('post-thumbnail', array('class' => 'card-img-top img-fluid post-thumbnail')); ?>
             </div><!-- .post-thumbnail -->
 
         <?php else : ?>
-
+            <!--TODO: card-->
             <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true"> 
-                <?php 
+                <?php
                 the_post_thumbnail('quicksand-featured_image', array(
                     'alt' => the_title_attribute('echo=0'),
                     'class' => 'img-fluid'
@@ -145,54 +159,215 @@ if (!function_exists('quicksand_post_thumbnail')) :
 endif;
 
 
-if (!function_exists('quicksand_excerpt')) :
+if (!function_exists('quicksand_entry_title')) :
 
     /**
-     * Displays the optional excerpt.
+     * Displays the title. 
      *
-     * Wraps the excerpt in a div element.
+     * Create your own quicksand_entry_title() function to override in a child theme.
      *
-     * Create your own quicksand_excerpt() function to override in a child theme.
+     * @since Quicksand 0.2.1
+     *
+     * @param string $class Optional. Class string of the header element.  
+     */
+    function quicksand_entry_title($class = 'entry-title') {
+        $class = esc_attr($class);
+        ?>
+
+        <!-- entry-header --> 
+        <header class="card-block entry-header">
+            <h1 class="card-title <?php echo $class; ?>"><?php the_title(); ?></h1> 
+        </header><!-- .entry-header --> 
+        <?php
+    }
+
+endif;
+
+
+if (!function_exists('quicksand_single_entry_content')) :
+
+    /**
+     * Displays the content. 
+     *
+     * Create your own quicksand_single_entry_content() function to override in a child theme.
+     *
+     * @since Quicksand 0.2.1
+     *
+     * @param string $class Optional. Class string of the div element.  
+     */
+    function quicksand_single_entry_content($class = 'entry-content') {
+        $class = esc_attr($class);
+        $format = get_post_format();
+
+        // include here your special template
+        switch ($format) {
+//        case 'aside':
+//            break;
+//        case 'image':
+//            break;
+//        case 'video':
+//            break;
+//        case 'quote':
+//            break;
+            case 'link':
+                // TODO: cards
+                get_template_part('template-parts/content-single', get_post_format());
+                break;
+//        case 'gallery':
+//            break;
+//        case 'status':
+//            break;
+//        case 'audio':
+//            break;
+//        case 'chat':
+//            break; 
+            default:
+                ?> 
+
+                <!--the default post-format-->
+                <div class="card-block  <?php echo $class; ?>"> 
+                    <p class="card-text"><?php the_content(); ?></p>
+                </div>  
+
+                <!--displays page links for paginated posts (i.e. includes the <!–nextpage–>)--> 
+                <?php quicksand_paginated_posts_paginator(); ?>
+ 
+
+                <?php
+                // author-biography
+                quicksand_author_biography();
+
+                // edit-link
+                quicksand_entry_footer();
+        }
+    }
+
+endif;
+
+
+
+
+if (!function_exists('quicksand_paginated_posts_paginator')) :
+
+    /**
+     * Displays page links for paginated posts (i.e. includes the <!–nextpage–>)
+     *
+     * Create your own quicksand_paginated_posts_paginator() function to override in a child theme.
+     *
+     * @since Quicksand 0.2.1
+     */
+    function quicksand_paginated_posts_paginator() {
+        wp_link_pages(array(
+            'before' => '<div class="card-block page-links"><span class="card-text page-links-title">' . __('Pages:', 'quicksand') . '</span>',
+            'after' => '</div>',
+            'link_before' => '<span class="card-link paged-link">',
+            'link_after' => '</span>',
+            'pagelink' => '<span class="screen-reader-text">' . __('Page', 'quicksand') . ' </span>%',
+            'separator' => '<span class="screen-reader-text">, </span>',
+        ));
+    }
+
+endif;
+
+
+
+
+if (!function_exists('quicksand_entry_footer')) :
+
+    /**
+     * edit-link for logged in users & maybe more
+     *
+     * Create your own quicksand_entry_footer() function to override in a child theme.
+     *
+     * @since Quicksand 0.2.1
+     */
+    function quicksand_entry_footer() {
+        ?>
+        <footer class="entry-footer card-block">
+            <?php
+            edit_post_link(
+                    sprintf(
+                            /* translators: %s: Name of current post */
+                            __('Edit<span class="screen-reader-text"> "%s"</span>', 'quicksand'), get_the_title()
+                    ), '<span class="card-link edit-link">', '</span>'
+            );
+            ?>
+        </footer><!-- .entry-footer -->
+        <?php
+    }
+
+endif;
+
+
+if (!function_exists('quicksand_author_biography')) :
+
+    /**
+     * Displays the author biography. 
+     *
+     * Create your own quicksand_author_biography() function to override in a child theme.
+     *
+     * @since Quicksand 0.2.1
+     */
+    function quicksand_author_biography() {
+        if ('' !== get_the_author_meta('description')) :
+            get_template_part('template-parts/biography');
+        endif;
+    }
+
+endif;
+
+
+
+
+if (!function_exists('quicksand_entry_excerpt')) :
+
+    /**
+     * Displays the optional excerpt. 
+     *
+     * Create your own quicksand_entry_excerpt() function to override in a child theme.
      *
      * @since Quicksand 0.2.1
      *
      * @param string $class Optional. Class string of the div element. Defaults to 'entry-summary'.
      */
-    function quicksand_excerpt($class = 'entry-summary') {
+    function quicksand_entry_excerpt($class = 'entry-summary') {
         $class = esc_attr($class);
 
         if (has_excerpt() || is_search()) :
             ?>
-            <div class="<?php echo $class; ?>">
-                <?php the_excerpt(); ?>
-            </div><!-- .<?php echo $class; ?> -->
+            <div class="card-block <?php echo $class; ?>">
+                <span class="card-text"><?php the_excerpt(); ?></span>
+            </div>  
             <?php
         endif;
     }
 
 endif;
 
-if (!function_exists('quicksand_excerpt_more') && !is_admin()) :
+
+
+
+//TODO: card -> wo ist ein bsp????
+if (!function_exists('quicksand_entry_excerpt_more') && !is_admin()) :
 
     /**
      * Replaces "[...]" (appended to automatically generated excerpts) with ... and
      * a 'Continue reading' link.
      *
-     * Create your own quicksand_excerpt_more() function to override in a child theme.
+     * Create your own quicksand_entry_excerpt_more() function to override in a child theme.
      *
      * @since Quicksand 0.2.1
      *
      * @return string 'Continue reading' link prepended with an ellipsis.
      */
-    function quicksand_excerpt_more() {
+    function quicksand_entry_excerpt_more() {
         $link = sprintf('<a href="%1$s" class="more-link">%2$s</a>', esc_url(get_permalink(get_the_ID())),
-                /* translators: %s: Name of current post */ 
-                sprintf(__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'quicksand'), get_the_title(get_the_ID()))
+                /* translators: %s: Name of current post */ sprintf(__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'quicksand'), get_the_title(get_the_ID()))
         );
         return ' &hellip; ' . $link;
     }
 
-    add_filter('excerpt_more', 'quicksand_excerpt_more');
+    add_filter('excerpt_more', 'quicksand_entry_excerpt_more');
 endif;
 
 
@@ -276,4 +451,8 @@ if (!function_exists('quicksand_the_custom_logo')) :
 
 
 
+
+
+
+    
 endif;

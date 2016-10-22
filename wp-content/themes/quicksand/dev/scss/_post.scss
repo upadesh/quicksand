@@ -10,11 +10,11 @@
 }
 
 
-.site-content-area {
+/*.site-content-area {
     article { 
         padding: 2rem;
     }
-}
+}*/
 
 
 /*
@@ -22,35 +22,39 @@
  */
 
 .post-meta-data { 
-    .posted-on{
-        a:before {
-            font-family: FontAwesome; 
-            padding-right: 3px;
-            content: "\f017";
-        }
+    .posted-on:before {
+        font-family: FontAwesome; 
+        padding-right: .4rem;
+        content: "\f017"; 
+    }
+    .post-author:before {
+        font-family: FontAwesome; 
+        padding-right: .4rem;
+        content: "\f007"; 
     }
     .cat-links:before {
         font-family: FontAwesome; 
-        padding-right: 3px;
+        padding-right: .4rem;
         content: "\f07c"; 
     }
     .tags-links:before {
-        font-family: FontAwesome; 
-        padding-right: 3px;
+        font-family: FontAwesome;
+        padding-right: .4rem;
         content: "\f02c"; 
     }
     .comments-link {
         @extend .m-t-1;
         a:before {
             font-family: FontAwesome; 
-            padding-right: 3px;
+            padding-right: .4rem;
             content: "\f075";
         }
     }
-    span:not(:last-of-type):after {
+    >span:not(:last-of-type):after {
         content: ' | ';
     }
 }
+
 
 
 /*
@@ -58,13 +62,14 @@
  */
 
 /* stretch postthumbnail to 100% */
-.post-thumbnail {
-    img {
-        width: 100%; 
-    }
+.post-thumbnail { 
+    width:100%;
+    height:auto; 
 }
 
-/* crop thumbnail in list-view */
+/* crop thumbnail in list-view
+    TODO: wo word das gesetzt?
+*/
 /*.crop-thumbnail {
     max-height: 300px;
     overflow: hidden;
@@ -73,9 +78,9 @@
 /*
  * entries
  */
-.entry-title {
+/*.entry-title {
     font-weight: bold; 
-}
+}*/
 
 /* excerpt */
 .entry-summary {
@@ -148,12 +153,12 @@
 } 
 
 /* all edit-links */
-.comment-edit-link:before,
+/*.comment-edit-link:before,
 .post-edit-link:before {
     font-family: FontAwesome; 
     padding-right: 3px;
     content: "\f040";
-}
+}*/
 
 
 

@@ -50,21 +50,21 @@
         display: table-cell;
         vertical-align: top; 
         width: 50%;
-        a:before {
+/*        a:before {
             font-family: FontAwesome; 
             padding-right: 3px;
             content: "\f0d9";
-        }
+        }*/
     }
     .nav-next {
         @extend .text-xs-right; 
         display: table-cell;
         vertical-align: top; 
         width: 50%;
-        a:after {
+/*        a:after {
             font-family: FontAwesome; 
             padding-left: 3px;
             content: "\f0da";
-        }
+        }*/
     }
 }

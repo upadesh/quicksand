@@ -42,7 +42,7 @@ get_header();
                         echo wp_get_attachment_image(get_the_ID(), $image_size);
                         ?>
 
-                        <?php quicksand_excerpt('entry-caption'); ?>
+                        <?php quicksand_entry_excerpt('entry-caption'); ?>
 
                     </div><!-- .entry-attachment -->
 

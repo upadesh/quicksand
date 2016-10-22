@@ -46,10 +46,10 @@ get_header();
 
             endwhile;
             ?> 
- 
+        
+            <!--bs-style-navigation: post-list--> 
             <div class="bs-pagination">
-                <?php
-                // navigation: post-list 
+                <?php 
                 the_posts_pagination(array(
                     'mid_size' => 2,
                     'prev_text' => '<i class="fa fa-backward" aria-hidden="true"></i>',

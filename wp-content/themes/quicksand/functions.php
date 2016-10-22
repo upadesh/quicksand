@@ -265,8 +265,10 @@ if (!function_exists('quicksand_customizer_css')) :
             /*post*/
             .site-content-area article {
                 background: <?php echo get_theme_mod('qs_content_post_bg_color', $colorScheme[18]); ?>;
-                border: 1px solid <?php echo get_theme_mod('qs_content_post_border_color', $colorScheme[19]); ?>;
-                padding: 2rem;
+                /*border: 1px solid <?php echo get_theme_mod('qs_content_post_border_color', $colorScheme[19]); ?>;*/ 
+            }
+            .site-content-area article .card {
+                /*background: <?php echo get_theme_mod('qs_content_post_bg_color', $colorScheme[18]); ?>;*/ 
             }
 
             /*sidebar*/ 
@@ -719,25 +721,25 @@ function quicksand_hex2rgb($color) {
     return array('red' => $r, 'green' => $g, 'blue' => $b);
 }
 
-if (!function_exists('quicksand_bootstrap_wrap_oembed')) :
-
-    /**
-     * make videos responsive
-     * 
-     * @param type $html
-     * @param type $url
-     * @param type $attr
-     * @param type $post_id
-     * 
-     * @return string html
-     */
-    function quicksand_bootstrap_wrap_oembed($html) {
-        $html = preg_replace('/(width|height)="\d*"\s/', "", $html); // Strip width and height #1
-        return'<div class="embed-responsive embed-responsive-16by9">' . $html . '</div>'; // Wrap in div element and return #3 and #4
-    }
-
-endif;
-add_filter('embed_oembed_html', 'quicksand_bootstrap_wrap_oembed', 99, 4);
+//if (!function_exists('quicksand_bootstrap_wrap_oembed')) :
+//
+//    /**
+//     * make videos responsive
+//     * 
+//     * @param type $html
+//     * @param type $url
+//     * @param type $attr
+//     * @param type $post_id
+//     * 
+//     * @return string html
+//     */
+//    function quicksand_bootstrap_wrap_oembed($html) {
+//        $html = preg_replace('/(width|height)="\d*"\s/', "", $html); // Strip width and height #1
+//        return'<div class="embed-responsive embed-responsive-16by9">' . $html . '</div>'; // Wrap in div element and return #3 and #4
+//    }
+//
+//endif;
+//add_filter('embed_oembed_html', 'quicksand_bootstrap_wrap_oembed', 99, 4);
 
 
 /**
