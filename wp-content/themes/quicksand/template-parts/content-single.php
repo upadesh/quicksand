@@ -17,20 +17,26 @@
 <!--template: content-single--> 
 <article class="card" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <!--template: content-single-->  
-        <!--post thumbnail-->
-        <?php quicksand_entry_thumbnail(); ?> 
+    <!--post thumbnail-->
+    <?php quicksand_entry_thumbnail(); ?> 
 
-        <!--post excerpt-->
-        <?php quicksand_entry_excerpt(); ?> 
+    <!--post excerpt-->
+    <?php quicksand_entry_excerpt(); ?> 
 
-        <!--post title-->
-        <?php quicksand_entry_title(); ?>
+    <!--post title-->
+    <?php quicksand_entry_title(); ?>
 
-        <!--post-meta--> 
-        <?php quicksand_entry_meta(); ?>
+    <!--post-meta--> 
+    <?php quicksand_entry_meta(); ?>
 
-        <!--post-content--> 
-        <?php quicksand_single_entry_content(); ?>
+    <!--post-content--> 
+    <?php quicksand_single_entry_content(); ?>
+
+    <!--author-biography-->
+    <?php quicksand_author_biography(); ?>
+
+    <!--edit-link-->
+    <?php quicksand_entry_footer(); ?> 
+
 </article><!-- .post-->  
 

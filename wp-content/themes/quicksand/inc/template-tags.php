@@ -27,7 +27,7 @@ if (!function_exists('quicksand_entry_meta')) :
         }
 
         // author
-        $author = sprintf('<span class="post-author"><a href="%s">%s</a></span>', get_the_author_link(), get_the_author());
+        $author = sprintf('<span class="post-author"><a href="%s">%s</a></span>', esc_url(get_author_posts_url(get_the_author_meta('ID'))), get_the_author());
         echo $author;
 
         // post-format
@@ -176,7 +176,21 @@ if (!function_exists('quicksand_entry_title')) :
 
         <!-- entry-header --> 
         <header class="card-block entry-header">
-            <h1 class="card-title <?php echo $class; ?>"><?php the_title(); ?></h1> 
+            <!--stick post-->
+            <?php if (is_sticky() && is_home() && !is_paged()) : ?>
+                <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
+            <?php
+            endif;
+
+            if (is_singular()) :
+                ?>
+                <h1 class="card-title <?php echo $class; ?>"><?php the_title(); ?></h1> 
+
+                <?php
+            else :
+                the_title(sprintf('<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h1>');
+                ?> 
+            <?php endif; ?>
         </header><!-- .entry-header --> 
         <?php
     }
@@ -230,15 +244,8 @@ if (!function_exists('quicksand_single_entry_content')) :
                 </div>  
 
                 <!--displays page links for paginated posts (i.e. includes the <!–nextpage–>)--> 
-                <?php quicksand_paginated_posts_paginator(); ?>
- 
-
                 <?php
-                // author-biography
-                quicksand_author_biography();
-
-                // edit-link
-                quicksand_entry_footer();
+                quicksand_paginated_posts_paginator();
         }
     }
 
@@ -440,6 +447,14 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
+
+
+
+
+
+
 
 
 

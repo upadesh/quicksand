@@ -42,13 +42,10 @@
         padding-right: .4rem;
         content: "\f02c"; 
     }
-    .comments-link {
-        @extend .m-t-1;
-        a:before {
-            font-family: FontAwesome; 
-            padding-right: .4rem;
-            content: "\f075";
-        }
+    .comments-link:before {
+        font-family: FontAwesome; 
+        padding-right: .4rem;
+        content: "\f075";
     }
     >span:not(:last-of-type):after {
         content: ' | ';
