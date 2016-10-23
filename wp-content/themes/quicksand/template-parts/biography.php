@@ -9,7 +9,7 @@
 ?> 
 
 
-<div class="card-block author-bio">  
+<div class="card-footer author-bio">  
     <?php
     /**
      * Filter the Quicksand author bio avatar size.

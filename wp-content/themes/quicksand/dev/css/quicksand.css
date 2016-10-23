@@ -386,8 +386,11 @@ cite {
   margin-bottom: 16px;
   margin-bottom: 1rem; }
 
-.entry-content .read-more-link {
-  float: right; }
+.card {
+  margin-bottom: 32px !important;
+  margin-bottom: 2rem !important; }
+  .card .entry-content .read-more-link {
+    float: right; }
 
 .entry-footer .tag-links .tag, .entry-footer .tag-links .sticky-post {
   margin-right: 8px;
@@ -446,8 +449,8 @@ cite {
 } */
 /*TODO: anständig stylen*/
 .author-bio {
-  /*TODO: functions / css preview*/
-  background: #eceeef;
+  /*TODO: functions / css preview -> ist auch card-footer*/
+  background: #f5f5f5;
   /*TODO: functions / css preview*/
   border-top: 1px solid #dfdfdf; }
   .author-bio .avatar {
