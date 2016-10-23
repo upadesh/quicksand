@@ -6,11 +6,15 @@
 
 /*TODO: farben*/
 .comments-area  { 
+    .comment-respond {
+        margin-top: 2rem;
+    }
     .comment-list {
         padding-left: 0; 
 
         ol {
-            border-left: 1px solid grey;
+            /*TODO: function customizer*/
+            border-left: 1px solid #e0e0e0;
         }
 
         article {
@@ -29,6 +33,17 @@
     }
     ol {
         list-style-type: none;
+        .comment-body {
+            /*TODO: function customizer*/
+            background: #95b2b1; 
+            border: none ;
+            color: #686868;
+        }
+        
+            /*TODO: function customizer*/
+        a { 
+            color: #eceeef;
+        }
     } 
 } 
 

@@ -462,10 +462,15 @@ cite {
  * form & list
  */
 /*TODO: farben*/
+.comments-area .comment-respond {
+  margin-top: 32px;
+  margin-top: 2rem; }
+
 .comments-area .comment-list {
   padding-left: 0; }
   .comments-area .comment-list ol {
-    border-left: 1px solid grey; }
+    /*TODO: function customizer*/
+    border-left: 1px solid #e0e0e0; }
   .comments-area .comment-list article {
     background: grey;
     padding: 6.4px;
@@ -480,7 +485,15 @@ cite {
       content: "\f112"; }
 
 .comments-area ol {
-  list-style-type: none; }
+  list-style-type: none;
+  /*TODO: function customizer*/ }
+  .comments-area ol .comment-body {
+    /*TODO: function customizer*/
+    background: #95b2b1;
+    border: none;
+    color: #686868; }
+  .comments-area ol a {
+    color: #eceeef; }
 
 /*Pagination: Older / Newer Comments*/
 .comment-navigation .nav-previous a {
