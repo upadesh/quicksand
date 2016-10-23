@@ -1,4 +1,4 @@
-/**
+/*
  * Main file for post-layout
  */
 
@@ -10,9 +10,7 @@
 } 
 
 
-/**
- * post-meta 
- */ 
+/* post-meta */ 
 .post-meta-data { 
     .posted-on:before {
         font-family: FontAwesome; 
@@ -46,15 +44,38 @@
 
 
 
-/*
- * thumbnail
+/* 
+ * featured image  
+ * stretch thumbnail to 100% in combination with class' img-fluid'
  */
-
-/* stretch postthumbnail to 100% */
-/*.post-thumbnail { 
+.post-thumbnail { 
     width:100%;
     height:auto; 
-}*/
+}
+
+
+
+
+/*post pagination: previous & next post*/
+.post-navigation { 
+    .nav-previous {
+        @extend .text-xs-left; 
+        display: inline-block;
+        width: 50%;
+        .fa { 
+            padding-right: 1rem; 
+        }
+    }
+    .nav-next {
+        @extend .text-xs-right; 
+        display: inline-block;
+        width: 50%;
+        .fa { 
+            padding-left: 1rem; 
+        }
+    }
+}
+
   
 /*
  * entries
@@ -109,29 +130,7 @@
 /*.author-info {
   
 } */
-
-
-
-/*
- * comments
- */
-
-.comments-area  {
-/*    .comment-respond {
-        @extend .m-t-2;
-    }*/
-    ol {
-        list-style-type: none;
-        .comment-reply-link:before {
-            font-family: FontAwesome; 
-            padding-right: 3px;
-            content: "\f112";
-        }
-    }
-/*    .comment-metadata {
-        @extend .m-b-1; 
-    }*/
-} 
+ 
 
 /* all edit-links */
 /*.comment-edit-link:before,

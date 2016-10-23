@@ -1,0 +1,88 @@
+/* 
+ * comments
+ * form & list
+ */
+
+
+
+.comments-area  {
+    /*    .comment-respond {
+            @extend .m-t-2;
+        }*/
+    ol {
+        list-style-type: none;
+        .comment-reply-link:before {
+            font-family: FontAwesome; 
+            padding-right: 3px;
+            content: "\f112";
+        }
+    }
+    /*    .comment-metadata {
+            @extend .m-b-1; 
+        }*/
+} 
+
+
+
+
+.comment-navigation { 
+    .nav-previous {
+        @extend .text-xs-left; 
+        a {
+            @extend .btn;
+            @extend .btn-outline-secondary; 
+            display: inline-block; 
+            
+            &:before {
+                font-family: FontAwesome;  
+                content: "\f0d9";
+                padding-right: 1rem; 
+            }
+        }
+    }
+    .nav-next  {
+        @extend .text-xs-right; 
+        a {
+            @extend .btn;
+            @extend .btn-outline-secondary; 
+            display: inline-block; 
+
+            &:after {
+                font-family: FontAwesome; 
+                padding-left: 3px; 
+                content: "\f0da";
+                padding-left: 1rem; 
+            }
+        }
+    }
+
+
+}
+
+/* adjust all pagination-links */
+/*.nav-links {
+    display: table;
+    width: 100%;
+    .nav-previous {
+        @extend .text-xs-left; 
+        display: table-cell;
+        vertical-align: top; 
+        width: 50%;
+        a:before {
+            font-family: FontAwesome; 
+            padding-right: 3px;
+            content: "\f0d9";
+        }
+    }
+    .nav-next {
+        @extend .text-xs-right; 
+        display: table-cell;
+        vertical-align: top; 
+        width: 50%;
+        a:after {
+            font-family: FontAwesome; 
+            padding-left: 3px;
+            content: "\f0da";
+        }
+    }
+}*/

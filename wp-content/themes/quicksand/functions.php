@@ -38,6 +38,12 @@ if (version_compare($GLOBALS['wp_version'], $wp_min_version, '<')) {
 }
 
 
+     
+
+
+
+
+
 if (!function_exists('quicksand_setup')) :
 
     /**

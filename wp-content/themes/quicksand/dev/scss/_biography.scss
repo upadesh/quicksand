@@ -1,0 +1,14 @@
+/*TODO: anständig stylen*/
+
+.author-bio {
+    background: grey;
+    .avatar {
+        float: left; 
+    }
+    .author-bio-content {
+        margin-left: 74px;
+        .author-link {
+            float: right;
+        }
+    }
+}

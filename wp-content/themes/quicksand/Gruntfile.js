@@ -94,7 +94,7 @@ module.exports = function (grunt) {
         },
         cssmin: {
             options: {
-                sourceMap: true,
+//                sourceMap: true,
                 banner: '/*! Quicksand | Andreas Stephan| GPL3 Licensed */'
             },
             minify: {
