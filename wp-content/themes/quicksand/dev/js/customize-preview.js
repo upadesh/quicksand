@@ -109,6 +109,7 @@
     var customizeNavbarHover = function (qs_nav_background_color, qs_nav_link_color, qs_nav_link_hover_background_color) {
         var style, el;
 
+        // TODO: hier nur hover???? 
         style = '<style class="hover-styles">'
                 + '.site-nav-container, '
                 + '.site-nav-container nav.navbar,'
