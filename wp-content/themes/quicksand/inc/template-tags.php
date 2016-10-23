@@ -18,7 +18,7 @@ if (!function_exists('quicksand_entry_meta')) :
      * @since Quicksand 0.2.1
      */
     function quicksand_entry_meta() {
-        echo '<div class="card-block post-meta-data">';
+        echo '<div class="card-block entry-meta">';
 
         // date
         if (in_array(get_post_type(), array('post', 'attachment'))) {
@@ -198,7 +198,7 @@ if (!function_exists('quicksand_entry_title')) :
         ?>
 
         <!-- entry-header --> 
-        <header class="card-header entry-header">
+        <header class="card-block entry-header">
             <!--stick post-->
             <?php if (is_sticky() && is_home() && !is_paged()) : ?>
                 <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>

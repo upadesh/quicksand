@@ -11,9 +11,11 @@
 
 
 /* post-meta */ 
-.post-meta-data { 
-    font-size: .9rem; 
-    padding-top: .4rem !important;
+.entry-meta { 
+    font-size: .9rem;     
+    /*TODO: muss änderbar bleiben wgen background-color: slider in customizer*/
+    margin-top: -1.5em !important;
+    padding-top: 0 !important;
     padding-bottom: 0 !important;
 
     .posted-on:before {
@@ -78,54 +80,56 @@
         }
     }
 }
-/* excerpt */
-/*TODO: color*/
-.entry-summary {
-    color: grey;
-    font-style: italic;
-    /*TODO: in customizer preview & functions*/
-    border-bottom: 1px solid rgba(0,0,0,.125);
-}
-
-.entry-header.card-header {
-    .entry-title.card-title {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-}
 
 .card {
     margin-bottom: 2rem !important;
-    
+
+    /* excerpt */
+    /*TODO: color*/
+    .entry-summary {
+        color: grey;
+        font-style: italic;
+        /*TODO: in customizer preview & functions*/
+        border-bottom: 1px solid rgba(0,0,0,.125);
+    }
+
+    .entry-header.card-header {
+        .entry-title.card-title {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
     .entry-content {
         .read-more-link {
             float: right;
         }
     }
-}
 
 
-.entry-footer {
-    .tag-links {
-        .tag {
-            /*TODO: in customizer preview & functions*/
-            margin-right: .5rem;
-            background: #286584;
-            a {
-                color: #fff;
+    .entry-footer {
+        .tag-links {
+            .tag {
+                /*TODO: in customizer preview & functions*/
+                margin-right: .5rem;
+                background: #286584;
+                a {
+                    color: #fff;
+                }
             }
+        }
+
+        /* edit post-link  */ 
+        .post-edit-link:before {
+            font-family: FontAwesome; 
+            padding-right: .3rem;
+            content: "\f040";
         }
     }
 }
 
 
 
-/* edit post-link  */ 
-.post-edit-link:before {
-    font-family: FontAwesome; 
-    padding-right: .3rem;
-    content: "\f040";
-}
 
 /*
  * entries

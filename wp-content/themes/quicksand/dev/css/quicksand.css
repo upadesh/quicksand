@@ -235,6 +235,10 @@ $btn-link-disabled-color:        $gray-light !default;*/
 .widget_search {
   border: none !important; }
 
+.widget-title {
+  font-size: 20.8px;
+  font-size: 1.3rem; }
+
 /*TODO: calendar-table-fix*/
 /*section.widget_calendar { 
     overflow: hidden; 
@@ -316,38 +320,39 @@ cite {
  */
 /* featured sticky post */
 /* post-meta */
-.post-meta-data {
+.entry-meta {
   font-size: 14.4px;
   font-size: .9rem;
-  padding-top: 6.4px !important;
-  padding-top: .4rem !important;
+  /*TODO: muss änderbar bleiben wgen background-color: slider in customizer*/
+  margin-top: -1.5em !important;
+  padding-top: 0 !important;
   padding-bottom: 0 !important; }
-  .post-meta-data .posted-on:before {
+  .entry-meta .posted-on:before {
     font-family: FontAwesome;
     padding-right: 6.4px;
     padding-right: .4rem;
     content: "\f017"; }
-  .post-meta-data .post-author:before {
+  .entry-meta .post-author:before {
     font-family: FontAwesome;
     padding-right: 6.4px;
     padding-right: .4rem;
     content: "\f007"; }
-  .post-meta-data .cat-links:before {
+  .entry-meta .cat-links:before {
     font-family: FontAwesome;
     padding-right: 6.4px;
     padding-right: .4rem;
     content: "\f07c"; }
-  .post-meta-data .tags-links:before {
+  .entry-meta .tags-links:before {
     font-family: FontAwesome;
     padding-right: 6.4px;
     padding-right: .4rem;
     content: "\f02c"; }
-  .post-meta-data .comments-link:before {
+  .entry-meta .comments-link:before {
     font-family: FontAwesome;
     padding-right: 6.4px;
     padding-right: .4rem;
     content: "\f075"; }
-  .post-meta-data > span:not(:last-of-type):after {
+  .entry-meta > span:not(:last-of-type):after {
     content: ' | '; }
 
 /* 
@@ -372,40 +377,37 @@ cite {
     padding-left: 16px;
     padding-left: 1rem; }
 
-/* excerpt */
-/*TODO: color*/
-.entry-summary {
-  color: grey;
-  font-style: italic;
-  /*TODO: in customizer preview & functions*/
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
-
-.entry-header.card-header .entry-title.card-title {
-  margin-top: 16px;
-  margin-top: 1rem;
-  margin-bottom: 16px;
-  margin-bottom: 1rem; }
-
 .card {
   margin-bottom: 32px !important;
-  margin-bottom: 2rem !important; }
+  margin-bottom: 2rem !important;
+  /* excerpt */
+  /*TODO: color*/ }
+  .card .entry-summary {
+    color: grey;
+    font-style: italic;
+    /*TODO: in customizer preview & functions*/
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+  .card .entry-header.card-header .entry-title.card-title {
+    margin-top: 16px;
+    margin-top: 1rem;
+    margin-bottom: 16px;
+    margin-bottom: 1rem; }
   .card .entry-content .read-more-link {
     float: right; }
-
-.entry-footer .tag-links .tag, .entry-footer .tag-links .sticky-post {
-  /*TODO: in customizer preview & functions*/
-  margin-right: 8px;
-  margin-right: .5rem;
-  background: #286584; }
-  .entry-footer .tag-links .tag a, .entry-footer .tag-links .sticky-post a {
-    color: #fff; }
-
-/* edit post-link  */
-.post-edit-link:before {
-  font-family: FontAwesome;
-  padding-right: 4.8px;
-  padding-right: .3rem;
-  content: "\f040"; }
+  .card .entry-footer {
+    /* edit post-link  */ }
+    .card .entry-footer .tag-links .tag, .card .entry-footer .tag-links .sticky-post {
+      /*TODO: in customizer preview & functions*/
+      margin-right: 8px;
+      margin-right: .5rem;
+      background: #286584; }
+      .card .entry-footer .tag-links .tag a, .card .entry-footer .tag-links .sticky-post a {
+        color: #fff; }
+    .card .entry-footer .post-edit-link:before {
+      font-family: FontAwesome;
+      padding-right: 4.8px;
+      padding-right: .3rem;
+      content: "\f040"; }
 
 /*
  * entries
