@@ -393,8 +393,12 @@ cite {
     float: right; }
 
 .entry-footer .tag-links .tag, .entry-footer .tag-links .sticky-post {
+  /*TODO: in customizer preview & functions*/
   margin-right: 8px;
-  margin-right: .5rem; }
+  margin-right: .5rem;
+  background: #286584; }
+  .entry-footer .tag-links .tag a, .entry-footer .tag-links .sticky-post a {
+    color: #fff; }
 
 /* edit post-link  */
 .post-edit-link:before {
