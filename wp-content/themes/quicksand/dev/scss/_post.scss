@@ -108,7 +108,12 @@
 .entry-footer {
     .tag-links {
         .tag {
+            /*TODO: in customizer preview & functions*/
             margin-right: .5rem;
+            background: #286584;
+            a {
+                color: #fff;
+            }
         }
     }
 }
