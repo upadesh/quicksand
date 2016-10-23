@@ -198,7 +198,7 @@ if (!function_exists('quicksand_entry_title')) :
         ?>
 
         <!-- entry-header --> 
-        <header class="card-block entry-header">
+        <header class="card-header entry-header">
             <!--stick post-->
             <?php if (is_sticky() && is_home() && !is_paged()) : ?>
                 <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
@@ -211,7 +211,7 @@ if (!function_exists('quicksand_entry_title')) :
 
                 <?php
             else :
-                the_title(sprintf('<h1 class="%s"><a href="%s" rel="bookmark">', esc_attr($class), esc_url(get_permalink())), '</a></h1>');
+                the_title(sprintf('<h1 class="card-title %s"><a href="%s" rel="bookmark">', esc_attr($class), esc_url(get_permalink())), '</a></h1>');
                 ?> 
             <?php endif; ?>
         </header><!-- .entry-header --> 
@@ -237,7 +237,7 @@ if (!function_exists('quicksand_entry_title_postformat_link')) :
         ?> 
 
         <!-- entry-header --> 
-        <header class="card-block entry-header">
+        <header class="card-header entry-header">
             <!--stick post-->
             <?php if (is_sticky() && is_home() && !is_paged()) : ?>
                 <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>

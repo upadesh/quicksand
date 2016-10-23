@@ -32,9 +32,12 @@
             <?php the_author_meta('description'); ?>
         </p>  
         <p>
-            <a class="card-link author-link" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" rel="author">
-                <?php printf(__('View all posts by %s', 'quicksand'), get_the_author()); ?>
-            </a>
+  
+  
+        <a class="btn btn-secondary card-link author-link" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" rel="author">
+            <i class="fa fa-book"></i> 
+            <?php printf(__('View all posts by %s', 'quicksand'), get_the_author()); ?>
+        </a>
         </p>
     </div><!-- end .author-bio-content --> 
 </div>   

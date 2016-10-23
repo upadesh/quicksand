@@ -12,6 +12,10 @@
 
 /* post-meta */ 
 .post-meta-data { 
+    font-size: .9rem; 
+    padding-top: .4rem !important;
+    padding-bottom: 0 !important;
+
     .posted-on:before {
         font-family: FontAwesome; 
         padding-right: .4rem;
@@ -48,9 +52,8 @@
  * featured image  
  * stretch thumbnail to 100% in combination with class' img-fluid'
  */
-.post-thumbnail { 
-    width:100%;
-    height:auto; 
+.post-thumbnail img { 
+    width:100%; 
 }
 
 
@@ -80,12 +83,20 @@
 .entry-summary {
     color: grey;
     font-style: italic;
+    /*TODO: in customizer preview & functions*/
+    border-bottom: 1px solid rgba(0,0,0,.125);
 }
 
+.entry-header.card-header {
+    .entry-title.card-title {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
 
 .entry-content {
     .read-more-link {
-       float: right;
+        float: right;
     }
 }
 
@@ -98,7 +109,7 @@
     }
 }
 
- 
+
 
 /* edit post-link  */ 
 .post-edit-link:before {

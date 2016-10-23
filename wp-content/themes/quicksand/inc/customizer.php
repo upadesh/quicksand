@@ -48,9 +48,9 @@ function quicksand_customize_register($wp_customize) {
         'title' => __('Theme Options', 'quicksand'),
         'description' => __('Panel to update theme options', 'quicksand'), // Include html tags such as <p>.
     ));
-     
- 
- 
+
+
+
     /**
      *  Section: Color Schemes
      * 
@@ -89,7 +89,7 @@ function quicksand_customize_register($wp_customize) {
     // fullwidth
     $wp_customize->add_setting("qs_nav_fullwidth", array(
         'type' => 'theme_mod',
-        'transport' => 'refresh', 
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_checkbox',
     ));
 
@@ -108,11 +108,11 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_nav_link_color', array(
-        'label' => __('Navbar Link Color', 'quicksand'), 
+        'label' => __('Navbar Link Color', 'quicksand'),
         'section' => 'quicksand_nav',
         'settings' => 'qs_nav_link_color'
     )));
-    
+
     // link-hover-color
     $wp_customize->add_setting('qs_nav_link_hover_background_color', array(
         'default' => $colorSchemeDefault[16],
@@ -120,7 +120,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_nav_link_hover_background_color', array(
-        'label' => __('Navbar Link Hover Background Color', 'quicksand'), 
+        'label' => __('Navbar Link Hover Background Color', 'quicksand'),
         'section' => 'quicksand_nav',
         'settings' => 'qs_nav_link_hover_background_color'
     )));
@@ -174,10 +174,10 @@ function quicksand_customize_register($wp_customize) {
         'description' => __('Default used if no color is selected', 'quicksand'),
         'section' => 'quicksand_header',
         'settings' => 'qs_header_background_color'
-    ))); 
-    
-    
-    
+    )));
+
+
+
 
     /* Section: Content */
     $wp_customize->add_section('quicksand_content', array(
@@ -237,7 +237,7 @@ function quicksand_customize_register($wp_customize) {
 
     // post background color
     $wp_customize->add_setting('qs_content_post_bg_color', array(
-        'default' => $colorSchemeDefault[4],
+        'default' => $colorSchemeDefault[18],
         'transport' => 'postMessage',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -249,20 +249,20 @@ function quicksand_customize_register($wp_customize) {
 
     // post border color
     $wp_customize->add_setting('qs_content_post_border_color', array(
-        'default' => $colorSchemeDefault[14], 
+        'default' => $colorSchemeDefault[19],
         'transport' => 'postMessage',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_post_border_color', array(
         'label' => __('Post Border Color', 'quicksand'),
-        'section' => 'quicksand_content', 
+        'section' => 'quicksand_content',
         'settings' => 'qs_content_post_border_color'
     )));
-    
-    
-    
-    
-    
+
+
+
+
+
 
     /* Section: Sidebar */
     $wp_customize->add_section('quicksand_sidebar', array(
@@ -273,7 +273,7 @@ function quicksand_customize_register($wp_customize) {
 
     // bg-color
     $wp_customize->add_setting('qs_sidebar_background_color', array(
-        'default' => $colorSchemeDefault[12], 
+        'default' => $colorSchemeDefault[12],
         'transport' => 'postMessage',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -285,7 +285,7 @@ function quicksand_customize_register($wp_customize) {
 
     // color
     $wp_customize->add_setting('qs_sidebar_text_color', array(
-        'default' => $colorSchemeDefault[13], 
+        'default' => $colorSchemeDefault[13],
         'transport' => 'postMessage',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -297,7 +297,7 @@ function quicksand_customize_register($wp_customize) {
 
     // link
     $wp_customize->add_setting('qs_sidebar_link_color', array(
-        'default' => $colorSchemeDefault[14], 
+        'default' => $colorSchemeDefault[14],
         'transport' => 'postMessage',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -309,22 +309,22 @@ function quicksand_customize_register($wp_customize) {
 
     // border
     $wp_customize->add_setting('qs_sidebar_border_color', array(
-        'default' => $colorSchemeDefault[14], 
+        'default' => $colorSchemeDefault[15],
         'transport' => 'postMessage',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_border_color', array(
         'label' => __('Widget Border Color', 'quicksand'),
         'section' => 'quicksand_sidebar',
-        'description' => __('For a nice effect choose the same color like Content-Background', 'quicksand'), 
+        'description' => __('For a nice effect choose the same color like Content-Background', 'quicksand'),
         'settings' => 'qs_sidebar_border_color'
     )));
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
 
 
     /* Section: Footer */
@@ -372,7 +372,7 @@ function quicksand_customize_register($wp_customize) {
 
     // link-hover-color
     $wp_customize->add_setting('qs_footer_link_hover_color', array(
-        'default' => $colorSchemeDefault[10],
+        'default' => $colorSchemeDefault[17],
         'transport' => 'postMessage',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -381,19 +381,19 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_footer',
         'settings' => 'qs_footer_link_hover_color'
     )));
-    
-    
-                
-                
+
+
+
+
 
 
     /* Default WordPress Theme Customization */
     $wp_customize->get_setting('blogname')->transport = 'postMessage';
     $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
     $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
-    
+
     // move header-text-color to Theme-Options-Section 'Header'
-    $wp_customize->get_control('header_textcolor' )->section = 'quicksand_header';
+    $wp_customize->get_control('header_textcolor')->section = 'quicksand_header';
 }
 
 add_action('customize_register', 'quicksand_customize_register');
@@ -455,28 +455,46 @@ function quicksand_get_color_schemes() {
         'default' => array(
             'label' => __('Default', 'quicksand'),
             'colors' => array(
+//                background_color
                 '#ffffff',
+//                qs_content_background_color
                 '#ffffff',
+//                qs_content_link_color
                 '#cecece',
+//                qs_content_text_color
                 '#686868',
-                '#2cb5b1',
+//                qs_content_secondary_text_color
+                '#9ab7ac',
+//                header_textcolor
                 '#ffffff',
-                '#2dbfbf',
+//                qs_nav_background_color
+                '#9cbaba',
+//                qs_nav_link_color
                 '#ffffff',
-                '#2cb5b1',
-                '#4f4f4f',
-                '#2cb5b1',
-                '#d1d1d1',
-                
-                '#9cbaba', 
+//                qs_header_background_color
+                '#95b2b1',
+//                qs_footer_background_color
+                '#303030',
+//                qs_footer_link_color
+                '#9ab7ac',
+//                qs_footer_text_color
+                '#5e7772',
+//                qs_sidebar_background_color
                 '#ffffff',
+//                qs_sidebar_text_color
+                '#666666',
+//                qs_sidebar_link_color
+                '#a3a3a3',
+//                qs_sidebar_border_color
+                '#f4f4f4',
+//                qs_nav_link_hover_background_color
+                '#95b2b1',
+//                qs_footer_link_hover_color           
+                '#7c938a',
+//                qs_content_post_bg_color 
                 '#ffffff',
-                '#ffffff',
-                '#2cb5b1', 
-                '#777777', 
-                
-                '#ffffff',
-                '#ffffff',
+//                qs_content_post_border_color 
+                '#e0e0e0',
             ),
         ),
 //        https://www.mediaevent.de/tutorial/farbcodes.html
@@ -494,20 +512,19 @@ function quicksand_get_color_schemes() {
                 '#ba9a75',
                 '#7c5f4c',
                 '#e8c892',
-                '#ad8d6d', 
+                '#ad8d6d',
                 // sidebar: light               
                 '#ffffff',
                 '#9e7b63',
                 '#9e7b63',
-                '#faebd7' ,
+                '#faebd7',
                 // sidebar: dark            
                 // '#ddc9a6',
                 // '#9e7b63',
                 // '#9e7b63',
                 // '#faebd7', 
-                '#ba9a75', 
-                '#ad8d6d', 
-                
+                '#ba9a75',
+                '#ad8d6d',
                 '#ffffff',
                 '#e2d4bb',
             ),
@@ -656,7 +673,7 @@ function quicksand_add_social_sites_customizer($wp_customize) {
         ));
 
         $wp_customize->add_control($social_site, array(
-            'label' => $social_site ."url:",
+            'label' => $social_site . "url:",
             'section' => 'quicksand_social_settings',
             'type' => 'text',
             'priority' => $priority,
@@ -669,8 +686,6 @@ function quicksand_add_social_sites_customizer($wp_customize) {
 /* add settings to create various social media text areas. */
 add_action('customize_register', 'quicksand_add_social_sites_customizer');
 
-
-
 /**
  * returns all active social sites
  * 
@@ -679,17 +694,15 @@ add_action('customize_register', 'quicksand_add_social_sites_customizer');
 function quicksand_get_active_social_sites() {
     $active_sites = array();
     $social_sites = quicksand_social_media_array();
- 
+
     foreach ($social_sites as $social_site) {
         if (strlen(get_theme_mod($social_site)) > 0) {
             $active_sites[] = $social_site;
         }
     }
-    
-    return $active_sites;
-    
-}
 
+    return $active_sites;
+}
 
 /*
  * template-tag:
@@ -700,7 +713,7 @@ function quicksand_get_active_social_sites() {
 function quicksand_social_media_icons() {
 
     $active_sites = quicksand_get_active_social_sites();
-    
+
     /* for each active social site, add it as a list item */
     if (!empty($active_sites)) {
         echo '<ul class="list-inline">';
