@@ -67,7 +67,7 @@
         }
     }
     .nav-next {
-        @extend .text-xs-right; 
+        @extend .text-lg-right; 
         display: inline-block;
         width: 50%;
         .fa { 
@@ -75,8 +75,38 @@
         }
     }
 }
+/* excerpt */
+/*TODO: color*/
+.entry-summary {
+    color: grey;
+    font-style: italic;
+}
 
-  
+
+.entry-content {
+    .read-more-link {
+       float: right;
+    }
+}
+
+
+.entry-footer {
+    .tag-links {
+        .tag {
+            margin-right: .5rem;
+        }
+    }
+}
+
+ 
+
+/* edit post-link  */ 
+.post-edit-link:before {
+    font-family: FontAwesome; 
+    padding-right: .3rem;
+    content: "\f040";
+}
+
 /*
  * entries
  */
@@ -84,11 +114,7 @@
     font-weight: bold; 
 }*/
 
-/* excerpt */
-/*.entry-summary {
-    color: $gray;
-    font-style: italic;
-}*/
+
 
 /* 
  * for the WP-Test: reduce size of massively large image with no alignment.
@@ -130,15 +156,6 @@
 /*.author-info {
   
 } */
- 
-
-/* all edit-links */
-/*.comment-edit-link:before,
-.post-edit-link:before {
-    font-family: FontAwesome; 
-    padding-right: 3px;
-    content: "\f040";
-}*/
 
 
 

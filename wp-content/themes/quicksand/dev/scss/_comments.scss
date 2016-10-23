@@ -64,9 +64,17 @@
                 padding-left: 1rem; 
             }
         }
-    }
+    } 
+}
 
 
+
+/* comment edit-link */
+.comment-edit-link:before {
+    font-family: FontAwesome;  
+    content: "\f040";
+    padding-left: 1rem;
+    padding-right: .3rem;
 }
 
 /* adjust all pagination-links */

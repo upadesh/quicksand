@@ -128,7 +128,7 @@ if (!function_exists('get_quicksand_entry_taxonomies')) :
             );
         }
 
-        $tag_list = get_the_tag_list('<span class="tag tag-pill tag-default">', '</span><span class="tag tag-default">', '</span>');
+        $tag_list = get_the_tag_list('<span class="tag tag-pill tag-default">', '</span><span class="tag  tag-pill tag-default">', '</span>');
         if ($tag_list) {
             $taxonomies['tags'] = sprintf('<span class="tag-links"><span class="screen-reader-text">%1$s </span>%2$s</span>', _x('Tags', 'Used before tag names.', 'quicksand'), $tag_list);
         }

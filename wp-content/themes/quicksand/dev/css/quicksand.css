@@ -111,7 +111,8 @@ $btn-link-disabled-color:        $gray-light !default;*/
     .site-info.custom-header-image .site-info-wrapper h1, .site-info.custom-header-image .site-info-wrapper p {
       display: inline-block;
       background: rgba(0, 0, 0, 0.2);
-      padding: 20px; }
+      padding: 16px;
+      padding: 1rem; }
 
 .site-info a:link,
 .site-info a:visited,
@@ -197,32 +198,33 @@ $btn-link-disabled-color:        $gray-light !default;*/
  */
 /* === Font Awesome for some widgets === */
 /*recent posts*/
+.widget.widget_pages li:before,
 .widget.widget_recent_entries li:before {
   font-family: FontAwesome;
   padding-right: 8px;
   padding-right: .5rem;
-  content: "\f0f6"; }
+  content: "\f15c"; }
 
 /*recent comments*/
 .widget.widget_recent_comments li:before {
   font-family: FontAwesome;
   padding-right: 8px;
   padding-right: .5rem;
-  content: "\f0e5"; }
+  content: "\f075"; }
 
 /*archive*/
 .widget.widget_archive li:before {
   font-family: FontAwesome;
   padding-right: 8px;
   padding-right: .5rem;
-  content: "\f133"; }
+  content: "\f073"; }
 
 /*categories*/
 .widget.widget_categories li:before {
   font-family: FontAwesome;
   padding-right: 8px;
   padding-right: .5rem;
-  content: "\f115"; }
+  content: "\f07c"; }
 
 /* === adjust certain widgets === */
 .widget_search {
@@ -364,16 +366,31 @@ cite {
     padding-left: 16px;
     padding-left: 1rem; }
 
+/* excerpt */
+/*TODO: color*/
+.entry-summary {
+  color: grey;
+  font-style: italic; }
+
+.entry-content .read-more-link {
+  float: right; }
+
+.entry-footer .tag-links .tag, .entry-footer .tag-links .sticky-post {
+  margin-right: 8px;
+  margin-right: .5rem; }
+
+/* edit post-link  */
+.post-edit-link:before {
+  font-family: FontAwesome;
+  padding-right: 4.8px;
+  padding-right: .3rem;
+  content: "\f040"; }
+
 /*
  * entries
  */
 /*.entry-title {
     font-weight: bold; 
-}*/
-/* excerpt */
-/*.entry-summary {
-    color: $gray;
-    font-style: italic;
 }*/
 /* 
  * for the WP-Test: reduce size of massively large image with no alignment.
@@ -413,13 +430,6 @@ cite {
 /*.author-info {
   
 } */
-/* all edit-links */
-/*.comment-edit-link:before,
-.post-edit-link:before {
-    font-family: FontAwesome; 
-    padding-right: 3px;
-    content: "\f040";
-}*/
 /*TODO: anständig stylen*/
 .author-bio {
   background: grey; }
@@ -472,6 +482,15 @@ cite {
     content: "\f0da";
     padding-left: 16px;
     padding-left: 1rem; }
+
+/* comment edit-link */
+.comment-edit-link:before {
+  font-family: FontAwesome;
+  content: "\f040";
+  padding-left: 16px;
+  padding-left: 1rem;
+  padding-right: 4.8px;
+  padding-right: .3rem; }
 
 /* adjust all pagination-links */
 /*.nav-links {
@@ -5131,7 +5150,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .text-xs-left, .post-navigation .nav-previous, .comment-navigation .nav-previous {
   text-align: left !important; }
 
-.text-xs-right, .post-navigation .nav-next, .comment-navigation .nav-next {
+.text-xs-right, .comment-navigation .nav-next {
   text-align: right !important; }
 
 .text-xs-center {
@@ -5156,7 +5175,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 @media (min-width: 992px) {
   .text-lg-left {
     text-align: left !important; }
-  .text-lg-right {
+  .text-lg-right, .post-navigation .nav-next {
     text-align: right !important; }
   .text-lg-center {
     text-align: center !important; } }

@@ -6,11 +6,12 @@
 
 /* === Font Awesome for some widgets === */
 /*recent posts*/
+.widget.widget_pages,
 .widget.widget_recent_entries {
     li:before {
         font-family: FontAwesome; 
         padding-right: .5rem;
-        content: "\f0f6";
+        content: "\f15c";
     }
 }
 
@@ -19,7 +20,7 @@
     li:before {
         font-family: FontAwesome; 
         padding-right: .5rem;
-        content: "\f0e5";
+        content: "\f075";
 
     }
 }
@@ -29,7 +30,7 @@
     li:before {
         font-family: FontAwesome; 
         padding-right: .5rem;
-        content: "\f133";
+        content: "\f073";
 
     }
 }  
@@ -40,7 +41,7 @@
     li:before {
         font-family: FontAwesome; 
         padding-right: .5rem;
-        content: "\f115";
+        content: "\f07c";
 
     }
 }  
