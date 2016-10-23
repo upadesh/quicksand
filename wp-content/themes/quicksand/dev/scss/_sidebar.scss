@@ -6,6 +6,7 @@
 
 /* === Font Awesome for some widgets === */
 /*recent posts*/
+/*pages*/
 .widget.widget_pages,
 .widget.widget_recent_entries {
     li:before {
@@ -46,12 +47,9 @@
     }
 }  
 
+ 
 
-
-
-
-
-/* === adjust certain widgets === */
+/* no border on search-widget */
 .widget_search {
     border: none !important;
 }

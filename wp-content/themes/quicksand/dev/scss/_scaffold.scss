@@ -7,34 +7,30 @@
     @extend .m-b-2; 
 }
 
-/*stick to the navbar when fullwidth*/ 
-.site-header.container {
-    @extend .m-t-2; 
-    padding-left: 0;
-    padding-right: 0;
-}
-
 /*always leave some space to the footer-widgetbar*/
 .site-main-container {
     @extend .m-b-2; 
 }
 
 
-.site-content { 
-    padding: .6rem;
-
+/* post meta-data */
+.site-content-area { 
     .post-meta-data {
-        @extend .m-b-1;
+        padding-top: 0;
+        padding-bottom: 0;
     }
+    
+/*    padding: .6rem;
 
-/*    .post-thumbnail img { 
+
+    .post-thumbnail img { 
         @extend .m-b-1;
     } 
 
     article {
         @extend .m-b-3;
     } 
-*/
+
     .site-sidebar {  
         section.widget {
             @extend .m-b-2;
@@ -44,12 +40,25 @@
                 @extend .text-xs-center; 
             }
         } 
-    } 
-}   
+    } */
+}  
+
+
+
+/*stick to the navbar when fullwidth 
+.site-header.container {
+    @extend .m-t-2; 
+    padding-left: 0;
+    padding-right: 0;
+}
+*/
+
+
+/* 
 
 .site-footer-widgetbar {  
     section.widget {
         @extend .m-b-2;
         @extend .text-md-left; 
     }
-}
+}*/
