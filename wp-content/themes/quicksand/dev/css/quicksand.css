@@ -434,20 +434,28 @@ cite {
  * comments
  * form & list
  */
-.comments-area {
-  /*    .comment-respond {
-            @extend .m-t-2;
-        }*/
-  /*    .comment-metadata {
-            @extend .m-b-1; 
-        }*/ }
-  .comments-area ol {
-    list-style-type: none; }
-    .comments-area ol .comment-reply-link:before {
+/*TODO: farben*/
+.comments-area .comment-list {
+  padding-left: 0; }
+  .comments-area .comment-list ol {
+    border-left: 1px solid grey; }
+  .comments-area .comment-list article {
+    background: grey;
+    padding: 6.4px;
+    padding: .4rem;
+    margin-bottom: 8px;
+    margin-bottom: .5rem; }
+  .comments-area .comment-list .reply {
+    text-align: right; }
+    .comments-area .comment-list .reply .comment-reply-link:before {
       font-family: FontAwesome;
       padding-right: 3px;
       content: "\f112"; }
 
+.comments-area ol {
+  list-style-type: none; }
+
+/*Pagination: Older / Newer Comments*/
 .comment-navigation .nav-previous a {
   display: inline-block; }
   .comment-navigation .nav-previous a:before {

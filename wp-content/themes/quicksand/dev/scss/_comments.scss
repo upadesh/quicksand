@@ -4,27 +4,37 @@
  */
 
 
+/*TODO: farben*/
+.comments-area  { 
+    .comment-list {
+        padding-left: 0; 
 
-.comments-area  {
-    /*    .comment-respond {
-            @extend .m-t-2;
-        }*/
-    ol {
-        list-style-type: none;
-        .comment-reply-link:before {
-            font-family: FontAwesome; 
-            padding-right: 3px;
-            content: "\f112";
+        ol {
+            border-left: 1px solid grey;
+        }
+
+        article {
+            background: grey;
+            padding: .4rem;
+            margin-bottom: .5rem;
+        }
+        .reply {
+            text-align: right;
+            .comment-reply-link:before {
+                font-family: FontAwesome; 
+                padding-right: 3px;
+                content: "\f112";
+            }
         }
     }
-    /*    .comment-metadata {
-            @extend .m-b-1; 
-        }*/
+    ol {
+        list-style-type: none;
+    } 
 } 
 
 
 
-
+/*Pagination: Older / Newer Comments*/
 .comment-navigation { 
     .nav-previous {
         @extend .text-xs-left; 
@@ -32,7 +42,7 @@
             @extend .btn;
             @extend .btn-outline-secondary; 
             display: inline-block; 
-            
+
             &:before {
                 font-family: FontAwesome;  
                 content: "\f0d9";
