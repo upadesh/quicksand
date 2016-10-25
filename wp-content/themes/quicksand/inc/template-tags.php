@@ -198,7 +198,7 @@ if (!function_exists('quicksand_entry_title')) :
         ?>
 
         <!-- entry-header --> 
-        <header class="card-block entry-header">
+        <header class="card-header entry-header">
             <!--stick post-->
             <?php if (is_sticky() && is_home() && !is_paged()) : ?>
                 <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>

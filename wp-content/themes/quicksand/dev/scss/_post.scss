@@ -14,7 +14,7 @@
 .entry-meta { 
     font-size: .9rem;     
     /*TODO: muss änderbar bleiben wgen background-color: slider in customizer*/
-    margin-top: -1.5em !important;
+    /*margin-top: -1.5em !important;*/
     padding-top: 0 !important;
     padding-bottom: 0 !important;
 
@@ -87,7 +87,7 @@
     /* excerpt */
     /*TODO: color*/
     .entry-summary {
-        color: grey;
+        color: #999;
         font-style: italic;
         /*TODO: in customizer preview & functions*/
         border-bottom: 1px solid rgba(0,0,0,.125);
@@ -104,6 +104,19 @@
         .read-more-link {
             float: right;
         }
+        .wp-caption {
+            max-width: 100%;
+        }
+
+        /* 
+         * for the WP-Test: reduce size of massively large image with no alignment.
+         *  http://wp.local/archives/tag/alignment-2
+         */ 
+        img {
+            border: none;
+            height: auto;
+            max-width: 100%; 
+        } 
     }
 
 
@@ -130,6 +143,26 @@
 
 
 
+.page-links  {
+    >.paged-link {
+        margin-right: .3rem;
+    }
+    a {
+        @extend .btn;
+        @extend .btn-outline-secondary;
+        margin-right: .3rem;
+        /*color: $gray;*/
+        background-image: none;
+        background-color: transparent;
+        /*border-color: $gray-light;*/
+    }
+    /*    a:hover {
+            color: $gray-light;
+            background-color: $gray;
+            border-color: $gray;
+        }*/
+}
+
 
 /*
  * entries
@@ -140,10 +173,6 @@
 
 
 
-/* 
- * for the WP-Test: reduce size of massively large image with no alignment.
- *  http://wp.local/archives/tag/alignment-2
- */ 
 /*.entry-content { 
     .wp-caption {
         max-width: 100%;
@@ -153,27 +182,7 @@
         border: none;
         height: auto;
         max-width: 100%; 
-    }
-
-    .page-links  {
-        >.paged-link {
-            margin-right: .3rem;
-        }
-        a {
-            @extend .btn;
-            @extend .btn-outline-secondary;
-            margin-right: .3rem;
-            color: $gray;
-            background-image: none;
-            background-color: transparent;
-            border-color: $gray-light;
-        }
-        a:hover {
-            color: $gray-light;
-            background-color: $gray;
-            border-color: $gray;
-        }
-    }
+    } 
 } */
 
 

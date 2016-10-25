@@ -54,6 +54,14 @@ module.exports = function (grunt) {
                         src: 'node_modules/bootstrap/dist/js/bootstrap.min.js',
                         dest: 'js/bootstrap.min.js',
                     }, {
+                        // JS - fitVids
+                        src: 'node_modules/fitvids/dist/fitvids.js',
+                        dest: 'js/fitvids.js',
+                    }, {
+                        // JS - fitVids minified
+                        src: 'node_modules/fitvids/dist/fitvids.min.js',
+                        dest: 'js/fitvids.min.js',
+                    }, {
                         // CSS - all custom css
                         expand: true,
                         cwd: 'dev/css',

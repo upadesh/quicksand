@@ -528,56 +528,61 @@ if (!function_exists('quicksand_scripts')) :
         // tether is needed by bs for tooltips
         wp_enqueue_script('quicksand-script-tether', get_template_directory_uri() . '/js/tether.min.js', array(), $quicksand_version, true);
         wp_enqueue_script('quicksand-script-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), $quicksand_version, true);
+
+        wp_register_script('fitvids', get_template_directory_uri() . '/js/fitvids.min.js', array('jquery'), '1.0', true); 
+        wp_register_script('quicksand', get_template_directory_uri() . '/js/quicksand.js', array('fitvids'), '1.0', true);
+        wp_enqueue_script('quicksand');
     }
 
 endif;
 add_action('wp_enqueue_scripts', 'quicksand_scripts');
+ 
 
-/**
- * Adds custom classes to the array of body classes.
- *
- * @since Quicksand 0.2.1
- *
- * @param array $classes Classes for the body element.
- * @return array (Maybe) filtered body classes.
- */
-function quicksand_body_classes($classes) {
-    // Adds a class of custom-background-image to sites with a custom background image.
-    if (get_background_image()) {
-        $classes[] = 'custom-background-image';
+    /**
+     * Adds custom classes to the array of body classes.
+     *
+     * @since Quicksand 0.2.1
+     *
+     * @param array $classes Classes for the body element.
+     * @return array (Maybe) filtered body classes.
+     */
+    function quicksand_body_classes($classes) {
+        // Adds a class of custom-background-image to sites with a custom background image.
+        if (get_background_image()) {
+            $classes[] = 'custom-background-image';
+        }
+
+        // Adds a class of group-blog to sites with more than 1 published author.
+        if (is_multi_author()) {
+            $classes[] = 'group-blog';
+        }
+
+        // Adds a class of no-sidebar to sites without active sidebar.
+        if (!is_active_sidebar('sidebar-1')) {
+            $classes[] = 'no-sidebar';
+        }
+
+        // Adds a class of hfeed to non-singular pages.
+        if (!is_singular()) {
+            $classes[] = 'hfeed';
+        }
+
+        return $classes;
     }
 
-    // Adds a class of group-blog to sites with more than 1 published author.
-    if (is_multi_author()) {
-        $classes[] = 'group-blog';
-    }
+    add_filter('body_class', 'quicksand_body_classes');
 
-    // Adds a class of no-sidebar to sites without active sidebar.
-    if (!is_active_sidebar('sidebar-1')) {
-        $classes[] = 'no-sidebar';
-    }
-
-    // Adds a class of hfeed to non-singular pages.
-    if (!is_singular()) {
-        $classes[] = 'hfeed';
-    }
-
-    return $classes;
-}
-
-add_filter('body_class', 'quicksand_body_classes');
-
-/**
- * Workaround for the Bootstrap-Wordpress-tag-bug
- *
- * @since Quicksand 0.2.1
- * 
- * the tag-class is already occupied by bootstrap, so when wordpress
- * generates it in the body-class, it breaks the layout.
- * 
- * @param mixed $classes
- * @return mixed
- */
+    /**
+     * Workaround for the Bootstrap-Wordpress-tag-bug
+     *
+     * @since Quicksand 0.2.1
+     * 
+     * the tag-class is already occupied by bootstrap, so when wordpress
+     * generates it in the body-class, it breaks the layout.
+     * 
+     * @param mixed $classes
+     * @return mixed
+     */
 //function quicksand_bs4_remove_tag_body_class($classes) {
 //    if (false !== ( $class = array_search('tag', $classes) )) {
 //        unset($classes[$class]);
@@ -588,196 +593,196 @@ add_filter('body_class', 'quicksand_body_classes');
 //add_filter('body_class', 'quicksand_bs4_remove_tag_body_class');
 
 
-if (!function_exists('quicksand_bs4_remove_tag_classes')) :
+    if (!function_exists('quicksand_bs4_remove_tag_classes')) :
 
-    /**
-     * fix for the tag-bug. 
-     * Unfortunately WP defines tag-classes, which are also
-     * predefined in BS. So, lest's just terminate them ;-)
-     * Exterminate! Exterminate! Exterminate! 
-     * 
-     * @param type $classes 
-     */
-    function quicksand_bs4_remove_tag_classes($classes) {
-        return array_diff($classes, array(
-            'tag',
-            'tag-pill',
-            'tag-default',
-            'tag-info',
-            'tag-warning',
-            'tag-danger',
-            'tag-success',
-            'tag-primary',
-        ));
-    }
+        /**
+         * fix for the tag-bug. 
+         * Unfortunately WP defines tag-classes, which are also
+         * predefined in BS. So, lest's just terminate them ;-)
+         * Exterminate! Exterminate! Exterminate! 
+         * 
+         * @param type $classes 
+         */
+        function quicksand_bs4_remove_tag_classes($classes) {
+            return array_diff($classes, array(
+                'tag',
+                'tag-pill',
+                'tag-default',
+                'tag-info',
+                'tag-warning',
+                'tag-danger',
+                'tag-success',
+                'tag-primary',
+            ));
+        }
 
-endif;
-add_filter('body_class', 'quicksand_bs4_remove_tag_classes', 10, 1);
-add_filter('post_class', 'quicksand_bs4_remove_tag_classes', 10, 1);
-
-
+    endif;
+    add_filter('body_class', 'quicksand_bs4_remove_tag_classes', 10, 1);
+    add_filter('post_class', 'quicksand_bs4_remove_tag_classes', 10, 1);
 
 
-if (!function_exists('quicksand_bootstrap4_comment_form')) :
 
-    /**
-     * same treatment like fields in quicksand_bootstrap4_comment_form_fields
-     * 
-     * @param type $args
-     * @return string
-     */
-    function quicksand_bootstrap4_comment_form($args) {
-        $args['comment_field'] = '<div class="form-group comment-form-comment">
+
+    if (!function_exists('quicksand_bootstrap4_comment_form')) :
+
+        /**
+         * same treatment like fields in quicksand_bootstrap4_comment_form_fields
+         * 
+         * @param type $args
+         * @return string
+         */
+        function quicksand_bootstrap4_comment_form($args) {
+            $args['comment_field'] = '<div class="form-group comment-form-comment">
             <label for="comment">' . _x('Comment', 'noun', 'quicksand') . '</label> 
             <textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
         </div>';
-        $args['class_submit'] = 'btn btn-secondary'; // since WP 4.1 
+            $args['class_submit'] = 'btn btn-secondary'; // since WP 4.1 
 
-        return $args;
-    }
+            return $args;
+        }
 
-endif;
-add_filter('comment_form_defaults', 'quicksand_bootstrap4_comment_form');
-
-
+    endif;
+    add_filter('comment_form_defaults', 'quicksand_bootstrap4_comment_form');
 
 
 
-if (!function_exists('quicksand_bootstrap4_comment_form_fields')) :
-
-    /**
-     * customize comment form
-     * 
-     * these fields are not shown, when you're logged in
-     * 
-     * @see http://www.codecheese.com/2013/11/wordpress-comment-form-with-twitter-bootstrap-3-supports/
-     * 
-     * @param array $fields
-     * @return string
-     */
-    function quicksand_bootstrap4_comment_form_fields($fields) {
-        $commenter = wp_get_current_commenter();
-
-        $req = get_option('require_name_email');
-        $aria_req = ( $req ? " aria-required='true'" : '' );
-        $html5 = current_theme_supports('html5', 'comment-form') ? 1 : 0;
-
-        $fields = array(
-            'author' => '<div class="form-group comment-form-author">' . '<label for="author">' . __('Name', 'quicksand') . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-            '<input class="form-control" id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' /></div>',
-            'email' => '<div class="form-group comment-form-email"><label for="email">' . __('Email', 'quicksand') . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-            '<input class="form-control" id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr($commenter['comment_author_email']) . '" size="30"' . $aria_req . ' /></div>',
-            'url' => '<div class="form-group comment-form-url"><label for="url">' . __('Website', 'quicksand') . '</label> ' .
-            '<input class="form-control" id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr($commenter['comment_author_url']) . '" size="30" /></div>'
-        );
-
-        return $fields;
-    }
-
-endif;
-add_filter('comment_form_default_fields', 'quicksand_bootstrap4_comment_form_fields');
 
 
-if (!function_exists('quicksand_password_form')) :
+    if (!function_exists('quicksand_bootstrap4_comment_form_fields')) :
 
-    /**
-     * customize password form
-     * 
-     * for password-protected posts  
-     */
-    function quicksand_password_form() {
-        $o = '<form action="' . esc_url(site_url('wp-login.php?action=postpass', 'login_post')) . '" method="post" >'
-                . __("To view this protected post, enter the password below:", 'quicksand')
-                . '<div class="input-group">'
-                . '<input type="password" class="form-control" name="post_password" size="20" maxlength="20">'
-                . '<span class="input-group-btn"> '
-                . '<button class="btn btn-secondary" href="#" type="submit">'
-                . '<i class="fa fa-unlock fa-lg"></i>'
-                . '</button></span></div>'
-                . '</form>';
-        return $o;
-    }
+        /**
+         * customize comment form
+         * 
+         * these fields are not shown, when you're logged in
+         * 
+         * @see http://www.codecheese.com/2013/11/wordpress-comment-form-with-twitter-bootstrap-3-supports/
+         * 
+         * @param array $fields
+         * @return string
+         */
+        function quicksand_bootstrap4_comment_form_fields($fields) {
+            $commenter = wp_get_current_commenter();
 
-endif;
-add_filter('the_password_form', 'quicksand_password_form');
+            $req = get_option('require_name_email');
+            $aria_req = ( $req ? " aria-required='true'" : '' );
+            $html5 = current_theme_supports('html5', 'comment-form') ? 1 : 0;
 
-/**
- * Converts a HEX value to RGB. 
- *
- * @since Quicksand 0.2.1
- *
- * @param string $color The original color, in 3- or 6-digit hexadecimal form.
- * @return array Array containing RGB (red, green, and blue) values for the given
- *               HEX code, empty array otherwise.
- */
-function quicksand_hex2rgb($color) {
-    $color = trim($color, '#');
+            $fields = array(
+                'author' => '<div class="form-group comment-form-author">' . '<label for="author">' . __('Name', 'quicksand') . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+                '<input class="form-control" id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' /></div>',
+                'email' => '<div class="form-group comment-form-email"><label for="email">' . __('Email', 'quicksand') . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+                '<input class="form-control" id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr($commenter['comment_author_email']) . '" size="30"' . $aria_req . ' /></div>',
+                'url' => '<div class="form-group comment-form-url"><label for="url">' . __('Website', 'quicksand') . '</label> ' .
+                '<input class="form-control" id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr($commenter['comment_author_url']) . '" size="30" /></div>'
+            );
 
-    if (strlen($color) === 3) {
-        $r = hexdec(substr($color, 0, 1) . substr($color, 0, 1));
-        $g = hexdec(substr($color, 1, 1) . substr($color, 1, 1));
-        $b = hexdec(substr($color, 2, 1) . substr($color, 2, 1));
-    } else if (strlen($color) === 6) {
-        $r = hexdec(substr($color, 0, 2));
-        $g = hexdec(substr($color, 2, 2));
-        $b = hexdec(substr($color, 4, 2));
-    } else {
-        return array();
-    }
+            return $fields;
+        }
 
-    return array('red' => $r, 'green' => $g, 'blue' => $b);
-}
+    endif;
+    add_filter('comment_form_default_fields', 'quicksand_bootstrap4_comment_form_fields');
 
-if (!function_exists('quicksand_bootstrap_wrap_oembed')) :
+
+    if (!function_exists('quicksand_password_form')) :
+
+        /**
+         * customize password form
+         * 
+         * for password-protected posts  
+         */
+        function quicksand_password_form() {
+            $o = '<form action="' . esc_url(site_url('wp-login.php?action=postpass', 'login_post')) . '" method="post" >'
+                    . __("To view this protected post, enter the password below:", 'quicksand')
+                    . '<div class="input-group">'
+                    . '<input type="password" class="form-control" name="post_password" size="20" maxlength="20">'
+                    . '<span class="input-group-btn"> '
+                    . '<button class="btn btn-secondary" href="#" type="submit">'
+                    . '<i class="fa fa-unlock fa-lg"></i>'
+                    . '</button></span></div>'
+                    . '</form>';
+            return $o;
+        }
+
+    endif;
+    add_filter('the_password_form', 'quicksand_password_form');
 
     /**
-     * make videos responsive
-     * 
-     * @param type $html
-     * @param type $url
-     * @param type $attr
-     * @param type $post_id
-     * 
-     * @return string html
+     * Converts a HEX value to RGB. 
+     *
+     * @since Quicksand 0.2.1
+     *
+     * @param string $color The original color, in 3- or 6-digit hexadecimal form.
+     * @return array Array containing RGB (red, green, and blue) values for the given
+     *               HEX code, empty array otherwise.
      */
-    function quicksand_bootstrap_wrap_oembed($html) {
-        // strip width and height 
-        $html = preg_replace('/(width|height)="\d*"\s/', "", $html);
+    function quicksand_hex2rgb($color) {
+        $color = trim($color, '#');
 
-        // wrap in div element & add a cresponsive-class
-        return'<div class="">' . $html . '</div>';
+        if (strlen($color) === 3) {
+            $r = hexdec(substr($color, 0, 1) . substr($color, 0, 1));
+            $g = hexdec(substr($color, 1, 1) . substr($color, 1, 1));
+            $b = hexdec(substr($color, 2, 1) . substr($color, 2, 1));
+        } else if (strlen($color) === 6) {
+            $r = hexdec(substr($color, 0, 2));
+            $g = hexdec(substr($color, 2, 2));
+            $b = hexdec(substr($color, 4, 2));
+        } else {
+            return array();
+        }
+
+        return array('red' => $r, 'green' => $g, 'blue' => $b);
     }
 
-endif;
+    if (!function_exists('quicksand_bootstrap_wrap_oembed')) :
+
+        /**
+         * make videos responsive
+         * 
+         * @param type $html
+         * @param type $url
+         * @param type $attr
+         * @param type $post_id
+         * 
+         * @return string html
+         */
+        function quicksand_bootstrap_wrap_oembed($html) {
+            // strip width and height 
+            $html = preg_replace('/(width|height)="\d*"\s/', "", $html);
+
+            // wrap in div element, so jquery.fitVids.js can catch it
+            return'<div class="video">' . $html . '</div>';
+        }
+
+    endif;
 add_filter('embed_oembed_html', 'quicksand_bootstrap_wrap_oembed', 99, 4);
 
 
 
 
-if (!function_exists('quicksand_modify_read_more_link')) :
+    if (!function_exists('quicksand_modify_read_more_link')) :
+
+        /**
+         * style the read-more link
+         * @return type
+         */
+        function quicksand_modify_read_more_link() {
+            return '<a class="read-more-link btn btn-secondary" href="' . get_permalink() . '">' . __('Read more', 'quicksand') . '</a>';
+        }
+
+    endif;
+    add_filter('the_content_more_link', 'quicksand_modify_read_more_link');
 
     /**
-     * style the read-more link
-     * @return type
+     * Add custom image sizes attribute to enhance responsive image functionality
+     * for content images
+     *
+     * @since Quicksand 0.2.1
+     *
+     * @param string $sizes A source size value for use in a 'sizes' attribute.
+     * @param array  $size  Image size. Accepts an array of width and height
+     *                      values in pixels (in that order).
+     * @return string A source size value for use in a content image 'sizes' attribute.
      */
-    function quicksand_modify_read_more_link() {
-        return '<a class="read-more-link btn btn-secondary" href="' . get_permalink() . '">' . __('Read more', 'quicksand') . '</a>';
-    }
-
-endif;
-add_filter('the_content_more_link', 'quicksand_modify_read_more_link');
-
-/**
- * Add custom image sizes attribute to enhance responsive image functionality
- * for content images
- *
- * @since Quicksand 0.2.1
- *
- * @param string $sizes A source size value for use in a 'sizes' attribute.
- * @param array  $size  Image size. Accepts an array of width and height
- *                      values in pixels (in that order).
- * @return string A source size value for use in a content image 'sizes' attribute.
- */
 //TODO
 //function quicksand_content_image_sizes_attr($sizes, $size) {
 //    $width = $size[0];
@@ -796,17 +801,17 @@ add_filter('the_content_more_link', 'quicksand_modify_read_more_link');
 //
 //add_filter('wp_calculate_image_sizes', 'quicksand_content_image_sizes_attr', 10, 2);
 
-/**
- * Add custom image sizes attribute to enhance responsive image functionality
- * for post thumbnails
- *
- * @since Quicksand 0.2.1
- *
- * @param array $attr Attributes for the image markup.
- * @param int   $attachment Image attachment ID.
- * @param array $size Registered image size or flat array of height and width dimensions.
- * @return string A source size value for use in a post thumbnail 'sizes' attribute.
- */
+    /**
+     * Add custom image sizes attribute to enhance responsive image functionality
+     * for post thumbnails
+     *
+     * @since Quicksand 0.2.1
+     *
+     * @param array $attr Attributes for the image markup.
+     * @param int   $attachment Image attachment ID.
+     * @param array $size Registered image size or flat array of height and width dimensions.
+     * @return string A source size value for use in a post thumbnail 'sizes' attribute.
+     */
 //function quicksand_post_thumbnail_sizes_attr($attr, $attachment, $size) {
 //    if ('post-thumbnail' === $size) {
 //        is_active_sidebar('sidebar-1') && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
@@ -820,17 +825,18 @@ add_filter('the_content_more_link', 'quicksand_modify_read_more_link');
 
 
 
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
+    /**
+     * Custom template tags for this theme.
+     */
+    require get_template_directory() . '/inc/template-tags.php';
 
-/**
- * Custom walker for the navbar 
- */
-require get_template_directory() . '/inc/QuicksandNavwalker.php';
+    /**
+     * Custom walker for the navbar 
+     */
+    require get_template_directory() . '/inc/QuicksandNavwalker.php';
 
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
+    /**
+     * Customizer additions.
+     */
+    require get_template_directory() . '/inc/customizer.php';
+    
