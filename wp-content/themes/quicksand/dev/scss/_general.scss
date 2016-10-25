@@ -25,10 +25,18 @@ table {
     @extend .table;
 }
 
+/*
+ * WP-Unit-Test
+ * break the title if necassary
+ * @see http://wp.local/title-should-not-overflow-the-content-area/
+*/
+.card-title.entry-title {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
 
- 
 
- 
+
 /* alignment classes for img-floating */
 /*.aligncenter {
     @extend .m-x-auto;

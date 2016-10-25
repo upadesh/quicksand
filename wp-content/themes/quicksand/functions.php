@@ -529,7 +529,7 @@ if (!function_exists('quicksand_scripts')) :
         wp_enqueue_script('quicksand-script-tether', get_template_directory_uri() . '/js/tether.min.js', array(), $quicksand_version, true);
         wp_enqueue_script('quicksand-script-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), $quicksand_version, true);
 
-        wp_register_script('fitvids', get_template_directory_uri() . '/js/fitvids.min.js', array('jquery'), '1.0', true); 
+        wp_register_script('fitvids', get_template_directory_uri() . '/js/fitvids.min.js', array('jquery'), '2.0', true); 
         wp_register_script('quicksand', get_template_directory_uri() . '/js/quicksand.js', array('fitvids'), '1.0', true);
         wp_enqueue_script('quicksand');
     }
