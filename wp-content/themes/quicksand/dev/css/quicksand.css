@@ -294,15 +294,6 @@ cite {
   display: inline !important; }
 
 /* table */
-/*
- * WP-Unit-Test
- * break the title if necassary
- * @see http://wp.local/title-should-not-overflow-the-content-area/
-*/
-.card-title.entry-title {
-  -ms-word-wrap: break-word;
-  word-wrap: break-word; }
-
 /* WP-Unit-Test 
  * alignment classes for img-floating 
  * @see http://wp.local/markup-image-alignment/
@@ -316,7 +307,9 @@ cite {
 .alignleft {
   margin: 0.375em 1.75em 1.75em 0; }
 
-classes needed by WP .bypostauthor {
+/*classes needed by WP*/
+/*TODO: where???*/
+.bypostauthor {
   color: #686868; }
 
 .wp-caption-text {
@@ -398,7 +391,14 @@ classes needed by WP .bypostauthor {
     margin-top: 16px;
     margin-top: 1rem;
     margin-bottom: 16px;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    /*
+             * WP-Unit-Test
+             * break the title if necassary
+             * @see http://wp.local/title-should-not-overflow-the-content-area/
+            */
+    -ms-word-wrap: break-word;
+    word-wrap: break-word; }
   .card .entry-content {
     /* 
          * for the WP-Test: reduce size of massively large image with no alignment.

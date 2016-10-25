@@ -25,16 +25,6 @@ table {
     @extend .table;
 }
 
-/*
- * WP-Unit-Test
- * break the title if necassary
- * @see http://wp.local/title-should-not-overflow-the-content-area/
-*/
-.card-title.entry-title {
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
-}
-
 
 
 /* WP-Unit-Test 
@@ -54,7 +44,8 @@ table {
     margin: 0.375em 1.75em 1.75em 0;
 } 
 
- classes needed by WP  
+ /*classes needed by WP*/ 
+/*TODO: where???*/ 
 .bypostauthor {
     color: #686868;
 }

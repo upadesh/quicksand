@@ -81,6 +81,7 @@
     }
 }
 
+
 .card {
     margin-bottom: 2rem !important;
 
@@ -91,12 +92,19 @@
         font-style: italic;
         /*TODO: in customizer preview & functions*/
         border-bottom: 1px solid rgba(0,0,0,.125);
-    }
+    } 
 
     .entry-header.card-header {
         .entry-title.card-title {
             margin-top: 1rem;
             margin-bottom: 1rem;
+            /*
+             * WP-Unit-Test
+             * break the title if necassary
+             * @see http://wp.local/title-should-not-overflow-the-content-area/
+            */
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
         }
     }
 
