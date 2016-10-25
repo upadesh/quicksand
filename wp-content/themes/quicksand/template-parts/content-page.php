@@ -11,13 +11,12 @@
 <!--template: content-page--> 
 <article id="post-<?php the_ID(); ?>" <?php post_class('card'); ?>>
 
-    <header class="card-block entry-header">
-        <?php the_title('<h1 class="card-title entry-title">', '</h1>'); ?>
-    </header><!-- .entry-header --> 
-
     <!--post thumbnail-->
     <?php quicksand_entry_thumbnail(); ?> 
 
+    <header class="card-block entry-header">
+        <?php the_title('<h1 class="card-title entry-title">', '</h1>'); ?>
+    </header><!-- .entry-header --> 
     <div class="card-block entry-content">
         <?php
         the_content();
