@@ -174,7 +174,8 @@ if (!function_exists('quicksand_customizer_css')) :
 
         <style type="text/css">  
             /*navigation*/
-            .site-nav-container,
+            
+            .site-nav-container.container-fluid,
             .site-nav-container nav.navbar,
             .site-nav-container .dropdown-menu {
                 background: <?php echo get_theme_mod('qs_nav_background_color', $colorScheme[6]); ?>;
@@ -223,16 +224,12 @@ if (!function_exists('quicksand_customizer_css')) :
                 background: <?php echo get_theme_mod('qs_content_background_color', $colorScheme[1]); ?>;
                 color: <?php echo get_theme_mod('qs_content_text_color', $colorScheme[3]); ?>;
             }
-
-            /*TODO: was ist mit hover etc.*/
-            /*TODO: einschränken auf site-content??? */
-            .site-main-container a 
-            { 
+ 
+            .site-main-container a { 
                 color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme[2]); ?>;
-            } 
+            }  
 
-
-
+            
             /*bootstrap pagination*/ 
             .site-main-container .navigation.pagination .nav-links .page-numbers {
                 color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme[2]); ?>;
@@ -249,8 +246,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 border-color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme[2]); ?>;
             }
 
-
-            /*TODO: einschränken auf site-content??? */
+ 
             /*2nd text color*/  
             .site-main-container  h1,
             .site-main-container  h2,
@@ -277,7 +273,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 border-bottom: 1px solid <?php echo get_theme_mod('qs_content_post_border_color', $colorScheme[19]); ?>; 
             } 
             .site-content-area .card .entry-header {
-                border-bottom: 1px solid <?php echo get_theme_mod('qs_content_post_border_color', $colorScheme[19]); ?>;  
+                /*border-bottom: 1px solid <?php echo get_theme_mod('qs_content_post_border_color', $colorScheme[19]); ?>;*/  
                 background: <?php echo get_theme_mod('qs_content_title_bg_color', $colorScheme[20]); ?>;
             }  
             .site-content-area .card .entry-footer,
@@ -297,8 +293,10 @@ if (!function_exists('quicksand_customizer_css')) :
                 border-style: solid;
             }
             
-            #secondary .widget .card-header.widget-title{
+            #secondary .widget .card-header.widget-title {
                 border-bottom: <?php echo get_theme_mod('qs_sidebar_border_width', '1'); ?>px solid <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme[14]); ?>;   
+                background: <?php echo get_theme_mod('qs_content_title_bg_color', $colorScheme[20]); ?>; 
+                color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme[4]); ?>;
             }
                 
                 

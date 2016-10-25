@@ -325,7 +325,8 @@ cite {
   font-size: .9rem;
   /*TODO: muss änderbar bleiben wgen background-color: slider in customizer*/
   /*margin-top: -1.5em !important;*/
-  padding-top: 0 !important;
+  padding-top: 9.6px !important;
+  padding-top: .6rem !important;
   padding-bottom: 0 !important; }
   .entry-meta .posted-on:before {
     font-family: FontAwesome;
@@ -383,22 +384,23 @@ cite {
   /* excerpt */
   /*TODO: color*/ }
   .card .entry-summary {
-    color: #999;
-    font-style: italic;
     /*TODO: in customizer preview & functions*/
-    border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
-  .card .entry-header.card-header .entry-title.card-title {
-    margin-top: 16px;
-    margin-top: 1rem;
-    margin-bottom: 16px;
-    margin-bottom: 1rem;
-    /*
+    color: #999;
+    font-style: italic; }
+  .card .entry-header.card-header {
+    border-bottom: none; }
+    .card .entry-header.card-header .entry-title.card-title {
+      margin-top: 16px;
+      margin-top: 1rem;
+      margin-bottom: 16px;
+      margin-bottom: 1rem;
+      /*
              * WP-Unit-Test
              * break the title if necassary
              * @see http://wp.local/title-should-not-overflow-the-content-area/
             */
-    -ms-word-wrap: break-word;
-    word-wrap: break-word; }
+      -ms-word-wrap: break-word;
+      word-wrap: break-word; }
   .card .entry-content {
     /* 
          * for the WP-Test: reduce size of massively large image with no alignment.
@@ -412,16 +414,18 @@ cite {
       border: none;
       height: auto;
       max-width: 100%; }
-  .card .entry-footer {
+  .card .entry-footer .tag-links .tag, .card .entry-footer .tag-links .sticky-post {
+    /*TODO: in customizer preview & functions*/
+    margin-right: 8px;
+    margin-right: .5rem;
+    background: #286584; }
+    .card .entry-footer .tag-links .tag a, .card .entry-footer .tag-links .sticky-post a {
+      color: #fff; }
+  .card .entry-footer .edit-link {
+    float: right;
+    /* edit post-link  */
     /* edit post-link  */ }
-    .card .entry-footer .tag-links .tag, .card .entry-footer .tag-links .sticky-post {
-      /*TODO: in customizer preview & functions*/
-      margin-right: 8px;
-      margin-right: .5rem;
-      background: #286584; }
-      .card .entry-footer .tag-links .tag a, .card .entry-footer .tag-links .sticky-post a {
-        color: #fff; }
-    .card .entry-footer .post-edit-link:before {
+    .card .entry-footer .edit-link .post-edit-link:before {
       font-family: FontAwesome;
       padding-right: 4.8px;
       padding-right: .3rem;

@@ -520,7 +520,7 @@ function quicksand_get_color_schemes() {
 //                qs_sidebar_link_color
                 '#a3a3a3',
 //                qs_sidebar_border_color
-                '#f4f4f4',
+                '#f5f5f5',
 //                qs_nav_link_hover_background_color
                 '#95b2b1',
 //                qs_footer_link_hover_color           
