@@ -384,7 +384,7 @@ if (!function_exists('quicksand_edit_post')) :
                         sprintf(
                                 /* translators: %s: Name of current post */
                                 __('Edit<span class="screen-reader-text"> "%s"</span>', 'quicksand'), get_the_title()
-                        ), '<span class="card-link edit-link">', '</span>'
+                        ), '<span class="btn btn-secondary card-link edit-link">', '</span>'
                 );
                 ?>
             </div><!-- .entry-footer -->

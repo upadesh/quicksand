@@ -8,6 +8,12 @@
 .comments-area  { 
     .comment-respond {
         margin-top: 2rem;
+        
+        .form-submit {
+            .btn-secondary {
+                float: right;
+            }
+        }
     }
     .comment-list {
         padding-left: 0; 
@@ -33,17 +39,9 @@
     }
     ol {
         list-style-type: none;
-        .comment-body {
-            /*TODO: function customizer*/
-            background: #95b2b1; 
-            border: none ;
-            color: #686868;
-        }
-        
-            /*TODO: function customizer*/
-        a { 
-            color: #eceeef;
-        }
+        .comment-body { 
+            border: none; 
+        } 
     } 
 } 
 

@@ -205,7 +205,16 @@
     });
 
 
-    // sidebar
+    // sidebar 
+    wp.customize('qs_sidebar_border_width', function (value) {
+        var borderWidth;
+
+        borderWidth = '#secondary .widget table, #secondary .widget ul li, #secondary .widget ol li';
+        value.bind(function (qs_content_post_border_width) { 
+            $(borderWidth).css('border-width', qs_content_post_border_width + 'px');
+        });
+    });
+    
     wp.customize('qs_sidebar_background_color', function (value) {
         value.bind(function (qs_sidebar_background_color) {
             var background;

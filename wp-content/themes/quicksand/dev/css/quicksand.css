@@ -465,17 +465,13 @@ cite {
   
 } */
 /*TODO: anständig stylen*/
-.author-bio {
-  /*TODO: functions / css preview -> ist auch card-footer*/
-  background: #f5f5f5;
-  /*TODO: functions / css preview*/
-  border-top: 1px solid #dfdfdf; }
-  .author-bio .avatar {
-    float: left; }
-  .author-bio .author-bio-content {
-    margin-left: 74px; }
-    .author-bio .author-bio-content .author-link {
-      float: right; }
+.author-bio .avatar {
+  float: left; }
+
+.author-bio .author-bio-content {
+  margin-left: 74px; }
+  .author-bio .author-bio-content .author-link {
+    float: right; }
 
 /* 
  * comments
@@ -485,6 +481,8 @@ cite {
 .comments-area .comment-respond {
   margin-top: 32px;
   margin-top: 2rem; }
+  .comments-area .comment-respond .form-submit .btn-secondary {
+    float: right; }
 
 .comments-area .comment-list {
   padding-left: 0; }
@@ -505,15 +503,9 @@ cite {
       content: "\f112"; }
 
 .comments-area ol {
-  list-style-type: none;
-  /*TODO: function customizer*/ }
+  list-style-type: none; }
   .comments-area ol .comment-body {
-    /*TODO: function customizer*/
-    background: #95b2b1;
-    border: none;
-    color: #686868; }
-  .comments-area ol a {
-    color: #eceeef; }
+    border: none; }
 
 /*Pagination: Older / Newer Comments*/
 .comment-navigation .nav-previous a {

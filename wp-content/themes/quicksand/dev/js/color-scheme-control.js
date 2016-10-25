@@ -134,6 +134,12 @@
                     api.control('qs_content_post_border_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
+ 
+                    color = colors[20];
+                    api('qs_content_title_bg_color').set(color);
+                    api.control('qs_content_title_bg_color').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color);
                 });
             }
         }

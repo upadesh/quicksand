@@ -234,6 +234,18 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_content',
         'settings' => 'qs_content_secondary_text_color'
     )));
+    
+    // title-background
+    $wp_customize->add_setting('qs_content_title_bg_color', array(
+        'default' => $colorSchemeDefault[20],
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'quicksand_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_title_bg_color', array(
+        'label' => __('Title Background Color', 'quicksand'),
+        'section' => 'quicksand_content',
+        'settings' => 'qs_content_title_bg_color'
+    )));
 
     // post background color
     $wp_customize->add_setting('qs_content_post_bg_color', array(
@@ -320,7 +332,28 @@ function quicksand_customize_register($wp_customize) {
         'settings' => 'qs_sidebar_border_color'
     )));
 
+    $wp_customize->add_setting('qs_sidebar_border_width', array(
+        'default' => 1,
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options',
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
 
+    $wp_customize->add_control('qs_sidebar_border_width', array(
+        'type' => 'range',
+        'priority' => 10,
+        'section' => 'quicksand_sidebar',
+        'label' => __('Border width', 'quicksand'),
+        'description' => '',
+        'input_attrs' => array(
+            'min' => 0,
+            'max' => 10,
+            'step' => 1,
+            'class' => 'example-class',
+            'style' => 'color: #0a0',
+        ),
+    ));
 
 
 
@@ -424,6 +457,7 @@ add_action('customize_register', 'quicksand_customize_register');
  * 18. Footer Link Hover Color      - qs_footer_link_hover_color
  * 19. Post Background Color        - qs_content_post_bg_color
  * 20. Post Border Color            - qs_content_post_border_color
+ * 21. Post Title Background Color  - qs_content_title_bg_color
  *
  * @since Quicksand 0.2.1
  *
@@ -495,6 +529,8 @@ function quicksand_get_color_schemes() {
                 '#ffffff',
 //                qs_content_post_border_color 
                 '#e0e0e0',
+//                qs_content_title_bg_color
+                '#f5f5f5',
             ),
         ),
 //        https://www.mediaevent.de/tutorial/farbcodes.html
@@ -527,6 +563,8 @@ function quicksand_get_color_schemes() {
                 '#ad8d6d',
                 '#ffffff',
                 '#e2d4bb',
+//                qs_content_title_bg_color
+                '#111111',
             ),
         ),
     ));
