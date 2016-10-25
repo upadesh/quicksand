@@ -6,8 +6,13 @@
  * @subpackage Quicksand
  * @since Quicksand 0.2.1
  */
-?> 
 
+
+if (!get_theme_mod('qs_biography_show') ) {
+    return;
+}
+
+?>
 
 <div class="card-footer author-bio">  
     <?php

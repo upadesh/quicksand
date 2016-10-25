@@ -274,6 +274,29 @@ function quicksand_customize_register($wp_customize) {
 
 
 
+    /* Section: Biography */
+    $wp_customize->add_section('quicksand_biography', array(
+        'title' => __('Biography', 'quicksand'),
+        'priority' => 10,
+        'panel' => 'quicksand_main_options',
+    ));
+
+    // fullwidth
+    $wp_customize->add_setting("qs_biography_show", array(
+        'type' => 'theme_mod',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'quicksand_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('qs_biography_show', array(
+        'label' => __("Show Author Biography", 'quicksand'),
+        'section' => 'quicksand_biography',
+        'type' => 'checkbox',
+        'settings' => 'qs_biography_show',
+        'priority' => 10,
+    ));
+
+
 
 
     /* Section: Sidebar */

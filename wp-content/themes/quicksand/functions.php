@@ -288,13 +288,13 @@ if (!function_exists('quicksand_customizer_css')) :
 
             /*sidebar*/ 
             #secondary .widget {
-                border-color: <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme[14]); ?>;   
+                border-color: <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme[15]); ?>;   
                 border-width: <?php echo get_theme_mod('qs_sidebar_border_width', '1'); ?>px;
                 border-style: solid;
             }
             
             #secondary .widget .card-header.widget-title {
-                border-bottom: <?php echo get_theme_mod('qs_sidebar_border_width', '1'); ?>px solid <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme[14]); ?>;   
+                border-bottom: <?php echo get_theme_mod('qs_sidebar_border_width', '1'); ?>px solid <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme[15]); ?>;   
                 background: <?php echo get_theme_mod('qs_content_title_bg_color', $colorScheme[20]); ?>; 
                 color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme[4]); ?>;
             }
@@ -305,7 +305,7 @@ if (!function_exists('quicksand_customizer_css')) :
             #secondary .widget ol li {
                 color: <?php echo get_theme_mod('qs_sidebar_text_color', $colorScheme[13]); ?>; 
                 background: <?php echo get_theme_mod('qs_sidebar_background_color', $colorScheme[12]); ?>;  
-                border-color: <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme[14]); ?>;   
+                border-color: <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme[15]); ?>;   
                 border-width: <?php echo get_theme_mod('qs_sidebar_border_width', '1'); ?>px;
                 border-style: solid;
             }
