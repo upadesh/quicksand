@@ -303,27 +303,25 @@ cite {
   -ms-word-wrap: break-word;
   word-wrap: break-word; }
 
-/* alignment classes for img-floating */
-/*.aligncenter {
-    @extend .m-x-auto;
-    margin: 0 auto 1.75em;
-}
-.alignright {
-    @extend .pull-sm-right;
-    margin: 0.375em 0 1.75em 1.75em;
-}
-.alignleft {
-    @extend .pull-sm-left;
-    margin: 0.375em 1.75em 1.75em 0;
-} 
+/* WP-Unit-Test 
+ * alignment classes for img-floating 
+ * @see http://wp.local/markup-image-alignment/
+ */
+.aligncenter {
+  margin: 0 auto 1.75em; }
 
- classes needed by WP  
-.bypostauthor {
-    color: #686868;
-}
+.alignright {
+  margin: 0.375em 0 1.75em 1.75em; }
+
+.alignleft {
+  margin: 0.375em 1.75em 1.75em 0; }
+
+classes needed by WP .bypostauthor {
+  color: #686868; }
+
 .wp-caption-text {
-    color: #686868;
-}*/
+  color: #686868; }
+
 /*
  * Main file for post-layout
  */
@@ -4956,9 +4954,9 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   float: none !important; }
 
 @media (min-width: 544px) {
-  .pull-sm-left {
+  .pull-sm-left, .alignleft {
     float: left !important; }
-  .pull-sm-right {
+  .pull-sm-right, .alignright {
     float: right !important; }
   .pull-sm-none {
     float: none !important; } }
@@ -5008,7 +5006,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .w-100 {
   width: 100% !important; }
 
-.m-x-auto {
+.m-x-auto, .aligncenter {
   margin-right: auto !important;
   margin-left: auto !important; }
 
