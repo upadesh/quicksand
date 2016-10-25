@@ -473,18 +473,10 @@ if (!function_exists('quicksand_styles')) :
      * @since Quicksand 0.2.1
      */
     function quicksand_styles() {
-
-//    TODO: wp_head registrieren und  abhängigkeiten
-//        
-//          /*   REGISTER ALL JS FOR SITE */
-//    wp_register_script('pr_cycle_all',get_stylesheet_directory_uri().'/js/pr-slider.js');
-//    wp_register_script('pr_slider',get_stylesheet_directory_uri().'/js/jquery.cycle.all.min.js'); 
-//
+ 
 //    /*   REGISTER ALL CSS FOR SITE */
 //    wp_register_style('pr_woocommerce',get_stylesheet_directory_uri().'/css/_woocommerce.css');
-//    wp_register_style('pr_mobile',get_stylesheet_directory_uri().'/css/mobile.css'); 
-// 
-
+//    wp_register_style('pr_mobile',get_stylesheet_directory_uri().'/css/mobile.css');  
         global $quicksand_version;
 
         // check if custom-thememod exists 
@@ -502,13 +494,6 @@ if (!function_exists('quicksand_styles')) :
         // Theme stylesheet
         wp_enqueue_style('quicksand-style-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), $quicksand_version);
         wp_enqueue_style('quicksand-style-theme', $styleSheetToLoad, array(), $quicksand_version);
-
-        // Javascript Comment Functionality
-        // To allow full JavaScript functionality with the comment features in WordPress 2.7, 
-        // the following changes must be made within the WordPress Theme template files.
-        if (is_singular() && comments_open() && get_option('thread_comments')) {
-            wp_enqueue_script('comment-reply');
-        }
     }
 
 endif;
@@ -529,6 +514,13 @@ if (!function_exists('quicksand_scripts')) :
         wp_enqueue_script('quicksand-script-tether', get_template_directory_uri() . '/js/tether.min.js', array(), $quicksand_version, true);
         wp_enqueue_script('quicksand-script-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), $quicksand_version, true);
 
+        // Javascript Comment Functionality
+        // To allow full JavaScript functionality with the comment features in WordPress 2.7, 
+        // the following changes must be made within the WordPress Theme template files.
+        if (is_singular() && comments_open() && get_option('thread_comments')) {
+            wp_enqueue_script('comment-reply');
+        }
+        
         wp_register_script('fitvids', get_template_directory_uri() . '/js/fitvids.min.js', array('jquery'), '2.0', true); 
         wp_register_script('quicksand', get_template_directory_uri() . '/js/quicksand.js', array('fitvids'), '1.0', true);
         wp_enqueue_script('quicksand');
