@@ -248,18 +248,18 @@ if (!function_exists('quicksand_customizer_css')) :
 
  
             /*2nd text color*/  
-            .site-main-container  h1,
-            .site-main-container  h2,
-            .site-main-container  h3,
-            .site-main-container  h4,
-            .site-main-container  h5,
-            .site-main-container  h6, 
-            .site-main-container  h1>a,
-            .site-main-container  h2>a,
-            .site-main-container  h3>a,
-            .site-main-container  h4>a,
-            .site-main-container  h5>a,
-            .site-main-container  h6>a { 
+            .site-content .card-header.entry-header h1,
+            .site-content .card-header.entry-header h2,
+            .site-content .card-header.entry-header h3,
+            .site-content .card-header.entry-header h4,
+            .site-content .card-header.entry-header h5,
+            .site-content .card-header.entry-header h6,
+            .site-content .card-header.entry-header h1>a,
+            .site-content .card-header.entry-header h2>a,
+            .site-content .card-header.entry-header h3>a,
+            .site-content .card-header.entry-header h4>a,
+            .site-content .card-header.entry-header h5>a,
+            .site-content .card-header.entry-header h6>a { 
                 color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme[4]); ?>;
             }
 
