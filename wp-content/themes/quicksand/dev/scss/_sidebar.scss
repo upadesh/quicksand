@@ -64,9 +64,9 @@
 
 
 /*TODO: calendar-table-fix*/ 
-/*section.widget_calendar { 
+section.widget_calendar { 
     overflow: hidden; 
-    td {
+    td, th {
         padding: .5rem;
     }
-} */
+} 
