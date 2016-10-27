@@ -1592,7 +1592,7 @@ pre {
   .col-md-5 {
     float: left;
     width: 41.6666666667%; }
-  .col-md-6 {
+  .col-md-6, .site-footer-widgetbar .widget {
     float: left;
     width: 50%; }
   .col-md-7 {
