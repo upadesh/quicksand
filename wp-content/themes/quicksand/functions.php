@@ -248,6 +248,7 @@ if (!function_exists('quicksand_customizer_css')) :
 
  
             /*2nd text color*/  
+            .bypostauthor,
             .site-content .card-header.entry-header h1,
             .site-content .card-header.entry-header h2,
             .site-content .card-header.entry-header h3,
@@ -281,6 +282,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 border-top: 1px solid <?php echo get_theme_mod('qs_content_post_border_color', $colorScheme[19]); ?>; 
                 background: <?php echo get_theme_mod('qs_content_title_bg_color', $colorScheme[20]); ?>; 
             }  
+            
             .comments-area ol .comment-body {
                 background: <?php echo get_theme_mod('qs_content_title_bg_color', $colorScheme[20]); ?>; 
             }
