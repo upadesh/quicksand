@@ -12,9 +12,7 @@
 
 /* post-meta */ 
 .entry-meta { 
-    font-size: .9rem;     
-    /*TODO: muss änderbar bleiben wgen background-color: slider in customizer*/
-    /*margin-top: -1.5em !important;*/
+    font-size: .9rem;
     padding-top: .6rem !important;
     padding-bottom: 0 !important;
 
@@ -86,10 +84,8 @@
     margin-bottom: 2rem !important;
 
     /* excerpt */
-    /*TODO: color*/
-    .entry-summary {
-        /*TODO: in customizer preview & functions*/
-        color: #999;
+    .entry-summary { 
+        color: $grey;
         font-style: italic;
     } 
 
@@ -140,11 +136,10 @@
     .entry-footer {
         .tag-links {
             .tag {
-                /*TODO: in customizer preview & functions*/
                 margin-right: .5rem;
-                background: #286584;
+                background: $blue;
                 a {
-                    color: #fff;
+                    color: $white;
                 }
             }
         }

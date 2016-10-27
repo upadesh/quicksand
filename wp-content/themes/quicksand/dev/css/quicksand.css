@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * write your scss-code in a separeted file
  */
@@ -345,8 +344,6 @@ a.btn-secondary, .card .entry-footer .edit-link a.post-edit-link, .comments-area
 .entry-meta {
   font-size: 14.4px;
   font-size: .9rem;
-  /*TODO: muss änderbar bleiben wgen background-color: slider in customizer*/
-  /*margin-top: -1.5em !important;*/
   padding-top: 9.6px !important;
   padding-top: .6rem !important;
   padding-bottom: 0 !important; }
@@ -403,11 +400,9 @@ a.btn-secondary, .card .entry-footer .edit-link a.post-edit-link, .comments-area
 .card {
   margin-bottom: 32px !important;
   margin-bottom: 2rem !important;
-  /* excerpt */
-  /*TODO: color*/ }
+  /* excerpt */ }
   .card .entry-summary {
-    /*TODO: in customizer preview & functions*/
-    color: #999;
+    color: #a3a3a3;
     font-style: italic; }
   .card .entry-header.card-header {
     border-bottom: none; }
@@ -441,7 +436,6 @@ a.btn-secondary, .card .entry-footer .edit-link a.post-edit-link, .comments-area
       height: auto;
       max-width: 100%; }
   .card .entry-footer .tag-links .tag, .card .entry-footer .tag-links .sticky-post {
-    /*TODO: in customizer preview & functions*/
     margin-right: 8px;
     margin-right: .5rem;
     background: #286584; }
@@ -483,7 +477,7 @@ a.btn-secondary, .card .entry-footer .edit-link a.post-edit-link, .comments-area
 /*.author-info {
   
 } */
-/*TODO: anständig stylen*/
+/*biography*/
 .author-bio .avatar {
   float: left; }
 
@@ -500,7 +494,6 @@ a.btn-secondary, .card .entry-footer .edit-link a.post-edit-link, .comments-area
  * comments
  * form & list
  */
-/*TODO: farben*/
 .comments-area .comment-respond {
   margin-top: 32px;
   margin-top: 2rem;
@@ -511,9 +504,6 @@ a.btn-secondary, .card .entry-footer .edit-link a.post-edit-link, .comments-area
 
 .comments-area .comment-list {
   padding-left: 0; }
-  .comments-area .comment-list ol {
-    /*TODO: function customizer*/
-    border-left: 1px solid #e0e0e0; }
   .comments-area .comment-list article {
     background: grey;
     padding: 6.4px;
