@@ -354,7 +354,7 @@ function quicksand_customize_register($wp_customize) {
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_border_color', array(
         'label' => __('Widget Border Color', 'quicksand'),
         'section' => 'quicksand_sidebar',
-        'description' => __('For a nice effect choose the same color like Content-Background', 'quicksand'),
+        'description' => __('For a nice effect choose the same color like Content-Background ...', 'quicksand'),
         'settings' => 'qs_sidebar_border_color'
     )));
 
@@ -371,7 +371,7 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 10,
         'section' => 'quicksand_sidebar',
         'label' => __('Border width', 'quicksand'),
-        'description' => '',
+        'description' => __('... and set the border-width higher than 1', 'quicksand'),
         'input_attrs' => array(
             'min' => 0,
             'max' => 10,
@@ -567,47 +567,47 @@ function quicksand_get_color_schemes() {
             'label' => __('Dune', 'quicksand'),
             'colors' => array(
 //                background_color
-                '#ffffff',
+                '#e0d4c0',
 //                qs_content_background_color
-                '#ffffff',
+                '#e0d4c0',
 //                qs_content_link_color
-                '#cecece',
+                '#dbcfbc',
 //                qs_content_text_color
                 '#686868',
 //                qs_content_secondary_text_color
-                '#9ab7ac',
+                '#e0d4c0',
 //                header_textcolor
                 '#ffffff',
 //                qs_nav_background_color
-                '#9cbaba',
+                '#e0d4c0',
 //                qs_nav_link_color
                 '#ffffff',
 //                qs_header_background_color
-                '#95b2b1',
+                '#e0d4c0',
 //                qs_footer_background_color
                 '#303030',
 //                qs_footer_link_color
-                '#9ab7ac',
+                '#d3c7b6',
 //                qs_footer_text_color
-                '#5e7772',
+                '#a89c90',
 //                qs_sidebar_background_color
                 '#ffffff',
 //                qs_sidebar_text_color
-                '#666666',
+                '#686868',
 //                qs_sidebar_link_color
-                '#a3a3a3',
+                '#e0d4c0',
 //                qs_sidebar_border_color
-                '#f5f5f5',
+                '#e0d4c0',
 //                qs_nav_link_hover_background_color
-                '#95b2b1',
+                '#ccbfaf',
 //                qs_footer_link_hover_color           
-                '#7c938a',
+                '#c9bfad',
 //                qs_content_post_bg_color 
                 '#ffffff',
 //                qs_content_post_border_color 
-                '#e0e0e0',
+                '#e0d4c0',
 //                qs_content_title_bg_color
-                '#f5f5f5',
+                '#d6cbb8',
             ),
         ),
     ));

@@ -22,17 +22,13 @@ $gray-lightest:             brown !default; */
 
 /* btn colors */
 /*use secondary for all submit & input-group buttons*/
-/*$btn-secondary-color:            $white;
-$btn-secondary-bg:               $turquoise; 
-$btn-secondary-border:           $turquoise;*/
-
 $btn-secondary-color:            $white;
-$btn-secondary-bg:               $brown-light; 
-$btn-secondary-border:           $brown-light;
+$btn-secondary-bg:               $turquoise; 
+$btn-secondary-border:           $turquoise; 
 
 /* custom extend */
-/*a.btn-secondary,
-.btn-secondary a {
+a.btn.btn-secondary,
+.btn.btn-secondary a {
     background: $white;
     color: $turquoise !important;
     border: none !important;
@@ -40,44 +36,46 @@ $btn-secondary-border:           $brown-light;
         background: $turquoise;
         color: $white !important;
         border: none !important;
+        text-decoration: none;
     }
-} */
-a.btn-secondary,
-.btn-secondary a {
-    background: $brown-light;
+}  
+
+input.btn.btn-secondary {
+    background: $turquoise;
     color: $white !important;
-    border: none !important;
+    border: 1px solid $turquoise !important;
     &:hover {
-        background:$white;
-        color: $brown-light !important;
+        background: $white;
+        color: $turquoise !important;
         border: none !important;
+        border: 1px solid $turquoise !important;
     }
-} 
-/*FIX: background secondary-btn*/
-.input-group-btn {
-    background: $brown-light;
 }
 
+span.btn.btn-secondary{
+    background: $white;
+    color: $turquoise !important;
+    border: 1px solid $turquoise !important;
+    &:hover {
+        background: $turquoise;
+        color: $white !important;
+        border: none !important;
+        text-decoration: none;
+    }
+}
+.btn.btn-outline-secondary {
+    a {
+        color: $turquoise !important;
+        &:hover {
+            background: $turquoise;
+            color: $white !important;
+            border: none !important;
+            text-decoration: none;
+        }
+    }
+}
 
-/*$btn-primary-color:              #fff !default;
-$btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             $btn-primary-bg !default;
-
-
-$btn-info-color:                 #fff !default;
-$btn-info-bg:                    $brand-info !default;
-$btn-info-border:                $btn-info-bg !default;
-
-$btn-success-color:              #fff !default;
-$btn-success-bg:                 $brand-success !default;
-$btn-success-border:             $btn-success-bg !default;
-
-$btn-warning-color:              #fff !default;
-$btn-warning-bg:                 $brand-warning !default;
-$btn-warning-border:             $btn-warning-bg !default;
-
-$btn-danger-color:               #fff !default;
-$btn-danger-bg:                  $brand-danger !default;
-$btn-danger-border:              $btn-danger-bg !default;
-
-$btn-link-disabled-color:        $gray-light !default;*/
+/*FIX: background secondary-btn*/
+.input-group-btn {
+    background: $turquoise;
+}

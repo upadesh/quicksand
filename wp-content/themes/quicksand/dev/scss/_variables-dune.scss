@@ -1,53 +1,78 @@
 /**
- * color-scheme: quicksand
+ * overwrite here orginal Bootstrap-variables  
  *
  * Copy variables from bootstrap's `_variables.scss` to this file to override default values 
  *
  * Define also your scheme-color specific variables in here 
- */   
+ */
 
-
-/* === custom variables === */  
- 
 
 
 /* === bootstrap variables === */
 $enable-rounded: false;
  
-/*main colors*/
-$gray-dark:                 #a38566 !default;
-$gray:                      #ba9a75 !default;
-$gray-light:                #e8c892 !default;
-$gray-lighter:              #deb887 !default;
-$gray-lightest:             #faebd7 !default; 
+$gray-dark:                 $brown-dark !default; // Edit link
+$gray:                      $brown !default;
+$gray-light:                $brown-light !default;
+$gray-lighter:              $brown-lighter !default;
+$gray-lightest:             $brown-lightest !default;   
 
- 
 /* btn colors */
-
 /*use secondary for all submit & input-group buttons*/
-$btn-secondary-color:            $gray-dark;
-$btn-secondary-bg:               $gray-light;
-$btn-secondary-border:           $gray;
+$btn-secondary-color:            $white;
+$btn-secondary-bg:               $brown-light; 
+$btn-secondary-border:           $brown-light; 
 
-/*$btn-primary-color:              #fff !default;
-$btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             $btn-primary-bg !default;
+/* custom extend */
+a.btn.btn-secondary,
+.btn.btn-secondary a {
+    background: $white;
+    color: $brown-light !important;
+    border: none !important;
+    &:hover {
+        background: $brown-light;
+        color: $white !important;
+        border: none !important;
+        text-decoration: none;
+    }
+}  
 
+input.btn.btn-secondary {
+    background: $brown-light;
+    color: $white !important;
+    border: 1px solid $brown-light !important;
+    &:hover {
+        background: $white;
+        color: $brown-light !important;
+        border: none !important;
+        border: 1px solid $brown-light !important;
+    }
+}
 
-$btn-info-color:                 #fff !default;
-$btn-info-bg:                    $brand-info !default;
-$btn-info-border:                $btn-info-bg !default;
+span.btn.btn-secondary{
+    background: $white;
+    color: $brown-light !important;
+    border: 1px solid $white !important;
+    &:hover {
+        background: $brown-light;
+        color: $white !important;
+        border: none !important;
+        text-decoration: none;
+    }
+}
+.btn.btn-outline-secondary {
+    a {
+        color: $brown-light !important;
+        &:hover {
+            background: $brown-light;
+            color: $white !important;
+            border: none !important;
+            text-decoration: none;
+        }
+    }
+}
 
-$btn-success-color:              #fff !default;
-$btn-success-bg:                 $brand-success !default;
-$btn-success-border:             $btn-success-bg !default;
-
-$btn-warning-color:              #fff !default;
-$btn-warning-bg:                 $brand-warning !default;
-$btn-warning-border:             $btn-warning-bg !default;
-
-$btn-danger-color:               #fff !default;
-$btn-danger-bg:                  $brand-danger !default;
-$btn-danger-border:              $btn-danger-bg !default;
-
-$btn-link-disabled-color:        $gray-light !default;*/
+/*FIX: background secondary-btn*/
+.input-group-btn {
+    background: $brown-light;
+}

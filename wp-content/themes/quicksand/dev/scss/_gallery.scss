@@ -63,10 +63,7 @@
 
 .image-navigation {
     .nav-links {
-        .nav-previous {
-                @extend .btn;
-                @extend .btn-outline-secondary; 
-                
+        .nav-previous { 
                 float: left;
                 
                 &:before {
@@ -75,15 +72,12 @@
                     content: "\f177";
                 }
         }
-        .nav-next {
-                @extend .btn;
-                @extend .btn-outline-secondary; 
-                
+        .nav-next { 
                 float: right;
                 
-                &:before {
+                &:after {
                     font-family: FontAwesome; 
-                    padding-right: 3px;
+                    padding-left: 3px;
                     content: "\f178";
                 }
         } 

@@ -308,7 +308,7 @@ if (!function_exists('quicksand_customizer_css')) :
             }
                 
                 
-            #secondary .widget table,
+            /*#secondary .widget table,*/
             #secondary .widget ul li,
             #secondary .widget ol li {
                 color: <?php echo get_theme_mod('qs_sidebar_text_color', $colorScheme[13]); ?>; 
