@@ -20,16 +20,21 @@ cite {
 }
 
 
+
+ /* === bootstrap-style elements === */ 
 /* table */
 table {
     @extend .table;
 }
 
-
-/*select bootstrap-style*/
 select {
     @extend .custom-select;
 }
+
+input[type='checkbox'],
+input[type='radio'] { 
+    @extend .custom-control-input;
+} 
 
 
 
