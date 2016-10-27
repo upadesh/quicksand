@@ -65,17 +65,7 @@ get_header();
                         );
                     }
                     ?> 
-                </div> 
-                
-                
-                
-<!--                the_post_navigation(array(
-                    'prev_text' => '<span class="meta-nav btn btn-outline-secondary" post-last-link aria-hidden="true"><i class="fa fa-long-arrow-left"></i>%title</span>' .
-                    '<span class="screen-reader-text">' . __('Previous post:', 'quicksand') . '</span> ',
-                    'next_text' => '<span class="meta-nav btn btn-outline-secondary post-next-link " aria-hidden="true">%title<i class="fa fa-long-arrow-right"></i></span>' .
-                    '<span class="screen-reader-text">' . __('Next post:', 'quicksand') . '</span> ',
-                ));-->
-
+                </div>  
 
                 <!-- image-navigation -->
                 <nav id="image-navigation" class="card-block navigation image-navigation">
