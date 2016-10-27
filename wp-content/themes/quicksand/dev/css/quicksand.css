@@ -212,9 +212,15 @@ $btn-link-disabled-color:        $gray-light !default;*/
  * main sidebar / widget file
  * place in here all rules which should be assigned to all sidebars
  */
+/* general */
+.widget-title {
+  font-size: 20.8px;
+  font-size: 1.3rem; }
+
 /* === Font Awesome for some widgets === */
-/*recent posts*/
-/*pages*/
+/*
+ * widget: recent posts, pages  
+ */
 .widget.widget_pages li:before,
 .widget.widget_recent_entries li:before {
   font-family: FontAwesome;
@@ -222,39 +228,41 @@ $btn-link-disabled-color:        $gray-light !default;*/
   padding-right: .5rem;
   content: "\f15c"; }
 
-/*recent comments*/
+/* widget: recent comments*/
 .widget.widget_recent_comments li:before {
   font-family: FontAwesome;
   padding-right: 8px;
   padding-right: .5rem;
   content: "\f075"; }
 
-/*archive*/
+/* widget: archive*/
 .widget.widget_archive li:before {
   font-family: FontAwesome;
   padding-right: 8px;
   padding-right: .5rem;
   content: "\f073"; }
 
-/*categories*/
+/* widget: categories*/
 .widget.widget_categories li:before {
   font-family: FontAwesome;
   padding-right: 8px;
   padding-right: .5rem;
   content: "\f07c"; }
 
-/* no border on search-widget */
-.widget_search {
+/* widget: search */
+.widget.widget_search {
   border: none !important; }
 
-.widget-title {
-  font-size: 20.8px;
-  font-size: 1.3rem; }
+/* widget: featured-image */
+.widget .featured-image img {
+  max-width: 100%;
+  width: 100%; }
 
 /*TODO: calendar-table-fix*/
-section.widget_calendar {
+/* widget: calendar */
+.widget.widget_calendar {
   overflow: hidden; }
-  section.widget_calendar td, section.widget_calendar th {
+  .widget.widget_calendar td, .widget.widget_calendar th {
     padding: 8px;
     padding: .5rem; }
 
@@ -1164,7 +1172,7 @@ mark,
 dl.row > dd + dt {
   clear: left; }
 
-.img-fluid, .carousel-inner > .carousel-item > img,
+.img-fluid, .widget .featured-image img, .carousel-inner > .carousel-item > img,
 .carousel-inner > .carousel-item > a > img {
   display: block;
   max-width: 100%;

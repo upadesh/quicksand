@@ -3,9 +3,19 @@
  * place in here all rules which should be assigned to all sidebars
  */
 
+
+
+/* general */
+.widget-title {
+    font-size: 1.3rem;
+}
+
+
+
 /* === Font Awesome for some widgets === */
-/*recent posts*/
-/*pages*/
+/*
+ * widget: recent posts, pages  
+ */
 .widget.widget_pages,
 .widget.widget_recent_entries {
     li:before {
@@ -15,7 +25,7 @@
     }
 }
 
-/*recent comments*/
+/* widget: recent comments*/
 .widget.widget_recent_comments {
     li:before {
         font-family: FontAwesome; 
@@ -25,7 +35,7 @@
     }
 }
 
-/*archive*/
+/* widget: archive*/
 .widget.widget_archive {
     li:before {
         font-family: FontAwesome; 
@@ -36,7 +46,7 @@
 }  
 
 
-/*categories*/
+/* widget: categories*/
 .widget.widget_categories {
     li:before {
         font-family: FontAwesome; 
@@ -46,25 +56,30 @@
     }
 }  
 
- 
 
-/* no border on search-widget */
-.widget_search {
+
+
+/* widget: search */
+.widget.widget_search {
     border: none !important;
 }
 
-
-
-
-.widget-title {
-    font-size: 1.3rem;
+/* widget: featured-image */
+.widget {
+    .featured-image {
+        img {
+            @extend .img-fluid; 
+            max-width: 100%; 
+            width: 100%;
+        }
+    }
 }
-
 
 
 
 /*TODO: calendar-table-fix*/ 
-section.widget_calendar { 
+/* widget: calendar */
+.widget.widget_calendar { 
     overflow: hidden; 
     td, th {
         padding: .5rem;

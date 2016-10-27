@@ -165,6 +165,7 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 1,
     ));
 
+
     // bg-color
     $wp_customize->add_setting('qs_header_background_color', array(
         'default' => $colorSchemeDefault[8],
@@ -236,7 +237,7 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_content',
         'settings' => 'qs_content_secondary_text_color'
     )));
-    
+
     // title-background
     $wp_customize->add_setting('qs_content_title_bg_color', array(
         'default' => $colorSchemeDefault[20],
