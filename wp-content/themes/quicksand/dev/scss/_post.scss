@@ -55,28 +55,30 @@
 .post-thumbnail img { 
     width:100%; 
 }
-
-
+ 
 
 
 /*post pagination: previous & next post*/
-.post-navigation { 
-    .nav-previous {
-        @extend .text-xs-left; 
-        display: inline-block;
-        width: 50%;
-        .fa { 
-            padding-right: 1rem; 
+.post-pagination {
+    margin: 1rem 0;
+    .post-navigation { 
+        .nav-previous {
+            @extend .text-xs-left; 
+            display: inline-block;
+            width: 50%;
+            .fa { 
+                padding-right: 1rem; 
+            }
         }
-    }
-    .nav-next {
-        @extend .text-xs-right; 
-        display: inline-block;
-        width: 50%;
-        .fa { 
-            padding-left: 1rem; 
+        .nav-next {
+            @extend .text-xs-right; 
+            display: inline-block;
+            width: 50%;
+            .fa { 
+                padding-left: 1rem; 
+            }
         }
-    }
+    }  
 }
 
 

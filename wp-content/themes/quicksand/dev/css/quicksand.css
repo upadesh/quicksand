@@ -383,19 +383,21 @@ a.btn-secondary, .card .entry-footer .edit-link a.post-edit-link, .comments-area
   width: 100%; }
 
 /*post pagination: previous & next post*/
-.post-navigation .nav-previous {
-  display: inline-block;
-  width: 50%; }
-  .post-navigation .nav-previous .fa {
-    padding-right: 16px;
-    padding-right: 1rem; }
-
-.post-navigation .nav-next {
-  display: inline-block;
-  width: 50%; }
-  .post-navigation .nav-next .fa {
-    padding-left: 16px;
-    padding-left: 1rem; }
+.post-pagination {
+  margin: 16px 0;
+  margin: 1rem 0; }
+  .post-pagination .post-navigation .nav-previous {
+    display: inline-block;
+    width: 50%; }
+    .post-pagination .post-navigation .nav-previous .fa {
+      padding-right: 16px;
+      padding-right: 1rem; }
+  .post-pagination .post-navigation .nav-next {
+    display: inline-block;
+    width: 50%; }
+    .post-pagination .post-navigation .nav-next .fa {
+      padding-left: 16px;
+      padding-left: 1rem; }
 
 .card {
   margin-bottom: 32px !important;
@@ -5435,10 +5437,10 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.text-xs-left, .post-navigation .nav-previous, .comment-navigation .nav-previous {
+.text-xs-left, .post-pagination .post-navigation .nav-previous, .comment-navigation .nav-previous {
   text-align: left !important; }
 
-.text-xs-right, .post-navigation .nav-next, .comment-navigation .nav-next {
+.text-xs-right, .post-pagination .post-navigation .nav-next, .comment-navigation .nav-next {
   text-align: right !important; }
 
 .text-xs-center {

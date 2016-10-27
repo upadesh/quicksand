@@ -88,6 +88,7 @@ function quicksand_customize_register($wp_customize) {
 
     // fullwidth
     $wp_customize->add_setting("qs_nav_fullwidth", array(
+        'default' => 1,
         'type' => 'theme_mod',
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_checkbox',
@@ -150,6 +151,7 @@ function quicksand_customize_register($wp_customize) {
 
     // fullwidth
     $wp_customize->add_setting("qs_header_fullwidth", array(
+        'default' => 1,
         'type' => 'theme_mod',
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_checkbox',

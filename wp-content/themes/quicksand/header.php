@@ -21,8 +21,11 @@
         <?php wp_head(); ?> 
     </head>
     <body <?php body_class(); ?>>  
+        <?php
+        $a =  get_theme_mod('qs_nav_fullwidth', 1);
+        ?>
         <!-- site-main-container --> 
-        <div class="<?php echo esc_attr( get_theme_mod('qs_nav_fullwidth') ? '' : 'container');  ?>  site-nav-container">
+        <div class="<?php echo esc_attr( get_theme_mod('qs_nav_fullwidth', 1) ? '' : 'container');  ?>  site-nav-container">
             <!-- site-navigation -->
             <?php get_template_part('template-parts/navigation', 'primary'); ?>  
         </div>
@@ -30,7 +33,7 @@
         <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', 'quicksand'); ?></a>
 
         <!-- site-header >-->
-        <header id="masthead" class="site-header <?php echo  esc_attr( get_theme_mod('qs_header_fullwidth') ? '' : 'container'); ?>"> 
+        <header id="masthead" class="site-header <?php echo  esc_attr( get_theme_mod('qs_header_fullwidth', 1) ? '' : 'container'); ?>"> 
 
             <!-- site-info -->
             <?php if (has_header_image()) { ?>
