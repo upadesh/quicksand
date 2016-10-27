@@ -56,12 +56,24 @@ input[type='radio'] {
     margin: 0.375em 1.75em 1.75em 0;
 } 
 
- /*classes needed by WP*/ 
-/*TODO: where???*/ 
+ /*classes needed by WP*/  
 .bypostauthor {
-    color: #686868;
+    color: $turquoise;
 }
 .wp-caption-text {
-    color: #686868;
+    color: $turquoise;
 }
 
+
+/* buttons: all secondary(-outline) */
+a.btn-secondary,
+.btn-secondary a {
+    background: $white;
+    color: $turquoise !important;
+    border: none !important;
+    &:hover {
+        background: $turquoise;
+        color: $white !important;
+        border: none !important;
+    }
+} 

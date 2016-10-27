@@ -348,27 +348,7 @@ if (!function_exists('quicksand_customizer_css')) :
             }
             .site-footer .site-social .fa-stack:hover .fa-circle { 
                 opacity:0.5;
-            }
-            
-            
-            /* secondary buttons coloring */
-/*              .btn.btn-outline-secondary {
-                    color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme[4]); ?> !important; 
-                    border: 1px solid <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme[4]); ?> !important; 
-            }
-            .btn.btn-outline-secondary:hover {
-                    color: <?php echo get_theme_mod('qs_content_background_color', $colorScheme[1]); ?> !important; 
-                    border: 1px solid <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme[4]); ?> !important;
-            }
-
-          .btn.btn-secondary {
-                    color: green !important;
-                    background: red !important; 
             } 
-            .btn.btn-secondary:hover {
-                    color: red !important;
-                    background: green !important; 
-            }*/
         </style>
         <?php
     }
