@@ -39,8 +39,7 @@ if (!get_theme_mod('qs_biography_show') ) {
         <p>
   
   
-        <a class="btn btn-secondary card-link author-link" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" rel="author">
-            <i class="fa fa-book"></i> 
+        <a class="card-link author-link" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" rel="author">
             <?php printf(__('View all posts by %s', 'quicksand'), get_the_author()); ?>
         </a>
         </p>

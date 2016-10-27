@@ -80,9 +80,8 @@ get_header();
                 <!-- image-navigation -->
                 <nav id="image-navigation" class="card-block navigation image-navigation">
                     <div class="nav-links">  
-                        <!--TODO; btns ausrichten & größe --> 
-                        <span class="nav-previous btn btn-outline-secondary"><i class="fa fa-long-arrow-left"></i><?php previous_image_link(false, __('Previous Image', 'quicksand')); ?></span>
-                        <span class="nav-next btn btn-outline-secondary"><?php next_image_link(false, __('Next Image', 'quicksand')); ?><i class="fa fa-long-arrow-right"></i></span> 
+                        <span class="nav-previous"><?php previous_image_link(false, __('Previous Image', 'quicksand')); ?></span>
+                        <span class="nav-next"><?php next_image_link(false, __('Next Image', 'quicksand')); ?></span> 
                     </div><!-- .nav-links -->
                 </nav><!-- .image-navigation --> 
 
