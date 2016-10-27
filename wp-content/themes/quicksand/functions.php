@@ -287,6 +287,8 @@ if (!function_exists('quicksand_customizer_css')) :
             .comment-list ol {
                 border-left: 1px solid <?php echo get_theme_mod('qs_content_post_border_color', $colorScheme[19]); ?>; 
             }
+            
+            .card-header.comments-title,
             .comments-area ol .comment-body {
                 background: <?php echo get_theme_mod('qs_content_title_bg_color', $colorScheme[20]); ?>; 
             }

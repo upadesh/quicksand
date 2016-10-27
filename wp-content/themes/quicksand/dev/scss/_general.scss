@@ -59,18 +59,4 @@ input[type='radio'] {
  /*classes needed by WP*/  
 .wp-caption-text {
     color: $turquoise;
-}
-
-
-/* buttons: all secondary(-outline) */
-a.btn-secondary,
-.btn-secondary a {
-    background: $white;
-    color: $turquoise !important;
-    border: none !important;
-    &:hover {
-        background: $turquoise;
-        color: $white !important;
-        border: none !important;
-    }
 } 
