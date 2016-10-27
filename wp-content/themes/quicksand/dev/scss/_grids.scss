@@ -5,10 +5,10 @@
 /* one-column */ 
 .site-content { 
     #primary {
-        @extend .col-xl-9;
+        @extend .col-lg-8;
     }
     #secondary {
-        @extend .col-xl-3;
+        @extend .col-lg-4;
     }
 } 
 
@@ -33,7 +33,7 @@
 .site-footer-widgetbar { 
     .widget {
         @extend .col-xs-12; 
-        @extend .col-lg-4; 
+        @extend .col-lg-3; 
     } 
 } 
 

@@ -311,6 +311,7 @@ cite {
   display: inline !important; }
 
 /* table */
+/*select bootstrap-style*/
 /* WP-Unit-Test 
  * alignment classes for img-floating 
  * @see http://wp.local/markup-image-alignment/
@@ -1292,7 +1293,7 @@ pre {
     display: table;
     clear: both; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .page-template-template-fullwidth .site-content #primary, .site-footer-widgetbar .widget, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .site-footer .site-social, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .site-footer .nav-wrapper, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl-1, .col-xl-2, .col-xl-3, .site-content #secondary, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .site-content #primary, .col-xl-10, .col-xl-11, .col-xl-12 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .page-template-template-fullwidth .site-content #primary, .site-footer-widgetbar .widget, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .site-content #secondary, .site-footer .site-social, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .site-content #primary, .site-footer .nav-wrapper, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
@@ -1692,10 +1693,10 @@ pre {
   .col-lg-2 {
     float: left;
     width: 16.6666666667%; }
-  .col-lg-3 {
+  .col-lg-3, .site-footer-widgetbar .widget {
     float: left;
     width: 25%; }
-  .col-lg-4, .site-footer-widgetbar .widget, .site-footer .site-social {
+  .col-lg-4, .site-content #secondary, .site-footer .site-social {
     float: left;
     width: 33.3333333333%; }
   .col-lg-5 {
@@ -1707,7 +1708,7 @@ pre {
   .col-lg-7 {
     float: left;
     width: 58.3333333333%; }
-  .col-lg-8, .site-footer .nav-wrapper {
+  .col-lg-8, .site-content #primary, .site-footer .nav-wrapper {
     float: left;
     width: 66.6666666667%; }
   .col-lg-9 {
@@ -1806,7 +1807,7 @@ pre {
   .col-xl-2 {
     float: left;
     width: 16.6666666667%; }
-  .col-xl-3, .site-content #secondary {
+  .col-xl-3 {
     float: left;
     width: 25%; }
   .col-xl-4 {
@@ -1824,7 +1825,7 @@ pre {
   .col-xl-8 {
     float: left;
     width: 66.6666666667%; }
-  .col-xl-9, .site-content #primary {
+  .col-xl-9 {
     float: left;
     width: 75%; }
   .col-xl-10 {
@@ -3299,7 +3300,7 @@ input[type="button"].btn-block {
   .custom-controls-stacked .custom-control + .custom-control {
     margin-left: 0; }
 
-.custom-select {
+.custom-select, select {
   display: inline-block;
   max-width: 100%;
   padding: 6px 28px 6px 12px;
@@ -3315,17 +3316,17 @@ input[type="button"].btn-block {
   border: 1px solid rgba(0, 0, 0, 0.15);
   -moz-appearance: none;
   -webkit-appearance: none; }
-  .custom-select:focus {
+  .custom-select:focus, select:focus {
     border-color: #51a7e8;
     outline: none; }
-    .custom-select:focus::-ms-value {
+    .custom-select:focus::-ms-value, select:focus::-ms-value {
       color: #55595c;
       background-color: #fff; }
-  .custom-select:disabled {
+  .custom-select:disabled, select:disabled {
     color: #818a91;
     cursor: not-allowed;
     background-color: #eceeef; }
-  .custom-select::-ms-expand {
+  .custom-select::-ms-expand, select::-ms-expand {
     opacity: 0; }
 
 .custom-select-sm {

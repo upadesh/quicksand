@@ -26,6 +26,13 @@ table {
 }
 
 
+/*select bootstrap-style*/
+select {
+    @extend .custom-select;
+}
+
+
+
 
 /* WP-Unit-Test 
  * alignment classes for img-floating 

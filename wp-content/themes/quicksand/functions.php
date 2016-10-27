@@ -334,8 +334,7 @@ if (!function_exists('quicksand_customizer_css')) :
 
             .site-footer-widgetbar a,
             .site-footer .nav-wrapper a {  
-                color: <?php echo get_theme_mod('qs_footer_link_color', $colorScheme[10]); ?>;
-                padding: 0 .6rem;
+                color: <?php echo get_theme_mod('qs_footer_link_color', $colorScheme[10]); ?>; 
             }   
 
             .site-footer .nav-wrapper a:hover {  
