@@ -283,7 +283,7 @@ function quicksand_customize_register($wp_customize) {
         'panel' => 'quicksand_main_options',
     ));
 
-    // fullwidth
+    // visible
     $wp_customize->add_setting("qs_biography_show", array(
         'type' => 'theme_mod',
         'transport' => 'refresh',
