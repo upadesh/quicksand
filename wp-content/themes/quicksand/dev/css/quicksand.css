@@ -23,7 +23,24 @@
  * Define your own colors in here
  */
 /*$turquoise:             #2cb5b1; 
-$white:                 #fff; */
+$white:                 #fff; 
+
+a.btn-secondary {
+    background: $turquoise;
+    color: $white !important;
+    &:hover {
+    background: $white;
+    color: $turquoise !important;
+    }
+} 
+.btn-secondary a {
+    background: $turquoise;
+    color: $white !important;
+    &:hover {
+    background: $white;
+    color: $turquoise !important;
+    }
+}*/
 /**
  * overwrite here orginal Bootstrap-variables  
  *
@@ -431,6 +448,7 @@ cite {
       padding-right: .3rem;
       content: "\f040"; }
 
+/*paginated posts*/
 .page-links {
   /*    a:hover {
             color: $gray-light;
@@ -454,17 +472,6 @@ cite {
 /*.entry-title {
     font-weight: bold; 
 }*/
-/*.entry-content { 
-    .wp-caption {
-        max-width: 100%;
-    }
-
-    img {
-        border: none;
-        height: auto;
-        max-width: 100%; 
-    } 
-} */
 /*.author-info {
   
 } */

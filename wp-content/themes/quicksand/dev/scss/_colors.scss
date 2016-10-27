@@ -3,4 +3,21 @@
  */  
 
 /*$turquoise:             #2cb5b1; 
-$white:                 #fff; */
+$white:                 #fff; 
+
+a.btn-secondary {
+    background: $turquoise;
+    color: $white !important;
+    &:hover {
+    background: $white;
+    color: $turquoise !important;
+    }
+} 
+.btn-secondary a {
+    background: $turquoise;
+    color: $white !important;
+    &:hover {
+    background: $white;
+    color: $turquoise !important;
+    }
+}*/

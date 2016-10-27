@@ -294,7 +294,7 @@ if (!function_exists('quicksand_customizer_css')) :
             }
             
             #secondary .widget .card-header.widget-title {
-                border-bottom: <?php echo get_theme_mod('qs_sidebar_border_width', '1'); ?>px solid <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme[15]); ?>;   
+                border-bottom: 1px solid <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme[15]); ?>;   
                 background: <?php echo get_theme_mod('qs_content_title_bg_color', $colorScheme[20]); ?>; 
                 color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme[4]); ?>;
             }
