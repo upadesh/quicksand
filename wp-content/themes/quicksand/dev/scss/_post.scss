@@ -72,7 +72,7 @@
         }
     }
     .nav-next {
-        @extend .text-lg-right; 
+        @extend .text-xs-right; 
         display: inline-block;
         width: 50%;
         .fa { 
@@ -110,7 +110,16 @@
 
     .entry-content {
         .read-more-link {
+            @extend .btn;
+            @extend .btn-outline-secondary; 
+
             float: right;
+
+            &:before {
+                font-family: FontAwesome; 
+                padding-right: 3px;
+                content: "\f06e";
+            }
         }
         .wp-caption {
             max-width: 100%;
@@ -141,13 +150,18 @@
         }
 
         .edit-link {
+
             float: right;
-            /* edit post-link  */ 
-            /* edit post-link  */ 
-            .post-edit-link:before {
-                font-family: FontAwesome; 
-                padding-right: .3rem;
-                content: "\f040";
+            /* edit post-link  */  
+            .post-edit-link {
+                @extend .btn;
+                @extend .btn-secondary; 
+
+                &:before {
+                    font-family: FontAwesome; 
+                    padding-right: .3rem;
+                    content: "\f040";
+                }
             }
         }
 

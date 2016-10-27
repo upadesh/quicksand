@@ -7,8 +7,11 @@
 /*TODO: farben*/
 .comments-area  { 
     .comment-respond {
-        margin-top: 2rem;
+        @extend .clearfix;
         
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
         .form-submit {
             .btn-secondary {
                 float: right;
@@ -30,10 +33,15 @@
         }
         .reply {
             text-align: right;
-            .comment-reply-link:before {
-                font-family: FontAwesome; 
-                padding-right: 3px;
-                content: "\f112";
+            .comment-reply-link{
+                @extend .btn;
+                @extend .btn-secondary; 
+
+                &:before {
+                    font-family: FontAwesome; 
+                    padding-right: 3px;
+                    content: "\f112";
+                }
             }
         }
     }
@@ -88,32 +96,4 @@
     content: "\f040";
     padding-left: 1rem;
     padding-right: .3rem;
-}
-
-/* adjust all pagination-links */
-/*.nav-links {
-    display: table;
-    width: 100%;
-    .nav-previous {
-        @extend .text-xs-left; 
-        display: table-cell;
-        vertical-align: top; 
-        width: 50%;
-        a:before {
-            font-family: FontAwesome; 
-            padding-right: 3px;
-            content: "\f0d9";
-        }
-    }
-    .nav-next {
-        @extend .text-xs-right; 
-        display: table-cell;
-        vertical-align: top; 
-        width: 50%;
-        a:after {
-            font-family: FontAwesome; 
-            padding-left: 3px;
-            content: "\f0da";
-        }
-    }
-}*/
+} 

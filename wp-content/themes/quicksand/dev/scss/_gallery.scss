@@ -59,3 +59,33 @@
 .gallery-columns-9 .gallery-caption {
     display: none;
 }
+
+
+.image-navigation {
+    .nav-links {
+        .nav-previous {
+                @extend .btn;
+                @extend .btn-outline-secondary; 
+                
+                float: left;
+                
+                &:before {
+                    font-family: FontAwesome; 
+                    padding-right: 3px;
+                    content: "\f177";
+                }
+        }
+        .nav-next {
+                @extend .btn;
+                @extend .btn-outline-secondary; 
+                
+                float: right;
+                
+                &:before {
+                    font-family: FontAwesome; 
+                    padding-right: 3px;
+                    content: "\f178";
+                }
+        } 
+    }
+}
