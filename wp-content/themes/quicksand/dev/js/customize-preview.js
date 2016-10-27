@@ -166,10 +166,10 @@
             .site-content-area .card .author-bio';
             borderLeft = ' .comment-list ol ';
 
-            $(border).css('border', qs_content_post_border_color); 
-            $(borderBottom).css('border-bottom', qs_content_post_border_color); 
-            $(borderTop).css('border-top', qs_content_post_border_color); 
-            $(borderLeft).css('border-left', qs_content_post_border_color); 
+            $(border).css('border',  '1px solid ' + qs_content_post_border_color); 
+            $(borderBottom).css('border-bottom',  '1px solid ' + qs_content_post_border_color); 
+            $(borderTop).css('border-top',  '1px solid ' + qs_content_post_border_color); 
+            $(borderLeft).css('border-left',  '1px solid ' + qs_content_post_border_color); 
         });
     }); 
     wp.customize('qs_content_title_bg_color', function (value) {
