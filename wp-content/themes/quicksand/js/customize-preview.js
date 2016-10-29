@@ -252,5 +252,43 @@
     }); 
 
 
+    // footer
+    wp.customize('qs_footer_background_color', function (value) {
+        value.bind(function (qs_footer_background_color) {
+            var background;
+            var color;
+            
+            background = '.site-footer-widgetbar,\n\
+            .site-footer-widgetbar .widget li,\n\
+            .site-footer .row';
+            
+            color = '.site-footer .nav-wrapper a:hover';
+
+            $(background).css('background', qs_footer_background_color); 
+            $(color).css('color', qs_footer_background_color); 
+        });
+    }); 
+    wp.customize('qs_footer_text_color', function (value) {
+        value.bind(function (qs_footer_text_color) { 
+            var color; 
+            
+            color = '.site-footer-widgetbar,\n\
+            .site-footer-widgetbar .widget li,\n\
+            .site-footer .row';
+ 
+            $(color).css('color', qs_footer_text_color); 
+        });
+    }); 
+    wp.customize('qs_footer_link_color', function (value) {
+        value.bind(function (qs_footer_link_color) { 
+            var color; 
+            
+            color = '.site-footer-widgetbar a, \n\
+            .site-footer .nav-wrapper a, \n\
+            .site-footer .site-social .fa-circle ';
+ 
+            $(color).css('color', qs_footer_link_color); 
+        });
+    }); 
 
 })(jQuery); 
