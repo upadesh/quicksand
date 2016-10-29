@@ -9,10 +9,15 @@
         ready: function () {
             if ('color_scheme' === this.id) {
                 this.setting.bind('change', function (value) {
-                    var colors = colorScheme[value].colors;  
-                    var color = colors[0]; 
+                    // other settings
+                    api('qs_nav_fullwidth').set(colorScheme[value]['settings']['qs_nav_fullwidth']);
+                    api('qs_header_fullwidth').set(colorScheme[value]['settings']['qs_header_fullwidth']);
+                    api('qs_biography_show').set(colorScheme[value]['settings']['qs_biography_show']);
+                    api('qs_sidebar_border_width').set(colorScheme[value]['settings']['qs_sidebar_border_width']); 
                     
-                    color = colors[0];
+                    // colors
+                    var colors = colorScheme[value].colors;  
+                    var color = colors[0];  
                     api('background_color').set(color);
                     api.control('background_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)

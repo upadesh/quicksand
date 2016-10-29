@@ -306,7 +306,7 @@ span.btn.btn-secondary, .card .entry-content span.btn-secondary.read-more-link, 
       #secondary .widget ul li:last-of-type, #secondary .widget ol li:last-of-type {
         border-bottom: none !important; }
       #secondary .widget ul li li, #secondary .widget ol li li {
-        border: none;
+        border: none !important;
         padding-bottom: 0; }
 
 /**

@@ -8,25 +8,27 @@
  */
 
 
-if (!get_theme_mod('qs_biography_show') ) {
+
+$colorScheme = quicksand_get_color_scheme(); 
+if (!get_theme_mod('qs_biography_show', $colorScheme['settings']['qs_biography_show']) ) {
     return;
 }
 
 ?>
 
 <div class="card-footer author-bio">  
-    <?php
-    /**
-     * Filter the Quicksand author bio avatar size.
-     *
-     * @since Quicksand 0.2.1
-     *
-     * @param int $size The avatar height and width size in pixels.
-     */
-    $author_bio_avatar_size = apply_filters('quicksand_author_bio_avatar_size', 42);
+<?php
+/**
+ * Filter the Quicksand author bio avatar size.
+ *
+ * @since Quicksand 0.2.1
+ *
+ * @param int $size The avatar height and width size in pixels.
+ */
+$author_bio_avatar_size = apply_filters('quicksand_author_bio_avatar_size', 42);
 
-    echo get_avatar(get_the_author_meta('user_email'), $author_bio_avatar_size);
-    ?>
+echo get_avatar(get_the_author_meta('user_email'), $author_bio_avatar_size);
+?>
     <!-- end avatar -->
 
     <!-- user bio -->
@@ -34,14 +36,14 @@ if (!get_theme_mod('qs_biography_show') ) {
 
         <h4 class="card-title author-name"><?php echo get_the_author(); ?></h4>
         <p class="card-text author-description"> 
-            <?php the_author_meta('description'); ?>
+<?php the_author_meta('description'); ?>
         </p>  
         <p>
-  
-  
-        <a class="card-link author-link" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" rel="author">
-            <?php printf(__('View all posts by %s', 'quicksand'), get_the_author()); ?>
-        </a>
+
+
+            <a class="card-link author-link" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" rel="author">
+<?php printf(__('View all posts by %s', 'quicksand'), get_the_author()); ?>
+            </a>
         </p>
     </div><!-- end .author-bio-content --> 
 </div>   
