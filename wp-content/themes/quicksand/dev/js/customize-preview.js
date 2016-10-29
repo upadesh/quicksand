@@ -140,8 +140,8 @@
             .site-content .card-header.entry-header h3>a, \n\
             .site-content .card-header.entry-header h4>a, \n\
             .site-content .card-header.entry-header h5>a, \n\
-            .site-content .card-header.entry-header h6>a  ';
-
+            .site-content .card-header.entry-header h6>a';
+console.info(color);
             $(color).css('color', qs_content_secondary_text_color);
         });
     }); 

@@ -22,7 +22,7 @@ get_header();
 
             <article id="post-<?php the_ID(); ?>" <?php post_class('card'); ?>>
 
-                <header class="card-block entry-header">
+                <header class="card-block card-header entry-header ">
                     <?php the_title('<h1 class="card-title entry-title">', '</h1>'); ?>
                 </header><!-- .entry-header -->
 
