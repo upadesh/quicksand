@@ -297,18 +297,22 @@ if (!function_exists('quicksand_customizer_css')) :
             /*sidebar*/ 
             #secondary .widget {
                 border-color: <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme[15]); ?>;   
-                border-width: <?php echo get_theme_mod('qs_sidebar_border_width', '1'); ?>px;
+                <?php 
+                // outer-widget-border-width never more than 1
+                $widgetBorderWidth = get_theme_mod('qs_sidebar_border_width', '1'); 
+                $widgetBorderWidth = $widgetBorderWidth > 1 ? 1 : $widgetBorderWidth;
+                ?>
+                border-width: <?php echo esc_html($widgetBorderWidth); ?>px;
                 border-style: solid;
             }
             
             #secondary .widget .card-header.widget-title {
-                border-bottom: 1px solid <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme[15]); ?>;   
+                border-bottom: none;   
                 background: <?php echo get_theme_mod('qs_content_title_bg_color', $colorScheme[20]); ?>; 
                 color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme[4]); ?>;
             }
                 
                 
-            /*#secondary .widget table,*/
             #secondary .widget ul li,
             #secondary .widget ol li {
                 color: <?php echo get_theme_mod('qs_sidebar_text_color', $colorScheme[13]); ?>; 
@@ -318,17 +322,10 @@ if (!function_exists('quicksand_customizer_css')) :
                 border-style: solid;
             }
             
+            #secondary .widget table a,
             #secondary .widget li a {
                 color: <?php echo get_theme_mod('qs_sidebar_link_color', $colorScheme[14]); ?>;    
-            } 
-
-            #secondary .widget li  li {
-                border-top: 1px solid <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme[15]); ?>; 
-                /*TODO: oder doch rein?*/
-                /*                border-bottom: none;
-                                border-right: none;
-                                border-left: none;*/
-            } 
+            }  
 
 
             /*footer*/ 

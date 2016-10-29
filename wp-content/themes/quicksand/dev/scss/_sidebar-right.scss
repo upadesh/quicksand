@@ -20,14 +20,15 @@
             li { 
                 @extend .list-group-item;
 
+                border-style: solid;
                 border-left: none !important;
                 border-right: none !important;
 
                 &:first-of-type {
-                    border-top: none;
+                    border-top: none !important;
                 }
                 &:last-of-type {
-                    border-bottom: none;
+                    border-bottom: none !important;
                 }
                 li {
                     border:none;

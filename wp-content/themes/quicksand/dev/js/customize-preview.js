@@ -79,6 +79,7 @@
         });
     });
     
+    
     // content
     wp.customize('qs_content_background_color', function (value) {
         value.bind(function (qs_content_background_color) {
@@ -187,6 +188,68 @@
     }); 
     
 
+    // sidebar
+    wp.customize('qs_sidebar_border_color', function (value) {
+        value.bind(function (qs_sidebar_border_color) {
+            
+            var borderColor; 
+            var borderStyle;  
+            
+            borderColor = borderStyle = '#secondary .widget,\n\
+            #secondary .widget ul li,\n\
+            #secondary .widget ol li';              
+
+            $(borderColor).css('border-color', qs_sidebar_border_color);   
+            
+            $(borderStyle).css('border-style',  'solid'); 
+        });
+    });
+    wp.customize('qs_sidebar_border_width', function (value) {
+        value.bind(function (qs_sidebar_border_width) {
+            
+            // widget border-widthcan't be more than 1
+            var borderWidthOuter = '#secondary .widget';   
+            var borderWidthInner;  
+            var borderBottom; 
+            
+            borderWidthOuter =  '#secondary .widget';
+            borderWidthInner = '#secondary .widget ul li,\n\
+            #secondary .widget ol li';   
+            // no border below the widget-title
+            borderBottom = '#secondary .widget .card-header.widget-title';  
+
+            $(borderWidthOuter).css('border-width', qs_sidebar_border_width > 1 ? 1 : qs_sidebar_border_width);    
+            $(borderWidthInner).css('border-width', qs_sidebar_border_width); 
+            $(borderBottom).css('border-bottom',  'none' );     
+        });
+    }); 
+    wp.customize('qs_sidebar_text_color', function (value) {
+        value.bind(function (qs_sidebar_text_color) {
+            var color;
+            color = '#secondary .widget ul li, \n\
+            #secondary .widget ol li ';
+
+            $(color).css('color', qs_sidebar_text_color);
+        });
+    }); 
+    wp.customize('qs_sidebar_background_color', function (value) {
+        value.bind(function (qs_sidebar_background_color) {
+            var background;
+            background = '#secondary .widget ul li, \n\
+            #secondary .widget ol li ';
+
+            $(background).css('background', qs_sidebar_background_color); 
+        });
+    }); 
+    wp.customize('qs_sidebar_link_color', function (value) {
+        value.bind(function (qs_sidebar_link_color) {
+            var color;
+            color = '#secondary .widget li a, \n\
+            #secondary .widget table a';
+
+            $(color).css('color', qs_sidebar_link_color);
+        });
+    }); 
 
 
 

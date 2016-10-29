@@ -351,10 +351,14 @@ function quicksand_customize_register($wp_customize) {
         'transport' => 'postMessage',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
+    
+    
+    $bgColorContent = get_theme_mod('qs_content_background_color');
+    $bgContent = isset($bgColorContent) ? $bgColorContent : $colorSchemeDefault[1];
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_border_color', array(
         'label' => __('Widget Border Color', 'quicksand'),
         'section' => 'quicksand_sidebar',
-        'description' => __('For a nice effect choose the same color like Content-Background ...', 'quicksand'),
+        'description' => __('For a nice effect choose the same color like Content-Background ('.$bgContent.') ...', 'quicksand'),
         'settings' => 'qs_sidebar_border_color'
     )));
 

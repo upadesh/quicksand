@@ -304,12 +304,13 @@ span.btn.btn-secondary, .card .entry-content span.btn-secondary.read-more-link, 
   #secondary .widget ul, #secondary .widget ol {
     list-style-type: none; }
     #secondary .widget ul li, #secondary .widget ol li {
+      border-style: solid;
       border-left: none !important;
       border-right: none !important; }
       #secondary .widget ul li:first-of-type, #secondary .widget ol li:first-of-type {
-        border-top: none; }
+        border-top: none !important; }
       #secondary .widget ul li:last-of-type, #secondary .widget ol li:last-of-type {
-        border-bottom: none; }
+        border-bottom: none !important; }
       #secondary .widget ul li li, #secondary .widget ol li li {
         border: none;
         padding-bottom: 0; }
