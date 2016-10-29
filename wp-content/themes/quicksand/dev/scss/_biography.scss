@@ -2,7 +2,7 @@
 
 .author-bio {
     .avatar {
-        float: left; 
+        float: left-xs-left; 
     }
     .author-bio-content {
         margin-left: 74px;
@@ -10,7 +10,7 @@
             @extend .btn;
             @extend .btn-secondary; 
             
-            float: right;
+            @extend .float-xs-right;
                 
                 &:before {
                     font-family: FontAwesome; 

@@ -12,8 +12,9 @@
         margin-bottom: 2rem;
 
         .form-submit {
-            .btn-secondary {
-                float: right;
+            text-align: center;
+            .btn-secondary { 
+                @extend .float-sm-right;
             }
         }
     }

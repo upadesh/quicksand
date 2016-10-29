@@ -346,16 +346,13 @@ cite {
   margin: 0 auto 1.75em; }
 
 .alignright {
-  /*@extend .pull-sm-right;*/
   margin: 0.375em 0 1.75em 1.75em; }
 
 .alignleft {
-  /*@extend .pull-sm-left;*/
   margin: 0.375em 1.75em 1.75em 0; }
 
-/*classes needed by WP*/
 .wp-caption-text {
-  color: #9ab7ac; }
+  color: #000; }
 
 /*
  * Main file for post-layout
@@ -486,16 +483,14 @@ cite {
 
 /*biography*/
 .author-bio .avatar {
-  float: left; }
+  float: left-xs-left; }
 
 .author-bio .author-bio-content {
   margin-left: 74px; }
-  .author-bio .author-bio-content .author-link {
-    float: right; }
-    .author-bio .author-bio-content .author-link:before {
-      font-family: FontAwesome;
-      padding-right: 3px;
-      content: "\f02d"; }
+  .author-bio .author-bio-content .author-link:before {
+    font-family: FontAwesome;
+    padding-right: 3px;
+    content: "\f02d"; }
 
 /* 
  * comments
@@ -506,8 +501,8 @@ cite {
   margin-top: 2rem;
   margin-bottom: 32px;
   margin-bottom: 2rem; }
-  .comments-area .comment-respond .form-submit .btn-secondary, .comments-area .comment-respond .form-submit .card .entry-footer .edit-link .post-edit-link, .card .entry-footer .edit-link .comments-area .comment-respond .form-submit .post-edit-link, .comments-area .comment-respond .form-submit .author-bio .author-bio-content .author-link, .author-bio .author-bio-content .comments-area .comment-respond .form-submit .author-link, .comments-area .comment-respond .form-submit .comment-list .reply .comment-reply-link, .comments-area .comment-list .reply .comment-respond .form-submit .comment-reply-link {
-    float: right; }
+  .comments-area .comment-respond .form-submit {
+    text-align: center; }
 
 .comments-area .comment-list {
   padding-left: 0; }
@@ -567,16 +562,16 @@ cite {
 
 
     .post-thumbnail img { 
-        @extend .m-b-1;
+        @extend .mb-1;
     } 
 
     article {
-        @extend .m-b-3;
+        @extend .mb-3;
     } 
 
     .site-sidebar {  
         section.widget {
-            @extend .m-b-2;
+            @extend .mb-2;
             @extend .text-md-left; 
             h2 {
                 @extend .text-lg-left; 
@@ -587,7 +582,7 @@ cite {
 
 /*stick to the navbar when fullwidth 
 .site-header.container {
-    @extend .m-t-2; 
+    @extend .mt-2; 
     padding-left: 0;
     padding-right: 0;
 }
@@ -596,7 +591,7 @@ cite {
 
 .site-footer-widgetbar {  
     section.widget {
-        @extend .m-b-2;
+        @extend .mb-2;
         @extend .text-md-left; 
     }
 }*/
@@ -5262,7 +5257,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .float-xs-left {
   float: left !important; }
 
-.float-xs-right {
+.float-xs-right, .author-bio .author-bio-content .author-link {
   float: right !important; }
 
 .float-xs-none {
@@ -5271,7 +5266,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 @media (min-width: 576px) {
   .float-sm-left, .alignleft {
     float: left !important; }
-  .float-sm-right, .alignright {
+  .float-sm-right, .alignright, .comments-area .comment-respond .form-submit .btn-secondary, .comments-area .comment-respond .form-submit .card .entry-footer .edit-link .post-edit-link, .card .entry-footer .edit-link .comments-area .comment-respond .form-submit .post-edit-link, .comments-area .comment-respond .form-submit .author-bio .author-bio-content .author-link, .author-bio .author-bio-content .comments-area .comment-respond .form-submit .author-link, .comments-area .comment-respond .form-submit .comment-list .reply .comment-reply-link, .comments-area .comment-list .reply .comment-respond .form-submit .comment-reply-link {
     float: right !important; }
   .float-sm-none {
     float: none !important; } }

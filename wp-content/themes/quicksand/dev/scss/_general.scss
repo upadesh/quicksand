@@ -47,18 +47,16 @@ input[type='radio'] {
     @extend .mx-auto;
     margin: 0 auto 1.75em;
 }
-.alignright {
-    /*@extend .pull-sm-right;*/
+.alignright { 
     @extend .float-sm-right;
     margin: 0.375em 0 1.75em 1.75em;
 }
-.alignleft {
-    /*@extend .pull-sm-left;*/
+.alignleft { 
     @extend .float-sm-left;
     margin: 0.375em 1.75em 1.75em 0;
 } 
-
- /*classes needed by WP*/  
+ 
 .wp-caption-text {
-    color: $turquoise;
+    // TODO
+    color: #000;
 } 
