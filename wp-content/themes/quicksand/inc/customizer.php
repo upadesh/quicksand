@@ -575,7 +575,7 @@ function quicksand_get_color_schemes() {
 //                qs_content_text_color
                 '#686868',
 //                qs_content_secondary_text_color
-                '#e0d4c0',
+                '#ffffff',
 //                header_textcolor
                 '#ffffff',
 //                qs_nav_background_color
