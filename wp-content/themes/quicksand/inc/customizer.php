@@ -607,9 +607,9 @@ function quicksand_get_color_schemes() {
 //                qs_footer_background_color
                 '#303030',
 //                qs_footer_link_color
-                '#d3c7b6',
+                '#7e9688',
 //                qs_footer_text_color
-                '#a89c90',
+                '#dbdbdb',
 //                qs_sidebar_background_color
                 '#ffffff',
 //                qs_sidebar_text_color
@@ -621,7 +621,7 @@ function quicksand_get_color_schemes() {
 //                qs_nav_link_hover_background_color
                 '#ccbfaf',
 //                qs_footer_link_hover_color           
-                '#c9bfad',
+                '#dbdbdb',
 //                qs_content_post_bg_color 
                 '#ffffff',
 //                qs_content_post_border_color 
