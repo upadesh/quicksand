@@ -4,12 +4,12 @@
 
 /* always push down content after header */
 .site-header {
-    @extend .m-b-2; 
+    @extend .mb-2; 
 }
 
 /*always leave some space to the footer-widgetbar*/
 .site-main-container {
-    @extend .m-b-2; 
+    @extend .mb-2; 
 }
 
 

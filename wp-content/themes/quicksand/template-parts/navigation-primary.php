@@ -34,7 +34,7 @@
                     }
                 endif;
                 ?>
-                <div class="nav-wrapper pull-sm-left pull-md-right"> 
+                <div class="nav-wrapper float-sm-left float-md-right"> 
                     <?php wp_nav_menu($primary_nav_options); ?> 
                 </div>
             </div> 

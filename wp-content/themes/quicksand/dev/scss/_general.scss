@@ -44,15 +44,17 @@ input[type='radio'] {
  * @see http://wp.local/markup-image-alignment/
  */
 .aligncenter {
-    @extend .m-x-auto;
+    @extend .mx-auto;
     margin: 0 auto 1.75em;
 }
 .alignright {
-    @extend .pull-sm-right;
+    /*@extend .pull-sm-right;*/
+    @extend .float-sm-right;
     margin: 0.375em 0 1.75em 1.75em;
 }
 .alignleft {
-    @extend .pull-sm-left;
+    /*@extend .pull-sm-left;*/
+    @extend .float-sm-left;
     margin: 0.375em 1.75em 1.75em 0;
 } 
 
