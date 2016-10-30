@@ -11,9 +11,15 @@
         h1, p {
             display: inline-block;
             background: rgba(0,0,0,.2); 
-            padding: 1rem;
+            padding: .5rem 1rem;
         }
     }
+}
+
+.site-info-wrapper.jumbotron {  
+    padding: 3rem 2rem;
+    word-wrap: break-word;  
+    margin-bottom: 0;
 }
 
 .site-info {

@@ -2,6 +2,11 @@
  * non-bs-variables
  */  
 
+/*TODO: is that all reight to break all of them --> needed for mobile*/
+h1, h2 ,h3, h4, h5, h6, p {
+    word-break: break-all;
+}
+
 /* only for screen-readers */
 .screen-reader-text {
     @extend .sr-only;
@@ -21,7 +26,7 @@ cite {
 
 
 
- /* === bootstrap-style elements === */ 
+/* === bootstrap-style elements === */ 
 /* table */
 table {
     @extend .table;
@@ -55,7 +60,7 @@ input[type='radio'] {
     @extend .float-sm-left;
     margin: 0.375em 1.75em 1.75em 0;
 } 
- 
+
 .wp-caption-text {
     // TODO
     color: #000;

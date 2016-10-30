@@ -126,8 +126,14 @@ span.btn.btn-secondary, .card .entry-content span.btn-secondary.read-more-link, 
     .site-info.custom-header-image .site-info-wrapper h1, .site-info.custom-header-image .site-info-wrapper p {
       display: inline-block;
       background: rgba(0, 0, 0, 0.2);
-      padding: 16px;
-      padding: 1rem; }
+      padding: 8px 16px;
+      padding: .5rem 1rem; }
+
+.site-info-wrapper.jumbotron {
+  padding: 48px 32px;
+  padding: 3rem 2rem;
+  word-wrap: break-word;
+  margin-bottom: 0; }
 
 .site-info a:link,
 .site-info a:visited,
@@ -322,6 +328,10 @@ span.btn.btn-secondary, .card .entry-content span.btn-secondary.read-more-link, 
 /**
  * non-bs-variables
  */
+/*TODO: is that all reight to break all of them --> needed for mobile*/
+h1, h2, h3, h4, h5, h6, p {
+  word-break: break-all; }
+
 /* only for screen-readers */
 /* blockquote & blockquote-footer */
 blockquote {
