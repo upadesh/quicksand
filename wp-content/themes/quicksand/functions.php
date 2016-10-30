@@ -177,6 +177,7 @@ if (!function_exists('quicksand_customizer_css')) :
 
             .site-nav-container.container-fluid,
             .site-nav-container nav.navbar,
+            .site-nav-container nav.navbar .navbar-toggler,
             .site-nav-container .dropdown-menu {
                 background: <?php echo get_theme_mod('qs_nav_background_color', $colorScheme['colors'][6]); ?>;
             }
