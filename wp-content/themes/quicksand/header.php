@@ -22,42 +22,49 @@
     </head>
     <body <?php body_class(); ?>>
         <!-- site-main-container --> 
-        <div class="<?php echo esc_attr( get_theme_mod('qs_nav_fullwidth', 1) ? '' : 'container');  ?>  site-nav-container">
+        <div class="<?php echo esc_attr(get_theme_mod('qs_nav_fullwidth', 1) ? '' : 'container'); ?>  site-nav-container">
             <!-- site-navigation -->
             <?php get_template_part('template-parts/navigation', 'primary'); ?>  
         </div>
 
-        <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', 'quicksand'); ?></a>
 
-        <!-- site-header >-->
-        <header id="masthead" class="site-header <?php echo  esc_attr( get_theme_mod('qs_header_fullwidth', quicksand_get_color_scheme()['settings']['qs_header_fullwidth']) ? '' : 'container'); ?>"> 
+            <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', 'quicksand'); ?></a> 
 
-            <!-- site-info -->
-            <?php if (has_header_image()) { ?>
-                <div class="site-info custom-header-image" style="background: url(<?php header_image(); ?>); background-repeat: no-repeat; background-size: cover; height:<?php echo esc_attr(get_custom_header()->height); ?>px;">  
-                    <div  class="site-info-wrapper">
+            <!-- site-header >-->
+            <header id="masthead" class="site-header <?php echo esc_attr(get_theme_mod('qs_header_fullwidth', quicksand_get_color_scheme()['settings']['qs_header_fullwidth']) ? '' : 'container'); ?>"> 
+
+        <?php  
+            $showOnlyOnFront = get_theme_mod('qs_header_show_front', quicksand_get_color_scheme()['settings']['qs_header_show_front']);
+            if ( !$showOnlyOnFront || ( (is_home() || is_front_page() ) && $showOnlyOnFront )) :
+             ?>
                 
-                        <h1 class="display-3 site-title">
-                           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-                        </h1> 
-                        <br>
-                        <p class="lead site-description" ><?php esc_html( bloginfo('description', 'display') ); ?></p> 
-                    </div>
-                </div>
+                <!-- site-info -->
+                <?php if (has_header_image()) { ?>
+                    <div class="site-info custom-header-image" style="background: url(<?php header_image(); ?>); background-repeat: no-repeat; background-size: cover; height:<?php echo esc_attr(get_custom_header()->height); ?>px;">  
+                        <div  class="site-info-wrapper">
 
-            <?php } else { ?> 
-                <div class="site-info">  
-                    <div  class="site-info-wrapper jumbotron"> 
-                        <h1 class="display-3 site-title">
-                           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-                        </h1> 
-                        <hr class="m-y-2">
-                        <p class="lead site-description"><?php esc_html( bloginfo('description', 'display') ); ?></p> 
+                            <h1 class="display-3 site-title">
+                                <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+                            </h1> 
+                            <br>
+                            <p class="lead site-description" ><?php esc_html(bloginfo('description', 'display')); ?></p> 
+                        </div>
                     </div>
-                </div>
 
-            <?php } ?><!--End header image check-->
-        </header><!-- .site-header --> 
+                <?php } else { ?> 
+                    <div class="site-info">  
+                        <div  class="site-info-wrapper jumbotron"> 
+                            <h1 class="display-3 site-title">
+                                <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+                            </h1> 
+                            <hr class="m-y-2">
+                            <p class="lead site-description"><?php esc_html(bloginfo('description', 'display')); ?></p> 
+                        </div>
+                    </div>
+
+                <?php } ?><!--End header image check-->
+        <?php endif; ?> 
+            </header><!-- .site-header --> 
 
 
 

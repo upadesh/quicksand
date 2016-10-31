@@ -152,6 +152,22 @@ function quicksand_customize_register($wp_customize) {
         'panel' => 'quicksand_main_options',
     ));
 
+    // show only on front
+    $wp_customize->add_setting("qs_header_show_front", array(
+        'default' => $colorSchemeDefault['settings']['qs_header_show_front'],
+        'type' => 'theme_mod',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'quicksand_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('qs_header_show_front', array(
+        'label' => __("Show only on front-page", 'quicksand'),
+        'section' => 'quicksand_header',
+        'type' => 'checkbox',
+        'settings' => 'qs_header_show_front',
+        'priority' => 1,
+    ));
+
     // fullwidth
     $wp_customize->add_setting("qs_header_fullwidth", array(
         'default' => $colorSchemeDefault['settings']['qs_header_fullwidth'],
@@ -527,6 +543,7 @@ function quicksand_get_color_schemes() {
             'label' => __('Default', 'quicksand'),
             'settings' => array(
                 'qs_nav_fullwidth' =>1,
+                'qs_header_show_front' =>0,
                 'qs_header_fullwidth' =>1,
                 'qs_biography_show' => 1,
                 'qs_sidebar_border_width' =>1,
@@ -581,6 +598,7 @@ function quicksand_get_color_schemes() {
             'label' => __('Dune', 'quicksand'),
             'settings' => array(
                 'qs_nav_fullwidth' =>0,
+                'qs_header_show_front' =>1,
                 'qs_header_fullwidth' =>0,
                 'qs_biography_show' => 1,
                 'qs_sidebar_border_width' =>3,
