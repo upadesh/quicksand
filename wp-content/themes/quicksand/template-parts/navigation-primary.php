@@ -26,7 +26,6 @@
 
             <div class="collapse navbar-toggleable-sm" id="collapsing-navbar">
                 <div class="nav-content">
-                    <!--<a class="navbar-brand" href="#">Navbar</a>-->
                     <?php
                     if (function_exists('the_custom_logo')) :
                         if (has_custom_logo()) {
@@ -34,6 +33,11 @@
                             <div class="navbar-brand" href="/">
                                 <?php quicksand_the_custom_logo(); ?>
                             </div> 
+                            <?php
+                        } else {
+                            ?>
+                            <!--TODO: Text von customizer-->
+                            <a class="navbar-brand" href="#">Navbar</a>
                             <?php
                         }
                     endif;

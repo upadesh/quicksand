@@ -186,6 +186,7 @@ if (!function_exists('quicksand_customizer_css')) :
             .site-nav-container .menu-item .dropdown-item,    
             .site-nav-container nav.navbar .navbar-toggler,
             .navbar-light .navbar-nav .nav-link,
+            .navbar-light .navbar-nav .active .nav-link:hover,
             .navbar-light .navbar-nav .nav-link:hover,
             .navbar-light .navbar-nav .nav-link:focus,
             .navbar-light .navbar-nav .nav-link:active,  

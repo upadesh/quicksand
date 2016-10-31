@@ -113,6 +113,7 @@
             .site-nav-container .menu-item .dropdown-item, \n\
             .site-nav-container nav.navbar .navbar-toggler, \n\
             .navbar-light .navbar-nav .nav-link, \n\
+            .navbar-light .navbar-nav .active .nav-link:hover, \n\
             .navbar-light .navbar-nav .nav-link:hover, \n\
             .navbar-light .navbar-nav .nav-link:focus, \n\
             .navbar-light .navbar-nav .nav-link:active, \n\
