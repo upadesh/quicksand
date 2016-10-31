@@ -4,6 +4,7 @@
 
 $navbar-height: 60px;  
 
+
 .navbar-brand {
     max-width: 250px;
     .custom-logo {
@@ -24,17 +25,16 @@ $navbar-height: 60px;
                     margin: 16px 0 0;
                 } 
             }
-
-            .collapse.navbar-toggleable-sm { 
-
-                .nav-content {  
-
+ 
+            .collapse.navbar-toggleable-sm {  
+                .nav-content {   
                     display: flex;
                     align-items: center;
                     justify-content: center;
 
                     height: $navbar-height;
                     max-height: $navbar-height;
+
                     .nav-wrapper{  
                         flex: 1;
                         .navbar-nav {
@@ -50,6 +50,26 @@ $navbar-height: 60px;
                         }
                     }
                 }
+
+
+                .nav-searchform {  
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    height: $navbar-height;
+                    max-height: $navbar-height;
+                    
+                    form {
+                        flex: 1;
+                        .row {
+                            width: 100%;
+                            .input-group {
+                                width: 100%;
+                            }
+                        }
+                    }
+                } 
             }
         }
     }

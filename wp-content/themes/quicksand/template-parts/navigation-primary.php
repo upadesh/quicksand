@@ -15,7 +15,7 @@
 
     <div class="site-navigation"> 
         <nav class="navbar navbar-light bg-faded site-nav">
-            <button class="navbar-toggler hidden-md-up pull-md-left" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsing-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler hidden-md-up float-md-left" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsing-navbar" aria-expanded="false" aria-label="Toggle navigation">
                 &#9776;
             </button>
             <div class="nav-search-mobile-wrapper float-xs-right"> 
@@ -25,6 +25,25 @@
             </div>
 
             <div class="collapse navbar-toggleable-sm" id="collapsing-navbar">
+
+                <!--searchform in navbar-->
+                <div class="nav-searchform hidden-xs-up"> 
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="<?php echo _x('', 'label', 'quicksand'); ?>" value="<?php echo get_search_query(); ?>" name="s" >
+                        <span class="input-group-btn"> 
+                            <button class="btn btn-secondary nav-search-submit" type="submit">
+                                <i class="fa fa-search fa-lg"></i>
+                            </button>
+                            <button class="btn btn-secondary nav-search-cancel">
+                                <i class="fa fa-times fa-lg"></i>
+                            </button>
+                        </span> 
+                        </form> 
+                    </div>
+                </div>
+
+
+
                 <div class="nav-content">
                     <?php
                     if (function_exists('the_custom_logo')) :
