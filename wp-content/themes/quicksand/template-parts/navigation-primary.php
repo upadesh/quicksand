@@ -24,6 +24,25 @@
                 </a> 
             </div>
 
+ 
+
+            <!--searchform in navbar-mobile-->
+            <div class="nav-searchform-mobile hidden-md-up">  
+                <div class="card"> 
+                    <div class="card-block"> 
+                        <a href="#" class="nav-search-mobile-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+                        <form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>"> 
+                            <div class="form-group"> 
+                                <input type="text" class="form-control" placeholder="<?php echo _x('', 'label', 'quicksand'); ?>" value="<?php echo get_search_query(); ?>" name="s" >
+                            </div>
+                            <button type="submit" class="btn btn-secondary nav-search-mobile-submit"><?php _e('Search', 'quicksand'); ?></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
             <div class="collapse navbar-toggleable-sm" id="collapsing-navbar">
 
                 <!--searchform in navbar-->
@@ -35,9 +54,9 @@
                                 <button class="btn btn-secondary nav-search-submit" type="submit">
                                     <i class="fa fa-search fa-lg"></i>
                                 </button>
-                                <button class="btn btn-secondary nav-search-cancel">
+                                <a class="btn btn-secondary nav-search-cancel">
                                     <i class="fa fa-times fa-lg"></i>
-                                </button>
+                                </a>
                             </span> 
                         </div>
                     </form> 

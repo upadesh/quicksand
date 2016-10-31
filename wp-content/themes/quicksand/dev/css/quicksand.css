@@ -156,7 +156,11 @@ span.btn.btn-secondary, .card .entry-content span.btn-secondary.read-more-link, 
     z-index: initial;
     float: initial;
     border: initial;
-    border-radius: initial; } }
+    border-radius: initial; }
+  .nav-searchform-mobile {
+    margin-top: 1rem; }
+    .nav-searchform-mobile .nav-search-mobile-submit {
+      width: 100%; } }
 
 /**
  * header

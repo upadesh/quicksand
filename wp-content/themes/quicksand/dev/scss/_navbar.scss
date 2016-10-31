@@ -101,6 +101,14 @@ $navbar-height: 60px;
             border-radius: initial;
         }
     } 
+    
+    .nav-searchform-mobile { 
+        margin-top: 1rem;  
+        
+        .nav-search-mobile-submit {
+            width: 100%;
+        }
+    }
 }  
 
 

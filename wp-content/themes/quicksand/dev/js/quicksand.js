@@ -11,11 +11,11 @@ jQuery(document).ready(function ($) {
         var $navContent = $('.nav-content');
         var $searchForm = $('.nav-searchform');
 
-        $navContent.fadeOut('fast', function () { 
-            $searchForm.removeClass('hidden-xs-up'); 
+        $navContent.fadeOut('fast', function () {
+            $searchForm.removeClass('hidden-xs-up');
             $searchForm.hide().slideDown('fast');
-        }); 
-        
+        });
+
     });
 
     // searchform in navbar
@@ -29,9 +29,16 @@ jQuery(document).ready(function ($) {
             $navContent.hide().slideDown('fast');
         });
     });
-    
-    
+
+
+    // show & hide searchform in mobile mode
     $('.nav-search-mobile').on('click', function () {
-       console.info("ok"); 
+        var $searchFormMobile = $('.nav-searchform-mobile');
+        $searchFormMobile.show("fold", {horizFirst: true}, 1000);
+    });
+
+    $('.nav-search-mobile-close').on('click', function () {
+        var $searchFormMobile = $('.nav-searchform-mobile');
+        $searchFormMobile.hide("fold", {horizFirst: true}, 1000);
     });
 });
