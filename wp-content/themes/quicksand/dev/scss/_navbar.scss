@@ -2,33 +2,56 @@
  * primary navigation 
  */    
 
-/*normal navigation*/
+$navbar-height: 60px;  
+
+.navbar-brand {
+    max-width: 250px;
+    .custom-logo {
+        max-height: $navbar-height;
+        width: auto;
+        max-width: 250px;
+    } 
+}
+
 @media (min-width: 767px) {
-    $navbar-height: 60px; 
     .site-navigation  {
-        .navbar-nav li a {
-            line-height: $navbar-height;
-        }
-        .navbar-brand {
-            .custom-logo-link {
-                line-height: $navbar-height;
-            }  
-            .custom-logo {
-                max-height: $navbar-height;
-                width: auto;
-            } 
-        }  
-        .navbar-nav {
+        padding: 5px 0;
+        .navbar {
+            height: $navbar-height;
+            padding: 0 1rem;
             li { 
-                .dropdown-menu {
-                    /*align the dropdown*/
-                    margin: 7px 0 0;
-                    .dropdown-item {
-                        line-height: $navbar-height / 2;
-                    } 
+                .dropdown-menu { 
+                    margin: 16px 0 0;
+                } 
+            }
+
+            .collapse.navbar-toggleable-sm { 
+
+                .nav-content {  
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    height: $navbar-height;
+                    max-height: $navbar-height;
+                    .nav-wrapper{  
+                        flex: 1;
+                        .navbar-nav {
+                            float: right; 
+                        }
+                    }
+
+                    .nav-search-wrapper { 
+                        width: 50px;
+                        margin-left: 10px;
+                        .nav-search {
+                            width: 100%;
+                        }
+                    }
                 }
             }
-        } 
+        }
     }
 }
 
@@ -55,4 +78,7 @@
             border-radius: initial;
         }
     } 
-}
+}  
+
+
+

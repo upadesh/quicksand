@@ -95,10 +95,11 @@
             var background;
 
             background = '.site-nav-container.container-fluid, \n\
+            .site-navigation, \n\
             .site-nav-container nav.navbar, \n\
             .site-nav-container nav.navbar .navbar-toggler,\n\
             .site-nav-container .dropdown-menu';
-console.info(background);
+
             $(background).css('background', qs_nav_background_color);
             customizePseudoElements('qs_nav_background_color', qs_nav_background_color);
         });

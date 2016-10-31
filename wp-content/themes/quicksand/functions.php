@@ -174,14 +174,13 @@ if (!function_exists('quicksand_customizer_css')) :
 
         <style type="text/css">  
             /*navigation*/
-
-            .site-nav-container.container-fluid,
+            .site-navigation,
             .site-nav-container nav.navbar,
             .site-nav-container nav.navbar .navbar-toggler,
             .site-nav-container .dropdown-menu {
                 background: <?php echo get_theme_mod('qs_nav_background_color', $colorScheme['colors'][6]); ?>;
             }
-
+            
             .site-nav-container,
             .site-nav-container .menu-item .nav-link , 
             .site-nav-container .menu-item .dropdown-item,    
@@ -195,8 +194,7 @@ if (!function_exists('quicksand_customizer_css')) :
             .navbar-light .navbar-nav .open>.nav-link:hover,
             .navbar-light .navbar-nav .open>.nav-link:visited,
             .navbar-light .navbar-nav .open>.nav-link:focus,
-            .navbar-light .navbar-nav .open>.nav-link:active 
-            {
+            .navbar-light .navbar-nav .open>.nav-link:active {
                 color: <?php echo get_theme_mod('qs_nav_link_color', $colorScheme['colors'][7]); ?>;
             }  
 
@@ -207,8 +205,7 @@ if (!function_exists('quicksand_customizer_css')) :
 
             .site-nav-container .menu-item .dropdown-item:hover {
                 background: <?php echo get_theme_mod('qs_nav_link_hover_background_color', $colorScheme['colors'][16]); ?>;
-            }
-
+            } 
 
             /*site-header*/
             .site-info-wrapper a,
