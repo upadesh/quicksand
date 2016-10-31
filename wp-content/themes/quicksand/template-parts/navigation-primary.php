@@ -30,7 +30,7 @@
             <div class="nav-searchform-mobile hidden-md-up">  
                 <div class="card"> 
                     <div class="card-block"> 
-                        <a href="#" class="nav-search-mobile-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+                        <a href="#" class="nav-search-mobile-close float-xs-right"><i class="fa fa-times" aria-hidden="true"></i></a>
                         <form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>"> 
                             <div class="form-group"> 
                                 <input type="text" class="form-control" placeholder="<?php echo _x('', 'label', 'quicksand'); ?>" value="<?php echo get_search_query(); ?>" name="s" >

@@ -159,6 +159,10 @@ span.btn.btn-secondary, .card .entry-content span.btn-secondary.read-more-link, 
     border-radius: initial; }
   .nav-searchform-mobile {
     margin-top: 1rem; }
+    .nav-searchform-mobile .nav-search-mobile-close {
+      padding: 0;
+      margin-bottom: 1rem;
+      margin-top: -1rem; }
     .nav-searchform-mobile .nav-search-mobile-submit {
       width: 100%; } }
 

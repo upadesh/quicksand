@@ -25,7 +25,7 @@ $navbar-height: 60px;
                     margin: 16px 0 0;
                 } 
             }
- 
+
             .collapse.navbar-toggleable-sm {  
                 .nav-content {   
                     display: flex;
@@ -59,7 +59,7 @@ $navbar-height: 60px;
 
                     height: $navbar-height;
                     max-height: $navbar-height;
-                    
+
                     form {
                         flex: 1;
                         .row {
@@ -101,10 +101,16 @@ $navbar-height: 60px;
             border-radius: initial;
         }
     } 
-    
+
     .nav-searchform-mobile { 
         margin-top: 1rem;  
-        
+
+        .nav-search-mobile-close {
+            padding: 0;
+            margin-bottom: 1rem;
+            margin-top: -1rem;
+        }
+
         .nav-search-mobile-submit {
             width: 100%;
         }
