@@ -11,11 +11,11 @@ jQuery(document).ready(function ($) {
         var $navContent = $('.nav-content');
         var $searchForm = $('.nav-searchform');
 
-
         $navContent.fadeOut('fast', function () { 
             $searchForm.removeClass('hidden-xs-up'); 
             $searchForm.hide().slideDown('fast');
-        });
+        }); 
+        
     });
 
     // searchform in navbar

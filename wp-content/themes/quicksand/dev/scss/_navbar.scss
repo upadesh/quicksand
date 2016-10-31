@@ -76,11 +76,14 @@ $navbar-height: 60px;
 }
 
 /*mobile navigation*/
-@media (max-width: 767px) {
-    .navbar-brand {
-        display: none;
-    }
+@media (max-width: 767px) { 
     .navbar { 
+        .nav-searchform {
+            display: none !important;
+        }
+        .nav-content {
+            display: block !important;
+        }
         .navbar-toggler { 
             float: none !important;
         } 

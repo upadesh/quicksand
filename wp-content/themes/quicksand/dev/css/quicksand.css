@@ -141,8 +141,10 @@ span.btn.btn-secondary, .card .entry-content span.btn-secondary.read-more-link, 
 
 /*mobile navigation*/
 @media (max-width: 767px) {
-  .navbar-brand {
-    display: none; }
+  .navbar .nav-searchform {
+    display: none !important; }
+  .navbar .nav-content {
+    display: block !important; }
   .navbar .navbar-toggler {
     float: none !important; }
   .navbar .nav-item + .nav-item {

@@ -43,7 +43,7 @@
                 </div>
 
 
-
+                <!--standard navigation-->
                 <div class="nav-content">
                     <?php
                     if (function_exists('the_custom_logo')) :
