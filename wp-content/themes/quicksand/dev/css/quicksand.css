@@ -1882,7 +1882,7 @@ pre {
   .col-xl-2 {
     float: left;
     width: 16.6666666667%; }
-  .col-xl-3 {
+  .col-xl-3, .site-content #secondary {
     float: left;
     width: 25%; }
   .col-xl-4 {
@@ -1900,7 +1900,7 @@ pre {
   .col-xl-8 {
     float: left;
     width: 66.6666666667%; }
-  .col-xl-9 {
+  .col-xl-9, .site-content #primary {
     float: left;
     width: 75%; }
   .col-xl-10 {

@@ -6,9 +6,11 @@
 .site-content { 
     #primary {
         @extend .col-lg-8;
+        @extend .col-xl-9;
     }
     #secondary {
         @extend .col-lg-4;
+        @extend .col-xl-3;
     }
 } 
 

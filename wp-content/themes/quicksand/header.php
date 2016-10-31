@@ -69,6 +69,6 @@
 
 
         <!-- site-main-container --> 
-        <div class="container site-main-container"> 
+        <div class="<?php echo esc_attr(get_theme_mod('qs_content_fullwidth', quicksand_get_color_scheme()['settings']['qs_content_fullwidth']) ? 'container-fluid' : 'container'); ?> site-main-container"> 
             <!--  site-content --> 
-            <div id="content" class="site-content">  
+            <div id="content" class="site-content"> 

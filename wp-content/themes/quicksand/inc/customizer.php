@@ -54,6 +54,8 @@ function quicksand_customize_register($wp_customize) {
     /**
      *  Section: Color Schemes
      * 
+     * @hint    always add setting to color-scheme-control, also the non-coloured ones
+     * 
      * @see http://www.deluxeblogtips.com/2016/01/add-color-schemes-wordpress-theme.html 
      */
     // get default-values  
@@ -176,7 +178,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_checkbox',
     ));
 
-    $wp_customize->add_control('quicksand_header_fullwidth', array(
+    $wp_customize->add_control('qs_header_fullwidth', array(
         'label' => __("Header Fullwidth", 'quicksand'),
         'section' => 'quicksand_header',
         'type' => 'checkbox',
@@ -207,6 +209,24 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 30,
         'panel' => 'quicksand_main_options',
     )); 
+     
+
+    // fullwidth
+    $wp_customize->add_setting("qs_content_fullwidth", array(
+        'default' => $colorSchemeDefault['settings']['qs_content_fullwidth'],
+        'type' => 'theme_mod',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'quicksand_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('qs_content_fullwidth', array(
+        'label' => __("Content Fullwidth", 'quicksand'),
+        'section' => 'quicksand_content',
+        'type' => 'checkbox',
+        'settings' => 'qs_content_fullwidth',
+        'priority' => 1,
+    ));
+    
 
     // bg-color
     $wp_customize->add_setting('qs_content_background_color', array(
@@ -545,6 +565,7 @@ function quicksand_get_color_schemes() {
                 'qs_nav_fullwidth' =>1,
                 'qs_header_show_front' =>0,
                 'qs_header_fullwidth' =>1,
+                'qs_content_fullwidth' =>0,
                 'qs_biography_show' => 1,
                 'qs_sidebar_border_width' =>1,
             ),
@@ -598,8 +619,9 @@ function quicksand_get_color_schemes() {
             'label' => __('Dune', 'quicksand'),
             'settings' => array(
                 'qs_nav_fullwidth' =>0,
-                'qs_header_show_front' =>1,
+                'qs_header_show_front' =>0,
                 'qs_header_fullwidth' =>0,
+                'qs_content_fullwidth' =>0,
                 'qs_biography_show' => 1,
                 'qs_sidebar_border_width' =>3,
             ),
