@@ -20,11 +20,11 @@ get_header();
                 <h1 class="card-title page-title">
                     <?php _e('Oops! That page can&rsquo;t be found.', 'quicksand'); ?>
                 </h1>
+                <h6 class="card-subtitle text-muted"><?php _e('It looks like nothing was found at this location', 'quicksand'); ?></h6>
             </header><!-- .page-header -->
 
             <div class="card-block page-content">
-                <p class="card-text"><?php _e('It looks like nothing was found at this location. Maybe try a search?', 'quicksand'); ?></p>
-
+                <p class="card-text"><?php _e('Maybe try a search?', 'quicksand'); ?></p> 
                 <?php get_search_form(); ?>
             </div><!-- .page-content -->
         </section><!-- .error-404 -->

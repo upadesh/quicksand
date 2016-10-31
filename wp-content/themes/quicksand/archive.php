@@ -26,14 +26,16 @@ get_header();
 
         <?php if (have_posts()) : ?>
 
-            <!--Month: February 2016-->
-            <header class="page-header">
-                <?php
-                the_archive_title('<h1 class="page-title">', '</h1>');
-                the_archive_description('<div class="taxonomy-description">', '</div>');
-                ?>
-            </header><!-- .page-header -->
-
+            <!--Month: February 2016--> 
+            <div class="card"> 
+                <div class="card-block">
+                    <?php 
+                    the_archive_title('<h4 class="card-title">', '</h4>');
+                    the_archive_description('<h6 class="card-subtitle text-muted">', '</h6>'); 
+                    ?>
+                </div>
+            </div> 
+            
             <?php 
             while (have_posts()) : the_post();
 

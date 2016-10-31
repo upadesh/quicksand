@@ -16,10 +16,13 @@ get_header();
     <main id="primary" class="site-content-area">  
 
         <?php if (have_posts()) : ?>
-
-            <header class="page-header">
-                <h1 class="page-title"><?php printf(__('Search Results for: %s', 'quicksand'), '<span>' . esc_html(get_search_query()) . '</span>'); ?></h1>
-            </header><!-- .page-header -->
+        
+            <div class="card"> 
+                <div class="card-block">
+                    <h4 class="card-title"><?php _e('Search Results for:', 'quicksand'); ?></h4> 
+                    <h6 class="card-subtitle text-muted"><?php printf(__('%s', 'quicksand'), '<span>' . esc_html(get_search_query()) . '</span>'); ?></h6>
+                </div>
+            </div> 
 
             <?php
             // Start the Loop.
