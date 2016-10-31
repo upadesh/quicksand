@@ -429,7 +429,7 @@ if (!function_exists('quicksand_entry_excerpt')) :
     function quicksand_entry_excerpt($class = 'entry-summary') {
         $class = esc_attr($class);
 
-        if (has_excerpt() || is_search()) :
+        if (has_excerpt()) :
             ?>
             <div class="card-block <?php echo $class; ?>">
                 <span class="card-text"><?php the_excerpt(); ?></span>
