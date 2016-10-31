@@ -15,11 +15,7 @@
                     api('qs_biography_show').set(colorScheme[value]['settings']['qs_biography_show']);
                     api('qs_sidebar_border_width').set(colorScheme[value]['settings']['qs_sidebar_border_width']); 
                     api('qs_content_fullwidth').set(colorScheme[value]['settings']['qs_content_fullwidth']); 
-                    api('qs_header_show_front').set(colorScheme[value]['settings']['qs_header_show_front']); 
-console.info(colorScheme[value]);    
-console.info(colorScheme[value]['settings']);     
-console.info(colorScheme[value]['settings']['qs_content_fullwidth']);      
-console.info(colorScheme[value]['settings']['qs_header_show_front']);                    
+                    api('qs_header_show_front').set(colorScheme[value]['settings']['qs_header_show_front']);  
                     
                     // colors
                     var colors = colorScheme[value].colors;  

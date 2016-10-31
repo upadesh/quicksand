@@ -72,9 +72,8 @@ $primary_nav_options = array(
                         </div> 
                         <?php
                     } else {
-                        ?>
-                        <!--TODO: Text von customizer-->
-                        <a class="navbar-brand" href="#">Navbar</a>
+                        ?> 
+                        <a class="navbar-brand" href="#"><?php echo esc_html(get_theme_mod('qs_nav_logo_text', '')) ?></a>
                         <?php
                     }
                 endif;

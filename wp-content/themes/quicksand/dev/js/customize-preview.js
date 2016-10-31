@@ -398,5 +398,15 @@
             customizePseudoElements('qs_footer_link_color', qs_footer_link_hover_color);
         });
     });
+    wp.customize('qs_nav_logo_text', function (value) {
+        value.bind(function (qs_nav_logo_text) {
+            var text;
+
+            text = '.nav-content .navbar-brand';
+
+            $(text).text(qs_nav_logo_text);
+            customizePseudoElements('qs_footer_link_color', qs_nav_logo_text);
+        });
+    });
 
 })(jQuery); 

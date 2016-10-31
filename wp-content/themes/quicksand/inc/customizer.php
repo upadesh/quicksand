@@ -90,6 +90,25 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 10,
         'panel' => 'quicksand_main_options',
     ));
+    
+    
+    
+    // logo-text
+    $wp_customize->add_setting('qs_nav_logo_text', array(
+        'default' => '',
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'quicksand_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control( new WP_Customize_Control( 
+	$wp_customize, 
+	'qs_nav_logo_text', 
+	array(
+		'label'	=> __( 'Logo Text', 'quicksand' ),
+		'section' => 'quicksand_nav',
+		'settings' => 'qs_nav_logo_text',
+                'description' => __('Appears when no logo is selected', 'quicksand'), 
+	) 
+    ));
 
     // fullwidth
     $wp_customize->add_setting("qs_nav_fullwidth", array(
@@ -140,7 +159,6 @@ function quicksand_customize_register($wp_customize) {
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_nav_background_color', array(
         'label' => __('Navbar Background Color', 'quicksand'),
-//        'description' => __('Default used if no color is selected', 'quicksand'), 
         'section' => 'quicksand_nav',
         'settings' => 'qs_nav_background_color'
     )));
@@ -199,7 +217,6 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_header',
         'settings' => 'qs_header_background_color'
     )));
-
 
 
 
