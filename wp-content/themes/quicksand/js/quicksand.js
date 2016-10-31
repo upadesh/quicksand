@@ -29,4 +29,9 @@ jQuery(document).ready(function ($) {
             $navContent.hide().slideDown('fast');
         });
     });
+    
+    
+    $('.nav-search-mobile').on('click', function () {
+       console.info("ok"); 
+    });
 });
