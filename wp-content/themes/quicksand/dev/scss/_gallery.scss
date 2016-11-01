@@ -83,3 +83,10 @@
         } 
     }
 }
+
+/* the markup is changed, when lightgallery is used */
+.gallery-item {
+    .lightgallery-item {
+        cursor: pointer;
+    }
+}

@@ -1,18 +1,24 @@
 //custom JS for initializing & more
 
 jQuery(document).ready(function ($) {
+    
+    console.info(settings); 
+    // TODO: setup/init
+    
+    
     // Init fitVids
     fitvids('.video');
-
-
-    // TODO
-    $('.gallery').lightGallery({
-        selector: '.gallery-item a' ,
-    mode: 'lg-fade',
-    cssEasing : 'cubic-bezier(0.25, 0, 0.25, 1)',
-    animateThumb: true
-    });
     
+    // lightgallery
+    // only trigger lightgallery when it is turned on
+    if (parseInt(settings.qs_content_use_lightgallery)) { 
+        $('.gallery').lightGallery({
+            selector: '.gallery-item .lightgallery-item',
+//            mode: 'lg-fade',
+//            cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+            animateThumb: true
+        });
+    }
 
 
     /*** searchform in navbar ***/
@@ -28,7 +34,7 @@ jQuery(document).ready(function ($) {
         });
 
     });
- 
+
     // replace searchform with nav 
     $('.nav-search-cancel').on('click', function () {
 
@@ -51,4 +57,5 @@ jQuery(document).ready(function ($) {
         var $searchFormMobile = $('.nav-searchform-mobile');
         $searchFormMobile.hide("fold", {horizFirst: true}, 1000);
     });
+
 });

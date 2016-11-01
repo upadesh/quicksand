@@ -260,6 +260,21 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 10,
     ));
     
+    $wp_customize->add_setting("qs_content_use_lightgallery", array(
+        'default' => $colorSchemeDefault['settings']['qs_content_use_lightgallery'],
+        'type' => 'theme_mod',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'quicksand_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('qs_content_use_lightgallery', array(
+        'label' => __("Use LightGallery", 'quicksand'),
+        'section' => 'quicksand_content',
+        'type' => 'checkbox',
+        'settings' => 'qs_content_use_lightgallery',
+        'priority' => 10,
+    ));
+    
 
     // bg-color
     $wp_customize->add_setting('qs_content_background_color', array(
@@ -610,6 +625,7 @@ function quicksand_get_color_schemes() {
                 'qs_biography_show' => 1,
                 'qs_sidebar_border_width' =>1,
                 'qs_content_masonry' =>1,
+                'qs_content_use_lightgallery' => 1,
             ),
             'colors' => array(
 //                background_color
@@ -667,6 +683,7 @@ function quicksand_get_color_schemes() {
                 'qs_biography_show' => 1,
                 'qs_sidebar_border_width' =>3,
                 'qs_content_masonry' =>0,
+                'qs_content_use_lightgallery' => 0,
             ),
             'colors' => array(
 //                background_color

@@ -257,6 +257,10 @@ span.btn.btn-secondary, .card .entry-content span.btn-secondary.read-more-link, 
     padding-left: 3px;
     content: "\f178"; }
 
+/* the markup is changed, when lightgallery is used */
+.gallery-item .lightgallery-item {
+  cursor: pointer; }
+
 /**
  * footer
  */

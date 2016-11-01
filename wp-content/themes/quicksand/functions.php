@@ -559,7 +559,12 @@ if (!function_exists('quicksand_scripts')) :
 
         wp_register_script('fitvids', get_template_directory_uri() . '/js/fitvids.min.js', array('jquery'), '2.0', true);
         wp_register_script('quicksand', get_template_directory_uri() . '/js/quicksand.js', array('jquery-effects-core', 'jquery-effects-fold', 'lightgallery', 'lg-thumbnail', 'fitvids'), '1.0', true);
+
         wp_enqueue_script('quicksand');
+
+        $settings = quicksand_get_color_scheme()['settings'];
+        $settings['qs_content_use_lightgallery'] = get_theme_mod('qs_content_use_lightgallery', quicksand_get_color_scheme()['settings']['qs_content_use_lightgallery']);
+        wp_localize_script('quicksand', 'settings', $settings);
     }
 
 endif;
@@ -582,16 +587,23 @@ if (!function_exists('quicksand_modify_attachment_link')) :
         // This returns an array of (url, width, height)
         $image = wp_get_attachment_image_src($post_id, 'large');
 
-        if (empty($image)) {
+        if (empty($image) || !get_theme_mod('qs_content_use_lightgallery', quicksand_get_color_scheme()['settings']['qs_content_use_lightgallery'])) {
             return $content;
         }
+ 
+        // change the default-markup 
+        // - the url of the large image is needed when lightgallery is activated
+        // - also remove the href-attribute, because otherwise the customizer will get confused
+        $content = preg_replace('/<a\s.*?>/i', '<div class="lightgallery-item" data-src="'.$image[0].'">', $content);
+        $content = preg_replace('/<\/a>/', '</div>', $content); 
 
-        $new_content = preg_replace('/href=\'(.*?)\'/', 'href=\'' . $image[0] . '\'', $content);
-        return $new_content;
+        return $content; 
     }
 
     add_filter('wp_get_attachment_link', 'quicksand_modify_attachment_link', 10, 4);
 endif;
+
+
 
 /**
  * Adds custom classes to the array of body classes.
