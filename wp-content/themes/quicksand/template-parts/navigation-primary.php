@@ -72,8 +72,8 @@ $primary_nav_options = array(
                         </div> 
                         <?php
                     } else {
-                        ?> 
-                        <a class="navbar-brand" href="#"><?php echo esc_html(get_theme_mod('qs_nav_logo_text', '')) ?></a>
+                        ?>  
+                        <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>" ><?php echo esc_html(get_theme_mod('qs_nav_logo_text', '')) ?></a>
                         <?php
                     }
                 endif;
