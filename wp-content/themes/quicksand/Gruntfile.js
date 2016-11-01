@@ -67,9 +67,28 @@ module.exports = function (grunt) {
                         cwd: 'dev/css',
                         src: ['*'],
                         dest: 'css/'
+                    }, { 
+                        // IMG - Flexslider 
+                        expand: true, 
+                        src: ['*'], 
+                        cwd: 'node_modules/flexslider/images/',
+                        dest: 'js/flexslider/images/', 
+                        filter: 'isFile' 
+                    }, {
+                        // CSS - Flexslider
+                        src: 'node_modules/flexslider/flexslider.css',
+                        dest: 'js/flexslider/flexslider.css',
+                    }, {
+                        // JS - Flexslider 
+                        expand: true,
+                        cwd: 'node_modules/flexslider',
+                        src: ['jquery.flexslider*.js'],
+                        filter: 'isFile', 
+                        dest: 'js/flexslider'
                     }, {
                         // JS - all custom js
                         expand: true,
+                        filter: 'isFile', 
                         cwd: 'dev/js',
                         src: ['*'],
                         dest: 'js/'
