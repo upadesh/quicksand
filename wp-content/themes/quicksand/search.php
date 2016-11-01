@@ -19,7 +19,7 @@ get_header();
         
             <div class="card"> 
                 <div class="card-block">
-                    <h4 class="card-title"><?php _e('Search Results for:', 'quicksand'); ?></h4> 
+                    <h4 class="card-title"><?php _e('Search Results for', 'quicksand'); ?></h4> 
                     <h6 class="card-subtitle text-muted"><?php printf(__('%s', 'quicksand'), '<span>' . esc_html(get_search_query()) . '</span>'); ?></h6>
                 </div>
             </div> 

@@ -4,7 +4,18 @@ jQuery(document).ready(function ($) {
     // Init fitVids
     fitvids('.video');
 
-    // searchform in navbar
+
+    // TODO
+    $('.gallery').lightGallery({
+        selector: '.gallery-item a' ,
+    mode: 'lg-fade',
+    cssEasing : 'cubic-bezier(0.25, 0, 0.25, 1)',
+    animateThumb: true
+    });
+    
+
+
+    /*** searchform in navbar ***/
     // replace nav with searchform
     $('.nav-search').on('click', function () {
 
@@ -17,8 +28,7 @@ jQuery(document).ready(function ($) {
         });
 
     });
-
-    // searchform in navbar
+ 
     // replace searchform with nav 
     $('.nav-search-cancel').on('click', function () {
 

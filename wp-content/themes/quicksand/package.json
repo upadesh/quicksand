@@ -30,6 +30,8 @@
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "latest",
     "grunt-timer": "latest",
+    "lg-thumbnail": "^1.0.1",
+    "lightgallery": "^1.3.5",
     "pixrem": "^3.0.2",
     "tether": "^1.1.1"
   }

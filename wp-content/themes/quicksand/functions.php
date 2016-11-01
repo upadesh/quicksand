@@ -180,7 +180,7 @@ if (!function_exists('quicksand_customizer_css')) :
             .site-nav-container .dropdown-menu {
                 background: <?php echo get_theme_mod('qs_nav_background_color', $colorScheme['colors'][6]); ?>;
             }
-            
+
             .site-nav-container,
             .site-nav-container .menu-item .nav-link , 
             .site-nav-container .menu-item .dropdown-item,    
@@ -298,7 +298,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 border-color: <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme['colors'][15]); ?>;   
                 <?php
                 // outer-widget-border-width never more than 1 
-                $widgetBorderWidth = get_theme_mod('qs_sidebar_border_width', $colorScheme['settings']['qs_sidebar_border_width']); 
+                $widgetBorderWidth = get_theme_mod('qs_sidebar_border_width', $colorScheme['settings']['qs_sidebar_border_width']);
                 $widgetBorderWidth = $widgetBorderWidth > 1 ? 1 : $widgetBorderWidth;
                 ?>
                 border-width: <?php echo esc_html($widgetBorderWidth); ?>px;
@@ -524,6 +524,8 @@ if (!function_exists('quicksand_styles')) :
         // Theme stylesheet
         wp_enqueue_style('quicksand-style-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), $quicksand_version);
         wp_enqueue_style('quicksand-style-theme', $styleSheetToLoad, array(), $quicksand_version);
+
+        wp_enqueue_style('quicksand-lightgallery', get_template_directory_uri() . '/node_modules/lightgallery/dist/css/lightgallery.min.css', array());
     }
 
 endif;
@@ -551,13 +553,45 @@ if (!function_exists('quicksand_scripts')) :
             wp_enqueue_script('comment-reply');
         }
 
-        wp_register_script('fitvids', get_template_directory_uri() . '/js/fitvids.min.js', array('jquery'), '2.0', true); 
-        wp_register_script('quicksand', get_template_directory_uri() . '/js/quicksand.js', array('fitvids', 'jquery-effects-core', 'jquery-effects-fold'), '1.0', true);
+
+        wp_register_script('lg-thumbnail', get_template_directory_uri() . '/node_modules/lg-thumbnail/dist/lg-thumbnail.min.js', array('lightgallery'), '1.0', true);
+        wp_register_script('lightgallery', get_template_directory_uri() . '/node_modules/lightgallery/dist/js/lightgallery.min.js', array('jquery'), '1.0', true);
+
+        wp_register_script('fitvids', get_template_directory_uri() . '/js/fitvids.min.js', array('jquery'), '2.0', true);
+        wp_register_script('quicksand', get_template_directory_uri() . '/js/quicksand.js', array('jquery-effects-core', 'jquery-effects-fold', 'lightgallery', 'lg-thumbnail', 'fitvids'), '1.0', true);
         wp_enqueue_script('quicksand');
     }
 
 endif;
 add_action('wp_enqueue_scripts', 'quicksand_scripts');
+
+
+
+if (!function_exists('quicksand_modify_attachment_link')) :
+
+    /**
+     * replaces the image-link inside galleries
+     * 
+     * @param type $content
+     * @param type $post_id
+     * @param type $size
+     * @param type $permalink
+     * @return type
+     */
+    function quicksand_modify_attachment_link($content, $post_id, $size, $permalink) {
+        // This returns an array of (url, width, height)
+        $image = wp_get_attachment_image_src($post_id, 'quicksand');
+
+        if (empty($image)) {
+            return $content;
+        }
+
+        $new_content = preg_replace('/href=\'(.*?)\'/', 'href=\'' . $image[0] . '\'', $content);
+        return $new_content;
+    }
+
+    add_filter('wp_get_attachment_link', 'quicksand_modify_attachment_link', 10, 4);
+endif;
 
 /**
  * Adds custom classes to the array of body classes.
