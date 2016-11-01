@@ -24,7 +24,12 @@ get_header();
                 </div>
             </div> 
 
-            <?php
+            <!--show posts in masonry-style-->
+            <?php 
+            if (get_theme_mod('qs_content_masonry', quicksand_get_color_scheme()['settings']['qs_content_masonry'])) {
+                ?><div class="card-columns"> <?php
+            }
+            
             // Start the Loop.
             while (have_posts()) : the_post();
 
@@ -37,7 +42,12 @@ get_header();
                 get_template_part('template-parts/content', get_post_format());
 
             // End the loop.
-            endwhile;
+            endwhile; 
+            
+            // show posts in masonry-style
+            if (get_theme_mod('qs_content_masonry', quicksand_get_color_scheme()['settings']['qs_content_masonry'])) {
+                ?></div> <?php
+            }
 
             // pagination
             quicksand_bs_style_paginator();

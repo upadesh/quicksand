@@ -55,7 +55,7 @@
 .post-thumbnail img { 
     width:100%; 
 }
- 
+
 
 
 /*post pagination: previous & next post*/
@@ -180,5 +180,15 @@
     } 
 } 
 
-
-
+/* masonry-list-view*/
+.card-columns { 
+    @media (max-width: 991px) {
+        column-count: 1 !important;
+    } 
+    @media (min-width: 991px) {
+        column-count: 2 !important;
+    }
+    @media (min-width: 1200px) {
+        column-count: 3 !important;
+    }
+}

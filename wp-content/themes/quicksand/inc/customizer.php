@@ -241,7 +241,23 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_content',
         'type' => 'checkbox',
         'settings' => 'qs_content_fullwidth',
-        'priority' => 1,
+        'priority' => 10,
+    ));
+
+    // masonry
+    $wp_customize->add_setting("qs_content_masonry", array(
+        'default' => $colorSchemeDefault['settings']['qs_content_masonry'],
+        'type' => 'theme_mod',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'quicksand_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('qs_content_masonry', array(
+        'label' => __("List-Views Masonry-like", 'quicksand'),
+        'section' => 'quicksand_content',
+        'type' => 'checkbox',
+        'settings' => 'qs_content_masonry',
+        'priority' => 10,
     ));
     
 
@@ -254,6 +270,7 @@ function quicksand_customize_register($wp_customize) {
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_background_color', array(
         'label' => __('Content Background Color', 'quicksand'),
         'section' => 'quicksand_content',
+        'priority' => 20,
         'settings' => 'qs_content_background_color'
     )));
 
@@ -266,6 +283,7 @@ function quicksand_customize_register($wp_customize) {
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_link_color', array(
         'label' => __('Content Link Color', 'quicksand'),
         'section' => 'quicksand_content',
+        'priority' => 20,
         'settings' => 'qs_content_link_color'
     )));
 
@@ -279,6 +297,7 @@ function quicksand_customize_register($wp_customize) {
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_text_color', array(
         'label' => __('Content Text Color', 'quicksand'),
         'section' => 'quicksand_content',
+        'priority' => 20,
         'settings' => 'qs_content_text_color'
     )));
 
@@ -291,6 +310,7 @@ function quicksand_customize_register($wp_customize) {
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_secondary_text_color', array(
         'label' => __('Secondary Text Color', 'quicksand'),
         'section' => 'quicksand_content',
+        'priority' => 20,
         'settings' => 'qs_content_secondary_text_color'
     )));
 
@@ -303,6 +323,7 @@ function quicksand_customize_register($wp_customize) {
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_title_bg_color', array(
         'label' => __('Title Background Color', 'quicksand'),
         'section' => 'quicksand_content',
+        'priority' => 20,
         'settings' => 'qs_content_title_bg_color'
     )));
 
@@ -315,6 +336,7 @@ function quicksand_customize_register($wp_customize) {
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_post_bg_color', array(
         'label' => __('Post Background Color', 'quicksand'),
         'section' => 'quicksand_content',
+        'priority' => 20,
         'settings' => 'qs_content_post_bg_color'
     )));
 
@@ -327,6 +349,7 @@ function quicksand_customize_register($wp_customize) {
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_post_border_color', array(
         'label' => __('Post Border Color', 'quicksand'),
         'section' => 'quicksand_content',
+        'priority' => 20,
         'settings' => 'qs_content_post_border_color'
     )));
 
@@ -585,6 +608,7 @@ function quicksand_get_color_schemes() {
                 'qs_content_fullwidth' =>0,
                 'qs_biography_show' => 1,
                 'qs_sidebar_border_width' =>1,
+                'qs_content_masonry' =>1,
             ),
             'colors' => array(
 //                background_color
@@ -641,6 +665,7 @@ function quicksand_get_color_schemes() {
                 'qs_content_fullwidth' =>0,
                 'qs_biography_show' => 1,
                 'qs_sidebar_border_width' =>3,
+                'qs_content_masonry' =>0,
             ),
             'colors' => array(
 //                background_color
