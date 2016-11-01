@@ -580,7 +580,7 @@ if (!function_exists('quicksand_modify_attachment_link')) :
      */
     function quicksand_modify_attachment_link($content, $post_id, $size, $permalink) {
         // This returns an array of (url, width, height)
-        $image = wp_get_attachment_image_src($post_id, 'quicksand');
+        $image = wp_get_attachment_image_src($post_id, 'large');
 
         if (empty($image)) {
             return $content;
