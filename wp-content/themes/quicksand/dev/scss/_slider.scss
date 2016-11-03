@@ -3,6 +3,7 @@
     border: none;
 
     .slides {
+        // TODO: slider
         max-height: 30rem;
         overflow: hidden; 
         li { 
@@ -21,8 +22,8 @@
 
                 h2 { 
                     // TODO: colors: function.php
-                    background: rgb(218, 68, 83);
-                    background: rgba(218, 68, 83, 0.7); 
+                    background: rgb(154, 183, 172);
+                    background: rgba(154, 183, 172, 0.5);
                     display: inline-block;
                     padding: 1rem 5rem; 
                     color: #fff;
@@ -60,8 +61,9 @@
         display: none;
     }
 }
-/*
+ 
 @media screen and (max-width: 860px) {
     .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
     .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
-}*/
+} 
+ 

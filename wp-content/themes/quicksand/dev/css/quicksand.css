@@ -697,8 +697,8 @@ cite {
         margin-top: 3rem;
         margin-left: 0; }
         .flexslider .slides li .flex-caption h2 {
-          background: #da4453;
-          background: rgba(218, 68, 83, 0.7);
+          background: #9ab7ac;
+          background: rgba(154, 183, 172, 0.5);
           display: inline-block;
           padding: 16px 80px;
           padding: 1rem 5rem;
@@ -718,11 +718,14 @@ cite {
   .flex-caption {
     display: none; } }
 
-/*
 @media screen and (max-width: 860px) {
-    .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
-    .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
-}*/
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 10px; }
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 10px; } }
+
 /* import bootstrap at the very last end, so we can use it's variables */
 /*!
  * Bootstrap v4.0.0-alpha.5 (https://getbootstrap.com)
