@@ -232,6 +232,24 @@ function quicksand_customize_register($wp_customize) {
         'title' => __('Header', 'quicksand'),
         'priority' => 20,
         'panel' => 'quicksand_main_options',
+//        'description' => ''
+    ));
+
+
+    // enabled
+    $wp_customize->add_setting("qs_header_enabled", array(
+        'default' => $colorSchemeDefault['settings']['qs_header_enabled'],
+        'type' => 'theme_mod',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'quicksand_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('qs_header_enabled', array(
+        'label' => __("Enable Header", 'quicksand'),
+        'section' => 'quicksand_header',
+        'type' => 'checkbox',
+        'settings' => 'qs_header_enabled', 
+        'priority' => 10,
     ));
 
     // show only on front
@@ -247,7 +265,7 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_header',
         'type' => 'checkbox',
         'settings' => 'qs_header_show_front',
-        'priority' => 1,
+        'priority' => 20,
     ));
 
     // fullwidth
@@ -263,7 +281,7 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_header',
         'type' => 'checkbox',
         'settings' => 'qs_header_fullwidth',
-        'priority' => 1,
+        'priority' => 30,
     ));
 
 
@@ -276,6 +294,7 @@ function quicksand_customize_register($wp_customize) {
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_header_background_color', array(
         'label' => __('Header Background Color', 'quicksand'),
         'section' => 'quicksand_header',
+        'priority' => 50,
         'settings' => 'qs_header_background_color'
     )));
 
@@ -613,6 +632,7 @@ function quicksand_customize_register($wp_customize) {
 
     // move header-text-color to Theme-Options-Section 'Header'
     $wp_customize->get_control('header_textcolor')->section = 'quicksand_header';
+    $wp_customize->get_control('header_textcolor')->priority = 40;
 
     // move page-bg-color to Theme-Options-Section 'Content'
     $wp_customize->get_control('background_color')->section = 'quicksand_content';
@@ -689,6 +709,7 @@ function quicksand_get_color_schemes() {
                 'qs_content_use_lightgallery' => 1,
                 'qs_slider_enabled' => 1,
                 'qs_slider_fullwidth' => 0,
+                'qs_header_enabled' => 1,
             ),
             'colors' => array(
 //                background_color
@@ -749,6 +770,7 @@ function quicksand_get_color_schemes() {
                 'qs_content_use_lightgallery' => 0,
                 'qs_slider_enabled' => 0,
                 'qs_slider_fullwidth' => 0,
+                'qs_header_enabled' => 1,
             ),
             'colors' => array(
 //                background_color

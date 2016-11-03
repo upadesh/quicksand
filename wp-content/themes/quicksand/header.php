@@ -32,41 +32,46 @@
 
         <!-- site-header >-->
         <header id="masthead" class="site-header <?php echo esc_attr(get_theme_mod('qs_header_fullwidth', quicksand_get_color_scheme()['settings']['qs_header_fullwidth']) ? '' : 'container'); ?>"> 
- 
+
             <!-- header(-image)-->
             <?php
-            $showOnlyOnFront = get_theme_mod('qs_header_show_front', quicksand_get_color_scheme()['settings']['qs_header_show_front']);
-            if (!$showOnlyOnFront || ( (is_home() || is_front_page() ) && $showOnlyOnFront )) :
-                ?>
-
-                <!-- site-info -->
-                <?php if (has_header_image()) { ?>
-                    <div class="site-info custom-header-image" style="background: url(<?php header_image(); ?>); background-repeat: no-repeat; background-size: cover; height:<?php echo esc_attr(get_custom_header()->height); ?>px;">  
-                        <div  class="site-info-wrapper">
-
-                            <h1 class="display-3 site-title">
-                                <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-                            </h1> 
-                            <br>
-                            <p class="lead site-description" ><?php esc_html(bloginfo('description', 'display')); ?></p> 
-                        </div>
-                    </div>
-
-                <?php } else { ?> 
-                    <div class="site-info">  
-                        <div  class="site-info-wrapper jumbotron"> 
-                            <h1 class="display-3 site-title">
-                                <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-                            </h1> 
-                            <hr class="m-y-2">
-                            <p class="lead site-description"><?php esc_html(bloginfo('description', 'display')); ?></p> 
-                        </div>
-                    </div>
-
-                <?php } ?><!--End header image check-->
-            <?php endif; ?> 
-
+            // show header in general
+            if (get_theme_mod('qs_header_enabled', quicksand_get_color_scheme()['settings']['qs_header_enabled'])):
  
+                // show header only on front-page
+                $showOnlyOnFront = get_theme_mod('qs_header_show_front', quicksand_get_color_scheme()['settings']['qs_header_show_front']);
+                if (!$showOnlyOnFront || ( (is_home() || is_front_page() ) && $showOnlyOnFront )) :
+                    ?>
+
+                    <!-- site-info -->
+                    <?php if (has_header_image()) { ?>
+                        <div class="site-info custom-header-image" style="background: url(<?php header_image(); ?>); background-repeat: no-repeat; background-size: cover; height:<?php echo esc_attr(get_custom_header()->height); ?>px;">  
+                            <div  class="site-info-wrapper">
+
+                                <h1 class="display-3 site-title">
+                                    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+                                </h1> 
+                                <br>
+                                <p class="lead site-description" ><?php esc_html(bloginfo('description', 'display')); ?></p> 
+                            </div>
+                        </div>
+
+                    <?php } else { ?> 
+                        <div class="site-info">  
+                            <div  class="site-info-wrapper jumbotron"> 
+                                <h1 class="display-3 site-title">
+                                    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+                                </h1> 
+                                <hr class="m-y-2">
+                                <p class="lead site-description"><?php esc_html(bloginfo('description', 'display')); ?></p> 
+                            </div>
+                        </div>
+
+                    <?php } ?><!--End header image check-->
+                <?php endif;  //show header only on front-page ?> 
+            <?php endif; //show header in general ?> 
+
+
             <!-- slider-->
             <?php
             $isSliderEnabled = get_theme_mod('qs_slider_enabled', quicksand_get_color_scheme()['settings']['qs_slider_enabled']);
@@ -77,9 +82,7 @@
                     get_template_part('template-parts/slider');
                     ?>
                 </div> 
-            <?php endif; ?> 
-
-
+            <?php endif; ?>  
         </header><!-- .site-header --> 
 
 
