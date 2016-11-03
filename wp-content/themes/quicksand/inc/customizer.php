@@ -739,7 +739,7 @@ function quicksand_get_color_schemes() {
                 'qs_content_masonry' => 1,
                 'qs_content_use_lightgallery' => 1,
                 'qs_slider_enabled' => 1,
-                'qs_slider_fullwidth' => 0,
+                'qs_slider_fullwidth' => 1,
                 'qs_header_enabled' => 1,
                 'qs_slider_height' => 30,
             ),
@@ -803,7 +803,7 @@ function quicksand_get_color_schemes() {
                 'qs_slider_enabled' => 0,
                 'qs_slider_fullwidth' => 0,
                 'qs_header_enabled' => 1,
-                'qs_slider_height' => 40,
+                'qs_slider_height' => 30,
             ),
             'colors' => array(
 //                background_color

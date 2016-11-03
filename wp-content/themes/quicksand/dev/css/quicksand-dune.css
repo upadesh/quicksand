@@ -708,7 +708,10 @@ cite {
           padding: 16px 80px;
           padding: 1rem 5rem; }
           .flexslider .slides li .flex-caption .excerpt a {
-            color: #d9d9d9; }
+            color: #d9d9d9;
+            text-decoration: none; }
+            .flexslider .slides li .flex-caption .excerpt a:active, .flexslider .slides li .flex-caption .excerpt a:visited, .flexslider .slides li .flex-caption .excerpt a:hover {
+              text-decoration: none; }
   .flexslider .flex-direction-nav a {
     height: 80px;
     top: 45%; }
