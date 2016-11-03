@@ -7,7 +7,7 @@ if (empty($slider_cat)) {
     return;
 }
 
-$slider_count = get_theme_mod('qs_slides_count', '4');
+$slider_count = get_theme_mod('qs_slider_count', '4');
 
 // only find posts with a featured image
 $the_query = new WP_Query(array(

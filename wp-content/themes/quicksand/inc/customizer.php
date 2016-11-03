@@ -140,14 +140,14 @@ function quicksand_customize_register($wp_customize) {
     )));
 
     // count slides
-    $wp_customize->add_setting('qs_slides_count', array(
+    $wp_customize->add_setting('qs_slider_count', array(
         'default' => '6',
     ));
 
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'slider_count', array(
         'label' => __('Number of posts', 'theme_name'),
         'section' => 'quicksand_slider_section',
-        'settings' => 'qs_slides_count',
+        'settings' => 'qs_slider_count',
         'priority' => 40,
         'type' => 'text',
     )));
