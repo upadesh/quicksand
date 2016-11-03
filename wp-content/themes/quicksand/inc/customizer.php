@@ -637,6 +637,10 @@ function quicksand_customize_register($wp_customize) {
     // move page-bg-color to Theme-Options-Section 'Content'
     $wp_customize->get_control('background_color')->section = 'quicksand_content';
     $wp_customize->get_control('background_color')->priority = 20;
+    
+    // move header-image to header-section
+    $wp_customize->get_control('header_image')->section = 'quicksand_header';
+    $wp_customize->get_control('header_image')->priority = 100;
 }
 
 add_action('customize_register', 'quicksand_customize_register');
