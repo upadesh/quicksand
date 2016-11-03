@@ -1,17 +1,17 @@
 //custom JS for initializing & more
 
 jQuery(document).ready(function ($) {
-    
-    console.info(settings); 
+
+//    console.info(settings);
     // TODO: setup/init
-    
-    
+
+
     // Init fitVids
     fitvids('.video');
-    
+
     // lightgallery
     // only trigger lightgallery when it is turned on
-    if (parseInt(settings.qs_content_use_lightgallery)) { 
+    if (parseInt(settings.qs_content_use_lightgallery)) {
         $('.gallery').lightGallery({
             selector: '.gallery-item .lightgallery-item',
 //            mode: 'lg-fade',
@@ -19,6 +19,17 @@ jQuery(document).ready(function ($) {
             animateThumb: true
         });
     }
+
+    // flexslider
+    $('.flexslider').flexslider({
+        animation: "fade",
+        direction: "horizontal",
+        slideshowSpeed: 7000,
+        animationSpeed: 600
+    });
+
+
+
 
 
     /*** searchform in navbar ***/
@@ -32,7 +43,6 @@ jQuery(document).ready(function ($) {
             $searchForm.removeClass('hidden-xs-up');
             $searchForm.hide().slideDown('fast');
         });
-
     });
 
     // replace searchform with nav 

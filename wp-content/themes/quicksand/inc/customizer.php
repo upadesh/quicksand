@@ -48,20 +48,49 @@ function quicksand_customize_register($wp_customize) {
         'title' => __('Theme Options', 'quicksand'),
         'description' => __('Panel to update theme options', 'quicksand'), // Include html tags such as <p>.
     ));
+ 
+
+    /**
+     *  Section: Slider  
+     */  
+    $wp_customize->add_section('slider_section', array(
+        'title' => __('Slider settings', 'quicksand'),
+        'priority' => 10,
+        'capability' => 'edit_theme_options',
+        'panel' => 'quicksand_main_options',
+    ));
+
+    $wp_customize->add_setting('slider_setting', array(
+        'default' => '',
+            )
+    );
+
+    $wp_customize->add_control(new WP_Customize_category_Control(
+            $wp_customize, 'slider_category', array(
+        'label' => 'Category',
+        'settings' => 'slider_setting',
+        'section' => 'slider_section'
+    )));
+
+    $wp_customize->add_setting('count_setting', array(
+        'default' => '6',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'slider_count', array(
+        'label' => __('Number of posts', 'theme_name'),
+        'section' => 'slider_section',
+        'settings' => 'count_setting',
+        'type' => 'text',
+    )));
 
 
 
     /**
      *  Section: Color Schemes
      * 
-     * @hint    always add setting to color-scheme-control, also the non-coloured ones
-     * 
-     * @see http://www.deluxeblogtips.com/2016/01/add-color-schemes-wordpress-theme.html 
+     * @hint always add setting to color-scheme-control.js, also the non-coloured ones 
      */
-    // get default-values  
-    
-    $color_scheme_option = get_theme_mod('color_scheme', 'default');  
-//    $colorSchemeDefault['colors'] = quicksand_get_color_schemes()['default']['colors'];
+    $color_scheme_option = get_theme_mod('color_scheme', 'default');
     $colorSchemeDefault = quicksand_get_color_schemes()[$color_scheme_option];
 
     $wp_customize->add_section('quicksand_color_schemes', array(
@@ -84,30 +113,28 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 1,
     ));
 
+    
+    
     /* Section: Navigation */
     $wp_customize->add_section('quicksand_nav', array(
         'title' => __('Navigation', 'quicksand'),
         'priority' => 10,
         'panel' => 'quicksand_main_options',
-    ));
-    
-    
-    
+    )); 
+
     // logo-text
     $wp_customize->add_setting('qs_nav_logo_text', array(
         'default' => '',
         'transport' => 'postMessage',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
-    $wp_customize->add_control( new WP_Customize_Control( 
-	$wp_customize, 
-	'qs_nav_logo_text', 
-	array(
-		'label'	=> __( 'Logo Text', 'quicksand' ),
-		'section' => 'quicksand_nav',
-		'settings' => 'qs_nav_logo_text',
-                'description' => __('Appears when no logo is selected', 'quicksand'), 
-	) 
+    $wp_customize->add_control(new WP_Customize_Control(
+            $wp_customize, 'qs_nav_logo_text', array(
+        'label' => __('Logo Text', 'quicksand'),
+        'section' => 'quicksand_nav',
+        'settings' => 'qs_nav_logo_text',
+        'description' => __('Appears when no logo is selected', 'quicksand'),
+            )
     ));
 
     // fullwidth
@@ -225,8 +252,8 @@ function quicksand_customize_register($wp_customize) {
         'title' => __('Content', 'quicksand'),
         'priority' => 30,
         'panel' => 'quicksand_main_options',
-    )); 
-     
+    ));
+
 
     // fullwidth
     $wp_customize->add_setting("qs_content_fullwidth", array(
@@ -259,7 +286,7 @@ function quicksand_customize_register($wp_customize) {
         'settings' => 'qs_content_masonry',
         'priority' => 10,
     ));
-    
+
     $wp_customize->add_setting("qs_content_use_lightgallery", array(
         'default' => $colorSchemeDefault['settings']['qs_content_use_lightgallery'],
         'type' => 'theme_mod',
@@ -274,7 +301,7 @@ function quicksand_customize_register($wp_customize) {
         'settings' => 'qs_content_use_lightgallery',
         'priority' => 10,
     ));
-    
+
 
     // bg-color
     $wp_customize->add_setting('qs_content_background_color', array(
@@ -446,14 +473,14 @@ function quicksand_customize_register($wp_customize) {
         'transport' => 'postMessage',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
-    
-    
+
+
     $bgColorContent = get_theme_mod('qs_content_background_color');
     $bgContent = isset($bgColorContent) ? $bgColorContent : $colorSchemeDefault['colors'][1];
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_border_color', array(
         'label' => __('Widget Border Color', 'quicksand'),
         'section' => 'quicksand_sidebar',
-        'description' => __('For a nice effect choose the same color like Content-Background ('.$bgContent.') ...', 'quicksand'),
+        'description' => __('For a nice effect choose the same color like Content-Background (' . $bgContent . ') ...', 'quicksand'),
         'settings' => 'qs_sidebar_border_color'
     )));
 
@@ -552,7 +579,7 @@ function quicksand_customize_register($wp_customize) {
 
     // move header-text-color to Theme-Options-Section 'Header'
     $wp_customize->get_control('header_textcolor')->section = 'quicksand_header';
-    
+
     // move page-bg-color to Theme-Options-Section 'Content'
     $wp_customize->get_control('background_color')->section = 'quicksand_content';
     $wp_customize->get_control('background_color')->priority = 20;
@@ -618,13 +645,13 @@ function quicksand_get_color_schemes() {
         'default' => array(
             'label' => __('Default', 'quicksand'),
             'settings' => array(
-                'qs_nav_fullwidth' =>1,
-                'qs_header_show_front' =>0,
-                'qs_header_fullwidth' =>1,
-                'qs_content_fullwidth' =>0,
+                'qs_nav_fullwidth' => 1,
+                'qs_header_show_front' => 0,
+                'qs_header_fullwidth' => 1,
+                'qs_content_fullwidth' => 0,
                 'qs_biography_show' => 1,
-                'qs_sidebar_border_width' =>1,
-                'qs_content_masonry' =>1,
+                'qs_sidebar_border_width' => 1,
+                'qs_content_masonry' => 1,
                 'qs_content_use_lightgallery' => 1,
             ),
             'colors' => array(
@@ -676,13 +703,13 @@ function quicksand_get_color_schemes() {
         'dune' => array(
             'label' => __('Dune', 'quicksand'),
             'settings' => array(
-                'qs_nav_fullwidth' =>0,
-                'qs_header_show_front' =>0,
-                'qs_header_fullwidth' =>0,
-                'qs_content_fullwidth' =>0,
+                'qs_nav_fullwidth' => 0,
+                'qs_header_show_front' => 0,
+                'qs_header_fullwidth' => 0,
+                'qs_content_fullwidth' => 0,
                 'qs_biography_show' => 1,
-                'qs_sidebar_border_width' =>3,
-                'qs_content_masonry' =>0,
+                'qs_sidebar_border_width' => 3,
+                'qs_content_masonry' => 0,
                 'qs_content_use_lightgallery' => 0,
             ),
             'colors' => array(
@@ -949,3 +976,32 @@ function quicksand_social_media_icons() {
         echo "</ul>";
     }
 }
+
+// Custom control for slider category 
+if (class_exists('WP_Customize_Control')) {
+
+    class WP_Customize_Category_Control extends WP_Customize_Control {
+
+        public function render_content() {
+            $dropdown = wp_dropdown_categories(
+                    array(
+                        'name' => '_customize-dropdown-category-' . $this->id,
+                        'echo' => 0,
+                        'show_option_none' => __('&mdash; Select &mdash;'),
+                        'option_none_value' => '0',
+                        'selected' => $this->value(),
+                    )
+            );
+
+            // $this->get_link(); == "data-customize-setting-link="slider_setting""
+            $dropdown = str_replace('<select', '<select ' . $this->get_link(), $dropdown);
+
+            // $this->label == Category
+            printf(
+                    '<label class="customize-control-select"><span class="customize-control-title">%s</span> %s</label>', $this->label, $dropdown
+            );
+        }
+
+    }
+
+} 

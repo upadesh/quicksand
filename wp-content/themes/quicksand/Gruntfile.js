@@ -75,6 +75,13 @@ module.exports = function (grunt) {
                         dest: 'js/flexslider/images/', 
                         filter: 'isFile' 
                     }, {
+                        // FONTS - Flexslider 
+                        expand: true, 
+                        src: ['*'], 
+                        cwd: 'node_modules/flexslider/fonts/',
+                        dest: 'js/flexslider/fonts/', 
+                        filter: 'isFile' 
+                    }, {
                         // CSS - Flexslider
                         src: 'node_modules/flexslider/flexslider.css',
                         dest: 'js/flexslider/flexslider.css',
