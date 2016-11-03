@@ -22,6 +22,9 @@
                     api('qs_slider_fullwidth').set(colorScheme[value]['settings']['qs_slider_fullwidth']); 
                     api('qs_header_enabled').set(colorScheme[value]['settings']['qs_header_enabled']); 
                     api('qs_slider_height').set(colorScheme[value]['settings']['qs_slider_height']); 
+                    api('qs_header_hide_when_slider_enabled').set(colorScheme[value]['settings']['qs_header_hide_when_slider_enabled']); 
+                    
+                    
                     
                     
                     // colors

@@ -36,7 +36,11 @@
             <!-- header(-image)-->
             <?php
             // show header in general
-            if (get_theme_mod('qs_header_enabled', quicksand_get_color_scheme()['settings']['qs_header_enabled'])):
+            
+            $isHeaderEnabled = get_theme_mod('qs_header_enabled', quicksand_get_color_scheme()['settings']['qs_header_enabled']);
+            $hideWhenSliderEnabled= get_theme_mod('qs_header_hide_when_slider_enabled', quicksand_get_color_scheme()['settings']['qs_header_hide_when_slider_enabled']);
+        
+            if ($isHeaderEnabled && !$hideWhenSliderEnabled):
 
                 // show header only on front-page
                 $showOnlyOnFront = get_theme_mod('qs_header_show_front', quicksand_get_color_scheme()['settings']['qs_header_show_front']);

@@ -28,7 +28,6 @@ if ($the_query->have_posts()) {
         <ul class="slides">
 
             <?php
-            // The Loop
             while ($the_query->have_posts()) : $the_query->the_post();
                 echo '<li>';
                 if ((function_exists('has_post_thumbnail')) && ( has_post_thumbnail() )) :
