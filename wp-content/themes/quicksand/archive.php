@@ -27,14 +27,16 @@ get_header();
         <?php if (have_posts()) : ?>
 
             <!--Month: February 2016--> 
-            <div class="card"> 
+<!--            <div class="card"> 
                 <div class="card-block">
                     <?php 
                     the_archive_title('<h4 class="card-title">', '</h4>');
                     the_archive_description('<h6 class="card-subtitle text-muted">', '</h6>'); 
                     ?>
                 </div>
-            </div> 
+            </div> -->
+
+            the_archive_title('<h4 class="card-title">', '</h4>');
 
             <!--show posts in masonry-style-->
             <?php 

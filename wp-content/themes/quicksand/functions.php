@@ -207,8 +207,8 @@ if (!function_exists('quicksand_customizer_css')) :
             .site-nav-container .menu-item .dropdown-item:hover {
                 background: <?php echo get_theme_mod('qs_nav_link_hover_background_color', $colorScheme['colors'][16]); ?>;
             } 
-            
-            
+
+
             /*slider*/
             .quicksand-slider-wrapper {
                 margin-top: <?php echo get_theme_mod('qs_slider_margin_top', $colorScheme['settings']['qs_slider_margin_top']); ?>rem; 
@@ -217,14 +217,13 @@ if (!function_exists('quicksand_customizer_css')) :
                 max-height: <?php echo get_theme_mod('qs_slider_height', $colorScheme['settings']['qs_slider_height']); ?>rem; 
             }
             .quicksand-slider-wrapper .flexslider .slides h2 {
-                <?php 
+                <?php
                 $rgb = quicksand_hex2rgb(get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]));
-                $rgba = array($rgb['red'],$rgb['green'],$rgb['blue'], "0.5");
-                
+                $rgba = array($rgb['red'], $rgb['green'], $rgb['blue'], "0.5");
                 ?>
                 background: rgba(<?php echo esc_html(join(",", $rgba)) ?>); 
             }
-            
+
 
             /*site-header*/
             .site-info-wrapper a,
@@ -235,7 +234,7 @@ if (!function_exists('quicksand_customizer_css')) :
             .site-info-wrapper.jumbotron  {
                 background: <?php echo get_theme_mod('qs_header_background_color', $colorScheme['colors'][8]); ?>;
             }
-            
+
             .site-info-wrapper h1, 
             .site-info-wrapper p { 
                 background: <?php echo esc_html(get_theme_mod('qs_header_background_color', $colorScheme['colors'][8])) ?>; 
@@ -547,14 +546,13 @@ if (!function_exists('quicksand_styles')) :
         // Theme stylesheet
         wp_enqueue_style('quicksand-style-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), $quicksand_version);
         wp_enqueue_style('quicksand-style-theme', $styleSheetToLoad, array(), $quicksand_version);
-        
+
         // lightgallery
         wp_enqueue_style('quicksand-lightgallery', get_template_directory_uri() . '/node_modules/lightgallery/dist/css/lightgallery.min.css', array());
-   
+
         // flexslider
         wp_enqueue_style('quicksand-flexslider', get_template_directory_uri() . '/js/flexslider/flexslider.css', array());
-   
-        }
+    }
 
 endif;
 add_action('wp_enqueue_scripts', 'quicksand_styles');
@@ -582,7 +580,7 @@ if (!function_exists('quicksand_scripts')) :
         }
 
         wp_register_script('qs-flexslider', get_template_directory_uri() . '/js/flexslider/jquery.flexslider-min.js', array('jquery'), '1.0', true);
-       
+
         wp_register_script('lg-thumbnail', get_template_directory_uri() . '/node_modules/lg-thumbnail/dist/lg-thumbnail.min.js', array('lightgallery'), '1.0', true);
         wp_register_script('lightgallery', get_template_directory_uri() . '/node_modules/lightgallery/dist/js/lightgallery.min.js', array('jquery'), '1.0', true);
 
@@ -619,20 +617,18 @@ if (!function_exists('quicksand_modify_attachment_link')) :
         if (empty($image) || !get_theme_mod('qs_content_use_lightgallery', quicksand_get_color_scheme()['settings']['qs_content_use_lightgallery'])) {
             return $content;
         }
- 
+
         // change the default-markup 
         // - the url of the large image is needed when lightgallery is activated
         // - also remove the href-attribute, because otherwise the customizer will get confused
-        $content = preg_replace('/<a\s.*?>/i', '<div class="lightgallery-item" data-src="'.$image[0].'">', $content);
-        $content = preg_replace('/<\/a>/', '</div>', $content); 
+        $content = preg_replace('/<a\s.*?>/i', '<div class="lightgallery-item" data-src="' . $image[0] . '">', $content);
+        $content = preg_replace('/<\/a>/', '</div>', $content);
 
-        return $content; 
+        return $content;
     }
 
     add_filter('wp_get_attachment_link', 'quicksand_modify_attachment_link', 10, 4);
 endif;
-
-
 
 /**
  * Adds custom classes to the array of body classes.
@@ -869,16 +865,43 @@ endif;
 add_filter('the_content_more_link', 'quicksand_modify_read_more_link');
 
 /**
- * Add custom image sizes attribute to enhance responsive image functionality
- * for content images
+ * Filter the default archive title.
  *
- * @since Quicksand 0.2.1
- *
- * @param string $sizes A source size value for use in a 'sizes' attribute.
- * @param array  $size  Image size. Accepts an array of width and height
- *                      values in pixels (in that order).
- * @return string A source size value for use in a content image 'sizes' attribute.
+ * @param string $title Archive title
+ * @return string $title
  */
+function theme_slug_archive_title($title) {
+
+    echo '<div class="card"><div class="card-block">';
+
+    if (is_category()) {
+        $title = sprintf("<h4 class='card-title'>". __("Category",  'quicksand'). ":<h4><h6 class='card-subtitle text-muted'>%s</h6>" , single_cat_title('', false)) ;
+    } elseif (is_tag()) { 
+        $title = sprintf("<h4 class='card-title'>". __("Tag",  'quicksand'). ":<h4><h6 class='card-subtitle text-muted'>%s</h6>" , single_tag_title('', false)) ;
+    } elseif (is_author()) {
+        $title = sprintf("<h4 class='card-title'>". __("Author",  'quicksand'). ":<h4><h6 class='card-subtitle text-muted'>%s</h6>" , '<span class="vcard">' . get_the_author() . '</span>'); 
+    }
+
+    echo $title . '</div></div>'; 
+
+}
+add_filter( 'get_the_archive_title', 'theme_slug_archive_title' );
+
+
+
+
+
+/**
+* Add custom image sizes attribute to enhance responsive image functionality
+* for content images
+*
+* @since Quicksand 0.2.1
+*
+* @param string $sizes A source size value for use in a 'sizes' attribute.
+* @param array  $size  Image size. Accepts an array of width and height
+*                      values in pixels (in that order).
+* @return string A source size value for use in a content image 'sizes' attribute.
+*/
 //TODO
 //function quicksand_content_image_sizes_attr($sizes, $size) {
 //    $width = $size[0];
@@ -898,16 +921,16 @@ add_filter('the_content_more_link', 'quicksand_modify_read_more_link');
 //add_filter('wp_calculate_image_sizes', 'quicksand_content_image_sizes_attr', 10, 2);
 
 /**
- * Add custom image sizes attribute to enhance responsive image functionality
- * for post thumbnails
- *
- * @since Quicksand 0.2.1
- *
- * @param array $attr Attributes for the image markup.
- * @param int   $attachment Image attachment ID.
- * @param array $size Registered image size or flat array of height and width dimensions.
- * @return string A source size value for use in a post thumbnail 'sizes' attribute.
- */
+* Add custom image sizes attribute to enhance responsive image functionality
+* for post thumbnails
+*
+* @since Quicksand 0.2.1
+*
+* @param array $attr Attributes for the image markup.
+* @param int   $attachment Image attachment ID.
+* @param array $size Registered image size or flat array of height and width dimensions.
+* @return string A source size value for use in a post thumbnail 'sizes' attribute.
+*/
 //function quicksand_post_thumbnail_sizes_attr($attr, $attachment, $size) {
 //    if ('post-thumbnail' === $size) {
 //        is_active_sidebar('sidebar-1') && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
@@ -922,16 +945,16 @@ add_filter('the_content_more_link', 'quicksand_modify_read_more_link');
 
 
 /**
- * Custom template tags for this theme.
- */
+* Custom template tags for this theme.
+*/
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Custom walker for the navbar 
- */
+* Custom walker for the navbar 
+*/
 require get_template_directory() . '/inc/QuicksandNavwalker.php';
 
 /**
- * Customizer additions.
- */
+* Customizer additions.
+*/
 require get_template_directory() . '/inc/customizer.php';
