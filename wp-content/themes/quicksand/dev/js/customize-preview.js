@@ -155,12 +155,17 @@
     // header
     wp.customize('qs_header_background_color', function (value) {
         value.bind(function (qs_header_background_color) {
-            var background;
+            var backgroundJumbotron;
+            var backgroundImageHeaderText;
 
-            background = '.site-info-wrapper.jumbotron ';
+            backgroundJumbotron = '.site-info-wrapper.jumbotron ';
+            backgroundImageHeaderText = '.site-info-wrapper h1, \n\
+            .site-info-wrapper p';
 
-            $(background).css('background', qs_header_background_color);
-            customizePseudoElements('qs_header_background_color', qs_header_background_color);
+            $(backgroundJumbotron).css('background', qs_header_background_color);
+            $(backgroundImageHeaderText).css('background', qs_header_background_color);
+            
+            customizePseudoElements('qs_header_background_color', qs_header_background_color); 
         });
     });
     wp.customize('header_textcolor', function (value) {

@@ -235,6 +235,11 @@ if (!function_exists('quicksand_customizer_css')) :
             .site-info-wrapper.jumbotron  {
                 background: <?php echo get_theme_mod('qs_header_background_color', $colorScheme['colors'][8]); ?>;
             }
+            
+            .site-info-wrapper h1, 
+            .site-info-wrapper p { 
+                background: <?php echo esc_html(get_theme_mod('qs_header_background_color', $colorScheme['colors'][8])) ?>; 
+            }
 
 
             /*content*/
