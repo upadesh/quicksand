@@ -24,20 +24,9 @@ get_header();
     <!--  site-content-area -->  
     <main id="primary" class="site-content-area">  
 
-        <?php if (have_posts()) : ?>
-
-            <!--Month: February 2016--> 
-<!--            <div class="card"> 
-                <div class="card-block">
-                    <?php 
-                    the_archive_title('<h4 class="card-title">', '</h4>');
-                    the_archive_description('<h6 class="card-subtitle text-muted">', '</h6>'); 
-                    ?>
-                </div>
-            </div> -->
-
-            the_archive_title('<h4 class="card-title">', '</h4>');
-
+        <?php if (have_posts()) : 
+            echo the_archive_title('<div class="card"><div class="card-block"><h4 class="card-title">', '</h4></div>');
+?>
             <!--show posts in masonry-style-->
             <?php 
             if (get_theme_mod('qs_content_masonry', quicksand_get_color_scheme()['settings']['qs_content_masonry'])) {

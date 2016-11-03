@@ -870,21 +870,20 @@ add_filter('the_content_more_link', 'quicksand_modify_read_more_link');
  * @param string $title Archive title
  * @return string $title
  */
-function theme_slug_archive_title($title) {
-
-    echo '<div class="card"><div class="card-block">';
+function theme_slug_archive_title($title) { 
 
     if (is_category()) {
-        $title = sprintf("<h4 class='card-title'>". __("Category",  'quicksand'). ":<h4><h6 class='card-subtitle text-muted'>%s</h6>" , single_cat_title('', false)) ;
+        $title = sprintf(__("Category",  'quicksand'). ":<h6 class='card-subtitle text-muted'>%s</h6>" , single_cat_title('', false)) ;
     } elseif (is_tag()) { 
-        $title = sprintf("<h4 class='card-title'>". __("Tag",  'quicksand'). ":<h4><h6 class='card-subtitle text-muted'>%s</h6>" , single_tag_title('', false)) ;
+        $title = sprintf(__("Tag",  'quicksand'). ":<h6 class='card-subtitle text-muted'>%s</h6>" , single_tag_title('', false)) ;
     } elseif (is_author()) {
-        $title = sprintf("<h4 class='card-title'>". __("Author",  'quicksand'). ":<h4><h6 class='card-subtitle text-muted'>%s</h6>" , '<span class="vcard">' . get_the_author() . '</span>'); 
-    }
+        $title = sprintf(__("Author",  'quicksand'). ":<h6 class='card-subtitle text-muted'>%s</h6>" , '<span class="vcard">' . get_the_author() . '</span>'); 
+    }    
 
-    echo $title . '</div></div>'; 
+    return $title; 
 
-}
+} 
+
 add_filter( 'get_the_archive_title', 'theme_slug_archive_title' );
 
 
