@@ -28,16 +28,17 @@
         </div>
 
 
-            <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', 'quicksand'); ?></a> 
+        <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', 'quicksand'); ?></a> 
 
-            <!-- site-header >-->
-            <header id="masthead" class="site-header <?php echo esc_attr(get_theme_mod('qs_header_fullwidth', quicksand_get_color_scheme()['settings']['qs_header_fullwidth']) ? '' : 'container'); ?>"> 
-
-        <?php  
+        <!-- site-header >-->
+        <header id="masthead" class="site-header <?php echo esc_attr(get_theme_mod('qs_header_fullwidth', quicksand_get_color_scheme()['settings']['qs_header_fullwidth']) ? '' : 'container'); ?>"> 
+ 
+            <!-- header(-image)-->
+            <?php
             $showOnlyOnFront = get_theme_mod('qs_header_show_front', quicksand_get_color_scheme()['settings']['qs_header_show_front']);
-            if ( !$showOnlyOnFront || ( (is_home() || is_front_page() ) && $showOnlyOnFront )) :
-             ?>
-                
+            if (!$showOnlyOnFront || ( (is_home() || is_front_page() ) && $showOnlyOnFront )) :
+                ?>
+
                 <!-- site-info -->
                 <?php if (has_header_image()) { ?>
                     <div class="site-info custom-header-image" style="background: url(<?php header_image(); ?>); background-repeat: no-repeat; background-size: cover; height:<?php echo esc_attr(get_custom_header()->height); ?>px;">  
@@ -63,8 +64,23 @@
                     </div>
 
                 <?php } ?><!--End header image check-->
-        <?php endif; ?> 
-            </header><!-- .site-header --> 
+            <?php endif; ?> 
+
+ 
+            <!-- slider-->
+            <?php
+            $isSliderEnabled = get_theme_mod('qs_slider_enabled', quicksand_get_color_scheme()['settings']['qs_slider_enabled']);
+            if ($isSliderEnabled && (is_home() || is_front_page() )) :
+                ?> 
+                <div class="<?php echo esc_attr(get_theme_mod('qs_slider_fullwidth', quicksand_get_color_scheme()['settings']['qs_slider_fullwidth']) ? '' : 'container'); ?> quicksand-slider-wrapper"> 
+                    <?php
+                    get_template_part('template-parts/slider');
+                    ?>
+                </div> 
+            <?php endif; ?> 
+
+
+        </header><!-- .site-header --> 
 
 
 

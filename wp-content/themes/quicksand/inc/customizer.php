@@ -40,13 +40,15 @@ add_action('customize_preview_init', 'quicksand_customize_preview_js');
  */
 function quicksand_customize_register($wp_customize) {
 
+    $color_scheme_option = get_theme_mod('color_scheme', 'default');
+    $colorSchemeDefault = quicksand_get_color_schemes()[$color_scheme_option];
+
     /* Main option Settings Panel */
     $wp_customize->add_panel('quicksand_main_options', array(
         'priority' => 10,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __('Theme Options', 'quicksand'),
-        'description' => __('Panel to update theme options', 'quicksand'), // Include html tags such as <p>.
+        'title' => __('Theme Options', 'quicksand')
     ));
 
 
@@ -60,6 +62,40 @@ function quicksand_customize_register($wp_customize) {
         'panel' => 'quicksand_main_options',
     ));
 
+
+    // enabled
+    $wp_customize->add_setting("qs_slider_enabled", array(
+        'default' => $colorSchemeDefault['settings']['qs_slider_enabled'],
+        'type' => 'theme_mod',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'quicksand_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('qs_slider_enabled', array(
+        'label' => __("Enable Slider", 'quicksand'),
+        'section' => 'quicksand_slider_section',
+        'type' => 'checkbox',
+        'settings' => 'qs_slider_enabled',
+        'priority' => 10,
+    ));
+
+    // fullwidth
+    $wp_customize->add_setting("qs_slider_fullwidth", array(
+        'default' => $colorSchemeDefault['settings']['qs_slider_fullwidth'],
+        'type' => 'theme_mod',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'quicksand_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('qs_slider_fullwidth', array(
+        'label' => __("Slider Fullwidth", 'quicksand'),
+        'section' => 'quicksand_slider_section',
+        'type' => 'checkbox',
+        'settings' => 'qs_slider_fullwidth',
+        'priority' => 10,
+    ));
+
+
     $wp_customize->add_setting('qs_slider_category', array(
         'default' => '',
     ));
@@ -69,9 +105,8 @@ function quicksand_customize_register($wp_customize) {
         'label' => 'Category',
         'settings' => 'qs_slider_category',
         'section' => 'quicksand_slider_section',
-                
-        // TODO: not working ... modernere Methode für select????
-        'description' => __('Only posts including a featured image will be selected', 'quicksand'),
+        'priority' => 20,
+        'description' => __('Only posts including a featured image will be exposed', 'quicksand'),
     )));
 
     $wp_customize->add_setting('qs_slides_count', array(
@@ -92,9 +127,6 @@ function quicksand_customize_register($wp_customize) {
      * 
      * @hint always add setting to color-scheme-control.js, also the non-coloured ones 
      */
-    $color_scheme_option = get_theme_mod('color_scheme', 'default');
-    $colorSchemeDefault = quicksand_get_color_schemes()[$color_scheme_option];
-
     $wp_customize->add_section('quicksand_color_schemes', array(
         'title' => __('Color Schemes', 'quicksand'),
         'priority' => 10,
@@ -241,7 +273,6 @@ function quicksand_customize_register($wp_customize) {
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_header_background_color', array(
         'label' => __('Header Background Color', 'quicksand'),
-        'description' => __('Default used if no color is selected', 'quicksand'),
         'section' => 'quicksand_header',
         'settings' => 'qs_header_background_color'
     )));
@@ -654,6 +685,8 @@ function quicksand_get_color_schemes() {
                 'qs_sidebar_border_width' => 1,
                 'qs_content_masonry' => 1,
                 'qs_content_use_lightgallery' => 1,
+                'qs_slider_enabled' => 1,
+                'qs_slider_fullwidth' => 0,
             ),
             'colors' => array(
 //                background_color
@@ -712,6 +745,8 @@ function quicksand_get_color_schemes() {
                 'qs_sidebar_border_width' => 3,
                 'qs_content_masonry' => 0,
                 'qs_content_use_lightgallery' => 0,
+                'qs_slider_enabled' => 0,
+                'qs_slider_fullwidth' => 0,
             ),
             'colors' => array(
 //                background_color
@@ -999,7 +1034,7 @@ if (class_exists('WP_Customize_Control')) {
 
             // $this->label == Category
             printf(
-                    '<label class="customize-control-select"><span class="customize-control-title">%s</span> %s</label>', $this->label, $dropdown
+                    '<label class="customize-control-select"><span class="customize-control-title">%s</span><span class="description customize-control-description">%s</span> %s</label>', $this->label, $this->description, $dropdown
             );
         }
 

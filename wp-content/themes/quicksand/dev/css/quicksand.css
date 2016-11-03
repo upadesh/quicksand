@@ -674,7 +674,7 @@ cite {
     }
 }*/
 .flexslider {
-  border: none;
+  border: none !important;
   /*    .flex-control-nav {
             position: absolute;
             display: inline-block;
@@ -692,11 +692,12 @@ cite {
         position: absolute;
         top: 0;
         left: 0;
-        max-width: 50%;
+        width: 100%;
         margin-top: 48px;
         margin-top: 3rem;
         margin-left: 0; }
         .flexslider .slides li .flex-caption h2 {
+          max-width: 80%;
           background: #9ab7ac;
           background: rgba(154, 183, 172, 0.5);
           display: inline-block;
@@ -704,6 +705,7 @@ cite {
           padding: 1rem 5rem;
           color: #fff; }
         .flexslider .slides li .flex-caption .excerpt {
+          max-width: 50%;
           background: #3b3b3b;
           background: rgba(59, 59, 59, 0.8);
           display: block;

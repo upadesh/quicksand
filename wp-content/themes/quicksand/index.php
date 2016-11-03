@@ -17,15 +17,6 @@
 get_header();
 ?>
 
-<!--TODO:
-check ob category überhaupt gewählt
-full oder klein?
-dann kein container-fluid
-höhe???-->
-<!--add slider-->
-<?php get_template_part( 'template-parts/slider' ); ?> 
-
-
 <!--template: index-->
 <div class="row">
     <!--  site-content-area -->  

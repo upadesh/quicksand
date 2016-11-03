@@ -18,6 +18,8 @@
                     api('qs_header_show_front').set(colorScheme[value]['settings']['qs_header_show_front']);  
                     api('qs_content_masonry').set(colorScheme[value]['settings']['qs_content_masonry']);   
                     api('qs_content_use_lightgallery').set(colorScheme[value]['settings']['qs_content_use_lightgallery']);   
+                    api('qs_slider_enabled').set(colorScheme[value]['settings']['qs_slider_enabled']); 
+                    api('qs_slider_fullwidth').set(colorScheme[value]['settings']['qs_slider_fullwidth']); 
                     
                     
                     // colors
