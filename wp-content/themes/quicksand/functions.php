@@ -873,7 +873,7 @@ add_filter('the_content_more_link', 'quicksand_modify_read_more_link');
  * @param string $title Archive title
  * @return string $title
  */
-function theme_slug_archive_title($title) { 
+function quicksands_modify_archive_title($title) { 
 
     if (is_category()) {
         $title = sprintf(__("Category",  'quicksand'). ":<h6 class='card-subtitle text-muted'>%s</h6>" , single_cat_title('', false)) ;
@@ -890,7 +890,7 @@ function theme_slug_archive_title($title) {
 
 } 
 
-add_filter( 'get_the_archive_title', 'theme_slug_archive_title' );
+add_filter( 'get_the_archive_title', 'quicksands_modify_archive_title' );
 
 
 
