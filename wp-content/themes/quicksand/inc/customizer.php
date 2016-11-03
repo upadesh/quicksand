@@ -93,7 +93,7 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_slider_section',
         'type' => 'checkbox',
         'settings' => 'qs_slider_fullwidth',
-        'priority' => 10,
+        'priority' => 20,
     ));
 
 
@@ -106,7 +106,7 @@ function quicksand_customize_register($wp_customize) {
         'label' => 'Category',
         'settings' => 'qs_slider_category',
         'section' => 'quicksand_slider_section',
-        'priority' => 20,
+        'priority' => 30,
         'description' => __('Only posts including a featured image will be exposed', 'quicksand'),
     )));
 
@@ -118,6 +118,7 @@ function quicksand_customize_register($wp_customize) {
         'label' => __('Number of posts', 'theme_name'),
         'section' => 'quicksand_slider_section',
         'settings' => 'qs_slides_count',
+        'priority' => 40,
         'type' => 'text',
     )));
 
