@@ -3,12 +3,13 @@
  */   
 
 /* always push down content after header */
-.site-header {
+/*.site-header {
     @extend .mb-2; 
-}
+}*/
 
 /*always leave some space to the footer-widgetbar*/
 .site-main-container {
+    @extend .mt-2; 
     @extend .mb-2; 
 }
 

@@ -37,7 +37,7 @@
             <?php
             // show header in general
             if (get_theme_mod('qs_header_enabled', quicksand_get_color_scheme()['settings']['qs_header_enabled'])):
- 
+
                 // show header only on front-page
                 $showOnlyOnFront = get_theme_mod('qs_header_show_front', quicksand_get_color_scheme()['settings']['qs_header_show_front']);
                 if (!$showOnlyOnFront || ( (is_home() || is_front_page() ) && $showOnlyOnFront )) :
@@ -70,20 +70,20 @@
                     <?php } ?><!--End header image check-->
                 <?php endif;  //show header only on front-page ?> 
             <?php endif; //show header in general ?> 
-
-
-            <!-- slider-->
-            <?php
-            $isSliderEnabled = get_theme_mod('qs_slider_enabled', quicksand_get_color_scheme()['settings']['qs_slider_enabled']);
-            if ($isSliderEnabled && (is_home() || is_front_page() )) :
-                ?> 
-                <div class="<?php echo esc_attr(get_theme_mod('qs_slider_fullwidth', quicksand_get_color_scheme()['settings']['qs_slider_fullwidth']) ? '' : 'container'); ?> quicksand-slider-wrapper"> 
-                    <?php
-                    get_template_part('template-parts/slider');
-                    ?>
-                </div> 
-            <?php endif; ?>  
         </header><!-- .site-header --> 
+
+
+        <!-- slider-->
+        <?php
+        $isSliderEnabled = get_theme_mod('qs_slider_enabled', quicksand_get_color_scheme()['settings']['qs_slider_enabled']);
+        if ($isSliderEnabled && (is_home() || is_front_page() )) :
+            ?> 
+            <div class="<?php echo esc_attr(get_theme_mod('qs_slider_fullwidth', quicksand_get_color_scheme()['settings']['qs_slider_fullwidth']) ? '' : 'container'); ?> quicksand-slider-wrapper"> 
+                <?php
+                get_template_part('template-parts/slider');
+                ?>
+            </div> 
+        <?php endif; ?>  
 
 
 

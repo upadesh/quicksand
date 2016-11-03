@@ -50,6 +50,34 @@ function quicksand_customize_register($wp_customize) {
         'theme_supports' => '',
         'title' => __('Theme Options', 'quicksand')
     ));
+    
+
+    /**
+     *  Section: Color Schemes
+     * 
+     * @hint always add setting to color-scheme-control.js, also the non-coloured ones 
+     */
+    $wp_customize->add_section('quicksand_color_schemes', array(
+        'title' => __('Color Schemes', 'quicksand'),
+        'priority' => 10,
+        'panel' => 'quicksand_main_options',
+    ));
+
+    $wp_customize->add_setting('color_scheme', array(
+        'default' => 'default',
+        'sanitize_callback' => 'quicksand_sanitize_color_scheme',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('color_scheme', array(
+        'label' => __('Color Schemes', 'quicksand'),
+        'section' => 'quicksand_color_schemes',
+        'type' => 'select',
+        'choices' => quicksand_get_color_scheme_choices(),
+        'priority' => 1,
+    ));
+
+
 
 
     /**
@@ -146,33 +174,6 @@ function quicksand_customize_register($wp_customize) {
             'class' => 'slider-height-class',
             'style' => 'color: #0a0',
         ),
-    ));
-
-
-
-    /**
-     *  Section: Color Schemes
-     * 
-     * @hint always add setting to color-scheme-control.js, also the non-coloured ones 
-     */
-    $wp_customize->add_section('quicksand_color_schemes', array(
-        'title' => __('Color Schemes', 'quicksand'),
-        'priority' => 10,
-        'panel' => 'quicksand_main_options',
-    ));
-
-    $wp_customize->add_setting('color_scheme', array(
-        'default' => 'default',
-        'sanitize_callback' => 'quicksand_sanitize_color_scheme',
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control('color_scheme', array(
-        'label' => __('Color Schemes', 'quicksand'),
-        'section' => 'quicksand_color_schemes',
-        'type' => 'select',
-        'choices' => quicksand_get_color_scheme_choices(),
-        'priority' => 1,
     ));
 
 
