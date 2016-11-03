@@ -78,11 +78,11 @@ module.exports = function (grunt) {
                         src: 'node_modules/lightgallery/dist/js/lightgallery.min.js',
                         dest: 'js/lightgallery.min.js',
                     }, {
-                        // JS - lightgallery
+                        // JS - lightgallery - lg-thumbnail
                         src: 'node_modules/lightgallery/dist/js/lg-thumbnail.js',
                         dest: 'js/lg-thumbnail.js',
                     }, {
-                        // JS - lightgallery
+                        // JS - lightgallery - lg-thumbnail
                         src: 'node_modules/lightgallery/dist/js/lg-thumbnail.min.js',
                         dest: 'js/lg-thumbnail.min.js',
                     }, {
