@@ -866,6 +866,9 @@ add_filter('the_content_more_link', 'quicksand_modify_read_more_link');
 
 /**
  * Filter the default archive title.
+ * 
+ * @TODO expand the types
+ * @see http://wordpress.stackexchange.com/questions/175884/how-to-customize-the-archive-title
  *
  * @param string $title Archive title
  * @return string $title
@@ -878,6 +881,9 @@ function theme_slug_archive_title($title) {
         $title = sprintf(__("Tag",  'quicksand'). ":<h6 class='card-subtitle text-muted'>%s</h6>" , single_tag_title('', false)) ;
     } elseif (is_author()) {
         $title = sprintf(__("Author",  'quicksand'). ":<h6 class='card-subtitle text-muted'>%s</h6>" , '<span class="vcard">' . get_the_author() . '</span>'); 
+    }     
+    elseif (is_month()) {
+        $title = sprintf(__("Month",  'quicksand'). ":<h6 class='card-subtitle text-muted'>%s</h6>" , get_the_date( _x( 'F Y', 'monthly archives date format' ) )); 
     }    
 
     return $title; 
