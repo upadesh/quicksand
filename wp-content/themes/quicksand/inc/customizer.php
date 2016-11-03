@@ -97,6 +97,7 @@ function quicksand_customize_register($wp_customize) {
     ));
 
 
+    // category
     $wp_customize->add_setting('qs_slider_category', array(
         'default' => '',
     ));
@@ -110,6 +111,7 @@ function quicksand_customize_register($wp_customize) {
         'description' => __('Only posts including a featured image will be exposed', 'quicksand'),
     )));
 
+    // count slides
     $wp_customize->add_setting('qs_slides_count', array(
         'default' => '6',
     ));
@@ -121,6 +123,30 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 40,
         'type' => 'text',
     )));
+     
+    // height
+    $wp_customize->add_setting('qs_slider_height', array(
+        'default' => $colorSchemeDefault['settings']['qs_slider_height'],
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options',
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('qs_slider_height', array(
+        'type' => 'range',
+        'priority' => 100,
+        'section' => 'quicksand_slider_section',
+        'label' => __('Height', 'quicksand'),
+        'description' => __('Set the height of the slider', 'quicksand'),
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 100,
+            'step' => 1,
+            'class' => 'slider-height-class',
+            'style' => 'color: #0a0',
+        ),
+    ));
 
 
 
@@ -714,6 +740,7 @@ function quicksand_get_color_schemes() {
                 'qs_slider_enabled' => 1,
                 'qs_slider_fullwidth' => 0,
                 'qs_header_enabled' => 1,
+                'qs_slider_height' => 30,
             ),
             'colors' => array(
 //                background_color
@@ -775,6 +802,7 @@ function quicksand_get_color_schemes() {
                 'qs_slider_enabled' => 0,
                 'qs_slider_fullwidth' => 0,
                 'qs_header_enabled' => 1,
+                'qs_slider_height' => 40,
             ),
             'colors' => array(
 //                background_color
@@ -1056,11 +1084,9 @@ if (class_exists('WP_Customize_Control')) {
                         'selected' => $this->value(),
                     )
             );
-
-            // $this->get_link(); == "data-customize-setting-link="qs_slider_category""
-            $dropdown = str_replace('<select', '<select ' . $this->get_link(), $dropdown);
-
-            // $this->label == Category
+ 
+            $dropdown = str_replace('<select', '<select ' . $this->get_link(), $dropdown); 
+            
             printf(
                     '<label class="customize-control-select"><span class="customize-control-title">%s</span><span class="description customize-control-description">%s</span> %s</label>', $this->label, $this->description, $dropdown
             );

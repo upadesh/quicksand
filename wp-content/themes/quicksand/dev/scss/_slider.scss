@@ -1,9 +1,8 @@
 .flexslider{
     border: none !important;
 
-    .slides {
-        // TODO: slider
-        max-height: 30rem;
+    .slides { 
+        max-height: 30rem;  // adjustable in settings
         overflow: hidden; 
         li { 
             height: 100%;
@@ -22,8 +21,8 @@
                 h2 { 
                     // TODO: colors: function.php
                     max-width: 80%;
-                    background: rgb(154, 183, 172);
-                    background: rgba(154, 183, 172, 0.5);
+/*                    background: rgb(154, 183, 172);
+                    background: rgba(154, 183, 172, 0.5);*/
                     display: inline-block;
                     padding: 1rem 5rem; 
                     color: #fff;

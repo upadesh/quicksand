@@ -207,6 +207,21 @@ if (!function_exists('quicksand_customizer_css')) :
             .site-nav-container .menu-item .dropdown-item:hover {
                 background: <?php echo get_theme_mod('qs_nav_link_hover_background_color', $colorScheme['colors'][16]); ?>;
             } 
+            
+            
+            /*slider*/
+            .quicksand-slider-wrapper .flexslider .slides {
+                max-height: <?php echo get_theme_mod('qs_slider_height', $colorScheme['settings']['qs_slider_height']); ?>rem; 
+            }
+            .quicksand-slider-wrapper .flexslider .slides h2 {
+                <?php 
+                $rgb = quicksand_hex2rgb(get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]));
+                $rgba = array($rgb['red'],$rgb['green'],$rgb['blue'], "0.5");
+                
+                ?>
+                background: rgba(<?php echo esc_html(join(",", $rgba)) ?>); 
+            }
+            
 
             /*site-header*/
             .site-info-wrapper a,
