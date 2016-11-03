@@ -175,6 +175,31 @@ function quicksand_customize_register($wp_customize) {
             'style' => 'color: #0a0',
         ),
     ));
+     
+    // height
+    $wp_customize->add_setting('qs_slider_margin_top', array(
+        'default' => $colorSchemeDefault['settings']['qs_slider_margin_top'],
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options',
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('qs_slider_margin_top', array(
+        'type' => 'range',
+        'priority' => 120,
+        'section' => 'quicksand_slider_section',
+        'label' => __('Height', 'quicksand'),
+        'description' => __('Margin to the top', 'quicksand'),
+        'input_attrs' => array(
+            'min' => 0,
+            'max' => 10,
+            'step' => 1,
+            'class' => 'slider-height-class',
+            'style' => 'color: #0a0',
+        ),
+    ));
+
 
 
 
@@ -759,6 +784,7 @@ function quicksand_get_color_schemes() {
                 'qs_header_enabled' => 1,
                 'qs_slider_height' => 30,
                 'qs_header_hide_when_slider_enabled' => 0,
+                'qs_slider_margin_top' => 0,
             ),
             'colors' => array(
 //                background_color
@@ -822,6 +848,7 @@ function quicksand_get_color_schemes() {
                 'qs_header_enabled' => 1,
                 'qs_slider_height' => 30,
                 'qs_header_hide_when_slider_enabled' => 1,
+                'qs_slider_margin_top' => 2,
             ),
             'colors' => array(
 //                background_color

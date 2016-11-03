@@ -210,6 +210,9 @@ if (!function_exists('quicksand_customizer_css')) :
             
             
             /*slider*/
+            .quicksand-slider-wrapper {
+                margin-top: <?php echo get_theme_mod('qs_slider_margin_top', $colorScheme['settings']['qs_slider_margin_top']); ?>rem; 
+            }
             .quicksand-slider-wrapper .flexslider .slides {
                 max-height: <?php echo get_theme_mod('qs_slider_height', $colorScheme['settings']['qs_slider_height']); ?>rem; 
             }

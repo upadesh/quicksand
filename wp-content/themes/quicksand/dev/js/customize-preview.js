@@ -437,4 +437,15 @@
         });
     });
 
+    wp.customize('qs_slider_margin_top', function (value) {
+        value.bind(function (qs_slider_margin_top) {
+
+            var marginTop;
+            marginTop = '.quicksand-slider-wrapper';
+
+            $(marginTop).css('margin-top', qs_slider_margin_top + 'rem');
+            customizePseudoElements('qs_slider_margin_top', qs_slider_margin_top);
+        });
+    });
+
 })(jQuery); 
