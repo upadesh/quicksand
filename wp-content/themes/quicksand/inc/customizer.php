@@ -48,38 +48,37 @@ function quicksand_customize_register($wp_customize) {
         'title' => __('Theme Options', 'quicksand'),
         'description' => __('Panel to update theme options', 'quicksand'), // Include html tags such as <p>.
     ));
- 
+
 
     /**
      *  Section: Slider  
-     */  
-    $wp_customize->add_section('slider_section', array(
+     */
+    $wp_customize->add_section('quicksand_slider_section', array(
         'title' => __('Slider settings', 'quicksand'),
         'priority' => 10,
         'capability' => 'edit_theme_options',
         'panel' => 'quicksand_main_options',
     ));
 
-    $wp_customize->add_setting('slider_setting', array(
+    $wp_customize->add_setting('qs_slider_category', array(
         'default' => '',
-            )
-    );
+    ));
 
     $wp_customize->add_control(new WP_Customize_category_Control(
             $wp_customize, 'slider_category', array(
         'label' => 'Category',
-        'settings' => 'slider_setting',
-        'section' => 'slider_section'
+        'settings' => 'qs_slider_category',
+        'section' => 'quicksand_slider_section'
     )));
 
-    $wp_customize->add_setting('count_setting', array(
+    $wp_customize->add_setting('qs_slides_count', array(
         'default' => '6',
     ));
 
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'slider_count', array(
         'label' => __('Number of posts', 'theme_name'),
-        'section' => 'slider_section',
-        'settings' => 'count_setting',
+        'section' => 'quicksand_slider_section',
+        'settings' => 'qs_slides_count',
         'type' => 'text',
     )));
 
@@ -113,14 +112,14 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 1,
     ));
 
-    
-    
+
+
     /* Section: Navigation */
     $wp_customize->add_section('quicksand_nav', array(
         'title' => __('Navigation', 'quicksand'),
         'priority' => 10,
         'panel' => 'quicksand_main_options',
-    )); 
+    ));
 
     // logo-text
     $wp_customize->add_setting('qs_nav_logo_text', array(
@@ -993,7 +992,7 @@ if (class_exists('WP_Customize_Control')) {
                     )
             );
 
-            // $this->get_link(); == "data-customize-setting-link="slider_setting""
+            // $this->get_link(); == "data-customize-setting-link="qs_slider_category""
             $dropdown = str_replace('<select', '<select ' . $this->get_link(), $dropdown);
 
             // $this->label == Category

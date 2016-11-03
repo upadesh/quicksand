@@ -1,21 +1,18 @@
 <?php
-// Create Slider 
+// Create Slider
+$slider_cat = get_theme_mod('qs_slider_category', '');
 
-
-$slider_cat = get_theme_mod('slider_setting', '');
- 
+// if no catgeory is selected, do nothing
 if (empty($slider_cat)) {
     return;
 }
 
-$slider_count = get_theme_mod('count_setting', '4');
+$slider_count = get_theme_mod('qs_slides_count', '4');
 $the_query = new WP_Query(array('cat' => $slider_cat, 'showposts' => $slider_count));
 
 
 // Check if the Query returns any posts
 if ($the_query->have_posts()) {
-
-    // Start the Slider 
     ?>
     <div class="flexslider">
         <ul class="slides">
@@ -30,7 +27,7 @@ if ($the_query->have_posts()) {
                     // Check if there's a Slide URL given and if so let's a link to it
                     if (get_post_meta(get_the_id(), 'quicksand_slideurl', true) != '') {
                         ?>
-                    <!--TODO: permlink-->
+                        <!--TODO: permlink-->
                         <a href="<?php echo esc_url(get_post_meta(get_the_id(), 'quicksand_slideurl', true)); ?>">
                             <?php
                         }
@@ -42,10 +39,10 @@ if ($the_query->have_posts()) {
                         if (get_post_meta(get_the_id(), 'quicksand_slideurl', true) != '') {
                             ?>
                         </a>
-                    <?php } ?>
+        <?php } ?>
 
                 </li>
-            <?php endwhile; ?>
+    <?php endwhile; ?>
 
         </ul><!-- .slides -->
     </div><!-- .flexslider -->
