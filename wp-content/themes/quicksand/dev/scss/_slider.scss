@@ -18,24 +18,24 @@
                 margin-top: 3rem;
                 margin-left: 0;
 
-                h2 { 
-                    // TODO: colors: function.php
+                h2 {
                     max-width: 80%;
-/*                    background: rgb(154, 183, 172);
-                    background: rgba(154, 183, 172, 0.5);*/
                     display: inline-block;
                     padding: 1rem 5rem; 
                     color: #fff;
                 }
 
-                .excerpt { 
-                    // TODO: colors: function.php
+                .excerpt {  
                     max-width: 50%;
                     background: rgb(59, 59, 59);
                     background: rgba(59, 59, 59, 0.8);
                     display: block;
                     color: #ddd;
                     padding: 1rem 5rem; 
+                    
+                    a {
+                        color: rgba(217, 217, 217, 1);
+                    }
                 }
             }
 
