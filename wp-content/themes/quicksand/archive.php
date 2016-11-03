@@ -25,7 +25,7 @@ get_header();
     <main id="primary" class="site-content-area">  
 
         <?php if (have_posts()) : 
-            echo the_archive_title('<div class="card"><div class="card-block"><h4 class="card-title">', '</h4></div>');
+            echo the_archive_title('<article class="card"><div class="card-block"><h4 class="card-title">', '</h4></article>');
 ?>
             <!--show posts in masonry-style-->
             <?php 
