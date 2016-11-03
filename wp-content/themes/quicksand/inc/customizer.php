@@ -68,7 +68,10 @@ function quicksand_customize_register($wp_customize) {
             $wp_customize, 'slider_category', array(
         'label' => 'Category',
         'settings' => 'qs_slider_category',
-        'section' => 'quicksand_slider_section'
+        'section' => 'quicksand_slider_section',
+                
+        // TODO: not working ... modernere Methode für select????
+        'description' => __('Only posts including a featured image will be selected', 'quicksand'),
     )));
 
     $wp_customize->add_setting('qs_slides_count', array(
@@ -133,8 +136,7 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_nav',
         'settings' => 'qs_nav_logo_text',
         'description' => __('Appears when no logo is selected', 'quicksand'),
-            )
-    ));
+    )));
 
     // fullwidth
     $wp_customize->add_setting("qs_nav_fullwidth", array(

@@ -1,0 +1,67 @@
+ 
+.flexslider{
+    border: none;
+
+    .slides {
+        max-height: 30rem;
+        overflow: hidden; 
+        li { 
+            height: 100%;
+            position:relative;
+            img {
+                @extend .img-fluid;
+            } 
+            .flex-caption {
+                position: absolute;
+                top: 0;
+                left: 0;
+                max-width: 50%;
+                margin-top: 3rem;
+                margin-left: 0;
+
+                h2 { 
+                    // TODO: colors: function.php
+                    background: rgb(218, 68, 83);
+                    background: rgba(218, 68, 83, 0.7); 
+                    display: inline-block;
+                    padding: 1rem 5rem; 
+                    color: #fff;
+                }
+
+                .excerpt { 
+                    // TODO: colors: function.php
+                    background: rgb(59, 59, 59);
+                    background: rgba(59, 59, 59, 0.8);
+                    display: block;
+                    color: #ddd;
+                    padding: 1rem 5rem; 
+                }
+            }
+
+
+        }
+    } 
+
+    /*    .flex-control-nav {
+            position: absolute;
+            display: inline-block;
+            bottom: 10px;
+            z-index: 1000;
+        }*/
+    .flex-direction-nav a {
+        height: 80px;
+        top: 45%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .flex-caption {
+        display: none;
+    }
+}
+/*
+@media screen and (max-width: 860px) {
+    .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
+    .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
+}*/

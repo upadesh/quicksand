@@ -8,8 +8,18 @@ if (empty($slider_cat)) {
 }
 
 $slider_count = get_theme_mod('qs_slides_count', '4');
-$the_query = new WP_Query(array('cat' => $slider_cat, 'showposts' => $slider_count));
 
+// only find posts with a featured image
+$the_query = new WP_Query(array(
+    'cat' => $slider_cat, 
+    'showposts' => $slider_count,
+    'meta_query' => array(
+        array(
+         'key' => '_thumbnail_id',
+         'compare' => 'EXISTS'
+        ),
+    )
+        )); 
 
 // Check if the Query returns any posts
 if ($the_query->have_posts()) {
@@ -20,29 +30,20 @@ if ($the_query->have_posts()) {
             <?php
             // The Loop
             while ($the_query->have_posts()) : $the_query->the_post();
-                ?>
-                <li>
+                echo '<li><a href="' . get_permalink() . '">';
+                if ((function_exists('has_post_thumbnail')) && ( has_post_thumbnail() )) :
+                    echo get_the_post_thumbnail();
+                endif;
 
-                    <?php
-                    // Check if there's a Slide URL given and if so let's a link to it
-                    if (get_post_meta(get_the_id(), 'quicksand_slideurl', true) != '') {
-                        ?>
-                        <!--TODO: permlink-->
-                        <a href="<?php echo esc_url(get_post_meta(get_the_id(), 'quicksand_slideurl', true)); ?>">
-                            <?php
-                        }
-
-                        // The Slide's Image
-                        echo the_post_thumbnail();
-
-                        // Close off the Slide's Link if there is one
-                        if (get_post_meta(get_the_id(), 'quicksand_slideurl', true) != '') {
-                            ?>
-                        </a>
-        <?php } ?>
-
-                </li>
-    <?php endwhile; ?>
+                echo '<div class="flex-caption">';
+                if (!empty(get_the_title()))
+                    echo '<h2 class="entry-title">' . get_the_title() . '</h2>';
+                if (!empty(get_the_excerpt()))
+                    echo '<div class="excerpt">' . get_the_excerpt() . '</div>';
+                echo '</div>';
+                echo '</a></li>';
+            endwhile;
+            ?>
 
         </ul><!-- .slides -->
     </div><!-- .flexslider -->
