@@ -178,7 +178,7 @@ span.btn.btn-secondary, .card .entry-content span.btn-secondary.read-more-link, 
     vertical-align: middle; }
     .site-info.custom-header-image .site-info-wrapper h1, .site-info.custom-header-image .site-info-wrapper p {
       display: inline-block;
-      background: rgba(0, 0, 0, 0.2);
+      /*background: rgba(0,0,0,.2);*/
       padding: 8px 16px;
       padding: .5rem 1rem; }
 
@@ -633,6 +633,9 @@ cite {
  * Create some space & push main sections 
  */
 /* always push down content after header */
+/*.site-header {
+    @extend .mb-2; 
+}*/
 /*always leave some space to the footer-widgetbar*/
 /* post meta-data */
 .site-content-area {
@@ -673,6 +676,64 @@ cite {
         @extend .text-md-left; 
     }
 }*/
+.flexslider {
+  border: none !important;
+  /*    .flex-control-nav {
+            position: absolute;
+            display: inline-block;
+            bottom: 10px;
+            z-index: 1000;
+        }*/ }
+  .flexslider .slides {
+    max-height: 480px;
+    max-height: 30rem;
+    overflow: hidden; }
+    .flexslider .slides li {
+      height: 100%;
+      position: relative; }
+      .flexslider .slides li .flex-caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin-top: 48px;
+        margin-top: 3rem;
+        margin-left: 0; }
+        .flexslider .slides li .flex-caption h2 {
+          max-width: 80%;
+          display: inline-block;
+          padding: 16px 80px;
+          padding: 1rem 5rem;
+          color: #fff; }
+        .flexslider .slides li .flex-caption .excerpt {
+          max-width: 50%;
+          background: #3b3b3b;
+          background: rgba(59, 59, 59, 0.8);
+          display: block;
+          color: #ddd;
+          padding: 16px 80px;
+          padding: 1rem 5rem; }
+          .flexslider .slides li .flex-caption .excerpt a {
+            color: #d9d9d9;
+            text-decoration: none; }
+            .flexslider .slides li .flex-caption .excerpt a:active, .flexslider .slides li .flex-caption .excerpt a:visited, .flexslider .slides li .flex-caption .excerpt a:hover {
+              text-decoration: none; }
+  .flexslider .flex-direction-nav a {
+    height: 80px;
+    top: 45%; }
+
+@media (max-width: 768px) {
+  .flex-caption {
+    display: none; } }
+
+@media screen and (max-width: 860px) {
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 10px; }
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 10px; } }
+
 /* import bootstrap at the very last end, so we can use it's variables */
 /*!
  * Bootstrap v4.0.0-alpha.5 (https://getbootstrap.com)
@@ -1244,7 +1305,7 @@ mark,
 dl.row > dd + dt {
   clear: left; }
 
-.img-fluid, .widget .featured-image img, .carousel-inner > .carousel-item > img,
+.img-fluid, .widget .featured-image img, .flexslider .slides li img, .carousel-inner > .carousel-item > img,
 .carousel-inner > .carousel-item > a > img {
   max-width: 100%;
   height: auto; }
@@ -5460,7 +5521,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin: 24px 24px !important;
   margin: 1.5rem 1.5rem !important; }
 
-.mt-2 {
+.mt-2, .site-main-container {
   margin-top: 24px !important;
   margin-top: 1.5rem !important; }
 
@@ -5468,7 +5529,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-right: 24px !important;
   margin-right: 1.5rem !important; }
 
-.mb-2, .site-header, .site-main-container {
+.mb-2, .site-main-container {
   margin-bottom: 24px !important;
   margin-bottom: 1.5rem !important; }
 

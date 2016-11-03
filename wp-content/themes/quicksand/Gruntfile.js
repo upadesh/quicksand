@@ -62,6 +62,30 @@ module.exports = function (grunt) {
                         src: 'node_modules/fitvids/dist/fitvids.min.js',
                         dest: 'js/fitvids.min.js',
                     }, {
+                        // CSS - lightgallery
+                        src: 'node_modules/lightgallery/dist/css/lightgallery.min.css',
+                        dest: 'css/lightgallery.min.css',
+                    }, {
+                        // CSS - lightgallery
+                        src: 'node_modules/lightgallery/dist/css/lightgallery.css',
+                        dest: 'css/lightgallery.css',
+                    }, {
+                        // JS - lightgallery
+                        src: 'node_modules/lightgallery/dist/js/lightgallery.js',
+                        dest: 'js/lightgallery.js',
+                    }, {
+                        // JS - lightgallery
+                        src: 'node_modules/lightgallery/dist/js/lightgallery.min.js',
+                        dest: 'js/lightgallery.min.js',
+                    }, {
+                        // JS - lightgallery
+                        src: 'node_modules/lightgallery/dist/js/lg-thumbnail.js',
+                        dest: 'js/lg-thumbnail.js',
+                    }, {
+                        // JS - lightgallery
+                        src: 'node_modules/lightgallery/dist/js/lg-thumbnail.min.js',
+                        dest: 'js/lg-thumbnail.min.js',
+                    }, {
                         // CSS - all custom css
                         expand: true,
                         cwd: 'dev/css',
