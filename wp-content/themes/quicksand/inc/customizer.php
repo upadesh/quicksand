@@ -76,6 +76,7 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_slider_section',
         'type' => 'checkbox',
         'settings' => 'qs_slider_enabled',
+        'description' => __('Is only shown on front-page', 'quicksand'),
         'priority' => 10,
     ));
 
