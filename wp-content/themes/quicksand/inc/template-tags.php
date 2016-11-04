@@ -255,6 +255,63 @@ if (!function_exists('quicksand_entry_title_postformat_link')) :
 endif;
 
 
+
+
+if (!function_exists('quicksand_entry_title_postformat_gallery')) :
+
+    /**
+     * Displays the title for post-format: galllery 
+     *
+     * Create your own quicksand_entry_title_postformat_gallery() function to override in a child theme.
+     *
+     * @since Quicksand 0.2.1
+     *
+     * @param string $class Optional. Class string of the header element.  
+     */
+    function quicksand_entry_title_postformat_gallery($class = 'quicksand-post-gallery') {
+        $class = esc_attr($class);
+        global $post;
+
+        // Make sure the post has a gallery in it
+        if (!has_shortcode($post->post_content, 'gallery'))
+            return $content;
+
+        // Retrieve the first gallery in the post
+        $gallery = get_post_gallery_images($post);
+        ?> 
+
+
+        <!--       
+        TODO
+            kleiner ??? 
+            kein content bzw. nur text?
+            Title als Header darunter
+            keine nav unten
+            
+            dasselbe mit videos
+        -->
+
+        <!-- entry-header --> 
+        <header class="card-header entry-header <?php echo $class; ?>"> 
+            <div class="flexslider">
+                <ul class="slides"> 
+                    <?php
+                    // Loop through each image in each gallery
+                    foreach ($gallery as $image_url) {
+                        echo '<li>' . '<img src="' . $image_url . '">' . '</li>';
+                    }
+                    ?> 
+                </ul>
+            </div><!-- .flexslider -->  
+        </header><!-- .entry-header --> 
+        <?php
+    }
+
+endif;
+
+
+
+
 if (!function_exists('quicksand_entry_content_single')) :
 
     /**
@@ -283,7 +340,7 @@ if (!function_exists('quicksand_entry_content_single')) :
 //                break;
 //            break;
             case 'link':
-            // normal template is enough
+            // content-link will display the link inside the header, sp in list-view just display the content
 //        case 'gallery':
 //            break;
 //        case 'status':
@@ -536,6 +593,12 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
+
+
+
+
 
 
 

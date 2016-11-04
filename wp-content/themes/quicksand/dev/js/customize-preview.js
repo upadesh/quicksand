@@ -248,7 +248,7 @@
             .site-content .card-header.entry-header h5>a, \n\
             .site-content .card-header.entry-header h6>a';
 
-            background = '.quicksand-slider-wrapper .flexslider .slides h2';
+            background = '.quicksand-slider-header-wrapper .flexslider .slides h2';
 
             $(color).css('color', qs_content_secondary_text_color);
             $(background).css('background', hex2rgba_convert(qs_content_secondary_text_color, .5));
@@ -435,7 +435,7 @@
         value.bind(function (qs_slider_height) {
 
             var height;
-            height = '.quicksand-slider-wrapper .flexslider .slides';
+            height = '.quicksand-slider-header-wrapper .flexslider .slides';
 
             $(height).css('max-height', qs_slider_height + 'rem');
             customizePseudoElements('qs_slider_height', qs_slider_height);
@@ -446,7 +446,7 @@
         value.bind(function (qs_slider_margin_top) {
 
             var marginTop;
-            marginTop = '.quicksand-slider-wrapper';
+            marginTop = '.quicksand-slider-header-wrapper';
 
             $(marginTop).css('margin-top', qs_slider_margin_top + 'rem');
             customizePseudoElements('qs_slider_margin_top', qs_slider_margin_top);

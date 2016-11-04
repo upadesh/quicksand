@@ -210,13 +210,13 @@ if (!function_exists('quicksand_customizer_css')) :
 
 
             /*slider*/
-            .quicksand-slider-wrapper {
+            .quicksand-slider-header-wrapper {
                 margin-top: <?php echo get_theme_mod('qs_slider_margin_top', $colorScheme['settings']['qs_slider_margin_top']); ?>rem; 
             }
-            .quicksand-slider-wrapper .flexslider .slides {
+            .quicksand-slider-header-wrapper .flexslider .slides {
                 max-height: <?php echo get_theme_mod('qs_slider_height', $colorScheme['settings']['qs_slider_height']); ?>rem; 
             }
-            .quicksand-slider-wrapper .flexslider .slides h2 {
+            .quicksand-slider-header-wrapper .flexslider .slides h2 {
                 <?php
                 $rgb = quicksand_hex2rgb(get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]));
                 $rgba = array($rgb['red'], $rgb['green'], $rgb['blue'], "0.5");
