@@ -309,6 +309,23 @@ endif;
 
 
 
+if (!function_exists('quicksand_the_default_entry_content')) :
+
+    function quicksand_the_default_entry_content($class = 'entry-content') {
+        ?>  
+        <!--the default post-format-->
+        <div class="card-block  <?php echo $class; ?>"> 
+            <p class="card-text"><?php echo the_content(); ?></p>
+        </div>  
+
+        <!--displays page links for paginated posts (i.e. includes the <!–nextpage–>)--> 
+        <?php
+        quicksand_paginated_posts_paginator();
+    }
+
+endif;
+
+
 
 if (!function_exists('quicksand_entry_content')) :
 
@@ -337,7 +354,7 @@ if (!function_exists('quicksand_entry_content')) :
 //                get_template_part('template-parts/content-single', get_post_format());
 //                break;
 //            break;
-            case 'link':
+//            case 'link':
             // content-link will display the link inside the header, so in list-view just display the default content
             case 'gallery':
                 // strip gallery-shortcode in list-view, because gallery is shown inside header as slider
@@ -350,8 +367,11 @@ if (!function_exists('quicksand_entry_content')) :
                     </div>  
                     <?php
                     remove_filter('the_content', 'quicksand_remove_shortcode_from_content');
-                    break;
+                } else {
+                    quicksand_the_default_entry_content();
                 }
+                break;
+
 //        case 'status':
 //            break;
 //        case 'audio':
@@ -359,15 +379,7 @@ if (!function_exists('quicksand_entry_content')) :
 //        case 'chat':
 //            break; 
             default:
-                ?>  
-                <!--the default post-format-->
-                <div class="card-block  <?php echo $class; ?>"> 
-                    <p class="card-text"><?php echo the_content(); ?></p>
-                </div>  
-
-                <!--displays page links for paginated posts (i.e. includes the <!–nextpage–>)--> 
-                <?php
-                quicksand_paginated_posts_paginator();
+                quicksand_the_default_entry_content();
         }
     }
 
@@ -601,6 +613,8 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
 
 
 
