@@ -560,6 +560,7 @@ cite {
          column-count: 3 !important; } }
 
 /* post-formats */
+/* quote*/
 .card-header .post-quote p {
   margin-top: 16px;
   margin-top: 1rem;
@@ -568,6 +569,9 @@ cite {
 
 .card-header .post-quote blockquote {
   margin-bottom: 0; }
+
+.card-header.quicksand-post-video {
+  padding: 0; }
 
 /*biography*/
 .author-bio .avatar {

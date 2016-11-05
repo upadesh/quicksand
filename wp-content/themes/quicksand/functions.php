@@ -122,7 +122,7 @@ if (!function_exists('quicksand_setup')) :
         add_theme_support('post-formats', array(
 //            'aside',
 //            'image',
-//            'video',
+            'video',
             'quote',
             'link',
             'gallery',
@@ -922,8 +922,7 @@ if (!function_exists('quicksand_remove_shortcode_from_content')) :
         return $content;
     }
 
-endif;
-
+endif; 
 
 
 /**
@@ -993,3 +992,6 @@ require get_template_directory() . '/inc/QuicksandNavwalker.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+
+ 

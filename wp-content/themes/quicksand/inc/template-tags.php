@@ -283,7 +283,7 @@ if (!function_exists('quicksand_entry_header_postformat_quote')) :
                 <?php esc_html(the_content()); ?> 
             </div><!-- .post-quote --> 
         </header><!-- .entry-header -->  
-        
+
         <?php
     }
 
@@ -293,7 +293,7 @@ endif;
 if (!function_exists('quicksand_entry_header_postformat_gallery')) :
 
     /**
-     * Displays the title for post-format: galllery 
+     * Displays the title for post-format: gallery 
      *
      * Create your own quicksand_entry_header_postformat_gallery() function to override in a child theme.
      *
@@ -305,9 +305,8 @@ if (!function_exists('quicksand_entry_header_postformat_gallery')) :
         global $post;
 
         // Make sure the post has a gallery in it
-        if (!has_shortcode($post->post_content, 'gallery'))
-            return $content;
-
+//        if (!has_shortcode($post->post_content, 'gallery'))
+//            return $content;
         // get gallery-images
         // we don't use 'get_post_gallery images' in here, because it returns the thumbnails as well
         $gallery = get_post_gallery($post, false);
@@ -334,6 +333,38 @@ if (!function_exists('quicksand_entry_header_postformat_gallery')) :
                     ?> 
                 </ul>
             </div><!-- .flexslider -->  
+        </header><!-- .entry-header --> 
+        <?php
+    }
+
+endif;
+
+
+
+if (!function_exists('quicksand_entry_header_postformat_video')) :
+
+    /**
+     * Displays the title for post-format: video 
+     *
+     * Create your own quicksand_entry_header_postformat_video() function to override in a child theme.
+     *
+     * @since Quicksand 0.2.1
+     *
+     * @param string $class Optional. Class string of the header element.  
+     */
+    function quicksand_entry_header_postformat_video($class = 'quicksand-post-video') {
+        global $post;
+
+        // get first video in content 
+        $content = apply_filters('the_content', $post->post_content);
+        $embeds = get_media_embedded_in_content($content);
+        ?>  
+
+        <!-- entry-header --> 
+        <header class="card-header entry-header <?php echo esc_attr($class); ?>"> 
+            <div class="video post-video">
+                <?php echo $embeds[0]; ?>
+            </div><!-- .post-video -->  
         </header><!-- .entry-header --> 
         <?php
     }
@@ -372,6 +403,8 @@ if (!function_exists('quicksand_entry_content')) :
      * @param string $class Optional. Class string of the div element.  
      */
     function quicksand_entry_content($class = 'entry-content') {
+        global $post;
+
         $class = esc_attr($class);
         $format = get_post_format();
 
@@ -381,8 +414,10 @@ if (!function_exists('quicksand_entry_content')) :
 //            break;
 //        case 'image':
 //            break;
-//        case 'video':
-//            break;
+            case 'video':
+                // just display the default content
+                quicksand_the_entry_content();
+                break;
             case 'quote':
                 // just display the default content
                 quicksand_the_entry_content();
@@ -643,6 +678,10 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
+
+
 
 
 
