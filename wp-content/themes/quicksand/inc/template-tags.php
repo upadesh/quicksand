@@ -257,18 +257,52 @@ endif;
 
 
 
-if (!function_exists('quicksand_entry_title_postformat_gallery')) :
+if (!function_exists('quicksand_entry_title_postformat_quote')) :
 
     /**
-     * Displays the title for post-format: galllery 
+     * Displays the title for post-format: quote 
      *
-     * Create your own quicksand_entry_title_postformat_gallery() function to override in a child theme.
+     * Create your own quicksand_entry_title_postformat_quote() function to override in a child theme.
      *
      * @since Quicksand 0.2.1
      *
      * @param string $class Optional. Class string of the header element.  
      */
-    function quicksand_entry_title_postformat_gallery($class = 'quicksand-post-gallery') {
+    function quicksand_entry_title_postformat_quote($class = 'entry-title') {
+        $class = esc_attr($class);
+        ?> 
+
+        <!-- entry-header --> 
+        <header class="card-header entry-header">
+            <!--stick post-->
+            <?php if (is_sticky() && is_home() && !is_paged()) : ?>
+                <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
+            <?php endif; ?>
+
+            <div class="post-quote">  
+                <h1 class="card-title <?php echo $class; ?>">
+                    <a href="<?php echo get_url_in_content(get_the_content()); ?>" target="_blank"><i class="fa fa-link" aria-hidden="true"></i> <?php the_title(); ?></a> 
+                </h1> 
+            </div><!-- .post-link -->
+        </header><!-- .entry-header --> 
+        <?php
+    }
+
+endif;
+
+
+if (!function_exists('quicksand_entry_header_postformat_gallery')) :
+
+    /**
+     * Displays the title for post-format: galllery 
+     *
+     * Create your own quicksand_entry_header_postformat_gallery() function to override in a child theme.
+     *
+     * @since Quicksand 0.2.1
+     *
+     * @param string $class Optional. Class string of the header element.  
+     */
+    function quicksand_entry_header_postformat_gallery($class = 'quicksand-post-gallery') {
         global $post;
 
         // Make sure the post has a gallery in it
@@ -291,7 +325,7 @@ if (!function_exists('quicksand_entry_title_postformat_gallery')) :
 
         <!-- entry-header --> 
         <header class="card-header entry-header <?php echo esc_attr($class); ?>"> 
-            <div class="flexslider">
+            <div class="flexslider post-gallery">
                 <ul class="slides"> 
                     <?php
                     // Loop through each image in each gallery
@@ -309,9 +343,9 @@ endif;
 
 
 
-if (!function_exists('quicksand_the_default_entry_content')) :
+if (!function_exists('quicksand_the_entry_content')) :
 
-    function quicksand_the_default_entry_content($class = 'entry-content') {
+    function quicksand_the_entry_content($class = 'entry-content') {
         ?>  
         <!--the default post-format-->
         <div class="card-block  <?php echo $class; ?>"> 
@@ -359,16 +393,11 @@ if (!function_exists('quicksand_entry_content')) :
             case 'gallery':
                 // strip gallery-shortcode in list-view, because gallery is shown inside header as slider
                 if (!is_singular()) {
-                    add_filter('the_content', 'quicksand_remove_shortcode_from_content');
-                    ?>
-                    <div class="card-block  <?php echo $class; ?>"> 
-                        <a href="<?php the_permalink() ?>"><h2><?php the_title() ?></h2></a>
-                        <p class="card-text"><?php the_content(); ?></p>
-                    </div>  
-                    <?php
+                    add_filter('the_content', 'quicksand_remove_shortcode_from_content'); 
+                    quicksand_the_entry_content();
                     remove_filter('the_content', 'quicksand_remove_shortcode_from_content');
                 } else {
-                    quicksand_the_default_entry_content();
+                    quicksand_the_entry_content();
                 }
                 break;
 
@@ -379,7 +408,7 @@ if (!function_exists('quicksand_entry_content')) :
 //        case 'chat':
 //            break; 
             default:
-                quicksand_the_default_entry_content();
+                quicksand_the_entry_content();
         }
     }
 

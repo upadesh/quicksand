@@ -736,17 +736,19 @@ cite {
     max-height: 20rem;
     overflow: hidden;
     /*        .slides { 
-            li {
-                height: 100%; 
-                img {
-                    @extend .img-fluid; 
-                }
-            }
-        }*/ }
+                    li {
+                        height: 100%; 
+                        img {
+                            @extend .img-fluid; 
+                        }
+                    }
+                }*/ }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .flex-caption {
-    display: none; } }
+    display: none; }
+  .quicksand-post-gallery .flexslider {
+    max-height: 30rem; } }
 
 @media screen and (max-width: 860px) {
   .flex-direction-nav .flex-prev {

@@ -1,11 +1,11 @@
-<!--template: content-link--> 
+<!--template: content-quote--> 
 <article class="card" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
      
     <!--post excerpt-->
     <?php quicksand_entry_excerpt(); ?> 
 
     <!--post title-->
-    <?php quicksand_entry_title_postformat_link(); ?>
+    <?php quicksand_entry_title_postformat_quote(); ?>
 
     <!--post-meta--> 
     <?php quicksand_entry_meta(); ?>
