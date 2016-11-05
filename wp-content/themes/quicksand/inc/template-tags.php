@@ -269,35 +269,30 @@ if (!function_exists('quicksand_entry_title_postformat_gallery')) :
      * @param string $class Optional. Class string of the header element.  
      */
     function quicksand_entry_title_postformat_gallery($class = 'quicksand-post-gallery') {
-        $class = esc_attr($class);
         global $post;
 
         // Make sure the post has a gallery in it
         if (!has_shortcode($post->post_content, 'gallery'))
             return $content;
-
-        // Retrieve the first gallery in the post
-        $gallery = get_post_gallery_images($post);
-        ?> 
-
-
-        <!--       
-        TODO
-            kleiner ??? 
-            kein content bzw. nur text?
-            Title als Header darunter
-            keine nav unten
             
-            dasselbe mit videos
-        -->
+        // get gallery-images
+        // we don't use 'get_post_gallery images' in here, because it returns the thumbnaisl as well
+        $gallery = get_post_gallery($post, false);
+        $ids = explode(",", $gallery['ids']);
+        $images = array();
+
+        foreach ($ids as $id) { 
+            $images[] = wp_get_attachment_url($id); 
+        }
+        ?>  
 
         <!-- entry-header --> 
-        <header class="card-header entry-header <?php echo $class; ?>"> 
+        <header class="card-header entry-header <?php echo esc_attr($class); ?>"> 
             <div class="flexslider">
                 <ul class="slides"> 
                     <?php
                     // Loop through each image in each gallery
-                    foreach ($gallery as $image_url) {
+                    foreach ($images as $image_url) {
                         echo '<li>' . '<img src="' . $image_url . '">' . '</li>';
                     }
                     ?> 
@@ -326,6 +321,7 @@ if (!function_exists('quicksand_entry_content_single')) :
     function quicksand_entry_content_single($class = 'entry-content') {
         $class = esc_attr($class);
         $format = get_post_format();
+        $content = get_the_content();
 
         // include here your special template
         switch ($format) {
@@ -340,9 +336,19 @@ if (!function_exists('quicksand_entry_content_single')) :
 //                break;
 //            break;
             case 'link':
-            // content-link will display the link inside the header, sp in list-view just display the content
-//        case 'gallery':
-//            break;
+            // content-link will display the link inside the header, so in list-view just display the content
+            case 'gallery':
+                // strip gallery-shortcode
+                if (!is_singular()) {
+                    $content = strip_shortcodes($content);
+                }
+                ?>
+                <div class="card-block  <?php echo $class; ?>"> 
+                    <a href="<?php the_permalink() ?>"><h2><?php the_title() ?></h2></a>
+                    <p class="card-text"><?php the_content(); ?></p>
+                </div>  
+                <?php
+                break;
 //        case 'status':
 //            break;
 //        case 'audio':
@@ -350,11 +356,10 @@ if (!function_exists('quicksand_entry_content_single')) :
 //        case 'chat':
 //            break; 
             default:
-                ?> 
-
+                ?>  
                 <!--the default post-format-->
                 <div class="card-block  <?php echo $class; ?>"> 
-                    <p class="card-text"><?php the_content(); ?></p>
+                    <p class="card-text"><?php echo the_content(); ?></p>
                 </div>  
 
                 <!--displays page links for paginated posts (i.e. includes the <!–nextpage–>)--> 
@@ -593,6 +598,10 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
+
+
 
 
 

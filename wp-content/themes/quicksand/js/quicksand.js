@@ -51,13 +51,11 @@ jQuery(document).ready(function ($) {
             touch: true                    //{NEW} Boolean: Allow touch swipe navigation of the slider on touch-enabled devices
         });
     }
-    
+
     // flexslider header
-    var initFlexsliderPost = function () {
+    var initFlexsliderPostformatGallery = function () {
         $('.quicksand-post-gallery .flexslider').flexslider({
-            controlNav: false, 
-            
-            
+           controlNav: false,
             animation: "fade",
             direction: "horizontal",
             slideshowSpeed: 7000,
@@ -68,9 +66,9 @@ jQuery(document).ready(function ($) {
             easing: "swing", //{NEW} String: Determines the easing method used in jQuery transitions. jQuery easing plugin is supported! 
             reverse: false, //{NEW} Boolean: Reverse the animation direction
             animationLoop: true, //Boolean: Should the animation loop? If false, directionNav will received "disable" classes at either end
-            smoothHeight: false, //{NEW} Boolean: Allow height of the slider to animate smoothly in horizontal mode
+            smoothHeight: true, //{NEW} Boolean: Allow height of the slider to animate smoothly in horizontal mode
             startAt: 0, //Integer: The slide that the slider should start on. Array notation (0 = first slide)
-            slideshow: true, //Boolean: Animate slider automatically 
+            slideshow: false, //Boolean: Animate slider automatically 
             initDelay: 0, //{NEW} Integer: Set an initialization delay, in milliseconds
             randomize: false, //Boolean: Randomize slide order
             fadeFirstSlide: true, //Boolean: Fade in the first slide when animation type is "fade"
@@ -87,11 +85,11 @@ jQuery(document).ready(function ($) {
 
     // searchform in navbar
     var initSearchBar = function () {
-        $('.nav-search').on('click', function () {
 
-            var $navContent = $('.nav-content');
-            var $searchForm = $('.nav-searchform');
+        var $navContent = $('.nav-content');
+        var $searchForm = $('.nav-searchform');
 
+        $('.nav-search').on('click', function () { 
             $navContent.fadeOut('fast', function () {
                 $searchForm.removeClass('hidden-xs-up');
                 $searchForm.hide().slideDown('fast');
@@ -99,11 +97,7 @@ jQuery(document).ready(function ($) {
         });
 
         // replace searchform with nav 
-        $('.nav-search-cancel').on('click', function () {
-
-            var $navContent = $('.nav-content');
-            var $searchForm = $('.nav-searchform');
-
+        $('.nav-search-cancel').on('click', function () { 
             $searchForm.fadeOut('fast', function () {
                 $navContent.hide().slideDown('fast');
             });
@@ -131,12 +125,10 @@ jQuery(document).ready(function ($) {
 
     // slider in header
     initFlexsliderHeader();
-    
+
     // slider in post-head-overview
-    initFlexsliderPost();
+    initFlexsliderPostformatGallery();
 
     // lightgallery
-    initLightgallery();
-
-
+    initLightgallery(); 
 });

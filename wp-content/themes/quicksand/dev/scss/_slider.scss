@@ -1,3 +1,9 @@
+/*nav-arrows*/
+.flex-direction-nav a {
+    height: 80px !important;
+    top: 45%;
+}
+
 /*large slide in header*/
 .quicksand-slider-header-wrapper { 
     .flexslider { 
@@ -57,32 +63,26 @@
                 bottom: 10px;
                 z-index: 1000;
             }*/
-        .flex-direction-nav a {
-            height: 80px;
-            top: 45%;
-        }
     }
 }
 
 
 /*small slider in post-header*/
 .quicksand-post-gallery {
-    padding: 0 !important;
-    max-height: 5rem;
+    padding: 0 !important; 
     overflow: hidden;
-    
+
     .flexslider { 
         border: none !important;
         margin: 0;
 
         .slides { 
-            max-height: 30rem;  // adjustable in settings
             overflow: hidden; 
-            li { 
-                height: 100%;
-                position:relative;
+            li {
+                height: 100%; 
                 img {
                     @extend .img-fluid; 
+                    max-height: 20rem; 
                 }
             }
         }

@@ -125,7 +125,7 @@ if (!function_exists('quicksand_setup')) :
 //            'video',
 //            'quote',
             'link',
-//            'gallery',
+            'gallery',
 //            'status',
 //            'audio',
 //            'chat',
@@ -603,6 +603,8 @@ if (!function_exists('quicksand_modify_attachment_link')) :
 
     /**
      * replaces the image-link inside galleries
+     * - the url of the large image is needed when lightgallery is activated
+     * - also remove the href-attribute, because otherwise the customizer will get confused
      * 
      * @param type $content
      * @param type $post_id
@@ -962,4 +964,4 @@ require get_template_directory() . '/inc/QuicksandNavwalker.php';
 /**
 * Customizer additions.
 */
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/customizer.php'; 
