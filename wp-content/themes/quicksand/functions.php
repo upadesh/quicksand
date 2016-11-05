@@ -965,3 +965,10 @@ require get_template_directory() . '/inc/QuicksandNavwalker.php';
 * Customizer additions.
 */
 require get_template_directory() . '/inc/customizer.php'; 
+
+
+
+function remove_shortcode_from($content) {
+  $content = strip_shortcodes( $content );
+  return $content;
+}

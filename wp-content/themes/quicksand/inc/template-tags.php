@@ -274,15 +274,18 @@ if (!function_exists('quicksand_entry_title_postformat_gallery')) :
         // Make sure the post has a gallery in it
         if (!has_shortcode($post->post_content, 'gallery'))
             return $content;
-            
+
         // get gallery-images
-        // we don't use 'get_post_gallery images' in here, because it returns the thumbnaisl as well
+        // we don't use 'get_post_gallery images' in here, because it returns the thumbnails as well
         $gallery = get_post_gallery($post, false);
-        $ids = explode(",", $gallery['ids']);
         $images = array();
 
-        foreach ($ids as $id) { 
-            $images[] = wp_get_attachment_url($id); 
+        if (isset($gallery['ids'])) {
+            $ids = explode(",", $gallery['ids']);
+
+            foreach ($ids as $id) {
+                $images[] = wp_get_attachment_url($id);
+            }
         }
         ?>  
 
@@ -321,7 +324,6 @@ if (!function_exists('quicksand_entry_content_single')) :
     function quicksand_entry_content_single($class = 'entry-content') {
         $class = esc_attr($class);
         $format = get_post_format();
-        $content = get_the_content();
 
         // include here your special template
         switch ($format) {
@@ -336,19 +338,20 @@ if (!function_exists('quicksand_entry_content_single')) :
 //                break;
 //            break;
             case 'link':
-            // content-link will display the link inside the header, so in list-view just display the content
+            // content-link will display the link inside the header, so in list-view just display the default content
             case 'gallery':
-                // strip gallery-shortcode
+                // strip gallery-shortcode in list-view, because gallery is shown inside header as slider
                 if (!is_singular()) {
-                    $content = strip_shortcodes($content);
+                    add_filter('the_content', 'remove_shortcode_from');
+                    ?>
+                    <div class="card-block  <?php echo $class; ?>"> 
+                        <a href="<?php the_permalink() ?>"><h2><?php the_title() ?></h2></a>
+                        <p class="card-text"><?php the_content(); ?></p>
+                    </div>  
+                    <?php
+                    remove_filter('the_content', 'remove_shortcode_from');
+                    break;
                 }
-                ?>
-                <div class="card-block  <?php echo $class; ?>"> 
-                    <a href="<?php the_permalink() ?>"><h2><?php the_title() ?></h2></a>
-                    <p class="card-text"><?php the_content(); ?></p>
-                </div>  
-                <?php
-                break;
 //        case 'status':
 //            break;
 //        case 'audio':
@@ -598,6 +601,14 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
+
+
+
+
+
+
 
 
 
