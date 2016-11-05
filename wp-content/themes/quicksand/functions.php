@@ -866,49 +866,69 @@ if (!function_exists('quicksand_modify_read_more_link')) :
 endif;
 add_filter('the_content_more_link', 'quicksand_modify_read_more_link');
 
+
+
+
+if (!function_exists('quicksand_modify_archive_title')) :
+
+    /**
+     * Filter the default archive title.
+     * 
+     * @TODO expand the types
+     * @see http://wordpress.stackexchange.com/questions/175884/how-to-customize-the-archive-title
+     *
+     * @param string $title Archive title
+     * @return string $title
+     */
+    function quicksand_modify_archive_title($title) {
+
+        if (is_category()) {
+            $title = sprintf(__("Category", 'quicksand') . ":<h6 class='card-subtitle text-muted'>%s</h6>", single_cat_title('', false));
+        } elseif (is_tag()) {
+            $title = sprintf(__("Tag", 'quicksand') . ":<h6 class='card-subtitle text-muted'>%s</h6>", single_tag_title('', false));
+        } elseif (is_author()) {
+            $title = sprintf(__("Author", 'quicksand') . ":<h6 class='card-subtitle text-muted'>%s</h6>", '<span class="vcard">' . get_the_author() . '</span>');
+        } elseif (is_month()) {
+            $title = sprintf(__("Month", 'quicksand') . ":<h6 class='card-subtitle text-muted'>%s</h6>", get_the_date(_x('F Y', 'monthly archives date format')));
+        }
+
+        return $title;
+    }
+
+endif;
+
+add_filter('get_the_archive_title', 'quicksand_modify_archive_title');
+
+
+
+if (!function_exists('quicksand_remove_shortcode_from_content')) :
+    /**
+     * deletes shortcodes from the content
+     * i.e. called by quicksand_entry_content_single() to remove the gallery in list-view
+     * 
+     * @param type $content
+     * @return type
+     */
+    function quicksand_remove_shortcode_from_content($content) {
+        $content = strip_shortcodes($content);
+        return $content;
+    }
+
+endif;
+
+
+
 /**
- * Filter the default archive title.
- * 
- * @TODO expand the types
- * @see http://wordpress.stackexchange.com/questions/175884/how-to-customize-the-archive-title
+ * Add custom image sizes attribute to enhance responsive image functionality
+ * for content images
  *
- * @param string $title Archive title
- * @return string $title
+ * @since Quicksand 0.2.1
+ *
+ * @param string $sizes A source size value for use in a 'sizes' attribute.
+ * @param array  $size  Image size. Accepts an array of width and height
+ *                      values in pixels (in that order).
+ * @return string A source size value for use in a content image 'sizes' attribute.
  */
-function quicksands_modify_archive_title($title) { 
-
-    if (is_category()) {
-        $title = sprintf(__("Category",  'quicksand'). ":<h6 class='card-subtitle text-muted'>%s</h6>" , single_cat_title('', false)) ;
-    } elseif (is_tag()) { 
-        $title = sprintf(__("Tag",  'quicksand'). ":<h6 class='card-subtitle text-muted'>%s</h6>" , single_tag_title('', false)) ;
-    } elseif (is_author()) {
-        $title = sprintf(__("Author",  'quicksand'). ":<h6 class='card-subtitle text-muted'>%s</h6>" , '<span class="vcard">' . get_the_author() . '</span>'); 
-    }     
-    elseif (is_month()) {
-        $title = sprintf(__("Month",  'quicksand'). ":<h6 class='card-subtitle text-muted'>%s</h6>" , get_the_date( _x( 'F Y', 'monthly archives date format' ) )); 
-    }    
-
-    return $title; 
-
-} 
-
-add_filter( 'get_the_archive_title', 'quicksands_modify_archive_title' );
-
-
-
-
-
-/**
-* Add custom image sizes attribute to enhance responsive image functionality
-* for content images
-*
-* @since Quicksand 0.2.1
-*
-* @param string $sizes A source size value for use in a 'sizes' attribute.
-* @param array  $size  Image size. Accepts an array of width and height
-*                      values in pixels (in that order).
-* @return string A source size value for use in a content image 'sizes' attribute.
-*/
 //TODO
 //function quicksand_content_image_sizes_attr($sizes, $size) {
 //    $width = $size[0];
@@ -928,16 +948,16 @@ add_filter( 'get_the_archive_title', 'quicksands_modify_archive_title' );
 //add_filter('wp_calculate_image_sizes', 'quicksand_content_image_sizes_attr', 10, 2);
 
 /**
-* Add custom image sizes attribute to enhance responsive image functionality
-* for post thumbnails
-*
-* @since Quicksand 0.2.1
-*
-* @param array $attr Attributes for the image markup.
-* @param int   $attachment Image attachment ID.
-* @param array $size Registered image size or flat array of height and width dimensions.
-* @return string A source size value for use in a post thumbnail 'sizes' attribute.
-*/
+ * Add custom image sizes attribute to enhance responsive image functionality
+ * for post thumbnails
+ *
+ * @since Quicksand 0.2.1
+ *
+ * @param array $attr Attributes for the image markup.
+ * @param int   $attachment Image attachment ID.
+ * @param array $size Registered image size or flat array of height and width dimensions.
+ * @return string A source size value for use in a post thumbnail 'sizes' attribute.
+ */
 //function quicksand_post_thumbnail_sizes_attr($attr, $attachment, $size) {
 //    if ('post-thumbnail' === $size) {
 //        is_active_sidebar('sidebar-1') && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
@@ -952,23 +972,16 @@ add_filter( 'get_the_archive_title', 'quicksands_modify_archive_title' );
 
 
 /**
-* Custom template tags for this theme.
-*/
+ * Custom template tags for this theme.
+ */
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
-* Custom walker for the navbar 
-*/
+ * Custom walker for the navbar 
+ */
 require get_template_directory() . '/inc/QuicksandNavwalker.php';
 
 /**
-* Customizer additions.
-*/
-require get_template_directory() . '/inc/customizer.php'; 
-
-
-
-function remove_shortcode_from($content) {
-  $content = strip_shortcodes( $content );
-  return $content;
-}
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';

@@ -342,14 +342,14 @@ if (!function_exists('quicksand_entry_content_single')) :
             case 'gallery':
                 // strip gallery-shortcode in list-view, because gallery is shown inside header as slider
                 if (!is_singular()) {
-                    add_filter('the_content', 'remove_shortcode_from');
+                    add_filter('the_content', 'quicksand_remove_shortcode_from_content');
                     ?>
                     <div class="card-block  <?php echo $class; ?>"> 
                         <a href="<?php the_permalink() ?>"><h2><?php the_title() ?></h2></a>
                         <p class="card-text"><?php the_content(); ?></p>
                     </div>  
                     <?php
-                    remove_filter('the_content', 'remove_shortcode_from');
+                    remove_filter('the_content', 'quicksand_remove_shortcode_from_content');
                     break;
                 }
 //        case 'status':
