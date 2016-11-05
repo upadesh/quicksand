@@ -78,22 +78,28 @@
 
         max-height: 20rem; 
         overflow: hidden; 
-        
-/*        .slides { 
-            li {
-                height: 100%; 
-                img {
-                    @extend .img-fluid; 
-                }
-            }
-        }*/
+
+        /*        .slides { 
+                    li {
+                        height: 100%; 
+                        img {
+                            @extend .img-fluid; 
+                        }
+                    }
+                }*/
     }
 }
 
 
-@media (max-width: 768px) {
+
+@media (min-width: 768px) {
     .flex-caption {
         display: none;
+    }
+    .quicksand-post-gallery { 
+        .flexslider {
+            max-height: 30rem;  
+        }
     }
 }
 
