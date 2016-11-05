@@ -1,6 +1,13 @@
 <?php
 /**
  * The template for displaying search results pages
+ * 
+ * The expected workflow should be:
+ *  - get_template_part('template-parts/content', get_post_format());
+ *      - i.e. template-parts/content-single.php
+ *          - the content-files should act as a controler 
+ *          - from there the specific title-, meta-, content-functions or other are called
+ *          - these functions are located in template-tags.php 
  *
  * @package WordPress
  * @subpackage quicksand
