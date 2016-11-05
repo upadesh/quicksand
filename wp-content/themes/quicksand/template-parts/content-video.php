@@ -8,12 +8,14 @@
     if (!is_singular()) {
         quicksand_entry_header_postformat_video();
     }
-    quicksand_entry_title();
-
-//    if (is_singular()) {
-        quicksand_entry_meta();
-        quicksand_entry_content();
-//    }
+    quicksand_entry_title(); 
+    quicksand_entry_meta();
+    
+    if (!is_singular()) {
+        quicksand_the_entry_content_video();
+    } else {
+        quicksand_the_entry_content();
+    } 
 
     quicksand_entry_tags();
     quicksand_edit_post();

@@ -472,70 +472,7 @@ if (!function_exists('quicksand_the_entry_content_gallery')) :
         remove_filter('the_content', 'quicksand_remove_shortcode_from_content');
     }
 
-endif;
-
-
-
-if (!function_exists('quicksand_entry_content')) :
-
-    /**
-     * Displays the content. 
-     *
-     * Create your own quicksand_entry_content() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
-     *
-     * @param string $class Optional. Class string of the div element.  
-     */
-    function quicksand_entry_content($class = 'entry-content') {
-        global $post;
-
-        $class = esc_attr($class);
-        $format = get_post_format();
-
-
-        // TODO:
-        // switch has to go ... outsource it to the controller!!!!
-        // include here your special template
-        switch ($format) {
-            case 'video':
-                if (!is_singular()) {
-                    quicksand_the_entry_content_video();
-                } else {
-                    quicksand_the_entry_content();
-                }
-                break;
-            case 'quote':
-                quicksand_the_entry_content();
-                break;
-            case 'link':
-                quicksand_the_entry_content();
-                break;
-            case 'gallery':
-                if (!is_singular()) {
-                    quicksand_the_entry_content_gallery();
-                } else {
-                    quicksand_the_entry_content();
-                }
-                break;
-//        case 'aside':
-//            break;
-//        case 'image':
-//            break;
-//        case 'status':
-//            break;
-//        case 'audio':
-//            break;
-//        case 'chat':
-//            break; 
-            default:
-                quicksand_the_entry_content();
-        }
-    }
-
-endif;
-
-
+endif; 
 
 
 if (!function_exists('quicksand_paginated_posts_paginator')) :

@@ -914,7 +914,7 @@ if (!function_exists('quicksand_remove_shortcode_from_content')) :
 
     /**
      * deletes shortcodes from the content
-     * i.e. called by quicksand_entry_content() to remove the gallery in list-view
+     * i.e. called by quicksand_the_entry_content_gallery() to remove the gallery in list-view
      * 
      * @param type $content
      * @return type

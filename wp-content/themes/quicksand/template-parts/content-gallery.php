@@ -18,7 +18,13 @@
     <?php quicksand_entry_meta(); ?>
 
     <!--post-content--> 
-    <?php quicksand_entry_content(); ?> 
+    <?php
+    if (!is_singular()) {
+        quicksand_the_entry_content_gallery();
+    } else {
+        quicksand_the_entry_content();
+    }
+    ?> 
 
     <!--edit-link-->
     <?php quicksand_entry_tags(); ?>  
