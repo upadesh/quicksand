@@ -253,14 +253,9 @@ if (!function_exists('quicksand_customizer_css')) :
 
             /*content: postformats*/
             /*quote*/ 
-            .site-main-container .post-quote  p {
-                margin-top: 1rem;
-                margin-bottom: 1rem;
+            .site-main-container .post-quote  p { 
                 color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]); ?>;
             }
-            .site-main-container .post-quote blockquote {
-                margin-bottom: 0;
-            } 
 
 
 

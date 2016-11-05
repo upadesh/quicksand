@@ -559,6 +559,16 @@ cite {
     -moz-column-count: 3 !important;
          column-count: 3 !important; } }
 
+/* post-formats */
+.card-header .post-quote p {
+  margin-top: 16px;
+  margin-top: 1rem;
+  margin-bottom: 16px;
+  margin-bottom: 1rem; }
+
+.card-header .post-quote blockquote {
+  margin-bottom: 0; }
+
 /*biography*/
 .author-bio .avatar {
   float: left-xs-left; }

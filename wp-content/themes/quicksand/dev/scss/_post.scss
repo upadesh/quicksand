@@ -192,3 +192,19 @@
         column-count: 3 !important;
     }
 }
+
+
+
+/* post-formats */
+/* quote*/
+.card-header { 
+    .post-quote {
+        p {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        blockquote {
+            margin-bottom: 0;
+        } 
+    }
+}
