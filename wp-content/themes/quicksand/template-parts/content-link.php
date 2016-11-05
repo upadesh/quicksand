@@ -1,6 +1,6 @@
 <!--template: content-link--> 
 <article class="card" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-     
+
     <!--post excerpt-->
     <?php quicksand_entry_excerpt(); ?> 
 
@@ -12,7 +12,10 @@
 
     <!--post-content--> 
     <?php quicksand_entry_content(); ?> 
-    
+
+    <!--edit-link-->
+    <?php quicksand_entry_tags(); ?>  
+
     <!--edit-link-->
     <?php quicksand_edit_post(); ?> 
 

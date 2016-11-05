@@ -1,19 +1,21 @@
 <!--template: content-quote--> 
 <article class="card" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-     
-    <!--post excerpt-->
-    <?php quicksand_entry_excerpt(); ?> 
 
-    <!--post title-->
-    <?php quicksand_entry_title_postformat_quote(); ?>
+    <?php
+    quicksand_entry_excerpt();
 
-    <!--post-meta--> 
-    <?php quicksand_entry_meta(); ?>
-
-    <!--post-content--> 
-    <?php quicksand_entry_content(); ?> 
+    if (!is_singular()) {
+        quicksand_entry_header_postformat_quote();
+    }
+    quicksand_entry_title();
     
-    <!--edit-link-->
-    <?php quicksand_edit_post(); ?> 
+    if (is_singular()) {
+        quicksand_entry_meta();
+        quicksand_entry_content();
+    } 
+
+    quicksand_entry_tags();
+    quicksand_edit_post();
+    ?>   
 
 </article><!-- .post-->  

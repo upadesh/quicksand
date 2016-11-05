@@ -257,34 +257,33 @@ endif;
 
 
 
-if (!function_exists('quicksand_entry_title_postformat_quote')) :
+if (!function_exists('quicksand_entry_header_postformat_quote')) :
 
     /**
      * Displays the title for post-format: quote 
      *
-     * Create your own quicksand_entry_title_postformat_quote() function to override in a child theme.
+     * Create your own quicksand_entry_header_postformat_quote() function to override in a child theme.
      *
      * @since Quicksand 0.2.1
      *
      * @param string $class Optional. Class string of the header element.  
      */
-    function quicksand_entry_title_postformat_quote($class = 'entry-title') {
+    function quicksand_entry_header_postformat_quote($class = 'entry-title') {
         $class = esc_attr($class);
         ?> 
 
         <!-- entry-header --> 
-        <header class="card-header entry-header">
+        <header class="card-header entry-header <?php echo esc_attr($class); ?>">
             <!--stick post-->
             <?php if (is_sticky() && is_home() && !is_paged()) : ?>
                 <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
             <?php endif; ?>
 
-            <div class="post-quote">  
-                <h1 class="card-title <?php echo $class; ?>">
-                    <a href="<?php echo get_url_in_content(get_the_content()); ?>" target="_blank"><i class="fa fa-link" aria-hidden="true"></i> <?php the_title(); ?></a> 
-                </h1> 
-            </div><!-- .post-link -->
-        </header><!-- .entry-header --> 
+            <div class="post-quote">      
+                <?php esc_html(the_content()); ?> 
+            </div><!-- .post-quote --> 
+        </header><!-- .entry-header -->  
+        
         <?php
     }
 
@@ -384,16 +383,18 @@ if (!function_exists('quicksand_entry_content')) :
 //            break;
 //        case 'video':
 //            break;
-//        case 'quote':
-//                get_template_part('template-parts/content-single', get_post_format());
-//                break;
-//            break;
-//            case 'link':
-            // content-link will display the link inside the header, so in list-view just display the default content
+            case 'quote':
+                // just display the default content
+                quicksand_the_entry_content();
+                break;
+            case 'link':
+                // just display the default content
+                quicksand_the_entry_content();
+                break;
             case 'gallery':
                 // strip gallery-shortcode in list-view, because gallery is shown inside header as slider
                 if (!is_singular()) {
-                    add_filter('the_content', 'quicksand_remove_shortcode_from_content'); 
+                    add_filter('the_content', 'quicksand_remove_shortcode_from_content');
                     quicksand_the_entry_content();
                     remove_filter('the_content', 'quicksand_remove_shortcode_from_content');
                 } else {
@@ -642,6 +643,14 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
+
+
+
+
+
+
 
 
 

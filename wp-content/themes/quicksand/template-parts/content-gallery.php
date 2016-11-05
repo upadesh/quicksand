@@ -21,6 +21,9 @@
     <?php quicksand_entry_content(); ?> 
 
     <!--edit-link-->
+    <?php quicksand_entry_tags(); ?>  
+
+    <!--edit-link-->
     <?php quicksand_edit_post(); ?> 
 
 </article><!-- .post-->  

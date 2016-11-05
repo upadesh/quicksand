@@ -123,7 +123,7 @@ if (!function_exists('quicksand_setup')) :
 //            'aside',
 //            'image',
 //            'video',
-//            'quote',
+            'quote',
             'link',
             'gallery',
 //            'status',
@@ -250,6 +250,18 @@ if (!function_exists('quicksand_customizer_css')) :
             .site-main-container a { 
                 color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme['colors'][2]); ?>;
             }  
+
+            /*content: postformats*/
+            /*quote*/ 
+            .site-main-container .post-quote  p {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]); ?>;
+            }
+            .site-main-container .post-quote blockquote {
+                margin-bottom: 0;
+            } 
+
 
 
             /*bootstrap pagination*/ 
@@ -902,6 +914,7 @@ add_filter('get_the_archive_title', 'quicksand_modify_archive_title');
 
 
 if (!function_exists('quicksand_remove_shortcode_from_content')) :
+
     /**
      * deletes shortcodes from the content
      * i.e. called by quicksand_entry_content() to remove the gallery in list-view
