@@ -121,14 +121,14 @@ if (!function_exists('quicksand_setup')) :
          */
         add_theme_support('post-formats', array(
 //            'aside',
+//            'status',
+//            'chat',
 //            'image',
-            'video',
             'quote',
             'link',
+            'audio',
             'gallery',
-//            'status',
-//            'audio',
-//            'chat',
+            'video',
         ));
 
 

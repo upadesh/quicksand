@@ -255,6 +255,40 @@ if (!function_exists('quicksand_entry_title_postformat_link')) :
 endif;
 
 
+if (!function_exists('quicksand_entry_title_postformat_audio')) :
+
+    /**
+     * Displays the title for post-format: audio 
+     *
+     * Create your own quicksand_entry_title_postformat_audio() function to override in a child theme.
+     *
+     * @since Quicksand 0.2.1
+     *
+     * @param string $class Optional. Class string of the header element.  
+     */
+    function quicksand_entry_title_postformat_audio($class = 'entry-title') {
+        $class = esc_attr($class);
+        ?> 
+
+        <!-- entry-header --> 
+        <header class="card-header entry-header">
+            <!--stick post-->
+            <?php if (is_sticky() && is_home() && !is_paged()) : ?>
+                <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
+            <?php endif; ?>
+
+            <div class="post-link">  
+                <h1 class="card-title <?php echo $class; ?>">
+                    <a href="<?php echo esc_attr(get_the_permalink()); ?>"><i class="fa fa-music" aria-hidden="true"></i> <?php the_title(); ?></a> 
+                </h1> 
+            </div><!-- .post-link -->
+        </header><!-- .entry-header --> 
+        <?php
+    }
+
+endif;
+
+
 
 
 if (!function_exists('quicksand_entry_header_postformat_quote')) :
@@ -375,6 +409,11 @@ endif;
 
 if (!function_exists('quicksand_the_entry_content')) :
 
+    /**
+     * outputs default content 
+     * 
+     * @param type $class
+     */
     function quicksand_the_entry_content($class = 'entry-content') {
         ?>  
         <!--the default post-format-->
@@ -392,9 +431,13 @@ endif;
 
 if (!function_exists('quicksand_the_entry_content_video')) :
 
+    /**
+     * outputs video-content 
+     * 
+     * @param type $class
+     */
     function quicksand_the_entry_content_video($class = 'entry-content') {
-        ?>  
-        <!--the default post-format-->
+        ?>   
         <div class="card-block  <?php echo $class; ?>"> 
             <p class="card-text"><?php
                 // get rid of embedded objects/videos
@@ -417,7 +460,12 @@ endif;
 
 
 if (!function_exists('quicksand_the_entry_content_gallery')) :
-    
+
+    /**
+     * outputs gallery-content 
+     * 
+     * @param type $class
+     */
     function quicksand_the_entry_content_gallery($class = 'entry-content') {
         add_filter('the_content', 'quicksand_remove_shortcode_from_content');
         quicksand_the_entry_content();
@@ -445,18 +493,12 @@ if (!function_exists('quicksand_entry_content')) :
         $class = esc_attr($class);
         $format = get_post_format();
 
-        
+
         // TODO:
         // switch has to go ... outsource it to the controller!!!!
-        
         // include here your special template
         switch ($format) {
-//        case 'aside':
-//            break;
-//        case 'image':
-//            break;
             case 'video':
-                // just display the default content
                 if (!is_singular()) {
                     quicksand_the_entry_content_video();
                 } else {
@@ -464,22 +506,22 @@ if (!function_exists('quicksand_entry_content')) :
                 }
                 break;
             case 'quote':
-                // just display the default content
                 quicksand_the_entry_content();
                 break;
             case 'link':
-                // just display the default content
                 quicksand_the_entry_content();
                 break;
             case 'gallery':
-                // strip gallery-shortcode in list-view, because gallery is shown inside header as slider
                 if (!is_singular()) {
                     quicksand_the_entry_content_gallery();
                 } else {
                     quicksand_the_entry_content();
                 }
                 break;
-
+//        case 'aside':
+//            break;
+//        case 'image':
+//            break;
 //        case 'status':
 //            break;
 //        case 'audio':
@@ -721,6 +763,8 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
 
 
 
