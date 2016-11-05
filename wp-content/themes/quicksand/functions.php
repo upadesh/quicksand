@@ -904,7 +904,7 @@ add_filter('get_the_archive_title', 'quicksand_modify_archive_title');
 if (!function_exists('quicksand_remove_shortcode_from_content')) :
     /**
      * deletes shortcodes from the content
-     * i.e. called by quicksand_entry_content_single() to remove the gallery in list-view
+     * i.e. called by quicksand_entry_content() to remove the gallery in list-view
      * 
      * @param type $content
      * @return type

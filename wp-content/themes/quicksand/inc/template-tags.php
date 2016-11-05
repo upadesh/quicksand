@@ -310,18 +310,18 @@ endif;
 
 
 
-if (!function_exists('quicksand_entry_content_single')) :
+if (!function_exists('quicksand_entry_content')) :
 
     /**
      * Displays the content. 
      *
-     * Create your own quicksand_entry_content_single() function to override in a child theme.
+     * Create your own quicksand_entry_content() function to override in a child theme.
      *
      * @since Quicksand 0.2.1
      *
      * @param string $class Optional. Class string of the div element.  
      */
-    function quicksand_entry_content_single($class = 'entry-content') {
+    function quicksand_entry_content($class = 'entry-content') {
         $class = esc_attr($class);
         $format = get_post_format();
 

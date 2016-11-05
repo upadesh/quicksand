@@ -30,7 +30,7 @@
     <?php quicksand_entry_meta(); ?>
 
     <!--post-content--> 
-    <?php quicksand_entry_content_single(); ?>
+    <?php quicksand_entry_content(); ?>
 
     <!--author-biography-->
     <?php quicksand_author_biography(); ?>
