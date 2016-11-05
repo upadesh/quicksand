@@ -292,18 +292,18 @@ span.btn.btn-secondary, .card .entry-content span.btn-secondary.read-more-link, 
  * main sidebar / widget file
  * place in here all rules which should be assigned to all sidebars
  */
-.widget {
-  /* general */ }
-  .widget .widget-title {
-    font-size: 20.8px;
-    font-size: 1.3rem; }
-  .widget .tagcloud {
-    padding: 3.2px;
-    padding: .2rem; }
-  .widget select {
-    width: 100%;
-    border: none;
-    border-radius: 0; }
+.widget .widget-title {
+  font-size: 20.8px;
+  font-size: 1.3rem; }
+
+.widget .tagcloud {
+  padding: 3.2px;
+  padding: .2rem; }
+
+.widget select {
+  width: 100%;
+  border: none;
+  border-radius: 0; }
 
 /* === Font Awesome for some widgets === */
 /*
