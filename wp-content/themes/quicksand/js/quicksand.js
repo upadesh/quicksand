@@ -68,7 +68,7 @@ jQuery(document).ready(function ($) {
             animationLoop: true, //Boolean: Should the animation loop? If false, directionNav will received "disable" classes at either end
             smoothHeight: true, //{NEW} Boolean: Allow height of the slider to animate smoothly in horizontal mode
             startAt: 0, //Integer: The slide that the slider should start on. Array notation (0 = first slide)
-            slideshow: false, //Boolean: Animate slider automatically 
+            slideshow: true, //Boolean: Animate slider automatically 
             initDelay: 0, //{NEW} Integer: Set an initialization delay, in milliseconds
             randomize: false, //Boolean: Randomize slide order
             fadeFirstSlide: true, //Boolean: Fade in the first slide when animation type is "fade"

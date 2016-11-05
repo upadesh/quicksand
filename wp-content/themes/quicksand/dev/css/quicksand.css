@@ -731,14 +731,18 @@ cite {
   overflow: hidden; }
   .quicksand-post-gallery .flexslider {
     border: none !important;
-    margin: 0; }
-    .quicksand-post-gallery .flexslider .slides {
-      overflow: hidden; }
-      .quicksand-post-gallery .flexslider .slides li {
-        height: 100%; }
-        .quicksand-post-gallery .flexslider .slides li img {
-          max-height: 320px;
-          max-height: 20rem; }
+    margin: 0;
+    max-height: 320px;
+    max-height: 20rem;
+    overflow: hidden;
+    /*        .slides { 
+            li {
+                height: 100%; 
+                img {
+                    @extend .img-fluid; 
+                }
+            }
+        }*/ }
 
 @media (max-width: 768px) {
   .flex-caption {
@@ -1323,7 +1327,7 @@ mark,
 dl.row > dd + dt {
   clear: left; }
 
-.img-fluid, .widget .featured-image img, .quicksand-slider-header-wrapper .flexslider .slides li img, .quicksand-post-gallery .flexslider .slides li img, .carousel-inner > .carousel-item > img,
+.img-fluid, .widget .featured-image img, .quicksand-slider-header-wrapper .flexslider .slides li img, .carousel-inner > .carousel-item > img,
 .carousel-inner > .carousel-item > a > img {
   max-width: 100%;
   height: auto; }

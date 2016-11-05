@@ -76,16 +76,17 @@
         border: none !important;
         margin: 0;
 
-        .slides { 
-            overflow: hidden; 
+        max-height: 20rem; 
+        overflow: hidden; 
+        
+/*        .slides { 
             li {
                 height: 100%; 
                 img {
                     @extend .img-fluid; 
-                    max-height: 20rem; 
                 }
             }
-        }
+        }*/
     }
 }
 
