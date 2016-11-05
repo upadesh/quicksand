@@ -292,10 +292,18 @@ span.btn.btn-secondary, .card .entry-content span.btn-secondary.read-more-link, 
  * main sidebar / widget file
  * place in here all rules which should be assigned to all sidebars
  */
-/* general */
-.widget-title {
-  font-size: 20.8px;
-  font-size: 1.3rem; }
+.widget {
+  /* general */ }
+  .widget .widget-title {
+    font-size: 20.8px;
+    font-size: 1.3rem; }
+  .widget .tagcloud {
+    padding: 3.2px;
+    padding: .2rem; }
+  .widget select {
+    width: 100%;
+    border: none;
+    border-radius: 0; }
 
 /* === Font Awesome for some widgets === */
 /*
@@ -1343,7 +1351,7 @@ mark,
 dl.row > dd + dt {
   clear: left; }
 
-.img-fluid, .widget .featured-image img, .quicksand-slider-header-wrapper .flexslider .slides li img, .carousel-inner > .carousel-item > img,
+.img-fluid, .widget .textwidget img, .widget .featured-image img, .quicksand-slider-header-wrapper .flexslider .slides li img, .carousel-inner > .carousel-item > img,
 .carousel-inner > .carousel-item > a > img {
   max-width: 100%;
   height: auto; }

@@ -4,11 +4,26 @@
  */
 
 
-
-/* general */
-.widget-title {
-    font-size: 1.3rem;
+.widget {
+    /* general */
+    .widget-title {
+        font-size: 1.3rem;
+    }
+    .textwidget {
+        img {
+            @extend .img-fluid;
+        }
+    }
+    .tagcloud {
+        padding: .2rem;
+    }
+    select {
+        width: 100%;   
+        border: none;
+        border-radius: 0;
+    }   
 }
+
 
 
 
@@ -85,3 +100,5 @@
         padding: .5rem;
     }
 } 
+
+
