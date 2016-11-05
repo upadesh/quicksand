@@ -847,6 +847,8 @@ if (!function_exists('quicksand_bootstrap_wrap_oembed')) :
      * @return string html
      */
     function quicksand_bootstrap_wrap_oembed($html) {
+        // TODO: this doesn't match only videos?!?!? What about fitvids()
+    
         // strip width and height 
         $html = preg_replace('/(width|height)="\d*"\s/', "", $html);
 

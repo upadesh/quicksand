@@ -10,10 +10,10 @@
     }
     quicksand_entry_title();
 
-    if (is_singular()) {
+//    if (is_singular()) {
         quicksand_entry_meta();
         quicksand_entry_content();
-    }
+//    }
 
     quicksand_entry_tags();
     quicksand_edit_post();

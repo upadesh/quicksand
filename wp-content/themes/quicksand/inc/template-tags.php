@@ -390,6 +390,43 @@ if (!function_exists('quicksand_the_entry_content')) :
 endif;
 
 
+if (!function_exists('quicksand_the_entry_content_video')) :
+
+    function quicksand_the_entry_content_video($class = 'entry-content') {
+        ?>  
+        <!--the default post-format-->
+        <div class="card-block  <?php echo $class; ?>"> 
+            <p class="card-text"><?php
+                // get rid of embedded objects/videos
+                $content = get_the_content();
+                $content = preg_replace("/<embed[^>]+>/i", "", $content, 1);
+                $pattern = "/(?i)\b((?:https?:\/\/|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))/";
+                $content = preg_replace($pattern, '', $content);
+
+                echo $content;
+                ?></p>
+        </div>  
+
+        <!--displays page links for paginated posts (i.e. includes the <!–nextpage–>)--> 
+        <?php
+        quicksand_paginated_posts_paginator();
+    }
+
+endif;
+
+
+
+if (!function_exists('quicksand_the_entry_content_gallery')) :
+    
+    function quicksand_the_entry_content_gallery($class = 'entry-content') {
+        add_filter('the_content', 'quicksand_remove_shortcode_from_content');
+        quicksand_the_entry_content();
+        remove_filter('the_content', 'quicksand_remove_shortcode_from_content');
+    }
+
+endif;
+
+
 
 if (!function_exists('quicksand_entry_content')) :
 
@@ -408,6 +445,10 @@ if (!function_exists('quicksand_entry_content')) :
         $class = esc_attr($class);
         $format = get_post_format();
 
+        
+        // TODO:
+        // switch has to go ... outsource it to the controller!!!!
+        
         // include here your special template
         switch ($format) {
 //        case 'aside':
@@ -416,7 +457,11 @@ if (!function_exists('quicksand_entry_content')) :
 //            break;
             case 'video':
                 // just display the default content
-                quicksand_the_entry_content();
+                if (!is_singular()) {
+                    quicksand_the_entry_content_video();
+                } else {
+                    quicksand_the_entry_content();
+                }
                 break;
             case 'quote':
                 // just display the default content
@@ -429,9 +474,7 @@ if (!function_exists('quicksand_entry_content')) :
             case 'gallery':
                 // strip gallery-shortcode in list-view, because gallery is shown inside header as slider
                 if (!is_singular()) {
-                    add_filter('the_content', 'quicksand_remove_shortcode_from_content');
-                    quicksand_the_entry_content();
-                    remove_filter('the_content', 'quicksand_remove_shortcode_from_content');
+                    quicksand_the_entry_content_gallery();
                 } else {
                     quicksand_the_entry_content();
                 }
@@ -678,6 +721,12 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
+
+
+
+
 
 
 
