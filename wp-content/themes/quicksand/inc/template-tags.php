@@ -415,9 +415,9 @@ if (!function_exists('quicksand_the_entry_content')) :
      * @param type $class
      */
     function quicksand_the_entry_content($class = 'entry-content') {
-        ?>  
-        <!--the default post-format-->
-        <div class="card-block  <?php echo $class; ?>"> 
+        ?>   
+        <!--quicksand-entry-content-default-->
+        <div class="card-block quicksand-default-entry-content <?php echo $class; ?>"> 
             <p class="card-text"><?php echo the_content(); ?></p>
         </div>  
 
@@ -438,7 +438,8 @@ if (!function_exists('quicksand_the_entry_content_video')) :
      */
     function quicksand_the_entry_content_video($class = 'entry-content') {
         ?>   
-        <div class="card-block  <?php echo $class; ?>"> 
+        <!--quicksand-entry-content-video-->
+        <div class="card-block quicksand-entry-content-video <?php echo $class; ?>"> 
             <p class="card-text"><?php
                 // get rid of embedded objects/videos
                 $content = get_the_content();
@@ -468,11 +469,11 @@ if (!function_exists('quicksand_the_entry_content_gallery')) :
      */
     function quicksand_the_entry_content_gallery($class = 'entry-content') {
         add_filter('the_content', 'quicksand_remove_shortcode_from_content');
-        quicksand_the_entry_content();
+        quicksand_the_entry_content(); 
         remove_filter('the_content', 'quicksand_remove_shortcode_from_content');
     }
 
-endif; 
+endif;
 
 
 if (!function_exists('quicksand_paginated_posts_paginator')) :
@@ -700,6 +701,8 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
 
 
 
