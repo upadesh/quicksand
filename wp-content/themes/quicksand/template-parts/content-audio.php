@@ -1,5 +1,5 @@
 <!--template: content-audio--> 
-<article class="card" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article d="post-<?php the_ID(); ?>" <?php post_class("card"); ?>>
 
     <!--post excerpt-->
     <?php quicksand_entry_excerpt(); ?> 

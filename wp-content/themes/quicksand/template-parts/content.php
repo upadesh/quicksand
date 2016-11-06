@@ -1,6 +1,6 @@
 <!--template: content-->
 <!-- post --> 
-<article class="card" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>   
+<article id="post-<?php the_ID(); ?>" <?php post_class("card"); ?>>   
     <!--post thumbnail-->
     <?php quicksand_entry_thumbnail(); ?> 
 

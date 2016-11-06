@@ -1,5 +1,5 @@
 <!--template: content-quote--> 
-<article class="card" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("card"); ?>>
 
     <?php
     quicksand_entry_excerpt();
