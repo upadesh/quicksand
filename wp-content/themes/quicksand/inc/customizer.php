@@ -408,21 +408,6 @@ function quicksand_customize_register($wp_customize) {
     ));
     
 
-
-
-
-    // Google fonts 
-    $wp_customize->add_setting('quicksand_google_font_list', array(
-        'default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
-    ));
-    $wp_customize->add_control(new Google_Font_Dropdown_Custom_Control($wp_customize, 'quicksand_google_font_list', array(
-        'label' => 'Google Font',
-        'section' => 'quicksand_content',
-        'settings' => 'quicksand_google_font_list',
-        'priority' => 10,
-    )));
-
     // lightgallery
     $wp_customize->add_setting("qs_content_use_lightgallery", array(
         'default' => $colorSchemeDefault['settings']['qs_content_use_lightgallery'],
@@ -437,7 +422,19 @@ function quicksand_customize_register($wp_customize) {
         'type' => 'checkbox',
         'settings' => 'qs_content_use_lightgallery',
         'priority' => 10,
+    )); 
+
+    // Google fonts 
+    $wp_customize->add_setting('quicksand_google_font', array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
     ));
+    $wp_customize->add_control(new Google_Font_Dropdown_Custom_Control($wp_customize, 'quicksand_google_font', array(
+        'label' => 'Google Font',
+        'section' => 'quicksand_content',
+        'settings' => 'quicksand_google_font',
+        'priority' => 10,
+    )));
 
 
     // bg-color
@@ -801,6 +798,7 @@ function quicksand_get_color_schemes() {
                 'qs_slider_height' => 30,
                 'qs_header_hide_when_slider_enabled' => 0,
                 'qs_slider_margin_top' => 0,
+                'quicksand_google_font' => 'Raleway'
             ),
             'colors' => array(
 //                background_color
@@ -865,6 +863,7 @@ function quicksand_get_color_schemes() {
                 'qs_slider_height' => 30,
                 'qs_header_hide_when_slider_enabled' => 0,
                 'qs_slider_margin_top' => 2,
+                'quicksand_google_font' => 'Arvo'
             ),
             'colors' => array(
 //                background_color
@@ -1162,7 +1161,9 @@ if (class_exists('WP_Customize_Control')) {
 
 
 
-
+// needed until class is available
+if (!class_exists('WP_Customize_Control'))
+    return NULL;
  
 
 /**
@@ -1183,7 +1184,7 @@ class Google_Font_Dropdown_Custom_Control extends WP_Customize_Control {
             <span class="customize-control-title"><?php echo esc_html($this->label); ?></span>
             <select id="<?php echo esc_attr($this->id); ?>" name="<?php echo esc_attr($this->id); ?>" data-customize-setting-link="<?php echo esc_attr($this->id); ?>">
                 <?php
-                foreach ($this->fonts as $k => $v) {
+                foreach ($this->fonts as $k => $v) {  
                     echo '<option value="' . $v['family'] . '" ' . selected($this->value(), $v['family'], false) . '>' . $v['family'] . '</option>';
                 }
                 ?>
@@ -1193,13 +1194,14 @@ class Google_Font_Dropdown_Custom_Control extends WP_Customize_Control {
     }
 
     public function get_google_fonts() {
-        if (get_transient('mytheme_google_font_list')) {
-            $content = get_transient('mytheme_google_font_list');
+        if (get_transient('quicksand_google_font_list')) {
+            $content = get_transient('quicksand_google_font_list');
         } else {
+            // TODO: api-key
             $googleApi = 'https://www.googleapis.com/webfonts/v1/webfonts?sort=alpha&key=AIzaSyCYyaK5zIV-hXC3AB_TcZM3udJGgzNZbb8';
             $fontContent = wp_remote_get($googleApi, array('sslverify' => false));
             $content = json_decode($fontContent['body'], true);
-            set_transient('mytheme_google_font_list', $content, 0);
+            set_transient('quicksand_google_font_list', $content, 0);
         }
 
         return $content['items'];

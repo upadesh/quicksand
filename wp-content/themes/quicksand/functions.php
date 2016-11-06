@@ -172,7 +172,15 @@ if (!function_exists('quicksand_customizer_css')) :
         $colorScheme = quicksand_get_color_scheme();
         ?>
 
-        <style type="text/css">  
+        <style type="text/css">   
+
+
+            * {
+                font-family: '<?php echo get_theme_mod('quicksand_google_font', quicksand_get_color_scheme()['settings']['quicksand_google_font']); ?>', sans-serif;
+            }
+
+
+
             /*navigation*/
             .site-navigation,
             .site-nav-container nav.navbar,
@@ -223,7 +231,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 ?>
                 background: rgba(<?php echo esc_html(join(",", $rgba)) ?>); 
             }
-            
+
             a.flex-active {
                 background: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]); ?> !important;
             }
@@ -278,7 +286,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 background: <?php echo get_theme_mod('qs_content_link_color', $colorScheme['colors'][2]); ?>;
                 border-color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme['colors'][2]); ?>;
             }
- 
+
 
             /*2nd text color*/  
             .bypostauthor,
@@ -456,13 +464,16 @@ if (!function_exists('quicksand_get_google_fonts')) :
      * 
      * @return string
      */
-    function quicksand_get_google_fonts() {
+    function quicksand_get_google_fonts($font = NULL) {
 
         $fonts = array();
 
         /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-        if ('off' !== _x('on', 'Raleway font: on or off', 'quicksand')) {
-            $fonts[] = 'Raleway:400,700,900,400italic,700italic,900italic';
+        // just a last fallback
+        $font = !empty($font) ? $font : 'Raleway';
+
+        if ('off' !== _x('on', $font . ' font: on or off', 'quicksand')) {
+            $fonts[] = $font . ':400,700,900,400italic,700italic,900italic';
         }
 
         if ('off' !== _x('on', 'Rokkitt font: on or off', 'quicksand')) {
@@ -490,8 +501,7 @@ if (!function_exists('quicksand_fonts_url')) :
      * @return string Google fonts URL for the theme.
      */
     function quicksand_fonts_url() {
-
-        $fonts = quicksand_get_google_fonts();
+        $fonts = quicksand_get_google_fonts(get_theme_mod('quicksand_google_font', quicksand_get_color_scheme()['settings']['quicksand_google_font']));
         $fonts_url = '';
         $subsets = 'latin,latin-ext';
 
@@ -507,11 +517,7 @@ if (!function_exists('quicksand_fonts_url')) :
 
 endif;
 
-function quicksand_get_fonts() {
-    wp_enqueue_style('quicksand-fonts', quicksand_fonts_url(), array(), null);
-}
 
-add_action('wp_enqueue_scripts', 'quicksand_get_fonts');
 
 
 
@@ -538,9 +544,6 @@ if (!function_exists('quicksand_styles')) :
      */
     function quicksand_styles() {
 
-//    /*   REGISTER ALL CSS FOR SITE */
-//    wp_register_style('pr_woocommerce',get_stylesheet_directory_uri().'/css/_woocommerce.css');
-//    wp_register_style('pr_mobile',get_stylesheet_directory_uri().'/css/mobile.css');  
         global $quicksand_version;
 
         // check if custom-thememod exists 
@@ -552,8 +555,12 @@ if (!function_exists('quicksand_styles')) :
             $styleSheetToLoad = get_template_directory_uri() . '/css/quicksand.min.css';
         }
 
+
         // Theme stylesheet-description
         wp_enqueue_style('quicksand-desc-style', get_stylesheet_uri());
+
+        // fonts
+        wp_enqueue_style('quicksand-fonts', quicksand_fonts_url(), array(), null);
 
         // Theme stylesheet
         wp_enqueue_style('quicksand-style-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), $quicksand_version);
@@ -853,7 +860,6 @@ if (!function_exists('quicksand_bootstrap_wrap_oembed')) :
      */
     function quicksand_bootstrap_wrap_oembed($html) {
         // TODO: this doesn't match only videos?!?!? What about fitvids()
-    
         // strip width and height 
         $html = preg_replace('/(width|height)="\d*"\s/', "", $html);
 
@@ -929,7 +935,7 @@ if (!function_exists('quicksand_remove_shortcode_from_content')) :
         return $content;
     }
 
-endif; 
+endif;
 
 
 /**
@@ -1001,4 +1007,3 @@ require get_template_directory() . '/inc/QuicksandNavwalker.php';
 require get_template_directory() . '/inc/customizer.php';
 
 
- 
