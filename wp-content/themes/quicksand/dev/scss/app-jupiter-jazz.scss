@@ -1,10 +1,17 @@
 /**
+ * Color-Theme: Jupiter Jazz 
+ * 
+ * quicksand-color-schemes are named after episodes of the anime-series 'Cowboy Bebob'
+ *
+ * @see https://en.wikipedia.org/wiki/List_of_Cowboy_Bebop_episodes
+ *
  * write your scss-code in a separeted file
- */
+ */ 
+
 /* change bootsrap-vars in here */
-/*@import 'grids';
+@import 'grids';
 @import 'colors';
-@import 'variables-dune';
+@import 'variables-jupiter-jazz';
 
 @import 'fonts';
 @import 'navbar';
@@ -20,8 +27,9 @@
 @import 'comments';
 
 @import 'scaffold';
-@import 'slider';*/
+@import 'slider';
+
 /* import bootstrap at the very last end, so we can use it's variables */
-/*@import "node_modules/bootstrap/scss/bootstrap.scss";*/
+@import "node_modules/bootstrap/scss/bootstrap.scss";
 /* if you want to use mixins of bootstrap, it only works afterwards*/
-/*@import "bootstrap-pagination.scss";*/
+@import "bootstrap-pagination.scss";

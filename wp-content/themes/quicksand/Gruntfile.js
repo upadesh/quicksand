@@ -135,7 +135,7 @@ module.exports = function (grunt) {
                 files: {
                     // use @import in main file
                     'dev/css/<%= pkg.name %>.css': 'dev/scss/app.scss',
-                    'dev/css/<%= pkg.name %>-dune.css': 'dev/scss/app-dune.scss'
+//                    'dev/css/<%= pkg.name %>-jupiter-jazz.css': 'dev/scss/app-jupiter-jazz.scss'
                 }
             }
         },

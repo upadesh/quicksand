@@ -37,8 +37,7 @@ get_header();
         ?>   
         <!--posts-navigation-->
         <div class="post-pagination">
-            <?php
-            // TODO: test, auslagern zum child überschreiben & weils übersichtlicher ist
+            <?php 
             if (is_singular('attachment')) {
                 // Parent post navigation.
                 the_post_navigation(array(

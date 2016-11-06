@@ -18,6 +18,7 @@
     } 
 
     quicksand_entry_tags();
+    quicksand_author_biography(); 
     quicksand_edit_post();
     ?>    
 

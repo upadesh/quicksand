@@ -769,7 +769,7 @@ function quicksand_get_color_schemes() {
      */
     return apply_filters('quicksand_color_schemes', array(
         'default' => array(
-            'label' => __('Default', 'quicksand'),
+            'label' => __('Asteroid Blues', 'quicksand'),
             'settings' => array(
                 'qs_nav_fullwidth' => 1,
                 'qs_header_show_front' => 0,
@@ -832,8 +832,8 @@ function quicksand_get_color_schemes() {
             ),
         ),
 //        https://www.mediaevent.de/tutorial/farbcodes.html
-        'dune' => array(
-            'label' => __('Dune', 'quicksand'),
+        'jupiter-jazz' => array(
+            'label' => __('Jupiter Jazz', 'quicksand'),
             'settings' => array(
                 'qs_nav_fullwidth' => 0,
                 'qs_header_show_front' => 0,

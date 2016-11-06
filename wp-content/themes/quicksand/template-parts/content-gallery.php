@@ -28,6 +28,9 @@
 
     <!--edit-link-->
     <?php quicksand_entry_tags(); ?>  
+    
+    <!--author-bio-->
+    <?php quicksand_author_biography(); ?> 
 
     <!--edit-link-->
     <?php quicksand_edit_post(); ?> 
