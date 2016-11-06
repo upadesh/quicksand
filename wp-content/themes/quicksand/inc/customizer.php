@@ -432,11 +432,11 @@ function quicksand_customize_register($wp_customize) {
     $wp_customize->add_control(new Google_Font_Dropdown_Custom_Control($wp_customize, 'quicksand_google_font', array(
         'label' => 'Google Font',
         'section' => 'quicksand_content',
-        'settings' => 'quicksand_google_font', 
+        'settings' => 'quicksand_google_font',
         'priority' => 10,
     )));
 
-    
+
     // Google API Key
     $wp_customize->add_setting('qs_content_google_api_key', array(
         'default' => '',
@@ -449,10 +449,10 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_content',
         'settings' => 'qs_content_google_api_key',
         'priority' => 10,
-        'description' => __('You need an API-Key to use Google Fonts. Create one <a href="https://console.developers.google.com/" target="_blank">here</a>, enter it & reload the page.', 'quicksand'),
+        'description' => __('You need an API-Key to use Google Fonts. Create one <a href="https://console.developers.google.com/" target="_blank">here</a>, save it & reload the page.', 'quicksand'),
         'type' => 'text',
     )));
-    
+
 
     // font-size
     $wp_customize->add_setting('qs_content_font_size', array(
@@ -1227,17 +1227,10 @@ class Google_Font_Dropdown_Custom_Control extends WP_Customize_Control {
     }
 
     public function get_google_fonts() {
-//        delete_transient('quicksand_google_font_list');
-//        if (get_transient('quicksand_google_font_list')) {
-//            $content = get_transient('quicksand_google_font_list');
-//        } else {
-            $googleApi = 'https://www.googleapis.com/webfonts/v1/webfonts?sort=alpha&key='.get_theme_mod('qs_content_google_api_key','');
-            $fontContent = wp_remote_get($googleApi, array('sslverify' => false));
-            $content = json_decode($fontContent['body'], true);
-            set_transient('quicksand_google_font_list', $content, 0);
-//        }
+        $googleApi = 'https://www.googleapis.com/webfonts/v1/webfonts?sort=alpha&key=' . get_theme_mod('qs_content_google_api_key', '');
+        $fontContent = wp_remote_get($googleApi, array('sslverify' => false));
+        $content = json_decode($fontContent['body'], true);  
 
-        
         return isset($content['items']) ? $content['items'] : NULL;
     }
 

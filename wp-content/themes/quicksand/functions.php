@@ -172,11 +172,16 @@ if (!function_exists('quicksand_customizer_css')) :
         $colorScheme = quicksand_get_color_scheme();
         ?>
 
-        <style type="text/css">   
+        <style type="text/css">
 
             body,html {
                 font-size: <?php echo get_theme_mod('qs_content_font_size', quicksand_get_color_scheme()['settings']['qs_content_font_size']); ?>px;
-                font-family: '<?php echo get_theme_mod('quicksand_google_font', quicksand_get_color_scheme()['settings']['quicksand_google_font']); ?>', sans-serif;
+
+                /*only include google-font if api-key is present*/
+                <?php
+                if (get_theme_mod('qs_content_google_api_key', FALSE) && get_theme_mod('quicksand_google_font', FALSE)) { ?>
+                    font-family: '<?php echo get_theme_mod('quicksand_google_font', quicksand_get_color_scheme()['settings']['quicksand_google_font']); ?>', sans-serif;
+                <?php } ?> 
             }
 
 
@@ -467,20 +472,12 @@ if (!function_exists('quicksand_get_google_fonts')) :
     function quicksand_get_google_fonts($font = NULL) {
 
         $fonts = array();
-
-        /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
         // just a last fallback
         $font = !empty($font) ? $font : 'Raleway';
 
+        /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
         if ('off' !== _x('on', $font . ' font: on or off', 'quicksand')) {
-            $fonts[] = $font . ':400,700,900,400italic,700italic,900italic';
-        }
-
-        if ('off' !== _x('on', 'Rokkitt font: on or off', 'quicksand')) {
-            $fonts[] = 'Rokkitt:400,700,900,400italic,700italic,900italic';
-        }
-        if ('off' !== _x('on', 'Source Code Pro: on or off', 'quicksand')) {
-            $fonts[] = 'Source Code Pro:400,700,900,400italic,700italic,900italic';
+            $fonts[] = $font . ':400,400i,700,700i,900,900i';
         }
 
         return $fonts;
@@ -502,13 +499,9 @@ if (!function_exists('quicksand_fonts_url')) :
      */
     function quicksand_fonts_url() {
         $hasApiKey = get_theme_mod('qs_content_google_api_key', FALSE);
-
-        // quicksand_get_google_fonts()
-        // muss gekürzt werden, da ja eigentlich alle da sind
-        // heisst nur wenn api & font da dann wird es bemüht ansonsten
-        // alle lokal
+        $isSetGoogleFont = get_theme_mod('quicksand_google_font', FALSE);
         
-        if ($hasApiKey) {
+        if ($hasApiKey && $isSetGoogleFont) {
             $fonts = quicksand_get_google_fonts(get_theme_mod('quicksand_google_font', quicksand_get_color_scheme()['settings']['quicksand_google_font']));
             $fonts_url = '';
             $subsets = 'latin,latin-ext';
@@ -570,17 +563,16 @@ if (!function_exists('quicksand_styles')) :
         // Theme stylesheet-description
         wp_enqueue_style('quicksand-desc-style', get_stylesheet_uri());
 
-        // fonts
+        // google-fonts
         $urlGoogleFonts = quicksand_fonts_url();
         if ($urlGoogleFonts) {
             wp_enqueue_style('quicksand-fonts', $urlGoogleFonts, array(), null);
-//            die restlichen 3 
-        } else {
-            // alle 4 lokal
         }
 
-        // Theme stylesheet
+        // font-awesome
         wp_enqueue_style('quicksand-style-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), $quicksand_version);
+
+        // theme stylesheet
         wp_enqueue_style('quicksand-style-theme', $styleSheetToLoad, array(), $quicksand_version);
 
         // lightgallery

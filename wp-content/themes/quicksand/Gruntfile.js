@@ -24,6 +24,12 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: [{
+                        // Fonts - Google
+                        expand: true,
+                        cwd: 'dev/fonts', 
+                        src: ['./**'],
+                        dest: 'fonts/'
+                    }, {
                         // Fonts - Font-Awesome
                         expand: true,
                         cwd: 'node_modules/font-awesome/fonts',

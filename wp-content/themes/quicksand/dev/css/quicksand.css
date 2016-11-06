@@ -6,6 +6,9 @@
  */
 /* change bootsrap-vars in here */
 /**
+ * Fonts
+ */
+/**
  * grid-patterns
  */
 /* one-column */
@@ -85,9 +88,6 @@ span.btn.btn-secondary, .card .entry-content span.btn-secondary.read-more-link, 
 .input-group-btn {
   background: #9ab7ac; }
 
-/**
- * Fonts
- */
 /**
  * primary navigation 
  */

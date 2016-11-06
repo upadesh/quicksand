@@ -13,4 +13,21 @@ Tags: grid-layout, flexible-header, custom-background, custom-colors, custom-hea
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
-*/
+*/ 
+
+/* local fonts have to defined at the beginning */
+@font-face {
+    font-family: Raleway;  
+    src: url(fonts/Raleway/Raleway-Regular.ttf);  
+    font-weight: normal;  
+}
+@font-face {
+    font-family: Rokkitt;  
+    src: url(fonts/Rokkitt/Rokkitt-Regular.ttf);  
+    font-weight: normal;  
+}
+@font-face {
+    font-family: Source Code Pro;  
+    src: url(fonts/Source_Code_Pro/SourceCodePro-Regular.ttf);  
+    font-weight: normal;  
+}
