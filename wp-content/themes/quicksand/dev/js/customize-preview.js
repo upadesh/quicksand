@@ -455,4 +455,14 @@
         });
     });
 
+    wp.customize('qs_content_font_size', function (value) {
+        value.bind(function (qs_content_font_size) {
+
+            var fontSize = 'body,html';
+
+            $(fontSize).css('font-size', qs_content_font_size + 'px');
+            customizePseudoElements('qs_content_font_size', qs_content_font_size);
+        });
+    });
+
 })(jQuery); 

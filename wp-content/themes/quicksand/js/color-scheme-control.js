@@ -25,6 +25,8 @@
                     api('qs_header_hide_when_slider_enabled').set(colorScheme[value]['settings']['qs_header_hide_when_slider_enabled']);
                     api('qs_slider_margin_top').set(colorScheme[value]['settings']['qs_slider_margin_top']);  
                     api('quicksand_google_font').set(colorScheme[value]['settings']['quicksand_google_font']);  
+                    api('qs_content_font_size').set(colorScheme[value]['settings']['qs_content_font_size']);  
+                    
                     
                     // colors
                     var colors = colorScheme[value].colors;  

@@ -174,8 +174,8 @@ if (!function_exists('quicksand_customizer_css')) :
 
         <style type="text/css">   
 
-
-            * {
+            body,html {
+                font-size: <?php echo get_theme_mod('qs_content_font_size', quicksand_get_color_scheme()['settings']['qs_content_font_size']); ?>px;
                 font-family: '<?php echo get_theme_mod('quicksand_google_font', quicksand_get_color_scheme()['settings']['quicksand_google_font']); ?>', sans-serif;
             }
 

@@ -145,7 +145,7 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'slider_count', array(
-        'label' => __('Number of posts', 'theme_name'),
+        'label' => __('Number of posts', 'quicksand'),
         'section' => 'quicksand_slider_section',
         'settings' => 'qs_slider_count',
         'priority' => 40,
@@ -406,7 +406,7 @@ function quicksand_customize_register($wp_customize) {
         'settings' => 'qs_content_masonry',
         'priority' => 10,
     ));
-    
+
 
     // lightgallery
     $wp_customize->add_setting("qs_content_use_lightgallery", array(
@@ -422,7 +422,7 @@ function quicksand_customize_register($wp_customize) {
         'type' => 'checkbox',
         'settings' => 'qs_content_use_lightgallery',
         'priority' => 10,
-    )); 
+    ));
 
     // Google fonts 
     $wp_customize->add_setting('quicksand_google_font', array(
@@ -436,6 +436,20 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 10,
     )));
 
+    // font-size
+    $wp_customize->add_setting('qs_content_font_size', array(
+        'default' => '16',
+        'sanitize_callback' => 'prefix_sanitize_integer',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'content_font_size', array(
+        'label' => __('Font Size', 'quicksand'),
+        'section' => 'quicksand_content',
+        'settings' => 'qs_content_font_size',
+        'priority' => 10,
+        'type' => 'text',
+    )));
 
     // bg-color
     $wp_customize->add_setting('qs_content_background_color', array(
@@ -790,7 +804,7 @@ function quicksand_get_color_schemes() {
                 'qs_content_fullwidth' => 0,
                 'qs_biography_show' => 1,
                 'qs_sidebar_border_width' => 1,
-                'qs_content_masonry' => 1,
+                'qs_content_masonry' => 0,
                 'qs_content_use_lightgallery' => 1,
                 'qs_slider_enabled' => 1,
                 'qs_slider_fullwidth' => 1,
@@ -798,7 +812,8 @@ function quicksand_get_color_schemes() {
                 'qs_slider_height' => 30,
                 'qs_header_hide_when_slider_enabled' => 0,
                 'qs_slider_margin_top' => 0,
-                'quicksand_google_font' => 'Raleway'
+                'quicksand_google_font' => 'Raleway',
+                'qs_content_font_size' => 16
             ),
             'colors' => array(
 //                background_color
@@ -855,7 +870,7 @@ function quicksand_get_color_schemes() {
                 'qs_content_fullwidth' => 0,
                 'qs_biography_show' => 1,
                 'qs_sidebar_border_width' => 3,
-                'qs_content_masonry' => 0,
+                'qs_content_masonry' => 1,
                 'qs_content_use_lightgallery' => 0,
                 'qs_slider_enabled' => 0,
                 'qs_slider_fullwidth' => 0,
@@ -863,7 +878,8 @@ function quicksand_get_color_schemes() {
                 'qs_slider_height' => 30,
                 'qs_header_hide_when_slider_enabled' => 0,
                 'qs_slider_margin_top' => 2,
-                'quicksand_google_font' => 'Arvo'
+                'quicksand_google_font' => 'Arvo',
+                'qs_content_font_size' => 16
             ),
             'colors' => array(
 //                background_color
@@ -1164,7 +1180,6 @@ if (class_exists('WP_Customize_Control')) {
 // needed until class is available
 if (!class_exists('WP_Customize_Control'))
     return NULL;
- 
 
 /**
  * A class to create a dropdown for all google fonts
@@ -1184,7 +1199,7 @@ class Google_Font_Dropdown_Custom_Control extends WP_Customize_Control {
             <span class="customize-control-title"><?php echo esc_html($this->label); ?></span>
             <select id="<?php echo esc_attr($this->id); ?>" name="<?php echo esc_attr($this->id); ?>" data-customize-setting-link="<?php echo esc_attr($this->id); ?>">
                 <?php
-                foreach ($this->fonts as $k => $v) {  
+                foreach ($this->fonts as $k => $v) {
                     echo '<option value="' . $v['family'] . '" ' . selected($this->value(), $v['family'], false) . '>' . $v['family'] . '</option>';
                 }
                 ?>
@@ -1207,4 +1222,8 @@ class Google_Font_Dropdown_Custom_Control extends WP_Customize_Control {
         return $content['items'];
     }
 
+}
+
+function prefix_sanitize_integer($input) {
+    return absint($input);
 }
