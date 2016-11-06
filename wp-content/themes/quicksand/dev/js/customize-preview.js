@@ -249,7 +249,8 @@
             .site-content .card-header.entry-header h5>a, \n\
             .site-content .card-header.entry-header h6>a';
 
-            background = '.quicksand-slider-header-wrapper .flexslider .slides h2';
+            background = '.quicksand-slider-header-wrapper .flexslider .slides h2,\n\
+            a.flex-active';
 
             $(color).css('color', qs_content_secondary_text_color);
             $(background).css('background', hex2rgba_convert(qs_content_secondary_text_color, .5));

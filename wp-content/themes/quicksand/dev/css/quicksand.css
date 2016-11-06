@@ -859,6 +859,14 @@ cite {
                     }
                 }*/ }
 
+/*navigation*/
+.flex-control-paging li a {
+  width: 27.2px !important;
+  width: 1.7rem !important;
+  height: 8px !important;
+  height: .5rem !important;
+  border-radius: 0 !important; }
+
 @media (min-width: 768px) {
   .flex-caption {
     display: none; }

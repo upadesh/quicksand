@@ -223,6 +223,10 @@ if (!function_exists('quicksand_customizer_css')) :
                 ?>
                 background: rgba(<?php echo esc_html(join(",", $rgba)) ?>); 
             }
+            
+            a.flex-active {
+                background: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]); ?> !important;
+            }
 
 
             /*site-header*/
@@ -274,7 +278,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 background: <?php echo get_theme_mod('qs_content_link_color', $colorScheme['colors'][2]); ?>;
                 border-color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme['colors'][2]); ?>;
             }
-
+ 
 
             /*2nd text color*/  
             .bypostauthor,
