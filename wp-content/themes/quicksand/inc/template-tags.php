@@ -392,12 +392,15 @@ if (!function_exists('quicksand_entry_header_postformat_video')) :
         // get first video in content 
         $content = apply_filters('the_content', $post->post_content);
         $embeds = get_media_embedded_in_content($content);
+        if(empty($embeds)) {
+            return;
+        }
         ?>  
 
         <!-- entry-header --> 
         <header class="card-header entry-header <?php echo esc_attr($class); ?>"> 
             <div class="video post-video">
-                <?php echo $embeds[0]; ?>
+                <?php  echo $embeds[0]; ?>
             </div><!-- .post-video -->  
         </header><!-- .entry-header --> 
         <?php
