@@ -9,12 +9,13 @@
         font-size: 1.3rem;
     }
     .textwidget {
+        padding: .75rem 1.25rem;
         img {
             @extend .img-fluid;
         }
     }
     .tagcloud {
-        padding: .2rem;
+        padding: .75rem 1.25rem;
     }
     select {
         width: 100%;   

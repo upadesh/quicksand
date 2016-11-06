@@ -102,9 +102,6 @@
 }  
 
 @media (min-width: 768px) {
-    .flex-caption {
-        display: none;
-    }
     .quicksand-post-gallery { 
         .flexslider {
             max-height: 30rem;  
@@ -112,7 +109,10 @@
     }
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 768px) {
+    .flex-caption {
+        display: none;
+    }
     .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
     .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
 }  

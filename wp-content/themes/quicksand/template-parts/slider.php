@@ -31,7 +31,7 @@ if ($the_query->have_posts()) {
             while ($the_query->have_posts()) : $the_query->the_post();
                 echo '<li>';
                 if ((function_exists('has_post_thumbnail')) && ( has_post_thumbnail() )) :
-                    echo get_the_post_thumbnail();
+                    esc_html(the_post_thumbnail());
                 endif;
 
                 echo '<a href="' . get_permalink() . '"><div class="flex-caption">';

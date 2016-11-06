@@ -365,9 +365,13 @@ span.btn.btn-secondary, .card .entry-content span.btn-secondary.read-more-link, 
   font-size: 20.8px;
   font-size: 1.3rem; }
 
+.widget .textwidget {
+  padding: 12px 20px;
+  padding: .75rem 1.25rem; }
+
 .widget .tagcloud {
-  padding: 3.2px;
-  padding: .2rem; }
+  padding: 12px 20px;
+  padding: .75rem 1.25rem; }
 
 .widget select {
   width: 100%;
@@ -495,6 +499,10 @@ cite {
 
 /*
  * Main file for post-layout
+ *
+ * @hint    please use the common-classes for styling
+ * 
+ * @see     http://www.wpbeginner.com/wp-themes/default-wordpress-generated-css-cheat-sheet-for-beginners/
  */
 /* featured sticky post */
 /* post-meta */
@@ -637,17 +645,17 @@ cite {
          column-count: 3 !important; } }
 
 /* post-formats */
-/* quote*/
-.card-header .post-quote p {
-  margin-top: 16px;
-  margin-top: 1rem;
-  margin-bottom: 16px;
-  margin-bottom: 1rem; }
-
-.card-header .post-quote blockquote {
+/* quote */
+.format-quote .card-header blockquote {
   margin-bottom: 0; }
+  .format-quote .card-header blockquote p {
+    margin-top: 16px;
+    margin-top: 1rem;
+    margin-bottom: 16px;
+    margin-bottom: 1rem; }
 
-.card-header.quicksand-post-video {
+/* video */
+.format-video .card-header.quicksand-post-video {
   padding: 0; }
 
 /*biography*/
@@ -868,12 +876,12 @@ cite {
   border-radius: 0 !important; }
 
 @media (min-width: 768px) {
-  .flex-caption {
-    display: none; }
   .quicksand-post-gallery .flexslider {
     max-height: 30rem; } }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 768px) {
+  .flex-caption {
+    display: none; }
   .flex-direction-nav .flex-prev {
     opacity: 1;
     left: 10px; }
