@@ -501,18 +501,29 @@ if (!function_exists('quicksand_fonts_url')) :
      * @return string Google fonts URL for the theme.
      */
     function quicksand_fonts_url() {
-        $fonts = quicksand_get_google_fonts(get_theme_mod('quicksand_google_font', quicksand_get_color_scheme()['settings']['quicksand_google_font']));
-        $fonts_url = '';
-        $subsets = 'latin,latin-ext';
+        $hasApiKey = get_theme_mod('qs_content_google_api_key', FALSE);
 
-        if ($fonts) {
-            $fonts_url = add_query_arg(array(
-                'family' => urlencode(implode('|', $fonts)),
-                'subset' => urlencode($subsets),
-                    ), 'https://fonts.googleapis.com/css');
+        // quicksand_get_google_fonts()
+        // muss gekürzt werden, da ja eigentlich alle da sind
+        // heisst nur wenn api & font da dann wird es bemüht ansonsten
+        // alle lokal
+        
+        if ($hasApiKey) {
+            $fonts = quicksand_get_google_fonts(get_theme_mod('quicksand_google_font', quicksand_get_color_scheme()['settings']['quicksand_google_font']));
+            $fonts_url = '';
+            $subsets = 'latin,latin-ext';
+
+            if ($fonts) {
+                $fonts_url = add_query_arg(array(
+                    'family' => urlencode(implode('|', $fonts)),
+                    'subset' => urlencode($subsets),
+                        ), 'https://fonts.googleapis.com/css');
+            }
+
+            return $fonts_url;
         }
 
-        return $fonts_url;
+        return FALSE;
     }
 
 endif;
@@ -560,7 +571,13 @@ if (!function_exists('quicksand_styles')) :
         wp_enqueue_style('quicksand-desc-style', get_stylesheet_uri());
 
         // fonts
-        wp_enqueue_style('quicksand-fonts', quicksand_fonts_url(), array(), null);
+        $urlGoogleFonts = quicksand_fonts_url();
+        if ($urlGoogleFonts) {
+            wp_enqueue_style('quicksand-fonts', $urlGoogleFonts, array(), null);
+//            die restlichen 3 
+        } else {
+            // alle 4 lokal
+        }
 
         // Theme stylesheet
         wp_enqueue_style('quicksand-style-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), $quicksand_version);
