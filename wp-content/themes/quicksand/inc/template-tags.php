@@ -21,7 +21,7 @@ if (!function_exists('quicksand_entry_meta')) :
         echo '<div class="card-block entry-meta">';
 
         // only show what is saved in array 'qs_content_show_meta'
-        $onlyShowThisMetaInfo = get_theme_mod("qs_content_show_meta");
+        $onlyShowThisMetaInfo = get_theme_mod("qs_content_show_meta", quicksand_get_color_scheme()['settings']['qs_content_show_meta']);
 
         // nothing to show
         if (empty($onlyShowThisMetaInfo)) {

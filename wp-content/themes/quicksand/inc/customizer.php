@@ -474,46 +474,15 @@ function quicksand_customize_register($wp_customize) {
         'settings' => 'qs_content_font_size',
         'priority' => 10,
         'type' => 'text',
-    )));
-
-
-
-
-    /**
-     * meta 
-     *       'date' => 1,
-     *       'author' => 1,
-     *       'post-format' => 0,
-     *       'taxonomies' => 0,
-     *       'comments' => 1,
-     */
-//    foreach ($colorSchemeDefault['settings']['qs_content_show_meta'] as $meta => $value) {
-//        $wp_customize->add_setting("qs_content_show_meta_" . $meta, array(
-//            'default' => $colorSchemeDefault['settings']['qs_content_show_meta'][$meta],
-//            'type' => 'theme_mod',
-//            'transport' => 'refresh',
-//            'sanitize_callback' => 'quicksand_sanitize_checkbox',
-//        ));
-//
-//        $wp_customize->add_control('qs_content_show_meta_' . $meta, array(
-//            'label' => __("Content Fullwidth", 'quicksand'),
-//            'section' => 'quicksand_content',
-//            'type' => 'checkbox',
-//            'settings' => 'qs_content_show_meta_' . $meta,
-//            'priority' => 10,
-//        ));
-//    }
-
-
+    )));  
+    
+    
+    // meta
     $wp_customize->add_setting(
-            'qs_content_show_meta', array('default' => array('comments'),
+            'qs_content_show_meta', array('default' => $colorSchemeDefault['settings']['qs_content_show_meta'],
         'sanitize_callback' => 'quicksand_sanitize_meta_checkboxes'
     ));
-    
-    // defaults
-    // speichern???? wo gehts hin
-    // get_them_mod(qs_content_show_meta) -> array????
-
+     
     $wp_customize->add_control(
             new QuicksandCustomizeControlCheckboxMultiple($wp_customize, 'qs_content_show_meta', array(
         'section' => 'quicksand_content',
@@ -897,11 +866,11 @@ function quicksand_get_color_schemes() {
                 'quicksand_google_font' => 'Raleway',
                 'qs_content_font_size' => 16,
                 'qs_content_show_meta' => array(
-                    'date' => 0,
-                    'author' => 0,
-                    'post-format' => 1,
-                    'taxonomies' => 1,
-                    'comments' => 0,
+                    'date',
+                    'taxonomies' ,
+                    'comments',
+//                    'post-format',
+//                    'author' 
                 )
             ),
             'colors' => array(
@@ -969,11 +938,11 @@ function quicksand_get_color_schemes() {
                 'quicksand_google_font' => 'Abel',
                 'qs_content_font_size' => 16,
                 'qs_content_show_meta' => array(
-                    'date' => 1,
-                    'author' => 1,
-                    'post-format' => 0,
-                    'taxonomies' => 0,
-                    'comments' => 1,
+                    'date',
+                    'taxonomies' ,
+                    'comments',
+                    'post-format',
+                    'author' 
                 )
             ),
             'colors' => array(
