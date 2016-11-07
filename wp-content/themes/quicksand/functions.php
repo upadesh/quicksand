@@ -294,6 +294,7 @@ if (!function_exists('quicksand_customizer_css')) :
 
             /*2nd text color*/  
             .bypostauthor,
+            .quicksand_search_title,
             .quicksand_archive_title,
             .site-content .card-header.entry-header h1,
             .site-content .card-header.entry-header h2,
