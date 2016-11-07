@@ -6036,7 +6036,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
  * the import of bootstrap ("node_modules/bootstrap/scss/bootstrap.scss")
  */
 /*
-.bs-pagination {
+.quicksand-post-pagination-list-view {
     @extend text-xs-xenter
     width: 100%;
     text-align: center;

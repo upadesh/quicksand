@@ -67,10 +67,10 @@
 
 
 
-        style += '.bs-pagination .navigation.pagination .nav-links .page-numbers:focus,'
-                + '.bs-pagination .navigation.pagination .nav-links a:hover.page-numbers , '
-                + '.bs-pagination .navigation.pagination .nav-links .page-numbers:hover,'
-                + '.bs-pagination .navigation.pagination .nav-links .page-numbers.current:hover {'
+        style += '.quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers:focus,'
+                + '.quicksand-post-pagination-list-view .navigation.pagination .nav-links a:hover.page-numbers , '
+                + '.quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers:hover,'
+                + '.quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers.current:hover {'
                 + '    color: ' + hoverDefaults.qs_content_background_color + ';'
                 + '    background: ' + hoverDefaults.qs_content_link_color + ';'
                 + '    border-color: ' + hoverDefaults.qs_content_link_color + ';'
@@ -189,11 +189,11 @@
             background = '.site-main-container,\n\
             .site-main-container .navigation.pagination .nav-links .page-numbers ';
 
-            color = '.bs-pagination .navigation.pagination .nav-links .page-numbers:focus, \n\
-            .bs-pagination .navigation.pagination .nav-links a:hover.page-numbers , \n\
-            .bs-pagination .navigation.pagination .nav-links .page-numbers.current, \n\
-            .bs-pagination .navigation.pagination .nav-links .page-numbers:hover, \n\
-            .bs-pagination .navigation.pagination .nav-links .page-numbers.current:hover';
+            color = '.quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers:focus, \n\
+            .quicksand-post-pagination-list-view .navigation.pagination .nav-links a:hover.page-numbers , \n\
+            .quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers.current, \n\
+            .quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers:hover, \n\
+            .quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers.current:hover';
 
             $(background).css('background', qs_content_background_color);
             $(color).css('color', qs_content_background_color);
@@ -218,11 +218,11 @@
             .site-main-container a ';
 
             borderColor = '.site-main-container .navigation.pagination .nav-links .page-numbers , \n\
-            .bs-pagination .navigation.pagination .nav-links .page-numbers:focus, \n\
-            .bs-pagination .navigation.pagination .nav-links a:hover.page-numbers , \n\
-            .bs-pagination .navigation.pagination .nav-links .page-numbers.current, \n\
-            .bs-pagination .navigation.pagination .nav-links .page-numbers:hover, \n\
-            .bs-pagination .navigation.pagination .nav-links .page-numbers.current:hover ';
+            .quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers:focus, \n\
+            .quicksand-post-pagination-list-view .navigation.pagination .nav-links a:hover.page-numbers , \n\
+            .quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers.current, \n\
+            .quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers:hover, \n\
+            .quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers.current:hover ';
 
             $(color).css('color', qs_content_link_color);
             $(borderColor).css('border-color', qs_content_link_color);

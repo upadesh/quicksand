@@ -281,11 +281,11 @@ if (!function_exists('quicksand_customizer_css')) :
                 background: <?php echo get_theme_mod('qs_content_background_color', $colorScheme['colors'][1]); ?>;
                 border-color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme['colors'][2]); ?>;
             }  
-            .bs-pagination .navigation.pagination .nav-links .page-numbers:focus,
-            .bs-pagination .navigation.pagination .nav-links a:hover.page-numbers ,
-            .bs-pagination .navigation.pagination .nav-links .page-numbers.current,
-            .bs-pagination .navigation.pagination .nav-links .page-numbers:hover,
-            .bs-pagination .navigation.pagination .nav-links .page-numbers.current:hover {
+            .quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers:focus,
+            .quicksand-post-pagination-list-view .navigation.pagination .nav-links a:hover.page-numbers ,
+            .quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers.current,
+            .quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers:hover,
+            .quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers.current:hover {
                 color: <?php echo get_theme_mod('qs_content_background_color', $colorScheme['colors'][1]); ?>;
                 background: <?php echo get_theme_mod('qs_content_link_color', $colorScheme['colors'][2]); ?>;
                 border-color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme['colors'][2]); ?>;

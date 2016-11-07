@@ -515,7 +515,7 @@ if (!function_exists('quicksand_bs_style_paginator')) :
      */
     function quicksand_bs_style_paginator() {
         ?>
-        <div class="bs-pagination">
+        <div class="quicksand-post-pagination-list-view">
             <?php
             // navigation: post-list 
             the_posts_pagination(array(
