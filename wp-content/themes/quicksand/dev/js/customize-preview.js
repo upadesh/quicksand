@@ -235,6 +235,7 @@
             var background;
 
             color = '.bypostauthor, \n\
+            .quicksand_search_title, \n\
             .quicksand_archive_title, \n\
             .site-content .card-header.entry-header h1, \n\
             .site-content .card-header.entry-header h2, \n\

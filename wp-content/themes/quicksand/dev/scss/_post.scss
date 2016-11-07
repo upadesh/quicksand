@@ -61,31 +61,6 @@
 }
 
 
-
-/*post pagination: previous & next post*/
-.post-pagination {
-    margin: 1rem 0;
-    .post-navigation { 
-        .nav-previous {
-            @extend .text-xs-left; 
-            display: inline-block;
-            width: 50%;
-            .fa { 
-                padding-right: 1rem; 
-            }
-        }
-        .nav-next {
-            @extend .text-xs-right; 
-            display: inline-block;
-            width: 50%;
-            .fa { 
-                padding-left: 1rem; 
-            }
-        }
-    }  
-}
-
-
 .card {
     margin-bottom: 2rem !important;
 
@@ -168,21 +143,6 @@
 
     }
 }
-
-
-/*paginated posts*/
-.page-links  {
-    >.paged-link {
-        margin-right: .3rem;
-    }
-    a {
-        @extend .btn;
-        @extend .btn-outline-secondary;
-        margin-right: .3rem; 
-        background-image: none;
-        background-color: transparent; 
-    } 
-} 
 
 /* masonry-list-view*/
 .card-columns { 
