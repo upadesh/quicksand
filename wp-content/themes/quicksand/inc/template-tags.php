@@ -20,32 +20,41 @@ if (!function_exists('quicksand_entry_meta')) :
     function quicksand_entry_meta() {
         echo '<div class="card-block entry-meta">';
 
-        // date
-        if (in_array(get_post_type(), array('post', 'attachment'))) {
+        // only show what is saved in array 'qs_content_show_meta'
+        $onlyShowThisMetaInfo = get_theme_mod("qs_content_show_meta");
+
+        // nothing to show
+        if (empty($onlyShowThisMetaInfo)) {
+            return;
+        }
+ 
+        // date 
+        if (in_array('date', $onlyShowThisMetaInfo) && in_array(get_post_type(), array('post', 'attachment'))) {
             $quicksand_entry_date = get_quicksand_entry_date();
             echo $quicksand_entry_date;
         }
 
         // author
-        $author = sprintf('<span class="post-author"><a href="%s">%s</a></span>', esc_url(get_author_posts_url(get_the_author_meta('ID'))), get_the_author());
-        echo $author;
+        if (in_array('author', $onlyShowThisMetaInfo)) {
+            $author = sprintf('<span class="post-author"><a href="%s">%s</a></span>', esc_url(get_author_posts_url(get_the_author_meta('ID'))), get_the_author());
+            echo $author;
+        }
 
         // post-format
         $format = get_post_format();
-        if (current_theme_supports('post-formats', $format)) {
+        if (in_array('post-format', $onlyShowThisMetaInfo) && current_theme_supports('post-formats', $format)) {
             $post_format_string = sprintf('<span class="entry-format">%1$s<a href="%2$s">%3$s</a></span>', sprintf('<span class="screen-reader-text">%s </span>', _x('Format', 'Used before post format.', 'quicksand')), esc_url(get_post_format_link($format)), get_post_format_string($format));
             echo $post_format_string;
         }
 
         // taxonomies
-        if ('post' === get_post_type()) {
+        if (in_array('taxonomies', $onlyShowThisMetaInfo) && 'post' === get_post_type()) {
             $quicksandEntryTaxonomies = get_quicksand_entry_taxonomies();
-            echo $quicksandEntryTaxonomies['categories'];
-//            echo $quicksandEntryTaxonomies['tags'];
+            echo $quicksandEntryTaxonomies['categories']; 
         }
 
         // comments
-        if (!is_singular() && !post_password_required() && ( comments_open() || get_comments_number() )) {
+        if (in_array('comments', $onlyShowThisMetaInfo) && !is_singular() && !post_password_required() && ( comments_open() || get_comments_number() )) {
             echo '<span class="comments-link">';
             comments_popup_link(sprintf(__('Leave a comment<span class="screen-reader-text"> on %s</span>', 'quicksand'), get_the_title()));
             echo '</span>';
@@ -392,7 +401,7 @@ if (!function_exists('quicksand_entry_header_postformat_video')) :
         // get first video in content 
         $content = apply_filters('the_content', $post->post_content);
         $embeds = get_media_embedded_in_content($content);
-        if(empty($embeds)) {
+        if (empty($embeds)) {
             return;
         }
         ?>  
@@ -400,7 +409,7 @@ if (!function_exists('quicksand_entry_header_postformat_video')) :
         <!-- entry-header --> 
         <header class="card-header entry-header <?php echo esc_attr($class); ?>"> 
             <div class="video post-video">
-                <?php  echo $embeds[0]; ?>
+                <?php echo $embeds[0]; ?>
             </div><!-- .post-video -->  
         </header><!-- .entry-header --> 
         <?php
@@ -472,7 +481,7 @@ if (!function_exists('quicksand_the_entry_content_gallery')) :
      */
     function quicksand_the_entry_content_gallery($class = 'entry-content') {
         add_filter('the_content', 'quicksand_remove_shortcode_from_content');
-        quicksand_the_entry_content(); 
+        quicksand_the_entry_content();
         remove_filter('the_content', 'quicksand_remove_shortcode_from_content');
     }
 
@@ -573,7 +582,7 @@ if (!function_exists('quicksand_author_biography')) :
      * @since Quicksand 0.2.1
      */
     function quicksand_author_biography() {
-        if (is_singular() && !empty(get_the_author_meta('description')) && get_theme_mod('qs_biography_show', quicksand_get_color_scheme()['settings']['qs_biography_show']) ) :
+        if (is_singular() && !empty(get_the_author_meta('description')) && get_theme_mod('qs_biography_show', quicksand_get_color_scheme()['settings']['qs_biography_show'])) :
             get_template_part('template-parts/biography');
         endif;
     }
@@ -704,6 +713,12 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
+
+
+
+
 
 
 

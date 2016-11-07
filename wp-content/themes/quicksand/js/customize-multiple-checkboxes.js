@@ -7,8 +7,8 @@
  */
 
 
-// a normal 'jQuery(document).ready()' doesn't work
-// because there are to many controls we have to wait until load is ready
+// a normal 'jQuery(document).ready()' doesn't work, because there are to many controls 
+// wait until load is ready
 jQuery(document).on('load ready', function () {
     jQuery('.customize-control-checkbox-multiple input[type="checkbox"]').on('change', function () {
 

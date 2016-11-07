@@ -509,6 +509,10 @@ function quicksand_customize_register($wp_customize) {
             'qs_content_show_meta', array('default' => array('comments'),
         'sanitize_callback' => 'quicksand_sanitize_meta_checkboxes'
     ));
+    
+    // defaults
+    // speichern???? wo gehts hin
+    // get_them_mod(qs_content_show_meta) -> array????
 
     $wp_customize->add_control(
             new QuicksandCustomizeControlCheckboxMultiple($wp_customize, 'qs_content_show_meta', array(
