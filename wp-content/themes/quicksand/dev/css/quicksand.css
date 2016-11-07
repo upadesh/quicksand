@@ -597,6 +597,8 @@ cite {
       height: auto;
       max-width: 100%; }
   .card .entry-footer .tag-links .tag, .card .entry-footer .tag-links .sticky-post {
+    padding: 3.2px 6.4px;
+    padding: .2rem .4rem;
     margin-right: 8px;
     margin-right: .5rem;
     background: #286584; }
@@ -626,6 +628,13 @@ cite {
   .card-columns {
     -moz-column-count: 3 !important;
          column-count: 3 !important; } }
+
+/* TODO: 
+workaround for tables 
+maybe pading of cells smaller in media-query ... who knows????
+*/
+.quicksand-masonry article.post {
+  overflow: hidden; }
 
 /* post-formats */
 /* quote */

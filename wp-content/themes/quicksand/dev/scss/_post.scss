@@ -117,6 +117,7 @@
     .entry-footer {
         .tag-links {
             .tag {
+                padding: .2rem .4rem;
                 margin-right: .5rem;
                 background: $blue;
                 a {
@@ -125,8 +126,7 @@
             }
         }
 
-        .edit-link {
-
+        .edit-link { 
             float: right;
             /* edit post-link  */  
             .post-edit-link {
@@ -154,6 +154,16 @@
     }
     @media (min-width: 1200px) {
         column-count: 3 !important;
+    }
+}
+
+/* TODO: 
+workaround for tables 
+maybe pading of cells smaller in media-query ... who knows????
+*/
+.quicksand-masonry {
+    article.post {
+        overflow: hidden;
     }
 }
 
