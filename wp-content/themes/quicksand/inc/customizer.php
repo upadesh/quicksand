@@ -40,6 +40,11 @@ add_action('customize_preview_init', 'quicksand_customize_preview_js');
  */
 function quicksand_customize_register($wp_customize) {
 
+    // include extended WP-Custompizer classes
+    require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandGoogleFontDropdownCustomControl.php' );
+    require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandCustomizeControlCheckboxMultiple.php' );
+
+    // get color-scheme
     $color_scheme_option = get_theme_mod('color_scheme', 'default');
     $colorSchemeDefault = quicksand_get_color_schemes()[$color_scheme_option];
 
@@ -76,130 +81,6 @@ function quicksand_customize_register($wp_customize) {
         'choices' => quicksand_get_color_scheme_choices(),
         'priority' => 1,
     ));
-
-
-
-
-    /**
-     *  Section: Slider  
-     */
-    $wp_customize->add_section('quicksand_slider_section', array(
-        'title' => __('Slider settings', 'quicksand'),
-        'priority' => 10,
-        'capability' => 'edit_theme_options',
-        'panel' => 'quicksand_main_options',
-    ));
-
-
-    // enabled
-    $wp_customize->add_setting("qs_slider_enabled", array(
-        'default' => $colorSchemeDefault['settings']['qs_slider_enabled'],
-        'type' => 'theme_mod',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'quicksand_sanitize_checkbox',
-    ));
-
-    $wp_customize->add_control('qs_slider_enabled', array(
-        'label' => __("Enable Slider", 'quicksand'),
-        'section' => 'quicksand_slider_section',
-        'type' => 'checkbox',
-        'settings' => 'qs_slider_enabled',
-        'description' => __('Is only shown on front-page', 'quicksand'),
-        'priority' => 10,
-    ));
-
-    // fullwidth
-    $wp_customize->add_setting("qs_slider_fullwidth", array(
-        'default' => $colorSchemeDefault['settings']['qs_slider_fullwidth'],
-        'type' => 'theme_mod',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'quicksand_sanitize_checkbox',
-    ));
-
-    $wp_customize->add_control('qs_slider_fullwidth', array(
-        'label' => __("Slider Fullwidth", 'quicksand'),
-        'section' => 'quicksand_slider_section',
-        'type' => 'checkbox',
-        'settings' => 'qs_slider_fullwidth',
-        'priority' => 20,
-    ));
-
-
-    // category
-    $wp_customize->add_setting('qs_slider_category', array(
-        'default' => '',
-    ));
-
-    $wp_customize->add_control(new WP_Customize_category_Control(
-            $wp_customize, 'slider_category', array(
-        'label' => 'Category',
-        'settings' => 'qs_slider_category',
-        'section' => 'quicksand_slider_section',
-        'priority' => 30,
-        'description' => __('Only posts including a featured image will be exposed', 'quicksand'),
-    )));
-
-    // count slides
-    $wp_customize->add_setting('qs_slider_count', array(
-        'default' => '6',
-    ));
-
-    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'slider_count', array(
-        'label' => __('Number of posts', 'quicksand'),
-        'section' => 'quicksand_slider_section',
-        'settings' => 'qs_slider_count',
-        'priority' => 40,
-        'type' => 'text',
-    )));
-
-    // height
-    $wp_customize->add_setting('qs_slider_height', array(
-        'default' => $colorSchemeDefault['settings']['qs_slider_height'],
-        'type' => 'theme_mod',
-        'capability' => 'edit_theme_options',
-        'transport' => 'postMessage',
-        'sanitize_callback' => 'sanitize_text_field',
-    ));
-
-    $wp_customize->add_control('qs_slider_height', array(
-        'type' => 'range',
-        'priority' => 100,
-        'section' => 'quicksand_slider_section',
-        'label' => __('Height', 'quicksand'),
-        'description' => __('Set the height of the slider', 'quicksand'),
-        'input_attrs' => array(
-            'min' => 1,
-            'max' => 100,
-            'step' => 1,
-            'class' => 'slider-height-class',
-            'style' => 'color: #0a0',
-        ),
-    ));
-
-    // height
-    $wp_customize->add_setting('qs_slider_margin_top', array(
-        'default' => $colorSchemeDefault['settings']['qs_slider_margin_top'],
-        'type' => 'theme_mod',
-        'capability' => 'edit_theme_options',
-        'transport' => 'postMessage',
-        'sanitize_callback' => 'sanitize_text_field',
-    ));
-
-    $wp_customize->add_control('qs_slider_margin_top', array(
-        'type' => 'range',
-        'priority' => 120,
-        'section' => 'quicksand_slider_section',
-        'label' => __('Height', 'quicksand'),
-        'description' => __('Margin to the top', 'quicksand'),
-        'input_attrs' => array(
-            'min' => 0,
-            'max' => 10,
-            'step' => 1,
-            'class' => 'slider-height-class',
-            'style' => 'color: #0a0',
-        ),
-    ));
-
 
 
 
@@ -367,6 +248,131 @@ function quicksand_customize_register($wp_customize) {
     )));
 
 
+
+
+    /**
+     *  Section: Slider  
+     */
+    $wp_customize->add_section('quicksand_slider_section', array(
+        'title' => __('Slider settings', 'quicksand'),
+        'priority' => 10,
+        'capability' => 'edit_theme_options',
+        'panel' => 'quicksand_main_options',
+    ));
+
+
+    // enabled
+    $wp_customize->add_setting("qs_slider_enabled", array(
+        'default' => $colorSchemeDefault['settings']['qs_slider_enabled'],
+        'type' => 'theme_mod',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'quicksand_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('qs_slider_enabled', array(
+        'label' => __("Enable Slider", 'quicksand'),
+        'section' => 'quicksand_slider_section',
+        'type' => 'checkbox',
+        'settings' => 'qs_slider_enabled',
+        'description' => __('Is only shown on front-page', 'quicksand'),
+        'priority' => 10,
+    ));
+
+    // fullwidth
+    $wp_customize->add_setting("qs_slider_fullwidth", array(
+        'default' => $colorSchemeDefault['settings']['qs_slider_fullwidth'],
+        'type' => 'theme_mod',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'quicksand_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('qs_slider_fullwidth', array(
+        'label' => __("Slider Fullwidth", 'quicksand'),
+        'section' => 'quicksand_slider_section',
+        'type' => 'checkbox',
+        'settings' => 'qs_slider_fullwidth',
+        'priority' => 20,
+    ));
+
+
+    // category
+    $wp_customize->add_setting('qs_slider_category', array(
+        'default' => '',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_category_Control(
+            $wp_customize, 'slider_category', array(
+        'label' => 'Category',
+        'settings' => 'qs_slider_category',
+        'section' => 'quicksand_slider_section',
+        'priority' => 30,
+        'description' => __('Only posts including a featured image will be exposed', 'quicksand'),
+    )));
+
+    // count slides
+    $wp_customize->add_setting('qs_slider_count', array(
+        'default' => '6',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'slider_count', array(
+        'label' => __('Number of posts', 'quicksand'),
+        'section' => 'quicksand_slider_section',
+        'settings' => 'qs_slider_count',
+        'priority' => 40,
+        'type' => 'text',
+    )));
+
+    // height
+    $wp_customize->add_setting('qs_slider_height', array(
+        'default' => $colorSchemeDefault['settings']['qs_slider_height'],
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options',
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('qs_slider_height', array(
+        'type' => 'range',
+        'priority' => 100,
+        'section' => 'quicksand_slider_section',
+        'label' => __('Height', 'quicksand'),
+        'description' => __('Set the height of the slider', 'quicksand'),
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 100,
+            'step' => 1,
+            'class' => 'slider-height-class',
+            'style' => 'color: #0a0',
+        ),
+    ));
+
+    // margin-top
+    $wp_customize->add_setting('qs_slider_margin_top', array(
+        'default' => $colorSchemeDefault['settings']['qs_slider_margin_top'],
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options',
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('qs_slider_margin_top', array(
+        'type' => 'range',
+        'priority' => 120,
+        'section' => 'quicksand_slider_section',
+        'label' => __('Height', 'quicksand'),
+        'description' => __('Margin to the top', 'quicksand'),
+        'input_attrs' => array(
+            'min' => 0,
+            'max' => 10,
+            'step' => 1,
+            'class' => 'slider-height-class',
+            'style' => 'color: #0a0',
+        ),
+    ));
+
+
+
+
     /* Section: Content */
     $wp_customize->add_section('quicksand_content', array(
         'title' => __('Content', 'quicksand'),
@@ -430,7 +436,7 @@ function quicksand_customize_register($wp_customize) {
         'default' => '',
         'sanitize_callback' => 'sanitize_text_field',
     ));
-    $wp_customize->add_control(new Google_Font_Dropdown_Custom_Control($wp_customize, 'quicksand_google_font', array(
+    $wp_customize->add_control(new GoogleFontDropdownCustomControl($wp_customize, 'quicksand_google_font', array(
         'label' => 'Google Font',
         'section' => 'quicksand_content',
         'settings' => 'quicksand_google_font',
@@ -469,6 +475,59 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 10,
         'type' => 'text',
     )));
+
+
+
+
+    /**
+     * meta 
+     *       'date' => 1,
+     *       'author' => 1,
+     *       'post-format' => 0,
+     *       'taxonomies' => 0,
+     *       'comments' => 1,
+     */
+//    foreach ($colorSchemeDefault['settings']['qs_content_show_meta'] as $meta => $value) {
+//        $wp_customize->add_setting("qs_content_show_meta_" . $meta, array(
+//            'default' => $colorSchemeDefault['settings']['qs_content_show_meta'][$meta],
+//            'type' => 'theme_mod',
+//            'transport' => 'refresh',
+//            'sanitize_callback' => 'quicksand_sanitize_checkbox',
+//        ));
+//
+//        $wp_customize->add_control('qs_content_show_meta_' . $meta, array(
+//            'label' => __("Content Fullwidth", 'quicksand'),
+//            'section' => 'quicksand_content',
+//            'type' => 'checkbox',
+//            'settings' => 'qs_content_show_meta_' . $meta,
+//            'priority' => 10,
+//        ));
+//    }
+
+
+    $wp_customize->add_setting(
+            'qs_content_show_meta', array('default' => array('comments'),
+        'sanitize_callback' => 'quicksand_sanitize_meta_checkboxes'
+    ));
+
+    $wp_customize->add_control(
+            new QuicksandCustomizeControlCheckboxMultiple($wp_customize, 'qs_content_show_meta', array(
+        'section' => 'quicksand_content',
+        'label' => __('Show Meta', 'quicksand'), 'choices' => array(
+            'date' => __('Date', 'quicksand'),
+            'author' => __('Author', 'quicksand'),
+            'post-format' => __('Post-Format', 'quicksand'),
+            'taxonomies' => __('Taxonomies', 'quicksand'),
+            'comments' => __('Comments', 'quicksand')
+        )))
+    );
+
+
+
+
+
+
+
 
     // bg-color
     $wp_customize->add_setting('qs_content_background_color', array(
@@ -832,7 +891,14 @@ function quicksand_get_color_schemes() {
                 'qs_header_hide_when_slider_enabled' => 0,
                 'qs_slider_margin_top' => 0,
                 'quicksand_google_font' => 'Raleway',
-                'qs_content_font_size' => 16
+                'qs_content_font_size' => 16,
+                'qs_content_show_meta' => array(
+                    'date' => 0,
+                    'author' => 0,
+                    'post-format' => 1,
+                    'taxonomies' => 1,
+                    'comments' => 0,
+                )
             ),
             'colors' => array(
 //                background_color
@@ -897,7 +963,14 @@ function quicksand_get_color_schemes() {
                 'qs_header_hide_when_slider_enabled' => 0,
                 'qs_slider_margin_top' => 2,
                 'quicksand_google_font' => 'Abel',
-                'qs_content_font_size' => 16
+                'qs_content_font_size' => 16,
+                'qs_content_show_meta' => array(
+                    'date' => 1,
+                    'author' => 1,
+                    'post-format' => 0,
+                    'taxonomies' => 0,
+                    'comments' => 1,
+                )
             ),
             'colors' => array(
 //                background_color
@@ -1191,51 +1264,6 @@ if (class_exists('WP_Customize_Control')) {
 
 }
 
-
-
-
-
-// needed until class is available
-if (!class_exists('WP_Customize_Control'))
-    return NULL;
-
-/**
- * A class to create a dropdown for all google fonts
- */
-class Google_Font_Dropdown_Custom_Control extends WP_Customize_Control {
-
-    private $fonts = false;
-
-    public function __construct($manager, $id, $args = array(), $options = array()) {
-        $this->fonts = $this->get_google_fonts();
-        parent::__construct($manager, $id, $args);
-    }
-
-    public function render_content() {
-        ?>
-        <label class="customize_dropdown_input">
-            <span class="customize-control-title"><?php echo esc_html($this->label); ?></span>
-            <select id="<?php echo esc_attr($this->id); ?>" name="<?php echo esc_attr($this->id); ?>" data-customize-setting-link="<?php echo esc_attr($this->id); ?>">
-                <?php
-                foreach ($this->fonts as $k => $v) {
-                    echo '<option value="' . $v['family'] . '" ' . selected($this->value(), $v['family'], false) . '>' . $v['family'] . '</option>';
-                }
-                ?>
-            </select>
-        </label>
-        <?php
-    }
-
-    public function get_google_fonts() {
-        $googleApi = 'https://www.googleapis.com/webfonts/v1/webfonts?sort=alpha&key=' . get_theme_mod('qs_content_google_api_key', '');
-        $fontContent = wp_remote_get($googleApi, array('sslverify' => false));
-        $content = json_decode($fontContent['body'], true);
-
-        return isset($content['items']) ? $content['items'] : NULL;
-    }
-
-}
-
 /**
  * sanitizer for integers
  * 
@@ -1244,4 +1272,15 @@ class Google_Font_Dropdown_Custom_Control extends WP_Customize_Control {
  */
 function prefix_sanitize_integer($input) {
     return absint($input);
+}
+
+/**
+ * sanitizer for multiple checkboxes (needed by QuicksandCustomizeControlCheckboxMultiple)
+ * 
+ * @param string $values
+ * @return array
+ */
+function quicksand_sanitize_meta_checkboxes($values) {
+    $multi_values = !is_array($values) ? explode(',', $values) : $values;
+    return !empty($multi_values) ? array_map('sanitize_text_field', $multi_values) : array();
 }

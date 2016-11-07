@@ -11,9 +11,9 @@
     if (typeof wp.customize !== 'function') {
         return;
     }
-    
-    
-    var hex2rgba_convert = function(hex, opacity) {
+
+
+    var hex2rgba_convert = function (hex, opacity) {
         hex = hex.replace('#', '');
         var r = parseInt(hex.substring(0, 2), 16);
         var g = parseInt(hex.substring(2, 4), 16);
@@ -164,8 +164,8 @@
 
             $(backgroundJumbotron).css('background', qs_header_background_color);
             $(backgroundImageHeaderText).css('background', qs_header_background_color);
-            
-            customizePseudoElements('qs_header_background_color', qs_header_background_color); 
+
+            customizePseudoElements('qs_header_background_color', qs_header_background_color);
         });
     });
     wp.customize('header_textcolor', function (value) {

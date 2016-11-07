@@ -6,6 +6,9 @@ jQuery(document).ready(function ($) {
     // TODO: oo
 
 
+
+
+
     // lightgallery
     var initLightgallery = function () {
         // only trigger lightgallery when it is turned on
@@ -55,7 +58,7 @@ jQuery(document).ready(function ($) {
     // flexslider header
     var initFlexsliderPostformatGallery = function () {
         $('.quicksand-post-gallery .flexslider').flexslider({
-           controlNav: false,
+            controlNav: false,
             animation: "fade",
             direction: "horizontal",
             slideshowSpeed: 7000,
@@ -89,7 +92,7 @@ jQuery(document).ready(function ($) {
         var $navContent = $('.nav-content');
         var $searchForm = $('.nav-searchform');
 
-        $('.nav-search').on('click', function () { 
+        $('.nav-search').on('click', function () {
             $navContent.fadeOut('fast', function () {
                 $searchForm.removeClass('hidden-xs-up');
                 $searchForm.hide().slideDown('fast');
@@ -97,7 +100,7 @@ jQuery(document).ready(function ($) {
         });
 
         // replace searchform with nav 
-        $('.nav-search-cancel').on('click', function () { 
+        $('.nav-search-cancel').on('click', function () {
             $searchForm.fadeOut('fast', function () {
                 $navContent.hide().slideDown('fast');
             });
@@ -130,5 +133,5 @@ jQuery(document).ready(function ($) {
     initFlexsliderPostformatGallery();
 
     // lightgallery
-    initLightgallery(); 
+    initLightgallery();
 });
