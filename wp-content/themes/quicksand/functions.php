@@ -154,6 +154,17 @@ if (!function_exists('quicksand_setup')) :
             'width' => 1200,
         );
         add_theme_support('custom-header', $customHeaderArgs);
+
+
+
+        /*
+         * TODO: add editor
+         * 
+         * 
+         * This theme styles the visual editor to resemble the theme style,
+         * specifically font, colors, icons, and column width.
+         */
+//        add_editor_style(array('css/editor-style.css', twentysixteen_fonts_url()));
     }
 
 endif; // quicksand_setup
@@ -947,7 +958,8 @@ if (!function_exists('quicksand_remove_shortcode_from_content')) :
 endif;
 
 
-if (!function_exists('quicksand_show_masonry')) : 
+if (!function_exists('quicksand_show_masonry')) :
+
     /**
      * global function to check if masonry is enabled & ensures it is a list view with
      *  a minimum amount of posts
@@ -955,7 +967,7 @@ if (!function_exists('quicksand_show_masonry')) :
      * @global type $posts
      * @return bool
      */
-    function quicksand_show_masonry() { 
+    function quicksand_show_masonry() {
         global $posts;
         $minNumberOfPost = 2;
         return !is_single() && !is_attachment() && !is_page() && count($posts) > $minNumberOfPost && get_theme_mod('qs_content_masonry', quicksand_get_color_scheme()['settings']['qs_content_masonry']);
