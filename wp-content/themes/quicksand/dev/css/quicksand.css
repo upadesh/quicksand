@@ -58,59 +58,7 @@
  * Define also your scheme-color specific variables in here 
  */
 /* === bootstrap variables === */
-/*main colors*/
-/*$gray-dark:                 green !default; // Edit link
-$gray:                      red !default;
-$gray-light:                blue !default;
-$gray-lighter:              yellow !default;
-$gray-lightest:             brown !default; */
-/* btn colors */
-/*use secondary for all submit & input-group buttons*/
-/* custom extend */
-a.btn.btn-secondary, .card .entry-content a.btn-secondary.read-more-link, .card .entry-footer .edit-link a.post-edit-link, .comments-area .comment-list .reply a.comment-reply-link, .comment-navigation .nav-previous a.btn-secondary, .comment-navigation .nav-next a.btn-secondary, .quicksand-post-pagination-list-view .nav-links a.btn-secondary, .page-links a.btn-secondary,
-.btn.btn-secondary a, .card .entry-content .btn-secondary.read-more-link a, .card .entry-footer .edit-link .post-edit-link a, .comments-area .comment-list .reply .comment-reply-link a, .comment-navigation .nav-previous a.btn-secondary a, .comment-navigation .nav-next a.btn-secondary a, .quicksand-post-pagination-list-view .nav-links a.btn-secondary a, .page-links a.btn-secondary a {
-  background: #fff;
-  color: #9ab7ac !important;
-  border: none !important; }
-  a.btn.btn-secondary:hover, .card .entry-content a.btn-secondary.read-more-link:hover, .card .entry-footer .edit-link a.post-edit-link:hover, .comments-area .comment-list .reply a.comment-reply-link:hover, .comment-navigation .nav-previous a.btn-secondary:hover, .comment-navigation .nav-next a.btn-secondary:hover, .quicksand-post-pagination-list-view .nav-links a.btn-secondary:hover, .page-links a.btn-secondary:hover,
-  .btn.btn-secondary a:hover, .card .entry-content .btn-secondary.read-more-link a:hover, .card .entry-footer .edit-link .post-edit-link a:hover, .comments-area .comment-list .reply .comment-reply-link a:hover, .comment-navigation .nav-previous a.btn-secondary a:hover, .comment-navigation .nav-next a.btn-secondary a:hover, .quicksand-post-pagination-list-view .nav-links a.btn-secondary a:hover, .page-links a.btn-secondary a:hover {
-    background: #9ab7ac;
-    color: #fff !important;
-    border: none !important;
-    text-decoration: none; }
-
-input.btn.btn-secondary, .card .entry-content input.btn-secondary.read-more-link, .card .entry-footer .edit-link input.post-edit-link, .comments-area .comment-list .reply input.comment-reply-link {
-  background: #9ab7ac;
-  color: #fff !important;
-  border: 1px solid #9ab7ac !important; }
-  input.btn.btn-secondary:hover, .card .entry-content input.btn-secondary.read-more-link:hover, .card .entry-footer .edit-link input.post-edit-link:hover, .comments-area .comment-list .reply input.comment-reply-link:hover {
-    background: #fff;
-    color: #9ab7ac !important;
-    border: none !important;
-    border: 1px solid #9ab7ac !important; }
-
-span.btn.btn-secondary, .card .entry-content span.btn-secondary.read-more-link, .card .entry-footer .edit-link span.post-edit-link, .comments-area .comment-list .reply span.comment-reply-link {
-  background: #fff;
-  color: #9ab7ac !important;
-  border: 1px solid #9ab7ac !important; }
-  span.btn.btn-secondary:hover, .card .entry-content span.btn-secondary.read-more-link:hover, .card .entry-footer .edit-link span.post-edit-link:hover, .comments-area .comment-list .reply span.comment-reply-link:hover {
-    background: #9ab7ac;
-    color: #fff !important;
-    border: none !important;
-    text-decoration: none; }
-
-.btn.btn-outline-secondary a, .card .entry-content .read-more-link a, .card .entry-footer .edit-link .btn-outline-secondary.post-edit-link a, .card .entry-footer .edit-link .entry-content .post-edit-link.read-more-link a, .card .entry-content .entry-footer .edit-link .post-edit-link.read-more-link a, .card .entry-footer .edit-link .comment-navigation .nav-previous a.post-edit-link a, .comment-navigation .nav-previous .card .entry-footer .edit-link a.post-edit-link a, .card .entry-footer .edit-link .comment-navigation .nav-next a.post-edit-link a, .comment-navigation .nav-next .card .entry-footer .edit-link a.post-edit-link a, .card .entry-footer .edit-link .quicksand-post-pagination-list-view .nav-links a.post-edit-link a, .quicksand-post-pagination-list-view .nav-links .card .entry-footer .edit-link a.post-edit-link a, .card .entry-footer .edit-link .page-links a.post-edit-link a, .page-links .card .entry-footer .edit-link a.post-edit-link a, .comments-area .comment-list .reply .btn-outline-secondary.comment-reply-link a, .comments-area .comment-list .reply .card .entry-content .comment-reply-link.read-more-link a, .card .entry-content .comments-area .comment-list .reply .comment-reply-link.read-more-link a, .comments-area .comment-list .reply .comment-navigation .nav-previous a.comment-reply-link a, .comment-navigation .nav-previous .comments-area .comment-list .reply a.comment-reply-link a, .comments-area .comment-list .reply .comment-navigation .nav-next a.comment-reply-link a, .comment-navigation .nav-next .comments-area .comment-list .reply a.comment-reply-link a, .comments-area .comment-list .reply .quicksand-post-pagination-list-view .nav-links a.comment-reply-link a, .quicksand-post-pagination-list-view .nav-links .comments-area .comment-list .reply a.comment-reply-link a, .comments-area .comment-list .reply .page-links a.comment-reply-link a, .page-links .comments-area .comment-list .reply a.comment-reply-link a, .comment-navigation .nav-previous a a, .comment-navigation .nav-next a a, .quicksand-post-pagination-list-view .nav-links a a, .page-links a a {
-  color: #9ab7ac !important; }
-  .btn.btn-outline-secondary a:hover, .card .entry-content .read-more-link a:hover, .card .entry-footer .edit-link .btn-outline-secondary.post-edit-link a:hover, .card .entry-footer .edit-link .comment-navigation .nav-previous a.post-edit-link a:hover, .comment-navigation .nav-previous .card .entry-footer .edit-link a.post-edit-link a:hover, .card .entry-footer .edit-link .comment-navigation .nav-next a.post-edit-link a:hover, .comment-navigation .nav-next .card .entry-footer .edit-link a.post-edit-link a:hover, .card .entry-footer .edit-link .quicksand-post-pagination-list-view .nav-links a.post-edit-link a:hover, .quicksand-post-pagination-list-view .nav-links .card .entry-footer .edit-link a.post-edit-link a:hover, .card .entry-footer .edit-link .page-links a.post-edit-link a:hover, .page-links .card .entry-footer .edit-link a.post-edit-link a:hover, .comments-area .comment-list .reply .btn-outline-secondary.comment-reply-link a:hover, .comments-area .comment-list .reply .comment-navigation .nav-previous a.comment-reply-link a:hover, .comment-navigation .nav-previous .comments-area .comment-list .reply a.comment-reply-link a:hover, .comments-area .comment-list .reply .comment-navigation .nav-next a.comment-reply-link a:hover, .comment-navigation .nav-next .comments-area .comment-list .reply a.comment-reply-link a:hover, .comments-area .comment-list .reply .quicksand-post-pagination-list-view .nav-links a.comment-reply-link a:hover, .quicksand-post-pagination-list-view .nav-links .comments-area .comment-list .reply a.comment-reply-link a:hover, .comments-area .comment-list .reply .page-links a.comment-reply-link a:hover, .page-links .comments-area .comment-list .reply a.comment-reply-link a:hover, .comment-navigation .nav-previous a a:hover, .comment-navigation .nav-next a a:hover, .quicksand-post-pagination-list-view .nav-links a a:hover, .page-links a a:hover {
-    background: #9ab7ac;
-    color: #fff !important;
-    border: none !important;
-    text-decoration: none; }
-
-/*FIX: background secondary-btn*/
-.input-group-btn {
-  background: #9ab7ac; }
-
+/*main colors for buttons*/
 /**
  * primary navigation 
  */

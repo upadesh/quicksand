@@ -183,7 +183,7 @@ if (!function_exists('quicksand_customizer_css')) :
         $colorScheme = quicksand_get_color_scheme();
         ?>
 
-        <style type="text/css">
+        <style type="text/css">   
 
             body,html {
                 font-size: <?php echo get_theme_mod('qs_content_font_size', quicksand_get_color_scheme()['settings']['qs_content_font_size']); ?>px;
@@ -286,21 +286,25 @@ if (!function_exists('quicksand_customizer_css')) :
 
 
 
-            /*bootstrap pagination*/ 
-            .site-main-container .navigation.pagination .nav-links .page-numbers {
-                color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme['colors'][2]); ?>;
-                background: <?php echo get_theme_mod('qs_content_background_color', $colorScheme['colors'][1]); ?>;
-                border-color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme['colors'][2]); ?>;
-            }  
-            .quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers:focus,
-            .quicksand-post-pagination-list-view .navigation.pagination .nav-links a:hover.page-numbers ,
-            .quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers.current,
-            .quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers:hover,
-            .quicksand-post-pagination-list-view .navigation.pagination .nav-links .page-numbers.current:hover {
-                color: <?php echo get_theme_mod('qs_content_background_color', $colorScheme['colors'][1]); ?>;
-                background: <?php echo get_theme_mod('qs_content_link_color', $colorScheme['colors'][2]); ?>;
-                border-color: <?php echo get_theme_mod('qs_content_link_color', $colorScheme['colors'][2]); ?>;
-            }
+
+
+
+
+            /* === paginations === */  
+            
+            /*** list-view posts ****/
+            .quicksand-post-pagination-list-view .page-numbers a,
+            /*** paginated posts ****/
+            /*none-active one*/ 
+            .page-links a {  
+                color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]); ?> !important;
+                border-color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]); ?>;
+            } 
+            .page-links a:hover {  
+                color: <?php echo get_theme_mod('qs_content_background_color', $colorScheme['colors'][1]); ?> !important;
+                background: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]); ?>; 
+            } 
+            
 
 
             /*2nd text color*/  
