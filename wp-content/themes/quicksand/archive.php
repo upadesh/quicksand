@@ -38,7 +38,7 @@ get_header();
             <!--show posts in masonry-style-->
             <?php
             if (get_theme_mod('qs_content_masonry', quicksand_get_color_scheme()['settings']['qs_content_masonry'])) {
-                ?><div class="card-columns"> <?php
+                ?><div class="card-columns quicksand-masonry"> <?php
                 }
 
                 while (have_posts()) : the_post();
