@@ -1,0 +1,101 @@
+/**
+ * all kinds of paginations 
+ */   
+
+
+
+/*pagination: list-view*/
+.quicksand-post-pagination-list-view {
+    text-align: center;
+    .nav-links  {
+        >.page-numbers {
+            margin-right: .3rem;
+        }
+        >.page-numbers.current {
+        }
+        a {
+            @extend .btn;
+            @extend .btn-outline-secondary;
+            background-image: none;
+        } 
+    } 
+}
+
+
+
+/*pagination: previous & next post*/
+.post-pagination {
+    margin: 1rem 0;
+    .post-navigation { 
+        .nav-previous {
+            @extend .text-xs-left; 
+            display: inline-block;
+            width: 50%;
+            .fa { 
+                padding-right: 1rem; 
+            }
+        }
+        .nav-next {
+            @extend .text-xs-right; 
+            display: inline-block;
+            width: 50%;
+            .fa { 
+                padding-left: 1rem; 
+            }
+        }
+    }  
+} 
+
+
+/*pagination: paginated posts*/
+.page-links  {
+    >.paged-link {
+        margin-right: .3rem;
+    }
+    a {
+        @extend .btn;
+        @extend .btn-outline-secondary;
+        margin-right: .3rem; 
+        background-image: none;
+        background-color: transparent; 
+    } 
+} 
+
+
+
+
+/* BS-style pagination*/
+/*
+.quicksand-post-pagination-list-view {
+    @extend text-xs-xenter
+    width: 100%;
+    text-align: center;
+    .navigation.pagination {
+        display: inline-block;
+        @include center-block;
+        text-align: center; 
+        .nav-links {
+            @extend .pagination;
+             bootstrap-style pagination
+            .page-numbers {
+                @extend .page-link;
+                &:first-child {
+                    margin-left: 0;
+                    @include border-left-radius($border-radius);
+                }
+                &:last-child {
+                    @include border-right-radius($border-radius);
+                }
+                &.current {
+                    @include plain-hover-focus {
+                        z-index: 2;
+                        color: $pagination-active-color;
+                        cursor: default;
+                        background-color: $pagination-active-bg;
+                        border-color: $pagination-active-border;
+                    }
+                }
+            }
+        }
+    }
+} */

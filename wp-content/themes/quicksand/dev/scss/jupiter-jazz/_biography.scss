@@ -1,0 +1,39 @@
+/*biography*/
+
+/*.author-bio {
+    .avatar {
+        float: left-xs-left; 
+    }
+    .author-bio-content {
+        margin-left: 74px;
+        .author-link {
+            @extend .btn;
+            @extend .btn-secondary; 
+            
+            @extend .float-xs-right;
+                
+                &:before {
+                    font-family: FontAwesome; 
+                    padding-right: 3px;
+                    content: "\f02d";
+                }
+        }
+    }
+}*/
+
+
+.author-bio {
+    display:flex;
+    .avatar {
+        width: 42px;
+        height: 42px;
+    }
+    .author-bio-content {
+        flex:1;
+        padding-left: 1rem;
+        
+        .author-name {
+            line-height: 42px;
+        }
+    }
+}

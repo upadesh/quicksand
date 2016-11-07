@@ -1,0 +1,191 @@
+/*
+ * Main file for post-layout
+ *
+ * @hint    please use the common-classes for styling
+ * 
+ * @see     http://www.wpbeginner.com/wp-themes/default-wordpress-generated-css-cheat-sheet-for-beginners/
+ */
+
+
+/* featured sticky post */
+.sticky-post {
+    @extend .tag;
+    @extend .tag-danger; 
+} 
+
+
+/* post-meta */ 
+.entry-meta { 
+    font-size: .9rem;
+    padding-top: .6rem !important;
+    padding-bottom: 0 !important;
+
+    .posted-on:before {
+        font-family: FontAwesome; 
+        padding-right: .4rem;
+        content: "\f017"; 
+    }
+    .post-author:before {
+        font-family: FontAwesome; 
+        padding-right: .4rem;
+        content: "\f007"; 
+    }
+    .cat-links:before {
+        font-family: FontAwesome; 
+        padding-right: .4rem;
+        content: "\f07c"; 
+    }
+    .tags-links:before {
+        font-family: FontAwesome;
+        padding-right: .4rem;
+        content: "\f02c"; 
+    }
+    .comments-link:before {
+        font-family: FontAwesome; 
+        padding-right: .4rem;
+        content: "\f075";
+    }
+    >span:not(:last-of-type):after {
+        content: ' | ';
+    }
+}
+
+
+
+/* 
+ * featured image  
+ * stretch thumbnail to 100% in combination with class' img-fluid'
+ */
+.post-thumbnail img { 
+    width:100%; 
+}
+
+
+.card {
+    margin-bottom: 2rem !important;
+
+    /* excerpt */
+    .entry-summary { 
+        color: $grey;
+        font-style: italic;
+    } 
+
+    .entry-header.card-header {
+        border-bottom: none;
+        .entry-title.card-title {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            /*
+             * WP-Unit-Test
+             * break the title if necassary
+             * @see http://wp.local/title-should-not-overflow-the-content-area/
+            */
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+        }
+    }
+
+    .entry-content {
+        .read-more-link {
+            @extend .btn;
+            @extend .btn-outline-secondary; 
+
+            float: right;
+
+            &:before {
+                font-family: FontAwesome; 
+                padding-right: 3px;
+                content: "\f06e";
+            }
+        }
+        .wp-caption {
+            max-width: 100%;
+        }
+
+        /* 
+         * for the WP-Test: reduce size of massively large image with no alignment.
+         *  http://wp.local/archives/tag/alignment-2
+         */ 
+        img {
+            border: none;
+            height: auto;
+            max-width: 100%; 
+        } 
+    }
+
+
+    .entry-footer {
+        .tag-links {
+            .tag {
+                padding: .2rem .4rem;
+                margin-right: .5rem;
+                background: $blue;
+                a {
+                    color: $white;
+                }
+            }
+        }
+
+        .edit-link { 
+            float: right;
+            /* edit post-link  */  
+            .post-edit-link {
+                @extend .btn;
+                @extend .btn-secondary; 
+
+                &:before {
+                    font-family: FontAwesome; 
+                    padding-right: .3rem;
+                    content: "\f040";
+                }
+            }
+        }
+
+    }
+}
+
+/* masonry-list-view*/
+.card-columns { 
+    @media (max-width: 991px) {
+        column-count: 1 !important;
+    } 
+    @media (min-width: 991px) {
+        column-count: 2 !important;
+    }
+    @media (min-width: 1200px) {
+        column-count: 3 !important;
+    }
+}
+
+/* TODO: 
+workaround for tables 
+maybe pading of cells smaller in media-query ... who knows????
+*/
+.quicksand-masonry {
+    article.post {
+        overflow: hidden;
+    }
+}
+
+
+
+/* post-formats */
+/* quote */
+.format-quote {  
+    .card-header {
+        blockquote {
+            margin-bottom: 0;
+            p {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+        } 
+    }
+}
+
+/* video */
+.format-video {
+    .card-header.quicksand-post-video {
+        padding: 0;
+    }
+}

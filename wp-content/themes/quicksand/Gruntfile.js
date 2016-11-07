@@ -18,7 +18,7 @@ module.exports = function (grunt) {
                     }, {
                         expand: true,
                         cwd: 'dev/css/',
-                        src: ['*.min.css'],
+                        src: ['*.css'],
                         dest: 'css/',
                     }],
             },
@@ -141,7 +141,8 @@ module.exports = function (grunt) {
                 files: {
                     // use @import in main file
                     'dev/css/<%= pkg.name %>.css': 'dev/scss/app.scss',
-//                    'dev/css/<%= pkg.name %>-jupiter-jazz.css': 'dev/scss/app-jupiter-jazz.scss'
+                    // ad also color-schemes
+                    'dev/css/<%= pkg.name %>-jupiter-jazz.css': 'dev/scss/jupiter-jazz/app-jupiter-jazz.scss'
                 }
             }
         },

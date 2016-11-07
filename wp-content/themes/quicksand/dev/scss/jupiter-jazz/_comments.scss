@@ -1,0 +1,94 @@
+/* 
+ * comments
+ * form & list
+ */
+
+
+.comments-area  { 
+    .comment-respond {
+        @extend .clearfix;
+        
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        .form-submit {
+            text-align: center;
+            .btn-secondary { 
+                @extend .float-sm-right;
+            }
+        }
+    }
+    .comment-list {
+        padding-left: 0;
+        
+        article {
+            background: grey;
+            padding: .4rem;
+            margin-bottom: .5rem;
+        }
+        .reply {
+            text-align: right;
+            .comment-reply-link{
+                @extend .btn;
+                @extend .btn-secondary; 
+
+                &:before {
+                    font-family: FontAwesome; 
+                    padding-right: 3px;
+                    content: "\f112";
+                }
+            }
+        }
+    }
+    ol {
+        list-style-type: none;
+        .comment-body { 
+            border: none; 
+        } 
+    } 
+} 
+
+
+
+/*Pagination: Older / Newer Comments*/
+.comment-navigation { 
+    .nav-previous {
+        @extend .text-xs-left; 
+        a {
+            @extend .btn;
+            @extend .btn-outline-secondary; 
+            display: inline-block; 
+
+            &:before {
+                font-family: FontAwesome;  
+                content: "\f0d9";
+                padding-right: 1rem; 
+            }
+        }
+    }
+    .nav-next  {
+        @extend .text-xs-right; 
+        a {
+            @extend .btn;
+            @extend .btn-outline-secondary; 
+            display: inline-block; 
+
+            &:after {
+                font-family: FontAwesome; 
+                padding-left: 3px; 
+                content: "\f0da";
+                padding-left: 1rem; 
+            }
+        }
+    } 
+}
+
+
+
+/* comment edit-link */
+.comment-edit-link:before {
+    font-family: FontAwesome;  
+    content: "\f040";
+    padding-left: 1rem;
+    padding-right: .3rem;
+} 

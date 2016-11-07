@@ -1,0 +1,67 @@
+/**
+ * non-bs-variables
+ */  
+
+/*TODO: is that all reight to break all of them --> needed for mobile*/
+h1, h2 ,h3, h4, h5, h6, p {
+    word-break: break-all;
+}
+
+/* only for screen-readers */
+.screen-reader-text {
+    @extend .sr-only;
+}    
+
+/* blockquote & blockquote-footer */
+blockquote {
+    @extend .blockquote;
+    font-style: italic;
+    /*border-left: .25rem solid $gray-dark !important;*/
+} 
+
+cite {
+    display: inline !important;
+    @extend .blockquote-footer;
+}
+
+
+
+/* === bootstrap-style elements === */ 
+/* table */
+table {
+    @extend .table;
+}
+
+select {
+    @extend .custom-select;
+}
+
+input[type='checkbox'],
+input[type='radio'] { 
+    @extend .custom-control-input;
+} 
+
+
+
+
+/* WP-Unit-Test 
+ * alignment classes for img-floating 
+ * @see http://wp.local/markup-image-alignment/
+ */
+.aligncenter {
+    @extend .mx-auto;
+    margin: 0 auto 1.75em;
+}
+.alignright { 
+    @extend .float-sm-right;
+    margin: 0.375em 0 1.75em 1.75em;
+}
+.alignleft { 
+    @extend .float-sm-left;
+    margin: 0.375em 1.75em 1.75em 0;
+} 
+
+.wp-caption-text {
+    // TODO
+    color: #000;
+} 
