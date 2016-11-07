@@ -4,9 +4,19 @@
  * quicksand-color-schemes are named after episodes of the anime-series 'Cowboy Bebob'
  *
  */
-/* change bootsrap-vars in here */
 /**
- * Fonts
+ * === Fonts ===
+ * 
+ * Changing font:
+ * there exist 2 possibilities
+ *  - _font-(theme).scss
+ *      - change here default very default font, hwich is used when BS & custom css is compiled
+ *      - the font has to be present in dev/fonts/
+ *      - this one is always taken
+ * 
+ *  - Customizer Settings
+ *      - enter a valid Google-API-key save it & relaod the page
+ *      - this way you can use every Google-font you want
  */
 /**
  * grid-patterns
@@ -27,6 +37,7 @@
 /**
  * Define your own colors in here
  */
+/* change bootsrap-vars in here */
 /**
  * overwrite here orginal Bootstrap-variables  
  *
@@ -4437,7 +4448,7 @@ input[type='radio']:checked ~ .custom-control-indicator {
   .breadcrumb-item.active {
     color: #818a91; }
 
-.pagination, .bs-pagination .navigation.pagination .nav-links {
+.pagination {
   display: inline-block;
   padding-left: 0;
   margin-top: 16px;
@@ -4447,22 +4458,22 @@ input[type='radio']:checked ~ .custom-control-indicator {
 
 .page-item {
   display: inline; }
-  .page-item:first-child .page-link, .page-item:first-child .bs-pagination .navigation.pagination .nav-links .page-numbers, .bs-pagination .navigation.pagination .nav-links .page-item:first-child .page-numbers {
+  .page-item:first-child .page-link {
     margin-left: 0; }
-  .page-item.active .page-link, .page-item.active .bs-pagination .navigation.pagination .nav-links .page-numbers, .bs-pagination .navigation.pagination .nav-links .page-item.active .page-numbers, .page-item.active .page-link:focus, .page-item.active .bs-pagination .navigation.pagination .nav-links .page-numbers:focus, .bs-pagination .navigation.pagination .nav-links .page-item.active .page-numbers:focus, .page-item.active .page-link:hover, .page-item.active .bs-pagination .navigation.pagination .nav-links .page-numbers:hover, .bs-pagination .navigation.pagination .nav-links .page-item.active .page-numbers:hover {
+  .page-item.active .page-link, .page-item.active .page-link:focus, .page-item.active .page-link:hover {
     z-index: 2;
     color: #fff;
     cursor: default;
     background-color: #0275d8;
     border-color: #0275d8; }
-  .page-item.disabled .page-link, .page-item.disabled .bs-pagination .navigation.pagination .nav-links .page-numbers, .bs-pagination .navigation.pagination .nav-links .page-item.disabled .page-numbers, .page-item.disabled .page-link:focus, .page-item.disabled .bs-pagination .navigation.pagination .nav-links .page-numbers:focus, .bs-pagination .navigation.pagination .nav-links .page-item.disabled .page-numbers:focus, .page-item.disabled .page-link:hover, .page-item.disabled .bs-pagination .navigation.pagination .nav-links .page-numbers:hover, .bs-pagination .navigation.pagination .nav-links .page-item.disabled .page-numbers:hover {
+  .page-item.disabled .page-link, .page-item.disabled .page-link:focus, .page-item.disabled .page-link:hover {
     color: #818a91;
     pointer-events: none;
     cursor: not-allowed;
     background-color: #fff;
     border-color: #ddd; }
 
-.page-link, .bs-pagination .navigation.pagination .nav-links .page-numbers {
+.page-link {
   position: relative;
   float: left;
   padding: 8px 12px;
@@ -4472,18 +4483,18 @@ input[type='radio']:checked ~ .custom-control-indicator {
   text-decoration: none;
   background-color: #fff;
   border: 1px solid #ddd; }
-  .page-link:focus, .bs-pagination .navigation.pagination .nav-links .page-numbers:focus, .page-link:hover, .bs-pagination .navigation.pagination .nav-links .page-numbers:hover {
+  .page-link:focus, .page-link:hover {
     color: #014c8c;
     background-color: #eceeef;
     border-color: #ddd; }
 
-.pagination-lg .page-link, .pagination-lg .bs-pagination .navigation.pagination .nav-links .page-numbers, .bs-pagination .navigation.pagination .nav-links .pagination-lg .page-numbers {
+.pagination-lg .page-link {
   padding: 12px 24px;
   padding: 0.75rem 1.5rem;
   font-size: 20px;
   font-size: 1.25rem; }
 
-.pagination-sm .page-link, .pagination-sm .bs-pagination .navigation.pagination .nav-links .page-numbers, .bs-pagination .navigation.pagination .nav-links .pagination-sm .page-numbers {
+.pagination-sm .page-link {
   padding: 4.4px 12px;
   padding: 0.275rem 0.75rem;
   font-size: 14px;
@@ -6024,21 +6035,37 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
  * because mixins are used, this file has to be anchored behind 
  * the import of bootstrap ("node_modules/bootstrap/scss/bootstrap.scss")
  */
+/*
 .bs-pagination {
-  /*@extend text-xs-xenter*/
-  width: 100%;
-  text-align: center; }
-  .bs-pagination .navigation.pagination, .bs-pagination .navigation.pagination .navigation.nav-links {
-    display: inline-block;
-    /*@include center-block;*/
-    text-align: center; }
-    .bs-pagination .navigation.pagination .nav-links {
-      /* bootstrap-style pagination*/ }
-      .bs-pagination .navigation.pagination .nav-links .page-numbers:first-child {
-        margin-left: 0; }
-      .bs-pagination .navigation.pagination .nav-links .page-numbers.current, .bs-pagination .navigation.pagination .nav-links .page-numbers.current:focus, .bs-pagination .navigation.pagination .nav-links .page-numbers.current:hover {
-        z-index: 2;
-        color: #fff;
-        cursor: default;
-        background-color: #0275d8;
-        border-color: #0275d8; }
+    @extend text-xs-xenter
+    width: 100%;
+    text-align: center;
+    .navigation.pagination {
+        display: inline-block;
+        @include center-block;
+        text-align: center; 
+        .nav-links {
+            @extend .pagination;
+             bootstrap-style pagination
+            .page-numbers {
+                @extend .page-link;
+                &:first-child {
+                    margin-left: 0;
+                    @include border-left-radius($border-radius);
+                }
+                &:last-child {
+                    @include border-right-radius($border-radius);
+                }
+                &.current {
+                    @include plain-hover-focus {
+                        z-index: 2;
+                        color: $pagination-active-color;
+                        cursor: default;
+                        background-color: $pagination-active-bg;
+                        border-color: $pagination-active-border;
+                    }
+                }
+            }
+        }
+    }
+} */

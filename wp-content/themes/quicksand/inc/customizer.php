@@ -878,7 +878,6 @@ function quicksand_get_color_schemes() {
                 '#f5f5f5',
             ),
         ),
-//        https://www.mediaevent.de/tutorial/farbcodes.html
         'jupiter-jazz' => array(
             'label' => __('Jupiter Jazz', 'quicksand'),
             'settings' => array(
@@ -896,7 +895,7 @@ function quicksand_get_color_schemes() {
                 'qs_slider_height' => 30,
                 'qs_header_hide_when_slider_enabled' => 0,
                 'qs_slider_margin_top' => 2,
-                'quicksand_google_font' => 'Arvo',
+                'quicksand_google_font' => 'Abel',
                 'qs_content_font_size' => 16
             ),
             'colors' => array(
@@ -1229,7 +1228,7 @@ class Google_Font_Dropdown_Custom_Control extends WP_Customize_Control {
     public function get_google_fonts() {
         $googleApi = 'https://www.googleapis.com/webfonts/v1/webfonts?sort=alpha&key=' . get_theme_mod('qs_content_google_api_key', '');
         $fontContent = wp_remote_get($googleApi, array('sslverify' => false));
-        $content = json_decode($fontContent['body'], true);  
+        $content = json_decode($fontContent['body'], true);
 
         return isset($content['items']) ? $content['items'] : NULL;
     }

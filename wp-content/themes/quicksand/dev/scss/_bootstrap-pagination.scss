@@ -4,18 +4,18 @@
  * because mixins are used, this file has to be anchored behind 
  * the import of bootstrap ("node_modules/bootstrap/scss/bootstrap.scss")
  */   
-
+/*
 .bs-pagination {
-    /*@extend text-xs-xenter*/
+    @extend text-xs-xenter
     width: 100%;
     text-align: center;
     .navigation.pagination {
         display: inline-block;
-        /*@include center-block;*/
+        @include center-block;
         text-align: center; 
         .nav-links {
             @extend .pagination;
-            /* bootstrap-style pagination*/
+             bootstrap-style pagination
             .page-numbers {
                 @extend .page-link;
                 &:first-child {
@@ -37,4 +37,4 @@
             }
         }
     }
-} 
+} */

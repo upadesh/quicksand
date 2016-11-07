@@ -8,12 +8,15 @@
  * write your scss-code in a separeted file
  */ 
 
-/* change bootsrap-vars in here */
+
+@import 'fonts-jupiter-jazz';
+
 @import 'grids';
 @import 'colors';
+
+/* change bootsrap-vars in here */
 @import 'variables-jupiter-jazz';
 
-@import 'fonts';
 @import 'navbar';
 @import 'header';
 @import 'gallery';

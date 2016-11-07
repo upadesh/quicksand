@@ -31,3 +31,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
     src: url(fonts/Source_Code_Pro/SourceCodePro-Regular.ttf);  
     font-weight: normal;  
 }
+@font-face {
+    font-family: Abel;  
+    src: url(fonts/Abel/Abel-Regular.ttf);  
+    font-weight: normal;  
+}
