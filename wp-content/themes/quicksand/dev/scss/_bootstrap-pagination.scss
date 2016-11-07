@@ -3,6 +3,26 @@
  */   
 
 
+
+/*pagination: list-view*/
+.bs-pagination {
+    text-align: center;
+    .nav-links  {
+        >.page-numbers {
+            margin-right: .3rem;
+        }
+        >.page-numbers.current {
+        }
+        a {
+            @extend .btn;
+            @extend .btn-outline-secondary;
+            background-image: none;
+        } 
+    } 
+}
+
+
+
 /*pagination: previous & next post*/
 .post-pagination {
     margin: 1rem 0;
@@ -42,24 +62,9 @@
 } 
 
 
-/*pagination: list-view*/
-.bs-pagination {
-    text-align: center;
-    .nav-links  {
-        >.page-numbers {
-            margin-right: .3rem;
-        }
-        >.page-numbers.current {
-        }
-        a {
-            @extend .btn;
-            @extend .btn-outline-secondary;
-            background-image: none;
-        } 
-    } 
-}
 
 
+/* BS-style pagination*/
 /*
 .bs-pagination {
     @extend text-xs-xenter
