@@ -404,6 +404,7 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_content',
         'type' => 'checkbox',
         'settings' => 'qs_content_masonry',
+        'description' => __('Shown when there are more than 2 posts', 'quicksand'),
         'priority' => 10,
     ));
 

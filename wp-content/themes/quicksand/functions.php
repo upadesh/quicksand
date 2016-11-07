@@ -178,8 +178,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 font-size: <?php echo get_theme_mod('qs_content_font_size', quicksand_get_color_scheme()['settings']['qs_content_font_size']); ?>px;
 
                 /*only include google-font if api-key is present & font is selected*/
-                <?php
-                if (get_theme_mod('qs_content_google_api_key', FALSE) && get_theme_mod('quicksand_google_font', FALSE)) { ?>
+                <?php if (get_theme_mod('qs_content_google_api_key', FALSE) && get_theme_mod('quicksand_google_font', FALSE)) { ?>
                     font-family: '<?php echo get_theme_mod('quicksand_google_font', quicksand_get_color_scheme()['settings']['quicksand_google_font']); ?>', sans-serif;
                 <?php } ?> 
             }
@@ -500,7 +499,7 @@ if (!function_exists('quicksand_fonts_url')) :
     function quicksand_fonts_url() {
         $hasApiKey = get_theme_mod('qs_content_google_api_key', FALSE);
         $isSetGoogleFont = get_theme_mod('quicksand_google_font', FALSE);
-        
+
         if ($hasApiKey && $isSetGoogleFont) {
             $fonts = quicksand_get_google_fonts(get_theme_mod('quicksand_google_font', quicksand_get_color_scheme()['settings']['quicksand_google_font']));
             $fonts_url = '';
@@ -945,6 +944,26 @@ if (!function_exists('quicksand_remove_shortcode_from_content')) :
     }
 
 endif;
+
+
+if (!function_exists('quicksand_show_masonry')) : 
+    /**
+     * global function to check if masonry is enabled & ensures it is a list view with
+     *  a minimum amount of posts
+     * 
+     * @global type $posts
+     * @return bool
+     */
+    function quicksand_show_masonry() { 
+        global $posts;
+        $minNumberOfPost = 2;
+        return !is_single() && !is_attachment() && !is_page() && count($posts) > $minNumberOfPost && get_theme_mod('qs_content_masonry', quicksand_get_color_scheme()['settings']['qs_content_masonry']);
+    }
+
+endif;
+
+
+
 
 
 /**

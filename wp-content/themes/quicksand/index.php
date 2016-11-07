@@ -42,9 +42,10 @@ get_header();
             endif;
 
             // show posts in masonry-style 
-            $showMasonry = !is_single() && !is_attachment() && !is_page() && count($posts) > 3 && get_theme_mod('qs_content_masonry', quicksand_get_color_scheme()['settings']['qs_content_masonry']);
+            $showMasonry = quicksand_show_masonry();
             if ($showMasonry) {
-                ?><div class="card-columns quicksand-masonry"> <?php
+                ?> 
+                <div class="card-columns quicksand-masonry"> <?php
                 }
 
 
@@ -64,7 +65,8 @@ get_header();
 
                 // show posts in masonry-style
                 if ($showMasonry) {
-                    ?></div> <?php
+                    ?> 
+                </div> <?php
             }
 
 
