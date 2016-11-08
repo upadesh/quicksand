@@ -291,7 +291,8 @@
     wp.customize('qs_content_title_bg_color', function (value) {
         value.bind(function (qs_content_title_bg_color) {
             var background;
-            background = '.site-content-area .card .entry-header,\n\
+            background = '.site-content-area .quicksand-meta-list-header,\n\
+            .site-content-area .card .entry-header,\n\
             .site-content-area .card .entry-footer,\n\
             .site-content-area .card .author-bio,\n\
             .card-header.comments-title,\n\

@@ -11,19 +11,19 @@
 /* === bootstrap variables === */
 $enable-rounded: true;
  
-$gray-dark:                 $brown-dark !default; // Edit link
+/*$gray-dark:                 $brown-dark !default; // Edit link
 $gray:                      $brown !default;
 $gray-light:                $brown-light !default;
 $gray-lighter:              $brown-lighter !default;
-$gray-lightest:             $brown-lightest !default;   
+$gray-lightest:             $brown-lightest !default;   */
 
 /* btn colors */
 /*use secondary for all submit & input-group buttons*/
 $btn-secondary-color:            $white;
 $btn-secondary-bg:               $brown-light; 
 $btn-secondary-border:           $brown-light; 
-
-/* custom extend */
+/*
+ custom extend 
 a.btn.btn-secondary,
 .btn.btn-secondary a {
     background: $white;
@@ -72,7 +72,7 @@ span.btn.btn-secondary{
     }
 }
 
-/*FIX: background secondary-btn*/
+FIX: background secondary-btn
 .input-group-btn {
     background: $brown-light;
-}
+}*/

@@ -141,8 +141,8 @@ module.exports = function (grunt) {
                 files: {
                     // use @import in main file
                     'dev/css/<%= pkg.name %>.css': 'dev/scss/app.scss',
-                    // ad also color-schemes
-//                    'dev/css/<%= pkg.name %>-jupiter-jazz.css': 'dev/scss/jupiter-jazz/app-jupiter-jazz.scss'
+                    // add also color-schemes
+                    'dev/css/<%= pkg.name %>-jupiter-jazz.css': 'dev/scss/jupiter-jazz/app-jupiter-jazz.scss'
                 }
             }
         },

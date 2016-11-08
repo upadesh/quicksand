@@ -335,8 +335,9 @@ if (!function_exists('quicksand_customizer_css')) :
             .site-content-area .card .entry-summary {
                 border-bottom: 1px solid <?php echo get_theme_mod('qs_content_post_border_color', $colorScheme['colors'][19]); ?>; 
             } 
-            .site-content-area .card .entry-header {
-                /*border-bottom: 1px solid <?php echo get_theme_mod('qs_content_post_border_color', $colorScheme['colors'][19]); ?>;*/  
+           
+            .site-content-area .quicksand-meta-list-header,
+            .site-content-area .card .entry-header {  
                 background: <?php echo get_theme_mod('qs_content_title_bg_color', $colorScheme['colors'][20]); ?>;
             }  
             .site-content-area .card .entry-footer,

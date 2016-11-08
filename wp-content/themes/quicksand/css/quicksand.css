@@ -332,6 +332,10 @@
  * main sidebar / widget file
  * place in here all rules which should be assigned to all sidebars
  */
+#secondary {
+  font-size: 14.4px;
+  font-size: .9rem; }
+
 .widget .widget-title {
   font-size: 20.8px;
   font-size: 1.3rem; }
