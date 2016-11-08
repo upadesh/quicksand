@@ -495,13 +495,6 @@ function quicksand_customize_register($wp_customize) {
         )))
     );
 
-
-
-
-
-
-
-
     // bg-color
     $wp_customize->add_setting('qs_content_background_color', array(
         'default' => $colorSchemeDefault['colors'][1],
@@ -514,6 +507,9 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 20,
         'settings' => 'qs_content_background_color'
     )));
+    
+    
+
 
     // link-color
     $wp_customize->add_setting('qs_content_link_color', array(
@@ -595,6 +591,41 @@ function quicksand_customize_register($wp_customize) {
     )));
 
 
+    // === buttons === 
+    /* Section: Content */
+    $wp_customize->add_section('quicksand_buttons', array(
+        'title' => __('Buttons', 'quicksand'),
+        'priority' => 30,
+        'panel' => 'quicksand_main_options',
+    ));
+
+    // button primary color
+    $wp_customize->add_setting('qs_button_color_primary', array( 
+        'default' => $colorSchemeDefault['colors'][21], 
+        'transport' => 'refresh',
+        'sanitize_callback' => 'quicksand_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_button_color_primary', array(
+        'label' => __('Button Primary Color', 'quicksand'),
+        'section' => 'quicksand_buttons',
+        'priority' => 20,
+        'settings' => 'qs_button_color_primary'
+    )));
+
+
+    // button secondary color
+    $wp_customize->add_setting('qs_button_color_secondary', array( 
+        'default' => $colorSchemeDefault['colors'][22], 
+        'transport' => 'refresh',
+        'sanitize_callback' => 'quicksand_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_button_color_secondary', array(
+        'label' => __('Button Secondary Color', 'quicksand'),
+        'section' => 'quicksand_buttons',
+        'priority' => 20,
+        'settings' => 'qs_button_color_secondary'
+    )));
+ 
 
 
     /* Section: Biography */
@@ -798,7 +829,7 @@ add_action('customize_register', 'quicksand_customize_register');
  *
  * The order of colors in a colors array:
  * 1. Main Background Color         - background_color
- * 2. Page Background Color         - qs_content_background_color
+ * 2. Content Background Color      - qs_content_background_color
  * 3. Link Color                    - qs_content_link_color
  * 4. Content Text Color            - qs_content_text_color
  * 5. Secondary Text Color          - qs_content_secondary_text_color
@@ -818,6 +849,8 @@ add_action('customize_register', 'quicksand_customize_register');
  * 19. Post Background Color        - qs_content_post_bg_color
  * 20. Post Border Color            - qs_content_post_border_color
  * 21. Post Title Background Color  - qs_content_title_bg_color
+ * 22. Button Primary Color         - qs_button_color_primary
+ * 23. Button Secondary Color       - qs_button_secondary_primary
  *
  * @since Quicksand 0.2.1
  *
@@ -915,7 +948,11 @@ function quicksand_get_color_schemes() {
 //                qs_content_post_border_color 
                 '#e0e0e0',
 //                qs_content_title_bg_color
-                '#f5f5f5',
+                '#f5f5f5', 
+//                qs_button_color_primary,
+                '#ed004f',
+//                qs_button_color_secondary,
+                '#1e73be'
             ),
         ),
         'jupiter-jazz' => array(
@@ -988,6 +1025,10 @@ function quicksand_get_color_schemes() {
                 '#e0d4c0',
 //                qs_content_title_bg_color
                 '#d6cbb8',
+//                qs_button_color_primary,
+                '#ed004f',
+//                qs_button_color_secondary,
+                '#1e73be'
             ),
         ),
     ));
