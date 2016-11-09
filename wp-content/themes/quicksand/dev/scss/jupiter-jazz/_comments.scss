@@ -7,7 +7,7 @@
 .comments-area  { 
     .comment-respond {
         @extend .clearfix;
-        
+
         margin-top: 2rem;
         margin-bottom: 2rem;
 
@@ -20,12 +20,15 @@
     }
     .comment-list {
         padding-left: 0;
-        
-        article {
+        list-style-type: none;
+
+        .comment-body { 
+            border: none; 
             background: grey;
             padding: .4rem;
             margin-bottom: .5rem;
-        }
+        } 
+
         .reply {
             text-align: right;
             .comment-reply-link{
@@ -36,12 +39,6 @@
                 }
             }
         }
-    }
-    ol {
-        list-style-type: none;
-        .comment-body { 
-            border: none; 
-        } 
     } 
 } 
 

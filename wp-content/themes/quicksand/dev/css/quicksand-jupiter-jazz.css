@@ -674,26 +674,6 @@ maybe pading of cells smaller in media-query ... who knows????
   padding: 0; }
 
 /*biography*/
-/*.author-bio {
-    .avatar {
-        float: left-xs-left; 
-    }
-    .author-bio-content {
-        margin-left: 74px;
-        .author-link {
-            @extend .btn;
-            @extend .btn-secondary; 
-            
-            @extend .float-xs-right;
-                
-                &:before {
-                    font-family: FontAwesome; 
-                    padding-right: 3px;
-                    content: "\f02d";
-                }
-        }
-    }
-}*/
 .author-bio {
   display: -ms-flexbox;
   display: flex; }
@@ -721,8 +701,10 @@ maybe pading of cells smaller in media-query ... who knows????
     text-align: center; }
 
 .comments-area .comment-list {
-  padding-left: 0; }
-  .comments-area .comment-list article {
+  padding-left: 0;
+  list-style-type: none; }
+  .comments-area .comment-list .comment-body {
+    border: none;
     background: grey;
     padding: 6.4px;
     padding: .4rem;
@@ -734,11 +716,6 @@ maybe pading of cells smaller in media-query ... who knows????
       font-family: FontAwesome;
       padding-right: 3px;
       content: "\f112"; }
-
-.comments-area ol {
-  list-style-type: none; }
-  .comments-area ol .comment-body {
-    border: none; }
 
 /*Pagination: Older / Newer Comments*/
 .comment-navigation .nav-previous a {
