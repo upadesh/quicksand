@@ -16,7 +16,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 font-size: <?php echo get_theme_mod('qs_content_font_size', quicksand_get_color_scheme()['settings']['qs_content_font_size']); ?>px;
 
                 /*only include google-font if api-key is present & font is selected*/
-        <?php if (get_theme_mod('qs_content_google_api_key', FALSE) && get_theme_mod('quicksand_google_font', FALSE)) { ?>
+                <?php if (get_theme_mod('qs_content_google_api_key', FALSE) && get_theme_mod('quicksand_google_font', FALSE)) { ?>
                     font-family: '<?php echo get_theme_mod('quicksand_google_font', quicksand_get_color_scheme()['settings']['quicksand_google_font']); ?>', sans-serif;
                 <?php } ?> 
             }
@@ -28,27 +28,66 @@ if (!function_exists('quicksand_customizer_css')) :
              * hover geht auch noch nicht 
              * dasslebe sollte auch mit den Kommenta_Antworten funktionieren
             */ 
-            
-            .comment .reply a.comment-reply-link,
-            .comment-navigation .nav-previous a,
-            .comment-navigation .nav-next a, 
-            
 
-            .btn-secondary, 
-            .btn-secondary:hover, 
-            .btn-secondary:focus, .btn-secondary.focus, 
-            .btn-secondary:active, 
-            .btn-secondary.active, 
-            .btn-secondary:visited,
-            .btn-secondary:active:hover, 
-            .btn-secondary.active:hover {
+
+            /*btn-secondary*/
+            .btn-secondary {
                 background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
                 color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
                 border: 1px solid <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
-                outline: none;
+                /*outline: none;*/
+            }
+
+            .btn-secondary:hover 
+            /*            .btn-secondary:focus, 
+                        .btn-secondary.focus, 
+                        .btn-secondary:active, 
+                        .btn-secondary.active, 
+                        .btn-secondary:visited,
+                        .btn-secondary:active:hover, 
+                        .btn-secondary.active:hover */
+            {   
+                background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
+                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
+                border: 1px solid <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
             }
 
 
+            /*btn-outline-secondary*/ 
+            .comment-navigation .nav-previous a,
+            .comment-navigation .nav-next a, 
+            
+            .btn-outline-secondary a { 
+                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;   
+            } 
+
+            .comment .reply a.comment-reply-link,  
+            
+            .btn-outline-secondary 
+            {
+                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
+                border: 1px solid <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
+                /*outline: none;*/
+            }
+
+
+            .comment .reply a.comment-reply-link:hover,  
+            .btn-outline-secondary:hover, 
+            .btn-outline-secondary:hover a 
+            /*            .btn-outline-secondary:focus, 
+                        .btn-outline-secondary.focus, 
+                        .btn-outline-secondary:active, 
+                        .btn-outline-secondary.active, 
+                        .btn-outline-secondary:visited,
+                        .btn-outline-secondary:active:hover, 
+                        .btn-outline-secondary.active:hover */
+            {
+                text-decoration: none;
+                background: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
+                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important; 
+                border: 1px solid <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
+                /*outline: none;*/
+            }
 
 
 
@@ -97,10 +136,10 @@ if (!function_exists('quicksand_customizer_css')) :
                 max-height: <?php echo get_theme_mod('qs_slider_height', $colorScheme['settings']['qs_slider_height']); ?>rem; 
             }
             .quicksand-slider-header-wrapper .flexslider .slides h2 {
-        <?php
-        $rgb = quicksand_hex2rgb(get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]));
-        $rgba = array($rgb['red'], $rgb['green'], $rgb['blue'], "0.5");
-        ?>
+                <?php
+                $rgb = quicksand_hex2rgb(get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]));
+                $rgba = array($rgb['red'], $rgb['green'], $rgb['blue'], "0.5");
+                ?>
                 background: rgba(<?php echo esc_html(join(",", $rgba)) ?>); 
             }
 
@@ -213,11 +252,11 @@ if (!function_exists('quicksand_customizer_css')) :
             /*sidebar*/ 
             #secondary .widget {
                 border-color: <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme['colors'][15]); ?>;   
-        <?php
-        // outer-widget-border-width never more than 1 
-        $widgetBorderWidth = get_theme_mod('qs_sidebar_border_width', $colorScheme['settings']['qs_sidebar_border_width']);
-        $widgetBorderWidth = $widgetBorderWidth > 1 ? 1 : $widgetBorderWidth;
-        ?>
+                <?php
+                // outer-widget-border-width never more than 1 
+                $widgetBorderWidth = get_theme_mod('qs_sidebar_border_width', $colorScheme['settings']['qs_sidebar_border_width']);
+                $widgetBorderWidth = $widgetBorderWidth > 1 ? 1 : $widgetBorderWidth;
+                ?>
                 border-width: <?php echo esc_html($widgetBorderWidth); ?>px;
                 border-style: solid;
             }

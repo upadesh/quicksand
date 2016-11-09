@@ -650,8 +650,7 @@ maybe padding of cells smaller in media-query ... who knows????
       line-height: 42px; }
 
 /* 
- * comments
- * form & list
+ * comments 
  */
 .comments-area {
   /*comment-reply-form*/
@@ -2704,39 +2703,35 @@ fieldset[disabled] a {
     background-color: #0275d8;
     border-color: #0275d8; }
 
-.btn-secondary, .comments-area .comment-list .comment-body .reply .comment-reply-link {
+.btn-secondary {
   color: #fff;
   background-color: #9ab7ac;
   border-color: #9ab7ac; }
-  .btn-secondary:hover, .comments-area .comment-list .comment-body .reply .comment-reply-link:hover {
+  .btn-secondary:hover {
     color: #fff;
     background-color: #7ca294;
     border-color: #769e8f; }
-  .btn-secondary:focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:focus, .btn-secondary.focus, .comments-area .comment-list .comment-body .reply .focus.comment-reply-link {
+  .btn-secondary:focus, .btn-secondary.focus {
     color: #fff;
     background-color: #7ca294;
     border-color: #769e8f; }
-  .btn-secondary:active, .comments-area .comment-list .comment-body .reply .comment-reply-link:active, .btn-secondary.active, .comments-area .comment-list .comment-body .reply .active.comment-reply-link,
-  .open > .btn-secondary.dropdown-toggle, .comments-area .comment-list .comment-body .reply
-  .open > .dropdown-toggle.comment-reply-link {
+  .btn-secondary:active, .btn-secondary.active,
+  .open > .btn-secondary.dropdown-toggle {
     color: #fff;
     background-color: #7ca294;
     border-color: #769e8f;
     background-image: none; }
-    .btn-secondary:active:hover, .comments-area .comment-list .comment-body .reply .comment-reply-link:active:hover, .btn-secondary:active:focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:active:focus, .btn-secondary:active.focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:active.focus, .btn-secondary.active:hover, .comments-area .comment-list .comment-body .reply .active.comment-reply-link:hover, .btn-secondary.active:focus, .comments-area .comment-list .comment-body .reply .active.comment-reply-link:focus, .btn-secondary.active.focus, .comments-area .comment-list .comment-body .reply .active.focus.comment-reply-link,
-    .open > .btn-secondary.dropdown-toggle:hover, .comments-area .comment-list .comment-body .reply
-    .open > .dropdown-toggle.comment-reply-link:hover,
-    .open > .btn-secondary.dropdown-toggle:focus, .comments-area .comment-list .comment-body .reply
-    .open > .dropdown-toggle.comment-reply-link:focus,
-    .open > .btn-secondary.dropdown-toggle.focus, .comments-area .comment-list .comment-body .reply
-    .open > .dropdown-toggle.focus.comment-reply-link {
+    .btn-secondary:active:hover, .btn-secondary:active:focus, .btn-secondary:active.focus, .btn-secondary.active:hover, .btn-secondary.active:focus, .btn-secondary.active.focus,
+    .open > .btn-secondary.dropdown-toggle:hover,
+    .open > .btn-secondary.dropdown-toggle:focus,
+    .open > .btn-secondary.dropdown-toggle.focus {
       color: #fff;
       background-color: #689282;
       border-color: #577a6d; }
-  .btn-secondary.disabled:focus, .comments-area .comment-list .comment-body .reply .disabled.comment-reply-link:focus, .btn-secondary.disabled.focus, .comments-area .comment-list .comment-body .reply .disabled.focus.comment-reply-link, .btn-secondary:disabled:focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:disabled:focus, .btn-secondary:disabled.focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:disabled.focus {
+  .btn-secondary.disabled:focus, .btn-secondary.disabled.focus, .btn-secondary:disabled:focus, .btn-secondary:disabled.focus {
     background-color: #9ab7ac;
     border-color: #9ab7ac; }
-  .btn-secondary.disabled:hover, .comments-area .comment-list .comment-body .reply .disabled.comment-reply-link:hover, .btn-secondary:disabled:hover, .comments-area .comment-list .comment-body .reply .comment-reply-link:disabled:hover {
+  .btn-secondary.disabled:hover, .btn-secondary:disabled:hover {
     background-color: #9ab7ac;
     border-color: #9ab7ac; }
 
@@ -2898,21 +2893,22 @@ fieldset[disabled] a {
   .btn-outline-primary.disabled:hover, .btn-outline-primary:disabled:hover {
     border-color: #43a7fd; }
 
-.btn-outline-secondary, .comments-area .comment-navigation .nav-previous a, .comments-area .comment-navigation .nav-next a, .quicksand-post-pagination-list-view .nav-links a, .page-links a {
+.btn-outline-secondary, .comments-area .comment-list .comment-body .reply .comment-reply-link, .comments-area .comment-navigation .nav-previous a, .comments-area .comment-navigation .nav-next a, .quicksand-post-pagination-list-view .nav-links a, .page-links a {
   color: #9ab7ac;
   background-image: none;
   background-color: transparent;
   border-color: #9ab7ac; }
-  .btn-outline-secondary:hover, .comments-area .comment-navigation .nav-previous a:hover, .comments-area .comment-navigation .nav-next a:hover, .quicksand-post-pagination-list-view .nav-links a:hover, .page-links a:hover {
+  .btn-outline-secondary:hover, .comments-area .comment-list .comment-body .reply .comment-reply-link:hover, .comments-area .comment-navigation .nav-previous a:hover, .comments-area .comment-navigation .nav-next a:hover, .quicksand-post-pagination-list-view .nav-links a:hover, .page-links a:hover {
     color: #fff;
     background-color: #9ab7ac;
     border-color: #9ab7ac; }
-  .btn-outline-secondary:focus, .comments-area .comment-navigation .nav-previous a:focus, .comments-area .comment-navigation .nav-next a:focus, .quicksand-post-pagination-list-view .nav-links a:focus, .page-links a:focus, .btn-outline-secondary.focus, .comments-area .comment-navigation .nav-previous a.focus, .comments-area .comment-navigation .nav-next a.focus, .quicksand-post-pagination-list-view .nav-links a.focus, .page-links a.focus {
+  .btn-outline-secondary:focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:focus, .comments-area .comment-navigation .nav-previous a:focus, .comments-area .comment-navigation .nav-next a:focus, .quicksand-post-pagination-list-view .nav-links a:focus, .page-links a:focus, .btn-outline-secondary.focus, .comments-area .comment-list .comment-body .reply .focus.comment-reply-link, .comments-area .comment-navigation .nav-previous a.focus, .comments-area .comment-navigation .nav-next a.focus, .quicksand-post-pagination-list-view .nav-links a.focus, .page-links a.focus {
     color: #fff;
     background-color: #9ab7ac;
     border-color: #9ab7ac; }
-  .btn-outline-secondary:active, .comments-area .comment-navigation .nav-previous a:active, .comments-area .comment-navigation .nav-next a:active, .quicksand-post-pagination-list-view .nav-links a:active, .page-links a:active, .btn-outline-secondary.active, .comments-area .comment-navigation .nav-previous a.active, .comments-area .comment-navigation .nav-next a.active, .quicksand-post-pagination-list-view .nav-links a.active, .page-links a.active,
-  .open > .btn-outline-secondary.dropdown-toggle, .comments-area .comment-navigation .nav-previous
+  .btn-outline-secondary:active, .comments-area .comment-list .comment-body .reply .comment-reply-link:active, .comments-area .comment-navigation .nav-previous a:active, .comments-area .comment-navigation .nav-next a:active, .quicksand-post-pagination-list-view .nav-links a:active, .page-links a:active, .btn-outline-secondary.active, .comments-area .comment-list .comment-body .reply .active.comment-reply-link, .comments-area .comment-navigation .nav-previous a.active, .comments-area .comment-navigation .nav-next a.active, .quicksand-post-pagination-list-view .nav-links a.active, .page-links a.active,
+  .open > .btn-outline-secondary.dropdown-toggle, .comments-area .comment-list .comment-body .reply
+  .open > .dropdown-toggle.comment-reply-link, .comments-area .comment-navigation .nav-previous
   .open > a.dropdown-toggle, .comments-area .comment-navigation .nav-next
   .open > a.dropdown-toggle, .quicksand-post-pagination-list-view .nav-links
   .open > a.dropdown-toggle, .page-links
@@ -2920,18 +2916,21 @@ fieldset[disabled] a {
     color: #fff;
     background-color: #9ab7ac;
     border-color: #9ab7ac; }
-    .btn-outline-secondary:active:hover, .comments-area .comment-navigation .nav-previous a:active:hover, .comments-area .comment-navigation .nav-next a:active:hover, .quicksand-post-pagination-list-view .nav-links a:active:hover, .page-links a:active:hover, .btn-outline-secondary:active:focus, .comments-area .comment-navigation .nav-previous a:active:focus, .comments-area .comment-navigation .nav-next a:active:focus, .quicksand-post-pagination-list-view .nav-links a:active:focus, .page-links a:active:focus, .btn-outline-secondary:active.focus, .comments-area .comment-navigation .nav-previous a:active.focus, .comments-area .comment-navigation .nav-next a:active.focus, .quicksand-post-pagination-list-view .nav-links a:active.focus, .page-links a:active.focus, .btn-outline-secondary.active:hover, .comments-area .comment-navigation .nav-previous a.active:hover, .comments-area .comment-navigation .nav-next a.active:hover, .quicksand-post-pagination-list-view .nav-links a.active:hover, .page-links a.active:hover, .btn-outline-secondary.active:focus, .comments-area .comment-navigation .nav-previous a.active:focus, .comments-area .comment-navigation .nav-next a.active:focus, .quicksand-post-pagination-list-view .nav-links a.active:focus, .page-links a.active:focus, .btn-outline-secondary.active.focus, .comments-area .comment-navigation .nav-previous a.active.focus, .comments-area .comment-navigation .nav-next a.active.focus, .quicksand-post-pagination-list-view .nav-links a.active.focus, .page-links a.active.focus,
-    .open > .btn-outline-secondary.dropdown-toggle:hover, .comments-area .comment-navigation .nav-previous
+    .btn-outline-secondary:active:hover, .comments-area .comment-list .comment-body .reply .comment-reply-link:active:hover, .comments-area .comment-navigation .nav-previous a:active:hover, .comments-area .comment-navigation .nav-next a:active:hover, .quicksand-post-pagination-list-view .nav-links a:active:hover, .page-links a:active:hover, .btn-outline-secondary:active:focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:active:focus, .comments-area .comment-navigation .nav-previous a:active:focus, .comments-area .comment-navigation .nav-next a:active:focus, .quicksand-post-pagination-list-view .nav-links a:active:focus, .page-links a:active:focus, .btn-outline-secondary:active.focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:active.focus, .comments-area .comment-navigation .nav-previous a:active.focus, .comments-area .comment-navigation .nav-next a:active.focus, .quicksand-post-pagination-list-view .nav-links a:active.focus, .page-links a:active.focus, .btn-outline-secondary.active:hover, .comments-area .comment-list .comment-body .reply .active.comment-reply-link:hover, .comments-area .comment-navigation .nav-previous a.active:hover, .comments-area .comment-navigation .nav-next a.active:hover, .quicksand-post-pagination-list-view .nav-links a.active:hover, .page-links a.active:hover, .btn-outline-secondary.active:focus, .comments-area .comment-list .comment-body .reply .active.comment-reply-link:focus, .comments-area .comment-navigation .nav-previous a.active:focus, .comments-area .comment-navigation .nav-next a.active:focus, .quicksand-post-pagination-list-view .nav-links a.active:focus, .page-links a.active:focus, .btn-outline-secondary.active.focus, .comments-area .comment-list .comment-body .reply .active.focus.comment-reply-link, .comments-area .comment-navigation .nav-previous a.active.focus, .comments-area .comment-navigation .nav-next a.active.focus, .quicksand-post-pagination-list-view .nav-links a.active.focus, .page-links a.active.focus,
+    .open > .btn-outline-secondary.dropdown-toggle:hover, .comments-area .comment-list .comment-body .reply
+    .open > .dropdown-toggle.comment-reply-link:hover, .comments-area .comment-navigation .nav-previous
     .open > a.dropdown-toggle:hover, .comments-area .comment-navigation .nav-next
     .open > a.dropdown-toggle:hover, .quicksand-post-pagination-list-view .nav-links
     .open > a.dropdown-toggle:hover, .page-links
     .open > a.dropdown-toggle:hover,
-    .open > .btn-outline-secondary.dropdown-toggle:focus, .comments-area .comment-navigation .nav-previous
+    .open > .btn-outline-secondary.dropdown-toggle:focus, .comments-area .comment-list .comment-body .reply
+    .open > .dropdown-toggle.comment-reply-link:focus, .comments-area .comment-navigation .nav-previous
     .open > a.dropdown-toggle:focus, .comments-area .comment-navigation .nav-next
     .open > a.dropdown-toggle:focus, .quicksand-post-pagination-list-view .nav-links
     .open > a.dropdown-toggle:focus, .page-links
     .open > a.dropdown-toggle:focus,
-    .open > .btn-outline-secondary.dropdown-toggle.focus, .comments-area .comment-navigation .nav-previous
+    .open > .btn-outline-secondary.dropdown-toggle.focus, .comments-area .comment-list .comment-body .reply
+    .open > .dropdown-toggle.focus.comment-reply-link, .comments-area .comment-navigation .nav-previous
     .open > a.dropdown-toggle.focus, .comments-area .comment-navigation .nav-next
     .open > a.dropdown-toggle.focus, .quicksand-post-pagination-list-view .nav-links
     .open > a.dropdown-toggle.focus, .page-links
@@ -2939,9 +2938,9 @@ fieldset[disabled] a {
       color: #fff;
       background-color: #689282;
       border-color: #577a6d; }
-  .btn-outline-secondary.disabled:focus, .comments-area .comment-navigation .nav-previous a.disabled:focus, .comments-area .comment-navigation .nav-next a.disabled:focus, .quicksand-post-pagination-list-view .nav-links a.disabled:focus, .page-links a.disabled:focus, .btn-outline-secondary.disabled.focus, .comments-area .comment-navigation .nav-previous a.disabled.focus, .comments-area .comment-navigation .nav-next a.disabled.focus, .quicksand-post-pagination-list-view .nav-links a.disabled.focus, .page-links a.disabled.focus, .btn-outline-secondary:disabled:focus, .comments-area .comment-navigation .nav-previous a:disabled:focus, .comments-area .comment-navigation .nav-next a:disabled:focus, .quicksand-post-pagination-list-view .nav-links a:disabled:focus, .page-links a:disabled:focus, .btn-outline-secondary:disabled.focus, .comments-area .comment-navigation .nav-previous a:disabled.focus, .comments-area .comment-navigation .nav-next a:disabled.focus, .quicksand-post-pagination-list-view .nav-links a:disabled.focus, .page-links a:disabled.focus {
+  .btn-outline-secondary.disabled:focus, .comments-area .comment-list .comment-body .reply .disabled.comment-reply-link:focus, .comments-area .comment-navigation .nav-previous a.disabled:focus, .comments-area .comment-navigation .nav-next a.disabled:focus, .quicksand-post-pagination-list-view .nav-links a.disabled:focus, .page-links a.disabled:focus, .btn-outline-secondary.disabled.focus, .comments-area .comment-list .comment-body .reply .disabled.focus.comment-reply-link, .comments-area .comment-navigation .nav-previous a.disabled.focus, .comments-area .comment-navigation .nav-next a.disabled.focus, .quicksand-post-pagination-list-view .nav-links a.disabled.focus, .page-links a.disabled.focus, .btn-outline-secondary:disabled:focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:disabled:focus, .comments-area .comment-navigation .nav-previous a:disabled:focus, .comments-area .comment-navigation .nav-next a:disabled:focus, .quicksand-post-pagination-list-view .nav-links a:disabled:focus, .page-links a:disabled:focus, .btn-outline-secondary:disabled.focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:disabled.focus, .comments-area .comment-navigation .nav-previous a:disabled.focus, .comments-area .comment-navigation .nav-next a:disabled.focus, .quicksand-post-pagination-list-view .nav-links a:disabled.focus, .page-links a:disabled.focus {
     border-color: #d6e1dd; }
-  .btn-outline-secondary.disabled:hover, .comments-area .comment-navigation .nav-previous a.disabled:hover, .comments-area .comment-navigation .nav-next a.disabled:hover, .quicksand-post-pagination-list-view .nav-links a.disabled:hover, .page-links a.disabled:hover, .btn-outline-secondary:disabled:hover, .comments-area .comment-navigation .nav-previous a:disabled:hover, .comments-area .comment-navigation .nav-next a:disabled:hover, .quicksand-post-pagination-list-view .nav-links a:disabled:hover, .page-links a:disabled:hover {
+  .btn-outline-secondary.disabled:hover, .comments-area .comment-list .comment-body .reply .disabled.comment-reply-link:hover, .comments-area .comment-navigation .nav-previous a.disabled:hover, .comments-area .comment-navigation .nav-next a.disabled:hover, .quicksand-post-pagination-list-view .nav-links a.disabled:hover, .page-links a.disabled:hover, .btn-outline-secondary:disabled:hover, .comments-area .comment-list .comment-body .reply .comment-reply-link:disabled:hover, .comments-area .comment-navigation .nav-previous a:disabled:hover, .comments-area .comment-navigation .nav-next a:disabled:hover, .quicksand-post-pagination-list-view .nav-links a:disabled:hover, .page-links a:disabled:hover {
     border-color: #d6e1dd; }
 
 .btn-outline-info {
@@ -5449,7 +5448,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 @media (min-width: 576px) {
   .float-sm-left, .alignleft {
     float: left !important; }
-  .float-sm-right, .alignright, .comments-area .comment-respond .form-submit .btn-secondary, .comments-area .comment-respond .form-submit .comment-list .comment-body .reply .comment-reply-link, .comments-area .comment-list .comment-body .reply .comment-respond .form-submit .comment-reply-link {
+  .float-sm-right, .alignright, .comments-area .comment-respond .form-submit .btn-secondary {
     float: right !important; }
   .float-sm-none {
     float: none !important; } }

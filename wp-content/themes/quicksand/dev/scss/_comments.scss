@@ -1,6 +1,5 @@
 /* 
- * comments
- * form & list
+ * comments 
  */
 
 
@@ -34,7 +33,7 @@
                 text-align: right;
                 .comment-reply-link{ 
                     @extend .btn;
-                    @extend .btn-secondary; 
+                    @extend .btn-outline-secondary; 
 
                     &:before {
                         font-family: FontAwesome; 
