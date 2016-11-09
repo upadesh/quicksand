@@ -558,10 +558,19 @@ if (!function_exists('quicksand_edit_post')) :
             <div class="entry-footer card-footer text-muted">
                 <?php
                 edit_post_link(
+                        // link-text
                         sprintf(
                                 /* translators: %s: Name of current post */
                                 __('Edit<span class="screen-reader-text"> "%s"</span>', 'quicksand'), get_the_title()
-                        ), '<span class="card-link edit-link">', '</span>'
+                        ), 
+                        // before
+                        '<span class="card-link edit-link">', 
+                        // after
+                        '</span>',
+                        // id
+                        get_the_ID(),
+                        // class
+                        'post_edit_link btn btn-secondary'
                 );
                 ?>
             </div><!-- .entry-footer -->

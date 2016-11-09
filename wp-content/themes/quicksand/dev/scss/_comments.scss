@@ -28,10 +28,7 @@
         }
         .reply {
             text-align: right;
-            .comment-reply-link{
-                @extend .btn;
-                @extend .btn-secondary; 
-
+            .comment-reply-link{ 
                 &:before {
                     font-family: FontAwesome; 
                     padding-right: 3px;
@@ -54,9 +51,7 @@
 .comment-navigation { 
     .nav-previous {
         @extend .text-xs-left; 
-        a {
-            @extend .btn;
-            @extend .btn-outline-secondary; 
+        a { 
             display: inline-block; 
 
             &:before {

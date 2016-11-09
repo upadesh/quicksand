@@ -47,6 +47,9 @@ if (post_password_required()) {
                     'style' => 'ol',
                     'short_ping' => true,
                     'avatar_size' => 42,
+//                    TODO: see for a working example
+//                        http://www.studiograsshopper.ch/code-snippets/customising-wp_list_comments/
+//                    'callback' => 'quicksand_comment'
                 ));
                 ?>
             </ol><!-- .comment-list -->
@@ -58,7 +61,7 @@ if (post_password_required()) {
             ));
             ?>
 
-        <?php endif; // Check for have_comments(). ?>
+        <?php endif; // Check for have_comments().   ?>
 
         <?php
         // If comments are closed and there are comments, let's leave a little note, shall we?

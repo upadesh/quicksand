@@ -124,7 +124,12 @@ jQuery(document).ready(function ($) {
     initSearchBar();
 
     // Init fitVids
-    fitvids('.video');
+    // By default, fitvids automatically wraps Youtube, Vimeo, and Kickstarter players
+    // add here custom other ones
+    // ignore is also an option
+    fitvids('.video', {
+        players: ['iframe[src*="videopress.com"]']
+    });
 
     // slider in header
     initFlexsliderHeader();

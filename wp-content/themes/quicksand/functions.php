@@ -194,6 +194,34 @@ if (!function_exists('quicksand_customizer_css')) :
                 <?php } ?> 
             }
 
+            /* buttons */ 
+            /*form-buttons*/
+
+            /* TODO: hat kein btn-klasse, ist aber extended
+             * hover geht auch noch nicht 
+             * dasslebe sollte auch mit den Kommenta_Antworten funktionieren
+            */ 
+            .comment-navigation .nav-previous a,
+            .comment-navigation .nav-next a,
+
+
+            .btn-secondary, 
+            .btn-secondary:hover, 
+            .btn-secondary:focus, .btn-secondary.focus, 
+            .btn-secondary:active, 
+            .btn-secondary.active, 
+            .btn-secondary:visited,
+            .btn-secondary:active:hover, 
+            .btn-secondary.active:hover {
+                background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
+                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
+                border: none;
+                outline: none;
+            }
+
+
+
+
 
 
             /*navigation*/
@@ -282,16 +310,13 @@ if (!function_exists('quicksand_customizer_css')) :
             /*quote*/ 
             .site-main-container .post-quote  p { 
                 color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]); ?>;
-            }
-
-
-
+            } 
 
 
 
 
             /* === paginations === */  
-            
+
             /*** list-view posts ****/
             .quicksand-post-pagination-list-view .page-numbers a,
             /*** paginated posts ****/
@@ -304,7 +329,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 color: <?php echo get_theme_mod('qs_content_background_color', $colorScheme['colors'][1]); ?> !important;
                 background: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]); ?>; 
             } 
-            
+
 
 
             /*2nd text color*/  
@@ -335,7 +360,7 @@ if (!function_exists('quicksand_customizer_css')) :
             .site-content-area .card .entry-summary {
                 border-bottom: 1px solid <?php echo get_theme_mod('qs_content_post_border_color', $colorScheme['colors'][19]); ?>; 
             } 
-           
+
             .site-content-area .quicksand-meta-list-header,
             .site-content-area .card .entry-header {  
                 background: <?php echo get_theme_mod('qs_content_title_bg_color', $colorScheme['colors'][20]); ?>;
@@ -883,10 +908,10 @@ if (!function_exists('quicksand_bootstrap_wrap_oembed')) :
      * 
      * @return string html
      */
-    function quicksand_bootstrap_wrap_oembed($html) {
-        // TODO: this doesn't match only videos?!?!? What about fitvids()
+    function quicksand_bootstrap_wrap_oembed($html) { 
         // strip width and height 
-        $html = preg_replace('/(width|height)="\d*"\s/', "", $html);
+//        $html = preg_replace('/(width|height)="\d*"\s/', "", $html);
+        $html = preg_replace('/(width|height)=["\']\d*["\']\s/', "", $html);
 
         // wrap in div element, so jquery.fitVids.js can catch it
         return'<div class="video">' . $html . '</div>';
@@ -905,7 +930,7 @@ if (!function_exists('quicksand_modify_read_more_link')) :
      * @return type
      */
     function quicksand_modify_read_more_link() {
-        return '<a class="read-more-link" href="' . get_permalink() . '">' . __('Read more', 'quicksand') . '</a>';
+        return '<a class="read-more-link btn btn-secondary" href="' . get_permalink() . '">' . __('Read more', 'quicksand') . '</a>';
     }
 
 endif;
@@ -1035,7 +1060,22 @@ endif;
 //add_filter('wp_get_attachment_image_attributes', 'quicksand_post_thumbnail_sizes_attr', 10, 3);
 
 
-
+/**
+ * on first load randomly the error 'net::ERR_INCOMPLETE_CHUNKED_ENCODING' comes up,
+ * which on the bounce causes the JS to fail. 
+ * 
+ * In fact, the proper hook is "send_headers ... find it
+ * 
+ * TODO: watch if this helps
+ * 
+ * @param type $headers
+ * @return type
+ */
+function quicksand_nocache($headers) {
+    unset($headers['Cache-Control']);
+    return $headers;
+}
+add_filter('wp_headers', 'quicksand_nocache');
 
 /**
  * Custom template tags for this theme.

@@ -86,10 +86,7 @@
     }
 
     .entry-content {
-        .read-more-link {
-            @extend .btn;
-            @extend .btn-outline-secondary; 
-
+        .read-more-link { 
             float: right;
 
             &:before {
@@ -130,8 +127,6 @@
             float: right;
             /* edit post-link  */  
             .post-edit-link {
-                @extend .btn;
-                @extend .btn-secondary; 
 
                 &:before {
                     font-family: FontAwesome; 
