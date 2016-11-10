@@ -563,7 +563,7 @@ if (!function_exists('quicksand_edit_post')) :
                                 __('Edit<span class="screen-reader-text"> "%s"</span>', 'quicksand'), get_the_title()
                         ), 
                         // before
-                        '<span class="card-link edit-link btn btn-outline-secondary"><i class="fa fa-pencil"></i>', 
+                        '<span class="card-link edit-link btn btn-secondary"><i class="fa fa-pencil"></i>', 
                         // after
                         '</span>',
                         // id

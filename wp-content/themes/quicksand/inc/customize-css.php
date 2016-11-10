@@ -30,8 +30,16 @@ if (!function_exists('quicksand_customizer_css')) :
                 border: 1px solid <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
                 outline: none;
             }
+            .btn-secondary a{
+                background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
+                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
+                border: none;
+                outline: none;
+            }
  
-            .btn-secondary:hover {   
+            .btn-secondary:hover,
+            .btn-secondary:hover a {   
+                text-decoration: none;
                 background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
                 color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
                 border: 1px solid <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
