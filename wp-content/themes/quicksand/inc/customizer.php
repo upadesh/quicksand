@@ -683,6 +683,31 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 10,
     ));
 
+    // bio: bg-color
+    $wp_customize->add_setting('qs_biography_background_color', array(
+        'default' => $colorSchemeDefault['colors'][25],
+        'transport' => 'refresh',
+        'sanitize_callback' => 'quicksand_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_biography_background_color', array(
+        'label' => __('Background Color', 'quicksand'),
+        'section' => 'quicksand_biography',
+        'priority' => 20,
+        'settings' => 'qs_biography_background_color'
+    )));
+
+    // bio: font-color
+    $wp_customize->add_setting('qs_biography_font_color', array(
+        'default' => $colorSchemeDefault['colors'][26],
+        'transport' => 'refresh',
+        'sanitize_callback' => 'quicksand_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_biography_font_color', array(
+        'label' => __('Font Color', 'quicksand'),
+        'section' => 'quicksand_biography',
+        'priority' => 20,
+        'settings' => 'qs_biography_font_color'
+    )));
 
 
 
@@ -883,6 +908,8 @@ add_action('customize_register', 'quicksand_customize_register');
  * 23. Button Secondary Color       - qs_button_secondary_primary
  * 24. Tag Background Color         - qs_content_tag_background_color
  * 25. Tag Font Color               - qs_content_tag_font_color 
+ * 26. Biography Background Color   - qs_biography_background_color
+ * 27. Biography Font Color         - qs_biography_font_color
  *
  * @since Quicksand 0.2.1
  *
@@ -988,7 +1015,11 @@ function quicksand_get_color_schemes() {
 //                qs_content_tag_background_color
                 '#286584',
 //                qs_content_tag_font_color
-                '#fff'
+                '#fff',
+//                qs_biography_background_color
+                '#fff',
+//                qs_biography_font_color
+                '#000',
             ),
         ),
         'jupiter-jazz' => array(
@@ -1068,7 +1099,11 @@ function quicksand_get_color_schemes() {
 //                qs_content_tag_background_color
                 '#286584',
 //                qs_content_tag_font_color
-                '#fff'
+                '#fff',
+//                qs_biography_background_color
+                '#fff',
+//                qs_biography_font_color
+                '#000',
             ),
         ),
     ));

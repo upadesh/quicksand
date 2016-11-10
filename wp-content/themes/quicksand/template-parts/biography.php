@@ -21,8 +21,9 @@ if (!get_theme_mod('qs_biography_show', quicksand_get_color_scheme()['settings']
  * @param int $size The avatar height and width size in pixels.
  */
 $author_bio_avatar_size = apply_filters('quicksand_author_bio_avatar_size', 42);
-
-echo get_avatar(get_the_author_meta('user_email'), $author_bio_avatar_size);
+echo '<a class="card-link author-link" href="'.esc_url(get_author_posts_url(get_the_author_meta('ID'))).'" rel="author">';
+echo  get_avatar(get_the_author_meta('user_email'), $author_bio_avatar_size);
+echo '</a>';
 ?>
     <!-- end avatar -->
 

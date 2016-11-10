@@ -259,8 +259,7 @@ if (!function_exists('quicksand_customizer_css')) :
             .site-content-area .card .entry-header {  
                 background: <?php echo get_theme_mod('qs_content_title_bg_color', $colorScheme['colors'][20]); ?>;
             }  
-            .site-content-area .card .entry-footer,
-            .site-content-area .card .author-bio {
+            .site-content-area .card .entry-footer  {
                 border-top: 1px solid <?php echo get_theme_mod('qs_content_post_border_color', $colorScheme['colors'][19]); ?>; 
                 background: <?php echo get_theme_mod('qs_content_title_bg_color', $colorScheme['colors'][20]); ?>; 
             }  
@@ -273,6 +272,17 @@ if (!function_exists('quicksand_customizer_css')) :
             .card-header.comments-title,
             .comments-area ol .comment-body {
                 background: <?php echo get_theme_mod('qs_content_title_bg_color', $colorScheme['colors'][20]); ?>; 
+            }
+            
+            
+            /*biography*/ 
+            .site-content-area .card .author-bio {
+                border-top: 1px solid <?php echo get_theme_mod('qs_content_post_border_color', $colorScheme['colors'][19]); ?>; 
+                background: <?php echo get_theme_mod('qs_biography_background_color', $colorScheme['colors'][25]); ?>; 
+            }
+            .site-content-area .card .author-link,
+            .site-content-area .card .author-description {
+                color: <?php echo get_theme_mod('qs_biography_font_color', $colorScheme['colors'][26]); ?>;
             }
 
 
