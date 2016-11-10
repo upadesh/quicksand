@@ -76,6 +76,16 @@ $navbar-height: 60px;
 }
 
 /*mobile navigation*/
+
+@media (min-width: 767px) { 
+    
+    .navbar { 
+        .nav-search-close-mobile {
+            visibility: hidden;
+        }
+    }
+}
+
 @media (max-width: 767px) { 
     .navbar { 
         .nav-searchform {
