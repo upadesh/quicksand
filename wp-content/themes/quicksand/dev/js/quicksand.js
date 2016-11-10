@@ -1,18 +1,16 @@
 //custom JS for initializing & more
 
 jQuery(document).ready(function ($) {
-
-//    console.info(settings); 
     // TODO: oo
 
-
+    console.info(colorScheme);
 
 
 
     // lightgallery
     var initLightgallery = function () {
         // only trigger lightgallery when it is turned on
-        if (parseInt(settings.qs_content_use_lightgallery)) {
+        if (parseInt(colorScheme.settings.qs_content_use_lightgallery)) {
             $('.gallery').lightGallery({
                 selector: '.gallery-item .lightgallery-item',
 //            mode: 'lg-fade',

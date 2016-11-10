@@ -383,9 +383,9 @@ if (!function_exists('quicksand_scripts')) :
 
         wp_enqueue_script('quicksand');
 
-        $settings = quicksand_get_color_scheme()['settings'];
-        $settings['qs_content_use_lightgallery'] = get_theme_mod('qs_content_use_lightgallery', quicksand_get_color_scheme()['settings']['qs_content_use_lightgallery']);
-        wp_localize_script('quicksand', 'settings', $settings);
+        $colorScheme = quicksand_get_color_scheme();
+        $colorScheme['settings']['qs_content_use_lightgallery'] = get_theme_mod('qs_content_use_lightgallery', quicksand_get_color_scheme()['settings']['qs_content_use_lightgallery']);
+        wp_localize_script('quicksand', 'colorScheme', $colorScheme);
     }
 
 endif;

@@ -570,7 +570,7 @@ if (!function_exists('quicksand_edit_post')) :
                         // id
                         get_the_ID(),
                         // class
-                        'post_edit_link btn btn-secondary'
+                        'post_edit_link btn btn-outline-secondary'
                 );
                 ?>
             </div><!-- .entry-footer -->

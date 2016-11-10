@@ -35,7 +35,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
                 color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
                 border: 1px solid <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
-                /*outline: none;*/
+                outline: none;
             }
 
             .btn-secondary:hover 
@@ -50,44 +50,43 @@ if (!function_exists('quicksand_customizer_css')) :
                 background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
                 color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
                 border: 1px solid <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
+                outline: none;
             }
+
+
 
 
             /*btn-outline-secondary*/ 
+/*            .comment a.comment-reply-link, 
+
             .comment-navigation .nav-previous a,
-            .comment-navigation .nav-next a, 
+            .comment-navigation .nav-next a, */
             
-            .btn-outline-secondary a { 
-                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;   
-            } 
-
-            .comment .reply a.comment-reply-link,  
-            
+             
+            /*btn-outline-secondary: normal*/
             .btn-outline-secondary 
-            {
+            { 
+                background: transparent;
                 color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
-                border: 1px solid <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
-                /*outline: none;*/
+                border: 1px solid <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
             }
 
+            .btn-outline-secondary a {   
+                background: transparent; 
+                border: none;
+                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
+            }  
 
-            .comment .reply a.comment-reply-link:hover,  
-            .btn-outline-secondary:hover, 
-            .btn-outline-secondary:hover a 
-            /*            .btn-outline-secondary:focus, 
-                        .btn-outline-secondary.focus, 
-                        .btn-outline-secondary:active, 
-                        .btn-outline-secondary.active, 
-                        .btn-outline-secondary:visited,
-                        .btn-outline-secondary:active:hover, 
-                        .btn-outline-secondary.active:hover */
-            {
-                text-decoration: none;
-                background: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
-                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important; 
-                border: 1px solid <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
-                /*outline: none;*/
-            }
+            /*btn-outline-secondary: hover*/
+            .btn-outline-secondary:hover,
+            .btn-outline-secondary:hover a
+            { 
+                outline: none;
+                text-decoration: none; 
+                background: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
+                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
+                border: 1px solid <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
+            } 
 
 
 

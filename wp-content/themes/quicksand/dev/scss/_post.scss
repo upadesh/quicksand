@@ -22,27 +22,27 @@
 
     .posted-on:before {
         font-family: FontAwesome; 
-        padding-right: .4rem;
+        padding-right: .3rem;
         content: "\f017"; 
     }
     .post-author:before {
         font-family: FontAwesome; 
-        padding-right: .4rem;
+        padding-right: .3rem;
         content: "\f007"; 
     }
     .cat-links:before {
         font-family: FontAwesome; 
-        padding-right: .4rem;
+        padding-right: .3rem;
         content: "\f07c"; 
     }
     .tags-links:before {
         font-family: FontAwesome;
-        padding-right: .4rem;
+        padding-right: .3rem;
         content: "\f02c"; 
     }
     .comments-link:before {
         font-family: FontAwesome; 
-        padding-right: .4rem;
+        padding-right: .3rem;
         content: "\f075";
     }
     >span:not(:last-of-type):after {
@@ -91,7 +91,7 @@
 
             &:before {
                 font-family: FontAwesome; 
-                padding-right: 3px;
+                padding-right: .3rem;
                 content: "\f06e";
             }
         }
@@ -114,7 +114,7 @@
     .entry-footer {
         .tag-links {
             .tag {
-                padding: .2rem .4rem;
+                padding: .2rem .3rem;
                 margin-right: .5rem;
                 background: $blue;
                 a {

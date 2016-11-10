@@ -32,7 +32,7 @@
             display: inline-block;
             width: 50%;
             .fa { 
-                padding-right: 1rem; 
+                padding-right: .3rem; 
             }
         }
         .nav-next {
@@ -40,7 +40,7 @@
             display: inline-block;
             width: 50%;
             .fa { 
-                padding-left: 1rem; 
+                padding-left: .3rem; 
             }
         }
     }  
@@ -62,6 +62,31 @@
 } 
 
 
+
+
+/* pagination: older / newer comments */
+.comment-navigation { 
+    .nav-previous {
+        @extend .text-xs-left; 
+        a {   
+            display: inline-block;
+            width: 50%;
+            .fa { 
+                padding-right: .5rem; 
+            }
+        }
+    }
+    .nav-next  {
+        @extend .text-xs-right; 
+        a { 
+            display: inline-block;
+            width: 50%;
+            .fa { 
+                padding-left: .5rem; 
+            } 
+        }
+    } 
+}
 
 
 /* BS-style pagination*/

@@ -18,7 +18,7 @@
             }
         }
     }
-    
+
     /* the comments */
     .comment-list {
         list-style-type: none;
@@ -31,13 +31,11 @@
 
             .reply {            
                 text-align: right;
-                .comment-reply-link{ 
-                    @extend .btn;
-                    @extend .btn-outline-secondary; 
+                .comment-reply-link{  
 
                     &:before {
                         font-family: FontAwesome; 
-                        padding-right: 3px;
+                        padding-right: .3rem;
                         content: "\f112";
                     }
                 }
@@ -52,39 +50,5 @@
             padding-right: .3rem;
         } 
     }  
-
-
-    /* pagination: older / newer comments */
-    .comment-navigation { 
-        .nav-previous {
-            @extend .text-xs-left; 
-            a { 
-                @extend .btn;
-                @extend .btn-outline-secondary; 
-                display: inline-block; 
-
-                &:before {
-                    font-family: FontAwesome;  
-                    content: "\f0d9";
-                    padding-right: 1rem; 
-                }
-            }
-        }
-        .nav-next  {
-            @extend .text-xs-right; 
-            a {
-                @extend .btn;
-                @extend .btn-outline-secondary; 
-                display: inline-block; 
-
-                &:after {
-                    font-family: FontAwesome; 
-                    padding-left: 3px; 
-                    content: "\f0da";
-                    padding-left: 1rem; 
-                }
-            }
-        } 
-    }
 } 
 

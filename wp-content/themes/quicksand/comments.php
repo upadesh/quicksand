@@ -56,8 +56,10 @@ if (post_password_required()) {
 
             <?php
             the_comments_navigation(array(
-                'prev_text' => __('Older Comments', 'quicksand'),
-                'next_text' => __('Newer Comments', 'quicksand'),
+                'prev_text' => '<span class="meta-nav btn btn-outline-secondary comments-last-link" aria-hidden="true"><i class="fa fa-long-arrow-left"></i>' . esc_html(__("Older Comments", "quicksand")) . '</span>' .
+                '<span class="screen-reader-text">' . esc_html(__('Older Comments', 'quicksand')) . '</span> ',
+                'next_text' => '<span class="meta-nav btn btn-outline-secondary comments-next-link " aria-hidden="true">' . esc_html(__("Newer Comments", "quicksand")) . '<i class="fa fa-long-arrow-right"></i></span>' .
+                '<span class="screen-reader-text">' . esc_html(__('Newer Comments', 'quicksand')) . '</span> ',
             ));
             ?>
 
