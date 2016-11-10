@@ -627,6 +627,34 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 20,
         'settings' => 'qs_button_color_secondary'
     )));
+    
+    
+
+    // tags: bg-color
+    $wp_customize->add_setting('qs_content_tag_background_color', array(
+        'default' => $colorSchemeDefault['colors'][23],
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'quicksand_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_tag_background_color', array(
+        'label' => __('Tag Background Color', 'quicksand'),
+        'section' => 'quicksand_content',
+        'priority' => 20,
+        'settings' => 'qs_content_tag_background_color'
+    )));
+
+    // tags: font-color
+    $wp_customize->add_setting('qs_content_tag_font_color', array(
+        'default' => $colorSchemeDefault['colors'][24],
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'quicksand_sanitize_hexcolor'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_tag_font_color', array(
+        'label' => __('Tag Font Color', 'quicksand'),
+        'section' => 'quicksand_content',
+        'priority' => 20,
+        'settings' => 'qs_content_tag_font_color'
+    )));
  
 
 
@@ -853,6 +881,8 @@ add_action('customize_register', 'quicksand_customize_register');
  * 21. Post Title Background Color  - qs_content_title_bg_color
  * 22. Button Primary Color         - qs_button_color_primary
  * 23. Button Secondary Color       - qs_button_secondary_primary
+ * 24. Tag Background Color         - qs_content_tag_background_color
+ * 25. Tag Font Color               - qs_content_tag_font_color 
  *
  * @since Quicksand 0.2.1
  *
@@ -954,6 +984,10 @@ function quicksand_get_color_schemes() {
 //                qs_button_color_primary,
                 '#9ab7ac',
 //                qs_button_color_secondary,
+                '#fff',
+//                qs_content_tag_background_color
+                '#286584',
+//                qs_content_tag_font_color
                 '#fff'
             ),
         ),
@@ -1030,7 +1064,11 @@ function quicksand_get_color_schemes() {
 //                qs_button_color_primary,
                 '#ed004f',
 //                qs_button_color_secondary,
-                '#1e73be'
+                '#1e73be',
+//                qs_content_tag_background_color
+                '#286584',
+//                qs_content_tag_font_color
+                '#fff'
             ),
         ),
     ));

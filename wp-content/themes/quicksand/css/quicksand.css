@@ -564,10 +564,9 @@ cite {
       padding: 3.2px 8px;
       padding: .2rem .5rem;
       margin-right: 8px;
-      margin-right: .5rem;
-      background: #286584; }
+      margin-right: .5rem; }
       .card .entry-footer .tag-links .tag a, .card .entry-footer .tag-links .sticky-post a {
-        color: #fff; }
+        text-decoration: none; }
     .card .entry-footer .edit-link {
       float: right; }
       .card .entry-footer .edit-link .fa {

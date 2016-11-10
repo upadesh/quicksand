@@ -195,6 +195,13 @@ if (!function_exists('quicksand_customizer_css')) :
                 color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]); ?>;
             } 
 
+            /* === tags === */ 
+            .entry-footer .tag-links .tag {  
+                background: <?php echo get_theme_mod('qs_content_tag_background_color', $colorScheme['colors'][23]); ?>;
+            }  
+            .entry-footer .tag-links .tag a { 
+                color: <?php echo get_theme_mod('qs_content_tag_font_color', $colorScheme['colors'][24]); ?>; 
+            } 
 
 
 

@@ -116,10 +116,9 @@
         .tag-links {
             .tag {
                 padding: .2rem .5rem;
-                margin-right: .5rem;
-                background: $blue;
+                margin-right: .5rem; 
                 a {
-                    color: $white;
+                    text-decoration: none;
                 }
             }
         }
