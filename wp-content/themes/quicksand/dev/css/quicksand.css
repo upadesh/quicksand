@@ -274,8 +274,11 @@
 .gallery-item:hover .gallery-caption {
   opacity: 1; }
 
-/*hide caption*/
-@media (max-width: 768px) {
+/*hide image-caption when smaller*/
+.quicksand-masonry .gallery-caption {
+  visibility: hidden; }
+
+@media (max-width: 540px) {
   .gallery-caption {
     visibility: hidden; } }
 
