@@ -1019,7 +1019,7 @@ function quicksand_get_color_schemes() {
 //                qs_biography_background_color
                 '#fff',
 //                qs_biography_font_color
-                '#000',
+                '#686868',
             ),
         ),
         'jupiter-jazz' => array(
