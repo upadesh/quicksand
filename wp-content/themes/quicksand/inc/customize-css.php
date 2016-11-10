@@ -127,11 +127,13 @@ if (!function_exists('quicksand_customizer_css')) :
                 background: <?php echo get_theme_mod('qs_nav_link_hover_background_color', $colorScheme['colors'][16]); ?>;
             } 
             
-            /*search-bar*/
+            /*search-bar*/ 
+            .nav-search-mobile-wrapper .nav-search-mobile,
             .nav-search-wrapper .nav-search {
                 background-color: <?php echo get_theme_mod('qs_nav_background_color', $colorScheme['colors'][6]); ?> !important;
                 border: none !important;
             } 
+            .nav-search-mobile-wrapper .nav-search-mobile:hover,
             .nav-search-wrapper .nav-search:hover {
                 color: <?php echo get_theme_mod('qs_nav_link_color', $colorScheme['colors'][7]); ?> !important;
                 background: <?php echo get_theme_mod('qs_nav_link_hover_background_color', $colorScheme['colors'][16]); ?> !important;

@@ -283,22 +283,6 @@
     .entry-content .gallery .gallery-caption {
       color: #f5f5f5; }
 
-.image-navigation .nav-links .nav-previous {
-  float: left; }
-  .image-navigation .nav-links .nav-previous:before {
-    font-family: FontAwesome;
-    padding-right: 4.8px;
-    padding-right: .3rem;
-    content: "\f177"; }
-
-.image-navigation .nav-links .nav-next {
-  float: right; }
-  .image-navigation .nav-links .nav-next:after {
-    font-family: FontAwesome;
-    padding-left: 4.8px;
-    padding-left: .3rem;
-    content: "\f178"; }
-
 /* the markup is changed, when lightgallery is used */
 .gallery-item .lightgallery-item {
   cursor: pointer; }
@@ -5871,6 +5855,23 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   .comment-navigation .nav-next a .fa {
     padding-left: 8px;
     padding-left: .5rem; }
+
+/* navigation: previous / next image */
+.image-navigation .nav-links .nav-previous {
+  float: left; }
+  .image-navigation .nav-links .nav-previous:before {
+    font-family: FontAwesome;
+    padding-right: 4.8px;
+    padding-right: .3rem;
+    content: "\f177"; }
+
+.image-navigation .nav-links .nav-next {
+  float: right; }
+  .image-navigation .nav-links .nav-next:after {
+    font-family: FontAwesome;
+    padding-left: 4.8px;
+    padding-left: .3rem;
+    content: "\f178"; }
 
 /* BS-style pagination*/
 /*

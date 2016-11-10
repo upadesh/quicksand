@@ -133,31 +133,6 @@
         }
     }
 }
- 
-
-
-.image-navigation {
-    .nav-links {
-        .nav-previous { 
-                float: left;
-                
-                &:before {
-                    font-family: FontAwesome; 
-                    padding-right: .3rem;
-                    content: "\f177";
-                }
-        }
-        .nav-next { 
-                float: right;
-                
-                &:after {
-                    font-family: FontAwesome; 
-                    padding-left: .3rem;
-                    content: "\f178";
-                }
-        } 
-    }
-}
 
 /* the markup is changed, when lightgallery is used */
 .gallery-item {
