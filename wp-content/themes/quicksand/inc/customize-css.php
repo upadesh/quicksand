@@ -100,6 +100,8 @@ if (!function_exists('quicksand_customizer_css')) :
                 background: <?php echo get_theme_mod('qs_nav_background_color', $colorScheme['colors'][6]); ?>;
             }
 
+            .nav-content .navbar-brand,
+            .nav-content .navbar-brand:hover,
             .site-nav-container,
             .site-nav-container .menu-item .nav-link , 
             .site-nav-container .menu-item .dropdown-item,    

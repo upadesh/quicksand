@@ -119,7 +119,9 @@
         value.bind(function (qs_nav_link_color) {
             var color;
 
-            color = '.site-nav-container,\n\
+            color = '.nav-content .navbar-brand,\n\
+            .nav-content .navbar-brand:hover,\n\
+            .site-nav-container,\n\
             .site-nav-container .menu-item .nav-link , \n\
             .site-nav-container .menu-item .dropdown-item, \n\
             .site-nav-container nav.navbar .navbar-toggler, \n\
