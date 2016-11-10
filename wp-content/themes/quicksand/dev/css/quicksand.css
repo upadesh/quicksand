@@ -558,10 +558,11 @@ cite {
       height: auto;
       max-width: 100%; }
   .card .entry-footer {
+    /*tags*/
     /* edit post-link  */ }
     .card .entry-footer .tag-links .tag, .card .entry-footer .tag-links .sticky-post {
-      padding: 3.2px 4.8px;
-      padding: .2rem .3rem;
+      padding: 3.2px 8px;
+      padding: .2rem .5rem;
       margin-right: 8px;
       margin-right: .5rem;
       background: #286584; }

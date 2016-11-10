@@ -60,7 +60,7 @@ function quicksand_customize_register($wp_customize) {
     /**
      *  Section: Color Schemes
      * 
-     * @hint always add setting to color-scheme-control.js, also the non-coloured ones 
+     * @hint always add setting to color-scheme-control.js, also the non-colored ones 
      */
     $wp_customize->add_section('quicksand_color_schemes', array(
         'title' => __('Color Schemes', 'quicksand'),
@@ -373,7 +373,9 @@ function quicksand_customize_register($wp_customize) {
 
 
 
-    /* Section: Content */
+    /**
+     * Section: Content 
+     */
     $wp_customize->add_section('quicksand_content', array(
         'title' => __('Content', 'quicksand'),
         'priority' => 30,
@@ -628,7 +630,9 @@ function quicksand_customize_register($wp_customize) {
  
 
 
-    /* Section: Biography */
+    /**
+     *  Section: Biography 
+     */
     $wp_customize->add_section('quicksand_biography', array(
         'title' => __('Biography', 'quicksand'),
         'priority' => 10,
@@ -654,7 +658,9 @@ function quicksand_customize_register($wp_customize) {
 
 
 
-    /* Section: Sidebar */
+    /**
+     * Section: Sidebar 
+     */
     $wp_customize->add_section('quicksand_sidebar', array(
         'title' => __('Sidebar', 'quicksand'),
         'priority' => 30,
@@ -736,13 +742,11 @@ function quicksand_customize_register($wp_customize) {
             'style' => 'color: #0a0',
         ),
     ));
-
-
-
-
-
-
-    /* Section: Footer */
+ 
+    
+    /**
+     * Section: Footer 
+     */
     $wp_customize->add_section('quicksand_footer', array(
         'title' => __('Footer', 'quicksand'),
         'priority' => 40,
@@ -796,13 +800,11 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_footer',
         'settings' => 'qs_footer_link_hover_color'
     )));
+ 
 
-
-
-
-
-
-    /* Default WordPress Theme Customization */
+    /**
+     *  Default WordPress Theme Customization 
+     */
     $wp_customize->get_setting('blogname')->transport = 'postMessage';
     $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
     $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';

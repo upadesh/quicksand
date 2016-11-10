@@ -3,7 +3,7 @@
 jQuery(document).ready(function ($) {
     // TODO: oo
 
-    console.info(colorScheme);
+//    console.info(colorScheme);
 
 
 
