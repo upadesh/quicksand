@@ -211,8 +211,7 @@ if (!function_exists('quicksand_customizer_css')) :
 
 
 
-            /*2nd text color*/  
-            .bypostauthor,
+            /*2nd text color*/
             .quicksand_search_title,
             .quicksand_archive_title,
             .site-content .card-header.entry-header h1,
@@ -250,6 +249,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 background: <?php echo get_theme_mod('qs_content_title_bg_color', $colorScheme['colors'][20]); ?>; 
             }  
 
+            /*comment*/
             .comment-list ol {
                 border-left: 1px solid <?php echo get_theme_mod('qs_content_post_border_color', $colorScheme['colors'][19]); ?>; 
             }
