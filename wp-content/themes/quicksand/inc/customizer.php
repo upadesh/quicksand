@@ -950,9 +950,9 @@ function quicksand_get_color_schemes() {
 //                qs_content_title_bg_color
                 '#f5f5f5', 
 //                qs_button_color_primary,
-                '#ed004f',
+                '#9ab7ac',
 //                qs_button_color_secondary,
-                '#1e73be'
+                '#fff'
             ),
         ),
         'jupiter-jazz' => array(

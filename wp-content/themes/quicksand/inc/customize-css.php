@@ -21,6 +21,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 <?php } ?> 
             }
 
+            
             /* buttons */ 
             /*btn-secondary*/
             .btn-secondary {
@@ -29,31 +30,15 @@ if (!function_exists('quicksand_customizer_css')) :
                 border: 1px solid <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
                 outline: none;
             }
-
-            .btn-secondary:hover 
-            /*            .btn-secondary:focus, 
-                        .btn-secondary.focus, 
-                        .btn-secondary:active, 
-                        .btn-secondary.active, 
-                        .btn-secondary:visited,
-                        .btn-secondary:active:hover, 
-                        .btn-secondary.active:hover */
-            {   
+ 
+            .btn-secondary:hover {   
                 background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
                 color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
                 border: 1px solid <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
                 outline: none;
             }
 
-
-
-
-            /*btn-outline-secondary*/ 
-/*            .comment a.comment-reply-link, 
-
-            .comment-navigation .nav-previous a,
-            .comment-navigation .nav-next a, */
-            
+ 
              
             /*btn-outline-secondary: normal*/
             .btn-outline-secondary 
@@ -82,7 +67,16 @@ if (!function_exists('quicksand_customizer_css')) :
             
             
             /*form-buttons*/ 
-
+            .input-group-btn .btn-secondary:hover { 
+                <?php
+                $rgb = quicksand_hex2rgb(get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]));
+                $rgba = array($rgb['red'], $rgb['green'], $rgb['blue'], "0.8");
+                ?>
+                background: rgba(<?php echo esc_html(join(",", $rgba)) ?>) !important;  
+                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
+                border: 1px solid <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
+                outline: none;
+            }
 
 
 
