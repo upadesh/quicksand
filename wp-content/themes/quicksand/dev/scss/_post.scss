@@ -123,15 +123,11 @@
             }
         }
 
+        /* edit post-link  */  
         .edit-link { 
             float: right;
-            /* edit post-link  */  
-            .post-edit-link {
-                &:before {
-                    font-family: FontAwesome; 
-                    padding-right: .3rem;
-                    content: "\f040";
-                }
+            .fa { 
+                padding-right: .3rem; 
             }
         }
 

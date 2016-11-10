@@ -561,22 +561,21 @@ cite {
       border: none;
       height: auto;
       max-width: 100%; }
-  .card .entry-footer .tag-links .tag, .card .entry-footer .tag-links .sticky-post {
-    padding: 3.2px 4.8px;
-    padding: .2rem .3rem;
-    margin-right: 8px;
-    margin-right: .5rem;
-    background: #286584; }
-    .card .entry-footer .tag-links .tag a, .card .entry-footer .tag-links .sticky-post a {
-      color: #fff; }
-  .card .entry-footer .edit-link {
-    float: right;
+  .card .entry-footer {
     /* edit post-link  */ }
-    .card .entry-footer .edit-link .post-edit-link:before {
-      font-family: FontAwesome;
-      padding-right: 4.8px;
-      padding-right: .3rem;
-      content: "\f040"; }
+    .card .entry-footer .tag-links .tag, .card .entry-footer .tag-links .sticky-post {
+      padding: 3.2px 4.8px;
+      padding: .2rem .3rem;
+      margin-right: 8px;
+      margin-right: .5rem;
+      background: #286584; }
+      .card .entry-footer .tag-links .tag a, .card .entry-footer .tag-links .sticky-post a {
+        color: #fff; }
+    .card .entry-footer .edit-link {
+      float: right; }
+      .card .entry-footer .edit-link .fa {
+        padding-right: 4.8px;
+        padding-right: .3rem; }
 
 /* masonry-list-view*/
 @media (max-width: 991px) {
@@ -635,8 +634,7 @@ maybe padding of cells smaller in media-query ... who knows????
  */
 .comments-area {
   /*comment-reply-form*/
-  /* the comments */
-  /* pagination: older / newer comments */ }
+  /* the comments */ }
   .comments-area .comment-respond {
     margin-top: 32px;
     margin-top: 2rem;
@@ -668,18 +666,6 @@ maybe padding of cells smaller in media-query ... who knows????
       padding-left: 1rem;
       padding-right: 4.8px;
       padding-right: .3rem; }
-  .comments-area .comment-navigation .nav-previous a {
-    display: inline-block;
-    width: 50%; }
-    .comments-area .comment-navigation .nav-previous a .fa {
-      padding-right: 8px;
-      padding-right: .5rem; }
-  .comments-area .comment-navigation .nav-next a {
-    display: inline-block;
-    width: 50%; }
-    .comments-area .comment-navigation .nav-next a .fa {
-      padding-left: 8px;
-      padding-left: .5rem; }
 
 /**
  * Create some space & push main sections 
@@ -5654,10 +5640,10 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.text-xs-left, .comments-area .comment-navigation .nav-previous, .post-pagination .post-navigation .nav-previous, .comment-navigation .nav-previous {
+.text-xs-left, .post-pagination .post-navigation .nav-previous, .comment-navigation .nav-previous {
   text-align: left !important; }
 
-.text-xs-right, .comments-area .comment-navigation .nav-next, .post-pagination .post-navigation .nav-next, .comment-navigation .nav-next {
+.text-xs-right, .post-pagination .post-navigation .nav-next, .comment-navigation .nav-next {
   text-align: right !important; }
 
 .text-xs-center {

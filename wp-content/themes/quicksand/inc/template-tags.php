@@ -560,17 +560,16 @@ if (!function_exists('quicksand_edit_post')) :
                 edit_post_link(
                         // link-text
                         sprintf(
-                                /* translators: %s: Name of current post */
                                 __('Edit<span class="screen-reader-text"> "%s"</span>', 'quicksand'), get_the_title()
                         ), 
                         // before
-                        '<span class="card-link edit-link">', 
+                        '<span class="card-link edit-link btn btn-outline-secondary"><i class="fa fa-pencil"></i>', 
                         // after
                         '</span>',
                         // id
                         get_the_ID(),
                         // class
-                        'post_edit_link btn btn-outline-secondary'
+                        'post_edit_link'
                 );
                 ?>
             </div><!-- .entry-footer -->

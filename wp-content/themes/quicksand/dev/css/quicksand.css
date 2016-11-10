@@ -287,14 +287,16 @@
   float: left; }
   .image-navigation .nav-links .nav-previous:before {
     font-family: FontAwesome;
-    padding-right: 3px;
+    padding-right: 4.8px;
+    padding-right: .3rem;
     content: "\f177"; }
 
 .image-navigation .nav-links .nav-next {
   float: right; }
   .image-navigation .nav-links .nav-next:after {
     font-family: FontAwesome;
-    padding-left: 3px;
+    padding-left: 4.8px;
+    padding-left: .3rem;
     content: "\f178"; }
 
 /* the markup is changed, when lightgallery is used */
@@ -487,28 +489,28 @@ cite {
   padding-bottom: 0 !important; }
   .entry-meta .posted-on:before {
     font-family: FontAwesome;
-    padding-right: 6.4px;
-    padding-right: .4rem;
+    padding-right: 4.8px;
+    padding-right: .3rem;
     content: "\f017"; }
   .entry-meta .post-author:before {
     font-family: FontAwesome;
-    padding-right: 6.4px;
-    padding-right: .4rem;
+    padding-right: 4.8px;
+    padding-right: .3rem;
     content: "\f007"; }
   .entry-meta .cat-links:before {
     font-family: FontAwesome;
-    padding-right: 6.4px;
-    padding-right: .4rem;
+    padding-right: 4.8px;
+    padding-right: .3rem;
     content: "\f07c"; }
   .entry-meta .tags-links:before {
     font-family: FontAwesome;
-    padding-right: 6.4px;
-    padding-right: .4rem;
+    padding-right: 4.8px;
+    padding-right: .3rem;
     content: "\f02c"; }
   .entry-meta .comments-link:before {
     font-family: FontAwesome;
-    padding-right: 6.4px;
-    padding-right: .4rem;
+    padding-right: 4.8px;
+    padding-right: .3rem;
     content: "\f075"; }
   .entry-meta > span:not(:last-of-type):after {
     content: ' | '; }
@@ -550,7 +552,8 @@ cite {
       float: right; }
       .card .entry-content .read-more-link:before {
         font-family: FontAwesome;
-        padding-right: 3px;
+        padding-right: 4.8px;
+        padding-right: .3rem;
         content: "\f06e"; }
     .card .entry-content .wp-caption {
       max-width: 100%; }
@@ -558,22 +561,21 @@ cite {
       border: none;
       height: auto;
       max-width: 100%; }
-  .card .entry-footer .tag-links .tag, .card .entry-footer .tag-links .sticky-post {
-    padding: 3.2px 6.4px;
-    padding: .2rem .4rem;
-    margin-right: 8px;
-    margin-right: .5rem;
-    background: #286584; }
-    .card .entry-footer .tag-links .tag a, .card .entry-footer .tag-links .sticky-post a {
-      color: #fff; }
-  .card .entry-footer .edit-link {
-    float: right;
+  .card .entry-footer {
     /* edit post-link  */ }
-    .card .entry-footer .edit-link .post-edit-link:before {
-      font-family: FontAwesome;
-      padding-right: 4.8px;
-      padding-right: .3rem;
-      content: "\f040"; }
+    .card .entry-footer .tag-links .tag, .card .entry-footer .tag-links .sticky-post {
+      padding: 3.2px 4.8px;
+      padding: .2rem .3rem;
+      margin-right: 8px;
+      margin-right: .5rem;
+      background: #286584; }
+      .card .entry-footer .tag-links .tag a, .card .entry-footer .tag-links .sticky-post a {
+        color: #fff; }
+    .card .entry-footer .edit-link {
+      float: right; }
+      .card .entry-footer .edit-link .fa {
+        padding-right: 4.8px;
+        padding-right: .3rem; }
 
 /* masonry-list-view*/
 @media (max-width: 991px) {
@@ -613,26 +615,6 @@ maybe padding of cells smaller in media-query ... who knows????
   padding: 0; }
 
 /*biography*/
-/*.author-bio {
-    .avatar {
-        float: left-xs-left; 
-    }
-    .author-bio-content {
-        margin-left: 74px;
-        .author-link {
-            @extend .btn;
-            @extend .btn-secondary; 
-            
-            @extend .float-xs-right;
-                
-                &:before {
-                    font-family: FontAwesome; 
-                    padding-right: 3px;
-                    content: "\f02d";
-                }
-        }
-    }
-}*/
 .author-bio {
   display: -ms-flexbox;
   display: flex; }
@@ -652,8 +634,7 @@ maybe padding of cells smaller in media-query ... who knows????
  */
 .comments-area {
   /*comment-reply-form*/
-  /* the comments */
-  /* pagination: older / newer comments */ }
+  /* the comments */ }
   .comments-area .comment-respond {
     margin-top: 32px;
     margin-top: 2rem;
@@ -675,7 +656,8 @@ maybe padding of cells smaller in media-query ... who knows????
         text-align: right; }
         .comments-area .comment-list .comment-body .reply .comment-reply-link:before {
           font-family: FontAwesome;
-          padding-right: 3px;
+          padding-right: 4.8px;
+          padding-right: .3rem;
           content: "\f112"; }
     .comments-area .comment-list .comment-edit-link:before {
       font-family: FontAwesome;
@@ -684,21 +666,6 @@ maybe padding of cells smaller in media-query ... who knows????
       padding-left: 1rem;
       padding-right: 4.8px;
       padding-right: .3rem; }
-  .comments-area .comment-navigation .nav-previous a {
-    display: inline-block; }
-    .comments-area .comment-navigation .nav-previous a:before {
-      font-family: FontAwesome;
-      content: "\f0d9";
-      padding-right: 16px;
-      padding-right: 1rem; }
-  .comments-area .comment-navigation .nav-next a {
-    display: inline-block; }
-    .comments-area .comment-navigation .nav-next a:after {
-      font-family: FontAwesome;
-      padding-left: 3px;
-      content: "\f0da";
-      padding-left: 16px;
-      padding-left: 1rem; }
 
 /**
  * Create some space & push main sections 
@@ -1070,11 +1037,8 @@ textarea {
     page-break-after: avoid; }
   .navbar {
     display: none; }
-  .btn > .caret, .comments-area .comment-list .comment-body .reply .comment-reply-link > .caret, .comments-area .comment-navigation .nav-previous a > .caret, .comments-area .comment-navigation .nav-next a > .caret, .quicksand-post-pagination-list-view .nav-links a > .caret, .page-links a > .caret,
-  .dropup > .btn > .caret, .comments-area .comment-list .comment-body .reply
-  .dropup > .comment-reply-link > .caret, .comments-area .comment-navigation .nav-previous
-  .dropup > a > .caret, .comments-area .comment-navigation .nav-next
-  .dropup > a > .caret, .quicksand-post-pagination-list-view .nav-links
+  .btn > .caret, .quicksand-post-pagination-list-view .nav-links a > .caret, .page-links a > .caret,
+  .dropup > .btn > .caret, .quicksand-post-pagination-list-view .nav-links
   .dropup > a > .caret, .page-links
   .dropup > a > .caret {
     border-top-color: #000 !important; }
@@ -2412,17 +2376,11 @@ select.form-control:focus::-ms-value {
   border-width: 1px 0; }
   .form-control-static.form-control-sm, .input-group-sm > .form-control-static.form-control,
   .input-group-sm > .form-control-static.input-group-addon,
-  .input-group-sm > .input-group-btn > .form-control-static.btn, .comments-area .comment-list .comment-body .reply
-  .input-group-sm > .input-group-btn > .form-control-static.comment-reply-link, .comments-area .comment-navigation .nav-previous
-  .input-group-sm > .input-group-btn > a.form-control-static, .comments-area .comment-navigation .nav-next
-  .input-group-sm > .input-group-btn > a.form-control-static, .quicksand-post-pagination-list-view .nav-links
+  .input-group-sm > .input-group-btn > .form-control-static.btn, .quicksand-post-pagination-list-view .nav-links
   .input-group-sm > .input-group-btn > a.form-control-static, .page-links
   .input-group-sm > .input-group-btn > a.form-control-static, .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control,
   .input-group-lg > .form-control-static.input-group-addon,
-  .input-group-lg > .input-group-btn > .form-control-static.btn, .comments-area .comment-list .comment-body .reply
-  .input-group-lg > .input-group-btn > .form-control-static.comment-reply-link, .comments-area .comment-navigation .nav-previous
-  .input-group-lg > .input-group-btn > a.form-control-static, .comments-area .comment-navigation .nav-next
-  .input-group-lg > .input-group-btn > a.form-control-static, .quicksand-post-pagination-list-view .nav-links
+  .input-group-lg > .input-group-btn > .form-control-static.btn, .quicksand-post-pagination-list-view .nav-links
   .input-group-lg > .input-group-btn > a.form-control-static, .page-links
   .input-group-lg > .input-group-btn > a.form-control-static {
     padding-right: 0;
@@ -2430,10 +2388,7 @@ select.form-control:focus::-ms-value {
 
 .form-control-sm, .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .btn, .comments-area .comment-list .comment-body .reply
-.input-group-sm > .input-group-btn > .comment-reply-link, .comments-area .comment-navigation .nav-previous
-.input-group-sm > .input-group-btn > a, .comments-area .comment-navigation .nav-next
-.input-group-sm > .input-group-btn > a, .quicksand-post-pagination-list-view .nav-links
+.input-group-sm > .input-group-btn > .btn, .quicksand-post-pagination-list-view .nav-links
 .input-group-sm > .input-group-btn > a, .page-links
 .input-group-sm > .input-group-btn > a {
   padding: 4px 8px;
@@ -2443,17 +2398,13 @@ select.form-control:focus::-ms-value {
 
 select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]),
 .input-group-sm > select.input-group-addon:not([size]):not([multiple]),
-.input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]), .comments-area .comment-list .comment-body .reply
-.input-group-sm > .input-group-btn > select.comment-reply-link:not([size]):not([multiple]) {
+.input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]) {
   height: 29px;
   height: 1.8125rem; }
 
 .form-control-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn, .comments-area .comment-list .comment-body .reply
-.input-group-lg > .input-group-btn > .comment-reply-link, .comments-area .comment-navigation .nav-previous
-.input-group-lg > .input-group-btn > a, .comments-area .comment-navigation .nav-next
-.input-group-lg > .input-group-btn > a, .quicksand-post-pagination-list-view .nav-links
+.input-group-lg > .input-group-btn > .btn, .quicksand-post-pagination-list-view .nav-links
 .input-group-lg > .input-group-btn > a, .page-links
 .input-group-lg > .input-group-btn > a {
   padding: 12px 24px;
@@ -2463,8 +2414,7 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 
 select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]),
 .input-group-lg > select.input-group-addon:not([size]):not([multiple]),
-.input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]), .comments-area .comment-list .comment-body .reply
-.input-group-lg > .input-group-btn > select.comment-reply-link:not([size]):not([multiple]) {
+.input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]) {
   height: 50.666px;
   height: 3.1666666667rem; }
 
@@ -2624,7 +2574,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .form-inline .has-feedback .form-control-feedback {
     top: 0; } }
 
-.btn, .comments-area .comment-list .comment-body .reply .comment-reply-link, .comments-area .comment-navigation .nav-previous a, .comments-area .comment-navigation .nav-next a, .quicksand-post-pagination-list-view .nav-links a, .page-links a {
+.btn, .quicksand-post-pagination-list-view .nav-links a, .page-links a {
   display: inline-block;
   font-weight: normal;
   line-height: 1.25;
@@ -2641,28 +2591,22 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   padding: 0.5rem 1rem;
   font-size: 16px;
   font-size: 1rem; }
-  .btn:focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:focus, .comments-area .comment-navigation .nav-previous a:focus, .comments-area .comment-navigation .nav-next a:focus, .quicksand-post-pagination-list-view .nav-links a:focus, .page-links a:focus, .btn.focus, .comments-area .comment-list .comment-body .reply .focus.comment-reply-link, .comments-area .comment-navigation .nav-previous a.focus, .comments-area .comment-navigation .nav-next a.focus, .quicksand-post-pagination-list-view .nav-links a.focus, .page-links a.focus, .btn:active:focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:active:focus, .comments-area .comment-navigation .nav-previous a:active:focus, .comments-area .comment-navigation .nav-next a:active:focus, .quicksand-post-pagination-list-view .nav-links a:active:focus, .page-links a:active:focus, .btn:active.focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:active.focus, .comments-area .comment-navigation .nav-previous a:active.focus, .comments-area .comment-navigation .nav-next a:active.focus, .quicksand-post-pagination-list-view .nav-links a:active.focus, .page-links a:active.focus, .btn.active:focus, .comments-area .comment-list .comment-body .reply .active.comment-reply-link:focus, .comments-area .comment-navigation .nav-previous a.active:focus, .comments-area .comment-navigation .nav-next a.active:focus, .quicksand-post-pagination-list-view .nav-links a.active:focus, .page-links a.active:focus, .btn.active.focus, .comments-area .comment-list .comment-body .reply .active.focus.comment-reply-link, .comments-area .comment-navigation .nav-previous a.active.focus, .comments-area .comment-navigation .nav-next a.active.focus, .quicksand-post-pagination-list-view .nav-links a.active.focus, .page-links a.active.focus {
+  .btn:focus, .quicksand-post-pagination-list-view .nav-links a:focus, .page-links a:focus, .btn.focus, .quicksand-post-pagination-list-view .nav-links a.focus, .page-links a.focus, .btn:active:focus, .quicksand-post-pagination-list-view .nav-links a:active:focus, .page-links a:active:focus, .btn:active.focus, .quicksand-post-pagination-list-view .nav-links a:active.focus, .page-links a:active.focus, .btn.active:focus, .quicksand-post-pagination-list-view .nav-links a.active:focus, .page-links a.active:focus, .btn.active.focus, .quicksand-post-pagination-list-view .nav-links a.active.focus, .page-links a.active.focus {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  .btn:focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:focus, .comments-area .comment-navigation .nav-previous a:focus, .comments-area .comment-navigation .nav-next a:focus, .quicksand-post-pagination-list-view .nav-links a:focus, .page-links a:focus, .btn:hover, .comments-area .comment-list .comment-body .reply .comment-reply-link:hover, .comments-area .comment-navigation .nav-previous a:hover, .comments-area .comment-navigation .nav-next a:hover, .quicksand-post-pagination-list-view .nav-links a:hover, .page-links a:hover {
+  .btn:focus, .quicksand-post-pagination-list-view .nav-links a:focus, .page-links a:focus, .btn:hover, .quicksand-post-pagination-list-view .nav-links a:hover, .page-links a:hover {
     text-decoration: none; }
-  .btn.focus, .comments-area .comment-list .comment-body .reply .focus.comment-reply-link, .comments-area .comment-navigation .nav-previous a.focus, .comments-area .comment-navigation .nav-next a.focus, .quicksand-post-pagination-list-view .nav-links a.focus, .page-links a.focus {
+  .btn.focus, .quicksand-post-pagination-list-view .nav-links a.focus, .page-links a.focus {
     text-decoration: none; }
-  .btn:active, .comments-area .comment-list .comment-body .reply .comment-reply-link:active, .comments-area .comment-navigation .nav-previous a:active, .comments-area .comment-navigation .nav-next a:active, .quicksand-post-pagination-list-view .nav-links a:active, .page-links a:active, .btn.active, .comments-area .comment-list .comment-body .reply .active.comment-reply-link, .comments-area .comment-navigation .nav-previous a.active, .comments-area .comment-navigation .nav-next a.active, .quicksand-post-pagination-list-view .nav-links a.active, .page-links a.active {
+  .btn:active, .quicksand-post-pagination-list-view .nav-links a:active, .page-links a:active, .btn.active, .quicksand-post-pagination-list-view .nav-links a.active, .page-links a.active {
     background-image: none;
     outline: 0; }
-  .btn.disabled, .comments-area .comment-list .comment-body .reply .disabled.comment-reply-link, .comments-area .comment-navigation .nav-previous a.disabled, .comments-area .comment-navigation .nav-next a.disabled, .quicksand-post-pagination-list-view .nav-links a.disabled, .page-links a.disabled, .btn:disabled, .comments-area .comment-list .comment-body .reply .comment-reply-link:disabled, .comments-area .comment-navigation .nav-previous a:disabled, .comments-area .comment-navigation .nav-next a:disabled, .quicksand-post-pagination-list-view .nav-links a:disabled, .page-links a:disabled {
+  .btn.disabled, .quicksand-post-pagination-list-view .nav-links a.disabled, .page-links a.disabled, .btn:disabled, .quicksand-post-pagination-list-view .nav-links a:disabled, .page-links a:disabled {
     cursor: not-allowed;
     opacity: .65; }
 
-a.btn.disabled, .comments-area .comment-list .comment-body .reply a.disabled.comment-reply-link, .comments-area .comment-navigation .nav-previous a.disabled, .comments-area .comment-navigation .nav-next a.disabled, .quicksand-post-pagination-list-view .nav-links a.disabled, .page-links a.disabled,
+a.btn.disabled, .quicksand-post-pagination-list-view .nav-links a.disabled, .page-links a.disabled,
 fieldset[disabled] a.btn,
-fieldset[disabled] .comments-area .comment-list .comment-body .reply a.comment-reply-link, .comments-area .comment-list .comment-body .reply
-fieldset[disabled] a.comment-reply-link,
-fieldset[disabled] .comments-area .comment-navigation .nav-previous a, .comments-area .comment-navigation .nav-previous
-fieldset[disabled] a,
-fieldset[disabled] .comments-area .comment-navigation .nav-next a, .comments-area .comment-navigation .nav-next
-fieldset[disabled] a,
 fieldset[disabled] .quicksand-post-pagination-list-view .nav-links a, .quicksand-post-pagination-list-view .nav-links
 fieldset[disabled] a,
 fieldset[disabled] .page-links a, .page-links
@@ -2891,54 +2835,42 @@ fieldset[disabled] a {
   .btn-outline-primary.disabled:hover, .btn-outline-primary:disabled:hover {
     border-color: #43a7fd; }
 
-.btn-outline-secondary, .comments-area .comment-list .comment-body .reply .comment-reply-link, .comments-area .comment-navigation .nav-previous a, .comments-area .comment-navigation .nav-next a, .quicksand-post-pagination-list-view .nav-links a, .page-links a {
+.btn-outline-secondary, .quicksand-post-pagination-list-view .nav-links a, .page-links a {
   color: #9ab7ac;
   background-image: none;
   background-color: transparent;
   border-color: #9ab7ac; }
-  .btn-outline-secondary:hover, .comments-area .comment-list .comment-body .reply .comment-reply-link:hover, .comments-area .comment-navigation .nav-previous a:hover, .comments-area .comment-navigation .nav-next a:hover, .quicksand-post-pagination-list-view .nav-links a:hover, .page-links a:hover {
+  .btn-outline-secondary:hover, .quicksand-post-pagination-list-view .nav-links a:hover, .page-links a:hover {
     color: #fff;
     background-color: #9ab7ac;
     border-color: #9ab7ac; }
-  .btn-outline-secondary:focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:focus, .comments-area .comment-navigation .nav-previous a:focus, .comments-area .comment-navigation .nav-next a:focus, .quicksand-post-pagination-list-view .nav-links a:focus, .page-links a:focus, .btn-outline-secondary.focus, .comments-area .comment-list .comment-body .reply .focus.comment-reply-link, .comments-area .comment-navigation .nav-previous a.focus, .comments-area .comment-navigation .nav-next a.focus, .quicksand-post-pagination-list-view .nav-links a.focus, .page-links a.focus {
+  .btn-outline-secondary:focus, .quicksand-post-pagination-list-view .nav-links a:focus, .page-links a:focus, .btn-outline-secondary.focus, .quicksand-post-pagination-list-view .nav-links a.focus, .page-links a.focus {
     color: #fff;
     background-color: #9ab7ac;
     border-color: #9ab7ac; }
-  .btn-outline-secondary:active, .comments-area .comment-list .comment-body .reply .comment-reply-link:active, .comments-area .comment-navigation .nav-previous a:active, .comments-area .comment-navigation .nav-next a:active, .quicksand-post-pagination-list-view .nav-links a:active, .page-links a:active, .btn-outline-secondary.active, .comments-area .comment-list .comment-body .reply .active.comment-reply-link, .comments-area .comment-navigation .nav-previous a.active, .comments-area .comment-navigation .nav-next a.active, .quicksand-post-pagination-list-view .nav-links a.active, .page-links a.active,
-  .open > .btn-outline-secondary.dropdown-toggle, .comments-area .comment-list .comment-body .reply
-  .open > .dropdown-toggle.comment-reply-link, .comments-area .comment-navigation .nav-previous
-  .open > a.dropdown-toggle, .comments-area .comment-navigation .nav-next
-  .open > a.dropdown-toggle, .quicksand-post-pagination-list-view .nav-links
+  .btn-outline-secondary:active, .quicksand-post-pagination-list-view .nav-links a:active, .page-links a:active, .btn-outline-secondary.active, .quicksand-post-pagination-list-view .nav-links a.active, .page-links a.active,
+  .open > .btn-outline-secondary.dropdown-toggle, .quicksand-post-pagination-list-view .nav-links
   .open > a.dropdown-toggle, .page-links
   .open > a.dropdown-toggle {
     color: #fff;
     background-color: #9ab7ac;
     border-color: #9ab7ac; }
-    .btn-outline-secondary:active:hover, .comments-area .comment-list .comment-body .reply .comment-reply-link:active:hover, .comments-area .comment-navigation .nav-previous a:active:hover, .comments-area .comment-navigation .nav-next a:active:hover, .quicksand-post-pagination-list-view .nav-links a:active:hover, .page-links a:active:hover, .btn-outline-secondary:active:focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:active:focus, .comments-area .comment-navigation .nav-previous a:active:focus, .comments-area .comment-navigation .nav-next a:active:focus, .quicksand-post-pagination-list-view .nav-links a:active:focus, .page-links a:active:focus, .btn-outline-secondary:active.focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:active.focus, .comments-area .comment-navigation .nav-previous a:active.focus, .comments-area .comment-navigation .nav-next a:active.focus, .quicksand-post-pagination-list-view .nav-links a:active.focus, .page-links a:active.focus, .btn-outline-secondary.active:hover, .comments-area .comment-list .comment-body .reply .active.comment-reply-link:hover, .comments-area .comment-navigation .nav-previous a.active:hover, .comments-area .comment-navigation .nav-next a.active:hover, .quicksand-post-pagination-list-view .nav-links a.active:hover, .page-links a.active:hover, .btn-outline-secondary.active:focus, .comments-area .comment-list .comment-body .reply .active.comment-reply-link:focus, .comments-area .comment-navigation .nav-previous a.active:focus, .comments-area .comment-navigation .nav-next a.active:focus, .quicksand-post-pagination-list-view .nav-links a.active:focus, .page-links a.active:focus, .btn-outline-secondary.active.focus, .comments-area .comment-list .comment-body .reply .active.focus.comment-reply-link, .comments-area .comment-navigation .nav-previous a.active.focus, .comments-area .comment-navigation .nav-next a.active.focus, .quicksand-post-pagination-list-view .nav-links a.active.focus, .page-links a.active.focus,
-    .open > .btn-outline-secondary.dropdown-toggle:hover, .comments-area .comment-list .comment-body .reply
-    .open > .dropdown-toggle.comment-reply-link:hover, .comments-area .comment-navigation .nav-previous
-    .open > a.dropdown-toggle:hover, .comments-area .comment-navigation .nav-next
-    .open > a.dropdown-toggle:hover, .quicksand-post-pagination-list-view .nav-links
+    .btn-outline-secondary:active:hover, .quicksand-post-pagination-list-view .nav-links a:active:hover, .page-links a:active:hover, .btn-outline-secondary:active:focus, .quicksand-post-pagination-list-view .nav-links a:active:focus, .page-links a:active:focus, .btn-outline-secondary:active.focus, .quicksand-post-pagination-list-view .nav-links a:active.focus, .page-links a:active.focus, .btn-outline-secondary.active:hover, .quicksand-post-pagination-list-view .nav-links a.active:hover, .page-links a.active:hover, .btn-outline-secondary.active:focus, .quicksand-post-pagination-list-view .nav-links a.active:focus, .page-links a.active:focus, .btn-outline-secondary.active.focus, .quicksand-post-pagination-list-view .nav-links a.active.focus, .page-links a.active.focus,
+    .open > .btn-outline-secondary.dropdown-toggle:hover, .quicksand-post-pagination-list-view .nav-links
     .open > a.dropdown-toggle:hover, .page-links
     .open > a.dropdown-toggle:hover,
-    .open > .btn-outline-secondary.dropdown-toggle:focus, .comments-area .comment-list .comment-body .reply
-    .open > .dropdown-toggle.comment-reply-link:focus, .comments-area .comment-navigation .nav-previous
-    .open > a.dropdown-toggle:focus, .comments-area .comment-navigation .nav-next
-    .open > a.dropdown-toggle:focus, .quicksand-post-pagination-list-view .nav-links
+    .open > .btn-outline-secondary.dropdown-toggle:focus, .quicksand-post-pagination-list-view .nav-links
     .open > a.dropdown-toggle:focus, .page-links
     .open > a.dropdown-toggle:focus,
-    .open > .btn-outline-secondary.dropdown-toggle.focus, .comments-area .comment-list .comment-body .reply
-    .open > .dropdown-toggle.focus.comment-reply-link, .comments-area .comment-navigation .nav-previous
-    .open > a.dropdown-toggle.focus, .comments-area .comment-navigation .nav-next
-    .open > a.dropdown-toggle.focus, .quicksand-post-pagination-list-view .nav-links
+    .open > .btn-outline-secondary.dropdown-toggle.focus, .quicksand-post-pagination-list-view .nav-links
     .open > a.dropdown-toggle.focus, .page-links
     .open > a.dropdown-toggle.focus {
       color: #fff;
       background-color: #689282;
       border-color: #577a6d; }
-  .btn-outline-secondary.disabled:focus, .comments-area .comment-list .comment-body .reply .disabled.comment-reply-link:focus, .comments-area .comment-navigation .nav-previous a.disabled:focus, .comments-area .comment-navigation .nav-next a.disabled:focus, .quicksand-post-pagination-list-view .nav-links a.disabled:focus, .page-links a.disabled:focus, .btn-outline-secondary.disabled.focus, .comments-area .comment-list .comment-body .reply .disabled.focus.comment-reply-link, .comments-area .comment-navigation .nav-previous a.disabled.focus, .comments-area .comment-navigation .nav-next a.disabled.focus, .quicksand-post-pagination-list-view .nav-links a.disabled.focus, .page-links a.disabled.focus, .btn-outline-secondary:disabled:focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:disabled:focus, .comments-area .comment-navigation .nav-previous a:disabled:focus, .comments-area .comment-navigation .nav-next a:disabled:focus, .quicksand-post-pagination-list-view .nav-links a:disabled:focus, .page-links a:disabled:focus, .btn-outline-secondary:disabled.focus, .comments-area .comment-list .comment-body .reply .comment-reply-link:disabled.focus, .comments-area .comment-navigation .nav-previous a:disabled.focus, .comments-area .comment-navigation .nav-next a:disabled.focus, .quicksand-post-pagination-list-view .nav-links a:disabled.focus, .page-links a:disabled.focus {
+  .btn-outline-secondary.disabled:focus, .quicksand-post-pagination-list-view .nav-links a.disabled:focus, .page-links a.disabled:focus, .btn-outline-secondary.disabled.focus, .quicksand-post-pagination-list-view .nav-links a.disabled.focus, .page-links a.disabled.focus, .btn-outline-secondary:disabled:focus, .quicksand-post-pagination-list-view .nav-links a:disabled:focus, .page-links a:disabled:focus, .btn-outline-secondary:disabled.focus, .quicksand-post-pagination-list-view .nav-links a:disabled.focus, .page-links a:disabled.focus {
     border-color: #d6e1dd; }
-  .btn-outline-secondary.disabled:hover, .comments-area .comment-list .comment-body .reply .disabled.comment-reply-link:hover, .comments-area .comment-navigation .nav-previous a.disabled:hover, .comments-area .comment-navigation .nav-next a.disabled:hover, .quicksand-post-pagination-list-view .nav-links a.disabled:hover, .page-links a.disabled:hover, .btn-outline-secondary:disabled:hover, .comments-area .comment-list .comment-body .reply .comment-reply-link:disabled:hover, .comments-area .comment-navigation .nav-previous a:disabled:hover, .comments-area .comment-navigation .nav-next a:disabled:hover, .quicksand-post-pagination-list-view .nav-links a:disabled:hover, .page-links a:disabled:hover {
+  .btn-outline-secondary.disabled:hover, .quicksand-post-pagination-list-view .nav-links a.disabled:hover, .page-links a.disabled:hover, .btn-outline-secondary:disabled:hover, .quicksand-post-pagination-list-view .nav-links a:disabled:hover, .page-links a:disabled:hover {
     border-color: #d6e1dd; }
 
 .btn-outline-info {
@@ -3079,13 +3011,13 @@ fieldset[disabled] a {
     color: #818a91;
     text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn, .comments-area .comment-list .comment-body .reply .btn-group-lg > .comment-reply-link, .comments-area .comment-navigation .nav-previous .btn-group-lg > a, .comments-area .comment-navigation .nav-next .btn-group-lg > a, .quicksand-post-pagination-list-view .nav-links .btn-group-lg > a, .page-links .btn-group-lg > a {
+.btn-lg, .btn-group-lg > .btn, .quicksand-post-pagination-list-view .nav-links .btn-group-lg > a, .page-links .btn-group-lg > a {
   padding: 12px 24px;
   padding: 0.75rem 1.5rem;
   font-size: 20px;
   font-size: 1.25rem; }
 
-.btn-sm, .btn-group-sm > .btn, .comments-area .comment-list .comment-body .reply .btn-group-sm > .comment-reply-link, .comments-area .comment-navigation .nav-previous .btn-group-sm > a, .comments-area .comment-navigation .nav-next .btn-group-sm > a, .quicksand-post-pagination-list-view .nav-links .btn-group-sm > a, .page-links .btn-group-sm > a {
+.btn-sm, .btn-group-sm > .btn, .quicksand-post-pagination-list-view .nav-links .btn-group-sm > a, .page-links .btn-group-sm > a {
   padding: 4px 8px;
   padding: 0.25rem 0.5rem;
   font-size: 14px;
@@ -3260,64 +3192,37 @@ tbody.collapse.in {
   position: relative;
   display: inline-block;
   vertical-align: middle; }
-  .btn-group > .btn, .comments-area .comment-list .comment-body .reply .btn-group > .comment-reply-link, .comments-area .comment-navigation .nav-previous .btn-group > a, .comments-area .comment-navigation .nav-next .btn-group > a, .quicksand-post-pagination-list-view .nav-links .btn-group > a, .page-links .btn-group > a,
-  .btn-group-vertical > .btn, .comments-area .comment-list .comment-body .reply
-  .btn-group-vertical > .comment-reply-link, .comments-area .comment-navigation .nav-previous
-  .btn-group-vertical > a, .comments-area .comment-navigation .nav-next
-  .btn-group-vertical > a, .quicksand-post-pagination-list-view .nav-links
+  .btn-group > .btn, .quicksand-post-pagination-list-view .nav-links .btn-group > a, .page-links .btn-group > a,
+  .btn-group-vertical > .btn, .quicksand-post-pagination-list-view .nav-links
   .btn-group-vertical > a, .page-links
   .btn-group-vertical > a {
     position: relative;
     float: left;
     margin-bottom: 0; }
-    .btn-group > .btn:focus, .comments-area .comment-list .comment-body .reply .btn-group > .comment-reply-link:focus, .comments-area .comment-navigation .nav-previous .btn-group > a:focus, .comments-area .comment-navigation .nav-next .btn-group > a:focus, .quicksand-post-pagination-list-view .nav-links .btn-group > a:focus, .page-links .btn-group > a:focus, .btn-group > .btn:active, .comments-area .comment-list .comment-body .reply .btn-group > .comment-reply-link:active, .comments-area .comment-navigation .nav-previous .btn-group > a:active, .comments-area .comment-navigation .nav-next .btn-group > a:active, .quicksand-post-pagination-list-view .nav-links .btn-group > a:active, .page-links .btn-group > a:active, .btn-group > .btn.active, .comments-area .comment-list .comment-body .reply .btn-group > .active.comment-reply-link, .comments-area .comment-navigation .nav-previous .btn-group > a.active, .comments-area .comment-navigation .nav-next .btn-group > a.active, .quicksand-post-pagination-list-view .nav-links .btn-group > a.active, .page-links .btn-group > a.active,
-    .btn-group-vertical > .btn:focus, .comments-area .comment-list .comment-body .reply
-    .btn-group-vertical > .comment-reply-link:focus, .comments-area .comment-navigation .nav-previous
-    .btn-group-vertical > a:focus, .comments-area .comment-navigation .nav-next
-    .btn-group-vertical > a:focus, .quicksand-post-pagination-list-view .nav-links
+    .btn-group > .btn:focus, .quicksand-post-pagination-list-view .nav-links .btn-group > a:focus, .page-links .btn-group > a:focus, .btn-group > .btn:active, .quicksand-post-pagination-list-view .nav-links .btn-group > a:active, .page-links .btn-group > a:active, .btn-group > .btn.active, .quicksand-post-pagination-list-view .nav-links .btn-group > a.active, .page-links .btn-group > a.active,
+    .btn-group-vertical > .btn:focus, .quicksand-post-pagination-list-view .nav-links
     .btn-group-vertical > a:focus, .page-links
     .btn-group-vertical > a:focus,
-    .btn-group-vertical > .btn:active, .comments-area .comment-list .comment-body .reply
-    .btn-group-vertical > .comment-reply-link:active, .comments-area .comment-navigation .nav-previous
-    .btn-group-vertical > a:active, .comments-area .comment-navigation .nav-next
-    .btn-group-vertical > a:active, .quicksand-post-pagination-list-view .nav-links
+    .btn-group-vertical > .btn:active, .quicksand-post-pagination-list-view .nav-links
     .btn-group-vertical > a:active, .page-links
     .btn-group-vertical > a:active,
-    .btn-group-vertical > .btn.active, .comments-area .comment-list .comment-body .reply
-    .btn-group-vertical > .active.comment-reply-link, .comments-area .comment-navigation .nav-previous
-    .btn-group-vertical > a.active, .comments-area .comment-navigation .nav-next
-    .btn-group-vertical > a.active, .quicksand-post-pagination-list-view .nav-links
+    .btn-group-vertical > .btn.active, .quicksand-post-pagination-list-view .nav-links
     .btn-group-vertical > a.active, .page-links
     .btn-group-vertical > a.active {
       z-index: 2; }
-    .btn-group > .btn:hover, .comments-area .comment-list .comment-body .reply .btn-group > .comment-reply-link:hover, .comments-area .comment-navigation .nav-previous .btn-group > a:hover, .comments-area .comment-navigation .nav-next .btn-group > a:hover, .quicksand-post-pagination-list-view .nav-links .btn-group > a:hover, .page-links .btn-group > a:hover,
-    .btn-group-vertical > .btn:hover, .comments-area .comment-list .comment-body .reply
-    .btn-group-vertical > .comment-reply-link:hover, .comments-area .comment-navigation .nav-previous
-    .btn-group-vertical > a:hover, .comments-area .comment-navigation .nav-next
-    .btn-group-vertical > a:hover, .quicksand-post-pagination-list-view .nav-links
+    .btn-group > .btn:hover, .quicksand-post-pagination-list-view .nav-links .btn-group > a:hover, .page-links .btn-group > a:hover,
+    .btn-group-vertical > .btn:hover, .quicksand-post-pagination-list-view .nav-links
     .btn-group-vertical > a:hover, .page-links
     .btn-group-vertical > a:hover {
       z-index: 2; }
 
-.btn-group .btn + .btn, .btn-group .comments-area .comment-list .comment-body .reply .comment-reply-link + .btn, .comments-area .comment-list .comment-body .reply .btn-group .comment-reply-link + .btn, .btn-group .comments-area .comment-navigation .nav-previous a + .btn, .comments-area .comment-navigation .nav-previous .btn-group a + .btn, .btn-group .comments-area .comment-navigation .nav-next a + .btn, .comments-area .comment-navigation .nav-next .btn-group a + .btn, .btn-group .quicksand-post-pagination-list-view .nav-links a + .btn, .quicksand-post-pagination-list-view .nav-links .btn-group a + .btn, .btn-group .page-links a + .btn, .page-links .btn-group a + .btn, .btn-group .comments-area .comment-list .comment-body .reply .btn + .comment-reply-link, .comments-area .comment-list .comment-body .reply .btn-group .btn + .comment-reply-link, .btn-group .comments-area .comment-list .comment-body .reply .comment-reply-link + .comment-reply-link, .comments-area .comment-list .comment-body .reply .btn-group .comment-reply-link + .comment-reply-link, .btn-group .comments-area .comment-navigation .nav-previous .comment-list .comment-body .reply a + .comment-reply-link, .btn-group .comments-area .comment-list .comment-body .reply .comment-navigation .nav-previous a + .comment-reply-link, .comments-area .comment-navigation .nav-previous .btn-group .comment-list .comment-body .reply a + .comment-reply-link, .comments-area .comment-list .comment-body .reply .comment-navigation .nav-previous .btn-group a + .comment-reply-link, .btn-group .comments-area .comment-navigation .nav-next .comment-list .comment-body .reply a + .comment-reply-link, .btn-group .comments-area .comment-list .comment-body .reply .comment-navigation .nav-next a + .comment-reply-link, .comments-area .comment-navigation .nav-next .btn-group .comment-list .comment-body .reply a + .comment-reply-link, .comments-area .comment-list .comment-body .reply .comment-navigation .nav-next .btn-group a + .comment-reply-link, .btn-group .quicksand-post-pagination-list-view .nav-links .comments-area .comment-list .comment-body .reply a + .comment-reply-link, .comments-area .comment-list .comment-body .reply .btn-group .quicksand-post-pagination-list-view .nav-links a + .comment-reply-link, .quicksand-post-pagination-list-view .nav-links .btn-group .comments-area .comment-list .comment-body .reply a + .comment-reply-link, .comments-area .comment-list .comment-body .reply .quicksand-post-pagination-list-view .nav-links .btn-group a + .comment-reply-link, .btn-group .page-links .comments-area .comment-list .comment-body .reply a + .comment-reply-link, .comments-area .comment-list .comment-body .reply .btn-group .page-links a + .comment-reply-link, .page-links .btn-group .comments-area .comment-list .comment-body .reply a + .comment-reply-link, .comments-area .comment-list .comment-body .reply .page-links .btn-group a + .comment-reply-link, .btn-group .comments-area .comment-navigation .nav-previous .btn + a, .comments-area .comment-navigation .nav-previous .btn-group .btn + a, .btn-group .comments-area .comment-list .comment-body .reply .comment-navigation .nav-previous .comment-reply-link + a, .btn-group .comments-area .comment-navigation .nav-previous .comment-list .comment-body .reply .comment-reply-link + a, .comments-area .comment-list .comment-body .reply .btn-group .comment-navigation .nav-previous .comment-reply-link + a, .comments-area .comment-navigation .nav-previous .comment-list .comment-body .reply .btn-group .comment-reply-link + a, .btn-group .comments-area .comment-navigation .nav-previous a + a, .comments-area .comment-navigation .nav-previous .btn-group a + a, .comments-area .comment-navigation .nav-next .btn-group .nav-previous a + a, .btn-group .comments-area .comment-navigation .nav-next .btn + a, .comments-area .comment-navigation .nav-next .btn-group .btn + a, .btn-group .comments-area .comment-list .comment-body .reply .comment-navigation .nav-next .comment-reply-link + a, .btn-group .comments-area .comment-navigation .nav-next .comment-list .comment-body .reply .comment-reply-link + a, .comments-area .comment-list .comment-body .reply .btn-group .comment-navigation .nav-next .comment-reply-link + a, .comments-area .comment-navigation .nav-next .comment-list .comment-body .reply .btn-group .comment-reply-link + a, .comments-area .comment-navigation .nav-previous .btn-group .nav-next a + a, .btn-group .comments-area .comment-navigation .nav-next a + a, .comments-area .comment-navigation .nav-next .btn-group a + a, .btn-group .quicksand-post-pagination-list-view .nav-links .btn + a, .quicksand-post-pagination-list-view .nav-links .btn-group .btn + a, .btn-group .comments-area .comment-list .comment-body .reply .quicksand-post-pagination-list-view .nav-links .comment-reply-link + a, .quicksand-post-pagination-list-view .nav-links .btn-group .comments-area .comment-list .comment-body .reply .comment-reply-link + a, .comments-area .comment-list .comment-body .reply .btn-group .quicksand-post-pagination-list-view .nav-links .comment-reply-link + a, .quicksand-post-pagination-list-view .nav-links .comments-area .comment-list .comment-body .reply .btn-group .comment-reply-link + a, .btn-group .quicksand-post-pagination-list-view .nav-links a + a, .quicksand-post-pagination-list-view .nav-links .btn-group a + a, .btn-group .page-links .btn + a, .page-links .btn-group .btn + a, .btn-group .comments-area .comment-list .comment-body .reply .page-links .comment-reply-link + a, .page-links .btn-group .comments-area .comment-list .comment-body .reply .comment-reply-link + a, .comments-area .comment-list .comment-body .reply .btn-group .page-links .comment-reply-link + a, .page-links .comments-area .comment-list .comment-body .reply .btn-group .comment-reply-link + a, .btn-group .comments-area .comment-navigation .nav-previous .page-links a + a, .comments-area .comment-navigation .nav-previous .btn-group .page-links a + a, .btn-group .comments-area .comment-navigation .nav-next .page-links a + a, .comments-area .comment-navigation .nav-next .btn-group .page-links a + a, .btn-group .quicksand-post-pagination-list-view .nav-links .page-links a + a, .quicksand-post-pagination-list-view .nav-links .btn-group .page-links a + a, .btn-group .page-links a + a, .page-links .btn-group a + a,
+.btn-group .btn + .btn, .btn-group .quicksand-post-pagination-list-view .nav-links a + .btn, .quicksand-post-pagination-list-view .nav-links .btn-group a + .btn, .btn-group .page-links a + .btn, .page-links .btn-group a + .btn, .btn-group .quicksand-post-pagination-list-view .nav-links .btn + a, .quicksand-post-pagination-list-view .nav-links .btn-group .btn + a, .btn-group .quicksand-post-pagination-list-view .nav-links a + a, .quicksand-post-pagination-list-view .nav-links .btn-group a + a, .btn-group .page-links .btn + a, .page-links .btn-group .btn + a, .btn-group .quicksand-post-pagination-list-view .nav-links .page-links a + a, .quicksand-post-pagination-list-view .nav-links .btn-group .page-links a + a, .btn-group .page-links a + a, .page-links .btn-group a + a,
 .btn-group .btn + .btn-group,
-.btn-group .comments-area .comment-list .comment-body .reply .comment-reply-link + .btn-group, .comments-area .comment-list .comment-body .reply
-.btn-group .comment-reply-link + .btn-group,
-.btn-group .comments-area .comment-navigation .nav-previous a + .btn-group, .comments-area .comment-navigation .nav-previous
-.btn-group a + .btn-group,
-.btn-group .comments-area .comment-navigation .nav-next a + .btn-group, .comments-area .comment-navigation .nav-next
-.btn-group a + .btn-group,
 .btn-group .quicksand-post-pagination-list-view .nav-links a + .btn-group, .quicksand-post-pagination-list-view .nav-links
 .btn-group a + .btn-group,
 .btn-group .page-links a + .btn-group, .page-links
 .btn-group a + .btn-group,
 .btn-group .btn-group + .btn,
-.btn-group .comments-area .comment-list .comment-body .reply .btn-group + .comment-reply-link, .comments-area .comment-list .comment-body .reply
-.btn-group .btn-group + .comment-reply-link,
-.btn-group .comments-area .comment-navigation .nav-previous .btn-group + a, .comments-area .comment-navigation .nav-previous
-.btn-group .btn-group + a,
-.btn-group .comments-area .comment-navigation .nav-next .btn-group + a, .comments-area .comment-navigation .nav-next
-.btn-group .btn-group + a,
 .btn-group .quicksand-post-pagination-list-view .nav-links .btn-group + a, .quicksand-post-pagination-list-view .nav-links
 .btn-group .btn-group + a,
 .btn-group .page-links .btn-group + a, .page-links
@@ -3335,64 +3240,61 @@ tbody.collapse.in {
   .btn-toolbar .btn-group,
   .btn-toolbar .input-group {
     float: left; }
-  .btn-toolbar > .btn, .comments-area .comment-list .comment-body .reply .btn-toolbar > .comment-reply-link, .comments-area .comment-navigation .nav-previous .btn-toolbar > a, .comments-area .comment-navigation .nav-next .btn-toolbar > a, .quicksand-post-pagination-list-view .nav-links .btn-toolbar > a, .page-links .btn-toolbar > a,
+  .btn-toolbar > .btn, .quicksand-post-pagination-list-view .nav-links .btn-toolbar > a, .page-links .btn-toolbar > a,
   .btn-toolbar > .btn-group,
   .btn-toolbar > .input-group {
     margin-left: 8px;
     margin-left: 0.5rem; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .comments-area .comment-list .comment-body .reply .btn-group > .comment-reply-link:not(:first-child):not(:last-child):not(.dropdown-toggle), .comments-area .comment-navigation .nav-previous .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), .comments-area .comment-navigation .nav-next .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), .quicksand-post-pagination-list-view .nav-links .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), .page-links .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .quicksand-post-pagination-list-view .nav-links .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), .page-links .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, .comments-area .comment-list .comment-body .reply .btn-group > .comment-reply-link:first-child, .comments-area .comment-navigation .nav-previous .btn-group > a:first-child, .comments-area .comment-navigation .nav-next .btn-group > a:first-child, .quicksand-post-pagination-list-view .nav-links .btn-group > a:first-child, .page-links .btn-group > a:first-child {
+.btn-group > .btn:first-child, .quicksand-post-pagination-list-view .nav-links .btn-group > a:first-child, .page-links .btn-group > a:first-child {
   margin-left: 0; }
 
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .comments-area .comment-list .comment-body .reply .btn-group > .btn-group:not(:first-child):not(:last-child) > .comment-reply-link, .comments-area .comment-navigation .nav-previous .btn-group > .btn-group:not(:first-child):not(:last-child) > a, .comments-area .comment-navigation .nav-next .btn-group > .btn-group:not(:first-child):not(:last-child) > a, .quicksand-post-pagination-list-view .nav-links .btn-group > .btn-group:not(:first-child):not(:last-child) > a, .page-links .btn-group > .btn-group:not(:first-child):not(:last-child) > a {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .quicksand-post-pagination-list-view .nav-links .btn-group > .btn-group:not(:first-child):not(:last-child) > a, .page-links .btn-group > .btn-group:not(:first-child):not(:last-child) > a {
   border-radius: 0; }
 
 .btn-group .dropdown-toggle:active,
 .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn + .dropdown-toggle-split, .comments-area .comment-list .comment-body .reply .comment-reply-link + .dropdown-toggle-split, .comments-area .comment-navigation .nav-previous a + .dropdown-toggle-split, .comments-area .comment-navigation .nav-next a + .dropdown-toggle-split, .quicksand-post-pagination-list-view .nav-links a + .dropdown-toggle-split, .page-links a + .dropdown-toggle-split {
+.btn + .dropdown-toggle-split, .quicksand-post-pagination-list-view .nav-links a + .dropdown-toggle-split, .page-links a + .dropdown-toggle-split {
   padding-right: 12px;
   padding-right: 0.75rem;
   padding-left: 12px;
   padding-left: 0.75rem; }
-  .btn + .dropdown-toggle-split::after, .comments-area .comment-list .comment-body .reply .comment-reply-link + .dropdown-toggle-split::after, .comments-area .comment-navigation .nav-previous a + .dropdown-toggle-split::after, .comments-area .comment-navigation .nav-next a + .dropdown-toggle-split::after, .quicksand-post-pagination-list-view .nav-links a + .dropdown-toggle-split::after, .page-links a + .dropdown-toggle-split::after {
+  .btn + .dropdown-toggle-split::after, .quicksand-post-pagination-list-view .nav-links a + .dropdown-toggle-split::after, .page-links a + .dropdown-toggle-split::after {
     margin-left: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .comments-area .comment-list .comment-body .reply .btn-group-sm > .comment-reply-link + .dropdown-toggle-split, .comments-area .comment-navigation .nav-previous .btn-group-sm > a + .dropdown-toggle-split, .comments-area .comment-navigation .nav-next .btn-group-sm > a + .dropdown-toggle-split, .quicksand-post-pagination-list-view .nav-links .btn-group-sm > a + .dropdown-toggle-split, .page-links .btn-group-sm > a + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .quicksand-post-pagination-list-view .nav-links .btn-group-sm > a + .dropdown-toggle-split, .page-links .btn-group-sm > a + .dropdown-toggle-split {
   padding-right: 6px;
   padding-right: 0.375rem;
   padding-left: 6px;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .comments-area .comment-list .comment-body .reply .btn-group-lg > .comment-reply-link + .dropdown-toggle-split, .comments-area .comment-navigation .nav-previous .btn-group-lg > a + .dropdown-toggle-split, .comments-area .comment-navigation .nav-next .btn-group-lg > a + .dropdown-toggle-split, .quicksand-post-pagination-list-view .nav-links .btn-group-lg > a + .dropdown-toggle-split, .page-links .btn-group-lg > a + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .quicksand-post-pagination-list-view .nav-links .btn-group-lg > a + .dropdown-toggle-split, .page-links .btn-group-lg > a + .dropdown-toggle-split {
   padding-right: 18px;
   padding-right: 1.125rem;
   padding-left: 18px;
   padding-left: 1.125rem; }
 
-.btn .caret, .comments-area .comment-list .comment-body .reply .comment-reply-link .caret, .comments-area .comment-navigation .nav-previous a .caret, .comments-area .comment-navigation .nav-next a .caret, .quicksand-post-pagination-list-view .nav-links a .caret, .page-links a .caret {
+.btn .caret, .quicksand-post-pagination-list-view .nav-links a .caret, .page-links a .caret {
   margin-left: 0; }
 
-.btn-lg .caret, .btn-group-lg > .btn .caret, .comments-area .comment-list .comment-body .reply .btn-group-lg > .comment-reply-link .caret, .comments-area .comment-navigation .nav-previous .btn-group-lg > a .caret, .comments-area .comment-navigation .nav-next .btn-group-lg > a .caret, .quicksand-post-pagination-list-view .nav-links .btn-group-lg > a .caret, .page-links .btn-group-lg > a .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, .quicksand-post-pagination-list-view .nav-links .btn-group-lg > a .caret, .page-links .btn-group-lg > a .caret {
   border-width: 0.3em 0.3em 0;
   border-bottom-width: 0; }
 
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .comments-area .comment-list .comment-body .reply .btn-group-lg > .comment-reply-link .caret, .comments-area .comment-list .comment-body .reply .dropup .btn-group-lg > .comment-reply-link .caret, .dropup .comments-area .comment-navigation .nav-previous .btn-group-lg > a .caret, .comments-area .comment-navigation .nav-previous .dropup .btn-group-lg > a .caret, .dropup .comments-area .comment-navigation .nav-next .btn-group-lg > a .caret, .comments-area .comment-navigation .nav-next .dropup .btn-group-lg > a .caret, .dropup .quicksand-post-pagination-list-view .nav-links .btn-group-lg > a .caret, .quicksand-post-pagination-list-view .nav-links .dropup .btn-group-lg > a .caret, .dropup .page-links .btn-group-lg > a .caret, .page-links .dropup .btn-group-lg > a .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .quicksand-post-pagination-list-view .nav-links .btn-group-lg > a .caret, .quicksand-post-pagination-list-view .nav-links .dropup .btn-group-lg > a .caret, .dropup .page-links .btn-group-lg > a .caret, .page-links .dropup .btn-group-lg > a .caret {
   border-width: 0 0.3em 0.3em; }
 
-.btn-group-vertical > .btn, .comments-area .comment-list .comment-body .reply .btn-group-vertical > .comment-reply-link, .comments-area .comment-navigation .nav-previous .btn-group-vertical > a, .comments-area .comment-navigation .nav-next .btn-group-vertical > a, .quicksand-post-pagination-list-view .nav-links .btn-group-vertical > a, .page-links .btn-group-vertical > a,
+.btn-group-vertical > .btn, .quicksand-post-pagination-list-view .nav-links .btn-group-vertical > a, .page-links .btn-group-vertical > a,
 .btn-group-vertical > .btn-group,
-.btn-group-vertical > .btn-group > .btn, .comments-area .comment-list .comment-body .reply
-.btn-group-vertical > .btn-group > .comment-reply-link, .comments-area .comment-navigation .nav-previous
-.btn-group-vertical > .btn-group > a, .comments-area .comment-navigation .nav-next
-.btn-group-vertical > .btn-group > a, .quicksand-post-pagination-list-view .nav-links
+.btn-group-vertical > .btn-group > .btn, .quicksand-post-pagination-list-view .nav-links
 .btn-group-vertical > .btn-group > a, .page-links
 .btn-group-vertical > .btn-group > a {
   display: block;
@@ -3405,49 +3307,34 @@ tbody.collapse.in {
   display: table;
   clear: both; }
 
-.btn-group-vertical > .btn-group > .btn, .comments-area .comment-list .comment-body .reply .btn-group-vertical > .btn-group > .comment-reply-link, .comments-area .comment-navigation .nav-previous .btn-group-vertical > .btn-group > a, .comments-area .comment-navigation .nav-next .btn-group-vertical > .btn-group > a, .quicksand-post-pagination-list-view .nav-links .btn-group-vertical > .btn-group > a, .page-links .btn-group-vertical > .btn-group > a {
+.btn-group-vertical > .btn-group > .btn, .quicksand-post-pagination-list-view .nav-links .btn-group-vertical > .btn-group > a, .page-links .btn-group-vertical > .btn-group > a {
   float: none; }
 
-.btn-group-vertical > .btn + .btn, .comments-area .comment-list .comment-body .reply .btn-group-vertical > .comment-reply-link + .btn, .comments-area .comment-navigation .nav-previous .btn-group-vertical > a + .btn, .comments-area .comment-navigation .nav-next .btn-group-vertical > a + .btn, .quicksand-post-pagination-list-view .nav-links .btn-group-vertical > a + .btn, .page-links .btn-group-vertical > a + .btn, .comments-area .comment-list .comment-body .reply .btn-group-vertical > .btn + .comment-reply-link, .comments-area .comment-list .comment-body .reply .btn-group-vertical > .comment-reply-link + .comment-reply-link, .comments-area .comment-navigation .nav-previous .comment-list .comment-body .reply .btn-group-vertical > a + .comment-reply-link, .comments-area .comment-list .comment-body .reply .comment-navigation .nav-previous .btn-group-vertical > a + .comment-reply-link, .comments-area .comment-navigation .nav-next .comment-list .comment-body .reply .btn-group-vertical > a + .comment-reply-link, .comments-area .comment-list .comment-body .reply .comment-navigation .nav-next .btn-group-vertical > a + .comment-reply-link, .quicksand-post-pagination-list-view .nav-links .comments-area .comment-list .comment-body .reply .btn-group-vertical > a + .comment-reply-link, .comments-area .comment-list .comment-body .reply .quicksand-post-pagination-list-view .nav-links .btn-group-vertical > a + .comment-reply-link, .page-links .comments-area .comment-list .comment-body .reply .btn-group-vertical > a + .comment-reply-link, .comments-area .comment-list .comment-body .reply .page-links .btn-group-vertical > a + .comment-reply-link, .comments-area .comment-navigation .nav-previous .btn-group-vertical > .btn + a, .comments-area .comment-list .comment-body .reply .comment-navigation .nav-previous .btn-group-vertical > .comment-reply-link + a, .comments-area .comment-navigation .nav-previous .comment-list .comment-body .reply .btn-group-vertical > .comment-reply-link + a, .comments-area .comment-navigation .nav-previous .btn-group-vertical > a + a, .comments-area .comment-navigation .nav-next .btn-group-vertical > .btn + a, .comments-area .comment-list .comment-body .reply .comment-navigation .nav-next .btn-group-vertical > .comment-reply-link + a, .comments-area .comment-navigation .nav-next .comment-list .comment-body .reply .btn-group-vertical > .comment-reply-link + a, .comments-area .comment-navigation .nav-next .btn-group-vertical > a + a, .quicksand-post-pagination-list-view .nav-links .btn-group-vertical > .btn + a, .comments-area .comment-list .comment-body .reply .quicksand-post-pagination-list-view .nav-links .btn-group-vertical > .comment-reply-link + a, .quicksand-post-pagination-list-view .nav-links .comments-area .comment-list .comment-body .reply .btn-group-vertical > .comment-reply-link + a, .quicksand-post-pagination-list-view .nav-links .btn-group-vertical > a + a, .page-links .btn-group-vertical > .btn + a, .comments-area .comment-list .comment-body .reply .page-links .btn-group-vertical > .comment-reply-link + a, .page-links .comments-area .comment-list .comment-body .reply .btn-group-vertical > .comment-reply-link + a, .comments-area .comment-navigation .nav-previous .page-links .btn-group-vertical > a + a, .comments-area .comment-navigation .nav-next .page-links .btn-group-vertical > a + a, .quicksand-post-pagination-list-view .nav-links .page-links .btn-group-vertical > a + a, .page-links .btn-group-vertical > a + a,
-.btn-group-vertical > .btn + .btn-group, .comments-area .comment-list .comment-body .reply
-.btn-group-vertical > .comment-reply-link + .btn-group, .comments-area .comment-navigation .nav-previous
-.btn-group-vertical > a + .btn-group, .comments-area .comment-navigation .nav-next
-.btn-group-vertical > a + .btn-group, .quicksand-post-pagination-list-view .nav-links
+.btn-group-vertical > .btn + .btn, .quicksand-post-pagination-list-view .nav-links .btn-group-vertical > a + .btn, .page-links .btn-group-vertical > a + .btn, .quicksand-post-pagination-list-view .nav-links .btn-group-vertical > .btn + a, .quicksand-post-pagination-list-view .nav-links .btn-group-vertical > a + a, .page-links .btn-group-vertical > .btn + a, .quicksand-post-pagination-list-view .nav-links .page-links .btn-group-vertical > a + a, .page-links .btn-group-vertical > a + a,
+.btn-group-vertical > .btn + .btn-group, .quicksand-post-pagination-list-view .nav-links
 .btn-group-vertical > a + .btn-group, .page-links
 .btn-group-vertical > a + .btn-group,
-.btn-group-vertical > .btn-group + .btn, .comments-area .comment-list .comment-body .reply
-.btn-group-vertical > .btn-group + .comment-reply-link, .comments-area .comment-navigation .nav-previous
-.btn-group-vertical > .btn-group + a, .comments-area .comment-navigation .nav-next
-.btn-group-vertical > .btn-group + a, .quicksand-post-pagination-list-view .nav-links
+.btn-group-vertical > .btn-group + .btn, .quicksand-post-pagination-list-view .nav-links
 .btn-group-vertical > .btn-group + a, .page-links
 .btn-group-vertical > .btn-group + a,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .comments-area .comment-list .comment-body .reply .btn-group-vertical > .comment-reply-link:not(:first-child):not(:last-child), .comments-area .comment-navigation .nav-previous .btn-group-vertical > a:not(:first-child):not(:last-child), .comments-area .comment-navigation .nav-next .btn-group-vertical > a:not(:first-child):not(:last-child), .quicksand-post-pagination-list-view .nav-links .btn-group-vertical > a:not(:first-child):not(:last-child), .page-links .btn-group-vertical > a:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .quicksand-post-pagination-list-view .nav-links .btn-group-vertical > a:not(:first-child):not(:last-child), .page-links .btn-group-vertical > a:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .comments-area .comment-list .comment-body .reply .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .comment-reply-link, .comments-area .comment-navigation .nav-previous .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a, .comments-area .comment-navigation .nav-next .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a, .quicksand-post-pagination-list-view .nav-links .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a, .page-links .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .quicksand-post-pagination-list-view .nav-links .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a, .page-links .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a {
   border-radius: 0; }
 
-[data-toggle="buttons"] > .btn input[type="radio"], .comments-area .comment-list .comment-body .reply [data-toggle="buttons"] > .comment-reply-link input[type="radio"], .comments-area .comment-navigation .nav-previous [data-toggle="buttons"] > a input[type="radio"], .comments-area .comment-navigation .nav-next [data-toggle="buttons"] > a input[type="radio"], .quicksand-post-pagination-list-view .nav-links [data-toggle="buttons"] > a input[type="radio"], .page-links [data-toggle="buttons"] > a input[type="radio"],
-[data-toggle="buttons"] > .btn input[type="checkbox"], .comments-area .comment-list .comment-body .reply
-[data-toggle="buttons"] > .comment-reply-link input[type="checkbox"], .comments-area .comment-navigation .nav-previous
-[data-toggle="buttons"] > a input[type="checkbox"], .comments-area .comment-navigation .nav-next
-[data-toggle="buttons"] > a input[type="checkbox"], .quicksand-post-pagination-list-view .nav-links
+[data-toggle="buttons"] > .btn input[type="radio"], .quicksand-post-pagination-list-view .nav-links [data-toggle="buttons"] > a input[type="radio"], .page-links [data-toggle="buttons"] > a input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="checkbox"], .quicksand-post-pagination-list-view .nav-links
 [data-toggle="buttons"] > a input[type="checkbox"], .page-links
 [data-toggle="buttons"] > a input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > .btn input[type="radio"], .comments-area .comment-list .comment-body .reply
-[data-toggle="buttons"] > .btn-group > .comment-reply-link input[type="radio"], .comments-area .comment-navigation .nav-previous
-[data-toggle="buttons"] > .btn-group > a input[type="radio"], .comments-area .comment-navigation .nav-next
-[data-toggle="buttons"] > .btn-group > a input[type="radio"], .quicksand-post-pagination-list-view .nav-links
+[data-toggle="buttons"] > .btn-group > .btn input[type="radio"], .quicksand-post-pagination-list-view .nav-links
 [data-toggle="buttons"] > .btn-group > a input[type="radio"], .page-links
 [data-toggle="buttons"] > .btn-group > a input[type="radio"],
-[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"], .comments-area .comment-list .comment-body .reply
-[data-toggle="buttons"] > .btn-group > .comment-reply-link input[type="checkbox"], .comments-area .comment-navigation .nav-previous
-[data-toggle="buttons"] > .btn-group > a input[type="checkbox"], .comments-area .comment-navigation .nav-next
-[data-toggle="buttons"] > .btn-group > a input[type="checkbox"], .quicksand-post-pagination-list-view .nav-links
+[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"], .quicksand-post-pagination-list-view .nav-links
 [data-toggle="buttons"] > .btn-group > a input[type="checkbox"], .page-links
 [data-toggle="buttons"] > .btn-group > a input[type="checkbox"] {
   position: absolute;
@@ -3493,10 +3380,7 @@ tbody.collapse.in {
   border: 1px solid rgba(0, 0, 0, 0.15); }
   .input-group-addon.form-control-sm,
   .input-group-sm > .input-group-addon,
-  .input-group-sm > .input-group-btn > .input-group-addon.btn, .comments-area .comment-list .comment-body .reply
-  .input-group-sm > .input-group-btn > .input-group-addon.comment-reply-link, .comments-area .comment-navigation .nav-previous
-  .input-group-sm > .input-group-btn > a.input-group-addon, .comments-area .comment-navigation .nav-next
-  .input-group-sm > .input-group-btn > a.input-group-addon, .quicksand-post-pagination-list-view .nav-links
+  .input-group-sm > .input-group-btn > .input-group-addon.btn, .quicksand-post-pagination-list-view .nav-links
   .input-group-sm > .input-group-btn > a.input-group-addon, .page-links
   .input-group-sm > .input-group-btn > a.input-group-addon {
     padding: 4px 8px;
@@ -3505,10 +3389,7 @@ tbody.collapse.in {
     font-size: 0.875rem; }
   .input-group-addon.form-control-lg,
   .input-group-lg > .input-group-addon,
-  .input-group-lg > .input-group-btn > .input-group-addon.btn, .comments-area .comment-list .comment-body .reply
-  .input-group-lg > .input-group-btn > .input-group-addon.comment-reply-link, .comments-area .comment-navigation .nav-previous
-  .input-group-lg > .input-group-btn > a.input-group-addon, .comments-area .comment-navigation .nav-next
-  .input-group-lg > .input-group-btn > a.input-group-addon, .quicksand-post-pagination-list-view .nav-links
+  .input-group-lg > .input-group-btn > .input-group-addon.btn, .quicksand-post-pagination-list-view .nav-links
   .input-group-lg > .input-group-btn > a.input-group-addon, .page-links
   .input-group-lg > .input-group-btn > a.input-group-addon {
     padding: 12px 24px;
@@ -3529,20 +3410,20 @@ tbody.collapse.in {
   position: relative;
   font-size: 0;
   white-space: nowrap; }
-  .input-group-btn > .btn, .comments-area .comment-list .comment-body .reply .input-group-btn > .comment-reply-link, .comments-area .comment-navigation .nav-previous .input-group-btn > a, .comments-area .comment-navigation .nav-next .input-group-btn > a, .quicksand-post-pagination-list-view .nav-links .input-group-btn > a, .page-links .input-group-btn > a {
+  .input-group-btn > .btn, .quicksand-post-pagination-list-view .nav-links .input-group-btn > a, .page-links .input-group-btn > a {
     position: relative; }
-    .input-group-btn > .btn + .btn, .comments-area .comment-list .comment-body .reply .input-group-btn > .comment-reply-link + .btn, .comments-area .comment-navigation .nav-previous .input-group-btn > a + .btn, .comments-area .comment-navigation .nav-next .input-group-btn > a + .btn, .quicksand-post-pagination-list-view .nav-links .input-group-btn > a + .btn, .page-links .input-group-btn > a + .btn, .comments-area .comment-list .comment-body .reply .input-group-btn > .btn + .comment-reply-link, .comments-area .comment-list .comment-body .reply .input-group-btn > .comment-reply-link + .comment-reply-link, .comments-area .comment-navigation .nav-previous .comment-list .comment-body .reply .input-group-btn > a + .comment-reply-link, .comments-area .comment-list .comment-body .reply .comment-navigation .nav-previous .input-group-btn > a + .comment-reply-link, .comments-area .comment-navigation .nav-next .comment-list .comment-body .reply .input-group-btn > a + .comment-reply-link, .comments-area .comment-list .comment-body .reply .comment-navigation .nav-next .input-group-btn > a + .comment-reply-link, .quicksand-post-pagination-list-view .nav-links .comments-area .comment-list .comment-body .reply .input-group-btn > a + .comment-reply-link, .comments-area .comment-list .comment-body .reply .quicksand-post-pagination-list-view .nav-links .input-group-btn > a + .comment-reply-link, .page-links .comments-area .comment-list .comment-body .reply .input-group-btn > a + .comment-reply-link, .comments-area .comment-list .comment-body .reply .page-links .input-group-btn > a + .comment-reply-link, .comments-area .comment-navigation .nav-previous .input-group-btn > .btn + a, .comments-area .comment-list .comment-body .reply .comment-navigation .nav-previous .input-group-btn > .comment-reply-link + a, .comments-area .comment-navigation .nav-previous .comment-list .comment-body .reply .input-group-btn > .comment-reply-link + a, .comments-area .comment-navigation .nav-previous .input-group-btn > a + a, .comments-area .comment-navigation .nav-next .input-group-btn > .btn + a, .comments-area .comment-list .comment-body .reply .comment-navigation .nav-next .input-group-btn > .comment-reply-link + a, .comments-area .comment-navigation .nav-next .comment-list .comment-body .reply .input-group-btn > .comment-reply-link + a, .comments-area .comment-navigation .nav-next .input-group-btn > a + a, .quicksand-post-pagination-list-view .nav-links .input-group-btn > .btn + a, .comments-area .comment-list .comment-body .reply .quicksand-post-pagination-list-view .nav-links .input-group-btn > .comment-reply-link + a, .quicksand-post-pagination-list-view .nav-links .comments-area .comment-list .comment-body .reply .input-group-btn > .comment-reply-link + a, .quicksand-post-pagination-list-view .nav-links .input-group-btn > a + a, .page-links .input-group-btn > .btn + a, .comments-area .comment-list .comment-body .reply .page-links .input-group-btn > .comment-reply-link + a, .page-links .comments-area .comment-list .comment-body .reply .input-group-btn > .comment-reply-link + a, .comments-area .comment-navigation .nav-previous .page-links .input-group-btn > a + a, .comments-area .comment-navigation .nav-next .page-links .input-group-btn > a + a, .quicksand-post-pagination-list-view .nav-links .page-links .input-group-btn > a + a, .page-links .input-group-btn > a + a {
+    .input-group-btn > .btn + .btn, .quicksand-post-pagination-list-view .nav-links .input-group-btn > a + .btn, .page-links .input-group-btn > a + .btn, .quicksand-post-pagination-list-view .nav-links .input-group-btn > .btn + a, .quicksand-post-pagination-list-view .nav-links .input-group-btn > a + a, .page-links .input-group-btn > .btn + a, .quicksand-post-pagination-list-view .nav-links .page-links .input-group-btn > a + a, .page-links .input-group-btn > a + a {
       margin-left: -1px; }
-    .input-group-btn > .btn:focus, .comments-area .comment-list .comment-body .reply .input-group-btn > .comment-reply-link:focus, .comments-area .comment-navigation .nav-previous .input-group-btn > a:focus, .comments-area .comment-navigation .nav-next .input-group-btn > a:focus, .quicksand-post-pagination-list-view .nav-links .input-group-btn > a:focus, .page-links .input-group-btn > a:focus, .input-group-btn > .btn:active, .comments-area .comment-list .comment-body .reply .input-group-btn > .comment-reply-link:active, .comments-area .comment-navigation .nav-previous .input-group-btn > a:active, .comments-area .comment-navigation .nav-next .input-group-btn > a:active, .quicksand-post-pagination-list-view .nav-links .input-group-btn > a:active, .page-links .input-group-btn > a:active, .input-group-btn > .btn:hover, .comments-area .comment-list .comment-body .reply .input-group-btn > .comment-reply-link:hover, .comments-area .comment-navigation .nav-previous .input-group-btn > a:hover, .comments-area .comment-navigation .nav-next .input-group-btn > a:hover, .quicksand-post-pagination-list-view .nav-links .input-group-btn > a:hover, .page-links .input-group-btn > a:hover {
+    .input-group-btn > .btn:focus, .quicksand-post-pagination-list-view .nav-links .input-group-btn > a:focus, .page-links .input-group-btn > a:focus, .input-group-btn > .btn:active, .quicksand-post-pagination-list-view .nav-links .input-group-btn > a:active, .page-links .input-group-btn > a:active, .input-group-btn > .btn:hover, .quicksand-post-pagination-list-view .nav-links .input-group-btn > a:hover, .page-links .input-group-btn > a:hover {
       z-index: 3; }
-  .input-group-btn:not(:last-child) > .btn, .comments-area .comment-list .comment-body .reply .input-group-btn:not(:last-child) > .comment-reply-link, .comments-area .comment-navigation .nav-previous .input-group-btn:not(:last-child) > a, .comments-area .comment-navigation .nav-next .input-group-btn:not(:last-child) > a, .quicksand-post-pagination-list-view .nav-links .input-group-btn:not(:last-child) > a, .page-links .input-group-btn:not(:last-child) > a,
+  .input-group-btn:not(:last-child) > .btn, .quicksand-post-pagination-list-view .nav-links .input-group-btn:not(:last-child) > a, .page-links .input-group-btn:not(:last-child) > a,
   .input-group-btn:not(:last-child) > .btn-group {
     margin-right: -1px; }
-  .input-group-btn:not(:first-child) > .btn, .comments-area .comment-list .comment-body .reply .input-group-btn:not(:first-child) > .comment-reply-link, .comments-area .comment-navigation .nav-previous .input-group-btn:not(:first-child) > a, .comments-area .comment-navigation .nav-next .input-group-btn:not(:first-child) > a, .quicksand-post-pagination-list-view .nav-links .input-group-btn:not(:first-child) > a, .page-links .input-group-btn:not(:first-child) > a,
+  .input-group-btn:not(:first-child) > .btn, .quicksand-post-pagination-list-view .nav-links .input-group-btn:not(:first-child) > a, .page-links .input-group-btn:not(:first-child) > a,
   .input-group-btn:not(:first-child) > .btn-group {
     z-index: 2;
     margin-left: -1px; }
-    .input-group-btn:not(:first-child) > .btn:focus, .comments-area .comment-list .comment-body .reply .input-group-btn:not(:first-child) > .comment-reply-link:focus, .comments-area .comment-navigation .nav-previous .input-group-btn:not(:first-child) > a:focus, .comments-area .comment-navigation .nav-next .input-group-btn:not(:first-child) > a:focus, .quicksand-post-pagination-list-view .nav-links .input-group-btn:not(:first-child) > a:focus, .page-links .input-group-btn:not(:first-child) > a:focus, .input-group-btn:not(:first-child) > .btn:active, .comments-area .comment-list .comment-body .reply .input-group-btn:not(:first-child) > .comment-reply-link:active, .comments-area .comment-navigation .nav-previous .input-group-btn:not(:first-child) > a:active, .comments-area .comment-navigation .nav-next .input-group-btn:not(:first-child) > a:active, .quicksand-post-pagination-list-view .nav-links .input-group-btn:not(:first-child) > a:active, .page-links .input-group-btn:not(:first-child) > a:active, .input-group-btn:not(:first-child) > .btn:hover, .comments-area .comment-list .comment-body .reply .input-group-btn:not(:first-child) > .comment-reply-link:hover, .comments-area .comment-navigation .nav-previous .input-group-btn:not(:first-child) > a:hover, .comments-area .comment-navigation .nav-next .input-group-btn:not(:first-child) > a:hover, .quicksand-post-pagination-list-view .nav-links .input-group-btn:not(:first-child) > a:hover, .page-links .input-group-btn:not(:first-child) > a:hover,
+    .input-group-btn:not(:first-child) > .btn:focus, .quicksand-post-pagination-list-view .nav-links .input-group-btn:not(:first-child) > a:focus, .page-links .input-group-btn:not(:first-child) > a:focus, .input-group-btn:not(:first-child) > .btn:active, .quicksand-post-pagination-list-view .nav-links .input-group-btn:not(:first-child) > a:active, .page-links .input-group-btn:not(:first-child) > a:active, .input-group-btn:not(:first-child) > .btn:hover, .quicksand-post-pagination-list-view .nav-links .input-group-btn:not(:first-child) > a:hover, .page-links .input-group-btn:not(:first-child) > a:hover,
     .input-group-btn:not(:first-child) > .btn-group:focus,
     .input-group-btn:not(:first-child) > .btn-group:active,
     .input-group-btn:not(:first-child) > .btn-group:hover {
@@ -4418,7 +4299,7 @@ input[type='radio']:checked ~ .custom-control-indicator {
   .tag:empty, .sticky-post:empty {
     display: none; }
 
-.btn .tag, .comments-area .comment-list .comment-body .reply .comment-reply-link .tag, .comments-area .comment-navigation .nav-previous a .tag, .comments-area .comment-navigation .nav-next a .tag, .quicksand-post-pagination-list-view .nav-links a .tag, .page-links a .tag, .btn .sticky-post, .comments-area .comment-list .comment-body .reply .comment-reply-link .sticky-post, .comments-area .comment-navigation .nav-previous a .sticky-post, .comments-area .comment-navigation .nav-next a .sticky-post, .quicksand-post-pagination-list-view .nav-links a .sticky-post, .page-links a .sticky-post {
+.btn .tag, .quicksand-post-pagination-list-view .nav-links a .tag, .page-links a .tag, .btn .sticky-post, .quicksand-post-pagination-list-view .nav-links a .sticky-post, .page-links a .sticky-post {
   position: relative;
   top: -1px; }
 
@@ -5339,7 +5220,7 @@ button.close {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-  .carousel-caption .btn, .carousel-caption .comments-area .comment-list .comment-body .reply .comment-reply-link, .comments-area .comment-list .comment-body .reply .carousel-caption .comment-reply-link, .carousel-caption .comments-area .comment-navigation .nav-previous a, .comments-area .comment-navigation .nav-previous .carousel-caption a, .carousel-caption .comments-area .comment-navigation .nav-next a, .comments-area .comment-navigation .nav-next .carousel-caption a, .carousel-caption .quicksand-post-pagination-list-view .nav-links a, .quicksand-post-pagination-list-view .nav-links .carousel-caption a, .carousel-caption .page-links a, .page-links .carousel-caption a {
+  .carousel-caption .btn, .carousel-caption .quicksand-post-pagination-list-view .nav-links a, .quicksand-post-pagination-list-view .nav-links .carousel-caption a, .carousel-caption .page-links a, .page-links .carousel-caption a {
     text-shadow: none; }
 
 @media (min-width: 576px) {
@@ -5759,10 +5640,10 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.text-xs-left, .comments-area .comment-navigation .nav-previous, .post-pagination .post-navigation .nav-previous {
+.text-xs-left, .post-pagination .post-navigation .nav-previous, .comment-navigation .nav-previous {
   text-align: left !important; }
 
-.text-xs-right, .comments-area .comment-navigation .nav-next, .post-pagination .post-navigation .nav-next {
+.text-xs-right, .post-pagination .post-navigation .nav-next, .comment-navigation .nav-next {
   text-align: right !important; }
 
 .text-xs-center {
@@ -5954,14 +5835,14 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     display: inline-block;
     width: 50%; }
     .post-pagination .post-navigation .nav-previous .fa {
-      padding-right: 16px;
-      padding-right: 1rem; }
+      padding-right: 4.8px;
+      padding-right: .3rem; }
   .post-pagination .post-navigation .nav-next {
     display: inline-block;
     width: 50%; }
     .post-pagination .post-navigation .nav-next .fa {
-      padding-left: 16px;
-      padding-left: 1rem; }
+      padding-left: 4.8px;
+      padding-left: .3rem; }
 
 /*pagination: paginated posts*/
 .page-links > .paged-link {
@@ -5973,6 +5854,21 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   margin-right: .3rem;
   background-image: none;
   background-color: transparent; }
+
+/* pagination: older / newer comments */
+.comment-navigation .nav-previous a {
+  display: inline-block;
+  width: 50%; }
+  .comment-navigation .nav-previous a .fa {
+    padding-right: 8px;
+    padding-right: .5rem; }
+
+.comment-navigation .nav-next a {
+  display: inline-block;
+  width: 50%; }
+  .comment-navigation .nav-next a .fa {
+    padding-left: 8px;
+    padding-left: .5rem; }
 
 /* BS-style pagination*/
 /*
