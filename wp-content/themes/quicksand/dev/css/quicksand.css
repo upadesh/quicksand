@@ -309,10 +309,8 @@
   .site-footer .nav-wrapper .nav-link {
     display: inline-block;
     line-height: 60px;
-    padding-left: 8px;
-    padding-left: .5rem;
-    padding-right: 8px;
-    padding-right: .5rem; }
+    padding: 0 8px;
+    padding: 0 .5rem; }
   .site-footer .site-social ul {
     margin-bottom: 0; }
     .site-footer .site-social ul a {

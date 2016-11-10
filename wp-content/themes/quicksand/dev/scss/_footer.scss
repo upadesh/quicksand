@@ -10,8 +10,8 @@ $site-footer-height: 60px;
         .nav-link {
             display: inline-block;
             line-height: $site-footer-height;
-            padding-left: .5rem;
-            padding-right: .5rem; 
+            padding: 0 .5rem;
+            
         }
     }
     .site-social { 
