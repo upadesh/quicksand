@@ -109,11 +109,17 @@ jQuery(document).ready(function ($) {
         $('.nav-search-mobile').on('click', function () {
             var $searchFormMobile = $('.nav-searchform-mobile');
             $searchFormMobile.show("fold", {horizFirst: true}, 1000);
+            
+            $('.nav-search-mobile').hide();
+            $('.nav-search-close-mobile').removeClass('hidden-xs-up'); 
         });
 
-        $('.nav-search-mobile-close').on('click', function () {
+        $('.nav-search-close-mobile').on('click', function () {
             var $searchFormMobile = $('.nav-searchform-mobile');
-            $searchFormMobile.hide("fold", {horizFirst: true}, 1000);
+            $searchFormMobile.hide("fold", {horizFirst: true}, 1000); 
+            
+            $('.nav-search-mobile').show();
+            $('.nav-search-close-mobile').addClass('hidden-xs-up'); 
         });
     }
 

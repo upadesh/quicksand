@@ -17,6 +17,9 @@ $primary_nav_options = array(
             &#9776;
         </button>
         <div class="nav-search-mobile-wrapper float-xs-right"> 
+            <a class="btn btn-secondary nav-search-close-mobile hidden-xs-up" href="#" aria-label="close">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </a> 
             <a class="btn btn-secondary nav-search-mobile hidden-md-up"  href="#" aria-label="search">
                 <i class="fa fa-search" aria-hidden="true"></i>
             </a> 
@@ -28,7 +31,7 @@ $primary_nav_options = array(
         <div class="nav-searchform-mobile hidden-md-up">  
             <div class="card"> 
                 <div class="card-block"> 
-                    <a href="#" class="nav-search-mobile-close float-xs-right"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                    <!--<a href="#" class="nav-search-mobile-close float-xs-right"><i class="fa fa-times-circle" aria-hidden="true"></i></a>-->
                     <form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>"> 
                         <div class="form-group"> 
                             <input type="text" class="form-control" placeholder="<?php echo _x('', 'label', 'quicksand'); ?>" value="<?php echo get_search_query(); ?>" name="s" >
