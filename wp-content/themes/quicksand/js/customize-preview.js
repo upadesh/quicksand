@@ -47,7 +47,6 @@
 
         hoverDefaults[colorName] = colorValue;
 
-
         var style = '<style class="hover-styles">'
                 + '.navbar-light .navbar-nav .nav-link:hover,'
                 + '.navbar-light .navbar-nav .nav-link:focus,'
@@ -119,8 +118,10 @@
         value.bind(function (qs_nav_link_color) {
             var color;
 
-            color = '.nav-content .navbar-brand,\n\
-            .nav-content .navbar-brand:hover,\n\
+            color = '.nav-search-mobile-wrapper .nav-search-mobile .fa,\n\
+            .nav-search-mobile-wrapper .nav-search-close-mobile .fa,\n\
+            .nav-search-wrapper .nav-search .fa,\n\
+            .nav-content .navbar-brand,\n\
             .site-nav-container,\n\
             .site-nav-container .menu-item .nav-link , \n\
             .site-nav-container .menu-item .dropdown-item, \n\
