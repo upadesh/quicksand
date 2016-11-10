@@ -104,6 +104,7 @@ if (!function_exists('quicksand_customizer_css')) :
             .nav-search-mobile-wrapper .nav-search-close-mobile .fa,
             .nav-search-wrapper .nav-search .fa,
             .nav-content .navbar-brand,
+            .nav-content .navbar-brand:hover,
             .site-nav-container,
             .site-nav-container .menu-item .nav-link , 
             .site-nav-container .menu-item .dropdown-item,    
