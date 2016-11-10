@@ -4,6 +4,8 @@
 
 
 
+/* === pagination (1,2,3, ...) === */
+
 /*pagination: list-view*/
 .quicksand-post-pagination-list-view {
     text-align: center;
@@ -22,8 +24,24 @@
 }
 
 
+/*pagination: paginated posts*/
+.page-links  {
+    >.paged-link {
+        margin-right: .3rem;
+    }
+    a {
+        @extend .btn;
+        @extend .btn-outline-secondary;
+        margin-right: .3rem; 
+        background-image: none;
+        background-color: transparent; 
+    } 
+} 
 
-/*pagination: previous & next post*/
+
+/* === navigation (older/newer) === */
+
+/*navigation: previous & next post*/
 .post-pagination {
     margin: 1rem 0;
     .post-navigation { 
@@ -47,24 +65,8 @@
 } 
 
 
-/*pagination: paginated posts*/
-.page-links  {
-    >.paged-link {
-        margin-right: .3rem;
-    }
-    a {
-        @extend .btn;
-        @extend .btn-outline-secondary;
-        margin-right: .3rem; 
-        background-image: none;
-        background-color: transparent; 
-    } 
-} 
 
-
-
-
-/* pagination: older / newer comments */
+/* navigation: older / newer comments */
 .comment-navigation { 
     .nav-previous {
         @extend .text-xs-left; 

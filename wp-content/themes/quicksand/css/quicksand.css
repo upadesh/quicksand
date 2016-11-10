@@ -5818,6 +5818,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 /**
  * all kinds of paginations 
  */
+/* === pagination (1,2,3, ...) === */
 /*pagination: list-view*/
 .quicksand-post-pagination-list-view {
   text-align: center; }
@@ -5827,7 +5828,19 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   .quicksand-post-pagination-list-view .nav-links a {
     background-image: none; }
 
-/*pagination: previous & next post*/
+/*pagination: paginated posts*/
+.page-links > .paged-link {
+  margin-right: 4.8px;
+  margin-right: .3rem; }
+
+.page-links a {
+  margin-right: 4.8px;
+  margin-right: .3rem;
+  background-image: none;
+  background-color: transparent; }
+
+/* === navigation (older/newer) === */
+/*navigation: previous & next post*/
 .post-pagination {
   margin: 16px 0;
   margin: 1rem 0; }
@@ -5844,18 +5857,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
       padding-left: 4.8px;
       padding-left: .3rem; }
 
-/*pagination: paginated posts*/
-.page-links > .paged-link {
-  margin-right: 4.8px;
-  margin-right: .3rem; }
-
-.page-links a {
-  margin-right: 4.8px;
-  margin-right: .3rem;
-  background-image: none;
-  background-color: transparent; }
-
-/* pagination: older / newer comments */
+/* navigation: older / newer comments */
 .comment-navigation .nav-previous a {
   display: inline-block;
   width: 50%; }

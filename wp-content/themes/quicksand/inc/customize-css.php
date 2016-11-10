@@ -49,6 +49,8 @@ if (!function_exists('quicksand_customizer_css')) :
  
              
             /*btn-outline-secondary: normal*/
+            .card .page-links a, 
+            .quicksand-post-pagination-list-view .nav-links a, 
             .btn-outline-secondary 
             { 
                 background: transparent;
@@ -63,6 +65,8 @@ if (!function_exists('quicksand_customizer_css')) :
             }  
 
             /*btn-outline-secondary: hover*/
+            .card .page-links  a:hover, 
+            .quicksand-post-pagination-list-view .nav-links a:hover, 
             .btn-outline-secondary:hover,
             .btn-outline-secondary:hover a
             { 
