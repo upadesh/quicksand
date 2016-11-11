@@ -56,7 +56,7 @@ get_header();
 
 
                 <!--full-size image-link-->
-                <div class="card-block entry-footer">
+                <div class="card-block entry-block">
                     <?php
                     // Retrieve attachment metadata.
                     $metadata = wp_get_attachment_metadata();
