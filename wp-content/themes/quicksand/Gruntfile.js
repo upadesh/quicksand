@@ -194,7 +194,8 @@ module.exports = function (grunt) {
             },
             css: {
                 files: [
-                    'dev/scss/*.scss'
+                    'dev/scss/*.scss',
+                    'dev/scss/jupiter-jazz/*.scss'
                 ],
                 // TODO
                 tasks: ['clean:dev', 'sass', 'postcss', 'cssmin', 'copy:dev'],
