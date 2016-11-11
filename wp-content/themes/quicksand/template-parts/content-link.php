@@ -11,13 +11,10 @@
     <?php quicksand_entry_meta(); ?>
 
     <!--post-content--> 
-    <?php quicksand_the_entry_content(); ?> 
-
-    <!--edit-link-->
-    <?php quicksand_entry_tags(); ?>  
+    <?php quicksand_the_entry_content(); ?>  
     
-    <!--author-bio-->
-    <?php quicksand_author_biography(); ?> 
+    <!--post-tags-->
+    <?php quicksand_entry_tags(); ?>  
     
     <!--author-bio-->
     <?php quicksand_author_biography(); ?> 

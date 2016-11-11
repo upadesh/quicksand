@@ -26,7 +26,7 @@
     }
     ?> 
 
-    <!--edit-link-->
+    <!--post-tags-->
     <?php quicksand_entry_tags(); ?>  
     
     <!--author-bio-->
