@@ -24,10 +24,10 @@ if (!function_exists('quicksand_customizer_css')) :
 
             /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
-/*                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
-                background-color:  <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;*/
-                
-                
+            /*                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
+                            background-color:  <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;*/
+
+
             /* === btn-secondary === */
             .btn-secondary {
                 color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
@@ -50,8 +50,8 @@ if (!function_exists('quicksand_customizer_css')) :
                 color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
                 background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
             } 
-            
-            
+
+
             .btn-secondary:focus, .btn-secondary.focus {
                 color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
                 background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
@@ -87,41 +87,34 @@ if (!function_exists('quicksand_customizer_css')) :
                 background-color: transparent;
                 border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>; 
             }
-            
+
             .btn-outline-secondary:hover, .btn-outline-secondary a:hover {
                 text-decoration: none;
                 color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
                 background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
                 border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>; 
             }
-            
-            .btn-outline-secondary:focus, .quicksand-post-pagination-list-view .nav-links a:focus, .page-links a:focus, .btn-outline-secondary.focus, .quicksand-post-pagination-list-view .nav-links a.focus, .page-links a.focus {
+
+            .btn-outline-secondary:focus, .btn-outline-secondary.focus  {
                 color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
                 background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
                 border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>; }
-            .btn-outline-secondary:active, .quicksand-post-pagination-list-view .nav-links a:active, .page-links a:active, .btn-outline-secondary.active, .quicksand-post-pagination-list-view .nav-links a.active, .page-links a.active,
-            .open > .btn-outline-secondary.dropdown-toggle, .quicksand-post-pagination-list-view .nav-links
-            .open > a.dropdown-toggle, .page-links
-            .open > a.dropdown-toggle {
+            .btn-outline-secondary:active,  .btn-outline-secondary.active, 
+            .open > .btn-outline-secondary.dropdown-toggle {
                 color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
                 background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
                 border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>; }
-            .btn-outline-secondary:active:hover, .quicksand-post-pagination-list-view .nav-links a:active:hover, .page-links a:active:hover, .btn-outline-secondary:active:focus, .quicksand-post-pagination-list-view .nav-links a:active:focus, .page-links a:active:focus, .btn-outline-secondary:active.focus, .quicksand-post-pagination-list-view .nav-links a:active.focus, .page-links a:active.focus, .btn-outline-secondary.active:hover, .quicksand-post-pagination-list-view .nav-links a.active:hover, .page-links a.active:hover, .btn-outline-secondary.active:focus, .quicksand-post-pagination-list-view .nav-links a.active:focus, .page-links a.active:focus, .btn-outline-secondary.active.focus, .quicksand-post-pagination-list-view .nav-links a.active.focus, .page-links a.active.focus,
-            .open > .btn-outline-secondary.dropdown-toggle:hover, .quicksand-post-pagination-list-view .nav-links
-            .open > a.dropdown-toggle:hover, .page-links
-            .open > a.dropdown-toggle:hover,
-            .open > .btn-outline-secondary.dropdown-toggle:focus, .quicksand-post-pagination-list-view .nav-links
-            .open > a.dropdown-toggle:focus, .page-links
+            .btn-outline-secondary:active:hover, .btn-outline-secondary:active:focus,  .btn-outline-secondary:active.focus,.btn-outline-secondary.active:hover,  .btn-outline-secondary.active:focus,.btn-outline-secondary.active.focus,
+            .open > .btn-outline-secondary.dropdown-toggle:hover, 
+            .open > .btn-outline-secondary.dropdown-toggle:focus, 
             .open > a.dropdown-toggle:focus,
-            .open > .btn-outline-secondary.dropdown-toggle.focus, .quicksand-post-pagination-list-view .nav-links
-            .open > a.dropdown-toggle.focus, .page-links
-            .open > a.dropdown-toggle.focus {
+            .open > .btn-outline-secondary.dropdown-toggle.focus {
                 color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
                 background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
                 border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>; }
-            .btn-outline-secondary.disabled:focus, .quicksand-post-pagination-list-view .nav-links a.disabled:focus, .page-links a.disabled:focus, .btn-outline-secondary.disabled.focus, .quicksand-post-pagination-list-view .nav-links a.disabled.focus, .page-links a.disabled.focus, .btn-outline-secondary:disabled:focus, .quicksand-post-pagination-list-view .nav-links a:disabled:focus, .page-links a:disabled:focus, .btn-outline-secondary:disabled.focus, .quicksand-post-pagination-list-view .nav-links a:disabled.focus, .page-links a:disabled.focus {
+            .btn-outline-secondary.disabled:focus, .btn-outline-secondary.disabled.focus, .btn-outline-secondary:disabled:focus,.btn-outline-secondary:disabled.focus{
                 border-color: #d6e1dd; }
-            .btn-outline-secondary.disabled:hover, .quicksand-post-pagination-list-view .nav-links a.disabled:hover, .page-links a.disabled:hover, .btn-outline-secondary:disabled:hover, .quicksand-post-pagination-list-view .nav-links a:disabled:hover, .page-links a:disabled:hover {
+            .btn-outline-secondary.disabled:hover,  .btn-outline-secondary:disabled:hover {
                 border-color: #d6e1dd; }
 
 
@@ -247,7 +240,7 @@ if (!function_exists('quicksand_customizer_css')) :
             .entry-footer .tag-links .tag a { 
                 color: <?php echo get_theme_mod('qs_content_tag_font_color', $colorScheme['colors'][24]); ?>; 
             }   
-            
+
 
             /*2nd text color*/
             .quicksand_search_title,
