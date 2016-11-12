@@ -26,6 +26,7 @@ if (!function_exists('quicksand_customizer_css')) :
 
             /* === btn-secondary === */
             .btn.btn-secondary {
+                outline-style: none;
                 color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
                 background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
                 border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>; 
