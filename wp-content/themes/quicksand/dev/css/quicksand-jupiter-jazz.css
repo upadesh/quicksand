@@ -638,7 +638,7 @@ cite {
     -moz-column-count: 1 !important;
          column-count: 1 !important; } }
 
-@media (min-width: 991px) {
+@media (min-width: 992px) {
   .card-columns {
     -moz-column-count: 2 !important;
          column-count: 2 !important; } }

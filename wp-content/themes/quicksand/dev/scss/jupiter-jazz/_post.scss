@@ -134,12 +134,13 @@
     }
 }
 
+
 /* masonry-list-view*/
 .card-columns { 
     @media (max-width: 991px) {
         column-count: 1 !important;
     } 
-    @media (min-width: 991px) {
+    @media (min-width: 992px) {
         column-count: 2 !important;
     }
     @media (min-width: 1200px) {
