@@ -701,6 +701,8 @@ maybe padding of cells smaller in media-query ... who knows????
     list-style-type: none;
     padding-left: 0;
     /* comment edit-link */ }
+    .comments-area .comment-list ol {
+      list-style-type: none; }
     .comments-area .comment-list .comment-body {
       border: none;
       padding: 6.4px;

@@ -23,6 +23,10 @@
     .comment-list {
         list-style-type: none;
         padding-left: 0;
+        
+        ol {
+            list-style-type: none;
+        }
 
         .comment-body { 
             border: none; 
