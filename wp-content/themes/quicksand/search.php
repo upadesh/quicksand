@@ -62,7 +62,7 @@ get_header();
 
 
             // pagination
-            quicksand_bs_style_paginator();
+            quicksand_paginator_list_view();
         else :
             get_template_part('template-parts/content', 'none');
         endif;

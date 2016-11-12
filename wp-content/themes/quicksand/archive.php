@@ -67,7 +67,7 @@ get_header();
 
 
             // pagination
-            quicksand_bs_style_paginator();
+            quicksand_paginator_list_view();
 
         // If no content, include the "No posts found" template.
         else :

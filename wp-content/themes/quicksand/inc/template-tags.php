@@ -513,7 +513,7 @@ endif;
 
 
 
-if (!function_exists('quicksand_bs_style_paginator')) :
+if (!function_exists('quicksand_paginator_list_view')) :
 
     /**
      * Displays bs-style pagination 
@@ -522,7 +522,7 @@ if (!function_exists('quicksand_bs_style_paginator')) :
      *
      * @since Quicksand 0.2.1
      */
-    function quicksand_bs_style_paginator() {
+    function quicksand_paginator_list_view() {
         ?>
         <div class="quicksand-post-pagination-list-view">
             <?php
