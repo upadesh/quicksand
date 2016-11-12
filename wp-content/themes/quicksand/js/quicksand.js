@@ -143,7 +143,7 @@ jQuery(document).ready(function ($) {
         });
     }
 
-    // iniitaliase scripts  
+    // === initialiase scripts ===   
     // searchbar
     initSearchBar();
 

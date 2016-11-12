@@ -113,6 +113,9 @@
             .site-navigation .navbar .collapse.navbar-toggleable-sm .nav-searchform form .row .input-group {
               width: 100%; } }
 
+#quicksand-top-search-form {
+  border-color: #fff; }
+
 /*mobile navigation*/
 @media (min-width: 767px) {
   .navbar .nav-search-close-mobile {
