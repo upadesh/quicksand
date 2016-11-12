@@ -16,8 +16,8 @@
         >.page-numbers.current {
         }
         a {
-            @extend .btn;
-            @extend .btn-secondary;
+/*            @extend .btn;
+            @extend .btn-outline-secondary;*/
             background-image: none;
         } 
     } 
@@ -26,12 +26,12 @@
 
 /*pagination: paginated posts*/
 .page-links  {
-    >.paged-link {
+    .paged-link {
         margin-right: .3rem;
     }
     a {
-        @extend .btn;
-        @extend .btn-outline-secondary;
+/*        @extend .btn;
+        @extend .btn-outline-secondary;*/
         margin-right: .3rem; 
         background-image: none;
         background-color: transparent; 

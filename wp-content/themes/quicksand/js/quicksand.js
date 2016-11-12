@@ -5,6 +5,14 @@ jQuery(document).ready(function ($) {
 
 //    console.info(colorScheme);
 
+    // add btn-classes to paginations 
+    var initPagination = function () {
+        // pagination: list-view
+        $('.quicksand-post-pagination-list-view .nav-links a').addClass('btn btn-outline-secondary');
+        
+        // pagination: paginated post
+        $('.page-links a').addClass('btn btn-outline-secondary');
+    }
 
 
     // lightgallery
@@ -109,7 +117,7 @@ jQuery(document).ready(function ($) {
         $('.nav-search-mobile').on('click', function () {
             var $searchFormMobile = $('.nav-searchform-mobile');
             $searchFormMobile.show("fold", {horizFirst: true}, 1000);
-            
+
             $('.nav-search-mobile').hide();
             $('.nav-search-close-mobile').removeClass('hidden-xs-up');
         });
@@ -117,7 +125,7 @@ jQuery(document).ready(function ($) {
         $('.nav-search-close-mobile').on('click', function () {
             var $searchFormMobile = $('.nav-searchform-mobile');
             $searchFormMobile.hide("fold", {horizFirst: true}, 1000);
-            
+
             $('.nav-search-mobile').show();
             $('.nav-search-close-mobile').addClass('hidden-xs-up');
         });
@@ -143,4 +151,7 @@ jQuery(document).ready(function ($) {
 
     // lightgallery
     initLightgallery();
+    
+    // all paginations
+    initPagination();
 });

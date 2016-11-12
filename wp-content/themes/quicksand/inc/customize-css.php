@@ -82,14 +82,18 @@ if (!function_exists('quicksand_customizer_css')) :
 
             /* === btn-outline-secondary === */
             .btn-outline-secondary, .quicksand-post-pagination-list-view .nav-links a, .page-links a {
-                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
+                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
                 background-image: none;
                 background-color: transparent;
-                border-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>; }
+                border-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>; 
+            }
+            
             .btn-outline-secondary:hover, .quicksand-post-pagination-list-view .nav-links a:hover, .page-links a:hover {
-                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
+                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
                 background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
-                border-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>; }
+                border-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>; 
+            }
+            
             .btn-outline-secondary:focus, .quicksand-post-pagination-list-view .nav-links a:focus, .page-links a:focus, .btn-outline-secondary.focus, .quicksand-post-pagination-list-view .nav-links a.focus, .page-links a.focus {
                 color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
                 background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
@@ -241,26 +245,8 @@ if (!function_exists('quicksand_customizer_css')) :
             }  
             .entry-footer .tag-links .tag a { 
                 color: <?php echo get_theme_mod('qs_content_tag_font_color', $colorScheme['colors'][24]); ?>; 
-            } 
-
-
-
-            /* === paginations === */  
-
-            /*** list-view posts ****/
-            .quicksand-post-pagination-list-view .page-numbers a,
-            /*** paginated posts ****/
-            /*none-active one*/ 
-            .page-links a {  
-                color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]); ?> !important;
-                border-color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]); ?>;
-            } 
-            .page-links a:hover {  
-                color: <?php echo get_theme_mod('qs_content_background_color', $colorScheme['colors'][1]); ?> !important;
-                background: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors'][4]); ?>; 
-            } 
-
-
+            }   
+            
 
             /*2nd text color*/
             .quicksand_search_title,
