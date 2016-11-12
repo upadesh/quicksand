@@ -798,7 +798,7 @@ endif;
 //    $headers['Cache-Control'] = "no-cache";
 //
 //
-    //Gather output (if it is not already in a variable, use ob_start() and ob_get_clean() )    
+//Gather output (if it is not already in a variable, use ob_start() and ob_get_clean() )    
 // Before sending output:
 //    ob_start();
 //    ob_get_clean();

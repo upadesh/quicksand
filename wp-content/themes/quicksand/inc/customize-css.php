@@ -22,7 +22,6 @@ if (!function_exists('quicksand_customizer_css')) :
             } 
 
 
-            /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */ 
 
             /* === btn-secondary === */
             .btn.btn-secondary {
@@ -128,11 +127,7 @@ if (!function_exists('quicksand_customizer_css')) :
             .btn.btn-outline-secondary.disabled:focus, .btn.btn-outline-secondary.disabled.focus, .btn.btn-outline-secondary:disabled:focus,.btn.btn-outline-secondary:disabled.focus{
                 border-color: #d6e1dd; }
             .btn.btn-outline-secondary.disabled:hover,  .btn.btn-outline-secondary:disabled:hover {
-                border-color: #d6e1dd; }
-
-
-
-            /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+                border-color: #d6e1dd; } 
 
 
 

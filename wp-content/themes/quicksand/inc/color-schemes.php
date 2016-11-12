@@ -93,7 +93,7 @@ function quicksand_get_color_schemes() {
                 'qs_content_background_color' => '#ffffff',
                 'qs_content_link_color' => '#cecece',
                 'qs_content_text_color' => '#686868',
-                'qs_content_secondary_text_color' =>'#9ab7ac',
+                'qs_content_secondary_text_color' => '#9ab7ac',
                 'header_textcolor' => '#ffffff',
                 'qs_nav_background_color' => '#9cbaba',
                 'qs_nav_link_color' => '#ffffff',

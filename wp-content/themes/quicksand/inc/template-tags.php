@@ -27,7 +27,7 @@ if (!function_exists('quicksand_entry_meta')) :
         if (empty($onlyShowThisMetaInfo)) {
             return;
         }
- 
+
         // date 
         if (in_array('date', $onlyShowThisMetaInfo) && in_array(get_post_type(), array('post', 'attachment'))) {
             $quicksand_entry_date = get_quicksand_entry_date();
@@ -50,7 +50,7 @@ if (!function_exists('quicksand_entry_meta')) :
         // taxonomies
         if (in_array('taxonomies', $onlyShowThisMetaInfo) && 'post' === get_post_type()) {
             $quicksandEntryTaxonomies = get_quicksand_entry_taxonomies();
-            echo $quicksandEntryTaxonomies['categories']; 
+            echo $quicksandEntryTaxonomies['categories'];
         }
 
         // comments
@@ -561,9 +561,9 @@ if (!function_exists('quicksand_edit_post')) :
                         // link-text
                         sprintf(
                                 __('Edit<span class="screen-reader-text"> "%s"</span>', 'quicksand'), get_the_title()
-                        ), 
+                        ),
                         // before
-                        '<span class="card-link edit-link btn btn-secondary"><i class="fa fa-pencil"></i>', 
+                        '<span class="card-link edit-link btn btn-secondary"><i class="fa fa-pencil"></i>',
                         // after
                         '</span>',
                         // id
@@ -721,6 +721,8 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
 
 
 

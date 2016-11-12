@@ -474,15 +474,15 @@ function quicksand_customize_register($wp_customize) {
         'settings' => 'qs_content_font_size',
         'priority' => 10,
         'type' => 'text',
-    )));  
-    
-    
+    )));
+
+
     // meta
     $wp_customize->add_setting(
             'qs_content_show_meta', array('default' => $colorSchemeDefault['settings']['qs_content_show_meta'],
         'sanitize_callback' => 'quicksand_sanitize_meta_checkboxes'
     ));
-     
+
     $wp_customize->add_control(
             new QuicksandCustomizeControlCheckboxMultiple($wp_customize, 'qs_content_show_meta', array(
         'section' => 'quicksand_content',
@@ -507,8 +507,8 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 20,
         'settings' => 'qs_content_background_color'
     )));
-    
-    
+
+
 
 
     // link-color
@@ -600,8 +600,8 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     // button primary color
-    $wp_customize->add_setting('qs_button_color_primary', array( 
-        'default' => $colorSchemeDefault['colors'][21], 
+    $wp_customize->add_setting('qs_button_color_primary', array(
+        'default' => $colorSchemeDefault['colors'][21],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -614,8 +614,8 @@ function quicksand_customize_register($wp_customize) {
 
 
     // button secondary color
-    $wp_customize->add_setting('qs_button_color_secondary', array( 
-        'default' => $colorSchemeDefault['colors'][22], 
+    $wp_customize->add_setting('qs_button_color_secondary', array(
+        'default' => $colorSchemeDefault['colors'][22],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -625,8 +625,8 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 20,
         'settings' => 'qs_button_color_secondary'
     )));
-    
-    
+
+
 
     // tags: bg-color
     $wp_customize->add_setting('qs_content_tag_background_color', array(
@@ -653,7 +653,7 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 20,
         'settings' => 'qs_content_tag_font_color'
     )));
- 
+
 
 
     /**
@@ -792,8 +792,8 @@ function quicksand_customize_register($wp_customize) {
             'style' => 'color: #0a0',
         ),
     ));
- 
-    
+
+
     /**
      * Section: Footer 
      */
@@ -850,7 +850,7 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_footer',
         'settings' => 'qs_footer_link_hover_color'
     )));
- 
+
 
     /**
      *  Default WordPress Theme Customization 
@@ -1091,7 +1091,6 @@ function quicksand_social_media_icons() {
         echo "</ul>";
     }
 }
- 
 
 /**
  * sanitizer for integers
