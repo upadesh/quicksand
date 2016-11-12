@@ -8,10 +8,10 @@ jQuery(document).ready(function ($) {
     // add btn-classes to paginations 
     var initPagination = function () {
         // pagination: list-view
-        $('.quicksand-post-pagination-list-view .nav-links a').addClass('btn btn-outline-secondary');
+        $('.quicksand-post-pagination-list-view .nav-links a').addClass('btn btn-secondary');
         
         // pagination: paginated post
-        $('.page-links a').addClass('btn btn-outline-secondary');
+        $('.page-links a').addClass('btn btn-secondary');
     }
 
 

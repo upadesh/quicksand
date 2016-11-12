@@ -1093,9 +1093,9 @@ function quicksand_get_color_schemes() {
 //                qs_content_title_bg_color
                 '#d6cbb8',
 //                qs_button_color_primary,
-                '#ed004f',
+                '#ada495',
 //                qs_button_color_secondary,
-                '#1e73be',
+                '#fff',
 //                qs_content_tag_background_color
                 '#286584',
 //                qs_content_tag_font_color
