@@ -256,7 +256,6 @@ function quicksand_customize_register($wp_customize) {
     $wp_customize->add_section('quicksand_slider_section', array(
         'title' => __('Slider settings', 'quicksand'),
         'priority' => 10,
-        'capability' => 'edit_theme_options',
         'panel' => 'quicksand_main_options',
     ));
 
@@ -326,7 +325,6 @@ function quicksand_customize_register($wp_customize) {
     $wp_customize->add_setting('qs_slider_height', array(
         'default' => $colorSchemeDefault['settings']['qs_slider_height'],
         'type' => 'theme_mod',
-        'capability' => 'edit_theme_options',
         'transport' => 'postMessage',
         'sanitize_callback' => 'sanitize_text_field',
     ));
@@ -350,7 +348,6 @@ function quicksand_customize_register($wp_customize) {
     $wp_customize->add_setting('qs_slider_margin_top', array(
         'default' => $colorSchemeDefault['settings']['qs_slider_margin_top'],
         'type' => 'theme_mod',
-        'capability' => 'edit_theme_options',
         'transport' => 'postMessage',
         'sanitize_callback' => 'sanitize_text_field',
     ));
@@ -776,7 +773,6 @@ function quicksand_customize_register($wp_customize) {
     $wp_customize->add_setting('qs_sidebar_border_width', array(
         'default' => $colorSchemeDefault['settings']['qs_sidebar_border_width'],
         'type' => 'theme_mod',
-        'capability' => 'edit_theme_options',
         'transport' => 'postMessage',
         'sanitize_callback' => 'sanitize_text_field',
     ));
