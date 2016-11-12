@@ -1,6 +1,6 @@
 /* global colorScheme, Color */
 /**
- * Add a listener to the Color Scheme control to update other color controls to new values/defaults.  
+ * Add a listener to the Color-Scheme-Control to update other controls to new values/defaults when color-scheme is changed
  */
 
 (function (api) { 
@@ -11,23 +11,24 @@
                 this.setting.bind('change', function (value) {
                     
                     // other settings
-                    api('qs_nav_fullwidth').set(colorScheme[value]['settings']['qs_nav_fullwidth']);
-                    api('qs_header_fullwidth').set(colorScheme[value]['settings']['qs_header_fullwidth']);
-                    api('qs_biography_show').set(colorScheme[value]['settings']['qs_biography_show']);
-                    api('qs_sidebar_border_width').set(colorScheme[value]['settings']['qs_sidebar_border_width']); 
-                    api('qs_content_fullwidth').set(colorScheme[value]['settings']['qs_content_fullwidth']); 
-                    api('qs_header_show_front').set(colorScheme[value]['settings']['qs_header_show_front']);  
-                    api('qs_content_masonry').set(colorScheme[value]['settings']['qs_content_masonry']);   
-                    api('qs_content_use_lightgallery').set(colorScheme[value]['settings']['qs_content_use_lightgallery']);   
-                    api('qs_slider_enabled').set(colorScheme[value]['settings']['qs_slider_enabled']); 
-                    api('qs_slider_fullwidth').set(colorScheme[value]['settings']['qs_slider_fullwidth']); 
-                    api('qs_header_enabled').set(colorScheme[value]['settings']['qs_header_enabled']); 
-                    api('qs_slider_height').set(colorScheme[value]['settings']['qs_slider_height']); 
-                    api('qs_header_hide_when_slider_enabled').set(colorScheme[value]['settings']['qs_header_hide_when_slider_enabled']);
-                    api('qs_slider_margin_top').set(colorScheme[value]['settings']['qs_slider_margin_top']);  
-                    api('quicksand_google_font').set(colorScheme[value]['settings']['quicksand_google_font']);  
-                    api('qs_content_font_size').set(colorScheme[value]['settings']['qs_content_font_size']);  
-                    
+                    var settings = colorScheme[value].settings; 
+                    api('qs_nav_fullwidth').set(settings['qs_nav_fullwidth']);
+                    api('qs_header_fullwidth').set(settings['qs_header_fullwidth']);
+                    api('qs_biography_show').set(settings['qs_biography_show']);
+                    api('qs_sidebar_border_width').set(settings['qs_sidebar_border_width']); 
+                    api('qs_content_fullwidth').set(settings['qs_content_fullwidth']); 
+                    api('qs_header_show_front').set(settings['qs_header_show_front']);  
+                    api('qs_content_masonry').set(settings['qs_content_masonry']);   
+                    api('qs_content_use_lightgallery').set(settings['qs_content_use_lightgallery']);   
+                    api('qs_slider_enabled').set(settings['qs_slider_enabled']); 
+                    api('qs_slider_fullwidth').set(settings['qs_slider_fullwidth']); 
+                    api('qs_header_enabled').set(settings['qs_header_enabled']); 
+                    api('qs_slider_height').set(settings['qs_slider_height']); 
+                    api('qs_header_hide_when_slider_enabled').set(settings['qs_header_hide_when_slider_enabled']);
+                    api('qs_slider_margin_top').set(settings['qs_slider_margin_top']);  
+                    api('quicksand_google_font').set(settings['quicksand_google_font']);  
+                    api('qs_content_font_size').set(settings['qs_content_font_size']);  
+              
                     
                     // colors
                     var colors = colorScheme[value].colors;  
@@ -169,8 +170,8 @@
                     
  
                     color = colors[22];
-                    api('qs_button_secondary_primary').set(color);
-                    api.control('qs_button_secondary_primary').container.find('.color-picker-hex')
+                    api('qs_button_color_secondary').set(color);
+                    api.control('qs_button_color_secondary').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
                     
