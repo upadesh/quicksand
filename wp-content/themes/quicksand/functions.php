@@ -340,7 +340,7 @@ if (!function_exists('quicksand_styles')) :
         wp_enqueue_style('quicksand-style-theme', $styleSheetToLoad, array(), $quicksand_version);
 
         // lightgallery
-        wp_enqueue_style('quicksand-lightgallery', get_template_directory_uri() . '/js/lightgallery.min.css', array());
+        wp_enqueue_style('quicksand-lightgallery', get_template_directory_uri() . '/css/lightgallery.min.css', array());
 
         // flexslider
         wp_enqueue_style('quicksand-flexslider', get_template_directory_uri() . '/js/flexslider/flexslider.css', array());

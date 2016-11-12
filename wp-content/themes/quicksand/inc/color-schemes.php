@@ -140,7 +140,7 @@ function quicksand_get_color_schemes() {
                 'qs_content_title_bg_color' => '#d6cbb8',
                 'qs_button_color_primary' => '#ada495',
                 'qs_button_color_secondary' => '#fff',
-                'qs_content_tag_background_color' => '#286584',
+                'qs_content_tag_background_color' => '#722145',
                 'qs_content_tag_font_color' => '#fff',
                 'qs_biography_background_color' => '#fff',
                 'qs_biography_font_color' => '#000',
