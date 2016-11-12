@@ -11,7 +11,7 @@ jQuery(document).ready(function ($) {
         $('.quicksand-post-pagination-list-view .nav-links a').addClass('btn btn-secondary');
         
         // pagination: paginated post
-        $('.page-links a').addClass('btn btn-secondary');
+        $('.page-links a').addClass('btn btn-outline-secondary');
         
         // comment: edit-link
         $('.comment-list .comment-body .reply .comment-reply-link').addClass('btn btn-outline-secondary'); 
