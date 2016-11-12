@@ -153,10 +153,9 @@ maybe padding of cells smaller in media-query ... who knows????
 */
 .quicksand-masonry {
     article.post {
-        overflow: hidden;
+        width: 100%;
     }
 }
-
 
 
 /* post-formats */
