@@ -1,4 +1,3 @@
-/* global colorScheme, Color */
 /**
  * Add a listener to the Color-Scheme-Control to update other controls to new values/defaults when color-scheme is changed
  */
@@ -32,172 +31,172 @@
                     
                     // colors
                     var colors = colorScheme[value].colors;  
-                    var color = colors[0];  
+                    var color = colors['background_color'];  
                     api('background_color').set(color);
                     api.control('background_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
                     
                     
-                    color = colors[1]; 
+                    color = colors['qs_content_background_color']; 
                     api('qs_content_background_color').set(color);
                     api.control('qs_content_background_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
  
-                    color = colors[2];
+                    color = colors['qs_content_link_color'];
                     api('qs_content_link_color').set(color);
                     api.control('qs_content_link_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color); 
                     
-                    color = colors[3];
+                    color = colors['qs_content_text_color'];
                     api('qs_content_text_color').set(color);
                     api.control('qs_content_text_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
  
-                    color = colors[4];
+                    color = colors['qs_content_secondary_text_color'];
                     api('qs_content_secondary_text_color').set(color);
                     api.control('qs_content_secondary_text_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
  
-                    color = colors[5];
+                    color = colors['header_textcolor'];
                     api('header_textcolor').set(color);
                     api.control('header_textcolor').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
                     
  
-                    color = colors[6];
+                    color = colors['qs_nav_background_color'];
                     api('qs_nav_background_color').set(color);
                     api.control('qs_nav_background_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
                     
-                    color = colors[7];
+                    color = colors['qs_nav_link_color'];
                     api('qs_nav_link_color').set(color);
                     api.control('qs_nav_link_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
                     
-                    color = colors[8];
+                    color = colors['qs_header_background_color'];
                     api('qs_header_background_color').set(color);
                     api.control('qs_header_background_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
                     
-                    color = colors[9];
+                    color = colors['qs_footer_background_color'];
                     api('qs_footer_background_color').set(color);
                     api.control('qs_footer_background_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
                     
-                    color = colors[10];
+                    color = colors['qs_footer_link_color'];
                     api('qs_footer_link_color').set(color);
                     api.control('qs_footer_link_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
                     
-                    color = colors[11];
+                    color = colors['qs_footer_text_color'];
                     api('qs_footer_text_color').set(color);
                     api.control('qs_footer_text_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
  
-                    color = colors[12];
+                    color = colors['qs_sidebar_background_color'];
                     api('qs_sidebar_background_color').set(color);
                     api.control('qs_sidebar_background_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color); 
                     
-                    color = colors[13];
+                    color = colors['qs_sidebar_text_color'];
                     api('qs_sidebar_text_color').set(color);
                     api.control('qs_sidebar_text_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
  
  
-                    color = colors[14];
+                    color = colors['qs_sidebar_link_color'];
                     api('qs_sidebar_link_color').set(color);
                     api.control('qs_sidebar_link_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color); 
  
-                    color = colors[15];
+                    color = colors['qs_sidebar_border_color'];
                     api('qs_sidebar_border_color').set(color);
                     api.control('qs_sidebar_border_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
  
-                    color = colors[16];
+                    color = colors['qs_nav_link_hover_background_color'];
                     api('qs_nav_link_hover_background_color').set(color);
                     api.control('qs_nav_link_hover_background_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
  
-                    color = colors[17];
+                    color = colors['qs_footer_link_hover_color'];
                     api('qs_footer_link_hover_color').set(color);
                     api.control('qs_footer_link_hover_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
  
-                    color = colors[18];
+                    color = colors['qs_content_post_bg_color'];
                     api('qs_content_post_bg_color').set(color);
                     api.control('qs_content_post_bg_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
  
-                    color = colors[19];
+                    color = colors['qs_content_post_border_color'];
                     api('qs_content_post_border_color').set(color);
                     api.control('qs_content_post_border_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
  
-                    color = colors[20];
+                    color = colors['qs_content_title_bg_color'];
                     api('qs_content_title_bg_color').set(color);
                     api.control('qs_content_title_bg_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
                     
  
-                    color = colors[21];
+                    color = colors['qs_button_color_primary'];
                     api('qs_button_color_primary').set(color);
                     api.control('qs_button_color_primary').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
                     
  
-                    color = colors[22];
+                    color = colors['qs_button_color_secondary'];
                     api('qs_button_color_secondary').set(color);
                     api.control('qs_button_color_secondary').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
                     
  
-                    color = colors[23];
+                    color = colors['qs_content_tag_background_color'];
                     api('qs_content_tag_background_color').set(color);
                     api.control('qs_content_tag_background_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
                     
  
-                    color = colors[24];
+                    color = colors['qs_content_tag_font_color'];
                     api('qs_content_tag_font_color').set(color);
                     api.control('qs_content_tag_font_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
                     
  
-                    color = colors[25];
+                    color = colors['qs_biography_background_color'];
                     api('qs_biography_background_color').set(color);
                     api.control('qs_biography_background_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
                     
  
-                    color = colors[26];
+                    color = colors['qs_biography_font_color'];
                     api('qs_biography_font_color').set(color);
                     api.control('qs_biography_font_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)

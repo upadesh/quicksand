@@ -89,60 +89,33 @@ function quicksand_get_color_schemes() {
                 )
             ),
             'colors' => array(
-//                background_color
-                '#ffffff',
-//                qs_content_background_color
-                '#ffffff',
-//                qs_content_link_color
-                '#cecece',
-//                qs_content_text_color
-                '#686868',
-//                qs_content_secondary_text_color
-                '#9ab7ac',
-//                header_textcolor
-                '#ffffff',
-//                qs_nav_background_color
-                '#9cbaba',
-//                qs_nav_link_color
-                '#ffffff',
-//                qs_header_background_color
-                '#95b2b1',
-//                qs_footer_background_color
-                '#303030',
-//                qs_footer_link_color
-                '#9ab7ac',
-//                qs_footer_text_color
-                '#5e7772',
-//                qs_sidebar_background_color
-                '#ffffff',
-//                qs_sidebar_text_color
-                '#666666',
-//                qs_sidebar_link_color
-                '#a3a3a3',
-//                qs_sidebar_border_color
-                '#f5f5f5',
-//                qs_nav_link_hover_background_color
-                '#95b2b1',
-//                qs_footer_link_hover_color           
-                '#7c938a',
-//                qs_content_post_bg_color 
-                '#ffffff',
-//                qs_content_post_border_color 
-                '#e0e0e0',
-//                qs_content_title_bg_color
-                '#f5f5f5',
-//                qs_button_color_primary,
-                '#9ab7ac',
-//                qs_button_color_secondary,
-                '#fff',
-//                qs_content_tag_background_color
-                '#286584',
-//                qs_content_tag_font_color
-                '#fff',
-//                qs_biography_background_color
-                '#f5f5f5',
-//                qs_biography_font_color
-                '#686868',
+                'background_color' => '#ffffff',
+                'qs_content_background_color' => '#ffffff',
+                'qs_content_link_color' => '#cecece',
+                'qs_content_text_color' => '#686868',
+                'qs_content_secondary_text_color' =>'#9ab7ac',
+                'header_textcolor' => '#ffffff',
+                'qs_nav_background_color' => '#9cbaba',
+                'qs_nav_link_color' => '#ffffff',
+                'qs_header_background_color' => '#95b2b1',
+                'qs_footer_background_color' => '#303030',
+                'qs_footer_link_color' => '#9ab7ac',
+                'qs_footer_text_color' => '#5e7772',
+                'qs_sidebar_background_color' => '#ffffff',
+                'qs_sidebar_text_color' => '#666666',
+                'qs_sidebar_link_color' => '#a3a3a3',
+                'qs_sidebar_border_color' => '#f5f5f5',
+                'qs_nav_link_hover_background_color' => '#95b2b1',
+                'qs_footer_link_hover_color' => '#7c938a',
+                'qs_content_post_bg_color' => '#ffffff',
+                'qs_content_post_border_color' => '#e0e0e0',
+                'qs_content_title_bg_color' => '#f5f5f5',
+                'qs_button_color_primary' => '#9ab7ac',
+                'qs_button_color_secondary' => '#fff',
+                'qs_content_tag_background_color' => '#286584',
+                'qs_content_tag_font_color' => '#fff',
+                'qs_biography_background_color' => '#f5f5f5',
+                'qs_biography_font_color' => '#686868',
             ),
         ),
         'jupiter-jazz' => array(
@@ -173,60 +146,33 @@ function quicksand_get_color_schemes() {
                 )
             ),
             'colors' => array(
-//                background_color
-                '#e0d4c0',
-//                qs_content_background_color
-                '#e0d4c0',
-//                qs_content_link_color
-                '#dbcfbc',
-//                qs_content_text_color
-                '#686868',
-//                qs_content_secondary_text_color
-                '#ffffff',
-//                header_textcolor
-                '#ffffff',
-//                qs_nav_background_color
-                '#e0d4c0',
-//                qs_nav_link_color
-                '#ffffff',
-//                qs_header_background_color
-                '#e0d4c0',
-//                qs_footer_background_color
-                '#303030',
-//                qs_footer_link_color
-                '#7e9688',
-//                qs_footer_text_color
-                '#dbdbdb',
-//                qs_sidebar_background_color
-                '#ffffff',
-//                qs_sidebar_text_color
-                '#686868',
-//                qs_sidebar_link_color
-                '#e0d4c0',
-//                qs_sidebar_border_color
-                '#e0d4c0',
-//                qs_nav_link_hover_background_color
-                '#ccbfaf',
-//                qs_footer_link_hover_color           
-                '#dbdbdb',
-//                qs_content_post_bg_color 
-                '#ffffff',
-//                qs_content_post_border_color 
-                '#e0d4c0',
-//                qs_content_title_bg_color
-                '#d6cbb8',
-//                qs_button_color_primary,
-                '#ada495',
-//                qs_button_color_secondary,
-                '#fff',
-//                qs_content_tag_background_color
-                '#286584',
-//                qs_content_tag_font_color
-                '#fff',
-//                qs_biography_background_color
-                '#fff',
-//                qs_biography_font_color
-                '#000',
+                'background_color' => '#e0d4c0',
+                'qs_content_background_color' => '#e0d4c0',
+                'qs_content_link_color' => '#dbcfbc',
+                'qs_content_text_color' => '#686868',
+                'qs_content_secondary_text_color' => '#ffffff',
+                'header_textcolor' => '#ffffff',
+                'qs_nav_background_color' => '#e0d4c0',
+                'qs_nav_link_color' => '#ffffff',
+                'qs_header_background_color' => '#e0d4c0',
+                'qs_footer_background_color' => '#303030',
+                'qs_footer_link_color' => '#7e9688',
+                'qs_footer_text_color' => '#dbdbdb',
+                'qs_sidebar_background_color' => '#ffffff',
+                'qs_sidebar_text_color' => '#686868',
+                'qs_sidebar_link_color' => '#e0d4c0',
+                'qs_sidebar_border_color' => '#e0d4c0',
+                'qs_nav_link_hover_background_color' => '#ccbfaf',
+                'qs_footer_link_hover_color' => '#dbdbdb',
+                'qs_content_post_bg_color' => '#ffffff',
+                'qs_content_post_border_color' => '#e0d4c0',
+                'qs_content_title_bg_color' => '#d6cbb8',
+                'qs_button_color_primary' => '#ada495',
+                'qs_button_color_secondary' => '#fff',
+                'qs_content_tag_background_color' => '#286584',
+                'qs_content_tag_font_color' => '#fff',
+                'qs_biography_background_color' => '#fff',
+                'qs_biography_font_color' => '#000',
             ),
         ),
     ));

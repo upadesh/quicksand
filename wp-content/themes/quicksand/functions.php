@@ -138,7 +138,7 @@ if (!function_exists('quicksand_setup')) :
          */
         $colorSchemeDefault = quicksand_get_color_schemes()['default']['colors'];
         $customBackgroundArgs = array(
-            'default-color' => $colorSchemeDefault[0],
+            'default-color' => $colorSchemeDefault['background_color'],
         );
         add_theme_support('custom-background', $customBackgroundArgs);
 
@@ -148,7 +148,7 @@ if (!function_exists('quicksand_setup')) :
          * This will let the user skip the cropping step when they upload a new photo.
          */
         $customHeaderArgs = array(
-            'default-text-color' => $colorSchemeDefault[5],
+            'default-text-color' => $colorSchemeDefault['header_textcolor'],
             'flex-width' => true,
             'flex-height' => true,
             'height' => 200,
