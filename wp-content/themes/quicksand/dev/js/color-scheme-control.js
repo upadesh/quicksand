@@ -1,4 +1,3 @@
-/* global colorScheme, Color */
 /**
  * Add a listener to the Color-Scheme-Control to update other controls to new values/defaults when color-scheme is changed
  */
