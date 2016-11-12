@@ -10,6 +10,9 @@ jQuery(document).ready(function ($) {
         // pagination: list-view
         $('.quicksand-post-pagination-list-view .nav-links a').addClass('btn btn-secondary');
         
+        // pagination: single-view
+        $('.post-pagination .nav-links a .meta-nav ').addClass('btn btn-secondary');
+        
         // pagination: paginated post
         $('.page-links a').addClass('btn btn-outline-secondary');
         

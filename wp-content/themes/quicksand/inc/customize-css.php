@@ -22,11 +22,7 @@ if (!function_exists('quicksand_customizer_css')) :
             } 
 
 
-            /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
-
-            /*                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
-                            background-color:  <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;*/
-
+            /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */ 
 
             /* === btn-secondary === */
             .btn.btn-secondary {
@@ -61,6 +57,10 @@ if (!function_exists('quicksand_customizer_css')) :
                 color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
                 background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
                 border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>; 
+            }
+            /*fix for rounded color-schemes*/
+            .widget .input-group-btn {
+                background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
             }
 
 

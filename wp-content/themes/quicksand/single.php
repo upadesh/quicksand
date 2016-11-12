@@ -46,9 +46,9 @@ get_header();
             } elseif (is_singular('post')) {
                 // Previous/next post navigation.
                 the_post_navigation(array(
-                    'prev_text' => '<span class="meta-nav btn btn-outline-secondary post-last-link" aria-hidden="true"><i class="fa fa-long-arrow-left"></i>' . esc_html(__("Previous Post", "quicksand")) . '</span>' .
+                    'prev_text' => '<span class="meta-nav post-last-link" aria-hidden="true"><i class="fa fa-long-arrow-left"></i>' . esc_html(__("Previous Post", "quicksand")) . '</span>' .
                     '<span class="screen-reader-text">' . __('Previous post:', 'quicksand') . '</span> ',
-                    'next_text' => '<span class="meta-nav btn btn-outline-secondary post-next-link " aria-hidden="true">' . esc_html(__("Next Post", "quicksand")) . '<i class="fa fa-long-arrow-right"></i></span>' .
+                    'next_text' => '<span class="meta-nav post-next-link " aria-hidden="true">' . esc_html(__("Next Post", "quicksand")) . '<i class="fa fa-long-arrow-right"></i></span>' .
                     '<span class="screen-reader-text">' . __('Next post:', 'quicksand') . '</span> ',
                 ));
             }
