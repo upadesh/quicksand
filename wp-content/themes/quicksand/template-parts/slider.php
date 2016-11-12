@@ -35,9 +35,9 @@ if ($the_query->have_posts()) {
                 endif;
 
                 echo '<a href="' . get_permalink() . '"><div class="flex-caption">';
-                if (!empty(get_the_title()))
+                if (get_the_title() != '')
                     echo '<h2 class="entry-title">' . get_the_title() . '</h2>';
-                if (!empty(get_the_excerpt()))
+                if (get_the_excerpt() != '')
                     echo '<div class="excerpt">' . get_the_excerpt() . '</div>';
                 echo '</div>';
                 echo '</a></li>';

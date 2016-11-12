@@ -590,7 +590,8 @@ if (!function_exists('quicksand_author_biography')) :
      * @since Quicksand 0.2.1
      */
     function quicksand_author_biography() {
-        if (is_singular() && !empty(get_the_author_meta('description')) && get_theme_mod('qs_biography_show', quicksand_get_color_scheme()['settings']['qs_biography_show'])) :
+        $authorMeta = get_the_author_meta('description');
+        if (is_singular() && !empty($authorMeta) && get_theme_mod('qs_biography_show', quicksand_get_color_scheme()['settings']['qs_biography_show'])) :
             get_template_part('template-parts/biography');
         endif;
     }

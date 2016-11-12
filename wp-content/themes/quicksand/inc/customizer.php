@@ -124,7 +124,7 @@ function quicksand_customize_register($wp_customize) {
 
     // link-color
     $wp_customize->add_setting('qs_nav_link_color', array(
-        'default' => $colorSchemeDefault['colors'][7],
+        'default' => $colorSchemeDefault['colors']['qs_nav_link_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -136,7 +136,7 @@ function quicksand_customize_register($wp_customize) {
 
     // link-hover-color
     $wp_customize->add_setting('qs_nav_link_hover_background_color', array(
-        'default' => $colorSchemeDefault['colors'][16],
+        'default' => $colorSchemeDefault['colors']['qs_nav_link_hover_background_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -149,7 +149,7 @@ function quicksand_customize_register($wp_customize) {
 
     // bg-color
     $wp_customize->add_setting('qs_nav_background_color', array(
-        'default' => $colorSchemeDefault['colors'][6],
+        'default' => $colorSchemeDefault['colors']['qs_nav_background_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -237,7 +237,7 @@ function quicksand_customize_register($wp_customize) {
 
     // bg-color
     $wp_customize->add_setting('qs_header_background_color', array(
-        'default' => $colorSchemeDefault['colors'][8],
+        'default' => $colorSchemeDefault['colors']['qs_header_background_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -497,7 +497,7 @@ function quicksand_customize_register($wp_customize) {
 
     // bg-color
     $wp_customize->add_setting('qs_content_background_color', array(
-        'default' => $colorSchemeDefault['colors'][1],
+        'default' => $colorSchemeDefault['colors']['qs_content_background_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -513,7 +513,7 @@ function quicksand_customize_register($wp_customize) {
 
     // link-color
     $wp_customize->add_setting('qs_content_link_color', array(
-        'default' => $colorSchemeDefault['colors'][2],
+        'default' => $colorSchemeDefault['colors']['qs_content_link_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -527,7 +527,7 @@ function quicksand_customize_register($wp_customize) {
 
     // text-color
     $wp_customize->add_setting('qs_content_text_color', array(
-        'default' => $colorSchemeDefault['colors'][3],
+        'default' => $colorSchemeDefault['colors']['qs_content_text_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -540,7 +540,7 @@ function quicksand_customize_register($wp_customize) {
 
     // 2nd-text-color
     $wp_customize->add_setting('qs_content_secondary_text_color', array(
-        'default' => $colorSchemeDefault['colors'][4],
+        'default' => $colorSchemeDefault['colors']['qs_content_secondary_text_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -553,7 +553,7 @@ function quicksand_customize_register($wp_customize) {
 
     // title-background
     $wp_customize->add_setting('qs_content_title_bg_color', array(
-        'default' => $colorSchemeDefault['colors'][20],
+        'default' => $colorSchemeDefault['colors']['qs_content_title_bg_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -566,7 +566,7 @@ function quicksand_customize_register($wp_customize) {
 
     // post background color
     $wp_customize->add_setting('qs_content_post_bg_color', array(
-        'default' => $colorSchemeDefault['colors'][18],
+        'default' => $colorSchemeDefault['colors']['qs_content_post_bg_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -579,7 +579,7 @@ function quicksand_customize_register($wp_customize) {
 
     // post border color
     $wp_customize->add_setting('qs_content_post_border_color', array(
-        'default' => $colorSchemeDefault['colors'][19],
+        'default' => $colorSchemeDefault['colors']['qs_content_post_border_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -601,7 +601,7 @@ function quicksand_customize_register($wp_customize) {
 
     // button primary color
     $wp_customize->add_setting('qs_button_color_primary', array(
-        'default' => $colorSchemeDefault['colors'][21],
+        'default' => $colorSchemeDefault['colors']['qs_button_color_primary'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -615,7 +615,7 @@ function quicksand_customize_register($wp_customize) {
 
     // button secondary color
     $wp_customize->add_setting('qs_button_color_secondary', array(
-        'default' => $colorSchemeDefault['colors'][22],
+        'default' => $colorSchemeDefault['colors']['qs_button_color_secondary'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -630,7 +630,7 @@ function quicksand_customize_register($wp_customize) {
 
     // tags: bg-color
     $wp_customize->add_setting('qs_content_tag_background_color', array(
-        'default' => $colorSchemeDefault['colors'][23],
+        'default' => $colorSchemeDefault['colors']['qs_content_tag_background_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -643,7 +643,7 @@ function quicksand_customize_register($wp_customize) {
 
     // tags: font-color
     $wp_customize->add_setting('qs_content_tag_font_color', array(
-        'default' => $colorSchemeDefault['colors'][24],
+        'default' => $colorSchemeDefault['colors']['qs_content_tag_font_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -683,7 +683,7 @@ function quicksand_customize_register($wp_customize) {
 
     // bio: bg-color
     $wp_customize->add_setting('qs_biography_background_color', array(
-        'default' => $colorSchemeDefault['colors'][25],
+        'default' => $colorSchemeDefault['colors']['qs_biography_background_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -696,7 +696,7 @@ function quicksand_customize_register($wp_customize) {
 
     // bio: font-color
     $wp_customize->add_setting('qs_biography_font_color', array(
-        'default' => $colorSchemeDefault['colors'][26],
+        'default' => $colorSchemeDefault['colors']['qs_biography_font_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -720,7 +720,7 @@ function quicksand_customize_register($wp_customize) {
 
     // bg-color
     $wp_customize->add_setting('qs_sidebar_background_color', array(
-        'default' => $colorSchemeDefault['colors'][12],
+        'default' => $colorSchemeDefault['colors']['qs_sidebar_background_color'],
         'transport' => 'postMessage',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -732,7 +732,7 @@ function quicksand_customize_register($wp_customize) {
 
     // color
     $wp_customize->add_setting('qs_sidebar_text_color', array(
-        'default' => $colorSchemeDefault['colors'][13],
+        'default' => $colorSchemeDefault['colors']['qs_sidebar_text_color'],
         'transport' => 'postMessage',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -744,7 +744,7 @@ function quicksand_customize_register($wp_customize) {
 
     // link
     $wp_customize->add_setting('qs_sidebar_link_color', array(
-        'default' => $colorSchemeDefault['colors'][14],
+        'default' => $colorSchemeDefault['colors']['qs_sidebar_link_color'],
         'transport' => 'postMessage',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -756,7 +756,7 @@ function quicksand_customize_register($wp_customize) {
 
     // border
     $wp_customize->add_setting('qs_sidebar_border_color', array(
-        'default' => $colorSchemeDefault['colors'][15],
+        'default' => $colorSchemeDefault['colors']['qs_sidebar_border_color'],
         'transport' => 'postMessage',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -805,7 +805,7 @@ function quicksand_customize_register($wp_customize) {
 
     // bg-color
     $wp_customize->add_setting('qs_footer_background_color', array(
-        'default' => $colorSchemeDefault['colors'][9],
+        'default' => $colorSchemeDefault['colors']['qs_footer_background_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -817,7 +817,7 @@ function quicksand_customize_register($wp_customize) {
 
     // text-color
     $wp_customize->add_setting('qs_footer_text_color', array(
-        'default' => $colorSchemeDefault['colors'][11],
+        'default' => $colorSchemeDefault['colors']['qs_footer_text_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -829,7 +829,7 @@ function quicksand_customize_register($wp_customize) {
 
     // link-color
     $wp_customize->add_setting('qs_footer_link_color', array(
-        'default' => $colorSchemeDefault['colors'][10],
+        'default' => $colorSchemeDefault['colors']['qs_footer_link_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
@@ -841,7 +841,7 @@ function quicksand_customize_register($wp_customize) {
 
     // link-hover-color
     $wp_customize->add_setting('qs_footer_link_hover_color', array(
-        'default' => $colorSchemeDefault['colors'][17],
+        'default' => $colorSchemeDefault['colors']['qs_footer_link_hover_color'],
         'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
