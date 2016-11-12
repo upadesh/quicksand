@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Quicksand functions and definitions
  *
@@ -169,9 +170,6 @@ if (!function_exists('quicksand_setup')) :
 
 endif; // quicksand_setup
 add_action('after_setup_theme', 'quicksand_setup');
-
-
-
 
 /**
  * Sets the content width in pixels, based on the theme's design and stylesheet.
@@ -633,7 +631,7 @@ if (!function_exists('quicksand_bootstrap_wrap_oembed')) :
      * 
      * @return string html
      */
-    function quicksand_bootstrap_wrap_oembed($html) { 
+    function quicksand_bootstrap_wrap_oembed($html) {
         // strip width and height 
 //        $html = preg_replace('/(width|height)="\d*"\s/', "", $html);
         $html = preg_replace('/(width|height)=["\']\d*["\']\s/', "", $html);
@@ -784,7 +782,6 @@ endif;
 //
 //add_filter('wp_get_attachment_image_attributes', 'quicksand_post_thumbnail_sizes_attr', 10, 3);
 
-
 /**
  * on first load randomly the error 'net::ERR_INCOMPLETE_CHUNKED_ENCODING' comes up,
  * which on the bounce causes the JS to fail. 
@@ -796,12 +793,24 @@ endif;
  * @param type $headers
  * @return type
  */
-function quicksand_nocache($headers) {
+//function quicksand_nocache($headers) {
 //    unset($headers['Cache-Control']);
-    $headers['Cache-Control'] = "no-cache";
-    return $headers;
-}
-add_filter('wp_headers', 'quicksand_nocache');
+//    $headers['Cache-Control'] = "no-cache";
+//
+//
+    //Gather output (if it is not already in a variable, use ob_start() and ob_get_clean() )    
+// Before sending output:
+//    ob_start();
+//    ob_get_clean();
+//    $content = ob_get_contents(); 
+// 
+//    $headers['Content-length:'] = strlen($content);
+//    header('Content-Length: ' . $length);
+//
+//    return $headers;
+//}
+//
+//add_filter('wp_headers', 'quicksand_nocache');
 
 /**
  * Custom template tags for this theme.

@@ -22,27 +22,27 @@
 
     .posted-on:before {
         font-family: FontAwesome; 
-        padding-right: .4rem;
+        padding-right: .3rem;
         content: "\f017"; 
     }
     .post-author:before {
         font-family: FontAwesome; 
-        padding-right: .4rem;
+        padding-right: .3rem;
         content: "\f007"; 
     }
     .cat-links:before {
         font-family: FontAwesome; 
-        padding-right: .4rem;
+        padding-right: .3rem;
         content: "\f07c"; 
     }
     .tags-links:before {
         font-family: FontAwesome;
-        padding-right: .4rem;
+        padding-right: .3rem;
         content: "\f02c"; 
     }
     .comments-link:before {
         font-family: FontAwesome; 
-        padding-right: .4rem;
+        padding-right: .3rem;
         content: "\f075";
     }
     >span:not(:last-of-type):after {
@@ -91,7 +91,7 @@
 
             &:before {
                 font-family: FontAwesome; 
-                padding-right: 3px;
+                padding-right: .3rem;
                 content: "\f06e";
             }
         }
@@ -102,37 +102,32 @@
         /* 
          * for the WP-Test: reduce size of massively large image with no alignment.
          *  http://wp.local/archives/tag/alignment-2
-         */ 
+         */
         img {
             border: none;
             height: auto;
-            max-width: 100%; 
+            max-width: 100%;  
         } 
     }
 
 
     .entry-footer {
+        /*tags*/
         .tag-links {
             .tag {
-                padding: .2rem .4rem;
-                margin-right: .5rem;
-                background: $blue;
+                padding: .2rem .5rem;
+                margin-right: .5rem; 
                 a {
-                    color: $white;
+                    text-decoration: none;
                 }
             }
         }
 
+        /* edit post-link  */  
         .edit-link { 
             float: right;
-            /* edit post-link  */  
-            .post-edit-link {
-
-                &:before {
-                    font-family: FontAwesome; 
-                    padding-right: .3rem;
-                    content: "\f040";
-                }
+            .fa { 
+                padding-right: .3rem; 
             }
         }
 
@@ -154,7 +149,7 @@
 
 /* TODO: 
 workaround for tables 
-maybe pading of cells smaller in media-query ... who knows????
+maybe padding of cells smaller in media-query ... who knows????
 */
 .quicksand-masonry {
     article.post {

@@ -1,10 +1,10 @@
 /* 
- * comments
- * form & list
+ * comments 
  */
 
 
 .comments-area  { 
+    /*comment-reply-form*/
     .comment-respond {
         @extend .clearfix;
 
@@ -18,69 +18,36 @@
             }
         }
     }
+
+    /* the comments */
     .comment-list {
-        padding-left: 0;
         list-style-type: none;
+        padding-left: 0;
 
         .comment-body { 
             border: none; 
-            background: grey;
             padding: .4rem;
             margin-bottom: .5rem;
-        } 
 
-        .reply {
-            text-align: right;
-            .comment-reply-link{
-                &:before {
-                    font-family: FontAwesome; 
-                    padding-right: 3px;
-                    content: "\f112";
+            .reply {            
+                text-align: right;
+                .comment-reply-link{  
+                    &:before {
+                        font-family: FontAwesome; 
+                        padding-right: .3rem;
+                        content: "\f112";
+                    }
                 }
             }
-        }
-    } 
+        }  
+
+        /* comment edit-link */
+        .comment-edit-link:before {
+            font-family: FontAwesome;  
+            content: "\f040";
+            padding-left: 1rem;
+            padding-right: .3rem;
+        } 
+    }  
 } 
 
-
-
-/*Pagination: Older / Newer Comments*/
-.comment-navigation { 
-    .nav-previous {
-        @extend .text-xs-left; 
-        a { 
-            display: inline-block; 
-
-            &:before {
-                font-family: FontAwesome;  
-                content: "\f0d9";
-                padding-right: 1rem; 
-            }
-        }
-    }
-    .nav-next  {
-        @extend .text-xs-right; 
-        a {
-            @extend .btn;
-            @extend .btn-outline-secondary; 
-            display: inline-block; 
-
-            &:after {
-                font-family: FontAwesome; 
-                padding-left: 3px; 
-                content: "\f0da";
-                padding-left: 1rem; 
-            }
-        }
-    } 
-}
-
-
-
-/* comment edit-link */
-.comment-edit-link:before {
-    font-family: FontAwesome;  
-    content: "\f040";
-    padding-left: 1rem;
-    padding-right: .3rem;
-} 

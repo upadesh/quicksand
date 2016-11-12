@@ -4,6 +4,8 @@
 
 
 
+/* === pagination (1,2,3, ...) === */
+
 /*pagination: list-view*/
 .quicksand-post-pagination-list-view {
     text-align: center;
@@ -15,36 +17,11 @@
         }
         a {
             @extend .btn;
-            @extend .btn-outline-secondary;
+            @extend .btn-secondary;
             background-image: none;
         } 
     } 
 }
-
-
-
-/*pagination: previous & next post*/
-.post-pagination {
-    margin: 1rem 0;
-    .post-navigation { 
-        .nav-previous {
-            @extend .text-xs-left; 
-            display: inline-block;
-            width: 50%;
-            .fa { 
-                padding-right: 1rem; 
-            }
-        }
-        .nav-next {
-            @extend .text-xs-right; 
-            display: inline-block;
-            width: 50%;
-            .fa { 
-                padding-left: 1rem; 
-            }
-        }
-    }  
-} 
 
 
 /*pagination: paginated posts*/
@@ -62,6 +39,82 @@
 } 
 
 
+/* === navigation (older/newer) === */
+
+/*navigation: previous & next post*/
+.post-pagination {
+    margin: 1rem 0;
+    .post-navigation { 
+        .nav-previous {
+            @extend .text-xs-left; 
+            display: inline-block;
+            width: 50%;
+            .fa { 
+                padding-right: .3rem; 
+            }
+        }
+        .nav-next {
+            @extend .text-xs-right; 
+            display: inline-block;
+            width: 50%;
+            .fa { 
+                padding-left: .3rem; 
+            }
+        }
+    }  
+} 
+
+
+
+/* navigation: older / newer comments */
+.comment-navigation { 
+    .nav-previous {
+        @extend .text-xs-left; 
+        a {   
+            display: inline-block;
+            width: 50%;
+            .fa { 
+                padding-right: .5rem; 
+            }
+        }
+    }
+    .nav-next  {
+        @extend .text-xs-right; 
+        a { 
+            display: inline-block;
+            width: 50%;
+            .fa { 
+                padding-left: .5rem; 
+            } 
+        }
+    } 
+}
+ 
+
+
+/* navigation: previous / next image */
+.image-navigation {
+    .nav-links {
+        .nav-previous { 
+                float: left;
+                
+                &:before {
+                    font-family: FontAwesome; 
+                    padding-right: .3rem;
+                    content: "\f177";
+                }
+        }
+        .nav-next { 
+                float: right;
+                
+                &:after {
+                    font-family: FontAwesome; 
+                    padding-left: .3rem;
+                    content: "\f178";
+                }
+        } 
+    }
+}
 
 
 /* BS-style pagination*/
