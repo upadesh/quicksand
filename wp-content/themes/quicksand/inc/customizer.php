@@ -1017,7 +1017,7 @@ function quicksand_get_color_schemes() {
 //                qs_content_tag_font_color
                 '#fff',
 //                qs_biography_background_color
-                '#fff',
+                '#f5f5f5',
 //                qs_biography_font_color
                 '#686868',
             ),

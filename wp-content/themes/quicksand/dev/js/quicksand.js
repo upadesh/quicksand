@@ -6,12 +6,21 @@ jQuery(document).ready(function ($) {
 //    console.info(colorScheme);
 
     // add btn-classes to paginations 
-    var initPagination = function () {
+    var addBtnClasses = function () {
         // pagination: list-view
         $('.quicksand-post-pagination-list-view .nav-links a').addClass('btn btn-secondary');
         
         // pagination: paginated post
         $('.page-links a').addClass('btn btn-secondary');
+        
+        // comment: edit-link
+        $('.comment-list .comment-body .reply .comment-reply-link').addClass('btn btn-outline-secondary'); 
+        
+        // image: navigation
+        $('.image-navigation .nav-previous a, .image-navigation .nav-next a').addClass('btn btn-outline-secondary'); 
+        
+        
+        
     }
 
 
@@ -153,5 +162,5 @@ jQuery(document).ready(function ($) {
     initLightgallery();
     
     // all paginations
-    initPagination();
+    addBtnClasses();
 });

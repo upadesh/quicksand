@@ -16,8 +16,6 @@
         >.page-numbers.current {
         }
         a {
-/*            @extend .btn;
-            @extend .btn-outline-secondary;*/
             background-image: none;
         } 
     } 
@@ -30,8 +28,6 @@
         margin-right: .3rem;
     }
     a {
-/*        @extend .btn;
-        @extend .btn-outline-secondary;*/
         margin-right: .3rem; 
         background-image: none;
         background-color: transparent; 
@@ -89,29 +85,23 @@
         }
     } 
 }
- 
+
 
 
 /* navigation: previous / next image */
 .image-navigation {
     .nav-links {
         .nav-previous { 
-                float: left;
-                
-                &:before {
-                    font-family: FontAwesome; 
-                    padding-right: .3rem;
-                    content: "\f177";
-                }
+            width: 50%;
+            a {
+                float: left; 
+            }
         }
         .nav-next { 
-                float: right;
-                
-                &:after {
-                    font-family: FontAwesome; 
-                    padding-left: .3rem;
-                    content: "\f178";
-                }
+            width: 50%;
+            a {
+                float: right; 
+            }
         } 
     }
 }

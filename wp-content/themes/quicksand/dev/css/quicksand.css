@@ -5814,20 +5814,14 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 
 /* navigation: previous / next image */
 .image-navigation .nav-links .nav-previous {
-  float: left; }
-  .image-navigation .nav-links .nav-previous:before {
-    font-family: FontAwesome;
-    padding-right: 4.8px;
-    padding-right: .3rem;
-    content: "\f177"; }
+  width: 50%; }
+  .image-navigation .nav-links .nav-previous a {
+    float: left; }
 
 .image-navigation .nav-links .nav-next {
-  float: right; }
-  .image-navigation .nav-links .nav-next:after {
-    font-family: FontAwesome;
-    padding-left: 4.8px;
-    padding-left: .3rem;
-    content: "\f178"; }
+  width: 50%; }
+  .image-navigation .nav-links .nav-next a {
+    float: right; }
 
 /* BS-style pagination*/
 /*

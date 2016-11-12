@@ -67,11 +67,11 @@ get_header();
                     ?> 
                 </div>  
 
-                <!-- image-navigation -->
+                <!-- image-navigation --> 
                 <nav id="image-navigation" class="card-block navigation image-navigation">
                     <div class="nav-links">  
-                        <span class="nav-previous btn btn-outline-secondary"><?php previous_image_link(false, __('Previous Image', 'quicksand')); ?></span>
-                        <span class="nav-next btn btn-outline-secondary"><?php next_image_link(false, __('Next Image', 'quicksand')); ?></span> 
+                        <span class="nav-previous"><?php previous_image_link(false, __('<i class="fa fa-long-arrow-left" aria-hidden="true"></i> Previous Image', 'quicksand')); ?></span>
+                        <span class="nav-next"></i><?php next_image_link(false, __('Next Image <i class="fa fa-long-arrow-right" aria-hidden="true"></i>', 'quicksand')); ?></span> 
                     </div><!-- .nav-links -->
                 </nav><!-- .image-navigation --> 
 

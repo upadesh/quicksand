@@ -24,87 +24,88 @@ if (!function_exists('quicksand_customizer_css')) :
 
             /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
-/*                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
-                background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> ;*/
+/*                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
+                background-color:  <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;*/
                 
                 
             /* === btn-secondary === */
             .btn-secondary {
-                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
-                background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
-                border-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>; 
-            }
-            .btn-secondary a {
-                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
-                background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
-                border: none; 
-            }
-            .btn-secondary:hover {
                 color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
                 background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
                 border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>; 
             }
+            .btn-secondary a {
+                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
+                background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
+                border: none; 
+            }
+            .btn-secondary:hover {
+                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
+                background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
+                border-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>; 
+            }
             .btn-secondary:hover a {
                 text-decoration: none;
                 border: none; 
-                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
-                background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
+                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
+                background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
             } 
             
             
             .btn-secondary:focus, .btn-secondary.focus {
-                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
-                background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
-                border-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>; }
+                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
+                background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
+                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>; }
             .btn-secondary:active, .btn-secondary.active,
             .open > .btn-secondary.dropdown-toggle {
-                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
-                background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
-                border-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
+                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
+                background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
+                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
                 background-image: none; }
             .btn-secondary:active:hover, .btn-secondary:active:focus, .btn-secondary:active.focus, .btn-secondary.active:hover, .btn-secondary.active:focus, .btn-secondary.active.focus,
             .open > .btn-secondary.dropdown-toggle:hover,
             .open > .btn-secondary.dropdown-toggle:focus,
             .open > .btn-secondary.dropdown-toggle.focus {
-                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
-                background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
-                border-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>; }
+                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
+                background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
+                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>; }
             .btn-secondary.disabled:focus, .btn-secondary.disabled.focus, .btn-secondary:disabled:focus, .btn-secondary:disabled.focus {
-                background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
-                border-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>; }
+                background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
+                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>; }
             .btn-secondary.disabled:hover, .btn-secondary:disabled:hover {
-                background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
-                border-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>; }
+                background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
+                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>; }
 
 
 
 
 
             /* === btn-outline-secondary === */
-            .btn-outline-secondary, .quicksand-post-pagination-list-view .nav-links a, .page-links a {
-                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
+            .btn-outline-secondary, .btn-outline-secondary a {
+                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
                 background-image: none;
                 background-color: transparent;
-                border-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>; 
+                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>; 
             }
             
-            .btn-outline-secondary:hover, .quicksand-post-pagination-list-view .nav-links a:hover, .page-links a:hover {
-                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?> !important;
-                background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
-                border-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>; 
+            .btn-outline-secondary:hover, .btn-outline-secondary a:hover {
+                text-decoration: none;
+                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?> !important;
+                background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
+                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>; 
             }
             
             .btn-outline-secondary:focus, .quicksand-post-pagination-list-view .nav-links a:focus, .page-links a:focus, .btn-outline-secondary.focus, .quicksand-post-pagination-list-view .nav-links a.focus, .page-links a.focus {
-                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
-                background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
-                border-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>; }
+                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
+                background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
+                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>; }
             .btn-outline-secondary:active, .quicksand-post-pagination-list-view .nav-links a:active, .page-links a:active, .btn-outline-secondary.active, .quicksand-post-pagination-list-view .nav-links a.active, .page-links a.active,
             .open > .btn-outline-secondary.dropdown-toggle, .quicksand-post-pagination-list-view .nav-links
             .open > a.dropdown-toggle, .page-links
             .open > a.dropdown-toggle {
-                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
-                background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
-                border-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>; }
+                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
+                background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
+                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>; }
             .btn-outline-secondary:active:hover, .quicksand-post-pagination-list-view .nav-links a:active:hover, .page-links a:active:hover, .btn-outline-secondary:active:focus, .quicksand-post-pagination-list-view .nav-links a:active:focus, .page-links a:active:focus, .btn-outline-secondary:active.focus, .quicksand-post-pagination-list-view .nav-links a:active.focus, .page-links a:active.focus, .btn-outline-secondary.active:hover, .quicksand-post-pagination-list-view .nav-links a.active:hover, .page-links a.active:hover, .btn-outline-secondary.active:focus, .quicksand-post-pagination-list-view .nav-links a.active:focus, .page-links a.active:focus, .btn-outline-secondary.active.focus, .quicksand-post-pagination-list-view .nav-links a.active.focus, .page-links a.active.focus,
             .open > .btn-outline-secondary.dropdown-toggle:hover, .quicksand-post-pagination-list-view .nav-links
             .open > a.dropdown-toggle:hover, .page-links
@@ -115,9 +116,9 @@ if (!function_exists('quicksand_customizer_css')) :
             .open > .btn-outline-secondary.dropdown-toggle.focus, .quicksand-post-pagination-list-view .nav-links
             .open > a.dropdown-toggle.focus, .page-links
             .open > a.dropdown-toggle.focus {
-                color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
-                background-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
-                border-color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>; }
+                color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors'][22]); ?>;
+                background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>;
+                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors'][21]); ?>; }
             .btn-outline-secondary.disabled:focus, .quicksand-post-pagination-list-view .nav-links a.disabled:focus, .page-links a.disabled:focus, .btn-outline-secondary.disabled.focus, .quicksand-post-pagination-list-view .nav-links a.disabled.focus, .page-links a.disabled.focus, .btn-outline-secondary:disabled:focus, .quicksand-post-pagination-list-view .nav-links a:disabled:focus, .page-links a:disabled:focus, .btn-outline-secondary:disabled.focus, .quicksand-post-pagination-list-view .nav-links a:disabled.focus, .page-links a:disabled.focus {
                 border-color: #d6e1dd; }
             .btn-outline-secondary.disabled:hover, .quicksand-post-pagination-list-view .nav-links a.disabled:hover, .page-links a.disabled:hover, .btn-outline-secondary:disabled:hover, .quicksand-post-pagination-list-view .nav-links a:disabled:hover, .page-links a:disabled:hover {
