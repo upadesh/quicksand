@@ -32,7 +32,7 @@ function quicksand_customize_preview_js() {
 add_action('customize_preview_init', 'quicksand_customize_preview_js');
 
 /**
- * Add postMessage support for site title and description for the Theme Customizer.
+ * Add refresh support for site title and description for the Theme Customizer.
  *
  * @see https://codex.wordpress.org/Theme_Customization_API
  * 
@@ -124,7 +124,7 @@ function quicksand_customize_register($wp_customize) {
     // link-color
     $wp_customize->add_setting('qs_nav_link_color', array(
         'default' => $colorSchemeDefault['colors'][7],
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_nav_link_color', array(
@@ -136,7 +136,7 @@ function quicksand_customize_register($wp_customize) {
     // link-hover-color
     $wp_customize->add_setting('qs_nav_link_hover_background_color', array(
         'default' => $colorSchemeDefault['colors'][16],
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_nav_link_hover_background_color', array(
@@ -149,7 +149,7 @@ function quicksand_customize_register($wp_customize) {
     // bg-color
     $wp_customize->add_setting('qs_nav_background_color', array(
         'default' => $colorSchemeDefault['colors'][6],
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_nav_background_color', array(
@@ -237,7 +237,7 @@ function quicksand_customize_register($wp_customize) {
     // bg-color
     $wp_customize->add_setting('qs_header_background_color', array(
         'default' => $colorSchemeDefault['colors'][8],
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_header_background_color', array(
@@ -500,7 +500,7 @@ function quicksand_customize_register($wp_customize) {
     // bg-color
     $wp_customize->add_setting('qs_content_background_color', array(
         'default' => $colorSchemeDefault['colors'][1],
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_background_color', array(
@@ -516,7 +516,7 @@ function quicksand_customize_register($wp_customize) {
     // link-color
     $wp_customize->add_setting('qs_content_link_color', array(
         'default' => $colorSchemeDefault['colors'][2],
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_link_color', array(
@@ -530,7 +530,7 @@ function quicksand_customize_register($wp_customize) {
     // text-color
     $wp_customize->add_setting('qs_content_text_color', array(
         'default' => $colorSchemeDefault['colors'][3],
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_text_color', array(
@@ -543,7 +543,7 @@ function quicksand_customize_register($wp_customize) {
     // 2nd-text-color
     $wp_customize->add_setting('qs_content_secondary_text_color', array(
         'default' => $colorSchemeDefault['colors'][4],
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_secondary_text_color', array(
@@ -556,7 +556,7 @@ function quicksand_customize_register($wp_customize) {
     // title-background
     $wp_customize->add_setting('qs_content_title_bg_color', array(
         'default' => $colorSchemeDefault['colors'][20],
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_title_bg_color', array(
@@ -569,7 +569,7 @@ function quicksand_customize_register($wp_customize) {
     // post background color
     $wp_customize->add_setting('qs_content_post_bg_color', array(
         'default' => $colorSchemeDefault['colors'][18],
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_post_bg_color', array(
@@ -582,7 +582,7 @@ function quicksand_customize_register($wp_customize) {
     // post border color
     $wp_customize->add_setting('qs_content_post_border_color', array(
         'default' => $colorSchemeDefault['colors'][19],
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_post_border_color', array(
@@ -633,7 +633,7 @@ function quicksand_customize_register($wp_customize) {
     // tags: bg-color
     $wp_customize->add_setting('qs_content_tag_background_color', array(
         'default' => $colorSchemeDefault['colors'][23],
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_tag_background_color', array(
@@ -646,7 +646,7 @@ function quicksand_customize_register($wp_customize) {
     // tags: font-color
     $wp_customize->add_setting('qs_content_tag_font_color', array(
         'default' => $colorSchemeDefault['colors'][24],
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_tag_font_color', array(
@@ -809,7 +809,7 @@ function quicksand_customize_register($wp_customize) {
     // bg-color
     $wp_customize->add_setting('qs_footer_background_color', array(
         'default' => $colorSchemeDefault['colors'][9],
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_footer_background_color', array(
@@ -821,7 +821,7 @@ function quicksand_customize_register($wp_customize) {
     // text-color
     $wp_customize->add_setting('qs_footer_text_color', array(
         'default' => $colorSchemeDefault['colors'][11],
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_footer_text_color', array(
@@ -833,7 +833,7 @@ function quicksand_customize_register($wp_customize) {
     // link-color
     $wp_customize->add_setting('qs_footer_link_color', array(
         'default' => $colorSchemeDefault['colors'][10],
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_footer_link_color', array(
@@ -845,7 +845,7 @@ function quicksand_customize_register($wp_customize) {
     // link-hover-color
     $wp_customize->add_setting('qs_footer_link_hover_color', array(
         'default' => $colorSchemeDefault['colors'][17],
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_footer_link_hover_color', array(
@@ -858,9 +858,9 @@ function quicksand_customize_register($wp_customize) {
     /**
      *  Default WordPress Theme Customization 
      */
-    $wp_customize->get_setting('blogname')->transport = 'postMessage';
-    $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
-    $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
+    $wp_customize->get_setting('blogname')->transport = 'refresh';
+    $wp_customize->get_setting('blogdescription')->transport = 'refresh';
+    $wp_customize->get_setting('header_textcolor')->transport = 'refresh';
 
     // move header-text-color to Theme-Options-Section 'Header'
     $wp_customize->get_control('header_textcolor')->section = 'quicksand_header';
