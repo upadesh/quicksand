@@ -3,36 +3,7 @@
 /**
  * Registers color schemes for Quicksand.
  *
- * Can be filtered with {@see 'quicksand_color_schemes'}.
- *
- * The order of colors in a colors array:
- * 1. Main Background Color         - background_color
- * 2. Content Background Color      - qs_content_background_color
- * 3. Link Color                    - qs_content_link_color
- * 4. Content Text Color            - qs_content_text_color
- * 5. Secondary Text Color          - qs_content_secondary_text_color
- * 6. Header Text Color             - header_textcolor
- * 7. Navigation Background Color   - qs_nav_background_color
- * 8. Navigation Link Color         - qs_nav_link_color
- * 9. Header Background Color       - qs_header_background_color
- * 10. Footer Background Color      - qs_footer_background_color
- * 11. Footer Link Color            - qs_footer_link_color
- * 12. Footer Text Color            - qs_footer_text_color
- * 13. Sidebar Background Color     - qs_sidebar_background_color
- * 14. Sidebar Text Color           - qs_sidebar_text_color
- * 15. Sidebar Link Color           - qs_sidebar_link_color
- * 16. Sidebar Border Color         - qs_sidebar_border_color
- * 17. Navigation Link Hover Color  - qs_nav_link_hover_background_color
- * 18. Footer Link Hover Color      - qs_footer_link_hover_color
- * 19. Post Background Color        - qs_content_post_bg_color
- * 20. Post Border Color            - qs_content_post_border_color
- * 21. Post Title Background Color  - qs_content_title_bg_color
- * 22. Button Primary Color         - qs_button_color_primary
- * 23. Button Secondary Color       - qs_button_secondary_primary
- * 24. Tag Background Color         - qs_content_tag_background_color
- * 25. Tag Font Color               - qs_content_tag_font_color 
- * 26. Biography Background Color   - qs_biography_background_color
- * 27. Biography Font Color         - qs_biography_font_color
+ * Can be filtered with {@see 'quicksand_color_schemes'} 
  *
  * @since Quicksand 0.2.1
  *
