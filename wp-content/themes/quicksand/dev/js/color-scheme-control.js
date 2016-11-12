@@ -9,6 +9,7 @@
         ready: function () {
             if ('color_scheme' === this.id) {
                 this.setting.bind('change', function (value) {
+                    
                     // other settings
                     api('qs_nav_fullwidth').set(colorScheme[value]['settings']['qs_nav_fullwidth']);
                     api('qs_header_fullwidth').set(colorScheme[value]['settings']['qs_header_fullwidth']);
@@ -158,6 +159,49 @@
                     api.control('qs_content_title_bg_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
+                    
+ 
+                    color = colors[21];
+                    api('qs_button_color_primary').set(color);
+                    api.control('qs_button_color_primary').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color);
+                    
+ 
+                    color = colors[22];
+                    api('qs_button_secondary_primary').set(color);
+                    api.control('qs_button_secondary_primary').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color);
+                    
+ 
+                    color = colors[23];
+                    api('qs_content_tag_background_color').set(color);
+                    api.control('qs_content_tag_background_color').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color);
+                    
+ 
+                    color = colors[24];
+                    api('qs_content_tag_font_color').set(color);
+                    api.control('qs_content_tag_font_color').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color);
+                    
+ 
+                    color = colors[25];
+                    api('qs_biography_background_color').set(color);
+                    api.control('qs_biography_background_color').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color);
+                    
+ 
+                    color = colors[26];
+                    api('qs_biography_font_color').set(color);
+                    api.control('qs_biography_font_color').container.find('.color-picker-hex')
+                            .data('data-default-color', color)
+                            .wpColorPicker('defaultColor', color); 
+                    
                 });
             }
         }
