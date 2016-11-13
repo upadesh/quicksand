@@ -632,9 +632,9 @@ if (!function_exists('quicksand_bootstrap_wrap_oembed')) :
      * @return string html
      */
     function quicksand_bootstrap_wrap_oembed($html) {
-        // strip width and height 
-//        $html = preg_replace('/(width|height)="\d*"\s/', "", $html);
-        $html = preg_replace('/(width|height)=["\']\d*["\']\s/', "", $html);
+        // strip width and height  
+        // problem when wordpress.tv is included
+//        $html = preg_replace('/(width|height)=["\']\d*["\']\s/', "", $html);
 
         // wrap in div element, so jquery.fitVids.js can catch it
         return'<div class="video">' . $html . '</div>';
