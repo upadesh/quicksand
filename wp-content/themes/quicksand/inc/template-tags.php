@@ -433,7 +433,7 @@ if (!function_exists('quicksand_the_entry_content')) :
             <div class="card-text"><?php echo the_content(); ?></div>
         </div>  
 
-        <!--displays page links for paginated posts (i.e. includes the <!–nextpage–>)--> 
+        <!--displays page links for paginated posts (i.e. includes the 'nextpage')--> 
         <?php
         quicksand_paginated_posts_paginator();
     }
@@ -463,7 +463,7 @@ if (!function_exists('quicksand_the_entry_content_video')) :
                 ?></p>
         </div>  
 
-        <!--displays page links for paginated posts (i.e. includes the <!–nextpage–>)--> 
+        <!--displays page links for paginated posts (i.e. includes the 'nextpage')--> 
         <?php
         quicksand_paginated_posts_paginator();
     }
