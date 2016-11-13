@@ -5589,7 +5589,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .text-xs-left, .post-pagination .post-navigation .nav-previous, .comment-navigation .nav-previous {
   text-align: left !important; }
 
-.text-xs-right, .post-pagination .post-navigation .nav-next, .comment-navigation .nav-next {
+.text-xs-right, .post-pagination .post-navigation .nav-previous + .nav-next, .post-pagination .post-navigation .nav-next, .comment-navigation .nav-next {
   text-align: right !important; }
 
 .text-xs-center {
@@ -5796,12 +5796,15 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     .post-pagination .post-navigation .nav-previous .fa {
       padding-right: 4.8px;
       padding-right: .3rem; }
-  .post-pagination .post-navigation .nav-next {
+  .post-pagination .post-navigation .nav-previous + .nav-next {
     display: inline-block;
     width: 50%; }
-    .post-pagination .post-navigation .nav-next .fa {
+    .post-pagination .post-navigation .nav-previous + .nav-next .fa {
       padding-left: 4.8px;
       padding-left: .3rem; }
+  .post-pagination .post-navigation .nav-next .fa {
+    padding-left: 4.8px;
+    padding-left: .3rem; }
 
 /* navigation: older / newer comments */
 .comment-navigation .nav-previous a {
