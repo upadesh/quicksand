@@ -8,31 +8,29 @@ jQuery(document).ready(function ($) {
 
     // add btn-classes to paginations 
     var addClasses = function () {
-        
+
         // === Btn-Classes ===
-        
+
         // pagination: list-view
         $('.quicksand-post-pagination-list-view .nav-links a').addClass('btn btn-secondary');
-        
+
         // pagination: single-view
         $('.post-pagination .nav-links a .meta-nav ').addClass('btn btn-secondary');
-        
+
         // pagination: paginated post
         $('.page-links a').addClass('btn btn-outline-secondary');
-        
+
         // comment: reply-link
-        $('.comment-list .comment-body .reply .comment-reply-link').addClass('btn btn-outline-secondary'); 
-        
+        $('.comment-list .comment-body .reply .comment-reply-link').addClass('btn btn-outline-secondary');
+
         // image: navigation
-        $('.image-navigation .nav-previous a, .image-navigation .nav-next a').addClass('btn btn-outline-secondary');   
-        
-         
-        
+        $('.image-navigation .nav-previous a, .image-navigation .nav-next a').addClass('btn btn-outline-secondary');
+
+
+
         // === Blockquote ===
         $('.post-quote blockquote').addClass('card-blockquote'); 
-        
-        
-        
+
     }
 
 
@@ -172,7 +170,7 @@ jQuery(document).ready(function ($) {
 
     // lightgallery
     initLightgallery();
-    
+
     // all paginations
     addClasses();
 });
