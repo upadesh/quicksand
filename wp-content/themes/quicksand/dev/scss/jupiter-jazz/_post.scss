@@ -121,13 +121,16 @@
                     text-decoration: none;
                 }
             }
-        }
+        } 
 
         /* edit post-link  */  
         .edit-link { 
             float: right;
             .fa { 
                 padding-right: .3rem; 
+            }
+            .post_edit_link {
+                text-decoration: none;
             }
         }
 

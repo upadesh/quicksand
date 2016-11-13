@@ -631,6 +631,8 @@ cite {
       .card .entry-footer .edit-link .fa {
         padding-right: 4.8px;
         padding-right: .3rem; }
+      .card .entry-footer .edit-link .post_edit_link {
+        text-decoration: none; }
 
 /* masonry-list-view*/
 @media (max-width: 991px) {
