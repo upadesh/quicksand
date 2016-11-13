@@ -1,16 +1,16 @@
 /*========= About Theme =========*/
 
 Theme Name: Quicksand
-Theme URI: https://github.com/piccard21/quicksand
+Theme URI: http://cafe-serendipity.com
 Version: 0.2.1
 Tested up to: WP 4.6
 
-Author: Andreas Stephan - Cafe Serendipity 
-Author URI: https://piccard.de/
+Author: Cafe Serendipity - Andreas Stephan
+Author URI: http://cafe-serendipity.com
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl.html
 -------------------------------------------------------
-Quicksand theme, Copyright 2016 piccard.de
+Quicksand theme, Copyright 2016 cafe-serendipity.com
 Quicksand WordPress theme is distributed under the terms of the GNU GPL 
 -------------------------------------------------------
 
@@ -20,10 +20,12 @@ Unless otherwise specified, all the theme files, scripts and images are licensed
 Quicksand theme uses:
 * FontAwesome (http://fontawesome.io) licensed under the SIL OFL 1.1 (http://scripts.sil.org/OFL)
 * Bootstrap (http://getbootstrap.com/) licensed under MIT license (https://github.com/twbs/bootstrap/blob/master/LICENSE) 
+* Flexslider (http://flexslider.woothemes.com/) licensed under GPLv2 (http://www.gnu.org/licenses/gpl-2.0.html) 
+* Lightgallery (https://sachinchoolur.github.io/lightGallery/) licensed under GNU AGPLv3 (https://github.com/twbs/bootstrap/blob/master/LICENSE) 
 
 /*========= Description =========*/
 
-Quicksand is a simple, flat and responsive based on the standard theme TwentySixteen. Use the Theme Options inside your Customizer to modify the theme for your needs. Its responsive design is based on Bootstrap 4, so your page will always look fine on any device. The theme also comes with social icon integration, using the fantastic fonts of font-awesome. For the nerds of you, there are also sass-files and a grunt-file included.
+Quicksand is a clean, flexible and responsive based on the standard theme TwentySixteen. Use the Theme Options inside your Customizer to modify the theme for your needs. Its responsive design is based on Bootstrap 4, so your page will always look fine on any device. Quicksand also comes with a social icon integration, using the fantastic fonts of font-awesome. You are able to use Google-Fonts, galleries can be displayed by the fantastic Plugin Lightgallery & if you feel to use a slider on your frontpage, no worries, Flexslider is integrated. For the nerds of you, there are also sass-files and a grunt-file included.
 
 /*========= Installation =========*/
 
@@ -37,8 +39,12 @@ Afterwards navigate to Appearance > Customize in your admin panel and customize 
 
 /*========= Theme Features =========*/
 
-* Bootstrap 4 integration
-* Font Awesome integration
+* Bootstrap 4 
+* Font Awesome 
+* Lightgallery 
+* Flexslider 
+* Google Fonts 
+* Fullwidth & thin design
 * Responsive design
 * Unlimited color variations
 * WordPress Theme Customizer support 
@@ -46,12 +52,9 @@ Afterwards navigate to Appearance > Customize in your admin panel and customize 
 * Drop-down Menu
 * Cross-browser compatibility
 * Threaded Comments
-* Gravatar ready 
-* Font Awesome icons 
+* Gravatar ready  
 
-/*========= Documentation =========*/
-
-Theme documentation is available on http://piccard.de
+/*========= Documentation =========*/ 
 
 
 /*========= Changelog=========*/  
