@@ -5,7 +5,7 @@ Theme URI: https://github.com/piccard21/quicksand
 Version: 0.2.1
 Tested up to: WP 4.6
 
-Author: Andreas Stephan
+Author: Andreas Stephan - Cafe Serendipity 
 Author URI: https://piccard.de/
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl.html
