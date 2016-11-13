@@ -7,7 +7,7 @@ Tested up to: WP 4.6
 
 Author: Cafe Serendipity - Andreas Stephan
 Author URI: http://cafe-serendipity.com
-License: GNU General Public License v3.0
+License: GNU General Public License v3.0 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 License URI: http://www.gnu.org/licenses/gpl.html
 -------------------------------------------------------
 Quicksand theme, Copyright 2016 cafe-serendipity.com
@@ -15,7 +15,7 @@ Quicksand WordPress theme is distributed under the terms of the GNU GPL
 -------------------------------------------------------
 
 /*========= Credits =========*/
-Unless otherwise specified, all the theme files, scripts and images are licensed under GPLv2 license
+Unless otherwise specified, all the theme files, scripts and images are licensed under GPLv3 license (https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 Quicksand theme uses:
 * FontAwesome (http://fontawesome.io) licensed under the SIL OFL 1.1 (http://scripts.sil.org/OFL)
