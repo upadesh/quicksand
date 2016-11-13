@@ -430,7 +430,7 @@ if (!function_exists('quicksand_the_entry_content')) :
         ?>   
         <!--quicksand-entry-content-default-->
         <div class="card-block quicksand-default-entry-content <?php echo $class; ?>"> 
-            <p class="card-text"><?php echo the_content(); ?></p>
+            <div class="card-text"><?php echo the_content(); ?></div>
         </div>  
 
         <!--displays page links for paginated posts (i.e. includes the <!–nextpage–>)--> 
