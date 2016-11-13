@@ -7,7 +7,7 @@ jQuery(document).ready(function ($) {
 
 
     // add btn-classes to paginations 
-    var addBtnClasses = function () {
+    var addClasses = function () {
         
         // === Btn-Classes ===
         
@@ -20,7 +20,7 @@ jQuery(document).ready(function ($) {
         // pagination: paginated post
         $('.page-links a').addClass('btn btn-outline-secondary');
         
-        // comment: edit-link
+        // comment: reply-link
         $('.comment-list .comment-body .reply .comment-reply-link').addClass('btn btn-outline-secondary'); 
         
         // image: navigation
@@ -174,5 +174,5 @@ jQuery(document).ready(function ($) {
     initLightgallery();
     
     // all paginations
-    addBtnClasses();
+    addClasses();
 });

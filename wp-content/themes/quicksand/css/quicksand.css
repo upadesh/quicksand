@@ -5775,15 +5775,15 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     background-image: none; }
 
 /*pagination: paginated posts*/
-.page-links .paged-link {
-  margin-right: 4.8px;
-  margin-right: .3rem; }
-
-.page-links a {
+.page-links > a {
   margin-right: 4.8px;
   margin-right: .3rem;
   background-image: none;
   background-color: transparent; }
+
+.page-links > span.paged-link {
+  margin-right: 4.8px;
+  margin-right: .3rem; }
 
 /* === navigation (older/newer) === */
 /*navigation: previous & next post*/

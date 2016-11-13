@@ -24,14 +24,15 @@
 
 /*pagination: paginated posts*/
 .page-links  {
-    .paged-link {
-        margin-right: .3rem;
-    }
-    a {
+    >a {
         margin-right: .3rem; 
         background-image: none;
         background-color: transparent; 
     } 
+
+    >span.paged-link {
+        margin-right: .3rem;
+    }
 } 
 
 
