@@ -99,7 +99,7 @@ function quicksand_get_color_schemes() {
                 'qs_biography_show' => 1,
                 'qs_sidebar_border_width' => 3,
                 'qs_content_masonry' => 1,
-                'qs_content_use_lightgallery' => 0,
+                'qs_content_use_lightgallery' => 1,
                 'qs_slider_enabled' => 0,
                 'qs_slider_fullwidth' => 0,
                 'qs_header_enabled' => 1,
