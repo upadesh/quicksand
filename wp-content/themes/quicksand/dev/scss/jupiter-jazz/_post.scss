@@ -118,10 +118,11 @@
                 padding: .2rem .5rem;
                 margin-right: .5rem; 
                 a {
+                    font-weight: normal;
                     text-decoration: none;
                 }
             }
-        } 
+        }
 
         /* edit post-link  */  
         .edit-link { 
@@ -137,7 +138,6 @@
     }
 }
 
-
 /* masonry-list-view*/
 .card-columns { 
     @media (max-width: 991px) {
@@ -150,6 +150,8 @@
         column-count: 3 !important;
     }
 }
+ 
+
 
 /* TODO: 
 workaround for tables 
@@ -160,6 +162,7 @@ maybe padding of cells smaller in media-query ... who knows????
         overflow: hidden;
     }
 }
+
 
 
 /* post-formats */

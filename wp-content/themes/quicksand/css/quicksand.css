@@ -675,50 +675,7 @@ maybe padding of cells smaller in media-query ... who knows????
 /**
  * Create some space & push main sections 
  */
-/* always push down content after header */
-/*.site-header {
-    @extend .mb-2; 
-}*/
 /*always leave some space to the footer-widgetbar*/
-/* post meta-data */
-.site-content-area {
-  /*    padding: .6rem;
-
-
-    .post-thumbnail img { 
-        @extend .mb-1;
-    } 
-
-    article {
-        @extend .mb-3;
-    } 
-
-    .site-sidebar {  
-        section.widget {
-            @extend .mb-2;
-            @extend .text-md-left; 
-            h2 {
-                @extend .text-lg-left; 
-                @extend .text-xs-center; 
-            }
-        } 
-    } */ }
-
-/*stick to the navbar when fullwidth 
-.site-header.container {
-    @extend .mt-2; 
-    padding-left: 0;
-    padding-right: 0;
-}
-*/
-/* 
-
-.site-footer-widgetbar {  
-    section.widget {
-        @extend .mb-2;
-        @extend .text-md-left; 
-    }
-}*/
 /*nav-arrows*/
 .flex-direction-nav a {
   height: 80px !important;

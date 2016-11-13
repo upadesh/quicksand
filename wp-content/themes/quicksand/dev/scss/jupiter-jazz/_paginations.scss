@@ -50,10 +50,16 @@
                 padding-right: .3rem; 
             }
         }
-        .nav-next {
+        .nav-previous + .nav-next {
             @extend .text-xs-right; 
             display: inline-block;
             width: 50%;
+            .fa { 
+                padding-left: .3rem; 
+            }
+        }
+        .nav-next {
+            @extend .text-xs-right;  
             .fa { 
                 padding-left: .3rem; 
             }

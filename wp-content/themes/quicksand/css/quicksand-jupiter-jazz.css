@@ -64,60 +64,6 @@ $gray-lighter:              $brown-lighter !default;
 $gray-lightest:             $brown-lightest !default;   */
 /* btn colors */
 /*use secondary for all submit & input-group buttons*/
-/*
- custom extend 
-a.btn.btn-secondary,
-.btn.btn-secondary a {
-    background: $white;
-    color: $brown-light !important;
-    border: none !important;
-    &:hover {
-        background: $brown-light;
-        color: $white !important;
-        border: none !important;
-        text-decoration: none;
-    }
-}  
-
-input.btn.btn-secondary {
-    background: $brown-light;
-    color: $white !important;
-    border: 1px solid $brown-light !important;
-    &:hover {
-        background: $white;
-        color: $brown-light !important;
-        border: none !important;
-        border: 1px solid $brown-light !important;
-    }
-}
-
-span.btn.btn-secondary{
-    background: $white;
-    color: $brown-light !important;
-    border: 1px solid $white !important;
-    &:hover {
-        background: $brown-light;
-        color: $white !important;
-        border: none !important;
-        text-decoration: none;
-    }
-}
-.btn.btn-outline-secondary {
-    a {
-        color: $brown-light !important;
-        &:hover {
-            background: $brown-light;
-            color: $white !important;
-            border: none !important;
-            text-decoration: none;
-        }
-    }
-}
-
-FIX: background secondary-btn
-.input-group-btn {
-    background: $brown-light;
-}*/
 /**
  * primary navigation 
  */
@@ -171,6 +117,9 @@ FIX: background secondary-btn
             width: 100%; }
             .site-navigation .navbar .collapse.navbar-toggleable-sm .nav-searchform form .row .input-group {
               width: 100%; } }
+
+#quicksand-top-search-form {
+  border-color: #fff; }
 
 /*mobile navigation*/
 @media (min-width: 767px) {
@@ -527,6 +476,9 @@ cite {
 .wp-caption-text {
   color: #000; }
 
+.bypostauthor {
+  outline: none; }
+
 /*
  * Main file for post-layout
  *
@@ -625,6 +577,7 @@ cite {
       margin-right: 8px;
       margin-right: .5rem; }
       .card .entry-footer .tag-links .tag a, .card .entry-footer .tag-links .sticky-post a {
+        font-weight: normal;
         text-decoration: none; }
     .card .entry-footer .edit-link {
       float: right; }
@@ -703,8 +656,6 @@ maybe padding of cells smaller in media-query ... who knows????
     list-style-type: none;
     padding-left: 0;
     /* comment edit-link */ }
-    .comments-area .comment-list ol {
-      list-style-type: none; }
     .comments-area .comment-list .comment-body {
       border: none;
       padding: 6.4px;
@@ -729,50 +680,7 @@ maybe padding of cells smaller in media-query ... who knows????
 /**
  * Create some space & push main sections 
  */
-/* always push down content after header */
-/*.site-header {
-    @extend .mb-2; 
-}*/
 /*always leave some space to the footer-widgetbar*/
-/* post meta-data */
-.site-content-area {
-  /*    padding: .6rem;
-
-
-    .post-thumbnail img { 
-        @extend .mb-1;
-    } 
-
-    article {
-        @extend .mb-3;
-    } 
-
-    .site-sidebar {  
-        section.widget {
-            @extend .mb-2;
-            @extend .text-md-left; 
-            h2 {
-                @extend .text-lg-left; 
-                @extend .text-xs-center; 
-            }
-        } 
-    } */ }
-
-/*stick to the navbar when fullwidth 
-.site-header.container {
-    @extend .mt-2; 
-    padding-left: 0;
-    padding-right: 0;
-}
-*/
-/* 
-
-.site-footer-widgetbar {  
-    section.widget {
-        @extend .mb-2;
-        @extend .text-md-left; 
-    }
-}*/
 /*nav-arrows*/
 .flex-direction-nav a {
   height: 80px !important;
@@ -1127,7 +1035,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: Abel;
+  font-family: Raleway;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -5121,7 +5029,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: Abel;
+  font-family: Raleway;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5204,7 +5112,7 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: Abel;
+  font-family: Raleway;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5905,7 +5813,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .text-xs-left, .post-pagination .post-navigation .nav-previous, .comment-navigation .nav-previous {
   text-align: left !important; }
 
-.text-xs-right, .post-pagination .post-navigation .nav-next, .comment-navigation .nav-next {
+.text-xs-right, .post-pagination .post-navigation .nav-previous + .nav-next, .post-pagination .post-navigation .nav-next, .comment-navigation .nav-next {
   text-align: right !important; }
 
 .text-xs-center {
@@ -6112,12 +6020,15 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     .post-pagination .post-navigation .nav-previous .fa {
       padding-right: 4.8px;
       padding-right: .3rem; }
-  .post-pagination .post-navigation .nav-next {
+  .post-pagination .post-navigation .nav-previous + .nav-next {
     display: inline-block;
     width: 50%; }
-    .post-pagination .post-navigation .nav-next .fa {
+    .post-pagination .post-navigation .nav-previous + .nav-next .fa {
       padding-left: 4.8px;
       padding-left: .3rem; }
+  .post-pagination .post-navigation .nav-next .fa {
+    padding-left: 4.8px;
+    padding-left: .3rem; }
 
 /* navigation: older / newer comments */
 .comment-navigation .nav-previous a {
