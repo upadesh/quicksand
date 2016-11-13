@@ -26,7 +26,7 @@ module.exports = function (grunt) {
                 files: [{
                         // Fonts - Google
                         expand: true,
-                        cwd: 'dev/fonts', 
+                        cwd: 'dev/fonts',
                         src: ['./**'],
                         dest: 'fonts/'
                     }, {
@@ -68,27 +68,20 @@ module.exports = function (grunt) {
                         src: 'node_modules/fitvids/dist/fitvids.min.js',
                         dest: 'js/fitvids.min.js',
                     }, {
-                        // CSS - lightgallery
-                        src: 'node_modules/lightgallery/dist/css/lightgallery.min.css',
-                        dest: 'css/lightgallery.min.css',
+                        //
+                        // ==== Lightgallery ====
+                        //  
+                        expand: true,
+                        cwd: 'node_modules/lightgallery/dist/',
+                        src: ['**'],
+                        dest: 'js/lightgallery/'
                     }, {
-                        // CSS - lightgallery
-                        src: 'node_modules/lightgallery/dist/css/lightgallery.css',
-                        dest: 'css/lightgallery.css',
-                    }, {
-                        // JS - lightgallery
-                        src: 'node_modules/lightgallery/dist/js/lightgallery.js',
-                        dest: 'js/lightgallery.js',
-                    }, {
-                        // JS - lightgallery
-                        src: 'node_modules/lightgallery/dist/js/lightgallery.min.js',
-                        dest: 'js/lightgallery.min.js',
-                    }, {
-                        // JS - lightgallery - lg-thumbnail
+                        //
+                        // ==== Lightgallery: lg-thumbnail ====
+                        //   
                         src: 'node_modules/lg-thumbnail/dist/lg-thumbnail.js ',
                         dest: 'js/lg-thumbnail.js',
                     }, {
-                        // JS - lightgallery - lg-thumbnail
                         src: 'node_modules/lg-thumbnail/dist/lg-thumbnail.min.js ',
                         dest: 'js/lg-thumbnail.min.js',
                     }, {
@@ -97,35 +90,40 @@ module.exports = function (grunt) {
                         cwd: 'dev/css',
                         src: ['*'],
                         dest: 'css/'
-                    }, { 
-                        // IMG - Flexslider 
-                        expand: true, 
-                        src: ['*'], 
+                    }, {
+                        //
+                        // ==== Flexslider ====
+                        //
+                        // Flexslider - IMG   
+                        expand: true,
+                        src: ['*'],
                         cwd: 'node_modules/flexslider/images/',
-                        dest: 'js/flexslider/images/', 
-                        filter: 'isFile' 
+                        dest: 'js/flexslider/images/',
+                        filter: 'isFile'
                     }, {
-                        // FONTS - Flexslider 
-                        expand: true, 
-                        src: ['*'], 
+                        // Flexslider - FONTS  
+                        expand: true,
+                        src: ['*'],
                         cwd: 'node_modules/flexslider/fonts/',
-                        dest: 'js/flexslider/fonts/', 
-                        filter: 'isFile' 
+                        dest: 'js/flexslider/fonts/',
+                        filter: 'isFile'
                     }, {
-                        // CSS - Flexslider
+                        // Flexslider - CSS  
                         src: 'node_modules/flexslider/flexslider.css',
                         dest: 'js/flexslider/flexslider.css',
                     }, {
-                        // JS - Flexslider 
+                        // Flexslider - JS 
                         expand: true,
                         cwd: 'node_modules/flexslider',
                         src: ['jquery.flexslider*.js'],
-                        filter: 'isFile', 
+                        filter: 'isFile',
                         dest: 'js/flexslider'
                     }, {
-                        // JS - all custom js
+                        //
+                        // ==== JS - all custom js ====
+                        //  
                         expand: true,
-                        filter: 'isFile', 
+                        filter: 'isFile',
                         cwd: 'dev/js',
                         src: ['*'],
                         dest: 'js/'
