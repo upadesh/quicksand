@@ -491,7 +491,7 @@ endif;
 if (!function_exists('quicksand_paginated_posts_paginator')) :
 
     /**
-     * Displays page links for paginated posts (i.e. includes the <!–nextpage–>)
+     * Displays page links for paginated posts (i.e. includes the 'nextpage')
      *
      * Create your own quicksand_paginated_posts_paginator() function to override in a child theme.
      *
