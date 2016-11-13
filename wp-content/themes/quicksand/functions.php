@@ -682,7 +682,7 @@ if (!function_exists('quicksand_modify_archive_title')) :
         } elseif (is_author()) {
             $title = sprintf(__("Author", 'quicksand') . ":<h6 class='card-subtitle text-muted'>%s</h6>", '<span class="vcard">' . get_the_author() . '</span>');
         } elseif (is_month()) {
-            $title = sprintf(__("Month", 'quicksand') . ":<h6 class='card-subtitle text-muted'>%s</h6>", get_the_date(_x('F Y', 'monthly archives date format')));
+            $title = sprintf(__("Month", 'quicksand') . ":<h6 class='card-subtitle text-muted'>%s</h6>", get_the_date(_x('F Y', 'monthly archives date format', 'quicksand')));
         }
 
         return $title;

@@ -8,7 +8,7 @@ if (class_exists('WP_Customize_Control')) {
                     array(
                         'name' => '_customize-dropdown-category-' . $this->id,
                         'echo' => 0,
-                        'show_option_none' => __('&mdash; Select &mdash;'),
+                        'show_option_none' => __('&mdash; Select &mdash;', 'quicksand'),
                         'option_none_value' => '0',
                         'selected' => $this->value(),
                     )
