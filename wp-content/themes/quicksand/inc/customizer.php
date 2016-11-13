@@ -298,6 +298,7 @@ function quicksand_customize_register($wp_customize) {
     // category
     $wp_customize->add_setting('qs_slider_category', array(
         'default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
     ));
 
     $wp_customize->add_control(new QuicksandCustomizeCategoryControl(
@@ -312,6 +313,7 @@ function quicksand_customize_register($wp_customize) {
     // count slides
     $wp_customize->add_setting('qs_slider_count', array(
         'default' => '6',
+        'sanitize_callback' => 'prefix_sanitize_integer',
     ));
 
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'slider_count', array(
@@ -479,7 +481,7 @@ function quicksand_customize_register($wp_customize) {
 
     // meta
     $wp_customize->add_setting(
-            'qs_content_show_meta', array('default' => $colorSchemeDefault['settings']['qs_content_show_meta'],
+        'qs_content_show_meta', array('default' => $colorSchemeDefault['settings']['qs_content_show_meta'],
         'sanitize_callback' => 'quicksand_sanitize_meta_checkboxes'
     ));
 
@@ -766,8 +768,8 @@ function quicksand_customize_register($wp_customize) {
     $bgContent = isset($bgColorContent) ? $bgColorContent : $colorSchemeDefault['colors'][1];
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_border_color', array(
         'label' => __('Widget Border Color', 'quicksand'),
-        'section' => 'quicksand_sidebar',
-        'description' => __('For a nice effect choose the same color like Content-Background (' . $bgContent . ') ...', 'quicksand'),
+        'section' => 'quicksand_sidebar', 
+        'description' => sprintf_(__('For a nice effect choose the same color like Content-Background (%s) ...', 'quicksand'), $bgContent),
         'settings' => 'qs_sidebar_border_color'
     )));
 
