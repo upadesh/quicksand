@@ -220,7 +220,7 @@ if (!function_exists('quicksand_entry_title')) :
 
                 <?php
             else :
-                the_title(sprintf('<h1 class="card-title %s"><a href="%s" rel="bookmark">', esc_attr($class), esc_url(get_permalink())), '</a></h1>');
+                the_title(sprintf('<h2 class="card-title %s"><a href="%s" rel="bookmark">', esc_attr($class), esc_url(get_permalink())), '</a></h2>');
                 ?> 
             <?php endif; ?>
         </header><!-- .entry-header --> 
@@ -253,9 +253,9 @@ if (!function_exists('quicksand_entry_title_postformat_link')) :
             <?php endif; ?>
 
             <div class="post-link">  
-                <h1 class="card-title <?php echo $class; ?>">
+                <h2 class="card-title <?php echo $class; ?>">
                     <a href="<?php echo get_url_in_content(get_the_content()); ?>" target="_blank"><i class="fa fa-link" aria-hidden="true"></i> <?php the_title(); ?></a> 
-                </h1> 
+                </h2> 
             </div><!-- .post-link -->
         </header><!-- .entry-header --> 
         <?php
@@ -287,9 +287,9 @@ if (!function_exists('quicksand_entry_title_postformat_audio')) :
             <?php endif; ?>
 
             <div class="post-link">  
-                <h1 class="card-title <?php echo $class; ?>">
+                <h2 class="card-title <?php echo $class; ?>">
                     <a href="<?php echo esc_attr(get_the_permalink()); ?>"><i class="fa fa-music" aria-hidden="true"></i> <?php the_title(); ?></a> 
-                </h1> 
+                </h2> 
             </div><!-- .post-link -->
         </header><!-- .entry-header --> 
         <?php

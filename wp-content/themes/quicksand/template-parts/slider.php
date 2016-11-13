@@ -34,12 +34,12 @@ if ($the_query->have_posts()) {
                     esc_html(the_post_thumbnail());
                 endif;
 
-                echo '<a href="' . get_permalink() . '"><div class="flex-caption">';
+                echo '<a href="' . get_permalink() . '"><div class="flex-caption">'; 
                 if (get_the_title() != '')
-                    echo '<h2 class="entry-title">' . get_the_title() . '</h2>';
+                    echo '<h2 class="entry-title">' . esc_html(get_the_title()) . '</h2>';
                 if (get_the_excerpt() != '')
-                    echo '<div class="excerpt">' . get_the_excerpt() . '</div>';
-                echo '</div>';
+                    echo '<div class="excerpt">' . esc_html(strip_tags(get_the_excerpt())) . '</div>';
+                echo '</div>'; 
                 echo '</a></li>';
             endwhile;
             ?>
