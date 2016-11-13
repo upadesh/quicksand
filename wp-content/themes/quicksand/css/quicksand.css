@@ -471,6 +471,9 @@ cite {
 .wp-caption-text {
   color: #000; }
 
+.bypostauthor {
+  outline: none; }
+
 /*
  * Main file for post-layout
  *
