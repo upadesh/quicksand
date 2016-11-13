@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Quicksand\n"
-"POT-Creation-Date: 2016-11-13 13:55+0100\n"
-"PO-Revision-Date: 2016-11-13 13:56+0100\n"
+"POT-Creation-Date: 2016-11-13 13:57+0100\n"
+"PO-Revision-Date: 2016-11-13 13:57+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -516,6 +516,11 @@ msgstr "Suche-Resultate für:"
 msgid "%s"
 msgstr "%s"
 
+#: searchform.php:14 template-parts/navigation-primary.php:37
+#: template-parts/navigation-primary.php:53
+msgid "Search ..."
+msgstr "Suche …"
+
 #: single.php:44
 msgid ""
 "<span class=\"meta-nav btn btn-outline-secondary\">Published in </span><span "
@@ -566,11 +571,6 @@ msgid ""
 msgstr ""
 "Es sieht so aus, als ob wir nicht das finden könnten, wonach Sie gesucht "
 "haben. Möglicherweise hilft eine Suche."
-
-#: template-parts/navigation-primary.php:37
-#: template-parts/navigation-primary.php:53
-msgid "Search..."
-msgstr ""
 
 #: template-parts/navigation-primary.php:39
 msgid "Search"
