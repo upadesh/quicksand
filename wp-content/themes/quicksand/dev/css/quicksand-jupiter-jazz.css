@@ -633,17 +633,21 @@ cite {
         padding-right: .3rem; }
 
 /* masonry-list-view*/
-/*.card-columns { 
-    @media (max-width: 991px) {
-        column-count: 1 !important;
-    } 
-    @media (min-width: 992px) {
-        column-count: 2 !important;
-    }
-    @media (min-width: 1200px) {
-        column-count: 3 !important;
-    }
-}*/
+@media (max-width: 991px) {
+  .card-columns {
+    -moz-column-count: 1 !important;
+         column-count: 1 !important; } }
+
+@media (min-width: 992px) {
+  .card-columns {
+    -moz-column-count: 2 !important;
+         column-count: 2 !important; } }
+
+@media (min-width: 1200px) {
+  .card-columns {
+    -moz-column-count: 3 !important;
+         column-count: 3 !important; } }
+
 /* TODO: 
 workaround for tables 
 maybe padding of cells smaller in media-query ... who knows????

@@ -569,6 +569,7 @@ cite {
       margin-right: 8px;
       margin-right: .5rem; }
       .card .entry-footer .tag-links .tag a, .card .entry-footer .tag-links .sticky-post a {
+        font-weight: normal;
         text-decoration: none; }
     .card .entry-footer .edit-link {
       float: right; }
