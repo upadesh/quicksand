@@ -11,6 +11,7 @@
 .sticky-post {
     @extend .tag;
     @extend .tag-danger; 
+    font-weight: normal !important; 
 } 
 
 

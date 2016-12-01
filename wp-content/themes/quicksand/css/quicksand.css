@@ -482,6 +482,9 @@ cite {
  * @see     http://www.wpbeginner.com/wp-themes/default-wordpress-generated-css-cheat-sheet-for-beginners/
  */
 /* featured sticky post */
+.sticky-post {
+  font-weight: normal !important; }
+
 /* post-meta */
 .entry-meta {
   font-size: 14.4px;
