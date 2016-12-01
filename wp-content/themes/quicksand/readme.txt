@@ -2,7 +2,7 @@
 
 Theme Name: Quicksand
 Theme URI: http://cafe-serendipity.com
-Version: 0.2.1
+Version: 0.2.2
 Tested up to: WP 4.6
 
 Author: Cafe Serendipity - Andreas Stephan
