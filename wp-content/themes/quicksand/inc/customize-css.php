@@ -80,13 +80,16 @@ if (!function_exists('quicksand_customizer_css')) :
             .open > .btn-secondary.dropdown-toggle.focus {
                 color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors']['qs_button_color_secondary']); ?>;
                 background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary']); ?>;
-                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary']); ?>; }
+                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary']); ?>; 
+            }
             .btn-secondary.disabled:focus, .btn-secondary.disabled.focus, .btn-secondary:disabled:focus, .btn-secondary:disabled.focus {
                 background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary']); ?>;
-                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary']); ?>; }
+                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary']); ?>; 
+            }
             .btn-secondary.disabled:hover, .btn-secondary:disabled:hover {
                 background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary']); ?>;
-                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary']); ?>; }
+                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary']); ?>; 
+            }
 
 
 
@@ -164,7 +167,7 @@ if (!function_exists('quicksand_customizer_css')) :
             .navbar-light .navbar-nav .open>.nav-link:visited,
             .navbar-light .navbar-nav .open>.nav-link:focus,
             .navbar-light .navbar-nav .open>.nav-link:active {
-                color: <?php echo get_theme_mod('qs_nav_link_color', $colorScheme['colors']['qs_nav_link_color']); ?>;
+                color: <?php echo get_theme_mod('qs_nav_link_color', $colorScheme['colors']['qs_nav_link_color']); ?> !important;
             }  
 
             .site-nav-container .menu-item .dropdown-item.active { 
