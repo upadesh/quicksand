@@ -116,14 +116,19 @@ if (!function_exists('quicksand_customizer_css')) :
                 color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors']['qs_button_color_secondary']); ?>;
                 background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary']); ?>;
                 border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary']); ?>; }
-            .btn.btn-outline-secondary:active:hover, .btn.btn-outline-secondary:active:focus,  .btn.btn-outline-secondary:active.focus,.btn.btn-outline-secondary.active:hover,  .btn.btn-outline-secondary.active:focus,.btn.btn-outline-secondary.active.focus,
+            .btn.btn-outline-secondary:active:hover, 
+            .btn.btn-outline-secondary:active:focus,  
+            .btn.btn-outline-secondary:active.focus,
+            .btn.btn-outline-secondary.active:hover,  
+            .btn.btn-outline-secondary.active:focus,
+            .btn.btn-outline-secondary.active.focus,
             .open > .btn.btn-outline-secondary.dropdown-toggle:hover, 
             .open > .btn.btn-outline-secondary.dropdown-toggle:focus, 
-            .open > a.dropdown-toggle:focus,
             .open > .btn.btn-outline-secondary.dropdown-toggle.focus {
                 color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors']['qs_button_color_secondary']); ?>;
                 background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary']); ?>;
-                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary']); ?>; }
+                border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary']); ?>; 
+            }
             .btn.btn-outline-secondary.disabled:focus, .btn.btn-outline-secondary.disabled.focus, .btn.btn-outline-secondary:disabled:focus,.btn.btn-outline-secondary:disabled.focus{
                 border-color: #d6e1dd; }
             .btn.btn-outline-secondary.disabled:hover,  .btn.btn-outline-secondary:disabled:hover {
