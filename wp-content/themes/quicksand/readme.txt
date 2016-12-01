@@ -61,3 +61,5 @@ Afterwards navigate to Appearance > Customize in your admin panel and customize 
 
 
 /*========= Roadmap=========*/  
+ * Fix Menu
+ * New Slider
