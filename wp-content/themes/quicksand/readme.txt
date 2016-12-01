@@ -60,7 +60,8 @@ Afterwards navigate to Appearance > Customize in your admin panel and customize 
 /*========= Changelog=========*/ 
 
 * nav-background-color on dropdowns on focus has wrong color
-* stickx-css changed
+* sticky-css change font-weight
+* card-header for pages has wrong class
 
 
 /*========= Roadmap=========*/ 
