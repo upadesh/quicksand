@@ -60,6 +60,4 @@ Afterwards navigate to Appearance > Customize in your admin panel and customize 
 /*========= Changelog=========*/  
 
 
-/*========= Roadmap=========*/  
- * Fix Menu
- * New Slider
+/*========= Roadmap=========*/ 

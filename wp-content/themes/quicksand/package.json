@@ -1,11 +1,11 @@
 {
     "name": "quicksand",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "Wordpress theme built with Bootstrap 4 ",
     "main": "Gruntfile.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "preinstall": "grunt grunt-cli coffee-script jshint node-gyp"
+        "preinstall": "grunt"
     },
     "repository": {
         "type": "git",
