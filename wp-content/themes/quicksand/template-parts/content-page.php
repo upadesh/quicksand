@@ -14,7 +14,7 @@
     <!--post thumbnail-->
     <?php quicksand_entry_thumbnail(); ?> 
 
-    <header class="card-block entry-header">
+    <header class="card-header entry-header">
         <?php the_title('<h1 class="card-title entry-title">', '</h1>'); ?>
     </header><!-- .entry-header --> 
     <div class="card-block entry-content">
