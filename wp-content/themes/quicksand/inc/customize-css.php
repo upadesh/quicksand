@@ -138,7 +138,6 @@ if (!function_exists('quicksand_customizer_css')) :
                 border-color: #d6e1dd; } 
 
 
-
             /* === navigation === */
             .site-navigation,
             .site-nav-container nav.navbar,

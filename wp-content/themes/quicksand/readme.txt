@@ -63,6 +63,7 @@ Afterwards navigate to Appearance > Customize in your admin panel and customize 
 * sticky-css change font-weight
 * card-header for pages has wrong class
 * navbar dropdown css wrong
+* navbar-toggler border-color 
 
 
 /*========= Roadmap=========*/ 

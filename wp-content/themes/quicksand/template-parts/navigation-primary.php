@@ -13,7 +13,7 @@ $primary_nav_options = array(
 
 <div class="site-navigation"> 
     <nav class="navbar navbar-light bg-faded site-nav">
-        <button class="navbar-toggler hidden-md-up float-md-left" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsing-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler hidden-md-up float-xs-left" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsing-navbar" aria-expanded="false" aria-label="Toggle navigation">
             &#9776;
         </button>
         <!--search & close buttons in mobile-->
@@ -25,7 +25,8 @@ $primary_nav_options = array(
                 <i class="fa fa-search" aria-hidden="true"></i>
             </a> 
         </div>
-
+        <!--workaround for safari-->
+        <div style="clear:both"></div>
 
 
         <!--searchform in navbar-mobile-->
