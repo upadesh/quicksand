@@ -19,7 +19,7 @@ $primary_nav_options = array(
         <!--search & close buttons in mobile-->
         <div class="nav-search-mobile-wrapper float-xs-right"> 
             <a class="btn btn-secondary nav-search-close-mobile hidden-xs-up" href="#" aria-label="close">
-                <i class="fa fa-times" aria-hidden="true"></i>
+                <i class="fa fa-times fa-lg" aria-hidden="true"></i>
             </a> 
             <a class="btn btn-secondary nav-search-mobile hidden-md-up"  href="#" aria-label="search">
                 <i class="fa fa-search" aria-hidden="true"></i>
