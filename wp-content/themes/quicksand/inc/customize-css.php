@@ -299,8 +299,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 border-left: 1px solid <?php echo get_theme_mod('qs_content_post_border_color', $colorScheme['colors']['qs_content_post_border_color']); ?>; 
             }
 
-            .card-header.comments-title,
-            .comments-area ol .comment-body {
+            .card-header.comments-title {
                 background: <?php echo get_theme_mod('qs_content_title_bg_color', $colorScheme['colors']['qs_content_title_bg_color']); ?>; 
             }
 

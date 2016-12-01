@@ -667,6 +667,8 @@ maybe padding of cells smaller in media-query ... who knows????
           padding-right: 4.8px;
           padding-right: .3rem;
           content: "\f112"; }
+    .comments-area .comment-list .children {
+      list-style-type: none; }
     .comments-area .comment-list .comment-edit-link:before {
       font-family: FontAwesome;
       content: "\f040";

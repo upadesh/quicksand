@@ -40,6 +40,10 @@
                 }
             }
         }  
+        
+       .children { 
+            list-style-type: none;
+        }
 
         /* comment edit-link */
         .comment-edit-link:before {
