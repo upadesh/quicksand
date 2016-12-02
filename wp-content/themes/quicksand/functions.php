@@ -653,7 +653,7 @@ if (!function_exists('quicksand_modify_read_more_link')) :
      * @return type
      */
     function quicksand_modify_read_more_link() {
-        return '<a class="read-more-link btn btn-outline-secondary" href="' . get_permalink() . '">' . __('Read more', 'quicksand') . '</a>';
+        return '<p><a class="read-more-link btn btn-outline-secondary" href="' . get_permalink() . '">' . __('Read more', 'quicksand') . '</a></p>';
     }
 
 endif;

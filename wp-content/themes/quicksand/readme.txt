@@ -67,6 +67,7 @@ Afterwards navigate to Appearance > Customize in your admin panel and customize 
 * no list-style-type in comments 
 * full-width-tamplate changed
 * slider font-size adjusted in mobile-mode
+* header-show-conditional fixed
 
 
 /*========= Roadmap=========*/ 
