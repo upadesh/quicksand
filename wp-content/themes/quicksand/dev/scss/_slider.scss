@@ -111,8 +111,23 @@
 
 @media screen and (max-width: 768px) {
     .flex-caption {
-        display: none;
+        .excerpt {
+            font-size: .8rem;
+        }
     }
-    .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
-    .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
+/*    .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
+    .flex-direction-nav .flex-next { opacity: 1; right: 10px;}*/
 }  
+
+@media screen and (max-width: 576px) {
+    .flex-caption {
+        .excerpt {
+            display: none !important;
+        }
+    }
+}  
+
+
+
+
+            

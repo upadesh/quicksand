@@ -629,7 +629,6 @@ endif;
 
 
 
-//TODO: card -> wo ist ein bsp????
 if (!function_exists('quicksand_entry_excerpt_more') && !is_admin()) :
 
     /**
@@ -722,6 +721,8 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
 
 
 

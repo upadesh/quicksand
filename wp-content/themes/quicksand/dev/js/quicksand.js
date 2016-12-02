@@ -1,8 +1,6 @@
 //custom JS for initializing & more
 
-jQuery(document).ready(function ($) {
-    // TODO: oo
-
+jQuery(document).ready(function ($) { 
 //    console.info(colorScheme);
 
 
