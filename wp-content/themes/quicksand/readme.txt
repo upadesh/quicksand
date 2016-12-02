@@ -68,6 +68,7 @@ Afterwards navigate to Appearance > Customize in your admin panel and customize 
 * full-width-tamplate changed
 * slider font-size adjusted in mobile-mode
 * header-show-conditional fixed
+* margin of navbar-dropdown adjusted
 
 
 /*========= Roadmap=========*/ 
