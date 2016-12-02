@@ -36,10 +36,10 @@
             <!-- header(-image)-->
             <?php
             // show header in general
-            
+
             $isHeaderEnabled = get_theme_mod('qs_header_enabled', quicksand_get_color_scheme()['settings']['qs_header_enabled']);
-            $hideWhenSliderEnabled= get_theme_mod('qs_header_hide_when_slider_enabled', quicksand_get_color_scheme()['settings']['qs_header_hide_when_slider_enabled']);
-        
+            $hideWhenSliderEnabled = get_theme_mod('qs_header_hide_when_slider_enabled', quicksand_get_color_scheme()['settings']['qs_header_hide_when_slider_enabled']);
+
             if ($isHeaderEnabled && !$hideWhenSliderEnabled):
 
                 // show header only on front-page
@@ -92,6 +92,20 @@
 
 
         <!-- site-main-container --> 
-        <div class="<?php echo esc_attr(get_theme_mod('qs_content_fullwidth', quicksand_get_color_scheme()['settings']['qs_content_fullwidth']) ? 'container-fluid' : 'container'); ?> site-main-container"> 
+        <?php
+        $isFullWidth = FALSE;
+        $fullWidthTemplate = '';
+
+        if (get_theme_mod('qs_content_fullwidth', quicksand_get_color_scheme()['settings']['qs_content_fullwidth'])) {
+            $isFullWidth = TRUE;
+        } elseif (is_page_template('template-fullwidth.php')) {
+            $isFullWidth = TRUE;
+            $fullWidthTemplate = ' qs-full-width-template';
+        }
+
+        $container = $isFullWidth ? 'container-fluid' : 'container';
+        $container .= $fullWidthTemplate;
+        ?>
+        <div class="<?php echo esc_attr($container); ?> site-main-container"> 
             <!--  site-content --> 
             <div id="content" class="site-content"> 

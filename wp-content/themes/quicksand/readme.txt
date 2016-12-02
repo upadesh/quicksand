@@ -64,6 +64,8 @@ Afterwards navigate to Appearance > Customize in your admin panel and customize 
 * card-header for pages has wrong class
 * navbar dropdown css wrong
 * navbar-toggler border-color 
+* no list-style-type in comments 
+* full-width-tamplate changed
 
 
 /*========= Roadmap=========*/ 

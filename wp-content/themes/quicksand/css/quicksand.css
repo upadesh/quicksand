@@ -678,6 +678,15 @@ maybe padding of cells smaller in media-query ... who knows????
       padding-right: .3rem; }
 
 /**
+ * Page: full-width-template
+ */
+.site-main-container.qs-full-width-template {
+  padding: 0;
+  margin-top: 0 !important; }
+  .site-main-container.qs-full-width-template .card.qs-site-full-width {
+    border: none; }
+
+/**
  * Create some space & push main sections 
  */
 /*always leave some space to the footer-widgetbar*/

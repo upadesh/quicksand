@@ -9,16 +9,16 @@
 ?> 
 
 <!--template: content-page--> 
-<article id="post-<?php the_ID(); ?>" <?php post_class("card site-full-width"); ?>> 
+<article id="post-<?php the_ID(); ?>" <?php post_class("card qs-site-full-width"); ?>> 
 
-    <header class="card-block entry-header">
+    <header class="card-header entry-header">
         <?php the_title('<h1 class="card-title entry-title">', '</h1>'); ?>
     </header><!-- .entry-header --> 
 
     <!--post thumbnail-->
     <?php quicksand_entry_thumbnail(); ?> 
 
-    <div class="card-block entry-content">
+    <div class="">
         <?php
         the_content();
 
