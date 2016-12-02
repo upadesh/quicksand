@@ -28,7 +28,6 @@ jQuery(document).ready(function ($) {
 
         // === Blockquote ===
         $('.post-quote blockquote').addClass('card-blockquote'); 
-
     }
 
 
@@ -148,6 +147,29 @@ jQuery(document).ready(function ($) {
         });
     }
 
+
+        
+    // margin of the navbar-dropdown
+    var adjustNavDropDown = function () {
+        
+        var marginTop = 16;
+        var fontSize = $('body').css('font-size').replace("px", ""); 
+        
+        if(fontSize > 16) {
+            var diff = fontSize-16;
+            marginTop = 16-diff;
+        }
+        else if (fontSize < 16){
+            var diff = 16-fontSize;
+            marginTop = 16+diff+1;
+        } 
+        
+        $('.site-navigation .navbar .dropdown-menu').css('margin-top', marginTop + 'px');
+    }
+
+
+
+
     // === initialiase scripts ===   
     // searchbar
     initSearchBar();
@@ -171,4 +193,7 @@ jQuery(document).ready(function ($) {
 
     // all paginations
     addClasses();
+    
+    // adjust margin of dropDown
+    adjustNavDropDown();
 });
