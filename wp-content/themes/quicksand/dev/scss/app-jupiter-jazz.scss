@@ -1,5 +1,7 @@
 /**
- * Color-Theme: Jupiter Jazz 
+ * Color-Theme: Asteriod Blues
+ *
+ * this is the DEFAULT color-scheme
  *
  * If you want to create your own color-scheme do the following:
  *  - copy all files to a folder, which is named after a Cowboy-Bebob-Series
@@ -16,14 +18,12 @@
  */  
 
 
-
-@import 'fonts'; 
-
+@import 'jupiter-jazz/fonts';
 @import 'grids';
-@import 'colors';
+@import 'jupiter-jazz/colors';
 
 /* change bootsrap-vars in here */
-@import 'variables';
+@import 'jupiter-jazz/variables';
 
 @import 'navbar';
 @import 'header';
@@ -36,8 +36,10 @@
 @import 'post';
 @import 'biography';
 @import 'comments';
+@import 'page-full-width';
 
 @import 'scaffold';
+
 @import 'slider';
 
 /* import bootstrap at the very last end, so we can use it's variables */

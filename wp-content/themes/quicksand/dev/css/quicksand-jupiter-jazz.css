@@ -1,5 +1,7 @@
 /**
- * Color-Theme: Jupiter Jazz 
+ * Color-Theme: Asteriod Blues
+ *
+ * this is the DEFAULT color-scheme
  *
  * If you want to create your own color-scheme do the following:
  *  - copy all files to a folder, which is named after a Cowboy-Bebob-Series
@@ -79,9 +81,12 @@ $gray-lightest:             $brown-lightest !default;   */
     padding: 5px 0; }
     .site-navigation .navbar {
       height: 60px;
-      padding: 0 1rem; }
-      .site-navigation .navbar li .dropdown-menu {
-        margin: 16px 0 0; }
+      padding: 0 1rem;
+      /*            li { 
+                .dropdown-menu { 
+                    margin: 16px 0 0;
+                } 
+            }*/ }
       .site-navigation .navbar .collapse.navbar-toggleable-sm .nav-content {
         display: -ms-flexbox;
         display: flex;
@@ -487,6 +492,9 @@ cite {
  * @see     http://www.wpbeginner.com/wp-themes/default-wordpress-generated-css-cheat-sheet-for-beginners/
  */
 /* featured sticky post */
+.sticky-post {
+  font-weight: normal !important; }
+
 /* post-meta */
 .entry-meta {
   font-size: 14.4px;
@@ -669,6 +677,8 @@ maybe padding of cells smaller in media-query ... who knows????
           padding-right: 4.8px;
           padding-right: .3rem;
           content: "\f112"; }
+    .comments-area .comment-list .children {
+      list-style-type: none; }
     .comments-area .comment-list .comment-edit-link:before {
       font-family: FontAwesome;
       content: "\f040";
@@ -676,6 +686,15 @@ maybe padding of cells smaller in media-query ... who knows????
       padding-left: 1rem;
       padding-right: 4.8px;
       padding-right: .3rem; }
+
+/**
+ * Page: full-width-template
+ */
+.site-main-container.qs-full-width-template {
+  padding: 0;
+  margin-top: 0 !important; }
+  .site-main-container.qs-full-width-template .card.qs-site-full-width {
+    border: none; }
 
 /**
  * Create some space & push main sections 
@@ -762,14 +781,14 @@ maybe padding of cells smaller in media-query ... who knows????
     max-height: 30rem; } }
 
 @media screen and (max-width: 768px) {
-  .flex-caption {
-    display: none; }
-  .flex-direction-nav .flex-prev {
-    opacity: 1;
-    left: 10px; }
-  .flex-direction-nav .flex-next {
-    opacity: 1;
-    right: 10px; } }
+  .flex-caption .excerpt {
+    font-size: .8rem; }
+  /*    .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
+    .flex-direction-nav .flex-next { opacity: 1; right: 10px;}*/ }
+
+@media screen and (max-width: 576px) {
+  .flex-caption .excerpt {
+    display: none !important; } }
 
 /* import bootstrap at the very last end, so we can use it's variables */
 /*!
