@@ -59,13 +59,14 @@ Afterwards navigate to Appearance > Customize in your admin panel and customize 
 
 /*========= Changelog=========*/ 
 
-* nav-background-color on dropdowns on focus has wrong color
+* nav-background-color on dropdowns when focused has wrong color
 * sticky-css change font-weight
 * card-header for pages has wrong class
 * navbar dropdown css wrong
 * navbar-toggler border-color 
 * no list-style-type in comments 
 * full-width-tamplate changed
+* slider font-size adjusted in mobile-mode
 
 
 /*========= Roadmap=========*/ 

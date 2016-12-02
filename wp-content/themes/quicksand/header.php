@@ -38,13 +38,18 @@
             // show header in general
 
             $isHeaderEnabled = get_theme_mod('qs_header_enabled', quicksand_get_color_scheme()['settings']['qs_header_enabled']);
-            $hideWhenSliderEnabled = get_theme_mod('qs_header_hide_when_slider_enabled', quicksand_get_color_scheme()['settings']['qs_header_hide_when_slider_enabled']);
 
-            if ($isHeaderEnabled && !$hideWhenSliderEnabled):
+            if ($isHeaderEnabled):
+                // hide header on frontpage when slider is enabled
+                $hideWhenSliderIsEnabled = get_theme_mod('qs_header_hide_when_slider_enabled', quicksand_get_color_scheme()['settings']['qs_header_hide_when_slider_enabled']);
+                $isSliderEnabled = get_theme_mod('qs_slider_enabled', quicksand_get_color_scheme()['settings']['qs_slider_enabled']);
+                $isFront = is_home() || is_front_page();
 
                 // show header only on front-page
-                $showOnlyOnFront = get_theme_mod('qs_header_show_front', quicksand_get_color_scheme()['settings']['qs_header_show_front']);
-                if (!$showOnlyOnFront || ( (is_home() || is_front_page() ) && $showOnlyOnFront )) :
+                $showOnlyOnFrontPage = get_theme_mod('qs_header_show_front', quicksand_get_color_scheme()['settings']['qs_header_show_front']);
+
+                $showHeader =  ($isFront && $showOnlyOnFrontPage && (!$hideWhenSliderIsEnabled && $isSliderEnabled)) || (!$isFront && !$showOnlyOnFrontPage);
+                if ($showHeader) :
                     ?>
 
                     <!-- site-info -->
@@ -65,7 +70,7 @@
                             <div  class="site-info-wrapper jumbotron"> 
                                 <h1 class="display-3 site-title">
                                     <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-                                </h1> 
+                                </h1>
                                 <hr class="m-y-2">
                                 <p class="lead site-description"><?php esc_html(bloginfo('description', 'display')); ?></p> 
                             </div>
@@ -79,7 +84,6 @@
 
         <!-- slider-->
         <?php
-        $isSliderEnabled = get_theme_mod('qs_slider_enabled', quicksand_get_color_scheme()['settings']['qs_slider_enabled']);
         if ($isSliderEnabled && (is_home() || is_front_page() )) :
             ?> 
             <div class="<?php echo esc_attr(get_theme_mod('qs_slider_fullwidth', quicksand_get_color_scheme()['settings']['qs_slider_fullwidth']) ? '' : 'container'); ?> quicksand-slider-header-wrapper"> 
