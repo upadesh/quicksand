@@ -387,13 +387,6 @@
   padding-right: .5rem;
   content: "\f07c"; }
 
-/* widget: custom categories*/
-.widget.quicksand-categories-custom li:before {
-  font-family: FontAwesome;
-  padding-right: 8px;
-  padding-right: .5rem;
-  content: "\f07c"; }
-
 /* widget: search */
 .widget.widget_search {
   border: none !important; }
@@ -409,6 +402,20 @@
   .widget.widget_calendar td, .widget.widget_calendar th {
     padding: 8px;
     padding: .5rem; }
+
+/* widget: custom categories*/
+.widget.quicksand-categories-custom li:before {
+  font-family: FontAwesome;
+  padding-right: 8px;
+  padding-right: .5rem;
+  content: "\f07c"; }
+
+/* widget: custom archives*/
+.widget.quicksand-archives-custom li:before {
+  font-family: FontAwesome;
+  padding-right: 8px;
+  padding-right: .5rem;
+  content: "\f073"; }
 
 /*
  * widgets

@@ -58,8 +58,7 @@
     li:before {
         font-family: FontAwesome; 
         padding-right: .5rem;
-        content: "\f073";
-
+        content: "\f073"; 
     }
 }  
 
@@ -73,19 +72,6 @@
 
     }
 }  
-
-
-/* widget: custom categories*/
-.widget.quicksand-categories-custom {
-    li:before {
-        font-family: FontAwesome; 
-        padding-right: .5rem;
-        content: "\f07c";
-
-    }
-}  
-
-
 
 
 /* widget: search */
@@ -114,4 +100,28 @@
     }
 } 
 
+
+
+
+
+/* widget: custom categories*/
+.widget.quicksand-categories-custom {
+    li:before {
+        font-family: FontAwesome; 
+        padding-right: .5rem;
+        content: "\f07c";
+    }
+}  
+
+
+
+
+/* widget: custom archives*/
+.widget.quicksand-archives-custom {
+    li:before {
+        font-family: FontAwesome; 
+        padding-right: .5rem;
+        content: "\f073"; 
+    }
+}  
 

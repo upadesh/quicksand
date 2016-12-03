@@ -221,6 +221,7 @@ if (!function_exists('quicksand_widgets_init')) :
 
  
         register_widget('QuicksandWidgetCategories');
+        register_widget('QuicksandWidgetArchives');
     }
 
 endif;
@@ -845,5 +846,6 @@ require get_template_directory() . '/inc/customize-css.php';
  * Theme Widgets
  */
 require_once(get_template_directory() . '/inc/widgets/class.QuicksandWidgetCategories.php');
+require_once(get_template_directory() . '/inc/widgets/class.QuicksandWidgetArchives.php');
 //require_once(get_template_directory() . '/inc/widgets/widget-social.php');
 //require_once(get_template_directory() . '/inc/widgets/widget-popular-posts.php');
