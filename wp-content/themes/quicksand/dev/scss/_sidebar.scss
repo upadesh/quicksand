@@ -75,6 +75,17 @@
 }  
 
 
+/* widget: custom categories*/
+.widget.quicksand-categories-custom {
+    li:before {
+        font-family: FontAwesome; 
+        padding-right: .5rem;
+        content: "\f07c";
+
+    }
+}  
+
+
 
 
 /* widget: search */

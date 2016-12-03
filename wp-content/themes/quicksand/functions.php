@@ -218,6 +218,9 @@ if (!function_exists('quicksand_widgets_init')) :
             'before_title' => '<h2 class="widget-title">',
             'after_title' => '</h2>',
         ));
+
+ 
+        register_widget('QuicksandWidgetCategories');
     }
 
 endif;
@@ -635,7 +638,6 @@ if (!function_exists('quicksand_bootstrap_wrap_oembed')) :
         // strip width and height  
         // problem when wordpress.tv is included
 //        $html = preg_replace('/(width|height)=["\']\d*["\']\s/', "", $html);
-
         // wrap in div element, so jquery.fitVids.js can catch it
         return'<div class="video">' . $html . '</div>';
     }
@@ -838,3 +840,10 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/customize-css.php';
 
 
+
+/**
+ * Theme Widgets
+ */
+require_once(get_template_directory() . '/inc/widgets/class.QuicksandWidgetCategories.php');
+//require_once(get_template_directory() . '/inc/widgets/widget-social.php');
+//require_once(get_template_directory() . '/inc/widgets/widget-popular-posts.php');
