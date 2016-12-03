@@ -406,7 +406,7 @@ $gray-lightest:             $brown-lightest !default;   */
 /*TODO: calendar-table-fix*/
 /* widget: calendar */
 .widget.widget_calendar {
-  overflow: hidden; }
+  /*overflow: hidden;*/ }
   .widget.widget_calendar td, .widget.widget_calendar th {
     padding: 8px;
     padding: .5rem; }

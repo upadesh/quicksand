@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
         // image: navigation
         $('.image-navigation .nav-previous a, .image-navigation .nav-next a').addClass('btn btn-outline-secondary');
 
-
+        $('table').addClass('table table-responsive');
 
         // === Blockquote ===
         $('.post-quote blockquote').addClass('card-blockquote'); 
