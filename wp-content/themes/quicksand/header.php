@@ -48,13 +48,15 @@
                 // show header only on front-page
                 $showOnlyOnFrontPage = get_theme_mod('qs_header_show_front', quicksand_get_color_scheme()['settings']['qs_header_show_front']);
 
-              $showHeader = ($isFront && (!$hideWhenSliderIsEnabled && $isSliderEnabled)) || 
+              $showHeader = ($isFront && (!$isSliderEnabled))  || 
+                        ($isFront && (!$hideWhenSliderIsEnabled && $isSliderEnabled)) || 
                         ($isFront && $showOnlyOnFrontPage && (!$hideWhenSliderIsEnabled))  ||  
-                        (!$isFront && !$showOnlyOnFrontPage ) ;
+                        (!$isFront && !$showOnlyOnFrontPage) ;
                  
-//                echo "<p>a: ". ($isFront && (!$hideWhenSliderIsEnabled && $isSliderEnabled)) ."</p>";
-//                echo "<p>b: ". ($isFront && $showOnlyOnFrontPage && (!$hideWhenSliderIsEnabled)) ."</p>";  
-//                echo "<p>c: ". (!$isFront && !$showOnlyOnFrontPage ) ."</p>";  
+//                echo "<p>x:". ($isFront && (!$isSliderEnabled)) ."</p>";
+//                echo "<p>x:". ($isFront && (!$hideWhenSliderIsEnabled && $isSliderEnabled)) ."</p>";
+//                echo "<p>x:". ($isFront && $showOnlyOnFrontPage && (!$hideWhenSliderIsEnabled)) ."</p>";  
+//                echo "<p>x:". (!$isFront && !$showOnlyOnFrontPage ) ."</p>";  
                 
                 if ($showHeader) :
                     ?>
