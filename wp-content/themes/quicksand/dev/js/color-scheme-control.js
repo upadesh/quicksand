@@ -8,9 +8,9 @@
         ready: function () {
             if ('color_scheme' === this.id) {
                 this.setting.bind('change', function (value) {
-
                     // other settings
                     var settings = colorScheme[value].settings;
+
                     api('qs_nav_fullwidth').set(settings['qs_nav_fullwidth']);
                     api('qs_header_fullwidth').set(settings['qs_header_fullwidth']);
                     api('qs_biography_show').set(settings['qs_biography_show']);
@@ -25,6 +25,7 @@
                     api('qs_slider_height').set(settings['qs_slider_height']);
                     api('qs_header_hide_when_slider_enabled').set(settings['qs_header_hide_when_slider_enabled']);
                     api('qs_slider_margin_top').set(settings['qs_slider_margin_top']);
+                    api('qs_sidebar_number').set(settings['qs_sidebar_number']);
                     api('quicksand_google_font').set(settings['quicksand_google_font']);
                     api('qs_content_font_size').set(settings['qs_content_font_size']);
 
@@ -159,7 +160,7 @@
                     api.control('qs_content_title_bg_color').container.find('.color-picker-hex')
                             .data('data-default-color', color)
                             .wpColorPicker('defaultColor', color);
-
+                    
 
                     color = colors['qs_button_color_primary'];
                     api('qs_button_color_primary').set(color);

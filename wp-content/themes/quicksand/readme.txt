@@ -69,6 +69,10 @@ Afterwards navigate to Appearance > Customize in your admin panel and customize 
 * slider font-size adjusted in mobile-mode
 * header-show-conditional fixed
 * margin of navbar-dropdown adjusted
+* archives- & categproies-widget added 
 
 
 /*========= Roadmap=========*/ 
+* recent-post widget
+* masonry-bug in bootstrap
+* cards-layout 

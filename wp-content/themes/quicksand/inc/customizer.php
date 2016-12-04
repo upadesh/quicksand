@@ -11,7 +11,7 @@
  *
  * Passes color scheme data as colorScheme global.
  *
- * @since Quicksand1.0
+ * @since Quicksand 0.2.1
  */
 function quicksand_customize_control_js() {
     wp_enqueue_script('color-scheme-control', get_template_directory_uri() . '/js/color-scheme-control.js', array('customize-controls', 'iris', 'underscore', 'wp-util'), 'quicksand', true);
@@ -481,7 +481,7 @@ function quicksand_customize_register($wp_customize) {
 
     // meta
     $wp_customize->add_setting(
-        'qs_content_show_meta', array('default' => $colorSchemeDefault['settings']['qs_content_show_meta'],
+            'qs_content_show_meta', array('default' => $colorSchemeDefault['settings']['qs_content_show_meta'],
         'sanitize_callback' => 'quicksand_sanitize_meta_checkboxes'
     ));
 
@@ -720,6 +720,29 @@ function quicksand_customize_register($wp_customize) {
         'panel' => 'quicksand_main_options',
     ));
 
+    // sidebar-number
+    $wp_customize->add_setting('qs_sidebar_number', array(
+        'default' => $colorSchemeDefault['settings']['qs_sidebar_number'],
+        'type' => 'theme_mod',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+ 
+    $wp_customize->add_control('qs_sidebar_number', array(
+        'label' => __('Sidebar Numbers', 'quicksand'),
+        'section' => 'quicksand_sidebar',
+        'type' => 'select',
+        'choices' => array(
+            'no_sidebar' => __('No Sidebar', 'quicksand'),
+            'right_sidebar' => __('Right Sidebar', 'quicksand'),
+            'left_sidebar' => __('Left Sidebar', 'quicksand'),
+            'left_right_sidebar' => __('Left & right Sidebar', 'quicksand'),
+        ),
+        'priority' => 10,
+    ));
+
+
     // bg-color
     $wp_customize->add_setting('qs_sidebar_background_color', array(
         'default' => $colorSchemeDefault['colors']['qs_sidebar_background_color'],
@@ -768,7 +791,7 @@ function quicksand_customize_register($wp_customize) {
     $bgContent = isset($bgColorContent) ? $bgColorContent : $colorSchemeDefault['colors'][1];
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_border_color', array(
         'label' => __('Widget Border Color', 'quicksand'),
-        'section' => 'quicksand_sidebar', 
+        'section' => 'quicksand_sidebar',
         'description' => sprintf(__('For a nice effect choose the same color like Content-Background (%s) ...', 'quicksand'), $bgContent),
         'settings' => 'qs_sidebar_border_color'
     )));
@@ -899,8 +922,9 @@ if (!function_exists('quicksand_get_color_scheme')) :
         return $color_schemes['default'];
     }
 
-endif; // quicksand_get_color_scheme
+endif;
 
+// quicksand_get_color_scheme
 if (!function_exists('quicksand_get_color_scheme_choices')) :
 
     /**
