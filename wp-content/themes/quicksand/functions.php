@@ -447,10 +447,8 @@ function quicksand_body_classes($classes) {
         $classes[] = 'group-blog';
     }
 
-    // Adds a class of no-sidebar to sites without active sidebar.
-    if (!is_active_sidebar('sidebar-1')) {
-        $classes[] = 'no-sidebar';
-    }
+    // Adds of the (none)-active sidebar. 
+    $classes[] = get_theme_mod('qs_sidebar_number', quicksand_get_color_scheme()['settings']['qs_sidebar_number']); 
 
     // Adds a class of hfeed to non-singular pages.
     if (!is_singular()) {
