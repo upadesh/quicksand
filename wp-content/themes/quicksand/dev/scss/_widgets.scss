@@ -1,11 +1,7 @@
 /*
- * main sidebar / widget file
- * place in here all rules which should be assigned to all sidebars
+ * widgets
  */
 
-#secondary, #third {
-    font-size: .9rem;
-}
 
 .widget {
     .widget-title {
@@ -27,6 +23,13 @@
     }   
 }
 
+
+/* widget: calendar */
+.widget.widget_calendar {
+    td, th {
+        padding: .5rem;
+    }
+} 
 
 
 
@@ -88,20 +91,7 @@
             width: 100%;
         }
     }
-}
-
-
-
-/* widget: calendar */
-.widget.widget_calendar { 
-    /*overflow: hidden;*/ 
-    td, th {
-        padding: .5rem;
-    }
 } 
-
-
-
 
 
 /* widget: custom categories*/
@@ -124,4 +114,59 @@
         content: "\f073"; 
     }
 }  
+
+
+
+
+
+
+.site-footer-widgetbar {
+    padding: 1rem;
+    font-size: .9rem;
+    .widget {
+        ul,  ol {
+            list-style-type: none;  
+            padding-left: 0;
+        }
+    }
+}
+
+#secondary, #third {
+    .widget { 
+
+        /* calendar-widget bugfix */ 
+        /*    @media (max-width: 767px) {
+                #wp-calendar {
+                    margin: 0 auto;
+                }
+            } */
+        .widget-title {
+            margin-bottom: 0;
+        }
+
+        ul, ol {
+            list-style-type: none;  
+            @extend .list-group; 
+            li { 
+                @extend .list-group-item;
+
+                border-style: solid;
+                border-left: none !important;
+                border-right: none !important;
+
+                &:first-of-type {
+                    border-top: none !important;
+                }
+                &:last-of-type {
+                    border-bottom: none !important;
+                }
+                li {
+                    border:none !important;
+                    padding-bottom: 0;
+                }
+            }
+
+        }
+    } 
+} 
 

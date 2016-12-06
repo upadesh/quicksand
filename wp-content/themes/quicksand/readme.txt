@@ -70,6 +70,7 @@ Afterwards navigate to Appearance > Customize in your admin panel and customize 
 * header-show-conditional fixed
 * margin of navbar-dropdown adjusted
 * archives- & categproies-widget added 
+* sidebar selection added to customer
 
 
 /*========= Roadmap=========*/ 

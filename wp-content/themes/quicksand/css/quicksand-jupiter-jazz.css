@@ -332,13 +332,8 @@ $gray-lightest:             $brown-lightest !default;   */
       display: inline-block; } }
 
 /*
- * main sidebar / widget file
- * place in here all rules which should be assigned to all sidebars
+ * widgets
  */
-#secondary, #third {
-  font-size: 14.4px;
-  font-size: .9rem; }
-
 .widget .widget-title {
   font-size: 20.8px;
   font-size: 1.3rem; }
@@ -355,6 +350,11 @@ $gray-lightest:             $brown-lightest !default;   */
   width: 100%;
   border: none;
   border-radius: 0; }
+
+/* widget: calendar */
+.widget.widget_calendar td, .widget.widget_calendar th {
+  padding: 8px;
+  padding: .5rem; }
 
 /* === Font Awesome for some widgets === */
 /*
@@ -397,13 +397,6 @@ $gray-lightest:             $brown-lightest !default;   */
   max-width: 100%;
   width: 100%; }
 
-/* widget: calendar */
-.widget.widget_calendar {
-  /*overflow: hidden;*/ }
-  .widget.widget_calendar td, .widget.widget_calendar th {
-    padding: 8px;
-    padding: .5rem; }
-
 /* widget: custom categories*/
 .widget.quicksand-categories-custom li:before {
   font-family: FontAwesome;
@@ -418,9 +411,15 @@ $gray-lightest:             $brown-lightest !default;   */
   padding-right: .5rem;
   content: "\f073"; }
 
-/*
- * widgets
- */
+.site-footer-widgetbar {
+  padding: 16px;
+  padding: 1rem;
+  font-size: 14.4px;
+  font-size: .9rem; }
+  .site-footer-widgetbar .widget ul, .site-footer-widgetbar .widget ol {
+    list-style-type: none;
+    padding-left: 0; }
+
 #secondary .widget, #third .widget {
   /* calendar-widget bugfix */
   /*    @media (max-width: 767px) {
@@ -443,16 +442,6 @@ $gray-lightest:             $brown-lightest !default;   */
       #secondary .widget ul li li, #secondary .widget ol li li, #third .widget ul li li, #third .widget ol li li {
         border: none !important;
         padding-bottom: 0; }
-
-/**
- * Widgetbar in footer
- */
-.site-footer-widgetbar {
-  padding: 16px;
-  padding: 1rem; }
-  .site-footer-widgetbar .widget ul, .site-footer-widgetbar .widget ol {
-    list-style-type: none;
-    padding-left: 0; }
 
 /**
  * non-bs-variables

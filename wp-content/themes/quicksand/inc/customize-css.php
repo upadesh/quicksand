@@ -316,7 +316,8 @@ if (!function_exists('quicksand_customizer_css')) :
 
 
             /* === sidebar === */ 
-            #secondary .widget {
+            #secondary .widget,
+            #third .widget {
                 border-color: <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme['colors']['qs_sidebar_border_color']); ?>;   
                 <?php
                 // outer-widget-border-width never more than 1 
@@ -327,7 +328,8 @@ if (!function_exists('quicksand_customizer_css')) :
                 border-style: solid;
             }
 
-            #secondary .widget .card-header.widget-title {
+            #secondary .widget .card-header.widget-title,
+            #third .widget .card-header.widget-title {
                 border-bottom: none;   
                 background: <?php echo get_theme_mod('qs_content_title_bg_color', $colorScheme['colors']['qs_content_title_bg_color']); ?>; 
                 color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors']['qs_content_secondary_text_color']); ?>;
@@ -335,7 +337,9 @@ if (!function_exists('quicksand_customizer_css')) :
 
 
             #secondary .widget ul li,
-            #secondary .widget ol li {
+            #third .widget ul li,
+            #secondary .widget ol li, 
+            #third .widget ol li {
                 color: <?php echo get_theme_mod('qs_sidebar_text_color', $colorScheme['colors']['qs_sidebar_text_color']); ?>; 
                 background: <?php echo get_theme_mod('qs_sidebar_background_color', $colorScheme['colors']['qs_sidebar_background_color']); ?>;  
                 border-color: <?php echo get_theme_mod('qs_sidebar_border_color', $colorScheme['colors']['qs_sidebar_border_color']); ?>;   
@@ -344,7 +348,9 @@ if (!function_exists('quicksand_customizer_css')) :
             }
 
             #secondary .widget table a,
-            #secondary .widget li a {
+            #third .widget table a,
+            #secondary .widget li a, 
+            #third .widget li a {
                 color: <?php echo get_theme_mod('qs_sidebar_link_color', $colorScheme['colors']['qs_sidebar_link_color']); ?>;   
             }
 
