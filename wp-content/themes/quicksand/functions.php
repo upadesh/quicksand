@@ -200,9 +200,19 @@ if (!function_exists('quicksand_widgets_init')) :
     function quicksand_widgets_init() {
 
         register_sidebar(array(
-            'name' => __('Sidebar', 'quicksand'),
+            'name' => __('Right Sidebar', 'quicksand'),
             'id' => 'sidebar-content-right',
-            'description' => __('Add widgets here to appear in your sidebar.', 'quicksand'),
+            'description' => __('Add widgets here to appear in your right sidebar.', 'quicksand'),
+            'before_widget' => '<section id="%1$s" class="card widget %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '<h2 class="card-header widget-title">',
+            'after_title' => '</h2>',
+        )); 
+
+        register_sidebar(array(
+            'name' => __('Left Sidebar', 'quicksand'),
+            'id' => 'sidebar-content-left',
+            'description' => __('Add widgets here to appear in your left sidebar.', 'quicksand'),
             'before_widget' => '<section id="%1$s" class="card widget %2$s">',
             'after_widget' => '</section>',
             'before_title' => '<h2 class="card-header widget-title">',
@@ -210,7 +220,7 @@ if (!function_exists('quicksand_widgets_init')) :
         ));
 
         register_sidebar(array(
-            'name' => __('Sidebar-Footer', 'quicksand'),
+            'name' => __('Footer Sidebar', 'quicksand'),
             'id' => 'sidebar-footer-bottom',
             'description' => __('Add widgets here to appear at the bottom.', 'quicksand'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',

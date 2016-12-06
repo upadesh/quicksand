@@ -19,6 +19,9 @@ get_header();
 <!--template: single-->
 <div class="row">
 
+    <?php get_sidebar('left'); ?> 
+    
+    
     <!--  site-content-area -->  
     <main id="primary" class="site-content-area">  
 
