@@ -37,8 +37,7 @@ get_header();
         ?> 
 
     </main><!-- .site-content-area  -->  
-
-    <?php get_sidebar(); ?> 
+ 
 
 </div><!-- row-->  
 

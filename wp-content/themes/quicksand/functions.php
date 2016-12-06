@@ -207,7 +207,7 @@ if (!function_exists('quicksand_widgets_init')) :
             'after_widget' => '</section>',
             'before_title' => '<h2 class="card-header widget-title">',
             'after_title' => '</h2>',
-        )); 
+        ));
 
         register_sidebar(array(
             'name' => __('Left Sidebar', 'quicksand'),
@@ -229,7 +229,7 @@ if (!function_exists('quicksand_widgets_init')) :
             'after_title' => '</h2>',
         ));
 
- 
+
         register_widget('QuicksandWidgetCategories');
         register_widget('QuicksandWidgetArchives');
     }
@@ -458,7 +458,7 @@ function quicksand_body_classes($classes) {
     }
 
     // Adds of the (none)-active sidebar. 
-    $classes[] = get_theme_mod('qs_sidebar_number', quicksand_get_color_scheme()['settings']['qs_sidebar_number']); 
+    $classes[] = get_theme_mod('qs_sidebar_number', quicksand_get_color_scheme()['settings']['qs_sidebar_number']);
 
     // Adds a class of hfeed to non-singular pages.
     if (!is_singular()) {
@@ -738,6 +738,43 @@ if (!function_exists('quicksand_show_masonry')) :
     }
 
 endif;
+
+
+
+
+
+
+if (!function_exists('quicksand_get_sidebars')) :
+
+    /**
+     * gets the dynamic sidebars, depending on what is saved inside the customizer 
+     * 
+     * @param String $pos nosidebar ,left_sidebar, right_sidebar, left_right_sidebar 
+     */
+    function quicksand_get_sidebars($pos) {
+     
+        if (strpos(get_theme_mod('qs_sidebar_number', 'right_sidebar'), $pos) === FALSE) {
+            return;
+        } 
+
+        $sidebars = array(
+            'left_sidebar' => array('content-left'),
+            'right_sidebar' => array('content-right'),
+            'left_right_sidebar' => array('content-left', 'content-right')
+        );
+
+        if (isset($sidebars[$pos.'_sidebar'])) {
+            foreach ($sidebars[$pos.'_sidebar'] as $sb) { 
+                get_sidebar($sb);
+            }
+        }
+    }
+
+endif;
+
+
+
+
 
 
 

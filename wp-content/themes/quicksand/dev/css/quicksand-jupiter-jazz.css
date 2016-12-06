@@ -341,7 +341,7 @@ $gray-lightest:             $brown-lightest !default;   */
  * main sidebar / widget file
  * place in here all rules which should be assigned to all sidebars
  */
-#secondary {
+#secondary, #third {
   font-size: 14.4px;
   font-size: .9rem; }
 
@@ -427,26 +427,26 @@ $gray-lightest:             $brown-lightest !default;   */
 /*
  * widgets
  */
-#secondary .widget {
+#secondary .widget, #third .widget {
   /* calendar-widget bugfix */
   /*    @media (max-width: 767px) {
                 #wp-calendar {
                     margin: 0 auto;
                 }
             } */ }
-  #secondary .widget .widget-title {
+  #secondary .widget .widget-title, #third .widget .widget-title {
     margin-bottom: 0; }
-  #secondary .widget ul, #secondary .widget ol {
+  #secondary .widget ul, #secondary .widget ol, #third .widget ul, #third .widget ol {
     list-style-type: none; }
-    #secondary .widget ul li, #secondary .widget ol li {
+    #secondary .widget ul li, #secondary .widget ol li, #third .widget ul li, #third .widget ol li {
       border-style: solid;
       border-left: none !important;
       border-right: none !important; }
-      #secondary .widget ul li:first-of-type, #secondary .widget ol li:first-of-type {
+      #secondary .widget ul li:first-of-type, #secondary .widget ol li:first-of-type, #third .widget ul li:first-of-type, #third .widget ol li:first-of-type {
         border-top: none !important; }
-      #secondary .widget ul li:last-of-type, #secondary .widget ol li:last-of-type {
+      #secondary .widget ul li:last-of-type, #secondary .widget ol li:last-of-type, #third .widget ul li:last-of-type, #third .widget ol li:last-of-type {
         border-bottom: none !important; }
-      #secondary .widget ul li li, #secondary .widget ol li li {
+      #secondary .widget ul li li, #secondary .widget ol li li, #third .widget ul li li, #third .widget ol li li {
         border: none !important;
         padding-bottom: 0; }
 
@@ -4086,13 +4086,13 @@ input[type='radio']:checked ~ .custom-control-indicator {
   margin-left: 20px;
   margin-left: 1.25rem; }
 
-.card > .list-group:first-child .list-group-item:first-child, #secondary .widget .card > ul:first-child .list-group-item:first-child, #secondary .widget .card > ol:first-child .list-group-item:first-child, .card > .list-group:first-child #secondary .widget ul li:first-child, #secondary .widget ul .card > .list-group:first-child li:first-child, #secondary .widget .card > ul:first-child li:first-child, #secondary .widget ul .card > ol:first-child li:first-child, .card > .list-group:first-child #secondary .widget ol li:first-child, #secondary .widget ol .card > .list-group:first-child li:first-child, #secondary .widget ol .card > ul:first-child li:first-child, #secondary .widget .card > ol:first-child li:first-child {
+.card > .list-group:first-child .list-group-item:first-child, #secondary .widget .card > ul:first-child .list-group-item:first-child, #secondary .widget .card > ol:first-child .list-group-item:first-child, #third .widget .card > ul:first-child .list-group-item:first-child, #third .widget .card > ol:first-child .list-group-item:first-child, .card > .list-group:first-child #secondary .widget ul li:first-child, #secondary .widget ul .card > .list-group:first-child li:first-child, #secondary .widget .card > ul:first-child li:first-child, #secondary .widget ul .card > ol:first-child li:first-child, .card > .list-group:first-child #secondary .widget ol li:first-child, #secondary .widget ol .card > .list-group:first-child li:first-child, #secondary .widget ol .card > ul:first-child li:first-child, #secondary .widget .card > ol:first-child li:first-child, .card > .list-group:first-child #third .widget ul li:first-child, #third .widget ul .card > .list-group:first-child li:first-child, #third .widget .card > ul:first-child li:first-child, #third .widget ul .card > ol:first-child li:first-child, .card > .list-group:first-child #third .widget ol li:first-child, #third .widget ol .card > .list-group:first-child li:first-child, #third .widget ol .card > ul:first-child li:first-child, #third .widget .card > ol:first-child li:first-child {
   border-top-right-radius: 4px;
   border-top-right-radius: 0.25rem;
   border-top-left-radius: 4px;
   border-top-left-radius: 0.25rem; }
 
-.card > .list-group:last-child .list-group-item:last-child, #secondary .widget .card > ul:last-child .list-group-item:last-child, #secondary .widget .card > ol:last-child .list-group-item:last-child, .card > .list-group:last-child #secondary .widget ul li:last-child, #secondary .widget ul .card > .list-group:last-child li:last-child, #secondary .widget .card > ul:last-child li:last-child, #secondary .widget ul .card > ol:last-child li:last-child, .card > .list-group:last-child #secondary .widget ol li:last-child, #secondary .widget ol .card > .list-group:last-child li:last-child, #secondary .widget ol .card > ul:last-child li:last-child, #secondary .widget .card > ol:last-child li:last-child {
+.card > .list-group:last-child .list-group-item:last-child, #secondary .widget .card > ul:last-child .list-group-item:last-child, #secondary .widget .card > ol:last-child .list-group-item:last-child, #third .widget .card > ul:last-child .list-group-item:last-child, #third .widget .card > ol:last-child .list-group-item:last-child, .card > .list-group:last-child #secondary .widget ul li:last-child, #secondary .widget ul .card > .list-group:last-child li:last-child, #secondary .widget .card > ul:last-child li:last-child, #secondary .widget ul .card > ol:last-child li:last-child, .card > .list-group:last-child #secondary .widget ol li:last-child, #secondary .widget ol .card > .list-group:last-child li:last-child, #secondary .widget ol .card > ul:last-child li:last-child, #secondary .widget .card > ol:last-child li:last-child, .card > .list-group:last-child #third .widget ul li:last-child, #third .widget ul .card > .list-group:last-child li:last-child, #third .widget .card > ul:last-child li:last-child, #third .widget ul .card > ol:last-child li:last-child, .card > .list-group:last-child #third .widget ol li:last-child, #third .widget ol .card > .list-group:last-child li:last-child, #third .widget ol .card > ul:last-child li:last-child, #third .widget .card > ol:last-child li:last-child {
   border-bottom-right-radius: 4px;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 4px;
@@ -4745,11 +4745,11 @@ base::-moz-progress-bar,
   padding-left: 0;
   list-style: none; }
 
-.list-group, #secondary .widget ul, #secondary .widget ol {
+.list-group, #secondary .widget ul, #secondary .widget ol, #third .widget ul, #third .widget ol {
   padding-left: 0;
   margin-bottom: 0; }
 
-.list-group-item, #secondary .widget ul li, #secondary .widget ol li {
+.list-group-item, #secondary .widget ul li, #secondary .widget ol li, #third .widget ul li, #third .widget ol li {
   position: relative;
   display: block;
   padding: 12px 20px;
@@ -4757,43 +4757,43 @@ base::-moz-progress-bar,
   margin-bottom: -1px;
   background-color: #fff;
   border: 1px solid #ddd; }
-  .list-group-item:first-child, #secondary .widget ul li:first-child, #secondary .widget ol li:first-child {
+  .list-group-item:first-child, #secondary .widget ul li:first-child, #secondary .widget ol li:first-child, #third .widget ul li:first-child, #third .widget ol li:first-child {
     border-top-right-radius: 4px;
     border-top-right-radius: 0.25rem;
     border-top-left-radius: 4px;
     border-top-left-radius: 0.25rem; }
-  .list-group-item:last-child, #secondary .widget ul li:last-child, #secondary .widget ol li:last-child {
+  .list-group-item:last-child, #secondary .widget ul li:last-child, #secondary .widget ol li:last-child, #third .widget ul li:last-child, #third .widget ol li:last-child {
     margin-bottom: 0;
     border-bottom-right-radius: 4px;
     border-bottom-right-radius: 0.25rem;
     border-bottom-left-radius: 4px;
     border-bottom-left-radius: 0.25rem; }
-  .list-group-item.disabled, #secondary .widget ul li.disabled, #secondary .widget ol li.disabled, .list-group-item.disabled:focus, #secondary .widget ul li.disabled:focus, #secondary .widget ol li.disabled:focus, .list-group-item.disabled:hover, #secondary .widget ul li.disabled:hover, #secondary .widget ol li.disabled:hover {
+  .list-group-item.disabled, #secondary .widget ul li.disabled, #secondary .widget ol li.disabled, #third .widget ul li.disabled, #third .widget ol li.disabled, .list-group-item.disabled:focus, #secondary .widget ul li.disabled:focus, #secondary .widget ol li.disabled:focus, #third .widget ul li.disabled:focus, #third .widget ol li.disabled:focus, .list-group-item.disabled:hover, #secondary .widget ul li.disabled:hover, #secondary .widget ol li.disabled:hover, #third .widget ul li.disabled:hover, #third .widget ol li.disabled:hover {
     color: #818a91;
     cursor: not-allowed;
     background-color: #eceeef; }
-    .list-group-item.disabled .list-group-item-heading, #secondary .widget ul li.disabled .list-group-item-heading, #secondary .widget ol li.disabled .list-group-item-heading, .list-group-item.disabled:focus .list-group-item-heading, #secondary .widget ul li.disabled:focus .list-group-item-heading, #secondary .widget ol li.disabled:focus .list-group-item-heading, .list-group-item.disabled:hover .list-group-item-heading, #secondary .widget ul li.disabled:hover .list-group-item-heading, #secondary .widget ol li.disabled:hover .list-group-item-heading {
+    .list-group-item.disabled .list-group-item-heading, #secondary .widget ul li.disabled .list-group-item-heading, #secondary .widget ol li.disabled .list-group-item-heading, #third .widget ul li.disabled .list-group-item-heading, #third .widget ol li.disabled .list-group-item-heading, .list-group-item.disabled:focus .list-group-item-heading, #secondary .widget ul li.disabled:focus .list-group-item-heading, #secondary .widget ol li.disabled:focus .list-group-item-heading, #third .widget ul li.disabled:focus .list-group-item-heading, #third .widget ol li.disabled:focus .list-group-item-heading, .list-group-item.disabled:hover .list-group-item-heading, #secondary .widget ul li.disabled:hover .list-group-item-heading, #secondary .widget ol li.disabled:hover .list-group-item-heading, #third .widget ul li.disabled:hover .list-group-item-heading, #third .widget ol li.disabled:hover .list-group-item-heading {
       color: inherit; }
-    .list-group-item.disabled .list-group-item-text, #secondary .widget ul li.disabled .list-group-item-text, #secondary .widget ol li.disabled .list-group-item-text, .list-group-item.disabled:focus .list-group-item-text, #secondary .widget ul li.disabled:focus .list-group-item-text, #secondary .widget ol li.disabled:focus .list-group-item-text, .list-group-item.disabled:hover .list-group-item-text, #secondary .widget ul li.disabled:hover .list-group-item-text, #secondary .widget ol li.disabled:hover .list-group-item-text {
+    .list-group-item.disabled .list-group-item-text, #secondary .widget ul li.disabled .list-group-item-text, #secondary .widget ol li.disabled .list-group-item-text, #third .widget ul li.disabled .list-group-item-text, #third .widget ol li.disabled .list-group-item-text, .list-group-item.disabled:focus .list-group-item-text, #secondary .widget ul li.disabled:focus .list-group-item-text, #secondary .widget ol li.disabled:focus .list-group-item-text, #third .widget ul li.disabled:focus .list-group-item-text, #third .widget ol li.disabled:focus .list-group-item-text, .list-group-item.disabled:hover .list-group-item-text, #secondary .widget ul li.disabled:hover .list-group-item-text, #secondary .widget ol li.disabled:hover .list-group-item-text, #third .widget ul li.disabled:hover .list-group-item-text, #third .widget ol li.disabled:hover .list-group-item-text {
       color: #818a91; }
-  .list-group-item.active, #secondary .widget ul li.active, #secondary .widget ol li.active, .list-group-item.active:focus, #secondary .widget ul li.active:focus, #secondary .widget ol li.active:focus, .list-group-item.active:hover, #secondary .widget ul li.active:hover, #secondary .widget ol li.active:hover {
+  .list-group-item.active, #secondary .widget ul li.active, #secondary .widget ol li.active, #third .widget ul li.active, #third .widget ol li.active, .list-group-item.active:focus, #secondary .widget ul li.active:focus, #secondary .widget ol li.active:focus, #third .widget ul li.active:focus, #third .widget ol li.active:focus, .list-group-item.active:hover, #secondary .widget ul li.active:hover, #secondary .widget ol li.active:hover, #third .widget ul li.active:hover, #third .widget ol li.active:hover {
     z-index: 2;
     color: #fff;
     text-decoration: none;
     background-color: #0275d8;
     border-color: #0275d8; }
-    .list-group-item.active .list-group-item-heading, #secondary .widget ul li.active .list-group-item-heading, #secondary .widget ol li.active .list-group-item-heading,
-    .list-group-item.active .list-group-item-heading > small, #secondary .widget ul li.active .list-group-item-heading > small, #secondary .widget ol li.active .list-group-item-heading > small,
-    .list-group-item.active .list-group-item-heading > .small, #secondary .widget ul li.active .list-group-item-heading > .small, #secondary .widget ol li.active .list-group-item-heading > .small, .list-group-item.active:focus .list-group-item-heading, #secondary .widget ul li.active:focus .list-group-item-heading, #secondary .widget ol li.active:focus .list-group-item-heading,
-    .list-group-item.active:focus .list-group-item-heading > small, #secondary .widget ul li.active:focus .list-group-item-heading > small, #secondary .widget ol li.active:focus .list-group-item-heading > small,
-    .list-group-item.active:focus .list-group-item-heading > .small, #secondary .widget ul li.active:focus .list-group-item-heading > .small, #secondary .widget ol li.active:focus .list-group-item-heading > .small, .list-group-item.active:hover .list-group-item-heading, #secondary .widget ul li.active:hover .list-group-item-heading, #secondary .widget ol li.active:hover .list-group-item-heading,
-    .list-group-item.active:hover .list-group-item-heading > small, #secondary .widget ul li.active:hover .list-group-item-heading > small, #secondary .widget ol li.active:hover .list-group-item-heading > small,
-    .list-group-item.active:hover .list-group-item-heading > .small, #secondary .widget ul li.active:hover .list-group-item-heading > .small, #secondary .widget ol li.active:hover .list-group-item-heading > .small {
+    .list-group-item.active .list-group-item-heading, #secondary .widget ul li.active .list-group-item-heading, #secondary .widget ol li.active .list-group-item-heading, #third .widget ul li.active .list-group-item-heading, #third .widget ol li.active .list-group-item-heading,
+    .list-group-item.active .list-group-item-heading > small, #secondary .widget ul li.active .list-group-item-heading > small, #secondary .widget ol li.active .list-group-item-heading > small, #third .widget ul li.active .list-group-item-heading > small, #third .widget ol li.active .list-group-item-heading > small,
+    .list-group-item.active .list-group-item-heading > .small, #secondary .widget ul li.active .list-group-item-heading > .small, #secondary .widget ol li.active .list-group-item-heading > .small, #third .widget ul li.active .list-group-item-heading > .small, #third .widget ol li.active .list-group-item-heading > .small, .list-group-item.active:focus .list-group-item-heading, #secondary .widget ul li.active:focus .list-group-item-heading, #secondary .widget ol li.active:focus .list-group-item-heading, #third .widget ul li.active:focus .list-group-item-heading, #third .widget ol li.active:focus .list-group-item-heading,
+    .list-group-item.active:focus .list-group-item-heading > small, #secondary .widget ul li.active:focus .list-group-item-heading > small, #secondary .widget ol li.active:focus .list-group-item-heading > small, #third .widget ul li.active:focus .list-group-item-heading > small, #third .widget ol li.active:focus .list-group-item-heading > small,
+    .list-group-item.active:focus .list-group-item-heading > .small, #secondary .widget ul li.active:focus .list-group-item-heading > .small, #secondary .widget ol li.active:focus .list-group-item-heading > .small, #third .widget ul li.active:focus .list-group-item-heading > .small, #third .widget ol li.active:focus .list-group-item-heading > .small, .list-group-item.active:hover .list-group-item-heading, #secondary .widget ul li.active:hover .list-group-item-heading, #secondary .widget ol li.active:hover .list-group-item-heading, #third .widget ul li.active:hover .list-group-item-heading, #third .widget ol li.active:hover .list-group-item-heading,
+    .list-group-item.active:hover .list-group-item-heading > small, #secondary .widget ul li.active:hover .list-group-item-heading > small, #secondary .widget ol li.active:hover .list-group-item-heading > small, #third .widget ul li.active:hover .list-group-item-heading > small, #third .widget ol li.active:hover .list-group-item-heading > small,
+    .list-group-item.active:hover .list-group-item-heading > .small, #secondary .widget ul li.active:hover .list-group-item-heading > .small, #secondary .widget ol li.active:hover .list-group-item-heading > .small, #third .widget ul li.active:hover .list-group-item-heading > .small, #third .widget ol li.active:hover .list-group-item-heading > .small {
       color: inherit; }
-    .list-group-item.active .list-group-item-text, #secondary .widget ul li.active .list-group-item-text, #secondary .widget ol li.active .list-group-item-text, .list-group-item.active:focus .list-group-item-text, #secondary .widget ul li.active:focus .list-group-item-text, #secondary .widget ol li.active:focus .list-group-item-text, .list-group-item.active:hover .list-group-item-text, #secondary .widget ul li.active:hover .list-group-item-text, #secondary .widget ol li.active:hover .list-group-item-text {
+    .list-group-item.active .list-group-item-text, #secondary .widget ul li.active .list-group-item-text, #secondary .widget ol li.active .list-group-item-text, #third .widget ul li.active .list-group-item-text, #third .widget ol li.active .list-group-item-text, .list-group-item.active:focus .list-group-item-text, #secondary .widget ul li.active:focus .list-group-item-text, #secondary .widget ol li.active:focus .list-group-item-text, #third .widget ul li.active:focus .list-group-item-text, #third .widget ol li.active:focus .list-group-item-text, .list-group-item.active:hover .list-group-item-text, #secondary .widget ul li.active:hover .list-group-item-text, #secondary .widget ol li.active:hover .list-group-item-text, #third .widget ul li.active:hover .list-group-item-text, #third .widget ol li.active:hover .list-group-item-text {
       color: #a8d6fe; }
 
-.list-group-flush .list-group-item, .list-group-flush #secondary .widget ul li, #secondary .widget ul .list-group-flush li, .list-group-flush #secondary .widget ol li, #secondary .widget ol .list-group-flush li {
+.list-group-flush .list-group-item, .list-group-flush #secondary .widget ul li, #secondary .widget ul .list-group-flush li, .list-group-flush #secondary .widget ol li, #secondary .widget ol .list-group-flush li, .list-group-flush #third .widget ul li, #third .widget ul .list-group-flush li, .list-group-flush #third .widget ol li, #third .widget ol .list-group-flush li {
   border-right: 0;
   border-left: 0;
   border-radius: 0; }

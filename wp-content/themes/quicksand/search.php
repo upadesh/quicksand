@@ -19,19 +19,21 @@ get_header();
 <!--template: search-->
 <div class="row"> 
 
+    <?php quicksand_get_sidebars('left') ?> 
+
     <!--  site-content-area -->  
     <main id="primary" class="site-content-area">  
 
         <?php if (have_posts()) : ?>
-        
+
             <div class="card quicksand-meta-list-header"> 
                 <div class="card-block">
                     <h4 class="card-title quicksand_search_title"><?php _e('Search Results for:', 'quicksand'); ?></h4> 
                     <h6 class="card-subtitle text-muted"><?php printf(__('%s', 'quicksand'), '<span>' . esc_html(get_search_query()) . '</span>'); ?></h6>
                 </div>
             </div> 
- 
-            <?php  
+
+            <?php
             // show posts in masonry-style 
             $showMasonry = quicksand_show_masonry();
             if ($showMasonry) {
@@ -69,7 +71,7 @@ get_header();
         ?> 
     </main><!-- .site-main -->
 
-    <?php get_sidebar(); ?>
+    <?php quicksand_get_sidebars('right') ?> 
 
 </div> 
 

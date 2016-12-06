@@ -26,6 +26,9 @@ get_header();
 
 <!--template: index-->
 <div class="row">
+    
+    <?php quicksand_get_sidebars('left') ?> 
+    
     <!--  site-content-area -->  
     <main id="primary" class="site-content-area">  
 
@@ -78,7 +81,7 @@ get_header();
         ?> 
     </main><!-- .site-content-area  -->  
 
-    <?php get_sidebar(); ?>
+    <?php quicksand_get_sidebars('right') ?> 
 
 </div><!-- row--> 
 
