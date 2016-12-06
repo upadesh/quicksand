@@ -2,21 +2,57 @@
  * grid-patterns
  */   
 
-/* one-column */ 
-.site-content { 
-    #primary {
-        @extend .col-lg-6;
-        @extend .col-xl-6;
-    }
-    #secondary {
-        @extend .col-lg-3;
-        @extend .col-xl-3;
-    }
-    #third {
-        @extend .col-lg-3;
-        @extend .col-xl-3;
-    }
-} 
+/* sidebars */
+.nosidebar {
+    .site-content { 
+        #primary {
+            @extend .col-xs-12; 
+        }
+    } 
+}
+
+.right_sidebar {
+    .site-content { 
+        #primary {
+            @extend .col-lg-8;
+            @extend .col-xl-9;
+        }
+        #secondary {
+            @extend .col-lg-4;
+            @extend .col-xl-3;
+        }
+    } 
+}
+
+.left_sidebar {
+    .site-content { 
+        #primary {
+            @extend .col-lg-8;
+            @extend .col-xl-9;
+        }
+        #third {
+            @extend .col-lg-4;
+            @extend .col-xl-3;
+        }
+    } 
+}
+
+.left_right_sidebar {
+    .site-content { 
+        #primary {
+            @extend .col-lg-6; 
+        }
+        #secondary {
+            @extend .col-lg-3; 
+        }
+        #third {
+            @extend .col-lg-3; 
+        }
+    } 
+}
+
+
+
 
 /* 
  * template-full-width
