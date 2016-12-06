@@ -111,7 +111,8 @@
 
         if (get_theme_mod('qs_content_fullwidth', quicksand_get_color_scheme()['settings']['qs_content_fullwidth'])) {
             $isFullWidth = TRUE;
-        } elseif (is_page_template('template-fullwidth.php')) {
+        } 
+        elseif (is_page_template('template-fullwidth.php')) {
             $isFullWidth = TRUE;
             $fullWidthTemplate = ' qs-full-width-template';
         }

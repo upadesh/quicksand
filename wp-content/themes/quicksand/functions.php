@@ -461,9 +461,11 @@ function quicksand_body_classes($classes) {
     $classes[] = get_theme_mod('qs_sidebar_number', quicksand_get_color_scheme()['settings']['qs_sidebar_number']);
 
     // Adds a class of hfeed to non-singular pages.
-    if (!is_singular()) {
-        $classes[] = 'hfeed';
+    if (!is_page()) {
+        $classes[] = 'no_page';
     }
+    
+    
 
     return $classes;
 }
