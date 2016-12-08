@@ -11,17 +11,17 @@ Use the Line-Endings-plugin in Netbeans 'Show and change line-endings'
 - js/lightgallery/css/lg-fb-comment-box.css
 - js/lg-thumbnail.min.js
 - js/lg-thumbnail.js & 
-	
-### Delete node_modules-folder
-```
-rm -Rf .node_modules
-```
 
 
 ### Copy the quicksan-folder to a new location
 
 ```
 cp -R themes/quicksand /tmp
+```
+	
+### Delete node_modules-folder
+```
+rm -Rf .node_modules
 ```
 
 ### Delete all hidden files
