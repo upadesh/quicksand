@@ -47,7 +47,7 @@ grunt build
 	
 ### Delete node_modules-folder again
 ```
-rm -Rf .node_modules
+rm -Rf node_modules
 ```
 
 ### zip the whole thing
