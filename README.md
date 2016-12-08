@@ -23,8 +23,9 @@ find . -iname '.*' -type f -delete
 ### Adjust line-endings
 - js/lightgallery/lightgallery.min.js
 - js/lightgallery/lightgallery.js
-- lg-thumbnail.min.js
-- lg-thumbnailjs & 
+- js/lightgallery/css/lg-fb-comment-box.css
+- js/lg-thumbnail.min.js
+- js/lg-thumbnail.js & 
 	
 ### Delete node_modules-folder
 ```
