@@ -51,7 +51,7 @@ function quicksand_get_color_schemes() {
                 'qs_slider_margin_top' => 0,
                 'qs_sidebar_number' => 'right_sidebar',
                 'quicksand_google_font' => 'Raleway',
-                'qs_content_font_size' => 16,
+                'qs_content_font_size' => 14,
                 'qs_content_show_meta' => array(
                     'date',
                     'taxonomies',

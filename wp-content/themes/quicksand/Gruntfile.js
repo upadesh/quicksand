@@ -195,7 +195,6 @@ module.exports = function (grunt) {
                     'dev/scss/*.scss',
                     'dev/scss/jupiter-jazz/*.scss'
                 ],
-                // TODO
                 tasks: ['clean:dev', 'sass', 'postcss', 'cssmin', 'copy:dev'],
                 options: {
                     livereload: true,

@@ -233,7 +233,8 @@ if (!function_exists('quicksand_customizer_css')) :
 
 
             /* === content === */
-            .site-main-container { 
+            .site-main-container,
+            .site-footer-widgetbar .tag-default { 
                 background: <?php echo get_theme_mod('qs_content_background_color', $colorScheme['colors']['qs_content_background_color']); ?>;
                 color: <?php echo get_theme_mod('qs_content_text_color', $colorScheme['colors']['qs_content_text_color']); ?>;
             }

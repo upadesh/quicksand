@@ -14,12 +14,12 @@ Afterwards trigger grunt
 ```
 grunt watch
 ```
-Your custom sass-files in the scss-folder will be compiled und copied to the css-folder. Afterwards all css-files (including bootstrap) will be concatenated to a single file, named after the name-attribute in the package.json.
+Your custom sass-files in the scss-folder will be compiled und copied to the css-folder. 
 
 ## Production
 ```
 grunt build
 ```
 Same like the watch-task, but a minified-versions will be created in css & js.
-Change also the links in index.html to the minified versions.
+Changes also the links in index.html to the minified versions.
 
