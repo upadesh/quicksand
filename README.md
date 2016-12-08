@@ -5,7 +5,7 @@ Quicksand comes with 2 ready-to-use color-schemes, one with rounded, the other o
 ###Change line-endings in lightgallery(.min).js via netbeans-plugin
 Use the Line-Endings-plugin in Netbeans 'Show and change line-endings' 
 
-### Adjust line-endings
+#### Adjust line-endings in these files
 - js/lightgallery/lightgallery.min.js
 - js/lightgallery/lightgallery.js
 - js/lightgallery/css/lg-fb-comment-box.css
