@@ -3,6 +3,7 @@ Quicksand comes with 2 ready-to-use color-schemes, one with rounded, the other o
 
 ## Release
 ###Change line-endings in lightgallery(.min).js via netbeans-plugin
+Use the Line-Endings-plugin in Netbeans
 	Show and change line-endings
 		Version: 1.3
 		Source: Plugin Portal
@@ -15,7 +16,11 @@ Quicksand comes with 2 ready-to-use color-schemes, one with rounded, the other o
 ```
 find . -iname '.*' -type f -delete
 ```
-### Adjust line-Endings in lightgallery(.min).js & lg-…
+### Adjust line-endings
+- js/lightgallery/lightgallery.min.js
+- js/lightgallery/lightgallery.js
+- lg-thumbnail.min.js
+- lg-thumbnailjs & 
 	
 ### Delete node_modules-folder
 
