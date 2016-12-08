@@ -11,15 +11,6 @@ Use the Line-Endings-plugin in Netbeans
 		Plugin Description 
 		Shows the line endings of the currently edited file in the statuc bar, and allows to change them, 
 
-### Delete all hidden files
-- .DS_Store
-- .dS_Store
-- .a.swp
-- .netbeans.xml	
-
-```
-find . -iname '.*' -type f -delete
-```
 ### Adjust line-endings
 - js/lightgallery/lightgallery.min.js
 - js/lightgallery/lightgallery.js
@@ -32,33 +23,40 @@ find . -iname '.*' -type f -delete
 rm -Rf .node_modules
 ```
 
-... and install it again
-     
+
+### Copy the quicksan-folder to a new location
+
+```
+cp -R themes/quicksand /tmp
+```
+
+### Delete all hidden files
+- .DS_Store
+- .dS_Store
+- .a.swp
+- .netbeans.xml	
+
+```
+find . -iname '.*' -type f -delete
+```
+
+### Install node_modules again 
 ```
 npm install
 ```
+```
 
-### trigger grunt 
+## Developing
+### Trigger grunt 
 
 ```
 grunt build
 grunt
-```
-
-## Developing
-### Concat JS & CSS in realtime
-
-```
-grunt watch
-```
-
-or simply 
-```
-grunt
-```
+```  
 
 
-Your custom sass-files in the scss-folder will be compiled und copied to the css-folder. 
+- Your custom sass-files in the scss-folder will be compiled und copied to the css-folder
+- Your JS-files will be copied & minified to quicsand/js
 
 ## Production
 ```
