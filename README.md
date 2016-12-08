@@ -13,15 +13,10 @@ Use the Line-Endings-plugin in Netbeans 'Show and change line-endings'
 - js/lg-thumbnail.js & 
 
 
-### Copy the quicksan-folder to a new location
-
+### Copy the quicksand-folder to a new location
 ```
 cp -R themes/quicksand /tmp
-```
-	
-### Delete node_modules-folder
-```
-rm -Rf .node_modules
+cd /tmp/quicksand 
 ```
 
 ### Delete all hidden files
@@ -34,17 +29,20 @@ rm -Rf .node_modules
 find . -iname '.*' -type f -delete
 ```
 
-### Install node_modules again 
+	
+### Delete node_modules-folder
+```
+rm -Rf .node_modules
+```
+... & install them again just to be sure everything is alright & we get the latest version
 ```
 npm install
 ``` 
 
-## Developing
 ### Trigger grunt 
 
 ```
-grunt build
-grunt
+grunt build 
 ```  
 	
 ### Delete node_modules-folder again
@@ -55,16 +53,19 @@ rm -Rf .node_modules
 ### zip the whole thing
 ```
 zip -r quicksand.zip quicksand
-```
-
+``` 
 
 - Your custom sass-files in the scss-folder will be compiled und copied to the css-folder
-- Your JS-files will be copied & minified to quicsand/js
+- Your JS-files will be copied & minified to quicksand/js
 
-## Production
+
+
+
+## Development
 ```
+npm install
 grunt build
+grunt 
 ```
-Same like the watch-task, but a minified-versions will be created in css & js.
-Changes also the links in index.html to the minified versions.
+
 
