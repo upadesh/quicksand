@@ -37,8 +37,7 @@ find . -iname '.*' -type f -delete
 ### Install node_modules again 
 ```
 npm install
-```
-```
+``` 
 
 ## Developing
 ### Trigger grunt 
@@ -47,6 +46,12 @@ npm install
 grunt build
 grunt
 ```  
+	
+### Delete node_modules-folder again
+```
+rm -Rf .node_modules
+```
+
 
 
 - Your custom sass-files in the scss-folder will be compiled und copied to the css-folder
