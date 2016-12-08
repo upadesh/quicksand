@@ -233,8 +233,7 @@ if (!function_exists('quicksand_customizer_css')) :
 
 
             /* === content === */
-            .site-main-container,
-            .site-footer-widgetbar .tag-default { 
+            .site-main-container { 
                 background: <?php echo get_theme_mod('qs_content_background_color', $colorScheme['colors']['qs_content_background_color']); ?>;
                 color: <?php echo get_theme_mod('qs_content_text_color', $colorScheme['colors']['qs_content_text_color']); ?>;
             }
@@ -364,7 +363,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 color: <?php echo get_theme_mod('qs_footer_text_color', $colorScheme['colors']['qs_footer_text_color']); ?>;
                 border: none;
             }    
-
+ 
             .site-footer-widgetbar a,
             .site-footer .nav-wrapper a {  
                 color: <?php echo get_theme_mod('qs_footer_link_color', $colorScheme['colors']['qs_footer_link_color']); ?>; 
