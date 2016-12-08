@@ -464,8 +464,8 @@ function quicksand_body_classes($classes) {
     if (!is_page()) {
         $classes[] = 'no_page';
     }
-    
-    
+
+
 
     return $classes;
 }
@@ -743,9 +743,6 @@ endif;
 
 
 
-
-
-
 if (!function_exists('quicksand_get_sidebars')) :
 
     /**
@@ -754,10 +751,10 @@ if (!function_exists('quicksand_get_sidebars')) :
      * @param String $pos nosidebar ,left_sidebar, right_sidebar, left_right_sidebar 
      */
     function quicksand_get_sidebars($pos) {
-     
+
         if (strpos(get_theme_mod('qs_sidebar_number', 'right_sidebar'), $pos) === FALSE) {
             return;
-        } 
+        }
 
         $sidebars = array(
             'left_sidebar' => array('content-left'),
@@ -765,102 +762,14 @@ if (!function_exists('quicksand_get_sidebars')) :
             'left_right_sidebar' => array('content-left', 'content-right')
         );
 
-        if (isset($sidebars[$pos.'_sidebar'])) {
-            foreach ($sidebars[$pos.'_sidebar'] as $sb) { 
+        if (isset($sidebars[$pos . '_sidebar'])) {
+            foreach ($sidebars[$pos . '_sidebar'] as $sb) {
                 get_sidebar($sb);
             }
         }
     }
 
 endif;
-
-
-
-
-
-
-
-
-
-/**
- * Add custom image sizes attribute to enhance responsive image functionality
- * for content images
- *
- * @since Quicksand 0.2.1
- *
- * @param string $sizes A source size value for use in a 'sizes' attribute.
- * @param array  $size  Image size. Accepts an array of width and height
- *                      values in pixels (in that order).
- * @return string A source size value for use in a content image 'sizes' attribute.
- */
-//TODO
-//function quicksand_content_image_sizes_attr($sizes, $size) {
-//    $width = $size[0];
-//
-//    840 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px';
-//
-//    if ('page' === get_post_type()) {
-//        840 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
-//    } else {
-//        840 > $width && 600 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 600px';
-//        600 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
-//    }
-//
-//    return $sizes;
-//}
-//
-//add_filter('wp_calculate_image_sizes', 'quicksand_content_image_sizes_attr', 10, 2);
-
-/**
- * Add custom image sizes attribute to enhance responsive image functionality
- * for post thumbnails
- *
- * @since Quicksand 0.2.1
- *
- * @param array $attr Attributes for the image markup.
- * @param int   $attachment Image attachment ID.
- * @param array $size Registered image size or flat array of height and width dimensions.
- * @return string A source size value for use in a post thumbnail 'sizes' attribute.
- */
-//function quicksand_post_thumbnail_sizes_attr($attr, $attachment, $size) {
-//    if ('post-thumbnail' === $size) {
-//        is_active_sidebar('sidebar-1') && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
-//        !is_active_sidebar('sidebar-1') && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px';
-//    }
-//    return $attr;
-//}
-//
-//add_filter('wp_get_attachment_image_attributes', 'quicksand_post_thumbnail_sizes_attr', 10, 3);
-
-/**
- * on first load randomly the error 'net::ERR_INCOMPLETE_CHUNKED_ENCODING' comes up,
- * which on the bounce causes the JS to fail. 
- * 
- * In fact, the proper hook is "send_headers ... find it
- * 
- * TODO: watch if this helps
- * 
- * @param type $headers
- * @return type
- */
-//function quicksand_nocache($headers) {
-//    unset($headers['Cache-Control']);
-//    $headers['Cache-Control'] = "no-cache";
-//
-//
-//Gather output (if it is not already in a variable, use ob_start() and ob_get_clean() )    
-// Before sending output:
-//    ob_start();
-//    ob_get_clean();
-//    $content = ob_get_contents(); 
-// 
-//    $headers['Content-length:'] = strlen($content);
-//    header('Content-Length: ' . $length);
-//
-//    return $headers;
-//}
-//
-//add_filter('wp_headers', 'quicksand_nocache');
 
 /**
  * Custom template tags for this theme.
@@ -894,5 +803,3 @@ require get_template_directory() . '/inc/customize-css.php';
  */
 require_once(get_template_directory() . '/inc/widgets/class.QuicksandWidgetCategories.php');
 require_once(get_template_directory() . '/inc/widgets/class.QuicksandWidgetArchives.php');
-//require_once(get_template_directory() . '/inc/widgets/widget-social.php');
-//require_once(get_template_directory() . '/inc/widgets/widget-popular-posts.php');
