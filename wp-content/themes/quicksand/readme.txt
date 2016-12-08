@@ -25,7 +25,7 @@ Quicksand theme uses:
 
 /*========= Description =========*/
 
-Quicksand comes with 2 ready-to-use color-schemes, one with rounded, the other one with cornered boxes. Its responsive design is based on Bootstrap4, so your page will always look fine on any device.The theme is highly configurable, so you can easily adjust it to your needs by using the theme-options inside your customizer.  Choose between masonry- and normal-, fullwidth- or boxed-layout, none, one or two sidebars and there were also added better looking archive- & category-widgets.Quicksand also comes with a social icon integration, by using the fantastic Font Awesome image-library. You are able to apply Google-Fonts, galleries can be displayed by the stunning Lightgallery-plugin and if you feel to use a slider on your frontpage, no worries, Flexslider is integrated.  For the nerds of you, there are also sass- and grunt files included.
+Quicksand comes with 2 ready-to-use color-schemes, one with rounded, the other one with cornered boxes. Its responsive design is based on Bootstrap4, so your page will always look fine on any device.The theme is highly configurable, so you can easily adjust it to your needs by using the theme-options inside your customizer.  Choose between masonry- and normal-, fullwidth- or boxed-layout, none, one or two sidebars and there were also added two better looking archive- & category-widgets. Quicksand also comes with a social-icon-integration, by using the fantastic FontAwesome image-library. You are able to apply Google-Fonts, galleries can be displayed by the stunning Lightgallery-plugin and if you feel to use a slider on your frontpage, no worries, Flexslider is integrated.  For the nerds of you, there are also sass- and grunt files included.
 
 /*========= Installation =========*/
 
@@ -43,9 +43,10 @@ Afterwards navigate to Appearance > Customize in your admin panel and customize 
 * Font Awesome 
 * Lightgallery 
 * Flexslider 
+* Responsive design
 * Google Fonts 
 * Fullwidth & thin design
-* Responsive design
+* Masonry and normal layout
 * Unlimited color variations
 * WordPress Theme Customizer support 
 * Internationalized & localization
@@ -55,7 +56,6 @@ Afterwards navigate to Appearance > Customize in your admin panel and customize 
 * Gravatar ready  
 * Custom Archive- and Category-widgets
 * Sidebar-selections
-* Masonry and normal layout
  
 /*========= Changelog=========*/ 
 
@@ -74,6 +74,6 @@ Afterwards navigate to Appearance > Customize in your admin panel and customize 
 
 
 /*========= Roadmap=========*/ 
+* masonry-bug in bootstrap chrome
 * cards-layout 
 * recent-post widget
-* masonry-bug in bootstrap chrome
