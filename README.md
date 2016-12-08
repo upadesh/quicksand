@@ -12,7 +12,11 @@ Use the Line-Endings-plugin in Netbeans
 		Shows the line endings of the currently edited file in the statuc bar, and allows to change them, 
 
 ### Delete all hidden files
-.DS_Store, .dS_Store, .a.swp, .netbeans.xml	
+- .DS_Store
+- .dS_Store
+- .a.swp
+- .netbeans.xml	
+
 ```
 find . -iname '.*' -type f -delete
 ```
@@ -23,8 +27,11 @@ find . -iname '.*' -type f -delete
 - lg-thumbnailjs & 
 	
 ### Delete node_modules-folder
+```
+rm -Rf .node_modules
+```
 
-#### ... and install it again
+... and install it again
      
 ```
 npm install
