@@ -53,10 +53,10 @@ Afterwards navigate to Appearance > Customize in your admin panel and customize 
 * Cross-browser compatibility
 * Threaded Comments
 * Gravatar ready  
-
-/*========= Documentation =========*/ 
-
-
+* Custom Archive- and Category-widgets
+* Sidebar-selections
+* Masonry and normal layout
+ 
 /*========= Changelog=========*/ 
 
 * nav-background-color on dropdowns when focused has wrong color
