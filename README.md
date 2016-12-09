@@ -25,6 +25,13 @@ npm install
 grunt build 
 ```  
 
+	
+### Delete node_modules-folder again
+```
+rm -Rf node_modules
+```
+
+
 ### Delete all hidden files
 - .DS_Store
 - .dS_Store
@@ -44,11 +51,6 @@ Use the Line-Endings-plugin in Netbeans 'Show and change line-endings'
 
 ```
 find . -iname '.*' -type f -delete
-```
-	
-### Delete node_modules-folder again
-```
-rm -Rf node_modules
 ```
 
 ### zip the whole thing
