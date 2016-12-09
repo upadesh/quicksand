@@ -335,6 +335,12 @@ if (!function_exists('quicksand_customizer_css')) :
                 color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors']['qs_content_secondary_text_color']); ?>;
             }
 
+            /* quicksand-widgets*/
+            #secondary .widget .tag.tag-default.tag-pill ,
+            #third .widget  .tag.tag-default.tag-pill {   
+                background: <?php echo get_theme_mod('qs_sidebar_text_color', $colorScheme['colors']['qs_sidebar_text_color']); ?>; 
+                color: <?php echo get_theme_mod('qs_sidebar_background_color', $colorScheme['colors']['qs_sidebar_background_color']); ?>;
+            }
 
             #secondary .widget ul li,
             #third .widget ul li,
@@ -363,7 +369,7 @@ if (!function_exists('quicksand_customizer_css')) :
                 color: <?php echo get_theme_mod('qs_footer_text_color', $colorScheme['colors']['qs_footer_text_color']); ?>;
                 border: none;
             }    
- 
+
             .site-footer-widgetbar a,
             .site-footer .nav-wrapper a {  
                 color: <?php echo get_theme_mod('qs_footer_link_color', $colorScheme['colors']['qs_footer_link_color']); ?>; 

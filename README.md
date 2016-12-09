@@ -34,7 +34,7 @@ find . -iname '.*' -type f -delete
 ```
 rm -Rf .node_modules
 ```
-... & install them again just to be sure everything is alright & we get the latest version
+... & install them again just to be sure everything is allright & we get the latest version
 ```
 npm install
 ``` 
