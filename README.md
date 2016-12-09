@@ -60,12 +60,7 @@ find . -iname '.*' -type f -delete
 ### zip the whole thing
 ```
 zip -r quicksand.zip quicksand
-``` 
-
-- Your custom sass-files in the scss-folder will be compiled und copied to the css-folder
-- Your JS-files will be copied & minified to quicksand/js
-
-
+```  
 
 
 ## Development
