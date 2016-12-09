@@ -74,5 +74,5 @@ Quicksand theme uses:
 == Roadmap ==
 * masonry-bug in bootstrap4 chrome
 * add card-decks-layout 
-* recent-post-widget
-* WooCommerce ready
+* add recent-post-widget
+* WooCommerce-ready
