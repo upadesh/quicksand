@@ -30,9 +30,8 @@ Quicksand theme uses:
 * Bootstrap (http://getbootstrap.com/) licensed under MIT license (https://github.com/twbs/bootstrap/blob/master/LICENSE) 
 * FontAwesome (http://fontawesome.io) licensed under the SIL OFL 1.1 (http://scripts.sil.org/OFL)
 * Flexslider (http://flexslider.woothemes.com/) licensed under GPLv2 (http://www.gnu.org/licenses/gpl-2.0.html) 
-* Lightgallery (https://sachinchoolur.github.io/lightGallery/) licensed under GNU AGPLv3 (https://sachinchoolur.github.io/lightGallery/docs/license.html)
-* lg-thumbnail.js (https://github.com/sachinchoolur/lg-thumbnail.js/tree/master) licensed under GNU AGPLv3 (https://github.com/sachinchoolur/lg-thumbnail.js/blob/master/LICENSE.md)
-
+* Lightgallery (https://sachinchoolur.github.io/lightGallery/) licensed under GNU AGPLv3 (https://github.com/sachinchoolur/lightGallery/blob/master/LICENSE.md)
+** "If you are creating an open source application under a license compatible with the GNU GPL license v3, you may use this project under the terms of the GPLv3."
 
 == Theme Features ==
 
