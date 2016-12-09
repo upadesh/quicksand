@@ -17,7 +17,7 @@ grunt build
 ```  
 
 
-###Change line-endings in lightgallery(.min).js via netbeans-plugin
+###Change line-endings via netbeans-plugin
 
 Use the Line-Endings-plugin in Netbeans 'Show and change line-endings' 
 
@@ -26,7 +26,7 @@ Use the Line-Endings-plugin in Netbeans 'Show and change line-endings'
 - js/lightgallery/lightgallery.js
 - js/lightgallery/css/lg-fb-comment-box.css
 - js/lg-thumbnail.min.js
-- js/lg-thumbnail.js & 
+- js/lg-thumbnail.js
 
 
 ### Copy the quicksand-folder to a new location
