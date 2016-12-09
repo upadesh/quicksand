@@ -58,11 +58,6 @@ if (!function_exists('quicksand_customizer_css')) :
                 background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary']); ?>;
                 border-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary']); ?>; 
             }
-            /*fix for rounded color-schemes*/
-            .widget .input-group-btn {
-                background-color: <?php echo get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary']); ?>;
-            }
-
 
             .btn-secondary:focus, .btn-secondary.focus {
                 color: <?php echo get_theme_mod('qs_button_color_secondary', $colorScheme['colors']['qs_button_color_secondary']); ?>;
