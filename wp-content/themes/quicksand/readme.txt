@@ -2,42 +2,39 @@
 
 Theme Name: Quicksand
 Theme URI: http://cafe-serendipity.com
+Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, featured-image-header, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, education, entertainment
 Version: 0.3.0
 Tested up to: WP 4.7
-
+Requires at least: 4.6
 Author: Cafe Serendipity - Andreas Stephan
 Author URI: http://cafe-serendipity.com
-License: GNU General Public License v3.0
+License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
--------------------------------------------------------
-Quicksand theme, Copyright 2016 cafe-serendipity.com
-Quicksand WordPress theme is distributed under the terms of the GNU GPL 
--------------------------------------------------------
 
-/*========= Credits =========*/
-Unless otherwise specified, all the theme files, scripts and images are licensed under GPLv3 license (https://www.gnu.org/licenses/gpl-3.0.en.html)
+Here is a short description of the plugin. 
+
+== Description ==
+
+Quicksand comes with 2 ready-to-use color-schemes, one with rounded, the other one with cornered boxes. Its responsive design is based on Bootstrap4, so your page will always look fine on any device.The theme is highly configurable, so you can easily adjust it to your needs by using the theme-options inside your customizer.  Choose between masonry- and normal-, fullwidth- or boxed-layout, none, one or two sidebars and there were also added two better looking archive- & category-widgets. Quicksand also comes with a social-icon-integration, by using the fantastic FontAwesome image-library. You are able to apply Google-Fonts, galleries can be displayed by the stunning Lightgallery-plugin and if you feel to use a slider on your frontpage, no worries, Flexslider is integrated.  For the nerds of you, there are also sass- and grunt files included.
+
+== Installation ==
+
+1. Upload the plugin files to the `/wp-content/plugins/plugin-name` directory, or install the plugin through the WordPress plugins screen directly.
+1. Activate the plugin through the 'Plugins' screen in WordPress
+1. Appearance > Customize in your admin panel and customize to taste.
+
+
+== Credits ==
 
 Quicksand theme uses:
 * Bootstrap (http://getbootstrap.com/) licensed under MIT license (https://github.com/twbs/bootstrap/blob/master/LICENSE) 
 * FontAwesome (http://fontawesome.io) licensed under the SIL OFL 1.1 (http://scripts.sil.org/OFL)
 * Flexslider (http://flexslider.woothemes.com/) licensed under GPLv2 (http://www.gnu.org/licenses/gpl-2.0.html) 
-* Lightgallery (https://sachinchoolur.github.io/lightGallery/) licensed under GNU AGPLv3 (https://github.com/twbs/bootstrap/blob/master/LICENSE) 
+* Lightgallery (https://sachinchoolur.github.io/lightGallery/) licensed under GNU AGPLv3 (https://sachinchoolur.github.io/lightGallery/docs/license.html)
+* lg-thumbnail.js (https://github.com/sachinchoolur/lg-thumbnail.js/tree/master) licensed under GNU AGPLv3 (https://github.com/sachinchoolur/lg-thumbnail.js/blob/master/LICENSE.md)
 
-/*========= Description =========*/
 
-Quicksand comes with 2 ready-to-use color-schemes, one with rounded, the other one with cornered boxes. Its responsive design is based on Bootstrap4, so your page will always look fine on any device.The theme is highly configurable, so you can easily adjust it to your needs by using the theme-options inside your customizer.  Choose between masonry- and normal-, fullwidth- or boxed-layout, none, one or two sidebars and there were also added two better looking archive- & category-widgets. Quicksand also comes with a social-icon-integration, by using the fantastic FontAwesome image-library. You are able to apply Google-Fonts, galleries can be displayed by the stunning Lightgallery-plugin and if you feel to use a slider on your frontpage, no worries, Flexslider is integrated.  For the nerds of you, there are also sass- and grunt files included.
-
-/*========= Installation =========*/
-
-In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-
-Type in Quicksand in the search form and press the 'Enter' key on your keyboard.
-
-Click on the 'Activate' button to use your new theme right away.
-
-Afterwards navigate to Appearance > Customize in your admin panel and customize to taste. 
-
-/*========= Theme Features =========*/
+== Theme Features ==
 
 * Bootstrap 4 
 * Font Awesome 
@@ -57,23 +54,25 @@ Afterwards navigate to Appearance > Customize in your admin panel and customize 
 * Custom Archive- and Category-widgets
 * Sidebar-selections
  
-/*========= Changelog=========*/ 
 
-* nav-background-color on dropdowns when focused has wrong color
-* sticky-css change font-weight
-* card-header for pages has wrong class
+== Changelog ==
+= 0.3.0 =
+* nav-background-color on dropdowns when focused had wrong color
+* sticky-css changed font-weight
+* card-header for pages wrong class
 * navbar dropdown css wrong
 * navbar-toggler border-color 
 * no list-style-type in comments 
-* full-width-tamplate changed
+* full-width-template changed
 * slider font-size adjusted in mobile-mode
 * header-show-conditional fixed
 * margin of navbar-dropdown adjusted
-* archives- & categproies-widget added 
+* archives- & categories-widget added 
 * sidebar selection added to customer
 
 
-/*========= Roadmap=========*/ 
-* masonry-bug in bootstrap chrome
-* cards-layout 
-* recent-post widget
+== Roadmap ==
+* masonry-bug in bootstrap4 chrome
+* add card-decks-layout 
+* recent-post-widget
+* WooCommerce ready
