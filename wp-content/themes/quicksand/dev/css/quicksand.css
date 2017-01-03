@@ -344,6 +344,9 @@
   border: none;
   border-radius: 0; }
 
+.widget .tag-pill {
+  padding: .4em .6em; }
+
 /* widget: calendar */
 .widget.widget_calendar td, .widget.widget_calendar th {
   padding: 8px;
@@ -565,8 +568,8 @@ cite {
     /*tags*/
     /* edit post-link  */ }
     .card .entry-footer .tag-links .tag, .card .entry-footer .tag-links .sticky-post {
-      padding: 3.2px 8px;
-      padding: .2rem .5rem;
+      padding: 4.8px 8px;
+      padding: .3rem .5rem;
       margin-right: 8px;
       margin-right: .5rem; }
       .card .entry-footer .tag-links .tag a, .card .entry-footer .tag-links .sticky-post a {

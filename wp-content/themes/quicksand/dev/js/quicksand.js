@@ -1,6 +1,6 @@
 //custom JS for initializing & more
 
-jQuery(document).ready(function ($) { 
+jQuery(document).ready(function ($) {
 //    console.info(colorScheme);
 
 
@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
         $('table').addClass('table table-responsive');
 
         // === Blockquote ===
-        $('.post-quote blockquote').addClass('card-blockquote'); 
+        $('.post-quote blockquote').addClass('card-blockquote');
     }
 
 
@@ -47,64 +47,41 @@ jQuery(document).ready(function ($) {
 
 
 
+    // flexSlider
+    var flexSliderOptions = {
+        animation: "fade",
+        direction: "horizontal",
+        slideshowSpeed: 6000,
+        animationSpeed: 600,
+        prevText: "", //String: Set the text for the "previous" directionNav item
+        nextText: "", //String: Set the text for the "next" directionNav item 
 
+        easing: "swing", //{NEW} String: Determines the easing method used in jQuery transitions. jQuery easing plugin is supported! 
+        reverse: false, //{NEW} Boolean: Reverse the animation direction
+        animationLoop: true, //Boolean: Should the animation loop? If false, directionNav will received "disable" classes at either end
+        smoothHeight: false, //{NEW} Boolean: Allow height of the slider to animate smoothly in horizontal mode
+        startAt: 0, //Integer: The slide that the slider should start on. Array notation (0 = first slide)
+        slideshow: true, //Boolean: Animate slider automatically 
+        initDelay: 0, //{NEW} Integer: Set an initialization delay, in milliseconds
+        randomize: false, //Boolean: Randomize slide order
+        fadeFirstSlide: true, //Boolean: Fade in the first slide when animation type is "fade"
+
+        // Usability features
+        pauseOnAction: true, //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
+        pauseOnHover: false, //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
+        pauseInvisible: true, //{NEW} Boolean: Pause the slideshow when tab is invisible, resume when visible. Provides better UX, lower CPU usage.
+        useCSS: true, //{NEW} Boolean: Slider will use CSS3 transitions if available
+        touch: true                    //{NEW} Boolean: Allow touch swipe navigation of the slider on touch-enabled devices
+    };
+    
     // flexslider header
     var initFlexsliderHeader = function () {
-        $('.quicksand-slider-header-wrapper .flexslider').flexslider({
-            animation: "fade",
-            direction: "horizontal",
-            slideshowSpeed: 7000,
-            animationSpeed: 600,
-            prevText: "", //String: Set the text for the "previous" directionNav item
-            nextText: "", //String: Set the text for the "next" directionNav item 
-
-            easing: "swing", //{NEW} String: Determines the easing method used in jQuery transitions. jQuery easing plugin is supported! 
-            reverse: false, //{NEW} Boolean: Reverse the animation direction
-            animationLoop: true, //Boolean: Should the animation loop? If false, directionNav will received "disable" classes at either end
-            smoothHeight: false, //{NEW} Boolean: Allow height of the slider to animate smoothly in horizontal mode
-            startAt: 0, //Integer: The slide that the slider should start on. Array notation (0 = first slide)
-            slideshow: true, //Boolean: Animate slider automatically 
-            initDelay: 0, //{NEW} Integer: Set an initialization delay, in milliseconds
-            randomize: false, //Boolean: Randomize slide order
-            fadeFirstSlide: true, //Boolean: Fade in the first slide when animation type is "fade"
-
-            // Usability features
-            pauseOnAction: true, //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
-            pauseOnHover: false, //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
-            pauseInvisible: true, //{NEW} Boolean: Pause the slideshow when tab is invisible, resume when visible. Provides better UX, lower CPU usage.
-            useCSS: true, //{NEW} Boolean: Slider will use CSS3 transitions if available
-            touch: true                    //{NEW} Boolean: Allow touch swipe navigation of the slider on touch-enabled devices
-        });
+        $('.quicksand-slider-header-wrapper .flexslider').flexslider(flexSliderOptions);
     }
 
     // flexslider header
     var initFlexsliderPostformatGallery = function () {
-        $('.quicksand-post-gallery .flexslider').flexslider({
-            controlNav: false,
-            animation: "fade",
-            direction: "horizontal",
-            slideshowSpeed: 7000,
-            animationSpeed: 600,
-            prevText: "", //String: Set the text for the "previous" directionNav item
-            nextText: "", //String: Set the text for the "next" directionNav item 
-
-            easing: "swing", //{NEW} String: Determines the easing method used in jQuery transitions. jQuery easing plugin is supported! 
-            reverse: false, //{NEW} Boolean: Reverse the animation direction
-            animationLoop: true, //Boolean: Should the animation loop? If false, directionNav will received "disable" classes at either end
-            smoothHeight: true, //{NEW} Boolean: Allow height of the slider to animate smoothly in horizontal mode
-            startAt: 0, //Integer: The slide that the slider should start on. Array notation (0 = first slide)
-            slideshow: true, //Boolean: Animate slider automatically 
-            initDelay: 0, //{NEW} Integer: Set an initialization delay, in milliseconds
-            randomize: false, //Boolean: Randomize slide order
-            fadeFirstSlide: true, //Boolean: Fade in the first slide when animation type is "fade"
-
-            // Usability features
-            pauseOnAction: true, //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
-            pauseOnHover: false, //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
-            pauseInvisible: true, //{NEW} Boolean: Pause the slideshow when tab is invisible, resume when visible. Provides better UX, lower CPU usage.
-            useCSS: true, //{NEW} Boolean: Slider will use CSS3 transitions if available
-            touch: true                    //{NEW} Boolean: Allow touch swipe navigation of the slider on touch-enabled devices
-        });
+        $('.quicksand-post-gallery .flexslider').flexslider(flexSliderOptions);
     }
 
 
@@ -148,22 +125,21 @@ jQuery(document).ready(function ($) {
     }
 
 
-        
+
     // margin of the navbar-dropdown
     var adjustNavDropDown = function () {
-        
+
         var marginTop = 16;
-        var fontSize = $('body').css('font-size').replace("px", ""); 
-        
-        if(fontSize > 16) {
-            var diff = fontSize-16;
-            marginTop = 16-diff;
+        var fontSize = $('body').css('font-size').replace("px", "");
+
+        if (fontSize > 16) {
+            var diff = fontSize - 16;
+            marginTop = 16 - diff;
+        } else if (fontSize < 16) {
+            var diff = 16 - fontSize;
+            marginTop = 16 + diff + 1;
         }
-        else if (fontSize < 16){
-            var diff = 16-fontSize;
-            marginTop = 16+diff+1;
-        } 
-        
+
         $('.site-navigation .navbar .dropdown-menu').css('margin-top', marginTop + 'px');
     }
 
@@ -193,7 +169,7 @@ jQuery(document).ready(function ($) {
 
     // all paginations
     addClasses();
-    
+
     // adjust margin of dropDown
     adjustNavDropDown();
 });
