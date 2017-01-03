@@ -364,6 +364,12 @@ if (!function_exists('quicksand_customizer_css')) :
                 color: <?php echo get_theme_mod('qs_footer_text_color', $colorScheme['colors']['qs_footer_text_color']); ?>;
                 border: none;
             }    
+            
+            
+            .site-footer-widgetbar .widget .tag {
+                color: <?php echo get_theme_mod('qs_footer_background_color', $colorScheme['colors']['qs_footer_background_color']); ?>;
+                background: <?php echo get_theme_mod('qs_footer_text_color', $colorScheme['colors']['qs_footer_text_color']); ?>; 
+            }
 
             .site-footer-widgetbar a,
             .site-footer .nav-wrapper a {  

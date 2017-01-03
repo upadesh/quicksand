@@ -413,9 +413,7 @@ $gray-lightest:             $brown-lightest !default;   */
 
 .site-footer-widgetbar {
   padding: 16px;
-  padding: 1rem;
-  font-size: 14.4px;
-  font-size: .9rem; }
+  padding: 1rem; }
   .site-footer-widgetbar .widget ul, .site-footer-widgetbar .widget ol {
     list-style-type: none;
     padding-left: 0; }
@@ -540,20 +538,18 @@ cite {
   .card .entry-summary {
     color: #a3a3a3;
     font-style: italic; }
-  .card .entry-header.card-header {
-    border-bottom: none; }
-    .card .entry-header.card-header .entry-title.card-title {
-      margin-top: 16px;
-      margin-top: 1rem;
-      margin-bottom: 16px;
-      margin-bottom: 1rem;
-      /*
+  .card .entry-header.card-header .entry-title.card-title {
+    margin-top: 16px;
+    margin-top: 1rem;
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+    /*
              * WP-Unit-Test
              * break the title if necassary
              * @see http://wp.local/title-should-not-overflow-the-content-area/
             */
-      -ms-word-wrap: break-word;
-      word-wrap: break-word; }
+    -ms-word-wrap: break-word;
+    word-wrap: break-word; }
   .card .entry-content {
     /* 
          * for the WP-Test: reduce size of massively large image with no alignment.
