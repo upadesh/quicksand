@@ -771,6 +771,28 @@ if (!function_exists('quicksand_get_sidebars')) :
 
 endif;
 
+
+
+
+
+if (!function_exists('quicksand_add_editor_styles')) :
+
+    /**
+     * Apply theme's stylesheet to the visual editor.
+     *
+     * @uses add_editor_style() Links a stylesheet to visual editor 
+     *
+     * @since Quicksand 0.3.0
+     */
+    function quicksand_add_editor_styles() {
+        add_editor_style('/css/custom-editor-style.css');
+    }
+
+endif;
+add_action('init', 'quicksand_add_editor_styles');
+
+
+
 /**
  * Custom template tags for this theme.
  */
