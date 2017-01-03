@@ -20,20 +20,14 @@ class QuicksandWidgetCategories extends WP_Widget {
     function widget($args, $instance) {
         extract($args);
 
-        if (!empty($instance['title'])) {
-            $title = $before_title . apply_filters('widget_title', $instance['title']) . $after_title;
-        }
-
-        // show counter-pills
-        if (isset($instance['enable_count'])) {
-            $enable_count = $instance['enable_count'] ? $instance['enable_count'] : 'checked';
-        }
-
-        // limit categories
+        $title = isset($instance['title']) ? $instance['title'] : esc_html__('Categories', 'quicksand');
+        $enable_count = $instance['enable_count'] ? $instance['enable_count'] : 'checked';
         $limit = ($instance['limit']) ? $instance['limit'] : NULL;
 
         echo $before_widget;
+        echo $before_title;
         echo $title;
+        echo $after_title;
         ?>
 
 
