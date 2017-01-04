@@ -4,14 +4,16 @@
  * this is the DEFAULT color-scheme
  *
  * If you want to create your own color-scheme do the following:
- *  - copy all files to a folder, which is named after a Cowboy-Bebob-Series
- *      - an example is provided by 'jupiter-jazz'
- *  - copy all files from the first level inside your folder
- *  - edit them at your convenience
+ *  - copy app.scss to app-NAME-OF-SCHEME.scss
+ *  - create a folder with the name of your color-scheme
+ *  - add / replace your scss files to your newly created folder
+ *  - edit the files to your convenience
+ *  - replace the import-command inside your app-file, so it points to the file inside the new folder
+ *      - an example is provided by 'jupiter-jazz' 
  *  - now add your theme to the gruntfile, so it can be compiled by sass
  *      - create a new line in sass->dist->files
  *          - 'dev/css/<%= pkg.name %>-jupiter-jazz.css': 'dev/scss/jupiter-jazz/app-jupiter-jazz.scss'
- *      - After compiling you will end up with a new file in the css-folder name  'quicksand-jupiter-jazz.css' 
+ *      - After compiling you will end up with a new file in the css-folder name  'quicksand-NAME-OF-SCHEME.css' 
  * 
  * @hint    quicksand-color-schemes are named after episodes of the anime-series 'Cowboy Bebob' 
  * @see     https://en.wikipedia.org/wiki/List_of_Cowboy_Bebop_episodes 
@@ -22,12 +24,12 @@
  * Changing font:
  * there exist 2 possibilities
  *  - _font-(theme).scss
- *      - change here default very default font, hwich is used when BS & custom css is compiled
+ *      - change here the default font, which is used when BS & custom css is compiled
  *      - the font has to be present in dev/fonts/
  *      - this one is always taken
  * 
  *  - Customizer Settings
- *      - enter a valid Google-API-key save it & relaod the page
+ *      - enter a valid Google-API-key save it & reload the page
  *      - this way you can use every Google-font you want
  */
 /**
@@ -5803,39 +5805,3 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   width: 50%; }
   .image-navigation .nav-links .nav-next a {
     float: right; }
-
-/* BS-style pagination*/
-/*
-.quicksand-post-pagination-list-view {
-    @extend text-xs-xenter
-    width: 100%;
-    text-align: center;
-    .navigation.pagination {
-        display: inline-block;
-        @include center-block;
-        text-align: center; 
-        .nav-links {
-            @extend .pagination;
-             bootstrap-style pagination
-            .page-numbers {
-                @extend .page-link;
-                &:first-child {
-                    margin-left: 0;
-                    @include border-left-radius($border-radius);
-                }
-                &:last-child {
-                    @include border-right-radius($border-radius);
-                }
-                &.current {
-                    @include plain-hover-focus {
-                        z-index: 2;
-                        color: $pagination-active-color;
-                        cursor: default;
-                        background-color: $pagination-active-bg;
-                        border-color: $pagination-active-border;
-                    }
-                }
-            }
-        }
-    }
-} */

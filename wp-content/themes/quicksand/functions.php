@@ -155,17 +155,6 @@ if (!function_exists('quicksand_setup')) :
             'width' => 1200,
         );
         add_theme_support('custom-header', $customHeaderArgs);
-
-
-
-        /*
-         * TODO: add editor
-         * 
-         * 
-         * This theme styles the visual editor to resemble the theme style,
-         * specifically font, colors, icons, and column width.
-         */
-//        add_editor_style(array('css/editor-style.css', twentysixteen_fonts_url()));
     }
 
 endif; // quicksand_setup
@@ -300,21 +289,6 @@ if (!function_exists('quicksand_fonts_url')) :
 endif;
 
 
-
-
-
-
-/**
- * Handles JavaScript detection.
- *
- * Adds a `js` class to the root `<html>` element when JavaScript is detected.
- *
- * @since Quicksand 0.2.1
- */
-//function quicksand_javascript_detection() {
-//	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
-//}
-//add_action( 'wp_head', 'quicksand_javascript_detection', 0 );
 
 
 if (!function_exists('quicksand_styles')) :
@@ -472,25 +446,7 @@ function quicksand_body_classes($classes) {
 
 add_filter('body_class', 'quicksand_body_classes');
 
-/**
- * Workaround for the Bootstrap-Wordpress-tag-bug
- *
- * @since Quicksand 0.2.1
- * 
- * the tag-class is already occupied by bootstrap, so when wordpress
- * generates it in the body-class, it breaks the layout.
- * 
- * @param mixed $classes
- * @return mixed
- */
-//function quicksand_bs4_remove_tag_body_class($classes) {
-//    if (false !== ( $class = array_search('tag', $classes) )) {
-//        unset($classes[$class]);
-//    }
-//    return $classes;
-//}
-//
-//add_filter('body_class', 'quicksand_bs4_remove_tag_body_class');
+
 
 
 if (!function_exists('quicksand_bs4_remove_tag_classes')) :

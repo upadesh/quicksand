@@ -6069,39 +6069,3 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   width: 50%; }
   .image-navigation .nav-links .nav-next a {
     float: right; }
-
-/* BS-style pagination*/
-/*
-.quicksand-post-pagination-list-view {
-    @extend text-xs-xenter
-    width: 100%;
-    text-align: center;
-    .navigation.pagination {
-        display: inline-block;
-        @include center-block;
-        text-align: center; 
-        .nav-links {
-            @extend .pagination;
-             bootstrap-style pagination
-            .page-numbers {
-                @extend .page-link;
-                &:first-child {
-                    margin-left: 0;
-                    @include border-left-radius($border-radius);
-                }
-                &:last-child {
-                    @include border-right-radius($border-radius);
-                }
-                &.current {
-                    @include plain-hover-focus {
-                        z-index: 2;
-                        color: $pagination-active-color;
-                        cursor: default;
-                        background-color: $pagination-active-bg;
-                        border-color: $pagination-active-border;
-                    }
-                }
-            }
-        }
-    }
-} */
