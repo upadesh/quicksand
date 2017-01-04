@@ -128,7 +128,6 @@ jQuery(document).ready(function ($) {
 
     // margin of the navbar-dropdown
     var adjustNavDropDown = function () {
-
         var marginTop = 16;
         var fontSize = $('body').css('font-size').replace("px", "");
 
