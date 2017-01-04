@@ -73,7 +73,7 @@ jQuery(document).ready(function ($) {
         useCSS: true, //{NEW} Boolean: Slider will use CSS3 transitions if available
         touch: true                    //{NEW} Boolean: Allow touch swipe navigation of the slider on touch-enabled devices
     };
-    
+
     // flexslider header
     var initFlexsliderHeader = function () {
         $('.quicksand-slider-header-wrapper .flexslider').flexslider(flexSliderOptions);
@@ -139,9 +139,14 @@ jQuery(document).ready(function ($) {
             marginTop = 16 + diff + 1;
         }
 
+        marginTop = $('.navbar-toggler').css('display') == 'none' ? marginTop : -5;
         $('.site-navigation .navbar .dropdown-menu').css('margin-top', marginTop + 'px');
-    }
 
+    } 
+    
+    $(window).on("load, resize", function () {
+        adjustNavDropDown();
+    });
 
 
 
