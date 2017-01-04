@@ -147,7 +147,7 @@ jQuery(document).ready(function ($) {
         adjustNavDropDown();
     });
 
-    // efect for dropdown, but right now css-transition is used
+    // effect for dropdown, but right now css-transition is used
 //    $('.dropdown').on('show.bs.dropdown', function () {
 //        $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
 //    });
