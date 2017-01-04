@@ -3,7 +3,6 @@
 jQuery(document).ready(function ($) {
 //    console.info(colorScheme);
 
-
     // add btn-classes to paginations 
     var addClasses = function () {
 
@@ -142,12 +141,21 @@ jQuery(document).ready(function ($) {
         marginTop = $('.navbar-toggler').css('display') == 'none' ? marginTop : -5;
         $('.site-navigation .navbar .dropdown-menu').css('margin-top', marginTop + 'px');
 
-    } 
-    
+    }
+
     $(window).on("load, resize", function () {
         adjustNavDropDown();
     });
 
+    // efect for dropdown, but right now css-transition is used
+//    $('.dropdown').on('show.bs.dropdown', function () {
+//        $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+//    });
+//
+//    // Add slideUp animation to Bootstrap dropdown when collapsing.
+//    $('.dropdown').on('hide.bs.dropdown', function () {
+//        $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+//    });
 
 
     // === initialiase scripts ===   

@@ -20,11 +20,11 @@ $navbar-height: 60px;
         .navbar {
             height: $navbar-height;
             padding: 0 1rem;
-/*            li { 
-                .dropdown-menu { 
-                    margin: 16px 0 0;
-                } 
-            }*/
+            /*            li { 
+                            .dropdown-menu { 
+                                margin: 16px 0 0;
+                            } 
+                        }*/
 
             .collapse.navbar-toggleable-sm {  
                 .nav-content {   
@@ -84,7 +84,7 @@ $navbar-height: 60px;
 /*mobile navigation*/
 
 @media (min-width: 767px) { 
-    
+
     .navbar { 
         .nav-search-close-mobile {
             visibility: hidden;
@@ -136,3 +136,23 @@ $navbar-height: 60px;
 
 
 
+/* effect for dropdown */
+.dropdown {
+    .dropdown-menu {
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+
+        max-height: 0;
+        display: block;
+        overflow: hidden;
+        opacity: 0;
+    }
+}
+
+.dropdown.open .dropdown-menu {
+    max-height: 1200px;
+    opacity: 1;
+}

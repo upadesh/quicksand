@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Quicksand\n"
-"POT-Creation-Date: 2016-12-09 12:14+0100\n"
-"PO-Revision-Date: 2016-12-09 12:16+0100\n"
+"POT-Creation-Date: 2017-01-04 19:36+0100\n"
+"PO-Revision-Date: 2017-01-04 19:37+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -68,76 +68,76 @@ msgstr "Primäres Menü"
 msgid "Secondary Menu"
 msgstr "Sekundäres Menu"
 
-#: functions.php:203 inc/customizer.php:738
+#: functions.php:192 inc/customizer.php:738
 msgid "Right Sidebar"
 msgstr "Rechte Sidebar"
 
-#: functions.php:205
+#: functions.php:194
 msgid "Add widgets here to appear in your right sidebar."
 msgstr "Füge Widgets zur rechten Sidebar hinzu"
 
-#: functions.php:213 inc/customizer.php:739
+#: functions.php:202 inc/customizer.php:739
 msgid "Left Sidebar"
 msgstr "Linke Sidebar"
 
-#: functions.php:215
+#: functions.php:204
 msgid "Add widgets here to appear in your left sidebar."
 msgstr "Füge Widgets zur linken Sidebar hinzu"
 
-#: functions.php:223
+#: functions.php:212
 msgid "Footer Sidebar"
 msgstr "Footer Sidebar"
 
-#: functions.php:225
+#: functions.php:214
 msgid "Add widgets here to appear at the bottom."
 msgstr "Füge Widgets hier hinzu, damit sie im Footer erscheinen."
 
-#: functions.php:257
+#: functions.php:246
 msgid "on"
 msgstr "am"
 
-#: functions.php:536
+#: functions.php:492
 msgid "Comment"
 msgstr "Kommentar"
 
-#: functions.php:571
+#: functions.php:527
 msgid "Name"
 msgstr "Name"
 
-#: functions.php:573
+#: functions.php:529
 msgid "Email"
 msgstr "Email"
 
-#: functions.php:575
+#: functions.php:531
 msgid "Website"
 msgstr "Webseite"
 
-#: functions.php:595
+#: functions.php:551
 msgid "To view this protected post, enter the password below:"
 msgstr ""
 "Geben Sie bitte Ihr Kennwort ein, um diesen geschützten Beitrag zu sehen"
 
-#: functions.php:669
+#: functions.php:625
 msgid "Read more"
 msgstr "Weiter lesen"
 
-#: functions.php:692
+#: functions.php:648
 msgid "Category"
 msgstr "Kategorie"
 
-#: functions.php:694
+#: functions.php:650
 msgid "Tag"
 msgstr "Tag"
 
-#: functions.php:696 inc/customizer.php:493
+#: functions.php:652 inc/customizer.php:493
 msgid "Author"
 msgstr "Autor"
 
-#: functions.php:698
+#: functions.php:654
 msgid "Month"
 msgstr "Monat"
 
-#: functions.php:698
+#: functions.php:654
 msgid "F Y"
 msgstr ""
 
@@ -501,7 +501,8 @@ msgstr "Veröffentlicht am"
 msgid ", "
 msgstr ", "
 
-#: inc/template-tags.php:136 inc/widgets/class.QuicksandWidgetCategories.php:79
+#: inc/template-tags.php:136 inc/widgets/class.QuicksandWidgetCategories.php:23
+#: inc/widgets/class.QuicksandWidgetCategories.php:73
 msgid "Categories"
 msgstr "Categories"
 
@@ -527,30 +528,30 @@ msgstr "Seite"
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "<span class=\"screen-reader-text\">&#8222;%s&#8220;</span> bearbeiten"
 
-#: inc/template-tags.php:646
-#, php-format
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "<span class=\"screen-reader-text\">&#8222;%s&#8220; </span>weiterlesen"
+#: inc/template-tags.php:647
+msgid "Continue reading"
+msgstr "Weiter lesen\t"
 
 #: inc/widgets/class.QuicksandWidgetArchives.php:10
 msgid "Quicksand Archives"
 msgstr "Quicksand Archive"
 
-#: inc/widgets/class.QuicksandWidgetArchives.php:79
+#: inc/widgets/class.QuicksandWidgetArchives.php:23
+#: inc/widgets/class.QuicksandWidgetArchives.php:73
 msgid "Archives"
 msgstr "Archive"
 
-#: inc/widgets/class.QuicksandWidgetArchives.php:87
-#: inc/widgets/class.QuicksandWidgetCategories.php:87
+#: inc/widgets/class.QuicksandWidgetArchives.php:81
+#: inc/widgets/class.QuicksandWidgetCategories.php:81
 msgid "Title "
 msgstr "Title"
 
-#: inc/widgets/class.QuicksandWidgetArchives.php:94
+#: inc/widgets/class.QuicksandWidgetArchives.php:88
 msgid "Limit Archives "
 msgstr "Limitiere Archive"
 
-#: inc/widgets/class.QuicksandWidgetArchives.php:106
-#: inc/widgets/class.QuicksandWidgetCategories.php:106
+#: inc/widgets/class.QuicksandWidgetArchives.php:100
+#: inc/widgets/class.QuicksandWidgetCategories.php:100
 msgid "Enable Posts Count"
 msgstr "Zähler einschalten"
 
@@ -558,7 +559,7 @@ msgstr "Zähler einschalten"
 msgid "Quicksand Categories"
 msgstr "Quicksand Kategorien"
 
-#: inc/widgets/class.QuicksandWidgetCategories.php:94
+#: inc/widgets/class.QuicksandWidgetCategories.php:88
 msgid "Limit Categories "
 msgstr "Limitiere Kategorien"
 
@@ -630,6 +631,10 @@ msgstr ""
 #: template-parts/navigation-primary.php:40
 msgid "Search"
 msgstr "Suche"
+
+#~ msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+#~ msgstr ""
+#~ "<span class=\"screen-reader-text\">&#8222;%s&#8220; </span>weiterlesen"
 
 #~ msgid "Add widgets here to appear in your sidebar."
 #~ msgstr "Widgets hier hinzufügen, um sie in die Seitenleiste einzubauen."
