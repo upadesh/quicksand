@@ -138,12 +138,12 @@ jQuery(document).ready(function ($) {
             marginTop = 16 + diff + 1;
         }
 
-        marginTop = $('.navbar-toggler').css('display') == 'none' ? marginTop : -5;
+        marginTop = $('.navbar-toggler').css('display') == 'none' ? marginTop : -7;
         $('.site-navigation .navbar .dropdown-menu').css('margin-top', marginTop + 'px');
 
     }
 
-    $(window).on("load, resize", function () {
+    $(window).resize(function () {
         adjustNavDropDown();
     });
 
