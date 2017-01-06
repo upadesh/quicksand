@@ -64,6 +64,35 @@ zip -r quicksand.zip quicksand
 
 
 ## Development
+### Install XML-Unit-Test 
+
+```
+cd  wp 
+vim wp-config.php 
+	define('FS_METHOD', 'direct');
+sudo chown -R piccard:www-data ../wp/
+```
+
+### Install node, sass & grunt
+```
+sudo apt-get update
+sudo apt-get install nodejs nodejs-legacy npm  ruby 
+
+sudo su -c "gem install sass"
+
+sudo npm  -g install grunt grunt-cli coffee-script jshint node-gyp
+```
+
+### Install Quicksand
+```
+cd /tmp
+git clone https://github.com/piccard21/quicksand.git
+mv quicksand/.git* /var/www/wp/
+mv quicksand/wp-content/themes/quicksand/ /var/www/wp/wp-content/themes/
+cd /var/www/wp/wp-content/themes/quicksand
+```
+
+
 ```
 npm install
 grunt build
