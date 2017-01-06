@@ -24,11 +24,9 @@ grunt build
 
 Use the Line-Endings-plugin in Netbeans 'Show and change line-endings' 
 
-#### Adjust line-endings in these files
-- js/lightgallery/js/lightgallery.min.js
+#### Adjust line-endings in these files 
 - js/lightgallery/js/lightgallery.js
-- js/lightgallery/css/lg-fb-comment-box.css
-- js/lg-thumbnail.min.js
+- js/lightgallery/css/lg-fb-comment-box.css 
 - js/lg-thumbnail.js
 
 
