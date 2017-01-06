@@ -75,12 +75,7 @@ $gray-lightest:             $brown-lightest !default;   */
     padding: 5px 0; }
     .site-navigation .navbar {
       height: 60px;
-      padding: 0 1rem;
-      /*            li { 
-                            .dropdown-menu { 
-                                margin: 16px 0 0;
-                            } 
-                        }*/ }
+      padding: 0 1rem; }
       .site-navigation .navbar .collapse.navbar-toggleable-sm .nav-content {
         display: -ms-flexbox;
         display: flex;
@@ -346,25 +341,23 @@ $gray-lightest:             $brown-lightest !default;   */
 /*
  * widgets
  */
-.widget .widget-title {
-  font-size: 20.8px;
-  font-size: 1.3rem; }
-
-.widget .textwidget {
-  padding: 12px 20px;
-  padding: .75rem 1.25rem; }
-
-.widget .tagcloud {
-  padding: 12px 20px;
-  padding: .75rem 1.25rem; }
-
-.widget select {
-  width: 100%;
-  border: none;
-  border-radius: 0; }
-
-.widget .tag-pill {
-  padding: .4em .6em; }
+.widget {
+  /*    .tag-pill {
+        padding: .4em .6em;
+    }*/ }
+  .widget .widget-title {
+    font-size: 20.8px;
+    font-size: 1.3rem; }
+  .widget .textwidget {
+    padding: 12px 20px;
+    padding: .75rem 1.25rem; }
+  .widget .tagcloud {
+    padding: 12px 20px;
+    padding: .75rem 1.25rem; }
+  .widget select {
+    width: 100%;
+    border: none;
+    border-radius: 0; }
 
 /* widget: calendar */
 .widget.widget_calendar td, .widget.widget_calendar th {

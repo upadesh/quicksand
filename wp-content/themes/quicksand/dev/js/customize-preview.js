@@ -21,7 +21,7 @@
 
         var result = 'rgba(' + r + ',' + g + ',' + b + ',' + opacity + ')';
         return result;
-    }  
+    }
 
 
     // sidebar
@@ -36,7 +36,7 @@
             #secondary .widget ol li';
 
             $(borderColor).css('border-color', qs_sidebar_border_color);
-            $(borderStyle).css('border-style', 'solid'); 
+            $(borderStyle).css('border-style', 'solid');
         });
     });
     wp.customize('qs_sidebar_border_width', function (value) {
@@ -55,7 +55,7 @@
 
             $(borderWidthOuter).css('border-width', qs_sidebar_border_width > 1 ? 1 : qs_sidebar_border_width);
             $(borderWidthInner).css('border-width', qs_sidebar_border_width);
-            $(borderBottom).css('border-bottom', 'none'); 
+            $(borderBottom).css('border-bottom', 'none');
         });
     });
     wp.customize('qs_sidebar_text_color', function (value) {
@@ -64,7 +64,7 @@
             color = '#secondary .widget ul li, \n\
             #secondary .widget ol li ';
 
-            $(color).css('color', qs_sidebar_text_color); 
+            $(color).css('color', qs_sidebar_text_color);
         });
     });
     wp.customize('qs_sidebar_background_color', function (value) {
@@ -73,7 +73,7 @@
             background = '#secondary .widget ul li, \n\
             #secondary .widget ol li ';
 
-            $(background).css('background', qs_sidebar_background_color); 
+            $(background).css('background', qs_sidebar_background_color);
         });
     });
     wp.customize('qs_sidebar_link_color', function (value) {
@@ -82,18 +82,18 @@
             color = '#secondary .widget li a, \n\
             #secondary .widget table a';
 
-            $(color).css('color', qs_sidebar_link_color); 
+            $(color).css('color', qs_sidebar_link_color);
         });
-    });  
-    
-    
+    });
+
+
     wp.customize('qs_nav_logo_text', function (value) {
         value.bind(function (qs_nav_logo_text) {
             var text;
 
             text = '.nav-content .navbar-brand';
 
-            $(text).text(qs_nav_logo_text); 
+            $(text).text(qs_nav_logo_text);
         });
     });
 
@@ -103,7 +103,7 @@
             var height;
             height = '.quicksand-slider-header-wrapper .flexslider .slides';
 
-            $(height).css('max-height', qs_slider_height + 'rem'); 
+            $(height).css('max-height', qs_slider_height + 'rem');
         });
     });
 
@@ -113,7 +113,7 @@
             var marginTop;
             marginTop = '.quicksand-slider-header-wrapper';
 
-            $(marginTop).css('margin-top', qs_slider_margin_top + 'rem'); 
+            $(marginTop).css('margin-top', qs_slider_margin_top + 'rem');
         });
     });
 
@@ -122,7 +122,22 @@
 
             var fontSize = 'body,html';
 
-            $(fontSize).css('font-size', qs_content_font_size + 'px'); 
+            $(fontSize).css('font-size', qs_content_font_size + 'px');
+
+            // adjust also the dropdown in preview
+            // how can I get into the scope of quicksand.js to trigger adjustNavDropDown
+            var marginTop = 16;
+
+            if (fontSize > 16) {
+                var diff = fontSize - 16;
+                marginTop = 16 - diff;
+            } else if (fontSize < 16) {
+                var diff = 16 - fontSize;
+                marginTop = 16 + diff;
+            }
+
+            marginTop = $('.navbar-toggler').css('display') == 'none' ? marginTop : -7;
+            $('.site-navigation .navbar .dropdown-menu').css('margin-top', marginTop + 'px');
         });
     });
 

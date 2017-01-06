@@ -140,6 +140,9 @@ if (!function_exists('quicksand_customizer_css')) :
             .site-nav-container .dropdown-menu {
                 background: <?php echo get_theme_mod('qs_nav_background_color', $colorScheme['colors']['qs_nav_background_color']); ?>;
             }
+            .site-nav-container .dropdown-menu {
+                border-top: 1px solid <?php echo get_theme_mod('qs_nav_background_color', $colorScheme['colors']['qs_nav_background_color']); ?>;
+            }
             .nav-search-mobile-wrapper .nav-search-mobile .fa,
             .nav-search-mobile-wrapper .nav-search-close-mobile .fa,
             .nav-search-wrapper .nav-search .fa,
@@ -364,8 +367,8 @@ if (!function_exists('quicksand_customizer_css')) :
                 color: <?php echo get_theme_mod('qs_footer_text_color', $colorScheme['colors']['qs_footer_text_color']); ?>;
                 border: none;
             }    
-            
-            
+
+
             .site-footer-widgetbar .widget .tag {
                 color: <?php echo get_theme_mod('qs_footer_background_color', $colorScheme['colors']['qs_footer_background_color']); ?>;
                 background: <?php echo get_theme_mod('qs_footer_text_color', $colorScheme['colors']['qs_footer_text_color']); ?>; 

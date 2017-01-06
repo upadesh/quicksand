@@ -62,6 +62,7 @@ find . -iname '.*' -type f -delete
 
 ### zip the whole thing
 ```
+cd ..
 zip -r quicksand.zip quicksand
 ```  
 
