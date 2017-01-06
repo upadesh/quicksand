@@ -79,6 +79,10 @@ jQuery(document).ready(function ($) {
     }
 
     // flexslider in post
+    $.extend(flexSliderOptions, {
+        smoothHeight: true,
+        controlNav: false
+    });
     var initFlexsliderPostformatGallery = function () {
         $('.quicksand-post-gallery .flexslider').flexslider(flexSliderOptions);
     }
