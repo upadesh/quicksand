@@ -125,7 +125,7 @@
             $(fontSize).css('font-size', qs_content_font_size + 'px');
 
             // adjust also the dropdown in preview
-            // how can I get into the scope of quicksand.js to trigger adjustNavDropDown
+            // how can I get into the scope of quicksand.js to trigger adjustNavDropDown?
             var marginTop = 16;
 
             if (fontSize > 16) {
