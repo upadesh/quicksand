@@ -20,7 +20,7 @@
         "fitvids": "^2.0.0",
         "flexslider": "^2.6.3",
         "font-awesome": "^4.6.3",
-        "bootstrap": "^4.0.0-alpha.5"
+        "bootstrap": "4.0.0-alpha.5"
     },
     "devDependencies": {
         "autoprefixer": "^6.5.0",

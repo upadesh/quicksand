@@ -79,6 +79,7 @@ Quicksand theme uses:
 
 
 == Roadmap ==
+* extending in newer versions of bootstrap 4.0.0-alpha.5 doesn't work any more
 * add card-decks-layout 
 * add recent-post-widget
 * WooCommerce-ready
