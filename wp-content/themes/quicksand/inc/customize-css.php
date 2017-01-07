@@ -213,6 +213,18 @@ if (!function_exists('quicksand_customizer_css')) :
                 background: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors']['qs_content_secondary_text_color']); ?> !important;
             }
 
+            <?php
+            // hide slider in mobile-mode
+            if (get_theme_mod('qs_slider_hide_mobile_mode', $colorScheme['settings']['qs_slider_hide_mobile_mode'])) {
+                ?>
+
+                @media only screen and (max-width: 768px) {
+                    .quicksand-slider-header-wrapper {
+                        display: none!important;
+                    } 
+                } 
+
+            <?php } ?>
 
             /* === site-header === */
             .site-info-wrapper a,

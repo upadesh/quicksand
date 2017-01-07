@@ -21,7 +21,8 @@
                     api('qs_content_use_lightgallery').set(settings['qs_content_use_lightgallery']);
                     api('qs_slider_enabled').set(settings['qs_slider_enabled']);
                     api('qs_slider_fullwidth').set(settings['qs_slider_fullwidth']);
-                    api('qs_header_enabled').set(settings['qs_header_enabled']);
+                    api('qs_slider_enabled').set(settings['qs_slider_enabled']);
+                    api('qs_slider_hide_mobile_mode').set(settings['qs_slider_hide_mobile_mode']);
                     api('qs_slider_height').set(settings['qs_slider_height']);
                     api('qs_header_hide_when_slider_enabled').set(settings['qs_header_hide_when_slider_enabled']);
                     api('qs_slider_margin_top').set(settings['qs_slider_margin_top']);

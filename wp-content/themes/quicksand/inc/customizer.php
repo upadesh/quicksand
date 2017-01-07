@@ -292,6 +292,22 @@ function quicksand_customize_register($wp_customize) {
         'type' => 'checkbox',
         'settings' => 'qs_slider_fullwidth',
         'priority' => 20,
+    )); 
+
+    // hide in mobile mode
+    $wp_customize->add_setting("qs_slider_hide_mobile_mode", array(
+        'default' => $colorSchemeDefault['settings']['qs_slider_hide_mobile_mode'],
+        'type' => 'theme_mod',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'quicksand_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('qs_slider_hide_mobile_mode', array(
+        'label' => __("Hide in mobile-mode", 'quicksand'),
+        'section' => 'quicksand_slider_section',
+        'type' => 'checkbox',
+        'settings' => 'qs_slider_hide_mobile_mode',
+        'priority' => 25,
     ));
 
 
