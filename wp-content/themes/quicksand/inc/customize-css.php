@@ -344,6 +344,12 @@ if (!function_exists('quicksand_customizer_css')) :
                 background: <?php echo get_theme_mod('qs_content_title_bg_color', $colorScheme['colors']['qs_content_title_bg_color']); ?>; 
                 color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors']['qs_content_secondary_text_color']); ?>;
             }
+            
+            /* search-btn fix for Chrome*/
+            #secondary .widget .search-form .input-group-btn,
+            #third .widget .search-form .input-group-btn {
+                background: #<?php echo get_theme_mod('background_color', $colorScheme['colors']['background_color']); ?>; 
+            }
 
             /* quicksand-widgets*/
             #secondary .widget .tag.tag-default.tag-pill ,
