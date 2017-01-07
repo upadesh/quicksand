@@ -78,12 +78,12 @@ jQuery(document).ready(function ($) {
         $('.quicksand-slider-header-wrapper .flexslider').flexslider(flexSliderOptions);
     }
 
-    // flexslider in post
-    $.extend(flexSliderOptions, {
-        smoothHeight: true,
-        controlNav: false
-    });
     var initFlexsliderPostformatGallery = function () {
+        // flexslider in post
+        $.extend(flexSliderOptions, {
+            smoothHeight: true,
+            controlNav: false
+        });
         $('.quicksand-post-gallery .flexslider').flexslider(flexSliderOptions);
     }
 
