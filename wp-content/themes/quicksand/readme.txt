@@ -59,6 +59,7 @@ Quicksand theme uses:
 * fixed changes from bootstrap 4.0.0-alpha.5 to 4.0.0-alpha.6
 * added icons for custom post type video & gallery
 * set foxus to search-form when triggered
+* sidebar-preview in customizer fixed for tag-pills
 
 = 0.4.1 =
 * gallery bug in initializing gallery fixed

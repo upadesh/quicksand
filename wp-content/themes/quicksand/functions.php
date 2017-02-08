@@ -645,13 +645,13 @@ if (!function_exists('quicksand_modify_archive_title')) :
     function quicksand_modify_archive_title($title) {
 
         if (is_category()) {
-            $title = sprintf(__("Category", 'quicksand') . ":<h6 class='card-subtitle text-muted'>%s</h6>", single_cat_title('', false));
+            $title = sprintf(__("Category", 'quicksand') . ":<h6 class='card-subtitle quicksand_archive_subtitle text-muted '>%s</h6>", single_cat_title('', false));
         } elseif (is_tag()) {
-            $title = sprintf(__("Tag", 'quicksand') . ":<h6 class='card-subtitle text-muted'>%s</h6>", single_tag_title('', false));
+            $title = sprintf(__("Tag", 'quicksand') . ":<h6 class='card-subtitle quicksand_archive_subtitle text-muted'>%s</h6>", single_tag_title('', false));
         } elseif (is_author()) {
-            $title = sprintf(__("Author", 'quicksand') . ":<h6 class='card-subtitle text-muted'>%s</h6>", '<span class="vcard">' . get_the_author() . '</span>');
+            $title = sprintf(__("Author", 'quicksand') . ":<h6 class='card-subtitle quicksand_archive_subtitle text-muted'>%s</h6>", '<span class="vcard">' . get_the_author() . '</span>');
         } elseif (is_month()) {
-            $title = sprintf(__("Month", 'quicksand') . ":<h6 class='card-subtitle text-muted'>%s</h6>", get_the_date(_x('F Y', 'monthly archives date format', 'quicksand')));
+            $title = sprintf(__("Month", 'quicksand') . ":<h6 class='card-subtitle quicksand_archive_subtitle text-muted'>%s</h6>", get_the_date(_x('F Y', 'monthly archives date format', 'quicksand')));
         }
 
         return $title;
