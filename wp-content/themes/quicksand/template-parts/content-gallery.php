@@ -12,7 +12,11 @@
     <?php quicksand_entry_excerpt(); ?> 
 
     <!--post title-->
-    <?php quicksand_entry_title(); ?>
+    <?php 
+//    quicksand_entry_title(); 
+    ?>
+    <!--post title-->
+    <?php quicksand_entry_title_postformat_gallery(); ?>
 
     <!--post-meta--> 
     <?php quicksand_entry_meta(); ?>

@@ -3,7 +3,7 @@
 Theme Name: Quicksand
 Theme URI: http://cafe-serendipity.com
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, featured-image-header, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, education, entertainment
-Version: 0.4.1
+Version: 0.5.1
 Tested up to: WP 4.7
 Requires at least: 4.6
 Author: Cafe Serendipity - Andreas Stephan
@@ -55,6 +55,11 @@ Quicksand theme uses:
  
 
 == Changelog ==
+= 0.5.1 =
+* fixed changes from bootstrap 4.0.0-alpha.5 to 4.0.0-alpha.6
+* added icons for custom post type video & gallery
+* set foxus to search-form when triggered
+
 = 0.4.1 =
 * gallery bug in initializing gallery fixed
 * hide-slider in mobile mode added
@@ -78,8 +83,7 @@ Quicksand theme uses:
 * sidebar selection added to customer
 
 
-== Roadmap ==
-* extending in newer versions of bootstrap 4.0.0-alpha.5 doesn't work any more
+== Roadmap == 
 * add card-decks-layout 
 * add recent-post-widget
 * WooCommerce-ready

@@ -382,6 +382,38 @@ if (!function_exists('quicksand_entry_header_postformat_gallery')) :
 
 endif;
 
+if (!function_exists('quicksand_entry_title_postformat_gallery')) :
+
+    /**
+     * Displays the title for post-format: gallery 
+     *
+     * Create your own quicksand_entry_title_postformat_gallery() function to override in a child theme.
+     *
+     * @since Quicksand 0.2.1
+     *
+     * @param string $class Optional. Class string of the header element.  
+     */
+    function quicksand_entry_title_postformat_gallery($class = 'entry-title') {
+        $class = esc_attr($class);
+        ?> 
+
+        <!-- entry-header --> 
+        <header class="card-header entry-header">
+            <!--stick post-->
+            <?php if (is_sticky() && is_home() && !is_paged()) : ?>
+                <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
+            <?php endif; ?>
+
+            <div class="post-gallery">  
+                <h2 class="card-title <?php echo $class; ?>">
+                    <a href="<?php echo get_url_in_content(get_the_content()); ?>"><i class="fa fa-picture-o" aria-hidden="true"></i> <?php the_title(); ?></a> 
+                </h2> 
+            </div><!-- .post-gallery -->
+        </header><!-- .entry-header --> 
+        <?php
+    }
+
+endif;
 
 
 if (!function_exists('quicksand_entry_header_postformat_video')) :
@@ -417,6 +449,38 @@ if (!function_exists('quicksand_entry_header_postformat_video')) :
 
 endif;
 
+if (!function_exists('quicksand_entry_title_postformat_video')) :
+
+    /**
+     * Displays the title for post-format: video 
+     *
+     * Create your own quicksand_entry_title_postformat_video() function to override in a child theme.
+     *
+     * @since Quicksand 0.2.1
+     *
+     * @param string $class Optional. Class string of the header element.  
+     */
+    function quicksand_entry_title_postformat_video($class = 'entry-title') {
+        $class = esc_attr($class);
+        ?> 
+
+        <!-- entry-header --> 
+        <header class="card-header entry-header">
+            <!--stick post-->
+            <?php if (is_sticky() && is_home() && !is_paged()) : ?>
+                <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
+            <?php endif; ?>
+
+            <div class="post-video">  
+                <h2 class="card-title <?php echo $class; ?>">
+                    <a href="<?php echo get_url_in_content(get_the_content()); ?>"><i class="fa fa-film" aria-hidden="true"></i> <?php the_title(); ?></a> 
+                </h2> 
+            </div><!-- .post-video -->
+        </header><!-- .entry-header --> 
+        <?php
+    }
+
+endif;
 
 
 if (!function_exists('quicksand_the_entry_content')) :

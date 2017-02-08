@@ -100,6 +100,7 @@ jQuery(document).ready(function ($) {
             $navContent.fadeOut('fast', function () {
                 $searchForm.removeClass('hidden-xs-up');
                 $searchForm.hide().slideDown('fast');
+                $('#quicksand-top-search-form').focus();
             });
         });
 
@@ -114,7 +115,9 @@ jQuery(document).ready(function ($) {
         // show & hide searchform in mobile mode
         $('.nav-search-mobile').on('click', function () {
             var $searchFormMobile = $('.nav-searchform-mobile');
-            $searchFormMobile.show("fold", {horizFirst: true}, 1000);
+            $searchFormMobile.show("fold", {horizFirst: true}, 1000, function() { 
+                $('#quicksand-top-search-form-mobile').focus();
+            });
 
             $('.nav-search-mobile').hide();
             $('.nav-search-close-mobile').removeClass('hidden-xs-up');

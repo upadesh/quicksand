@@ -32,8 +32,11 @@
             var borderStyle;
 
             borderColor = borderStyle = '#secondary .widget,\n\
+            #third .widget,\n\
             #secondary .widget ul li,\n\
-            #secondary .widget ol li';
+            #third .widget ul li,\n\
+            #secondary .widget ol li\n\
+            #third .widget ol li';
 
             $(borderColor).css('border-color', qs_sidebar_border_color);
             $(borderStyle).css('border-style', 'solid');
@@ -47,11 +50,15 @@
             var borderWidthInner;
             var borderBottom;
 
-            borderWidthOuter = '#secondary .widget';
+            borderWidthOuter = '#secondary .widget\n\
+            #third .widget';
             borderWidthInner = '#secondary .widget ul li,\n\
-            #secondary .widget ol li';
+            #third .widget ul li,\n\
+            #secondary .widget ol li,\n\
+            #third .widget ol li';
             // no border below the widget-title
-            borderBottom = '#secondary .widget .card-header.widget-title';
+            borderBottom = '#secondary .widget .card-header.widget-title\n\
+            #third .widget .card-header.widget-title';
 
             $(borderWidthOuter).css('border-width', qs_sidebar_border_width > 1 ? 1 : qs_sidebar_border_width);
             $(borderWidthInner).css('border-width', qs_sidebar_border_width);
@@ -61,26 +68,44 @@
     wp.customize('qs_sidebar_text_color', function (value) {
         value.bind(function (qs_sidebar_text_color) {
             var color;
-            color = '#secondary .widget ul li, \n\
-            #secondary .widget ol li ';
+            var colorBadges;
+            
+            color = '#secondary .widget ul li,\n\
+            #third .widget ul li,\n\
+            #secondary .widget ol li,\n\
+            #third .widget ol li';
+ 
+            colorBadges = '#secondary .widget ul li .tag-pill,\n\
+            #third .widget ul li .tag-pill';
 
             $(color).css('color', qs_sidebar_text_color);
+            $(colorBadges).css('background', qs_sidebar_text_color); 
         });
     });
     wp.customize('qs_sidebar_background_color', function (value) {
         value.bind(function (qs_sidebar_background_color) {
             var background;
+            var color;
+            
             background = '#secondary .widget ul li, \n\
-            #secondary .widget ol li ';
+            #third .widget ul li, \n\
+            #secondary .widget ol li \n\
+            #third .widget ol li';
+            
+            color = '#secondary .widget ul li .tag-pill,\n\
+            #third .widget ul li .tag-pill';
 
             $(background).css('background', qs_sidebar_background_color);
+            $(color).css('color', qs_sidebar_background_color);
         });
     });
     wp.customize('qs_sidebar_link_color', function (value) {
         value.bind(function (qs_sidebar_link_color) {
             var color;
             color = '#secondary .widget li a, \n\
-            #secondary .widget table a';
+            #third .widget li a, \n\
+            #secondary .widget table a\n\
+            #third .widget table a';
 
             $(color).css('color', qs_sidebar_link_color);
         });

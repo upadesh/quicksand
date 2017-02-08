@@ -8,7 +8,8 @@
     if (!is_singular()) {
         quicksand_entry_header_postformat_video();
     }
-    quicksand_entry_title(); 
+//    quicksand_entry_title();  
+    quicksand_entry_title_postformat_video(); 
     quicksand_entry_meta();
     
     if (!is_singular()) {
