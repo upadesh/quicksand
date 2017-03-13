@@ -21,8 +21,8 @@ class QuicksandWidgetCategories extends WP_Widget {
         extract($args);
 
         $title = isset($instance['title']) ? $instance['title'] : esc_html__('Categories', 'quicksand');
-        $enable_count = $instance['enable_count'] ? $instance['enable_count'] : 'checked';
-        $limit = ($instance['limit']) ? $instance['limit'] : NULL;
+        $enable_count = isset($instance['enable_count']) ? $instance['enable_count'] : 'checked';
+        $limit = isset($instance['limit']) ? $instance['limit'] : NULL;
 
         echo $before_widget;
         echo $before_title;

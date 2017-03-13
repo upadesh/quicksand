@@ -635,8 +635,7 @@ if (!function_exists('quicksand_modify_archive_title')) :
 
     /**
      * Filter the default archive title.
-     * 
-     * @TODO expand the types
+     *  
      * @see http://wordpress.stackexchange.com/questions/175884/how-to-customize-the-archive-title
      *
      * @param string $title Archive title
