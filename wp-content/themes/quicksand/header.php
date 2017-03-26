@@ -63,17 +63,19 @@
 
                     <!-- site-info -->
                     <?php if (has_header_image()) { ?>
-                        <div class="site-info custom-header-image" style="background: url(<?php header_image(); ?>); background-repeat: no-repeat; background-size: cover; height:<?php echo esc_attr(get_custom_header()->height); ?>px;">  
-                            <div  class="site-info-wrapper">
+                        <div class="site-info header-image">  
+                            <img class="custom-header-image" src="<?php header_image(); ?>" alt="" />
+                            <div  class="site-info-wrapper"> 
+                                <div class="site-infos">
+                                    <h1 class="display-3 site-title">
+                                        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+                                    </h1> 
+                                    <br>
+                                    <p class="lead site-description" ><?php esc_html(bloginfo('description', 'display')); ?></p> 
+                                </div>
 
-                                <h1 class="display-3 site-title">
-                                    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-                                </h1> 
-                                <br>
-                                <p class="lead site-description" ><?php esc_html(bloginfo('description', 'display')); ?></p> 
                             </div>
-                        </div>
-
+                        </div>  
                     <?php } else { ?> 
                         <div class="site-info">  
                             <div  class="site-info-wrapper jumbotron"> 
