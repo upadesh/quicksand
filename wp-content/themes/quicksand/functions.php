@@ -151,7 +151,7 @@ if (!function_exists('quicksand_setup')) :
             'default-text-color' => $colorSchemeDefault['header_textcolor'],
             'flex-width' => true,
             'flex-height' => true,
-            'height' => 560,
+            'height' => 400,
             'width' => 1200,
         ); 
         add_theme_support('custom-header', $customHeaderArgs);
