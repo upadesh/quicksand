@@ -103,3 +103,30 @@
         text-decoration: none !important;
     }
 }
+
+
+/*site-infos for different resolutions*/
+
+@media (min-width: 768px) {
+    .site-title { 
+        font-size: 4.5rem;
+        font-weight: 300;
+    } 
+}
+
+@media screen and (max-width: 768px) { 
+    .site-title { 
+        font-size: 3.5rem;
+        font-weight: 300;
+    } 
+}  
+
+@media screen and (max-width: 576px) { 
+    .site-title { 
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+    .site-description {
+        display: none !important;
+    }
+}  

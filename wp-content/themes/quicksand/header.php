@@ -82,8 +82,7 @@
                         <div class="site-info no-header-image row">  
                             <div class="header-wrapper col-xs-12"> 
                                 <div  class="site-info-wrapper jumbotron"> 
-                                    <!--TODO: media-query??? wie bei Bild ... oder wirds autom. gemacht, description-3???-->
-                                    <h1 class="display-3 site-title">
+                                    <h1 class="site-title">
                                         <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
                                     </h1>
                                     <hr class="m-y-2">
