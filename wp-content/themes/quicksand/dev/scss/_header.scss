@@ -38,7 +38,8 @@
                     .site-title, .site-description {
                         display: inline-block;
                         background: rgba(0,0,0,.2); 
-                        padding: .5rem  3rem;
+                        padding: .5rem 3rem;
+                        word-wrap: break-word;  
                     }
                 }
             }
@@ -74,6 +75,7 @@
                         display: inline-block;
                         background: rgba(0,0,0,.2); 
                         padding: .5rem  3rem;
+                        word-wrap: break-word;  
                     }
                 }
             }

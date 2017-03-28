@@ -195,7 +195,8 @@ $gray-lightest:             $brown-lightest !default;   */
           display: inline-block;
           background: rgba(0, 0, 0, 0.2);
           padding: 8px  48px;
-          padding: .5rem  3rem; }
+          padding: .5rem  3rem;
+          word-wrap: break-word; }
 
 /* normal */
 .site-header.container .site-info.header-image {
@@ -222,7 +223,8 @@ $gray-lightest:             $brown-lightest !default;   */
           display: inline-block;
           background: rgba(0, 0, 0, 0.2);
           padding: 8px  48px;
-          padding: .5rem  3rem; }
+          padding: .5rem  3rem;
+          word-wrap: break-word; }
 
 /*** Jumbotron ***/
 /*fullwidth*/
