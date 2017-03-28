@@ -30,8 +30,8 @@
 
         <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', 'quicksand'); ?></a> 
 
-        <!-- site-header >-->
-        <header id="masthead" class="site-header <?php echo esc_attr(get_theme_mod('qs_header_fullwidth', quicksand_get_color_scheme()['settings']['qs_header_fullwidth']) ? '' : 'container'); ?>"> 
+        <!-- site-header --> 
+        <header id="masthead" class="site-header <?php echo esc_attr(get_theme_mod('qs_header_fullwidth', quicksand_get_color_scheme()['settings']['qs_header_fullwidth']) ? 'container-fluid' : 'container'); ?>"> 
 
             <!-- header(-image)-->
             <?php
@@ -63,27 +63,32 @@
 
                     <!-- site-info -->
                     <?php if (has_header_image()) { ?>
-                        <div class="site-info header-image">  
-                            <img class="custom-header-image" src="<?php header_image(); ?>" alt="" />
-                            <div  class="site-info-wrapper"> 
-                                <div class="site-infos">
+                        <div class="site-info header-image row">  
+                            <div class="header-wrapper col-xs-12">
+                                <img class="custom-header-image" src="<?php header_image(); ?>" alt="" />
+                                <div  class="site-info-wrapper"> 
+                                    <div class="site-infos">
+                                        <h1 class="site-title">
+                                            <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+                                        </h1> 
+                                        <br>
+                                        <p class="lead site-description" ><?php esc_html(bloginfo('description', 'display')); ?></p> 
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>   
+                    <?php } else { ?> 
+                        <div class="site-info no-header-image row">  
+                            <div class="header-wrapper col-xs-12"> 
+                                <div  class="site-info-wrapper jumbotron"> 
+                                    <!--TODO: media-query??? wie bei Bild ... oder wirds autom. gemacht, description-3???-->
                                     <h1 class="display-3 site-title">
                                         <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-                                    </h1> 
-                                    <br>
-                                    <p class="lead site-description" ><?php esc_html(bloginfo('description', 'display')); ?></p> 
+                                    </h1>
+                                    <hr class="m-y-2">
+                                    <p class="lead site-description"><?php esc_html(bloginfo('description', 'display')); ?></p> 
                                 </div>
-
-                            </div>
-                        </div>  
-                    <?php } else { ?> 
-                        <div class="site-info">  
-                            <div  class="site-info-wrapper jumbotron"> 
-                                <h1 class="display-3 site-title">
-                                    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-                                </h1>
-                                <hr class="m-y-2">
-                                <p class="lead site-description"><?php esc_html(bloginfo('description', 'display')); ?></p> 
                             </div>
                         </div>
 

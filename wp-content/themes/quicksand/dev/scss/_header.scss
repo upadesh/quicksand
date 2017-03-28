@@ -2,53 +2,119 @@
  * header
  */   
 
-/*.site-info.custom-header-image {
-    display: table;
-    width: 100%;
-    .site-info-wrapper {
-        display: table-cell;
-        vertical-align: middle;
-        h1, p {
-            display: inline-block;
-            background: rgba(0,0,0,.2); 
-            padding: .5rem 1rem;
+/*TODO: 
+    fluid - use mixins
+    media-queries
+    word-wrap
+    content - row eins nach oben????
+    font-größe
+*/
+
+/*** Header-Image ***/
+/* fullwidth */
+.site-header.container-fluid {
+    .site-info.header-image { 
+        position: relative; 
+        .header-wrapper {
+            padding: 0;
+            .custom-header-image { 
+                height: auto;
+                width: 100%;
+                display: block;
+            }
+            .site-info-wrapper {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%; 
+                -webkit-transform-style: preserve-3d;
+                -moz-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                .site-infos {
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    .site-title, .site-description {
+                        display: inline-block;
+                        background: rgba(0,0,0,.2); 
+                        padding: .5rem  3rem;
+                    }
+                }
+            }
         }
-    }
-}*/
-/* see: https://css-tricks.com/forums/topic/bootstrap-text-over-image-issue/ */
-.site-info.header-image {
-    display: inline-block;
-    position: relative;  
-    .custom-header-image { 
-        @extend .img-fluid;
-        display: block;
-    }
-    .site-info-wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; 
-        -webkit-transform-style: preserve-3d;
-        -moz-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        .site-infos {
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-            h1, p {
-                display: inline-block;
-                background: rgba(0,0,0,.2); 
-                padding: .5rem 1rem;
+    } 
+}
+/* normal */
+.site-header.container {
+    .site-info.header-image { 
+        position: relative; 
+        margin: 1.5em 0 0;
+        .header-wrapper {
+            padding: 0;
+            .custom-header-image { 
+                height: auto;
+                width: 100%;
+                display: block;
+            }
+            .site-info-wrapper {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%; 
+                -webkit-transform-style: preserve-3d;
+                -moz-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                .site-infos {
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    .site-title, .site-description {
+                        display: inline-block;
+                        background: rgba(0,0,0,.2); 
+                        padding: .5rem  3rem;
+                    }
+                }
+            }
+        }
+    } 
+}
+
+
+
+
+
+
+
+/*** Jumbotron ***/ 
+/*fullwidth*/
+.site-header.container-fluid {
+    padding: 0;  
+    .site-info.no-header-image { 
+        .header-wrapper { 
+            padding: 0;  
+            .site-info-wrapper.jumbotron {   
+                padding: 4rem 3rem;
+                word-wrap: break-word;  
+                margin-top: 0; 
             }
         }
     }
 }
 
-.site-info-wrapper.jumbotron {  
-    padding: 3rem 2rem;
-    word-wrap: break-word;  
-    margin-bottom: 0;
+/* normal */
+.site-header.container {
+    .site-info.no-header-image { 
+        .header-wrapper {
+            padding: 0; 
+            .site-info-wrapper.jumbotron {  
+                padding: 4rem 3rem;
+                word-wrap: break-word;  
+                margin: 1.5em 1em 0 1em;
+            }
+        }
+    }
 }
 
 .site-info {

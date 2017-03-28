@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Color-Theme: Asteriod Blues
  *
@@ -162,23 +163,87 @@ $gray-lightest:             $brown-lightest !default;   */
 /**
  * header
  */
-.site-info.custom-header-image {
-  display: table;
-  width: 100%; }
-  .site-info.custom-header-image .site-info-wrapper {
-    display: table-cell;
-    vertical-align: middle; }
-    .site-info.custom-header-image .site-info-wrapper h1, .site-info.custom-header-image .site-info-wrapper p {
-      display: inline-block;
-      /*background: rgba(0,0,0,.2);*/
-      padding: 8px 16px;
-      padding: .5rem 1rem; }
+/*TODO: 
+    fluid - use mixins
+    media-queries
+    word-wrap
+    content - row eins nach oben????
+    font-größe
+*/
+/*** Header-Image ***/
+/* fullwidth */
+.site-header.container-fluid .site-info.header-image {
+  position: relative; }
+  .site-header.container-fluid .site-info.header-image .header-wrapper {
+    padding: 0; }
+    .site-header.container-fluid .site-info.header-image .header-wrapper .custom-header-image {
+      height: auto;
+      width: 100%;
+      display: block; }
+    .site-header.container-fluid .site-info.header-image .header-wrapper .site-info-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d; }
+      .site-header.container-fluid .site-info.header-image .header-wrapper .site-info-wrapper .site-infos {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); }
+        .site-header.container-fluid .site-info.header-image .header-wrapper .site-info-wrapper .site-infos .site-title, .site-header.container-fluid .site-info.header-image .header-wrapper .site-info-wrapper .site-infos .site-description {
+          display: inline-block;
+          background: rgba(0, 0, 0, 0.2);
+          padding: 8px  48px;
+          padding: .5rem  3rem; }
 
-.site-info-wrapper.jumbotron {
-  padding: 48px 32px;
-  padding: 3rem 2rem;
-  word-wrap: break-word;
-  margin-bottom: 0; }
+/* normal */
+.site-header.container .site-info.header-image {
+  position: relative;
+  margin: 1.5em 0 0; }
+  .site-header.container .site-info.header-image .header-wrapper {
+    padding: 0; }
+    .site-header.container .site-info.header-image .header-wrapper .custom-header-image {
+      height: auto;
+      width: 100%;
+      display: block; }
+    .site-header.container .site-info.header-image .header-wrapper .site-info-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d; }
+      .site-header.container .site-info.header-image .header-wrapper .site-info-wrapper .site-infos {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); }
+        .site-header.container .site-info.header-image .header-wrapper .site-info-wrapper .site-infos .site-title, .site-header.container .site-info.header-image .header-wrapper .site-info-wrapper .site-infos .site-description {
+          display: inline-block;
+          background: rgba(0, 0, 0, 0.2);
+          padding: 8px  48px;
+          padding: .5rem  3rem; }
+
+/*** Jumbotron ***/
+/*fullwidth*/
+.site-header.container-fluid {
+  padding: 0; }
+  .site-header.container-fluid .site-info.no-header-image .header-wrapper {
+    padding: 0; }
+    .site-header.container-fluid .site-info.no-header-image .header-wrapper .site-info-wrapper.jumbotron {
+      padding: 64px 48px;
+      padding: 4rem 3rem;
+      word-wrap: break-word;
+      margin-top: 0; }
+
+/* normal */
+.site-header.container .site-info.no-header-image .header-wrapper {
+  padding: 0; }
+  .site-header.container .site-info.no-header-image .header-wrapper .site-info-wrapper.jumbotron {
+    padding: 64px 48px;
+    padding: 4rem 3rem;
+    word-wrap: break-word;
+    margin: 1.5em 1em 0 1em; }
 
 .site-info a:link,
 .site-info a:visited,
@@ -2293,9 +2358,6 @@ pre {
     border-color: #66afe9;
     outline: none; }
   .form-control::-webkit-input-placeholder {
-    color: #999;
-    opacity: 1; }
-  .form-control::-moz-placeholder {
     color: #999;
     opacity: 1; }
   .form-control:-ms-input-placeholder {
