@@ -2,13 +2,6 @@
  * header
  */   
 
-/*TODO: 
-    fluid - use mixins
-    media-queries
-    word-wrap
-    content - row eins nach oben????
-    font-größe
-*/
 
 /*** Header-Image ***/
 
@@ -71,29 +64,31 @@
 
 
 /*** Jumbotron ***/ 
+
+@mixin no-header-image-mixin() {
+    .header-wrapper { 
+        padding: 0;  
+        .site-info-wrapper.jumbotron {   
+            padding: 4rem 3rem;
+            word-wrap: break-word;
+            margin: 0; 
+        }
+    }
+}
 /*fullwidth*/
 .site-header.container-fluid {
     padding: 0;  
     .site-info.no-header-image { 
-        .header-wrapper { 
-            padding: 0;  
-            .site-info-wrapper.jumbotron {   
-                padding: 4rem 3rem;
-                word-wrap: break-word;  
-                margin-top: 0; 
-            }
-        }
+        @include no-header-image-mixin();
     }
 }
 
 /* normal */
 .site-header.container {
     .site-info.no-header-image { 
-        .header-wrapper {
-            padding: 0; 
-            .site-info-wrapper.jumbotron {  
-                padding: 4rem 3rem;
-                word-wrap: break-word;  
+        @include no-header-image-mixin();
+        .header-wrapper { 
+            .site-info-wrapper.jumbotron {    
                 margin: 1.5em 1em 0 1em;
             }
         }

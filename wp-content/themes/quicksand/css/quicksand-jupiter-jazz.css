@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * Color-Theme: Asteriod Blues
  *
@@ -163,13 +162,6 @@ $gray-lightest:             $brown-lightest !default;   */
 /**
  * header
  */
-/*TODO: 
-    fluid - use mixins
-    media-queries
-    word-wrap
-    content - row eins nach oben????
-    font-größe
-*/
 /*** Header-Image ***/
 /* fullwidth */
 .site-header.container-fluid .site-info.header-image {
@@ -194,8 +186,8 @@ $gray-lightest:             $brown-lightest !default;   */
         .site-header.container-fluid .site-info.header-image .header-wrapper .site-info-wrapper .site-infos .site-title, .site-header.container-fluid .site-info.header-image .header-wrapper .site-info-wrapper .site-infos .site-description {
           display: inline-block;
           background: rgba(0, 0, 0, 0.2);
-          padding: 8px  48px;
-          padding: .5rem  3rem;
+          padding: 8px 48px;
+          padding: .5rem 3rem;
           word-wrap: break-word; }
 
 /* normal */
@@ -222,8 +214,8 @@ $gray-lightest:             $brown-lightest !default;   */
         .site-header.container .site-info.header-image .header-wrapper .site-info-wrapper .site-infos .site-title, .site-header.container .site-info.header-image .header-wrapper .site-info-wrapper .site-infos .site-description {
           display: inline-block;
           background: rgba(0, 0, 0, 0.2);
-          padding: 8px  48px;
-          padding: .5rem  3rem;
+          padding: 8px 48px;
+          padding: .5rem 3rem;
           word-wrap: break-word; }
 
 /*** Jumbotron ***/
@@ -236,7 +228,7 @@ $gray-lightest:             $brown-lightest !default;   */
       padding: 64px 48px;
       padding: 4rem 3rem;
       word-wrap: break-word;
-      margin-top: 0; }
+      margin: 0; }
 
 /* normal */
 .site-header.container .site-info.no-header-image .header-wrapper {
@@ -245,7 +237,10 @@ $gray-lightest:             $brown-lightest !default;   */
     padding: 64px 48px;
     padding: 4rem 3rem;
     word-wrap: break-word;
-    margin: 1.5em 1em 0 1em; }
+    margin: 0; }
+
+.site-header.container .site-info.no-header-image .header-wrapper .site-info-wrapper.jumbotron {
+  margin: 1.5em 1em 0 1em; }
 
 .site-info a:link,
 .site-info a:visited,
