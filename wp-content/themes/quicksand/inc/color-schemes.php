@@ -204,7 +204,7 @@ function quicksand_get_color_schemes() {
                 'qs_biography_background_color' => '#f5f5f5',
                 'qs_biography_font_color' => '#686868',
                 'qs_footer_link_hover_color' => '#ffffff',
-                'qs_footer_background_color' => '#3b598c',
+                'qs_footer_background_color' => '#2d4267',
                 'qs_footer_link_color' => '#c4c4c4',
                 'qs_footer_text_color' => '#fff',
             ),
