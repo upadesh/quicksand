@@ -153,7 +153,7 @@ function quicksand_get_color_schemes() {
         'ganymede-elegy' => array(
             'label' => __('Ganymede Elegy', 'quicksand'),
             'settings' => array(
-                'qs_nav_fullwidth' => 1,
+                'qs_nav_fullwidth' => 0,
                 'qs_header_show_front' => 0,
                 'qs_header_fullwidth' => 0,
                 'qs_content_fullwidth' => 0,
@@ -182,9 +182,9 @@ function quicksand_get_color_schemes() {
             'colors' => array(
                 'background_color' => '#ffffff',
                 'header_textcolor' => '#ffffff',
-                'qs_nav_background_color' => '#598fbf',
+                'qs_nav_background_color' => '#729bbf',
                 'qs_nav_link_color' => '#ffffff',
-                'qs_nav_link_hover_background_color' => '#749cbf',
+                'qs_nav_link_hover_background_color' => '#91a9bf',
                 'qs_header_background_color' => '#729bbf',
                 'qs_sidebar_background_color' => '#ffffff',
                 'qs_sidebar_text_color' => '#729bbf',
@@ -204,7 +204,7 @@ function quicksand_get_color_schemes() {
                 'qs_biography_background_color' => '#f5f5f5',
                 'qs_biography_font_color' => '#686868',
                 'qs_footer_link_hover_color' => '#ffffff',
-                'qs_footer_background_color' => '#2e446b',
+                'qs_footer_background_color' => '#232e42',
                 'qs_footer_link_color' => '#c4c4c4',
                 'qs_footer_text_color' => '#fff',
             ),
