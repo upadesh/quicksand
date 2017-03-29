@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Quicksand\n"
-"POT-Creation-Date: 2017-01-04 19:36+0100\n"
-"PO-Revision-Date: 2017-01-04 19:37+0100\n"
+"POT-Creation-Date: 2017-03-29 21:21+0200\n"
+"PO-Revision-Date: 2017-03-29 21:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -68,7 +68,7 @@ msgstr "Primäres Menü"
 msgid "Secondary Menu"
 msgstr "Sekundäres Menu"
 
-#: functions.php:192 inc/customizer.php:738
+#: functions.php:192 inc/customizer.php:754
 msgid "Right Sidebar"
 msgstr "Rechte Sidebar"
 
@@ -76,7 +76,7 @@ msgstr "Rechte Sidebar"
 msgid "Add widgets here to appear in your right sidebar."
 msgstr "Füge Widgets zur rechten Sidebar hinzu"
 
-#: functions.php:202 inc/customizer.php:739
+#: functions.php:202 inc/customizer.php:755
 msgid "Left Sidebar"
 msgstr "Linke Sidebar"
 
@@ -121,23 +121,23 @@ msgstr ""
 msgid "Read more"
 msgstr "Weiter lesen"
 
-#: functions.php:648
+#: functions.php:647
 msgid "Category"
 msgstr "Kategorie"
 
-#: functions.php:650
+#: functions.php:649
 msgid "Tag"
 msgstr "Tag"
 
-#: functions.php:652 inc/customizer.php:493
+#: functions.php:651 inc/customizer.php:509
 msgid "Author"
 msgstr "Autor"
 
-#: functions.php:654
+#: functions.php:653
 msgid "Month"
 msgstr "Monat"
 
-#: functions.php:654
+#: functions.php:653
 msgid "F Y"
 msgstr ""
 
@@ -185,9 +185,13 @@ msgstr "&mdash; Wähle &mdash;"
 msgid "Asteroid Blues"
 msgstr "Asteroid Blues"
 
-#: inc/color-schemes.php:94
+#: inc/color-schemes.php:95
 msgid "Jupiter Jazz"
 msgstr "Jupiter Jazz"
+
+#: inc/color-schemes.php:154
+msgid "Ganymede Elegy"
+msgstr "Ganymede Elegy"
 
 #: inc/customizer.php:57
 msgid "Theme Options"
@@ -265,51 +269,55 @@ msgstr "Wird nur auf der Front-Seite angezeigt"
 msgid "Slider Fullwidth"
 msgstr "Slider Fullwidth"
 
-#: inc/customizer.php:310
+#: inc/customizer.php:306
+msgid "Hide in mobile-mode"
+msgstr "In Mobile-Mode verstecken"
+
+#: inc/customizer.php:326
 msgid "Only posts including a featured image will be exposed"
 msgstr "Nur Posts mit einem Features Image werden angezeigt"
 
-#: inc/customizer.php:320
+#: inc/customizer.php:336
 msgid "Number of posts"
 msgstr "Anzahl der Posts"
 
-#: inc/customizer.php:339 inc/customizer.php:362
+#: inc/customizer.php:355 inc/customizer.php:378
 msgid "Height"
 msgstr "Höhe"
 
-#: inc/customizer.php:340
+#: inc/customizer.php:356
 msgid "Set the height of the slider"
 msgstr "Setze die Höhe des Spiders"
 
-#: inc/customizer.php:363
+#: inc/customizer.php:379
 msgid "Margin to the top"
 msgstr "Abstand nach oben"
 
-#: inc/customizer.php:380
+#: inc/customizer.php:396
 msgid "Content"
 msgstr "Inhalt"
 
-#: inc/customizer.php:395
+#: inc/customizer.php:411
 msgid "Content Fullwidth"
 msgstr "Inhalt Fullwidth"
 
-#: inc/customizer.php:411
+#: inc/customizer.php:427
 msgid "List-Views Masonry-like"
 msgstr "List-Views wie Masonry"
 
-#: inc/customizer.php:415
+#: inc/customizer.php:431
 msgid "Shown when there are more than 2 posts"
 msgstr "Wird angezeigt wenn es mer als 2 Beiträge gibt"
 
-#: inc/customizer.php:429
+#: inc/customizer.php:445
 msgid "Use LightGallery"
 msgstr "Aktiviere Lightgallery"
 
-#: inc/customizer.php:457
+#: inc/customizer.php:473
 msgid "Google API Key"
 msgstr "Google API Key"
 
-#: inc/customizer.php:461
+#: inc/customizer.php:477
 msgid ""
 "You need an API-Key to use Google Fonts. Create one <a href=\"https://console."
 "developers.google.com/\" target=\"_blank\">here</a>, save it & reload the "
@@ -319,166 +327,166 @@ msgstr ""
 "einen <a href=\"https://console.developers.google.com/\" target=\"_blank"
 "\">here</a>, speichere ihn und lade die Seite neu."
 
-#: inc/customizer.php:474
+#: inc/customizer.php:490
 msgid "Font Size"
 msgstr "Font Größe"
 
-#: inc/customizer.php:491
+#: inc/customizer.php:507
 msgid "Show Meta"
 msgstr "Zeige Meta-Informationen"
 
-#: inc/customizer.php:492
+#: inc/customizer.php:508
 msgid "Date"
 msgstr "Datum"
 
-#: inc/customizer.php:494
+#: inc/customizer.php:510
 msgid "Post-Format"
 msgstr "Beitrags-Format"
 
-#: inc/customizer.php:495
+#: inc/customizer.php:511
 msgid "Taxonomies"
 msgstr "Taxonomien"
 
-#: inc/customizer.php:496
+#: inc/customizer.php:512
 msgid "Comments"
 msgstr "Kommentare"
 
-#: inc/customizer.php:507
+#: inc/customizer.php:523
 msgid "Content Background Color"
 msgstr "Inhalt Hintergrundfarbe"
 
-#: inc/customizer.php:523
+#: inc/customizer.php:539
 msgid "Content Link Color"
 msgstr "Inhalt Linkfarbe"
 
-#: inc/customizer.php:537
+#: inc/customizer.php:553
 msgid "Content Text Color"
 msgstr "Inhalt Textfarbe"
 
-#: inc/customizer.php:550
+#: inc/customizer.php:566
 msgid "Secondary Text Color"
 msgstr "Zweite Textfarbe"
 
-#: inc/customizer.php:563
+#: inc/customizer.php:579
 msgid "Title Background Color"
 msgstr "Titel Hintergrund Farbe"
 
-#: inc/customizer.php:576
+#: inc/customizer.php:592
 msgid "Post Background Color"
 msgstr "Beitrag Hintergrund Farbe"
 
-#: inc/customizer.php:589
+#: inc/customizer.php:605
 msgid "Post Border Color"
 msgstr "Titel Rahmen Farbe"
 
-#: inc/customizer.php:599
+#: inc/customizer.php:615
 msgid "Buttons"
 msgstr "Buttons"
 
-#: inc/customizer.php:611
+#: inc/customizer.php:627
 msgid "Button Primary Color"
 msgstr "Button Primär Farbe"
 
-#: inc/customizer.php:625
+#: inc/customizer.php:641
 msgid "Button Secondary Color"
 msgstr "Button Sekundär Farbe"
 
-#: inc/customizer.php:640
+#: inc/customizer.php:656
 msgid "Tag Background Color"
 msgstr "Tag Hintergrund Farbe"
 
-#: inc/customizer.php:653
+#: inc/customizer.php:669
 msgid "Tag Font Color"
 msgstr "Tag Font Farbe"
 
-#: inc/customizer.php:665
+#: inc/customizer.php:681
 msgid "Biography"
 msgstr "Biografie"
 
-#: inc/customizer.php:679
+#: inc/customizer.php:695
 msgid "Show Author Biography"
 msgstr "Zeige Autoren Biografie"
 
-#: inc/customizer.php:693
+#: inc/customizer.php:709
 msgid "Background Color"
 msgstr "Hintergrund Farbe"
 
-#: inc/customizer.php:706
+#: inc/customizer.php:722
 msgid "Font Color"
 msgstr "Font Farbe"
 
-#: inc/customizer.php:718
+#: inc/customizer.php:734
 msgid "Sidebar"
 msgstr "Seitenleiste"
 
-#: inc/customizer.php:733
+#: inc/customizer.php:749
 msgid "Sidebar Numbers"
 msgstr "Anzahl Tidebars"
 
-#: inc/customizer.php:737
+#: inc/customizer.php:753
 msgid "No Sidebar"
 msgstr "Keine Sidebar"
 
-#: inc/customizer.php:740
+#: inc/customizer.php:756
 msgid "Left & right Sidebar"
 msgstr "Linke & rechte Sidebar"
 
-#: inc/customizer.php:753
+#: inc/customizer.php:769
 msgid "Widget Background Color"
 msgstr "Widget Backgroundfarbe"
 
-#: inc/customizer.php:765
+#: inc/customizer.php:781
 msgid "Widget Text Color"
 msgstr "Widget Textfarbe"
 
-#: inc/customizer.php:777
+#: inc/customizer.php:793
 msgid "Widget Link Color"
 msgstr "Widget Linkfarbe"
 
-#: inc/customizer.php:793
+#: inc/customizer.php:809
 msgid "Widget Border Color"
 msgstr "Widget Rahmenfarbe"
 
-#: inc/customizer.php:795
+#: inc/customizer.php:811
 #, php-format
 msgid "For a nice effect choose the same color like Content-Background (%s) ..."
 msgstr ""
 "Um einen netten Effekt zu erzielen, wähle dieselbe Farbe wie die Inhalt-"
 "Hintergrund-Farbe (%s) …"
 
-#: inc/customizer.php:810
+#: inc/customizer.php:826
 msgid "Border width"
 msgstr "Rahmen Breite"
 
-#: inc/customizer.php:811
+#: inc/customizer.php:827
 msgid "... and set the border-width higher than 1"
 msgstr "… uns setze die Rahmenbreite höher als 1"
 
-#: inc/customizer.php:826
+#: inc/customizer.php:842
 msgid "Footer"
 msgstr "Footer"
 
-#: inc/customizer.php:838
+#: inc/customizer.php:854
 msgid "Footer Background Color"
 msgstr "Footer Hintergrundfarbe"
 
-#: inc/customizer.php:850
+#: inc/customizer.php:866
 msgid "Footer Text Color"
 msgstr "Footer Textfarbe"
 
-#: inc/customizer.php:862
+#: inc/customizer.php:878
 msgid "Footer Link Color"
 msgstr "Footer Linkfarbe"
 
-#: inc/customizer.php:874
+#: inc/customizer.php:890
 msgid "Footer Link Hover Color"
 msgstr "Footer Link-Hover-Farbe"
 
-#: inc/customizer.php:1029
+#: inc/customizer.php:1045
 msgid "Social Media Icons"
 msgstr "Social Media Icons"
 
-#: inc/customizer.php:1101 inc/customizer.php:1110
+#: inc/customizer.php:1117 inc/customizer.php:1126
 #, php-format
 msgid "%s icon"
 msgstr "%s icon"
@@ -511,24 +519,24 @@ msgid "Tags"
 msgstr "Tags"
 
 #: inc/template-tags.php:213 inc/template-tags.php:252 inc/template-tags.php:286
-#: inc/template-tags.php:322
+#: inc/template-tags.php:322 inc/template-tags.php:404 inc/template-tags.php:471
 msgid "Featured"
 msgstr "Empfohlen"
 
-#: inc/template-tags.php:502
+#: inc/template-tags.php:566
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: inc/template-tags.php:506 inc/template-tags.php:534
+#: inc/template-tags.php:570 inc/template-tags.php:598
 msgid "Page"
 msgstr "Seite"
 
-#: inc/template-tags.php:563
+#: inc/template-tags.php:627
 #, php-format
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "<span class=\"screen-reader-text\">&#8222;%s&#8220;</span> bearbeiten"
 
-#: inc/template-tags.php:647
+#: inc/template-tags.php:711
 msgid "Continue reading"
 msgstr "Weiter lesen\t"
 
