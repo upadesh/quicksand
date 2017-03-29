@@ -689,6 +689,10 @@ maybe padding of cells smaller in media-query ... who knows????
 .format-video .card-header.quicksand-post-video {
   padding: 0; }
 
+/*meta-info, i.e. cats, tags, search, ...*/
+.card.quicksand-meta-list-header .card-block {
+  border: 1px solid #eceeef; }
+
 /*biography*/
 .author-bio {
   display: -ms-flexbox;
