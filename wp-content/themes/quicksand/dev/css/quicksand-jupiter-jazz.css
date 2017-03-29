@@ -1,20 +1,5 @@
 /**
- * Color-Theme: Asteriod Blues
- *
- * this is the DEFAULT color-scheme
- *
- * If you want to create your own color-scheme do the following:
- *  - copy all files to a folder, which is named after a Cowboy-Bebob-Series
- *      - an example is provided by 'jupiter-jazz'
- *  - copy all files from the first level inside your folder
- *  - edit them at your convenience
- *  - now add your theme to the gruntfile, so it can be compiled by sass
- *      - create a new line in sass->dist->files
- *          - 'dev/css/<%= pkg.name %>-jupiter-jazz.css': 'dev/scss/jupiter-jazz/app-jupiter-jazz.scss'
- *      - After compiling you will end up with a new file in the css-folder name  'quicksand-jupiter-jazz.css' 
- * 
- * @hint    quicksand-color-schemes are named after episodes of the anime-series 'Cowboy Bebob' 
- * @see     https://en.wikipedia.org/wiki/List_of_Cowboy_Bebop_episodes 
+ * Color-Theme: Jupiter Jazz
  */
 /**
  * === Fonts ===

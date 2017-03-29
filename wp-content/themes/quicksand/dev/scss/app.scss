@@ -11,10 +11,16 @@
  *  - replace the import-command inside your app-file, so it points to the file inside the new folder
  *      - an example is provided by 'jupiter-jazz' 
  *  - now add your theme to the gruntfile, so it can be compiled by sass
- *      - create a new line in sass->dist->files
+ *      - create 2 entries in sass->dist->files
  *          - 'dev/css/<%= pkg.name %>-jupiter-jazz.css': 'dev/scss/jupiter-jazz/app-jupiter-jazz.scss'
- *      - After compiling you will end up with a new file in the css-folder name  'quicksand-NAME-OF-SCHEME.css' 
+ *          - inside the watch-task add your new theme: 'dev/scss/jupiter-jazz/*.scss',
  * 
+ *      - After compiling you will end up with a new file in the css-folder name  'quicksand-NAME-OF-SCHEME.css' 
+ *
+ *  - also add another item in the array of the quicksand_get_color_schemes() function in inc/color-schemes.php
+ *      - just copy i.e. 'jupiter-jazz', rename it to your NAME-OF-SCHEME and assign it with wanted default values
+ *
+ *
  * @hint    quicksand-color-schemes are named after episodes of the anime-series 'Cowboy Bebob' 
  * @see     https://en.wikipedia.org/wiki/List_of_Cowboy_Bebop_episodes 
  */  

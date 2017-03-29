@@ -1,0 +1,17 @@
+/**
+ * overwrite here orginal Bootstrap-variables  
+ *
+ * Copy variables from bootstrap's `_variables.scss` to this file to override default values 
+ *
+ * Define also your scheme-color specific variables in here 
+ */
+
+
+
+/* === bootstrap variables === */
+$enable-rounded: false; 
+
+/*main colors for buttons*/ 
+$btn-secondary-color:            $white;
+$btn-secondary-bg:               $turquoise; 
+$btn-secondary-border:           $turquoise; 

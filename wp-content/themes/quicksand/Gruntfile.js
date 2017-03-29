@@ -141,6 +141,7 @@ module.exports = function (grunt) {
                     'dev/css/<%= pkg.name %>.css': 'dev/scss/app.scss',
                     // add also color-schemes
                     'dev/css/<%= pkg.name %>-jupiter-jazz.css': 'dev/scss/app-jupiter-jazz.scss',
+                    'dev/css/<%= pkg.name %>-ganymede-elegy.css': 'dev/scss/app-ganymede-elegy.scss',
                     // custom-editor-style
                     'css/custom-editor-style.css': 'dev/scss/custom-editor-style.scss'
                 }
@@ -195,7 +196,8 @@ module.exports = function (grunt) {
             css: {
                 files: [
                     'dev/scss/*.scss',
-                    'dev/scss/jupiter-jazz/*.scss'
+                    'dev/scss/jupiter-jazz/*.scss',
+                    'dev/scss/ganymede-elegy/*.scss'
                 ],
                 tasks: ['clean:dev', 'sass', 'postcss', 'cssmin', 'copy:dev'],
                 options: {
