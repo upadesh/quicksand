@@ -3,7 +3,7 @@
 Theme Name: Quicksand
 Theme URI: http://cafe-serendipity.com
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, featured-image-header, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, education, entertainment
-Version: 0.5.1
+Version: 0.5.2
 Tested up to: WP 4.7
 Requires at least: 4.6
 Author: Cafe Serendipity - Andreas Stephan
@@ -15,7 +15,7 @@ Here is a short description of the plugin.
 
 == Description ==
 
-Quicksand comes with 2 ready-to-use color-schemes, one with rounded, the other one with cornered boxes. Its responsive design is based on Bootstrap4, so your page will always look fine on any device. The theme is highly configurable, so you can easily adjust it to your needs, by using the theme-options inside your customizer.  Choose between masonry- and normal-, fullwidth- or boxed-layout, none, one or two sidebars and there were also added two better looking archive- & category-widgets. Quicksand also comes with a social-icon-integration, by using the fantastic FontAwesome image-library. You are able to apply Google-Fonts, galleries can be displayed by the stunning Lightgallery-plugin and if you feel to use a slider on your frontpage, no worries, Flexslider is integrated.  For the nerds of you, there are also sass- and grunt files included.
+Quicksand comes with 3 ready-to-use color-schemes, one with rounded, two with cornered boxes. Its responsive design is based on Bootstrap4, so your page will always look fine on any device. The theme is highly configurable, so you can easily adjust it to your needs, by using the theme-options inside your customizer.  Choose between masonry- and normal-, fullwidth- or boxed-layout, none, one or two sidebars and there were also added two better looking archive- & category-widgets. Quicksand also comes with a social-icon-integration, by using the fantastic FontAwesome image-library. You are able to apply Google-Fonts, galleries can be displayed by the stunning Lightgallery-plugin and if you feel to use a slider on your frontpage, no worries, Flexslider is integrated.  For the nerds of you, there are also sass- and grunt files included.
 
 == Installation ==
 
@@ -55,10 +55,14 @@ Quicksand theme uses:
  
 
 == Changelog ==
+= 0.5.2 =
+* Ganymede Elegy color-scheme added
+* not defined variables fixed
+* header-image fully responsive now
+
 = 0.5.1 =
-* fixed changes from bootstrap 4.0.0-alpha.5 to 4.0.0-alpha.6
 * added icons for custom post type video & gallery
-* set foxus to search-form when triggered
+* set focus to search-form when triggered
 * sidebar-preview in customizer fixed for tag-pills
 
 = 0.4.1 =
@@ -85,6 +89,7 @@ Quicksand theme uses:
 
 
 == Roadmap == 
+* change from bootstrap 4.0.0-alpha.5 to 4.0.0-alpha.6
 * add card-decks-layout 
 * add recent-post-widget
 * WooCommerce-ready
