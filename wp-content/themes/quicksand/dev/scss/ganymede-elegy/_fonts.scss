@@ -4,7 +4,7 @@
  * Changing font:
  * there exist 2 possibilities
  *  - _font-(theme).scss
- *      - change here default very default font, hwich is used when BS & custom css is compiled
+ *      - change here default very default font, which is used when BS & custom css is compiled
  *      - the font has to be present in dev/fonts/
  *      - this one is always taken
  * 
@@ -17,7 +17,5 @@ $font-family-base:       Raleway !default;
 $font-family-sans-serif: Raleway, sans-serif !default;
 $font-family-serif:      Rokkitt !default;
 $font-family-monospace:  Source Code Pro !default;
-
-
 
 
