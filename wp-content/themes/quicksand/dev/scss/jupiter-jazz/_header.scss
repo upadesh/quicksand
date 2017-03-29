@@ -1,0 +1,135 @@
+/**
+ * header
+ */   
+
+
+/*** Header-Image ***/
+
+@mixin header-wrapper-mixin() {
+    padding: 0;
+    .custom-header-image { 
+        height: auto;
+        width: 100%;
+        display: block;
+    }
+    .site-info-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; 
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        .site-infos {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            .site-title, .site-description {
+                display: inline-block;
+                background: rgba(0,0,0,.2); 
+                padding: .5rem 3rem;
+                word-wrap: break-word;  
+            }
+        }
+    }
+}
+
+
+
+/* fullwidth */
+.site-header.container-fluid {
+    .site-info.header-image { 
+        position: relative; 
+        .header-wrapper { 
+            @include header-wrapper-mixin();
+        }
+    } 
+}
+/* normal */
+.site-header.container {
+    .site-info.header-image { 
+        position: relative; 
+        margin: 1.5em 0 0;
+        .header-wrapper {
+            @include header-wrapper-mixin();
+            .custom-header-image {
+                border-radius: calc(.25rem - 1px);
+            }
+        }
+    } 
+}
+
+
+
+
+
+
+
+/*** Jumbotron ***/ 
+
+@mixin no-header-image-mixin() {
+    .header-wrapper { 
+        padding: 0;  
+        .site-info-wrapper.jumbotron {   
+            padding: 4rem 3rem;
+            word-wrap: break-word;
+            margin: 0; 
+        }
+    }
+}
+/*fullwidth*/
+.site-header.container-fluid {
+    padding: 0;  
+    .site-info.no-header-image { 
+        @include no-header-image-mixin();
+    }
+}
+
+/* normal */
+.site-header.container {
+    .site-info.no-header-image { 
+        @include no-header-image-mixin();
+        .header-wrapper { 
+            .site-info-wrapper.jumbotron {    
+                margin: 1.5em 1em 0 1em;
+            }
+        }
+    }
+}
+
+.site-info {
+    a:link,
+        a:visited,
+        a:hover,
+        a:active { 
+        text-decoration: none !important;
+    }
+}
+
+
+/*site-infos for different resolutions*/
+
+@media (min-width: 768px) {
+    .site-title { 
+        font-size: 4.5rem;
+        font-weight: 300;
+    } 
+}
+
+@media screen and (max-width: 768px) { 
+    .site-title { 
+        font-size: 3.5rem;
+        font-weight: 300;
+    } 
+}  
+
+@media screen and (max-width: 576px) { 
+    .site-title { 
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+    .site-description {
+        display: none !important;
+    }
+}  

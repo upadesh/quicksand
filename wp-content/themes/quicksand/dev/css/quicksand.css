@@ -71,6 +71,8 @@
     .site-navigation .navbar {
       height: 60px;
       padding: 0 1rem; }
+      .site-navigation .navbar .nav-search-close-mobile {
+        visibility: hidden; }
       .site-navigation .navbar .collapse.navbar-toggleable-sm .nav-content {
         display: -ms-flexbox;
         display: flex;
@@ -111,10 +113,6 @@
   border-color: #fff; }
 
 /*mobile navigation*/
-@media (min-width: 767px) {
-  .navbar .nav-search-close-mobile {
-    visibility: hidden; } }
-
 @media (max-width: 767px) {
   .navbar .nav-searchform {
     display: none !important; }
