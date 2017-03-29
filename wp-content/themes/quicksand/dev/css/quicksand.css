@@ -1,5 +1,28 @@
 /**
- * Color-Theme: Ganymede Elegy
+ * Color-Theme: Asteriod Blues
+ *
+ * this is the DEFAULT color-scheme
+ *
+ * If you want to create your own color-scheme do the following:
+ *  - copy app.scss to app-NAME-OF-SCHEME.scss
+ *  - create a folder with the name of your color-scheme
+ *  - add / replace your scss files to your newly created folder
+ *  - edit the files to your convenience
+ *  - replace the import-command inside your app-file, so it points to the file inside the new folder
+ *      - an example is provided by 'jupiter-jazz' 
+ *  - now add your theme to the gruntfile, so it can be compiled by sass
+ *      - create 2 entries in sass->dist->files
+ *          - 'dev/css/<%= pkg.name %>-jupiter-jazz.css': 'dev/scss/jupiter-jazz/app-jupiter-jazz.scss'
+ *          - inside the watch-task add your new theme: 'dev/scss/jupiter-jazz/*.scss',
+ * 
+ *      - After compiling you will end up with a new file in the css-folder name  'quicksand-NAME-OF-SCHEME.css' 
+ *
+ *  - also add another item in the array of the quicksand_get_color_schemes() function in inc/color-schemes.php
+ *      - just copy i.e. 'jupiter-jazz', rename it to your NAME-OF-SCHEME and assign it with wanted default values
+ *
+ *
+ * @hint    quicksand-color-schemes are named after episodes of the anime-series 'Cowboy Bebob' 
+ * @see     https://en.wikipedia.org/wiki/List_of_Cowboy_Bebop_episodes 
  */
 /**
  * === Fonts ===
@@ -7,12 +30,12 @@
  * Changing font:
  * there exist 2 possibilities
  *  - _font-(theme).scss
- *      - change here default very default font, which is used when BS & custom css is compiled
+ *      - change here the default font, which is used when BS & custom css is compiled
  *      - the font has to be present in dev/fonts/
  *      - this one is always taken
  * 
  *  - Customizer Settings
- *      - enter a valid Google-API-key save it & relaod the page
+ *      - enter a valid Google-API-key save it & reload the page
  *      - this way you can use every Google-font you want
  */
 /**
@@ -28,7 +51,6 @@
 /**
  * Define your own colors in here
  */
-/*compare-tool: http://www.colortools.net/color_compare_colors.html*/
 /* change bootsrap-vars in here */
 /**
  * overwrite here orginal Bootstrap-variables  
@@ -688,17 +710,6 @@ maybe padding of cells smaller in media-query ... who knows????
 /* video */
 .format-video .card-header.quicksand-post-video {
   padding: 0; }
-
-/*
- * extend post-scss-file
- *
- * @hint    please use the common-classes for styling
- * 
- * @see     http://www.wpbeginner.com/wp-themes/default-wordpress-generated-css-cheat-sheet-for-beginners/
- */
-/*meta-info, i.e. cats, tags, search, ...*/
-.card.quicksand-meta-list-header .card-block {
-  border: 1px solid #eceeef; }
 
 /*biography*/
 .author-bio {
@@ -2683,36 +2694,36 @@ fieldset[disabled] a.btn {
     border-color: #0275d8; }
 
 .btn-secondary {
-  color: #286584;
-  background-color: #7aa3cc;
-  border-color: #7aa3cc; }
+  color: #fff;
+  background-color: #9ab7ac;
+  border-color: #9ab7ac; }
   .btn-secondary:hover {
-    color: #286584;
-    background-color: #558abe;
-    border-color: #4e84bb; }
+    color: #fff;
+    background-color: #7ca294;
+    border-color: #769e8f; }
   .btn-secondary:focus, .btn-secondary.focus {
-    color: #286584;
-    background-color: #558abe;
-    border-color: #4e84bb; }
+    color: #fff;
+    background-color: #7ca294;
+    border-color: #769e8f; }
   .btn-secondary:active, .btn-secondary.active,
   .open > .btn-secondary.dropdown-toggle {
-    color: #286584;
-    background-color: #558abe;
-    border-color: #4e84bb;
+    color: #fff;
+    background-color: #7ca294;
+    border-color: #769e8f;
     background-image: none; }
     .btn-secondary:active:hover, .btn-secondary:active:focus, .btn-secondary:active.focus, .btn-secondary.active:hover, .btn-secondary.active:focus, .btn-secondary.active.focus,
     .open > .btn-secondary.dropdown-toggle:hover,
     .open > .btn-secondary.dropdown-toggle:focus,
     .open > .btn-secondary.dropdown-toggle.focus {
-      color: #286584;
-      background-color: #4278ad;
-      border-color: #37638f; }
+      color: #fff;
+      background-color: #689282;
+      border-color: #577a6d; }
   .btn-secondary.disabled:focus, .btn-secondary.disabled.focus, .btn-secondary:disabled:focus, .btn-secondary:disabled.focus {
-    background-color: #7aa3cc;
-    border-color: #7aa3cc; }
+    background-color: #9ab7ac;
+    border-color: #9ab7ac; }
   .btn-secondary.disabled:hover, .btn-secondary:disabled:hover {
-    background-color: #7aa3cc;
-    border-color: #7aa3cc; }
+    background-color: #9ab7ac;
+    border-color: #9ab7ac; }
 
 .btn-info {
   color: #fff;
@@ -2873,34 +2884,34 @@ fieldset[disabled] a.btn {
     border-color: #43a7fd; }
 
 .btn-outline-secondary {
-  color: #7aa3cc;
+  color: #9ab7ac;
   background-image: none;
   background-color: transparent;
-  border-color: #7aa3cc; }
+  border-color: #9ab7ac; }
   .btn-outline-secondary:hover {
     color: #fff;
-    background-color: #7aa3cc;
-    border-color: #7aa3cc; }
+    background-color: #9ab7ac;
+    border-color: #9ab7ac; }
   .btn-outline-secondary:focus, .btn-outline-secondary.focus {
     color: #fff;
-    background-color: #7aa3cc;
-    border-color: #7aa3cc; }
+    background-color: #9ab7ac;
+    border-color: #9ab7ac; }
   .btn-outline-secondary:active, .btn-outline-secondary.active,
   .open > .btn-outline-secondary.dropdown-toggle {
     color: #fff;
-    background-color: #7aa3cc;
-    border-color: #7aa3cc; }
+    background-color: #9ab7ac;
+    border-color: #9ab7ac; }
     .btn-outline-secondary:active:hover, .btn-outline-secondary:active:focus, .btn-outline-secondary:active.focus, .btn-outline-secondary.active:hover, .btn-outline-secondary.active:focus, .btn-outline-secondary.active.focus,
     .open > .btn-outline-secondary.dropdown-toggle:hover,
     .open > .btn-outline-secondary.dropdown-toggle:focus,
     .open > .btn-outline-secondary.dropdown-toggle.focus {
       color: #fff;
-      background-color: #4278ad;
-      border-color: #37638f; }
+      background-color: #689282;
+      border-color: #577a6d; }
   .btn-outline-secondary.disabled:focus, .btn-outline-secondary.disabled.focus, .btn-outline-secondary:disabled:focus, .btn-outline-secondary:disabled.focus {
-    border-color: #c4d6e8; }
+    border-color: #d6e1dd; }
   .btn-outline-secondary.disabled:hover, .btn-outline-secondary:disabled:hover {
-    border-color: #c4d6e8; }
+    border-color: #d6e1dd; }
 
 .btn-outline-info {
   color: #5bc0de;
@@ -4111,7 +4122,7 @@ input[type='radio']:checked ~ .custom-control-indicator {
 
 .card-outline-secondary {
   background-color: transparent;
-  border-color: #7aa3cc; }
+  border-color: #9ab7ac; }
 
 .card-outline-info {
   background-color: transparent;
