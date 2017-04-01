@@ -20,7 +20,7 @@ grunt build
 ```  
 
 
-###Change line-endings via netbeans-plugin
+### Change line-endings via netbeans-plugin
 
 Use the Line-Endings-plugin in Netbeans 'Show and change line-endings' 
 
