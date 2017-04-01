@@ -406,7 +406,7 @@ if (!function_exists('quicksand_entry_title_postformat_gallery')) :
 
             <div class="post-gallery">  
                 <h2 class="card-title <?php echo $class; ?>">
-                    <a href="<?php echo get_url_in_content(get_the_content()); ?>"><i class="fa fa-picture-o" aria-hidden="true"></i> <?php the_title(); ?></a> 
+                    <a href="<?php echo esc_attr(get_the_permalink()); ?>"><i class="fa fa-picture-o" aria-hidden="true"></i> <?php the_title(); ?></a> 
                 </h2> 
             </div><!-- .post-gallery -->
         </header><!-- .entry-header --> 
@@ -473,7 +473,7 @@ if (!function_exists('quicksand_entry_title_postformat_video')) :
 
             <div class="post-video">  
                 <h2 class="card-title <?php echo $class; ?>">
-                    <a href="<?php echo get_url_in_content(get_the_content()); ?>"><i class="fa fa-film" aria-hidden="true"></i> <?php the_title(); ?></a> 
+                    <a href="<?php echo esc_attr(get_the_permalink()); ?>"><i class="fa fa-film" aria-hidden="true"></i> <?php the_title(); ?></a> 
                 </h2> 
             </div><!-- .post-video -->
         </header><!-- .entry-header --> 
