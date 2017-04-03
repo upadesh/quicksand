@@ -250,17 +250,17 @@
   text-decoration: none !important; }
 
 /*site-infos for different resolutions*/
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .site-title {
     font-size: 4.5rem;
     font-weight: 300; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .site-title {
     font-size: 2.5rem;
     font-weight: 300; } }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .site-title {
     font-size: 2.0rem;
     font-weight: 300; }
