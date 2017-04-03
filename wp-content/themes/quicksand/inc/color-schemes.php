@@ -137,7 +137,7 @@ function quicksand_get_color_schemes() {
                 'qs_content_post_border_color' => '#e0d4c0',
                 'qs_content_title_bg_color' => '#d6cbb8',
                 'qs_sidebar_background_color' => '#ffffff',
-                'qs_sidebar_text_color' => '#686868',
+                'qs_sidebar_text_color' => '#8c867a',
                 'qs_sidebar_link_color' => '#e0d4c0',
                 'qs_sidebar_border_color' => '#e0d4c0',
                 'qs_button_color_primary' => '#ada495',
