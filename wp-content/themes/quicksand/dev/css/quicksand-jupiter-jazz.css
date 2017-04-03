@@ -157,6 +157,7 @@ $gray-lightest:             $brown-lightest !default;   */
       display: block; }
     .site-header.container-fluid .site-info.header-image .header-wrapper .site-info-wrapper {
       position: absolute;
+      overflow: hidden;
       top: 0;
       left: 0;
       width: 100%;
@@ -185,6 +186,7 @@ $gray-lightest:             $brown-lightest !default;   */
       display: block; }
     .site-header.container .site-info.header-image .header-wrapper .site-info-wrapper {
       position: absolute;
+      overflow: hidden;
       top: 0;
       left: 0;
       width: 100%;
@@ -241,12 +243,12 @@ $gray-lightest:             $brown-lightest !default;   */
 
 @media screen and (max-width: 768px) {
   .site-title {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 300; } }
 
 @media screen and (max-width: 576px) {
   .site-title {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     font-weight: 300; }
   .site-description {
     display: none !important; } }
