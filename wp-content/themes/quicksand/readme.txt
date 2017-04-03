@@ -3,7 +3,7 @@
 Theme Name: Quicksand
 Theme URI: http://cafe-serendipity.com
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, featured-image-header, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, education, entertainment
-Version: 0.5.3
+Version: 0.5.4
 Tested up to: WP 4.7
 Requires at least: 4.6
 Author: Cafe Serendipity - Andreas Stephan
@@ -55,7 +55,7 @@ Quicksand theme uses:
  
 
 == Changelog ==
-= 0.5.3 =
+= 0.5.4 =
 * Ganymede Elegy color-scheme added
 * not defined variables fixed
 * header-image fully responsive now

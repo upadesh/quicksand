@@ -29,6 +29,7 @@ Use the Line-Endings-plugin in Netbeans 'Show and change line-endings'
 - js/lightgallery/css/lg-fb-comment-box.css 
 - js/lg-thumbnail.js
 
+### Commit & push the whole thing
 
 ### Copy the quicksand-folder to a new location
 
