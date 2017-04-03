@@ -153,7 +153,7 @@ function quicksand_get_color_schemes() {
         'ganymede-elegy' => array(
             'label' => __('Ganymede Elegy', 'quicksand'),
             'settings' => array(
-                'qs_nav_fullwidth' => 0,
+                'qs_nav_fullwidth' => 1,
                 'qs_header_show_front' => 0,
                 'qs_header_fullwidth' => 0,
                 'qs_content_fullwidth' => 0,
