@@ -1,11 +1,10 @@
 /**
  * non-bs-variables
  */  
-
-/*TODO: is that all right to break all of them --> needed for mobile*/
-h1, h2 ,h3, h4, h5, h6, p {
+ 
+/*h1, h2 ,h3, h4, h5, h6, p {
     word-break: break-all;
-}
+}*/
 
 /* only for screen-readers */
 .screen-reader-text {
@@ -13,11 +12,11 @@ h1, h2 ,h3, h4, h5, h6, p {
 }    
 
 /* blockquote & blockquote-footer */
-blockquote {
+/*blockquote {
     @extend .blockquote;
     font-style: italic;
-    /*border-left: .25rem solid $gray-dark !important;*/
-} 
+    border-left: .25rem solid $gray-dark !important;
+} */
 
 cite {
     display: inline !important;
