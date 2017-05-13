@@ -1,8 +1,7 @@
 <!--template: content-quote--> 
 <article id="post-<?php the_ID(); ?>" <?php post_class("card"); ?>>
 
-    <?php
-    quicksand_entry_excerpt();
+    <?php 
 
     if (!is_singular()) {
         quicksand_entry_header_postformat_quote();

@@ -66,10 +66,10 @@
     margin-bottom: 2rem !important;
 
     /* excerpt */
-    .entry-summary { 
-        color: $grey;
-        font-style: italic;
-    } 
+    /*    .entry-summary { 
+            color: $grey;
+            font-style: italic;
+        } */
 
     .entry-header.card-header {
         .entry-title.card-title {
@@ -85,30 +85,28 @@
         }
     }
 
-    .entry-content {
-        .read-more-link { 
-            float: right;
+    .read-more-link { 
+        float: right;
 
-            &:before {
-                font-family: FontAwesome; 
-                padding-right: .3rem;
-                content: "\f06e";
-            }
+        &:before {
+            font-family: FontAwesome; 
+            padding-right: .3rem;
+            content: "\f06e";
         }
-        .wp-caption {
-            max-width: 100%;
-        }
-
-        /* 
-         * for the WP-Test: reduce size of massively large image with no alignment.
-         *  http://wp.local/archives/tag/alignment-2
-         */
-        img {
-            border: none;
-            height: auto;
-            max-width: 100%;  
-        } 
     }
+    .wp-caption {
+        max-width: 100%;
+    }
+
+    /* 
+     * for the WP-Test: reduce size of massively large image with no alignment.
+     *  http://wp.local/archives/tag/alignment-2
+     */
+    img {
+        border: none;
+        height: auto;
+        max-width: 100%;  
+    }  
 
 
     .entry-footer {
@@ -150,7 +148,7 @@
         column-count: 3 !important;
     }
 }
- 
+
 
 
 /* TODO: 

@@ -570,10 +570,15 @@ cite {
 .card {
   margin-bottom: 32px !important;
   margin-bottom: 2rem !important;
-  /* excerpt */ }
-  .card .entry-summary {
-    color: #a3a3a3;
-    font-style: italic; }
+  /* excerpt */
+  /*    .entry-summary { 
+            color: $grey;
+            font-style: italic;
+        } */
+  /* 
+     * for the WP-Test: reduce size of massively large image with no alignment.
+     *  http://wp.local/archives/tag/alignment-2
+     */ }
   .card .entry-header.card-header .entry-title.card-title {
     margin-top: 16px;
     margin-top: 1rem;
@@ -586,24 +591,19 @@ cite {
             */
     -ms-word-wrap: break-word;
     word-wrap: break-word; }
-  .card .entry-content {
-    /* 
-         * for the WP-Test: reduce size of massively large image with no alignment.
-         *  http://wp.local/archives/tag/alignment-2
-         */ }
-    .card .entry-content .read-more-link {
-      float: right; }
-      .card .entry-content .read-more-link:before {
-        font-family: FontAwesome;
-        padding-right: 4.8px;
-        padding-right: .3rem;
-        content: "\f06e"; }
-    .card .entry-content .wp-caption {
-      max-width: 100%; }
-    .card .entry-content img {
-      border: none;
-      height: auto;
-      max-width: 100%; }
+  .card .read-more-link {
+    float: right; }
+    .card .read-more-link:before {
+      font-family: FontAwesome;
+      padding-right: 4.8px;
+      padding-right: .3rem;
+      content: "\f06e"; }
+  .card .wp-caption {
+    max-width: 100%; }
+  .card img {
+    border: none;
+    height: auto;
+    max-width: 100%; }
   .card .entry-footer {
     /*tags*/
     /* edit post-link  */ }

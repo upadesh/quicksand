@@ -52,7 +52,8 @@ get_header();
                      * This is only for the listing part.
                      * For single presention have a look inside ... single.php
                      */
-                    get_template_part('template-parts/content', get_post_format());
+//                    get_template_part('template-parts/content', get_post_format());
+                    get_template_part('template-parts/content', 'search');
 
                 endwhile;
 

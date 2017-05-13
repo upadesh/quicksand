@@ -2,8 +2,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class("card"); ?>>
 
     <!--post video-->
-    <?php
-    quicksand_entry_excerpt();
+    <?php 
 
     if (!is_singular()) {
         quicksand_entry_header_postformat_video();

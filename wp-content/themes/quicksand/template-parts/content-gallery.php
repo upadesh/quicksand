@@ -6,10 +6,7 @@
     if (!is_singular()) {
         quicksand_entry_header_postformat_gallery();
     }
-    ?>  
-
-    <!--post excerpt-->
-    <?php quicksand_entry_excerpt(); ?> 
+    ?>   
 
     <!--featured image-->
     <?php
@@ -27,6 +24,7 @@
     <!--post-content--> 
 <?php
 if (!is_singular()) {
+    // remove_shortcode_from_content
     quicksand_the_entry_content_gallery();
 } else {
     quicksand_the_entry_content();
