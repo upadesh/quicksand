@@ -34,10 +34,17 @@ jQuery(document).ready(function ($) {
     var initLightgallery = function () {
         // only trigger lightgallery when it is turned on
         if (parseInt(colorScheme.settings.qs_content_use_lightgallery)) {
+
+            // add an alt attribute with the img-caption, so lightgallery can use it
+            $("figure").each(function () {
+                var captiontext = $(this).find("figcaption").text();
+                $(this).find("img").attr("alt", captiontext);
+            }); 
+
             $('.gallery').lightGallery({
                 selector: '.gallery-item .lightgallery-item',
-//            mode: 'lg-fade',
-//            cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+//                mode: 'lg-fade',
+//                cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
                 animateThumb: true
             });
         }
@@ -49,8 +56,8 @@ jQuery(document).ready(function ($) {
     // flexSlider
     var flexSliderOptions = {
         smoothHeight: false, //Boolean: Allow height of the slider to animate smoothly in horizontal mode
-        controlNav: true,  // Create navigation for paging control of each slide.
-        
+        controlNav: true, // Create navigation for paging control of each slide.
+
         animation: "fade",
         direction: "horizontal",
         slideshowSpeed: 6000,
@@ -115,7 +122,7 @@ jQuery(document).ready(function ($) {
         // show & hide searchform in mobile mode
         $('.nav-search-mobile').on('click', function () {
             var $searchFormMobile = $('.nav-searchform-mobile');
-            $searchFormMobile.show("fold", {horizFirst: true}, 1000, function() { 
+            $searchFormMobile.show("fold", {horizFirst: true}, 1000, function () {
                 $('#quicksand-top-search-form-mobile').focus();
             });
 

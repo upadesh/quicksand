@@ -341,29 +341,19 @@
   clear: left; }
 
 /* caption */
-/*hide image-caption when smaller*/
 .gallery-item .lightgallery-item {
   cursor: pointer; }
 
 .gallery-item .gallery-caption {
   max-width: 150px; }
 
+/*hide image-caption when smaller*/
 .quicksand-masonry .gallery-caption {
   display: none; }
 
 @media (max-width: 540px) {
   .gallery-caption {
     display: none; } }
-
-.entry-content {
-  text-align: center; }
-  .entry-content * {
-    text-align: left; }
-  .entry-content .gallery {
-    display: inline-block;
-    /*        .gallery-caption {
-            color: #f5f5f5;
-        }*/ }
 
 /**
  * footer
