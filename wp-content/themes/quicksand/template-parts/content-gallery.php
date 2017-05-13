@@ -11,32 +11,35 @@
     <!--post excerpt-->
     <?php quicksand_entry_excerpt(); ?> 
 
-    <!--post title-->
-    <?php 
-//    quicksand_entry_title(); 
-    ?>
-    <!--post title-->
-    <?php quicksand_entry_title_postformat_gallery(); ?>
-
-    <!--post-meta--> 
-    <?php quicksand_entry_meta(); ?>
-
-    <!--post-content--> 
+    <!--featured image-->
     <?php
-    if (!is_singular()) {
-        quicksand_the_entry_content_gallery();
-    } else {
-        quicksand_the_entry_content();
+    if (is_singular()) {
+        quicksand_entry_thumbnail();
     }
     ?> 
 
+    <!--post title-->
+<?php quicksand_entry_title_postformat_gallery(); ?>
+
+    <!--post-meta--> 
+<?php quicksand_entry_meta(); ?>
+
+    <!--post-content--> 
+<?php
+if (!is_singular()) {
+    quicksand_the_entry_content_gallery();
+} else {
+    quicksand_the_entry_content();
+}
+?> 
+
     <!--post-tags-->
-    <?php quicksand_entry_tags(); ?>  
-    
+<?php quicksand_entry_tags(); ?>  
+
     <!--author-bio-->
-    <?php quicksand_author_biography(); ?> 
+<?php quicksand_author_biography(); ?> 
 
     <!--edit-link-->
-    <?php quicksand_edit_post(); ?> 
+<?php quicksand_edit_post(); ?> 
 
 </article><!-- .post-->  

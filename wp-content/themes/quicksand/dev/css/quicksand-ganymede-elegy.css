@@ -511,16 +511,16 @@
 /**
  * non-bs-variables
  */
-/*TODO: is that all right to break all of them --> needed for mobile*/
-h1, h2, h3, h4, h5, h6, p {
-  word-break: break-all; }
-
+/*h1, h2 ,h3, h4, h5, h6, p {
+    word-break: break-all;
+}*/
 /* only for screen-readers */
 /* blockquote & blockquote-footer */
-blockquote {
-  font-style: italic;
-  /*border-left: .25rem solid $gray-dark !important;*/ }
-
+/*blockquote {
+    @extend .blockquote;
+    font-style: italic;
+    border-left: .25rem solid $gray-dark !important;
+} */
 cite {
   display: inline !important; }
 
@@ -1389,7 +1389,7 @@ mark,
   font-size: 90%;
   text-transform: uppercase; }
 
-.blockquote, blockquote {
+.blockquote {
   padding: 8px 16px;
   padding: 0.5rem 1rem;
   margin-bottom: 16px;
