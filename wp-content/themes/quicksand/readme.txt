@@ -53,6 +53,9 @@ Quicksand theme uses:
 * Custom Archive- and Category-widgets
 * Sidebar-selections
  
+== Restrictions ==
+
+* Currently the menu supports only a hierarchical depth of 1, which will be changed in the future.
 
 == Changelog ==
 = 0.5.4 =

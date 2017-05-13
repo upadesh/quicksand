@@ -172,8 +172,8 @@ class QuicksandNavwalker extends Walker_Nav_Menu {
      * Menu Fallback
      * =============
      * If this function is assigned to the wp_nav_menu's fallback_cb variable
-     * and a manu has not been assigned to the theme location in the WordPress
-     * menu manager the function with display nothing to a non-logged in user,
+     * and a menu has not been assigned to the theme location in the WordPress
+     * menu manager the function will display nothing to a non-logged in user,
      * and will add a link to the WordPress menu manager if logged in as an admin.
      *
      * @param array $args passed from the wp_nav_menu function.
