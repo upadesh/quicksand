@@ -83,56 +83,26 @@
     clear: left;
 }
 
-.gallery-columns-7 .gallery-caption,
-.gallery-columns-8 .gallery-caption,
-.gallery-columns-9 .gallery-caption {
-    display: none;
+/* caption */
+/*hide image-caption when smaller*/ 
+.gallery-item {
+    .lightgallery-item {
+        cursor: pointer;
+    }
+    .gallery-caption {
+        max-width: 150px;
+    }
 }
 
-.gallery-caption {
-    background-color: rgba(0, 0, 0, 0.7);
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing:    border-box;
-    box-sizing:         border-box;
-    color: #fff;
-    font-size: 12px;
-    line-height: 1.5;
-    margin: 0;
-    max-height: 50%;
-    opacity: 0;
-    padding: 6px 8px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    text-align: left;
-    width: 100%;
-}
-.gallery-caption:before {
-    content: "";
-    height: 100%;
-    min-height: 49px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-.gallery-item:hover .gallery-caption {
-    opacity: 1;
-}
-
-
-
-/*hide image-caption when smaller*/
 .quicksand-masonry .gallery-caption {
-    visibility: hidden;
+    display: none;
 }
 
 @media (max-width: 540px) { 
     .gallery-caption {
-        visibility: hidden;
+        display: none;
     }
 } 
-
 
 
 .entry-content {
@@ -142,15 +112,8 @@
     }
     .gallery {
         display: inline-block; 
-        .gallery-caption {
+/*        .gallery-caption {
             color: #f5f5f5;
-        }
-    }
-}
-
-/* the markup is changed, when lightgallery is used */
-.gallery-item {
-    .lightgallery-item {
-        cursor: pointer;
+        }*/
     }
 }
