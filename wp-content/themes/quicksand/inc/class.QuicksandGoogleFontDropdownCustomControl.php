@@ -37,9 +37,12 @@ if (class_exists('WP_Customize_Control')) {
             }
             $googleApi = 'https://www.googleapis.com/webfonts/v1/webfonts?sort=alpha&key=' . $key;
             $fontContent = wp_remote_get($googleApi, array('sslverify' => false));
+            if (is_wp_error( $fontContent ) ) {
+                return NULL;
+            }
             $content = json_decode($fontContent['body'], true);
 
-            return isset($content['items']) ? $content['items'] : NULL;
+            return $content['items'];
         }
 
     }

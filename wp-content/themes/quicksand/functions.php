@@ -269,7 +269,7 @@ if (!function_exists('quicksand_fonts_url')) :
                         ), 'https://fonts.googleapis.com/css');
             }
 
-            return esc_url_raw($fonts_url);
+            return esc_url($fonts_url);
         }
 
         return FALSE;

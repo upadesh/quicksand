@@ -57,7 +57,8 @@ Quicksand theme uses:
  
 == Restrictions ==
 
-* Currently the menu supports only a hierarchical depth of 1, which will be changed in the future.
+* Currently the top-menu supports only a hierarchical depth of 1 and the footer-menu is flat, which will be changed in the future. 
+
 
 == Changelog ==
 
@@ -66,7 +67,14 @@ Quicksand theme uses:
 * Excerpt-appearence changed
 * Display Site Title and Tagline fixed
 * Full-width page has now padding in content
-* transaltion for google-fonts-url fixed
+* translation for google-fonts-url fixed
+* phpcs errors fixed
+* FontAwesome License fixed
+* Theme-Support for search-form & comment-form removed
+* escaped output
+* enable_count in Quicksand-Widgets fixed
+* removed some theme-tags
+* not singular pages show now the excerpt instead of the full post
 
 = 0.5.4 =
 * Ganymede Elegy color-scheme added
