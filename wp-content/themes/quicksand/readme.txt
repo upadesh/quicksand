@@ -75,6 +75,7 @@ Quicksand theme uses:
 * enable_count in Quicksand-Widgets fixed
 * removed some theme-tags
 * not singular pages show now the excerpt instead of the full post
+* check for WP_ERROR if Google-Fonts call in Customizer isn't successful
 
 = 0.5.4 =
 * Ganymede Elegy color-scheme added
