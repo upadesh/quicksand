@@ -41,7 +41,7 @@ add_action('after_switch_theme', 'quicksand_switch_theme');
  */
 function quicksand_upgrade_notice() {
     global $wp_min_version;
-    $message = sprintf(__('Quicksand requires at least WordPress version %s. You are running version %s. Please upgrade and try again.', 'quicksand'), $wp_min_version, $GLOBALS['wp_version']);
+    $message = sprintf(__('Quicksand requires at least WordPress version %1s. You are running version %2s. Please upgrade and try again.', 'quicksand'), $wp_min_version, $GLOBALS['wp_version']);
     printf('<div class="error"><p>%s</p></div>', $message);
 }
 
@@ -54,7 +54,7 @@ function quicksand_upgrade_notice() {
  */
 function quicksand_customize() {
     global $wp_min_version;
-    wp_die(sprintf(__('Quicksand requires at least WordPress version %s. You are running version %s. Please upgrade and try again.', 'quicksand'), $wp_min_version, $GLOBALS['wp_version']), '', array(
+    wp_die(sprintf(__('Quicksand requires at least WordPress version %1s. You are running version %2s. Please upgrade and try again.', 'quicksand'), $wp_min_version, $GLOBALS['wp_version']), '', array(
         'back_link' => true,
     ));
 }
@@ -72,7 +72,7 @@ add_action('load-customize.php', 'quicksand_customize');
 function quicksand_preview() {
     global $wp_min_version;
     if (isset($_GET['preview'])) {
-        wp_die(sprintf(__('Quicksand requires at least WordPress version %s. You are running version %s. Please upgrade and try again.', 'quicksand'), $wp_min_version, $GLOBALS['wp_version']));
+        wp_die(sprintf(__('Quicksand requires at least WordPress version %1s. You are running version %2s. Please upgrade and try again.', 'quicksand'), $wp_min_version, $GLOBALS['wp_version']));
     }
 }
 

@@ -29,7 +29,7 @@ global $quicksand_version;
 global $wp_min_version;
 
 $quicksand_version = '0.2.1';
-$wp_min_version = '4.6';
+$wp_min_version = '4.7';
 
 /**
  * quicksand only works in WordPress 4.4 or later.
@@ -153,7 +153,7 @@ if (!function_exists('quicksand_setup')) :
             'flex-height' => true,
             'height' => 400,
             'width' => 1200,
-        ); 
+        );
         add_theme_support('custom-header', $customHeaderArgs);
     }
 
@@ -237,16 +237,7 @@ if (!function_exists('quicksand_get_google_fonts')) :
      * @return string
      */
     function quicksand_get_google_fonts($font = NULL) {
-
-        $fonts = array();
-        // just a last fallback
-        $font = !empty($font) ? $font : 'Raleway';
-
-        /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-        if ('off' !== _x('on', $font . ' font: on or off', 'quicksand')) {
-            $fonts[] = $font . ':400,400i,700,700i,900,900i';
-        }
-
+        $fonts[] = $font . ':400,400i,700,700i'; 
         return $fonts;
     }
 
@@ -280,7 +271,7 @@ if (!function_exists('quicksand_fonts_url')) :
                         ), 'https://fonts.googleapis.com/css');
             }
 
-            return $fonts_url;
+            return esc_url_raw($fonts_url);
         }
 
         return FALSE;

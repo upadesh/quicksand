@@ -9,7 +9,6 @@
         quicksand_entry_title();
         quicksand_entry_meta();
         quicksand_the_entry_content();
-     
         quicksand_entry_tags();
     }
 

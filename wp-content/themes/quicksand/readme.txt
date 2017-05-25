@@ -63,6 +63,8 @@ Quicksand theme uses:
 * LightGallery shows now captions
 * Excerpt-appearence changed
 * Display Site Title and Tagline fixed
+* Full-width page has now padding in content
+* transaltion for google-fonts-url fixed
 
 = 0.5.4 =
 * Ganymede Elegy color-scheme added
