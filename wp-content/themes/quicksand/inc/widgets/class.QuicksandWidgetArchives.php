@@ -21,7 +21,7 @@ class QuicksandWidgetArchives extends WP_Widget {
         extract($args);
 
         $title = isset($instance['title']) ? $instance['title'] : esc_html__('Archives', 'quicksand');
-        $enable_count = isset($instance['enable_count']) ? $instance['enable_count'] : 'checked';
+        $enable_count = isset($instance['enable_count']) ? $instance['enable_count'] : NULL;
         $limit = isset($instance['limit']) ? $instance['limit'] : NULL;
 
         echo $before_widget;
