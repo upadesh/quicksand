@@ -28,11 +28,13 @@ Quicksand comes with 3 ready-to-use color-schemes, one with rounded, two with co
 
 Quicksand theme uses:
 * Bootstrap (http://getbootstrap.com/) licensed under MIT license (https://github.com/twbs/bootstrap/blob/master/LICENSE) 
-* FontAwesome (http://fontawesome.io) licensed under the SIL OFL 1.1 (http://scripts.sil.org/OFL)
+* FontAwesome (http://fontawesome.io) 
+  ** The Font Awesome font is licensed under the SIL OFL 1.1 (http://scripts.sil.org/OFL)
+  ** Font Awesome CSS, LESS, and Sass files are licensed under the MIT License (https://opensource.org/licenses/mit-license.html) 
 * Flexslider (http://flexslider.woothemes.com/) licensed under GPLv2 (http://www.gnu.org/licenses/gpl-2.0.html) 
-* Lightgallery (https://sachinchoolur.github.io/lightGallery/) licensed under GNU AGPLv3 (https://github.com/sachinchoolur/lightGallery/blob/master/LICENSE.md)
-** "If you are creating an open source application under a license compatible with the GNU GPL license v3, you may use this project under the terms of the GPLv3."
-
+* Lightgallery (https://sachinchoolur.github.io/lightGallery/) licensed under GNU AGPLv3 (https://github.com/sachinchoolur/lightGallery/blob/master/LICENSE.md) 
+* Unless otherwise specified, all images are created by Colorlib
+ 
 == Theme Features ==
 
 * Bootstrap 4 
