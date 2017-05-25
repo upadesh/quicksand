@@ -5,6 +5,7 @@ Quicksand comes with 3 ready-to-use color-schemes, one with rounded, two with co
 ### Change version in files
 - Readme.txt
 - style.css    
+- package.json
 	
 ### Reinstall npm-modules
 
@@ -61,8 +62,7 @@ find . -iname '.*' -type f -delete
 
 ### zip the whole thing
 ```
-cd ..
-zip -r quicksand.zip quicksand
+cd ..; zip -r quicksand.zip quicksand
 ```  
 
 
