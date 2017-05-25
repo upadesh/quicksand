@@ -2,7 +2,7 @@
 
 Theme Name: Quicksand
 Theme URI: http://cafe-serendipity.com
-Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, featured-image-header, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, education, entertainment
+Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog
 Version: 0.6.0
 Tested up to: WP 4.7
 Requires at least: 4.6
@@ -33,7 +33,7 @@ Quicksand theme uses:
   ** Font Awesome CSS, LESS, and Sass files are licensed under the MIT License (https://opensource.org/licenses/mit-license.html) 
 * Flexslider (http://flexslider.woothemes.com/) licensed under GPLv2 (http://www.gnu.org/licenses/gpl-2.0.html) 
 * Lightgallery (https://sachinchoolur.github.io/lightGallery/) licensed under GNU AGPLv3 (https://github.com/sachinchoolur/lightGallery/blob/master/LICENSE.md) 
-* Unless otherwise specified, all images are created by Colorlib
+* Unless otherwise specified, all images are created by Andreas Stephan
  
 == Theme Features ==
 
@@ -50,8 +50,7 @@ Quicksand theme uses:
 * Internationalized & localization
 * Drop-down Menu
 * Cross-browser compatibility
-* Threaded Comments
-* Gravatar ready  
+* Threaded Comments 
 * Custom Archive- and Category-widgets
 * Sidebar-selections
  
@@ -64,14 +63,13 @@ Quicksand theme uses:
 
 = 0.6.0 =
 * LightGallery shows now captions
-* Excerpt-appearence changed
-* Display Site Title and Tagline fixed
-* Full-width page has now padding in content
+* excerpt-appearence changed
+* display Site Title and Tagline fixed
+* full-width page has now padding in content
 * translation for google-fonts-url fixed
-* phpcs errors fixed
+* phpcs output-escaping-errors fixed
 * FontAwesome License fixed
-* Theme-Support for search-form & comment-form removed
-* escaped output
+* theme-support for search-form & comment-form removed 
 * enable_count in Quicksand-Widgets fixed
 * removed some theme-tags
 * not singular pages show now the excerpt instead of the full post
