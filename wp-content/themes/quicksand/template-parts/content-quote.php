@@ -4,7 +4,9 @@
     <?php 
 
     if (!is_singular()) {
-        quicksand_entry_header_postformat_quote();
+        quicksand_entry_title();
+        quicksand_entry_meta();
+        quicksand_entry_list_content_postformat_quote();
     } else { 
         quicksand_entry_title();
         quicksand_entry_meta();

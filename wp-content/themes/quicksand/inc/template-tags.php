@@ -303,20 +303,20 @@ endif;
 if (!function_exists('quicksand_entry_header_postformat_quote')) :
 
     /**
-     * Displays the title for post-format: quote 
+     * Displays the content of a quote-post in non-singular-context
      *
-     * Create your own quicksand_entry_header_postformat_quote() function to override in a child theme.
+     * Create your own quicksand_entry_list_content_postformat_quote() function to override in a child theme.
      *
      * @since Quicksand 0.2.1
      *
      * @param string $class Optional. Class string of the header element.  
      */
-    function quicksand_entry_header_postformat_quote($class = 'entry-title') {
+    function quicksand_entry_list_content_postformat_quote($class = 'entry-title') {
         $class = esc_attr($class);
         ?> 
 
         <!-- entry-header --> 
-        <header class="card-header entry-header <?php echo esc_attr($class); ?>">
+        <header class="card-block  <?php echo esc_attr($class); ?>">
             <!--stick post-->
             <?php if (is_sticky() && is_home() && !is_paged()) : ?>
                 <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
