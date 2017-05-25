@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Quicksand\n"
-"POT-Creation-Date: 2017-03-29 21:21+0200\n"
-"PO-Revision-Date: 2017-03-29 21:22+0200\n"
+"POT-Creation-Date: 2017-05-25 18:21+0200\n"
+"PO-Revision-Date: 2017-05-25 18:23+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -68,76 +68,72 @@ msgstr "Primäres Menü"
 msgid "Secondary Menu"
 msgstr "Sekundäres Menu"
 
-#: functions.php:192 inc/customizer.php:754
+#: functions.php:190 inc/customizer.php:755
 msgid "Right Sidebar"
 msgstr "Rechte Sidebar"
 
-#: functions.php:194
+#: functions.php:192
 msgid "Add widgets here to appear in your right sidebar."
 msgstr "Füge Widgets zur rechten Sidebar hinzu"
 
-#: functions.php:202 inc/customizer.php:755
+#: functions.php:200 inc/customizer.php:756
 msgid "Left Sidebar"
 msgstr "Linke Sidebar"
 
-#: functions.php:204
+#: functions.php:202
 msgid "Add widgets here to appear in your left sidebar."
 msgstr "Füge Widgets zur linken Sidebar hinzu"
 
-#: functions.php:212
+#: functions.php:210
 msgid "Footer Sidebar"
 msgstr "Footer Sidebar"
 
-#: functions.php:214
+#: functions.php:212
 msgid "Add widgets here to appear at the bottom."
 msgstr "Füge Widgets hier hinzu, damit sie im Footer erscheinen."
 
-#: functions.php:246
-msgid "on"
-msgstr "am"
-
-#: functions.php:492
+#: functions.php:481
 msgid "Comment"
 msgstr "Kommentar"
 
-#: functions.php:527
+#: functions.php:516
 msgid "Name"
 msgstr "Name"
 
-#: functions.php:529
+#: functions.php:518
 msgid "Email"
 msgstr "Email"
 
-#: functions.php:531
+#: functions.php:520
 msgid "Website"
 msgstr "Webseite"
 
-#: functions.php:551
+#: functions.php:540
 msgid "To view this protected post, enter the password below:"
 msgstr ""
 "Geben Sie bitte Ihr Kennwort ein, um diesen geschützten Beitrag zu sehen"
 
-#: functions.php:625
+#: functions.php:614 inc/template-tags.php:713
 msgid "Read more"
 msgstr "Weiter lesen"
 
-#: functions.php:647
+#: functions.php:636
 msgid "Category"
 msgstr "Kategorie"
 
-#: functions.php:649
+#: functions.php:638
 msgid "Tag"
 msgstr "Tag"
 
-#: functions.php:651 inc/customizer.php:509
+#: functions.php:640 inc/customizer.php:510
 msgid "Author"
 msgstr "Autor"
 
-#: functions.php:653
+#: functions.php:642
 msgid "Month"
 msgstr "Monat"
 
-#: functions.php:653
+#: functions.php:642
 msgid "F Y"
 msgstr ""
 
@@ -171,11 +167,11 @@ msgstr ""
 #: inc/back-compat.php:44 inc/back-compat.php:57 inc/back-compat.php:75
 #, php-format
 msgid ""
-"Quicksand requires at least WordPress version %s. You are running version %s. "
-"Please upgrade and try again."
+"Quicksand requires at least WordPress version %1s. You are running version "
+"%2s. Please upgrade and try again."
 msgstr ""
-"Quicksand benötigt mindestens die WordPress Version %s. Sie haben die Version "
-"%s. Bitte updaten und nochmals versuchen. "
+"Quicksand benötigt mindestens WordPress version %1s. Sie benutzen Version "
+"%2s. Bitte upgraden und nochmals versuchen."
 
 #: inc/class.QuicksandCustomizeCategoryControl.php:11
 msgid "&mdash; Select &mdash;"
@@ -237,87 +233,95 @@ msgstr "Header"
 msgid "Enable Header"
 msgstr "Aktiviere Header"
 
-#: inc/customizer.php:198
+#: inc/customizer.php:186
+msgid ""
+"Note that all options in here do only work when 'Display Site Title and "
+"Tagline' in 'Site Identity' is enabled."
+msgstr ""
+"Bitte beachten Sie, dass hier alle Option nur dann funktionieren, wenn sie  "
+"'Display Site Title and Tagline' in 'Site Identity' aktiviert haben."
+
+#: inc/customizer.php:199
 msgid "Hide when Slider is enabled"
 msgstr "Verstecke wenn Slider aktiviert ist"
 
-#: inc/customizer.php:214
+#: inc/customizer.php:215
 msgid "Show only on front-page"
 msgstr "Nur auf der Front-Seite anzeigen"
 
-#: inc/customizer.php:230
+#: inc/customizer.php:231
 msgid "Header Fullwidth"
 msgstr "Header volle Breite"
 
-#: inc/customizer.php:245
+#: inc/customizer.php:246
 msgid "Header Background Color"
 msgstr "Header Hintergrundfarbe"
 
-#: inc/customizer.php:258
+#: inc/customizer.php:259
 msgid "Slider settings"
 msgstr "Slider Einstellungen"
 
-#: inc/customizer.php:273
+#: inc/customizer.php:274
 msgid "Enable Slider"
 msgstr "Aktivere Slider"
 
-#: inc/customizer.php:277
+#: inc/customizer.php:278
 msgid "Is only shown on front-page"
 msgstr "Wird nur auf der Front-Seite angezeigt"
 
-#: inc/customizer.php:290
+#: inc/customizer.php:291
 msgid "Slider Fullwidth"
 msgstr "Slider Fullwidth"
 
-#: inc/customizer.php:306
+#: inc/customizer.php:307
 msgid "Hide in mobile-mode"
 msgstr "In Mobile-Mode verstecken"
 
-#: inc/customizer.php:326
+#: inc/customizer.php:327
 msgid "Only posts including a featured image will be exposed"
 msgstr "Nur Posts mit einem Features Image werden angezeigt"
 
-#: inc/customizer.php:336
+#: inc/customizer.php:337
 msgid "Number of posts"
 msgstr "Anzahl der Posts"
 
-#: inc/customizer.php:355 inc/customizer.php:378
+#: inc/customizer.php:356 inc/customizer.php:379
 msgid "Height"
 msgstr "Höhe"
 
-#: inc/customizer.php:356
+#: inc/customizer.php:357
 msgid "Set the height of the slider"
 msgstr "Setze die Höhe des Spiders"
 
-#: inc/customizer.php:379
+#: inc/customizer.php:380
 msgid "Margin to the top"
 msgstr "Abstand nach oben"
 
-#: inc/customizer.php:396
+#: inc/customizer.php:397
 msgid "Content"
 msgstr "Inhalt"
 
-#: inc/customizer.php:411
+#: inc/customizer.php:412
 msgid "Content Fullwidth"
 msgstr "Inhalt Fullwidth"
 
-#: inc/customizer.php:427
+#: inc/customizer.php:428
 msgid "List-Views Masonry-like"
 msgstr "List-Views wie Masonry"
 
-#: inc/customizer.php:431
+#: inc/customizer.php:432
 msgid "Shown when there are more than 2 posts"
 msgstr "Wird angezeigt wenn es mer als 2 Beiträge gibt"
 
-#: inc/customizer.php:445
+#: inc/customizer.php:446
 msgid "Use LightGallery"
 msgstr "Aktiviere Lightgallery"
 
-#: inc/customizer.php:473
+#: inc/customizer.php:474
 msgid "Google API Key"
 msgstr "Google API Key"
 
-#: inc/customizer.php:477
+#: inc/customizer.php:478
 msgid ""
 "You need an API-Key to use Google Fonts. Create one <a href=\"https://console."
 "developers.google.com/\" target=\"_blank\">here</a>, save it & reload the "
@@ -327,166 +331,166 @@ msgstr ""
 "einen <a href=\"https://console.developers.google.com/\" target=\"_blank"
 "\">here</a>, speichere ihn und lade die Seite neu."
 
-#: inc/customizer.php:490
+#: inc/customizer.php:491
 msgid "Font Size"
 msgstr "Font Größe"
 
-#: inc/customizer.php:507
+#: inc/customizer.php:508
 msgid "Show Meta"
 msgstr "Zeige Meta-Informationen"
 
-#: inc/customizer.php:508
+#: inc/customizer.php:509
 msgid "Date"
 msgstr "Datum"
 
-#: inc/customizer.php:510
+#: inc/customizer.php:511
 msgid "Post-Format"
 msgstr "Beitrags-Format"
 
-#: inc/customizer.php:511
+#: inc/customizer.php:512
 msgid "Taxonomies"
 msgstr "Taxonomien"
 
-#: inc/customizer.php:512
+#: inc/customizer.php:513
 msgid "Comments"
 msgstr "Kommentare"
 
-#: inc/customizer.php:523
+#: inc/customizer.php:524
 msgid "Content Background Color"
 msgstr "Inhalt Hintergrundfarbe"
 
-#: inc/customizer.php:539
+#: inc/customizer.php:540
 msgid "Content Link Color"
 msgstr "Inhalt Linkfarbe"
 
-#: inc/customizer.php:553
+#: inc/customizer.php:554
 msgid "Content Text Color"
 msgstr "Inhalt Textfarbe"
 
-#: inc/customizer.php:566
+#: inc/customizer.php:567
 msgid "Secondary Text Color"
 msgstr "Zweite Textfarbe"
 
-#: inc/customizer.php:579
+#: inc/customizer.php:580
 msgid "Title Background Color"
 msgstr "Titel Hintergrund Farbe"
 
-#: inc/customizer.php:592
+#: inc/customizer.php:593
 msgid "Post Background Color"
 msgstr "Beitrag Hintergrund Farbe"
 
-#: inc/customizer.php:605
+#: inc/customizer.php:606
 msgid "Post Border Color"
 msgstr "Titel Rahmen Farbe"
 
-#: inc/customizer.php:615
+#: inc/customizer.php:616
 msgid "Buttons"
 msgstr "Buttons"
 
-#: inc/customizer.php:627
+#: inc/customizer.php:628
 msgid "Button Primary Color"
 msgstr "Button Primär Farbe"
 
-#: inc/customizer.php:641
+#: inc/customizer.php:642
 msgid "Button Secondary Color"
 msgstr "Button Sekundär Farbe"
 
-#: inc/customizer.php:656
+#: inc/customizer.php:657
 msgid "Tag Background Color"
 msgstr "Tag Hintergrund Farbe"
 
-#: inc/customizer.php:669
+#: inc/customizer.php:670
 msgid "Tag Font Color"
 msgstr "Tag Font Farbe"
 
-#: inc/customizer.php:681
+#: inc/customizer.php:682
 msgid "Biography"
 msgstr "Biografie"
 
-#: inc/customizer.php:695
+#: inc/customizer.php:696
 msgid "Show Author Biography"
 msgstr "Zeige Autoren Biografie"
 
-#: inc/customizer.php:709
+#: inc/customizer.php:710
 msgid "Background Color"
 msgstr "Hintergrund Farbe"
 
-#: inc/customizer.php:722
+#: inc/customizer.php:723
 msgid "Font Color"
 msgstr "Font Farbe"
 
-#: inc/customizer.php:734
+#: inc/customizer.php:735
 msgid "Sidebar"
 msgstr "Seitenleiste"
 
-#: inc/customizer.php:749
+#: inc/customizer.php:750
 msgid "Sidebar Numbers"
 msgstr "Anzahl Tidebars"
 
-#: inc/customizer.php:753
+#: inc/customizer.php:754
 msgid "No Sidebar"
 msgstr "Keine Sidebar"
 
-#: inc/customizer.php:756
+#: inc/customizer.php:757
 msgid "Left & right Sidebar"
 msgstr "Linke & rechte Sidebar"
 
-#: inc/customizer.php:769
+#: inc/customizer.php:770
 msgid "Widget Background Color"
 msgstr "Widget Backgroundfarbe"
 
-#: inc/customizer.php:781
+#: inc/customizer.php:782
 msgid "Widget Text Color"
 msgstr "Widget Textfarbe"
 
-#: inc/customizer.php:793
+#: inc/customizer.php:794
 msgid "Widget Link Color"
 msgstr "Widget Linkfarbe"
 
-#: inc/customizer.php:809
+#: inc/customizer.php:810
 msgid "Widget Border Color"
 msgstr "Widget Rahmenfarbe"
 
-#: inc/customizer.php:811
+#: inc/customizer.php:812
 #, php-format
 msgid "For a nice effect choose the same color like Content-Background (%s) ..."
 msgstr ""
 "Um einen netten Effekt zu erzielen, wähle dieselbe Farbe wie die Inhalt-"
 "Hintergrund-Farbe (%s) …"
 
-#: inc/customizer.php:826
+#: inc/customizer.php:827
 msgid "Border width"
 msgstr "Rahmen Breite"
 
-#: inc/customizer.php:827
+#: inc/customizer.php:828
 msgid "... and set the border-width higher than 1"
 msgstr "… uns setze die Rahmenbreite höher als 1"
 
-#: inc/customizer.php:842
+#: inc/customizer.php:843
 msgid "Footer"
 msgstr "Footer"
 
-#: inc/customizer.php:854
+#: inc/customizer.php:855
 msgid "Footer Background Color"
 msgstr "Footer Hintergrundfarbe"
 
-#: inc/customizer.php:866
+#: inc/customizer.php:867
 msgid "Footer Text Color"
 msgstr "Footer Textfarbe"
 
-#: inc/customizer.php:878
+#: inc/customizer.php:879
 msgid "Footer Link Color"
 msgstr "Footer Linkfarbe"
 
-#: inc/customizer.php:890
+#: inc/customizer.php:891
 msgid "Footer Link Hover Color"
 msgstr "Footer Link-Hover-Farbe"
 
-#: inc/customizer.php:1045
+#: inc/customizer.php:1046
 msgid "Social Media Icons"
 msgstr "Social Media Icons"
 
-#: inc/customizer.php:1117 inc/customizer.php:1126
+#: inc/customizer.php:1118 inc/customizer.php:1127
 #, php-format
 msgid "%s icon"
 msgstr "%s icon"
@@ -523,22 +527,18 @@ msgstr "Tags"
 msgid "Featured"
 msgstr "Empfohlen"
 
-#: inc/template-tags.php:566
+#: inc/template-tags.php:574
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: inc/template-tags.php:570 inc/template-tags.php:598
+#: inc/template-tags.php:578 inc/template-tags.php:606
 msgid "Page"
 msgstr "Seite"
 
-#: inc/template-tags.php:627
+#: inc/template-tags.php:635
 #, php-format
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "<span class=\"screen-reader-text\">&#8222;%s&#8220;</span> bearbeiten"
-
-#: inc/template-tags.php:711
-msgid "Continue reading"
-msgstr "Weiter lesen\t"
 
 #: inc/widgets/class.QuicksandWidgetArchives.php:10
 msgid "Quicksand Archives"
@@ -574,11 +574,6 @@ msgstr "Limitiere Kategorien"
 #: search.php:31
 msgid "Search Results for:"
 msgstr "Suche-Resultate für:"
-
-#: search.php:32
-#, php-format
-msgid "%s"
-msgstr "%s"
 
 #: searchform.php:14 template-parts/navigation-primary.php:38
 #: template-parts/navigation-primary.php:54
@@ -639,6 +634,22 @@ msgstr ""
 #: template-parts/navigation-primary.php:40
 msgid "Search"
 msgstr "Suche"
+
+#~ msgid "on"
+#~ msgstr "am"
+
+#~ msgid ""
+#~ "Quicksand requires at least WordPress version %s. You are running version "
+#~ "%s. Please upgrade and try again."
+#~ msgstr ""
+#~ "Quicksand benötigt mindestens die WordPress Version %s. Sie haben die "
+#~ "Version %s. Bitte updaten und nochmals versuchen. "
+
+#~ msgid "Continue reading"
+#~ msgstr "Weiter lesen\t"
+
+#~ msgid "%s"
+#~ msgstr "%s"
 
 #~ msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 #~ msgstr ""
