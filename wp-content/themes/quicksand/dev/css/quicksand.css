@@ -640,18 +640,15 @@ cite {
 /* masonry-list-view*/
 @media (max-width: 991px) {
   .card-columns {
-    -moz-column-count: 1 !important;
-         column-count: 1 !important; } }
+    column-count: 1 !important; } }
 
 @media (min-width: 992px) {
   .card-columns {
-    -moz-column-count: 2 !important;
-         column-count: 2 !important; } }
+    column-count: 2 !important; } }
 
 @media (min-width: 1200px) {
   .card-columns {
-    -moz-column-count: 3 !important;
-         column-count: 3 !important; } }
+    column-count: 3 !important; } }
 
 /* TODO: 
 workaround for tables 
@@ -4166,10 +4163,8 @@ input[type='radio']:checked ~ .custom-control-indicator {
 
 @media (min-width: 576px) {
   .card-columns {
-    -moz-column-count: 3;
-         column-count: 3;
-    -moz-column-gap: 1.25rem;
-         column-gap: 1.25rem; }
+    column-count: 3;
+    column-gap: 1.25rem; }
     .card-columns .card {
       display: inline-block;
       width: 100%; } }

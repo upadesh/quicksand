@@ -37,7 +37,7 @@
             <?php
             // show header in general
 
-            $isHeaderEnabled = get_theme_mod('qs_header_enabled', quicksand_get_color_scheme()['settings']['qs_header_enabled']);
+            $isHeaderEnabled = display_header_text() && get_theme_mod('qs_header_enabled', quicksand_get_color_scheme()['settings']['qs_header_enabled']);
             $isSliderEnabled = get_theme_mod('qs_slider_enabled', quicksand_get_color_scheme()['settings']['qs_slider_enabled']);
 
             if ($isHeaderEnabled):

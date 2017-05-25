@@ -1,11 +1,10 @@
 {
     "name": "quicksand",
-    "version": "0.2.2",
+    "version": "0.6.0",
     "description": "Wordpress theme built with Bootstrap 4 ",
     "main": "Gruntfile.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "preinstall": "grunt"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "cafe.serendipity21@gmail.com",
     "license": "GPL-3.0",

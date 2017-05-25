@@ -183,6 +183,7 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_header',
         'type' => 'checkbox',
         'settings' => 'qs_header_enabled',
+        'description' => __('Note that all options in here do only work when \'Display Site Title and Tagline\' in \'Site Identity\' is enabled.', 'quicksand'),
         'priority' => 10,
     ));
 
