@@ -31,7 +31,7 @@ if (class_exists('WP_Customize_Control')) {
         }
 
         public function get_google_fonts() {
-            $key = get_theme_mod('qs_content_google_api_key', NULL);
+            $key = urlencode(get_theme_mod('qs_content_google_api_key', NULL));
             if (!isset($key)) {
                 return NULL;
             }

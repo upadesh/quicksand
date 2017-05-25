@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Quicksand\n"
-"POT-Creation-Date: 2017-05-25 18:21+0200\n"
-"PO-Revision-Date: 2017-05-25 18:23+0200\n"
+"POT-Creation-Date: 2017-05-25 19:19+0200\n"
+"PO-Revision-Date: 2017-05-25 19:20+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -27,6 +27,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-6: languages\n"
 
 #: 404.php:23
+#, fuzzy
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Diese Seite konnte leider nicht gefunden werden."
 
@@ -258,8 +259,8 @@ msgid "Header Background Color"
 msgstr "Header Hintergrundfarbe"
 
 #: inc/customizer.php:259
-msgid "Slider settings"
-msgstr "Slider Einstellungen"
+msgid "Slider"
+msgstr "Slider"
 
 #: inc/customizer.php:274
 msgid "Enable Slider"
@@ -634,6 +635,9 @@ msgstr ""
 #: template-parts/navigation-primary.php:40
 msgid "Search"
 msgstr "Suche"
+
+#~ msgid "Slider settings"
+#~ msgstr "Slider Einstellungen"
 
 #~ msgid "on"
 #~ msgstr "am"

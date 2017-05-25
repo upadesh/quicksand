@@ -256,7 +256,7 @@ function quicksand_customize_register($wp_customize) {
      *  Section: Slider  
      */
     $wp_customize->add_section('quicksand_slider_section', array(
-        'title' => __('Slider settings', 'quicksand'),
+        'title' => __('Slider', 'quicksand'),
         'priority' => 10,
         'panel' => 'quicksand_main_options',
     ));
