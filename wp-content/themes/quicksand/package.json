@@ -1,7 +1,7 @@
 {
     "name": "quicksand",
     "version": "0.6.0",
-    "description": "Wordpress theme built with Bootstrap 4 ",
+    "description": "Wordpress theme built with Bootstrap 4",
     "main": "Gruntfile.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
