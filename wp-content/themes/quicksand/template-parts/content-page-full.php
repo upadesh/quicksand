@@ -18,7 +18,7 @@
     <!--post thumbnail-->
     <?php quicksand_entry_thumbnail(); ?> 
 
-    <div class="">
+    <div class="card-block entry-content qs-site-full-width-content">
         <?php
         the_content();
 

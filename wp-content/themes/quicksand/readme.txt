@@ -62,6 +62,7 @@ Quicksand theme uses:
 = 0.6.0 =
 * LightGallery shows now captions
 * Excerpt-appearence changed
+* Display Site Title and Tagline fixed
 
 = 0.5.4 =
 * Ganymede Elegy color-scheme added
