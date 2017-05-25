@@ -292,7 +292,7 @@ if (!function_exists('quicksand_styles')) :
         global $quicksand_version;
 
         // check if custom-thememod exists 
-        $currentThemeMod = get_theme_mod('color_scheme', 'default');
+        $currentThemeMod = esc_html(get_theme_mod('color_scheme', 'default'));
         $currentThemeMod = $currentThemeMod === 'default' ? '' : '-' . $currentThemeMod;
         $styleSheetToLoad = get_template_directory_uri() . '/css/quicksand' . $currentThemeMod . '.min.css';
         if (!file_exists(get_template_directory() . '/css/quicksand' . $currentThemeMod . '.min.css')) {
@@ -611,7 +611,7 @@ if (!function_exists('quicksand_modify_read_more_link')) :
      * @return type
      */
     function quicksand_modify_read_more_link() {
-        return '<p><a class="read-more-link btn btn-outline-secondary" href="' . get_permalink() . '">' . __('Read more', 'quicksand') . '</a></p>';
+        return '<p><a class="read-more-link btn btn-outline-secondary" href="' . esc_url(get_permalink()) . '">' . __('Read more', 'quicksand') . '</a></p>';
     }
 
 endif;
