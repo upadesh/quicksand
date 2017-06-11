@@ -86,7 +86,7 @@ class QuicksandWidgetArchives extends WP_Widget {
 
         <p>
             <label for="<?php echo $this->get_field_id('limit'); ?>"> <?php esc_html_e('Limit Archives ', 'quicksand') ?></label>
-            <input  type="text" value="<?php echo esc_attr($instance['limit']); ?>"
+            <input type="number" min="0" value="<?php echo esc_attr($instance['limit']); ?>"
                     name="<?php echo $this->get_field_name('limit'); ?>"
                     id="<?php $this->get_field_id('limit'); ?>" />
         </p>
