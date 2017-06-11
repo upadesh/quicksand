@@ -495,13 +495,7 @@ if (!function_exists('quicksand_the_entry_content')) :
         <!--quicksand-entry-content-default-->
         <div class="card-block quicksand-default-entry-content <?php echo $class; ?>"> 
             <div class="card-text">
-                <?php
-                if (!is_singular()) {
-                    echo the_excerpt();
-                } else {
-                    echo the_content();
-                }
-                ?>
+                <?php echo the_content(); ?>
             </div>
         </div>  
 
@@ -525,14 +519,14 @@ if (!function_exists('quicksand_the_entry_content_video')) :
         <!--quicksand-entry-content-video-->
         <div class="card-block quicksand-entry-content-video <?php echo $class; ?>"> 
             <p class="card-text"><?php
-        // get rid of embedded objects/videos
-        $content = is_singular() ? get_the_content() : get_the_excerpt();
-        $content = preg_replace("/<embed[^>]+>/i", "", $content, 1);
-        $pattern = "/(?i)\b((?:https?:\/\/|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»\"\"\'\']))/";
-        $content = preg_replace($pattern, '', $content);
+                // get rid of embedded objects/videos
+                $content = is_singular() ? get_the_content() : get_the_excerpt();
+                $content = preg_replace("/<embed[^>]+>/i", "", $content, 1);
+                $pattern = "/(?i)\b((?:https?:\/\/|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»\"\"\'\']))/";
+                $content = preg_replace($pattern, '', $content);
 
-        echo $content;
-        ?></p>
+                echo $content;
+                ?></p>
         </div>  
 
         <!--displays page links for paginated posts (i.e. includes the 'nextpage')--> 
@@ -786,6 +780,8 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
 
 
 
