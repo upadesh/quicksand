@@ -87,9 +87,6 @@ if (!function_exists('quicksand_setup')) :
          * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
          */
         add_theme_support('post-thumbnails');
-        // in list-view crop the image to a max-height of 300px
-//        add_image_size('quicksand-featured_image', 1200, 300, array('top', 'left'));
-//        set_post_thumbnail_size(1200, 9999);
 
 
         /*

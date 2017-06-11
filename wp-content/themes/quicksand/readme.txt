@@ -4,7 +4,7 @@ Theme Name: Quicksand
 Theme URI: http://cafe-serendipity.com
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog
 Version: 0.6.2
-Tested up to: WP 4.7
+Tested up to: WP 4.8
 Requires at least: 4.6
 Author: Cafe Serendipity - Andreas Stephan
 Author URI: http://cafe-serendipity.com
@@ -58,52 +58,3 @@ Quicksand theme uses:
 
 * Currently the top-menu supports only a hierarchical depth of 1 and the footer-menu is flat, which will be changed in the future. 
 
-
-== Changelog ==
-
-= 0.6.0 =
-* LightGallery shows now captions
-* excerpt-appearence changed
-* display Site Title and Tagline fixed
-* full-width page has now padding in content
-* translation for google-fonts-url fixed
-* phpcs output-escaping-errors fixed
-* FontAwesome License fixed
-* theme-support for search-form & comment-form removed 
-* enable_count in Quicksand-Widgets fixed
-* removed some theme-tags
-* not singular pages show now the excerpt instead of the full post
-* check for WP_ERROR if Google-Fonts call in Customizer isn't successful
-
-= 0.5.4 =
-* Ganymede Elegy color-scheme added
-* not defined variables fixed
-* header-image fully responsive now
-
-= 0.5.1 =
-* added icons for custom post type video & gallery
-* set focus to search-form when triggered
-* sidebar-preview in customizer fixed for tag-pills
-
-= 0.4.1 =
-* gallery bug in initializing gallery fixed
-* hide-slider in mobile mode added
-
-= 0.4.0 =
-* navbar-dropdown changed
-* cleaned up code
-
-= 0.3.0 =
-* nav-background-color on dropdowns when focused had wrong color
-* sticky-css changed font-weight
-* card-header for pages wrong class
-* navbar dropdown css wrong
-* navbar-toggler border-color 
-* no list-style-type in comments 
-* full-width-template changed
-* slider font-size adjusted in mobile-mode
-* header-show-conditional fixed
-* margin of navbar-dropdown adjusted
-* archives- & categories-widget added 
-* sidebar selection added to customer
- 
