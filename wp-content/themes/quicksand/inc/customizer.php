@@ -275,7 +275,7 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_slider_section',
         'type' => 'checkbox',
         'settings' => 'qs_slider_enabled',
-        'description' => __('Is only shown on front-page', 'quicksand'),
+        'description' => __('Is only shown on front-page. You also have to select a category below.', 'quicksand'),
         'priority' => 10,
     ));
 
@@ -805,7 +805,7 @@ function quicksand_customize_register($wp_customize) {
 
 
     $bgColorContent = get_theme_mod('qs_content_background_color');
-    $bgContent = isset($bgColorContent) ? $bgColorContent : $colorSchemeDefault['colors'][1];
+    $bgContent = !empty($bgColorContent) ? $bgColorContent : $colorSchemeDefault['colors']['qs_content_background_color'];
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_border_color', array(
         'label' => __('Widget Border Color', 'quicksand'),
         'section' => 'quicksand_sidebar',
@@ -825,7 +825,6 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 10,
         'section' => 'quicksand_sidebar',
         'label' => __('Border width', 'quicksand'),
-        'description' => __('... and set the border-width higher than 1', 'quicksand'),
         'input_attrs' => array(
             'min' => 0,
             'max' => 10,
