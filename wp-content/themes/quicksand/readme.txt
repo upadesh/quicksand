@@ -18,10 +18,11 @@ Here is a short description of the plugin.
 Quicksand comes with 3 ready-to-use color-schemes, one with rounded, two with cornered boxes. Its responsive design is based on Bootstrap 4, so your page will always look fine on any device. The theme is highly configurable, so you can easily adjust it to your needs, by using the theme-options inside your customizer.  Choose between masonry- and normal-, fullwidth- or boxed-layout, none, one or two sidebars and there were also added two better looking archive- & category-widgets. Quicksand also comes with a social-icon-integration, by using the fantastic FontAwesome image-library. You are able to apply Google-Fonts, galleries can be displayed by the stunning Lightgallery-plugin and if you feel to use a slider on your frontpage, no worries, Flexslider is integrated.  For the nerds of you, there are also sass- and grunt files included.
 
 == Installation ==
-
-1. Upload the plugin files to the `/wp-content/plugins/plugin-name` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
-1. Appearance > Customize in your admin panel and customize to taste.
+ 
+1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
+2. Type in Quicksand in the search form and press the 'Enter' key on your keyboard.
+3. Click on the 'Activate' button to use your new theme right away. 
+4. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 
 == Credits ==
