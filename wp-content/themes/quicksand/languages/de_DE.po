@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Quicksand\n"
-"POT-Creation-Date: 2017-05-25 19:19+0200\n"
-"PO-Revision-Date: 2017-05-25 20:08+0200\n"
+"POT-Creation-Date: 2017-06-11 14:06+0200\n"
+"PO-Revision-Date: 2017-06-11 14:08+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -61,80 +61,80 @@ msgstr "Neuere Kommentare"
 msgid "Comments are closed."
 msgstr "Kommentare sind geschlossen."
 
-#: functions.php:99
+#: functions.php:96
 msgid "Primary Menu"
 msgstr "Primäres Menü"
 
-#: functions.php:100
+#: functions.php:97
 msgid "Secondary Menu"
 msgstr "Sekundäres Menu"
 
-#: functions.php:190 inc/customizer.php:755
+#: functions.php:187 inc/customizer.php:755
 msgid "Right Sidebar"
 msgstr "Rechte Sidebar"
 
-#: functions.php:192
+#: functions.php:189
 msgid "Add widgets here to appear in your right sidebar."
 msgstr "Füge Widgets zur rechten Sidebar hinzu"
 
-#: functions.php:200 inc/customizer.php:756
+#: functions.php:197 inc/customizer.php:756
 msgid "Left Sidebar"
 msgstr "Linke Sidebar"
 
-#: functions.php:202
+#: functions.php:199
 msgid "Add widgets here to appear in your left sidebar."
 msgstr "Füge Widgets zur linken Sidebar hinzu"
 
-#: functions.php:210
+#: functions.php:207
 msgid "Footer Sidebar"
 msgstr "Footer Sidebar"
 
-#: functions.php:212
+#: functions.php:209
 msgid "Add widgets here to appear at the bottom."
 msgstr "Füge Widgets hier hinzu, damit sie im Footer erscheinen."
 
-#: functions.php:481
+#: functions.php:478
 msgid "Comment"
 msgstr "Kommentar"
 
-#: functions.php:516
+#: functions.php:513
 msgid "Name"
 msgstr "Name"
 
-#: functions.php:518
+#: functions.php:515
 msgid "Email"
 msgstr "Email"
 
-#: functions.php:520
+#: functions.php:517
 msgid "Website"
 msgstr "Webseite"
 
-#: functions.php:540
+#: functions.php:537
 msgid "To view this protected post, enter the password below:"
 msgstr ""
 "Geben Sie bitte Ihr Kennwort ein, um diesen geschützten Beitrag zu sehen"
 
-#: functions.php:614 inc/template-tags.php:713
+#: functions.php:611 inc/template-tags.php:707
 msgid "Read more"
 msgstr "Weiter lesen"
 
-#: functions.php:636
+#: functions.php:633
 msgid "Category"
 msgstr "Kategorie"
 
-#: functions.php:638
+#: functions.php:635
 msgid "Tag"
 msgstr "Tag"
 
-#: functions.php:640 inc/customizer.php:510
+#: functions.php:637 inc/customizer.php:510
 msgid "Author"
 msgstr "Autor"
 
-#: functions.php:642
+#: functions.php:639
 msgid "Month"
 msgstr "Monat"
 
-#: functions.php:642
+#: functions.php:639
 msgid "F Y"
 msgstr ""
 
@@ -268,8 +268,10 @@ msgid "Enable Slider"
 msgstr "Aktivere Slider"
 
 #: inc/customizer.php:278
-msgid "Is only shown on front-page"
-msgstr "Wird nur auf der Front-Seite angezeigt"
+msgid "Is only shown on front-page. You also have to select a category below."
+msgstr ""
+"Wird nur auf der Front-Seite angezeigt. Sie müssen ebenfalls eine Kategorie "
+"unten wählen."
 
 #: inc/customizer.php:291
 msgid "Slider Fullwidth"
@@ -464,35 +466,31 @@ msgstr ""
 msgid "Border width"
 msgstr "Rahmen Breite"
 
-#: inc/customizer.php:828
-msgid "... and set the border-width higher than 1"
-msgstr "… uns setze die Rahmenbreite höher als 1"
-
-#: inc/customizer.php:843
+#: inc/customizer.php:842
 msgid "Footer"
 msgstr "Footer"
 
-#: inc/customizer.php:855
+#: inc/customizer.php:854
 msgid "Footer Background Color"
 msgstr "Footer Hintergrundfarbe"
 
-#: inc/customizer.php:867
+#: inc/customizer.php:866
 msgid "Footer Text Color"
 msgstr "Footer Textfarbe"
 
-#: inc/customizer.php:879
+#: inc/customizer.php:878
 msgid "Footer Link Color"
 msgstr "Footer Linkfarbe"
 
-#: inc/customizer.php:891
+#: inc/customizer.php:890
 msgid "Footer Link Hover Color"
 msgstr "Footer Link-Hover-Farbe"
 
-#: inc/customizer.php:1046
+#: inc/customizer.php:1045
 msgid "Social Media Icons"
 msgstr "Social Media Icons"
 
-#: inc/customizer.php:1118 inc/customizer.php:1127
+#: inc/customizer.php:1117 inc/customizer.php:1126
 #, php-format
 msgid "%s icon"
 msgstr "%s icon"
@@ -529,15 +527,15 @@ msgstr "Tags"
 msgid "Featured"
 msgstr "Empfohlen"
 
-#: inc/template-tags.php:574
+#: inc/template-tags.php:568
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: inc/template-tags.php:578 inc/template-tags.php:606
+#: inc/template-tags.php:572 inc/template-tags.php:600
 msgid "Page"
 msgstr "Seite"
 
-#: inc/template-tags.php:635
+#: inc/template-tags.php:629
 #, php-format
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "<span class=\"screen-reader-text\">&#8222;%s&#8220;</span> bearbeiten"
@@ -563,7 +561,7 @@ msgstr "Limitiere Archive"
 #: inc/widgets/class.QuicksandWidgetArchives.php:100
 #: inc/widgets/class.QuicksandWidgetCategories.php:100
 msgid "Enable Posts Count"
-msgstr "Zähler einschalten"
+msgstr "Zähler anzeigen"
 
 #: inc/widgets/class.QuicksandWidgetCategories.php:10
 msgid "Quicksand Categories"
@@ -636,6 +634,12 @@ msgstr ""
 #: template-parts/navigation-primary.php:40
 msgid "Search"
 msgstr "Suche"
+
+#~ msgid "Is only shown on front-page"
+#~ msgstr "Wird nur auf der Front-Seite angezeigt"
+
+#~ msgid "... and set the border-width higher than 1"
+#~ msgstr "… uns setze die Rahmenbreite höher als 1"
 
 #~ msgid "Slider settings"
 #~ msgstr "Slider Einstellungen"
