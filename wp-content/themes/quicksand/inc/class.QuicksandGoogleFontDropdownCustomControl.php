@@ -32,7 +32,7 @@ if (class_exists('WP_Customize_Control')) {
 
         public function get_google_fonts() {
             $key = urlencode(get_theme_mod('qs_content_google_api_key', NULL));
-            if (!isset($key)) {
+            if (empty($key)) {
                 return NULL;
             }
             $googleApi = 'https://www.googleapis.com/webfonts/v1/webfonts?sort=alpha&key=' . $key;
