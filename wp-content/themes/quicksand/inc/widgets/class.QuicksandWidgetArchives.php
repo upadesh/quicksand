@@ -74,7 +74,7 @@ class QuicksandWidgetArchives extends WP_Widget {
         if (!isset($instance['limit']))
             $instance['limit'] = NULL;
         if (!isset($instance['enable_count']))
-            $instance['enable_count'] = TRUE;
+            $instance['enable_count'] = FALSE;
         ?>
 
         <p>
