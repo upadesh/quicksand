@@ -3,7 +3,7 @@
 Theme Name: Quicksand
 Theme URI: http://cafe-serendipity.com
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog
-Version: 0.6.1
+Version: 0.6.2
 Tested up to: WP 4.7
 Requires at least: 4.6
 Author: Cafe Serendipity - Andreas Stephan
@@ -15,7 +15,7 @@ Here is a short description of the plugin.
 
 == Description ==
 
-Quicksand comes with 3 ready-to-use color-schemes, one with rounded, two with cornered boxes. Its responsive design is based on Bootstrap4, so your page will always look fine on any device. The theme is highly configurable, so you can easily adjust it to your needs, by using the theme-options inside your customizer.  Choose between masonry- and normal-, fullwidth- or boxed-layout, none, one or two sidebars and there were also added two better looking archive- & category-widgets. Quicksand also comes with a social-icon-integration, by using the fantastic FontAwesome image-library. You are able to apply Google-Fonts, galleries can be displayed by the stunning Lightgallery-plugin and if you feel to use a slider on your frontpage, no worries, Flexslider is integrated.  For the nerds of you, there are also sass- and grunt files included.
+Quicksand comes with 3 ready-to-use color-schemes, one with rounded, two with cornered boxes. Its responsive design is based on Bootstrap 4, so your page will always look fine on any device. The theme is highly configurable, so you can easily adjust it to your needs, by using the theme-options inside your customizer.  Choose between masonry- and normal-, fullwidth- or boxed-layout, none, one or two sidebars and there were also added two better looking archive- & category-widgets. Quicksand also comes with a social-icon-integration, by using the fantastic FontAwesome image-library. You are able to apply Google-Fonts, galleries can be displayed by the stunning Lightgallery-plugin and if you feel to use a slider on your frontpage, no worries, Flexslider is integrated.  For the nerds of you, there are also sass- and grunt files included.
 
 == Installation ==
 
