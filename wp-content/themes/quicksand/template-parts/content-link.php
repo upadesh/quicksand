@@ -8,7 +8,13 @@
     <?php quicksand_entry_meta(); ?>
 
     <!--post-content--> 
-    <?php quicksand_the_entry_content(); ?>  
+    <?php  
+    if (!is_singular()) {
+        quicksand_entry_excerpt();
+    } else { 
+        quicksand_the_entry_content(); 
+    } 
+    ?>  
     
     <!--post-tags-->
     <?php quicksand_entry_tags(); ?>  

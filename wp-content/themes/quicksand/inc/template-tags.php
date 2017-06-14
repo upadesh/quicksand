@@ -544,22 +544,6 @@ endif;
 
 
 
-if (!function_exists('quicksand_the_entry_content_gallery')) :
-
-    /**
-     * outputs gallery-content 
-     * 
-     * @param type $class
-     */
-    function quicksand_the_entry_content_gallery($class = 'entry-content') {
-        add_filter('the_content', 'quicksand_remove_shortcode_from_content');
-        quicksand_the_entry_content();
-        remove_filter('the_content', 'quicksand_remove_shortcode_from_content');
-    }
-
-endif;
-
-
 if (!function_exists('quicksand_paginated_posts_paginator')) :
 
     /**

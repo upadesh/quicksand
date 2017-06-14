@@ -24,8 +24,7 @@
     <!--post-content--> 
 <?php
 if (!is_singular()) {
-    // remove_shortcode_from_content
-    quicksand_the_entry_content_gallery();
+    quicksand_entry_excerpt();
 } else {
     quicksand_the_entry_content();
 }
