@@ -518,12 +518,18 @@ if (!function_exists('quicksand_the_entry_content_video')) :
         ?>   
         <!--quicksand-entry-content-video-->
         <div class="card-block quicksand-entry-content-video <?php echo $class; ?>"> 
-            <p class="card-text"><?php
-                // get rid of embedded objects/videos
-                $content = is_singular() ? get_the_content() : get_the_excerpt();
-                $content = preg_replace("/<embed[^>]+>/i", "", $content, 1);
-                $pattern = "/(?i)\b((?:https?:\/\/|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»\"\"\'\']))/";
-                $content = preg_replace($pattern, '', $content);
+            <p class="card-text">
+                <?php
+                global $post;
+
+                $hook = is_singular() ? 'the_content' : 'the_excerpt';
+                if (is_singular()) { 
+                    // get rid of embedded objects/videos
+                    $content = apply_filters('the_content', $post->post_content);
+                    $content = preg_replace("/<div\sclass\=\"video\">(.*?)<\/div>/i", "", $content, 1);
+                } else {
+                    $content = apply_filters('the_excerpt', get_the_excerpt());
+                }
 
                 echo $content;
                 ?></p>
@@ -780,6 +786,12 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
+
+
+
+
 
 
 
