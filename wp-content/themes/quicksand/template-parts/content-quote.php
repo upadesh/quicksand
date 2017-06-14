@@ -3,12 +3,12 @@
 
     <?php 
 
+    quicksand_entry_title_postformat_quote(); 
+    
     if (!is_singular()) {
-        quicksand_entry_title();
         quicksand_entry_meta();
         quicksand_entry_list_content_postformat_quote();
     } else { 
-        quicksand_entry_title();
         quicksand_entry_meta();
         quicksand_the_entry_content();
         quicksand_entry_tags();

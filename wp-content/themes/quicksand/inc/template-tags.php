@@ -483,6 +483,44 @@ if (!function_exists('quicksand_entry_title_postformat_video')) :
 endif;
 
 
+
+if (!function_exists('quicksand_entry_title_postformat_quote')) :
+
+    /**
+     * Displays the title for post-format: video 
+     *
+     * Create your own quicksand_entry_title_postformat_video() function to override in a child theme.
+     *
+     * @since Quicksand 0.2.1
+     *
+     * @param string $class Optional. Class string of the header element.  
+     */
+    function quicksand_entry_title_postformat_quote($class = 'entry-title') {
+        $class = esc_attr($class);
+        ?> 
+
+        <!-- entry-header --> 
+        <header class="card-header entry-header">
+            <!--stick post-->
+            <?php if (is_sticky() && is_home() && !is_paged()) : ?>
+                <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
+            <?php endif; ?>
+
+            <div class="post-video">  
+                <h2 class="card-title <?php echo $class; ?>">
+                    <a href="<?php echo esc_attr(get_the_permalink()); ?>"><i class="fa fa-quote-right" aria-hidden="true"></i> <?php the_title(); ?></a> 
+                </h2> 
+            </div><!-- .post-video -->
+        </header><!-- .entry-header --> 
+        <?php
+    }
+
+endif;
+
+
+
+
+
 if (!function_exists('quicksand_the_entry_content')) :
 
     /**
