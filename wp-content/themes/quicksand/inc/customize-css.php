@@ -254,7 +254,7 @@ if (!function_exists('quicksand_customizer_css')) :
 
             /*content: postformats*/
             /*quote*/ 
-            .site-main-container .post-quote  p { 
+            .site-main-container .post-quote blockquote { 
                 color: <?php echo get_theme_mod('qs_content_secondary_text_color', $colorScheme['colors']['qs_content_secondary_text_color']); ?>;
             } 
 
