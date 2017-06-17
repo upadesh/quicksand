@@ -300,32 +300,38 @@ endif;
 
 
 
-if (!function_exists('quicksand_entry_header_postformat_quote')) :
+if (!function_exists('quicksand_the_entry_content_quote')) :
 
     /**
      * Displays the content of a quote-post in non-singular-context
      *
-     * Create your own quicksand_entry_list_content_postformat_quote() function to override in a child theme.
+     * Create your own quicksand_the_entry_content_quote() function to override in a child theme.
      *
      * @since Quicksand 0.2.1
      *
      * @param string $class Optional. Class string of the header element.  
      */
-    function quicksand_entry_list_content_postformat_quote($class = 'entry-title') {
-        $class = esc_attr($class);
+    function quicksand_the_entry_content_quote($class = 'entry-content') {
         ?> 
-
         <!-- entry-header --> 
-        <header class="card-block  <?php echo esc_attr($class); ?>">
-            <!--stick post-->
+        <div class="card-block  <?php echo esc_attr($class); ?>">
             <?php if (is_sticky() && is_home() && !is_paged()) : ?>
+                <!--stick post-->
                 <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
             <?php endif; ?>
 
-            <div class="post-quote">      
-                <?php esc_html(the_content()); ?> 
+            <div class="quote post-quote">   
+                <?php
+                $content = trim(get_the_content());
+                if (!$content == "") {
+                    preg_match('/<blockquote.*>(.*?)<\/blockquote>/', $content, $match);
+                    if ($match) {
+                        echo '<blockquote class="post-quote">' . esc_html($match[1]) . '</blockquote>';
+                    }
+                }
+                ?> 
             </div><!-- .post-quote --> 
-        </header><!-- .entry-header -->  
+        </div><!-- .entry-header -->  
 
         <?php
     }
@@ -371,7 +377,7 @@ if (!function_exists('quicksand_entry_header_postformat_gallery')) :
                     <?php
                     // Loop through each image in each gallery
                     foreach ($images as $image_url) {
-                        echo '<li>' . '<img src="' . $image_url . '">' . '</li>';
+                        echo '<li>' . '<img src="' . esc_url($image_url) . '">' . '</li>';
                     }
                     ?> 
                 </ul>
@@ -441,7 +447,15 @@ if (!function_exists('quicksand_entry_header_postformat_video')) :
         <!-- entry-header --> 
         <header class="card-header entry-header <?php echo esc_attr($class); ?>"> 
             <div class="video post-video">
-                <?php echo $embeds[0]; ?>
+                <?php
+                echo wp_kses($embeds[0], array(
+                    'iframe' => array(
+                        'src' => array(),
+                        'frameborder' => array(),
+                        'allowfullscreen' => array()
+                    )
+                ));
+                ?>
             </div><!-- .post-video -->  
         </header><!-- .entry-header --> 
         <?php
@@ -561,7 +575,7 @@ if (!function_exists('quicksand_the_entry_content_video')) :
                 global $post;
 
                 $hook = is_singular() ? 'the_content' : 'the_excerpt';
-                if (is_singular()) { 
+                if (is_singular()) {
                     // get rid of embedded objects/videos
                     $content = apply_filters('the_content', $post->post_content);
                     $content = preg_replace("/<div\sclass\=\"video\">(.*?)<\/div>/i", "", $content, 1);
@@ -808,6 +822,16 @@ if (!function_exists('quicksand_the_custom_logo')) :
             }
         endif;
     }
+
+
+
+
+
+
+
+
+
+
 
 
 
