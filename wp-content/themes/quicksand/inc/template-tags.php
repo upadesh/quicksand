@@ -323,10 +323,10 @@ if (!function_exists('quicksand_the_entry_content_quote')) :
             <div class="quote post-quote">   
                 <?php
                 $content = trim(get_the_content());
-                if (!$content == "") {
-                    preg_match('/<blockquote.*>(.*?)<\/blockquote>/', $content, $match);
-                    if ($match) {
-                        echo '<blockquote class="post-quote">' . esc_html($match[1]) . '</blockquote>';
+                if (!empty($content)) {
+                    preg_match_all('/<blockquote.*?>(.*?)<\/blockquote>/is', $content, $match); 
+                    if (isset($match[0][0])) {
+                        echo $match[0][0];
                     }
                 }
                 ?> 
