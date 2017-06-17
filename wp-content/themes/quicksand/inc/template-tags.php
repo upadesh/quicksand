@@ -326,7 +326,7 @@ if (!function_exists('quicksand_the_entry_content_quote')) :
                 if (!empty($content)) {
                     preg_match_all('/<blockquote.*?>(.*?)<\/blockquote>/is', $content, $match); 
                     if (isset($match[0][0])) {
-                        echo $match[0][0];
+                        echo wp_kses_post($match[0][0]);
                     }
                 }
                 ?> 
