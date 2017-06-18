@@ -547,7 +547,7 @@ if (!function_exists('quicksand_the_entry_content')) :
         <!--quicksand-entry-content-default-->
         <div class="card-block quicksand-default-entry-content <?php echo $class; ?>"> 
             <div class="card-text">
-                <?php echo the_content(); ?>
+                <?php  the_content();  ?>
             </div>
         </div>  
 
