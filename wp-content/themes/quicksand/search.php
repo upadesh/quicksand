@@ -28,7 +28,7 @@ get_header();
 
             <div class="card quicksand-meta-list-header"> 
                 <div class="card-block">
-                    <h4 class="card-title quicksand_search_title"><?php _e('Search Results for:', 'quicksand'); ?></h4> 
+                    <h4 class="card-title quicksand_search_title"><?php esc_html_e('Search Results for:', 'quicksand'); ?></h4> 
                     <h6 class="card-subtitle text-muted"><span><?php echo esc_html(get_search_query())  ?></span></h6>
                 </div>
             </div> 
