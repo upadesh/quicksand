@@ -49,13 +49,13 @@ class QuicksandNavwalker extends Walker_Nav_Menu {
             $output .= $indent . '<li role="presentation" class="dropdown-header">' . esc_attr($item->title);
         } else if (strcasecmp($item->attr_title, 'disabled') == 0) {
             $output .= $indent . '<li role="presentation" class="disabled"><a href="#">' . esc_attr($item->title) . '</a>';
-        } else { 
+        } else {
 ////
 //            $class_names = $value = '';
 //
 //            $classes = empty( $item->classes ) ? array() : (array) $item->classes;
 //            $classes[] = 'menu-item-' . $item->ID; 
-            
+
             $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
 
             if ($args->has_children)
@@ -213,7 +213,7 @@ class QuicksandNavwalker extends Walker_Nav_Menu {
             if ($container)
                 $fb_output .= '</' . $container . '>';
 
-            echo $fb_output;
+            echo wp_kses_post($fb_output);
         }
     }
 
