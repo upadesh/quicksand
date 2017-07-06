@@ -27,14 +27,14 @@ if (post_password_required()) {
         $comments_number = get_comments_number();
         if (1 === $comments_number) {
             /* translators: %s: post title */
-            printf(_x('One thought on &ldquo;%s&rdquo;', 'comments title', 'quicksand'), get_the_title());
+            printf(esc_html_x('One thought on &ldquo;%s&rdquo;', 'comments title', 'quicksand'), get_the_title());
         } else {
-            printf(
+            echo esc_html(sprintf(
                     /* translators: 1: number of comments, 2: post title */
-                    _nx(
-                            '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comments_number, 'comments title', 'quicksand'
-                    ), number_format_i18n($comments_number), get_the_title()
-            );
+                    _n(
+                            '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comments_number,  'quicksand'
+                    ), $comments_number, get_the_title()
+            ));
         }
         ?>
     </div>
@@ -69,7 +69,7 @@ if (post_password_required()) {
         // If comments are closed and there are comments, let's leave a little note, shall we?
         if (!comments_open() && get_comments_number() && post_type_supports(get_post_type(), 'comments')) :
             ?>
-            <p class="card-text no-comments"><?php _e('Comments are closed.', 'quicksand'); ?></p>
+            <p class="card-text no-comments"><?php esc_html_e('Comments are closed.', 'quicksand'); ?></p>
         <?php endif; ?> 
 
         <?php

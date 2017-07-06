@@ -28,7 +28,7 @@
         </div>
 
 
-        <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', 'quicksand'); ?></a> 
+        <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'quicksand'); ?></a> 
 
         <!-- site-header --> 
         <header id="masthead" class="site-header <?php echo esc_attr(get_theme_mod('qs_header_fullwidth', quicksand_get_color_scheme()['settings']['qs_header_fullwidth']) ? 'container-fluid' : 'container'); ?>"> 
