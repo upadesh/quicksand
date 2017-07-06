@@ -35,7 +35,12 @@ get_header();
 
         <?php
         if (have_posts()) :
-            echo the_archive_title('<article class="card quicksand-meta-list-header"><div class="card-block"><h4 class="card-title quicksand_archive_title">', '</h4></article>');
+            $theArchiveTitle = the_archive_title('<article class="card quicksand-meta-list-header"><div class="card-block"><h4 class="card-title quicksand_archive_title">', '</h4></article>');
+            echo wp_kses($theArchiveTitle, array(
+                'article' => array(),
+                'div' => array(),
+                'h4' => array()
+            ));
             ?>
 
             <?php
