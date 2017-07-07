@@ -54,7 +54,7 @@ function quicksand_customize_register($wp_customize) {
         'priority' => 10,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __('Theme Options', 'quicksand')
+        'title' => esc_html__('Theme Options', 'quicksand')
     ));
 
 
@@ -64,7 +64,7 @@ function quicksand_customize_register($wp_customize) {
      * @hint always add setting to color-scheme-control.js, also the non-colored ones 
      */
     $wp_customize->add_section('quicksand_color_schemes', array(
-        'title' => __('Color Schemes', 'quicksand'),
+        'title' => esc_html__('Color Schemes', 'quicksand'),
         'priority' => 10,
         'panel' => 'quicksand_main_options',
     ));
@@ -76,7 +76,7 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('color_scheme', array(
-        'label' => __('Color Schemes', 'quicksand'),
+        'label' => esc_html__('Color Schemes', 'quicksand'),
         'section' => 'quicksand_color_schemes',
         'type' => 'select',
         'choices' => quicksand_get_color_scheme_choices(),
@@ -87,7 +87,7 @@ function quicksand_customize_register($wp_customize) {
 
     /* Section: Navigation */
     $wp_customize->add_section('quicksand_nav', array(
-        'title' => __('Navigation', 'quicksand'),
+        'title' => esc_html__('Navigation', 'quicksand'),
         'priority' => 10,
         'panel' => 'quicksand_main_options',
     ));
@@ -100,10 +100,10 @@ function quicksand_customize_register($wp_customize) {
     ));
     $wp_customize->add_control(new WP_Customize_Control(
             $wp_customize, 'qs_nav_logo_text', array(
-        'label' => __('Logo Text', 'quicksand'),
+        'label' => esc_html__('Logo Text', 'quicksand'),
         'section' => 'quicksand_nav',
         'settings' => 'qs_nav_logo_text',
-        'description' => __('Appears when no logo is selected', 'quicksand'),
+        'description' => esc_html__('Appears when no logo is selected', 'quicksand'),
     )));
 
     // fullwidth
@@ -115,7 +115,7 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('qs_nav_fullwidth', array(
-        'label' => __("Navigation Fullwidth", 'quicksand'),
+        'label' => esc_html__("Navigation Fullwidth", 'quicksand'),
         'section' => 'quicksand_nav',
         'type' => 'checkbox',
         'settings' => 'qs_nav_fullwidth',
@@ -129,7 +129,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_nav_link_color', array(
-        'label' => __('Navbar Link Color', 'quicksand'),
+        'label' => esc_html__('Navbar Link Color', 'quicksand'),
         'section' => 'quicksand_nav',
         'settings' => 'qs_nav_link_color'
     )));
@@ -141,7 +141,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_nav_link_hover_background_color', array(
-        'label' => __('Navbar Link Hover Background Color', 'quicksand'),
+        'label' => esc_html__('Navbar Link Hover Background Color', 'quicksand'),
         'section' => 'quicksand_nav',
         'settings' => 'qs_nav_link_hover_background_color'
     )));
@@ -154,7 +154,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_nav_background_color', array(
-        'label' => __('Navbar Background Color', 'quicksand'),
+        'label' => esc_html__('Navbar Background Color', 'quicksand'),
         'section' => 'quicksand_nav',
         'settings' => 'qs_nav_background_color'
     )));
@@ -163,7 +163,7 @@ function quicksand_customize_register($wp_customize) {
 
     /* Section: Header */
     $wp_customize->add_section('quicksand_header', array(
-        'title' => __('Header', 'quicksand'),
+        'title' => esc_html__('Header', 'quicksand'),
         'priority' => 20,
         'panel' => 'quicksand_main_options',
 //        'description' => ''
@@ -179,11 +179,11 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('qs_header_enabled', array(
-        'label' => __("Enable Header", 'quicksand'),
+        'label' => esc_html__("Enable Header", 'quicksand'),
         'section' => 'quicksand_header',
         'type' => 'checkbox',
         'settings' => 'qs_header_enabled',
-        'description' => __('Note that all options in here do only work when \'Display Site Title and Tagline\' in \'Site Identity\' is enabled.', 'quicksand'),
+        'description' => esc_html__('Note that all options in here do only work when \'Display Site Title and Tagline\' in \'Site Identity\' is enabled.', 'quicksand'),
         'priority' => 10,
     ));
 
@@ -196,7 +196,7 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('qs_header_hide_when_slider_enabled', array(
-        'label' => __("Hide when Slider is enabled", 'quicksand'),
+        'label' => esc_html__("Hide when Slider is enabled", 'quicksand'),
         'section' => 'quicksand_header',
         'type' => 'checkbox',
         'settings' => 'qs_header_hide_when_slider_enabled',
@@ -212,7 +212,7 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('qs_header_show_front', array(
-        'label' => __("Show only on front-page", 'quicksand'),
+        'label' => esc_html__("Show only on front-page", 'quicksand'),
         'section' => 'quicksand_header',
         'type' => 'checkbox',
         'settings' => 'qs_header_show_front',
@@ -228,7 +228,7 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('qs_header_fullwidth', array(
-        'label' => __("Header Fullwidth", 'quicksand'),
+        'label' => esc_html__("Header Fullwidth", 'quicksand'),
         'section' => 'quicksand_header',
         'type' => 'checkbox',
         'settings' => 'qs_header_fullwidth',
@@ -243,7 +243,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_header_background_color', array(
-        'label' => __('Header Background Color', 'quicksand'),
+        'label' => esc_html__('Header Background Color', 'quicksand'),
         'section' => 'quicksand_header',
         'priority' => 50,
         'settings' => 'qs_header_background_color'
@@ -256,7 +256,7 @@ function quicksand_customize_register($wp_customize) {
      *  Section: Slider  
      */
     $wp_customize->add_section('quicksand_slider_section', array(
-        'title' => __('Slider', 'quicksand'),
+        'title' => esc_html__('Slider', 'quicksand'),
         'priority' => 10,
         'panel' => 'quicksand_main_options',
     ));
@@ -271,11 +271,11 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('qs_slider_enabled', array(
-        'label' => __("Enable Slider", 'quicksand'),
+        'label' => esc_html__("Enable Slider", 'quicksand'),
         'section' => 'quicksand_slider_section',
         'type' => 'checkbox',
         'settings' => 'qs_slider_enabled',
-        'description' => __('Is only shown on front-page. You also have to select a category below.', 'quicksand'),
+        'description' => esc_html__('Is only shown on front-page. You also have to select a category below.', 'quicksand'),
         'priority' => 10,
     ));
 
@@ -288,7 +288,7 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('qs_slider_fullwidth', array(
-        'label' => __("Slider Fullwidth", 'quicksand'),
+        'label' => esc_html__("Slider Fullwidth", 'quicksand'),
         'section' => 'quicksand_slider_section',
         'type' => 'checkbox',
         'settings' => 'qs_slider_fullwidth',
@@ -304,7 +304,7 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('qs_slider_hide_mobile_mode', array(
-        'label' => __("Hide in mobile-mode", 'quicksand'),
+        'label' => esc_html__("Hide in mobile-mode", 'quicksand'),
         'section' => 'quicksand_slider_section',
         'type' => 'checkbox',
         'settings' => 'qs_slider_hide_mobile_mode',
@@ -324,7 +324,7 @@ function quicksand_customize_register($wp_customize) {
         'settings' => 'qs_slider_category',
         'section' => 'quicksand_slider_section',
         'priority' => 30,
-        'description' => __('Only posts including a featured image will be exposed', 'quicksand'),
+        'description' => esc_html__('Only posts including a featured image will be exposed', 'quicksand'),
     )));
 
     // count slides
@@ -334,7 +334,7 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'slider_count', array(
-        'label' => __('Number of posts', 'quicksand'),
+        'label' => esc_html__('Number of posts', 'quicksand'),
         'section' => 'quicksand_slider_section',
         'settings' => 'qs_slider_count',
         'priority' => 40,
@@ -353,8 +353,8 @@ function quicksand_customize_register($wp_customize) {
         'type' => 'range',
         'priority' => 100,
         'section' => 'quicksand_slider_section',
-        'label' => __('Height', 'quicksand'),
-        'description' => __('Set the height of the slider', 'quicksand'),
+        'label' => esc_html__('Height', 'quicksand'),
+        'description' => esc_html__('Set the height of the slider', 'quicksand'),
         'input_attrs' => array(
             'min' => 1,
             'max' => 100,
@@ -376,8 +376,8 @@ function quicksand_customize_register($wp_customize) {
         'type' => 'range',
         'priority' => 120,
         'section' => 'quicksand_slider_section',
-        'label' => __('Height', 'quicksand'),
-        'description' => __('Margin to the top', 'quicksand'),
+        'label' => esc_html__('Height', 'quicksand'),
+        'description' => esc_html__('Margin to the top', 'quicksand'),
         'input_attrs' => array(
             'min' => 0,
             'max' => 10,
@@ -394,7 +394,7 @@ function quicksand_customize_register($wp_customize) {
      * Section: Content 
      */
     $wp_customize->add_section('quicksand_content', array(
-        'title' => __('Content', 'quicksand'),
+        'title' => esc_html__('Content', 'quicksand'),
         'priority' => 30,
         'panel' => 'quicksand_main_options',
     ));
@@ -409,7 +409,7 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('qs_content_fullwidth', array(
-        'label' => __("Content Fullwidth", 'quicksand'),
+        'label' => esc_html__("Content Fullwidth", 'quicksand'),
         'section' => 'quicksand_content',
         'type' => 'checkbox',
         'settings' => 'qs_content_fullwidth',
@@ -425,11 +425,11 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('qs_content_masonry', array(
-        'label' => __("List-Views Masonry-like", 'quicksand'),
+        'label' => esc_html__("List-Views Masonry-like", 'quicksand'),
         'section' => 'quicksand_content',
         'type' => 'checkbox',
         'settings' => 'qs_content_masonry',
-        'description' => __('Shown when there are more than 2 posts', 'quicksand'),
+        'description' => esc_html__('Shown when there are more than 2 posts', 'quicksand'),
         'priority' => 10,
     ));
 
@@ -443,7 +443,7 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('qs_content_use_lightgallery', array(
-        'label' => __("Use LightGallery", 'quicksand'),
+        'label' => esc_html__("Use LightGallery", 'quicksand'),
         'section' => 'quicksand_content',
         'type' => 'checkbox',
         'settings' => 'qs_content_use_lightgallery',
@@ -471,11 +471,11 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'content_google_api_key', array(
-        'label' => __('Google API Key', 'quicksand'),
+        'label' => esc_html__('Google API Key', 'quicksand'),
         'section' => 'quicksand_content',
         'settings' => 'qs_content_google_api_key',
         'priority' => 10,
-        'description' => __('You need an API-Key to use Google Fonts. Create one <a href="https://console.developers.google.com/" target="_blank">here</a>, save it & reload the page.', 'quicksand'),
+        'description' => esc_html__('You need an API-Key to use Google Fonts. Create one <a href="https://console.developers.google.com/" target="_blank">here</a>, save it & reload the page.', 'quicksand'),
         'type' => 'text',
     )));
 
@@ -488,7 +488,7 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'content_font_size', array(
-        'label' => __('Font Size', 'quicksand'),
+        'label' => esc_html__('Font Size', 'quicksand'),
         'section' => 'quicksand_content',
         'settings' => 'qs_content_font_size',
         'priority' => 10,
@@ -505,12 +505,12 @@ function quicksand_customize_register($wp_customize) {
     $wp_customize->add_control(
             new QuicksandCustomizeControlCheckboxMultiple($wp_customize, 'qs_content_show_meta', array(
         'section' => 'quicksand_content',
-        'label' => __('Show Meta', 'quicksand'), 'choices' => array(
-            'date' => __('Date', 'quicksand'),
-            'author' => __('Author', 'quicksand'),
-            'post-format' => __('Post-Format', 'quicksand'),
-            'taxonomies' => __('Taxonomies', 'quicksand'),
-            'comments' => __('Comments', 'quicksand')
+        'label' => esc_html__('Show Meta', 'quicksand'), 'choices' => array(
+            'date' => esc_html__('Date', 'quicksand'),
+            'author' => esc_html__('Author', 'quicksand'),
+            'post-format' => esc_html__('Post-Format', 'quicksand'),
+            'taxonomies' => esc_html__('Taxonomies', 'quicksand'),
+            'comments' => esc_html__('Comments', 'quicksand')
         )))
     );
 
@@ -521,7 +521,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_background_color', array(
-        'label' => __('Content Background Color', 'quicksand'),
+        'label' => esc_html__('Content Background Color', 'quicksand'),
         'section' => 'quicksand_content',
         'priority' => 20,
         'settings' => 'qs_content_background_color'
@@ -537,7 +537,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_link_color', array(
-        'label' => __('Content Link Color', 'quicksand'),
+        'label' => esc_html__('Content Link Color', 'quicksand'),
         'section' => 'quicksand_content',
         'priority' => 20,
         'settings' => 'qs_content_link_color'
@@ -551,7 +551,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_text_color', array(
-        'label' => __('Content Text Color', 'quicksand'),
+        'label' => esc_html__('Content Text Color', 'quicksand'),
         'section' => 'quicksand_content',
         'priority' => 20,
         'settings' => 'qs_content_text_color'
@@ -564,7 +564,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_secondary_text_color', array(
-        'label' => __('Secondary Text Color', 'quicksand'),
+        'label' => esc_html__('Secondary Text Color', 'quicksand'),
         'section' => 'quicksand_content',
         'priority' => 20,
         'settings' => 'qs_content_secondary_text_color'
@@ -577,7 +577,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_title_bg_color', array(
-        'label' => __('Title Background Color', 'quicksand'),
+        'label' => esc_html__('Title Background Color', 'quicksand'),
         'section' => 'quicksand_content',
         'priority' => 20,
         'settings' => 'qs_content_title_bg_color'
@@ -590,7 +590,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_post_bg_color', array(
-        'label' => __('Post Background Color', 'quicksand'),
+        'label' => esc_html__('Post Background Color', 'quicksand'),
         'section' => 'quicksand_content',
         'priority' => 20,
         'settings' => 'qs_content_post_bg_color'
@@ -603,7 +603,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_post_border_color', array(
-        'label' => __('Post Border Color', 'quicksand'),
+        'label' => esc_html__('Post Border Color', 'quicksand'),
         'section' => 'quicksand_content',
         'priority' => 20,
         'settings' => 'qs_content_post_border_color'
@@ -613,7 +613,7 @@ function quicksand_customize_register($wp_customize) {
     // === buttons === 
     /* Section: Content */
     $wp_customize->add_section('quicksand_buttons', array(
-        'title' => __('Buttons', 'quicksand'),
+        'title' => esc_html__('Buttons', 'quicksand'),
         'priority' => 30,
         'panel' => 'quicksand_main_options',
     ));
@@ -625,7 +625,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_button_color_primary', array(
-        'label' => __('Button Primary Color', 'quicksand'),
+        'label' => esc_html__('Button Primary Color', 'quicksand'),
         'section' => 'quicksand_buttons',
         'priority' => 20,
         'settings' => 'qs_button_color_primary'
@@ -639,7 +639,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_button_color_secondary', array(
-        'label' => __('Button Secondary Color', 'quicksand'),
+        'label' => esc_html__('Button Secondary Color', 'quicksand'),
         'section' => 'quicksand_buttons',
         'priority' => 20,
         'settings' => 'qs_button_color_secondary'
@@ -654,7 +654,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_tag_background_color', array(
-        'label' => __('Tag Background Color', 'quicksand'),
+        'label' => esc_html__('Tag Background Color', 'quicksand'),
         'section' => 'quicksand_content',
         'priority' => 20,
         'settings' => 'qs_content_tag_background_color'
@@ -667,7 +667,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_content_tag_font_color', array(
-        'label' => __('Tag Font Color', 'quicksand'),
+        'label' => esc_html__('Tag Font Color', 'quicksand'),
         'section' => 'quicksand_content',
         'priority' => 20,
         'settings' => 'qs_content_tag_font_color'
@@ -679,7 +679,7 @@ function quicksand_customize_register($wp_customize) {
      *  Section: Biography 
      */
     $wp_customize->add_section('quicksand_biography', array(
-        'title' => __('Biography', 'quicksand'),
+        'title' => esc_html__('Biography', 'quicksand'),
         'priority' => 10,
         'panel' => 'quicksand_main_options',
     ));
@@ -693,7 +693,7 @@ function quicksand_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('qs_biography_show', array(
-        'label' => __("Show Author Biography", 'quicksand'),
+        'label' => esc_html__("Show Author Biography", 'quicksand'),
         'section' => 'quicksand_biography',
         'type' => 'checkbox',
         'settings' => 'qs_biography_show',
@@ -707,7 +707,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_biography_background_color', array(
-        'label' => __('Background Color', 'quicksand'),
+        'label' => esc_html__('Background Color', 'quicksand'),
         'section' => 'quicksand_biography',
         'priority' => 20,
         'settings' => 'qs_biography_background_color'
@@ -720,7 +720,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_biography_font_color', array(
-        'label' => __('Font Color', 'quicksand'),
+        'label' => esc_html__('Font Color', 'quicksand'),
         'section' => 'quicksand_biography',
         'priority' => 20,
         'settings' => 'qs_biography_font_color'
@@ -732,7 +732,7 @@ function quicksand_customize_register($wp_customize) {
      * Section: Sidebar 
      */
     $wp_customize->add_section('quicksand_sidebar', array(
-        'title' => __('Sidebar', 'quicksand'),
+        'title' => esc_html__('Sidebar', 'quicksand'),
         'priority' => 30,
         'panel' => 'quicksand_main_options',
     ));
@@ -747,14 +747,14 @@ function quicksand_customize_register($wp_customize) {
 
  
     $wp_customize->add_control('qs_sidebar_number', array(
-        'label' => __('Sidebar Numbers', 'quicksand'),
+        'label' => esc_html__('Sidebar Numbers', 'quicksand'),
         'section' => 'quicksand_sidebar',
         'type' => 'select',
         'choices' => array(
-            'no_sidebar' => __('No Sidebar', 'quicksand'),
-            'right_sidebar' => __('Right Sidebar', 'quicksand'),
-            'left_sidebar' => __('Left Sidebar', 'quicksand'),
-            'left_right_sidebar' => __('Left & right Sidebar', 'quicksand'),
+            'no_sidebar' => esc_html__('No Sidebar', 'quicksand'),
+            'right_sidebar' => esc_html__('Right Sidebar', 'quicksand'),
+            'left_sidebar' => esc_html__('Left Sidebar', 'quicksand'),
+            'left_right_sidebar' => esc_html__('Left & right Sidebar', 'quicksand'),
         ),
         'priority' => 10,
     ));
@@ -767,7 +767,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_background_color', array(
-        'label' => __('Widget Background Color', 'quicksand'),
+        'label' => esc_html__('Widget Background Color', 'quicksand'),
         'section' => 'quicksand_sidebar',
         'settings' => 'qs_sidebar_background_color'
     )));
@@ -779,7 +779,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_text_color', array(
-        'label' => __('Widget Text Color', 'quicksand'),
+        'label' => esc_html__('Widget Text Color', 'quicksand'),
         'section' => 'quicksand_sidebar',
         'settings' => 'qs_sidebar_text_color'
     )));
@@ -791,7 +791,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_link_color', array(
-        'label' => __('Widget Link Color', 'quicksand'),
+        'label' => esc_html__('Widget Link Color', 'quicksand'),
         'section' => 'quicksand_sidebar',
         'settings' => 'qs_sidebar_link_color'
     )));
@@ -807,9 +807,9 @@ function quicksand_customize_register($wp_customize) {
     $bgColorContent = get_theme_mod('qs_content_background_color');
     $bgContent = !empty($bgColorContent) ? $bgColorContent : $colorSchemeDefault['colors']['qs_content_background_color'];
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_border_color', array(
-        'label' => __('Widget Border Color', 'quicksand'),
+        'label' => esc_html__('Widget Border Color', 'quicksand'),
         'section' => 'quicksand_sidebar',
-        'description' => sprintf(__('For a nice effect choose the same color like Content-Background (%s) ...', 'quicksand'), $bgContent),
+        'description' => sprintf(esc_html__('For a nice effect choose the same color like Content-Background (%s) ...', 'quicksand'), $bgContent),
         'settings' => 'qs_sidebar_border_color'
     )));
 
@@ -824,7 +824,7 @@ function quicksand_customize_register($wp_customize) {
         'type' => 'range',
         'priority' => 10,
         'section' => 'quicksand_sidebar',
-        'label' => __('Border width', 'quicksand'),
+        'label' => esc_html__('Border width', 'quicksand'),
         'input_attrs' => array(
             'min' => 0,
             'max' => 10,
@@ -839,7 +839,7 @@ function quicksand_customize_register($wp_customize) {
      * Section: Footer 
      */
     $wp_customize->add_section('quicksand_footer', array(
-        'title' => __('Footer', 'quicksand'),
+        'title' => esc_html__('Footer', 'quicksand'),
         'priority' => 40,
         'panel' => 'quicksand_main_options',
     ));
@@ -851,7 +851,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_footer_background_color', array(
-        'label' => __('Footer Background Color', 'quicksand'),
+        'label' => esc_html__('Footer Background Color', 'quicksand'),
         'section' => 'quicksand_footer',
         'settings' => 'qs_footer_background_color'
     )));
@@ -863,7 +863,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_footer_text_color', array(
-        'label' => __('Footer Text Color', 'quicksand'),
+        'label' => esc_html__('Footer Text Color', 'quicksand'),
         'section' => 'quicksand_footer',
         'settings' => 'qs_footer_text_color'
     )));
@@ -875,7 +875,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_footer_link_color', array(
-        'label' => __('Footer Link Color', 'quicksand'),
+        'label' => esc_html__('Footer Link Color', 'quicksand'),
         'section' => 'quicksand_footer',
         'settings' => 'qs_footer_link_color'
     )));
@@ -887,7 +887,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'quicksand_sanitize_hexcolor'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_footer_link_hover_color', array(
-        'label' => __('Footer Link Hover Color', 'quicksand'),
+        'label' => esc_html__('Footer Link Hover Color', 'quicksand'),
         'section' => 'quicksand_footer',
         'settings' => 'qs_footer_link_hover_color'
     )));
@@ -1042,7 +1042,7 @@ function quicksand_social_media_array() {
 function quicksand_add_social_sites_customizer($wp_customize) {
 
     $wp_customize->add_section('quicksand_social_settings', array(
-        'title' => __('Social Media Icons', 'quicksand'),
+        'title' => esc_html__('Social Media Icons', 'quicksand'),
         'priority' => 35,
     ));
 
@@ -1114,7 +1114,7 @@ function quicksand_social_media_icons() {
                     <a  class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url(get_theme_mod($active_site)); ?>">
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-envelope fa-stack-1x fa-inverse" title="<?php printf(__('%s icon', 'quicksand'), $active_site); ?>"></i>
+                            <i class="fa fa-envelope fa-stack-1x fa-inverse" title="<?php printf(esc_html__('%s icon', 'quicksand'), $active_site); ?>"></i>
                         </span>
                     </a>
                 </li> 
@@ -1123,7 +1123,7 @@ function quicksand_social_media_icons() {
                     <a  class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url(get_theme_mod($active_site)); ?>">
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa <?php echo esc_attr($class); ?> fa-stack-1x fa-inverse" title="<?php printf(__('%s icon', 'quicksand'), $active_site); ?>"></i>
+                            <i class="fa <?php echo esc_attr($class); ?> fa-stack-1x fa-inverse" title="<?php printf(esc_html__('%s icon', 'quicksand'), $active_site); ?>"></i>
                         </span>
                     </a>
                 </li> 
