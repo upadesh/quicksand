@@ -68,7 +68,7 @@ endif;
 if (!function_exists('quicksand_entry_tags')) :
 
     /**
-     * Prints HTML with date information for current post.
+     * Prints HTML with tag information for current post.
      *
      * Create your own quicksand_entry_tags() function to override in a child theme.
      *
@@ -80,7 +80,7 @@ if (!function_exists('quicksand_entry_tags')) :
         if (!empty($taxonomies['tags'])) {
             ?> 
             <div class="entry-footer card-footer text-muted"> 
-                <?php echo $taxonomies['tags']; ?>
+                <?php echo wp_kses_post($taxonomies['tags']); ?>
             </div>
             <?php
         }
@@ -216,7 +216,7 @@ if (!function_exists('quicksand_entry_title')) :
 
             if (is_singular()) :
                 ?>
-                <h1 class="card-title <?php echo $class; ?>"><?php the_title(); ?></h1> 
+                <h1 class="card-title <?php echo esc_attr($class); ?>"><?php the_title(); ?></h1> 
 
                 <?php
             else :
@@ -253,7 +253,7 @@ if (!function_exists('quicksand_entry_title_postformat_link')) :
             <?php endif; ?>
 
             <div class="post-link">  
-                <h2 class="card-title <?php echo $class; ?>">
+                <h2 class="card-title <?php echo esc_attr($class); ?>">
                     <a href="<?php echo get_url_in_content(get_the_content()); ?>" target="_blank"><i class="fa fa-link" aria-hidden="true"></i> <?php the_title(); ?></a> 
                 </h2> 
             </div><!-- .post-link -->
@@ -287,7 +287,7 @@ if (!function_exists('quicksand_entry_title_postformat_audio')) :
             <?php endif; ?>
 
             <div class="post-link">  
-                <h2 class="card-title <?php echo $class; ?>">
+                <h2 class="card-title <?php echo esc_attr($class); ?>">
                     <a href="<?php echo esc_attr(get_the_permalink()); ?>"><i class="fa fa-music" aria-hidden="true"></i> <?php the_title(); ?></a> 
                 </h2> 
             </div><!-- .post-link -->
@@ -411,7 +411,7 @@ if (!function_exists('quicksand_entry_title_postformat_gallery')) :
             <?php endif; ?>
 
             <div class="post-gallery">  
-                <h2 class="card-title <?php echo $class; ?>">
+                <h2 class="card-title <?php echo esc_attr($class); ?>">
                     <a href="<?php echo esc_attr(get_the_permalink()); ?>"><i class="fa fa-picture-o" aria-hidden="true"></i> <?php the_title(); ?></a> 
                 </h2> 
             </div><!-- .post-gallery -->
@@ -486,7 +486,7 @@ if (!function_exists('quicksand_entry_title_postformat_video')) :
             <?php endif; ?>
 
             <div class="post-video">  
-                <h2 class="card-title <?php echo $class; ?>">
+                <h2 class="card-title <?php echo esc_attr($class); ?>">
                     <a href="<?php echo esc_attr(get_the_permalink()); ?>"><i class="fa fa-film" aria-hidden="true"></i> <?php the_title(); ?></a> 
                 </h2> 
             </div><!-- .post-video -->
@@ -521,7 +521,7 @@ if (!function_exists('quicksand_entry_title_postformat_quote')) :
             <?php endif; ?>
 
             <div class="post-video">  
-                <h2 class="card-title <?php echo $class; ?>">
+                <h2 class="card-title <?php echo esc_attr($class); ?>">
                     <a href="<?php echo esc_attr(get_the_permalink()); ?>"><i class="fa fa-quote-right" aria-hidden="true"></i> <?php the_title(); ?></a> 
                 </h2> 
             </div><!-- .post-video -->
@@ -545,7 +545,7 @@ if (!function_exists('quicksand_the_entry_content')) :
     function quicksand_the_entry_content($class = 'entry-content') {
         ?>   
         <!--quicksand-entry-content-default-->
-        <div class="card-block quicksand-default-entry-content <?php echo $class; ?>"> 
+        <div class="card-block quicksand-default-entry-content <?php echo esc_attr($class); ?>"> 
             <div class="card-text">
                 <?php  the_content();  ?>
             </div>
@@ -569,7 +569,7 @@ if (!function_exists('quicksand_the_entry_content_video')) :
     function quicksand_the_entry_content_video($class = 'entry-content') {
         ?>   
         <!--quicksand-entry-content-video-->
-        <div class="card-block quicksand-entry-content-video <?php echo $class; ?>"> 
+        <div class="card-block quicksand-entry-content-video <?php echo esc_attr($class); ?>"> 
             <p class="card-text">
                 <?php
                 global $post;
@@ -723,7 +723,7 @@ if (!function_exists('quicksand_entry_excerpt')) :
     function quicksand_entry_excerpt($class = 'entry-summary') {
         $class = esc_attr($class);
         ?>
-        <div class="card-block <?php echo $class; ?>">
+        <div class="card-block <?php echo esc_attr($class); ?>">
             <span class="card-text"><?php the_excerpt(); ?></span>
         </div>  
         <?php
