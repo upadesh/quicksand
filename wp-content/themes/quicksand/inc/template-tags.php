@@ -210,7 +210,7 @@ if (!function_exists('quicksand_entry_title')) :
         <header class="card-header entry-header">
             <!--stick post-->
             <?php if (is_sticky() && is_home() && !is_paged()) : ?>
-                <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
+                <span class="sticky-post"><?php esc_html_e('Featured', 'quicksand'); ?></span>
                 <?php
             endif;
 
@@ -249,7 +249,7 @@ if (!function_exists('quicksand_entry_title_postformat_link')) :
         <header class="card-header entry-header">
             <!--stick post-->
             <?php if (is_sticky() && is_home() && !is_paged()) : ?>
-                <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
+                <span class="sticky-post"><?php esc_html_e('Featured', 'quicksand'); ?></span>
             <?php endif; ?>
 
             <div class="post-link">  
@@ -283,7 +283,7 @@ if (!function_exists('quicksand_entry_title_postformat_audio')) :
         <header class="card-header entry-header">
             <!--stick post-->
             <?php if (is_sticky() && is_home() && !is_paged()) : ?>
-                <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
+                <span class="sticky-post"><?php esc_html_e('Featured', 'quicksand'); ?></span>
             <?php endif; ?>
 
             <div class="post-link">  
@@ -317,7 +317,7 @@ if (!function_exists('quicksand_the_entry_content_quote')) :
         <div class="card-block  <?php echo esc_attr($class); ?>">
             <?php if (is_sticky() && is_home() && !is_paged()) : ?>
                 <!--stick post-->
-                <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
+                <span class="sticky-post"><?php esc_html_e('Featured', 'quicksand'); ?></span>
             <?php endif; ?>
 
             <div class="quote post-quote">   
@@ -407,7 +407,7 @@ if (!function_exists('quicksand_entry_title_postformat_gallery')) :
         <header class="card-header entry-header">
             <!--stick post-->
             <?php if (is_sticky() && is_home() && !is_paged()) : ?>
-                <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
+                <span class="sticky-post"><?php esc_html_e('Featured', 'quicksand'); ?></span>
             <?php endif; ?>
 
             <div class="post-gallery">  
@@ -482,7 +482,7 @@ if (!function_exists('quicksand_entry_title_postformat_video')) :
         <header class="card-header entry-header">
             <!--stick post-->
             <?php if (is_sticky() && is_home() && !is_paged()) : ?>
-                <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
+                <span class="sticky-post"><?php esc_html_e('Featured', 'quicksand'); ?></span>
             <?php endif; ?>
 
             <div class="post-video">  
@@ -517,7 +517,7 @@ if (!function_exists('quicksand_entry_title_postformat_quote')) :
         <header class="card-header entry-header">
             <!--stick post-->
             <?php if (is_sticky() && is_home() && !is_paged()) : ?>
-                <span class="sticky-post"><?php _e('Featured', 'quicksand'); ?></span>
+                <span class="sticky-post"><?php esc_html_e('Featured', 'quicksand'); ?></span>
             <?php endif; ?>
 
             <div class="post-video">  
