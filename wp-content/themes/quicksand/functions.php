@@ -28,11 +28,11 @@
 global $quicksand_version;
 global $wp_min_version;
 
-$quicksand_version = '0.2.1';
+$quicksand_version = '0.6.5';
 $wp_min_version = '4.7';
 
 /**
- * quicksand only works in WordPress 4.4 or later.
+ * quicksand only works in WordPress x.x or later.
  */
 if (version_compare($GLOBALS['wp_version'], $wp_min_version, '<')) {
     require get_template_directory() . '/inc/back-compat.php';
