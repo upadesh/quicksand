@@ -43,7 +43,7 @@ function quicksand_upgrade_notice() {
     global $wp_min_version;
     /* translators: WP-Version is put there */
     $message = sprintf(__('Quicksand requires at least WordPress version %1$s. You are running version %2$s. Please upgrade and try again.', 'quicksand'), $wp_min_version, $GLOBALS['wp_version']);
-    printf('<div class="error"><p>%s</p></div>', $message);
+    printf(wp_kses_post('<div class="error"><p>%s</p></div>'), esc_html($message));
 }
 
 /**
@@ -56,9 +56,9 @@ function quicksand_upgrade_notice() {
 function quicksand_customize() {
     global $wp_min_version;
     /* translators: WP-Version is put there */
-    wp_die(sprintf(__('Quicksand requires at least WordPress version %1$s. You are running version %2$s. Please upgrade and try again.', 'quicksand'), $wp_min_version, $GLOBALS['wp_version']), '', array(
+    wp_die(esc_html(sprintf(__('Quicksand requires at least WordPress version %1$s. You are running version %2$s. Please upgrade and try again.', 'quicksand'), $wp_min_version, $GLOBALS['wp_version']), '', array(
         'back_link' => true,
-    ));
+    )));
 }
 
 //add_action(load-(page): runs when an administration menu page is loaded. 
@@ -75,7 +75,7 @@ function quicksand_preview() {
     global $wp_min_version;
     if (isset($_GET['preview'])) {
         /* translators: WP-Version is put there */
-        wp_die(sprintf(__('Quicksand requires at least WordPress version %1$s. You are running version %2$s. Please upgrade and try again.', 'quicksand'), $wp_min_version, $GLOBALS['wp_version']));
+        wp_die(esc_html(sprintf(__('Quicksand requires at least WordPress version %1$s. You are running version %2$s. Please upgrade and try again.', 'quicksand'), $wp_min_version, $GLOBALS['wp_version'])));
     }
 }
 
