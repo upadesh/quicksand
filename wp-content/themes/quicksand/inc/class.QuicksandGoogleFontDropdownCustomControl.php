@@ -21,7 +21,7 @@ if (class_exists('WP_Customize_Control')) {
                     <?php
                     if (isset($this->fonts)) {
                         foreach ($this->fonts as $k => $v) {
-                            echo '<option value="' . $v['family'] . '" ' . selected($this->value(), $v['family'], false) . '>' . $v['family'] . '</option>';
+                            echo '<option value="' . esc_attr($v['family']) . '" ' . selected($this->value(), esc_attr($v['family']), false) . '>' . esc_attr($v['family']) . '</option>';
                         }
                     }
                     ?>

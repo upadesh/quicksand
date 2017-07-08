@@ -475,7 +475,7 @@ function quicksand_customize_register($wp_customize) {
         'section' => 'quicksand_content',
         'settings' => 'qs_content_google_api_key',
         'priority' => 10,
-        'description' => esc_html__('You need an API-Key to use Google Fonts. Create one <a href="https://console.developers.google.com/" target="_blank">here</a>, save it & reload the page.', 'quicksand'),
+        'description' => wp_kses_post(__('You need an API-Key to use Google Fonts. Create one <a href="https://console.developers.google.com/" target="_blank">here</a>, save it & reload the page.', 'quicksand')),
         'type' => 'text',
     )));
 
