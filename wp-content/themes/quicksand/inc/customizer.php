@@ -293,7 +293,7 @@ function quicksand_customize_register($wp_customize) {
         'type' => 'checkbox',
         'settings' => 'qs_slider_fullwidth',
         'priority' => 20,
-    )); 
+    ));
 
     // hide in mobile mode
     $wp_customize->add_setting("qs_slider_hide_mobile_mode", array(
@@ -745,7 +745,7 @@ function quicksand_customize_register($wp_customize) {
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
- 
+
     $wp_customize->add_control('qs_sidebar_number', array(
         'label' => esc_html__('Sidebar Numbers', 'quicksand'),
         'section' => 'quicksand_sidebar',
@@ -809,6 +809,7 @@ function quicksand_customize_register($wp_customize) {
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'qs_sidebar_border_color', array(
         'label' => esc_html__('Widget Border Color', 'quicksand'),
         'section' => 'quicksand_sidebar',
+        /* translators: hex-value for color */
         'description' => sprintf(esc_html__('For a nice effect choose the same color like Content-Background (%s) ...', 'quicksand'), $bgContent),
         'settings' => 'qs_sidebar_border_color'
     )));
@@ -1114,7 +1115,10 @@ function quicksand_social_media_icons() {
                     <a  class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url(get_theme_mod($active_site)); ?>">
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-envelope fa-stack-1x fa-inverse" title="<?php printf(esc_html__('%s icon', 'quicksand'), $active_site); ?>"></i>
+                            <i class="fa fa-envelope fa-stack-1x fa-inverse" title="<?php
+                            /* translators: FontAwesome css-shortcode */
+                            printf(esc_html__('%s icon', 'quicksand'), $active_site);
+                            ?>"></i>
                         </span>
                     </a>
                 </li> 
@@ -1123,7 +1127,10 @@ function quicksand_social_media_icons() {
                     <a  class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url(get_theme_mod($active_site)); ?>">
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa <?php echo esc_attr($class); ?> fa-stack-1x fa-inverse" title="<?php printf(esc_html__('%s icon', 'quicksand'), $active_site); ?>"></i>
+                            <i class="fa <?php echo esc_attr($class); ?> fa-stack-1x fa-inverse" title="<?php
+                               /* translators: FontAwesome css-shortcode */
+                               printf(esc_html__('%s icon', 'quicksand'), $active_site);
+                               ?>"></i>
                         </span>
                     </a>
                 </li> 

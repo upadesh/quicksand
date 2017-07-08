@@ -56,6 +56,7 @@ if (!function_exists('quicksand_entry_meta')) :
         // comments
         if (in_array('comments', $onlyShowThisMetaInfo) && !is_singular() && !post_password_required() && ( comments_open() || get_comments_number() )) {
             echo '<span class="comments-link">';
+            /* translators: post-title */
             comments_popup_link(sprintf(__('Leave a comment<span class="screen-reader-text"> on %s</span>', 'quicksand'), get_the_title()));
             echo '</span>';
         }
@@ -668,6 +669,7 @@ if (!function_exists('quicksand_edit_post')) :
                 edit_post_link(
                         // link-text
                         sprintf(
+                                /* translators: post-title */
                                 __('Edit<span class="screen-reader-text"> "%s"</span>', 'quicksand'), get_the_title()
                         ),
                         // before
