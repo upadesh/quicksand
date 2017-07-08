@@ -1112,7 +1112,7 @@ function quicksand_social_media_icons() {
             if ($active_site == 'email') {
                 ?>                 
                 <li class="d-inline">
-                    <a  class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url(get_theme_mod($active_site)); ?>">
+                    <a  class="<?php echo esc_attr($active_site); ?>" target="_blank" href="<?php echo esc_url(get_theme_mod($active_site)); ?>">
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-envelope fa-stack-1x fa-inverse" title="<?php
@@ -1124,7 +1124,7 @@ function quicksand_social_media_icons() {
                 </li> 
             <?php } else { ?> 
                 <li class="d-inline">
-                    <a  class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url(get_theme_mod($active_site)); ?>">
+                    <a  class="<?php echo esc_attr($active_site); ?>" target="_blank" href="<?php echo esc_url(get_theme_mod($active_site)); ?>">
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa <?php echo esc_attr($class); ?> fa-stack-1x fa-inverse" title="<?php
