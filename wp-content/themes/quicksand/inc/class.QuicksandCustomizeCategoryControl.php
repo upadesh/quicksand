@@ -15,11 +15,6 @@ if (class_exists('WP_Customize_Control')) {
             );
 
             $dropdown = str_replace('<select', '<select ' . $this->get_link(), $dropdown);
-
-//            printf(
-//                    '<label class="customize-control-select"><span class="customize-control-title">%s</span><span class="description customize-control-description">%s</span> %s</label>', $this->label, $this->description, $dropdown
-//            );
-            
             $ctrl = sprintf(
                     '<label class="customize-control-select"><span class="customize-control-title">%s</span><span class="description customize-control-description">%s</span> %s</label>', $this->label, $this->description, $dropdown
             );
