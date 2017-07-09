@@ -24,10 +24,10 @@ class QuicksandWidgetArchives extends WP_Widget {
         $enable_count = isset($instance['enable_count']) ? $instance['enable_count'] : NULL;
         $limit = isset($instance['limit']) ? $instance['limit'] : NULL;
 
-        echo $before_widget;
-        echo $before_title;
-        echo $title;
-        echo $after_title;
+        echo wp_kses_post($before_widget);
+        echo wp_kses_post($before_title);
+        echo wp_kses_post($title);
+        echo wp_kses_post($after_title);
         ?>
 
 
@@ -54,13 +54,13 @@ class QuicksandWidgetArchives extends WP_Widget {
                 $variable = wp_get_archives($args);
                 $variable = str_replace('(', '<span class="tag tag-default tag-pill float-xs-right">', $variable);
                 $variable = str_replace(')', '</span>', $variable);
-                echo $variable;
+                echo wp_kses_post($variable);
                 ?>
             </ul>  
         </div><!-- end widget content -->
 
         <?php
-        echo $after_widget;
+        echo wp_kses_post($after_widget);
     }
 
     /**
