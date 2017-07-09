@@ -40,11 +40,9 @@ add_action('customize_preview_init', 'quicksand_customize_preview_js');
  */
 function quicksand_customize_register($wp_customize) {
 
-    // include extended WP-Custompizer classes
-    require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandGoogleFontDropdownCustomControl.php' );
-    require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandCustomizeControlCheckboxMultiple.php' );
-    require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandCustomizeCategoryControl.php' );
-
+    // include extended WP-Custompizer classes 
+    quicksand_get_customizer_classes();
+    
     // get color-scheme
     $color_scheme_option = get_theme_mod('color_scheme', 'default');
     $colorSchemeDefault = quicksand_get_color_schemes()[$color_scheme_option];

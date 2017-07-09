@@ -101,7 +101,7 @@ if (!function_exists('quicksand_setup')) :
          * Switch default core markup for search form, comment form, and comments
          * to output valid HTML5.
          */
-        add_theme_support('html5', array( 
+        add_theme_support('html5', array(
             'comment-list',
             'gallery',
             'caption',
@@ -232,7 +232,7 @@ if (!function_exists('quicksand_get_google_fonts')) :
      * @return string
      */
     function quicksand_get_google_fonts($font = NULL) {
-        $fonts[] = $font . ':400,400i,700,700i'; 
+        $fonts[] = $font . ':400,400i,700,700i';
         return $fonts;
     }
 
@@ -766,3 +766,21 @@ require get_template_directory() . '/inc/customize-css.php';
  */
 require_once(get_template_directory() . '/inc/widgets/class.QuicksandWidgetCategories.php');
 require_once(get_template_directory() . '/inc/widgets/class.QuicksandWidgetArchives.php');
+
+
+
+
+if (!function_exists('quicksand_get_customizer_classes')) :
+
+    /**
+     * include extended WP-Custompizer classes  
+     */
+    function quicksand_get_customizer_classes() {
+
+        require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandGoogleFontDropdownCustomControl.php' );
+        require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandCustomizeControlCheckboxMultiple.php' );
+        require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandCustomizeCategoryControl.php' );
+    }
+
+ 
+endif; 

@@ -35,7 +35,7 @@ Quicksand theme uses:
   ** Font Awesome CSS, LESS, and Sass files are licensed under the MIT License (https://opensource.org/licenses/mit-license.html) 
 * Flexslider (http://flexslider.woothemes.com/) licensed under GPLv2 (http://www.gnu.org/licenses/gpl-2.0.html) 
 * Lightgallery (https://sachinchoolur.github.io/lightGallery/) licensed under GNU AGPLv3 (https://github.com/sachinchoolur/lightGallery/blob/master/LICENSE.md) 
-* Unless otherwise specified, all images are created by Andreas Stephan
+* Unless otherwise specified, all images are created by Andreas Stephan and licendes under GPLv3 or later (https://www.gnu.org/licenses/gpl-3.0.en.html)
  
 == Theme Features ==
 
