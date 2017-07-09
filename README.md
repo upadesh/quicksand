@@ -77,6 +77,14 @@ vim wp-config.php
 sudo chown -R piccard:www-data ../wp/
 ```
 
+### Install Plugins
+[Theme-Check](http://ottopress.com/wordpress-plugins/theme-check/ )
+[NS Theme-Check](https://github.com/WPTRT/theme-sniffer )
+
+### Install XML-Unit-Test 
+[XML-Unit-Test](https://codex.wordpress.org/Theme_Unit_Test)
+
+
 ### Install node, sass & grunt
 ```
 sudo apt-get update
