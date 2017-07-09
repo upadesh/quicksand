@@ -6,16 +6,13 @@
  *
  * @package WordPress
  * @subpackage Quicksand
- * @since Quicksand 0.2.1
  */
 if (!function_exists('quicksand_entry_meta')) :
 
     /**
      * Prints HTML with meta information for the categories, tags.
      *
-     * Create your own quicksand_entry_meta() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_entry_meta() function to override in a child theme
      */
     function quicksand_entry_meta() {
         echo '<div class="card-block entry-meta">';
@@ -72,9 +69,7 @@ if (!function_exists('quicksand_entry_tags')) :
     /**
      * Prints HTML with tag information for current post.
      *
-     * Create your own quicksand_entry_tags() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_entry_tags() function to override in a child theme
      */
     function quicksand_entry_tags() {
         $taxonomies = get_quicksand_entry_taxonomies();
@@ -97,9 +92,7 @@ if (!function_exists('get_quicksand_entry_date')) :
     /**
      * Prints HTML with date information for current post.
      *
-     * Create your own get_quicksand_entry_date() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own get_quicksand_entry_date() function to override in a child theme
      */
     function get_quicksand_entry_date() {
         $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
@@ -123,9 +116,7 @@ if (!function_exists('get_quicksand_entry_taxonomies')) :
     /**
      * Prints HTML with category and tags for current post.
      *
-     * Create your own get_quicksand_entry_taxonomies() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own get_quicksand_entry_taxonomies() function to override in a child theme
      */
     function get_quicksand_entry_taxonomies() {
         $taxonomies = array(
@@ -160,9 +151,7 @@ if (!function_exists('quicksand_entry_thumbnail')) :
      * Wraps the post thumbnail in an anchor element on index views, or a div
      * element when on single views.
      *
-     * Create your own quicksand_entry_thumbnail() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_entry_thumbnail() function to override in a child theme
      */
     function quicksand_entry_thumbnail() {
         if (post_password_required() || is_attachment() || !has_post_thumbnail()) {
@@ -199,9 +188,7 @@ if (!function_exists('quicksand_entry_title')) :
     /**
      * Displays the title. 
      *
-     * Create your own quicksand_entry_title() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_entry_title() function to override in a child theme
      *
      * @param string $class Optional. Class string of the header element.  
      */
@@ -237,9 +224,7 @@ if (!function_exists('quicksand_entry_title_postformat_link')) :
     /**
      * Displays the title for post-format: link 
      *
-     * Create your own quicksand_entry_title_postformat_link() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_entry_title_postformat_link() function to override in a child theme
      *
      * @param string $class Optional. Class string of the header element.  
      */
@@ -271,9 +256,7 @@ if (!function_exists('quicksand_entry_title_postformat_audio')) :
     /**
      * Displays the title for post-format: audio 
      *
-     * Create your own quicksand_entry_title_postformat_audio() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_entry_title_postformat_audio() function to override in a child theme
      *
      * @param string $class Optional. Class string of the header element.  
      */
@@ -307,9 +290,7 @@ if (!function_exists('quicksand_the_entry_content_quote')) :
     /**
      * Displays the content of a quote-post in non-singular-context
      *
-     * Create your own quicksand_the_entry_content_quote() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_the_entry_content_quote() function to override in a child theme
      *
      * @param string $class Optional. Class string of the header element.  
      */
@@ -346,9 +327,7 @@ if (!function_exists('quicksand_entry_header_postformat_gallery')) :
     /**
      * Displays the title for post-format: gallery 
      *
-     * Create your own quicksand_entry_header_postformat_gallery() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_entry_header_postformat_gallery() function to override in a child theme
      *
      * @param string $class Optional. Class string of the header element.  
      */
@@ -395,9 +374,7 @@ if (!function_exists('quicksand_entry_title_postformat_gallery')) :
     /**
      * Displays the title for post-format: gallery 
      *
-     * Create your own quicksand_entry_title_postformat_gallery() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_entry_title_postformat_gallery() function to override in a child theme
      *
      * @param string $class Optional. Class string of the header element.  
      */
@@ -429,9 +406,7 @@ if (!function_exists('quicksand_entry_header_postformat_video')) :
     /**
      * Displays the title for post-format: video 
      *
-     * Create your own quicksand_entry_header_postformat_video() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_entry_header_postformat_video() function to override in a child theme
      *
      * @param string $class Optional. Class string of the header element.  
      */
@@ -470,9 +445,7 @@ if (!function_exists('quicksand_entry_title_postformat_video')) :
     /**
      * Displays the title for post-format: video 
      *
-     * Create your own quicksand_entry_title_postformat_video() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_entry_title_postformat_video() function to override in a child theme
      *
      * @param string $class Optional. Class string of the header element.  
      */
@@ -505,9 +478,7 @@ if (!function_exists('quicksand_entry_title_postformat_quote')) :
     /**
      * Displays the title for post-format: video 
      *
-     * Create your own quicksand_entry_title_postformat_video() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_entry_title_postformat_video() function to override in a child theme
      *
      * @param string $class Optional. Class string of the header element.  
      */
@@ -603,9 +574,7 @@ if (!function_exists('quicksand_paginated_posts_paginator')) :
     /**
      * Displays page links for paginated posts (i.e. includes the 'nextpage')
      *
-     * Create your own quicksand_paginated_posts_paginator() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_paginated_posts_paginator() function to override in a child theme
      */
     function quicksand_paginated_posts_paginator() {
         wp_link_pages(array(
@@ -628,9 +597,7 @@ if (!function_exists('quicksand_paginator_list_view')) :
     /**
      * Displays bs-style pagination 
      *
-     * Create your own quicksand_paginated_posts_paginator() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_paginated_posts_paginator() function to override in a child theme
      */
     function quicksand_paginator_list_view() {
         ?>
@@ -658,9 +625,7 @@ if (!function_exists('quicksand_edit_post')) :
     /**
      * edit-link for logged in users & maybe more
      *
-     * Create your own quicksand_edit_post() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_edit_post() function to override in a child theme
      */
     function quicksand_edit_post() {
         if (current_user_can('edit_posts', get_the_ID())) :
@@ -716,9 +681,7 @@ if (!function_exists('quicksand_entry_excerpt')) :
     /**
      * Displays the optional excerpt. 
      *
-     * Create your own quicksand_entry_excerpt() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_entry_excerpt() function to override in a child theme
      *
      * @param string $class Optional. Class string of the div element. Defaults to 'entry-summary'.
      */
@@ -740,9 +703,7 @@ if (!function_exists('quicksand_entry_excerpt_more') && !is_admin()) :
     /**
      * Replaces "[...]" (appended to automatically generated excerpts) with a read-more btn
      *
-     * Create your own quicksand_entry_excerpt_more() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_entry_excerpt_more() function to override in a child theme
      *
      * @return string 'Continue reading' link prepended with an ellipsis.
      */
@@ -760,9 +721,7 @@ if (!function_exists('quicksand_categorized_blog')) :
     /**
      * Determines whether blog/site has more than one category.
      *
-     * Create your own quicksand_categorized_blog() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_categorized_blog() function to override in a child theme
      *
      * @return bool True if there is more than one category, false otherwise.
      */
@@ -793,9 +752,7 @@ if (!function_exists('quicksand_categorized_blog')) :
 endif;
 
 /**
- * Flushes out the transients used in quicksand_categorized_blog().
- *
- * @since Quicksand 0.2.1
+ * Flushes out the transients used in quicksand_categorized_blog()
  */
 function quicksand_category_transient_flusher() {
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
@@ -813,9 +770,7 @@ add_action('save_post', 'quicksand_category_transient_flusher');
 if (!function_exists('quicksand_the_custom_logo')) :
 
     /**
-     * Displays the optional custom logo 
-     *
-     * @since Quicksand 0.2.1
+     * Displays the optional custom logo
      */
     function quicksand_the_custom_logo() {
         if (function_exists('the_custom_logo')) :

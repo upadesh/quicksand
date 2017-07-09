@@ -5,8 +5,6 @@
  *
  * Can be filtered with {@see 'quicksand_color_schemes'} 
  *
- * @since Quicksand 0.2.1
- *
  * @return array An associative array of color scheme options.
  */
 function quicksand_get_color_schemes() {
@@ -15,8 +13,6 @@ function quicksand_get_color_schemes() {
      *
      * The default schemes include 'default', 'quicksand' 
      * Adjust your CSS-below
-     *
-     * @since Quicksand 0.2.1
      *
      * @param array $schemes {
      *     Associative array of color schemes data.

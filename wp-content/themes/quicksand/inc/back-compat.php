@@ -9,15 +9,12 @@
  *
  * @package WordPress
  * @subpackage quicksand
- * @since Quicksand 0.2.1
  */
 
 /**
  * Prevent switching to Quicksand on old versions of WordPress.
  *
- * Switches to the default theme.
- *
- * @since Quicksand 0.2.1
+ * Switches to the default theme
  */
 function quicksand_switch_theme() {
     switch_theme(WP_DEFAULT_THEME, WP_DEFAULT_THEME);
@@ -35,8 +32,6 @@ add_action('after_switch_theme', 'quicksand_switch_theme');
  * Prints an update nag after an unsuccessful attempt to switch to
  * Quicksand on WordPress versions prior to $wp_min_version.
  *
- * @since Quicksand 0.2.1
- *
  * @global string $wp_version WordPress version.
  */
 function quicksand_upgrade_notice() {
@@ -47,9 +42,7 @@ function quicksand_upgrade_notice() {
 }
 
 /**
- * Prevents the Customizer from being loaded on WordPress versions prior to $wp_min_version.
- *   
- * @since Quicksand 0.2.1
+ * Prevents the Customizer from being loaded on WordPress versions prior to $wp_min_version
  *
  * @global string $wp_version WordPress version.
  */
@@ -65,9 +58,7 @@ function quicksand_customize() {
 add_action('load-customize.php', 'quicksand_customize');
 
 /**
- * Prevents the Theme Preview from being loaded on WordPress versions prior to $wp_min_version.
- *
- * @since Quicksand 0.2.1
+ * Prevents the Theme Preview from being loaded on WordPress versions prior to $wp_min_version
  *
  * @global string $wp_version WordPress version.
  */

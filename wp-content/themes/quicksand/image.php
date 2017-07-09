@@ -4,7 +4,6 @@
  *
  * @package WordPress
  * @subpackage quicksand
- * @since Quicksand 0.2.1
  */
 get_header();
 ?>
@@ -35,9 +34,7 @@ get_header();
                     <div class="entry-attachment">
                         <?php
                         /**
-                         * Filter the default quicksand image attachment size.
-                         *
-                         * @since Quicksand 0.2.1
+                         * Filter the default quicksand image attachment size
                          *
                          * @param string $image_size Image size. Default 'large'.
                          */

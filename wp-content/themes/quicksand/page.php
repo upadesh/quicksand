@@ -7,8 +7,7 @@
  * other "pages" on your WordPress site will use a different template.
  *
  * @package WordPress
- * @subpackage quicksand
- * @since Quicksand 0.2.1
+ * @subpackage quicksand 
  */
 get_header();
 ?> 

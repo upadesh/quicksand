@@ -7,7 +7,6 @@
  *
  * @package WordPress
  * @subpackage quicksand
- * @since Quicksand 0.2.1
  */
 /*
  * If the current post is protected by a password and

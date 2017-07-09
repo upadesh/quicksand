@@ -9,27 +9,21 @@ if (class_exists('WP_Customize_Control')) {
     class QuicksandCustomizeControlCheckboxMultiple extends WP_Customize_Control {
 
         /**
-         * The type of customize control being rendered.
-         *
-         * @since   Quicksand 0.3.1
+         * The type of customize control being rendered
          * @access  public
          * @var     string
          */
         public $type = 'checkbox-multiple';
 
         /**
-         * Enqueue scripts/styles.
-         *
-         * @since Quicksand 0.3.1
+         * Enqueue scripts/styles
          */
         public function enqueue() {
             wp_enqueue_script('quicksand-customize-controls', trailingslashit(get_template_directory_uri()) . 'js/customize-multiple-checkboxes.js', array('jquery'));
         }
 
         /**
-         * Displays the control content.
-         *
-         * @since   Quicksand 0.3.1 
+         * Displays the control content
          */
         public function render_content() {
 

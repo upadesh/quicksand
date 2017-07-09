@@ -10,8 +10,7 @@
  *          - these functions are located in template-tags.php 
  *
  * @package WordPress
- * @subpackage quicksand
- * @since Quicksand 0.2.1
+ * @subpackage quicksand 
  */
 get_header();
 ?>

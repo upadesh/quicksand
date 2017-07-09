@@ -4,8 +4,7 @@
  * The template part for displaying a message that posts cannot be found
  *
  * @package WordPress
- * @subpackage quicksand
- * @since Quicksand 0.2.1
+ * @subpackage quicksand 
  */
 ?>
 

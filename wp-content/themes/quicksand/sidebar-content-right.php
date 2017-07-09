@@ -3,8 +3,7 @@
  * template for the right sidebar
  *
  * @package WordPress
- * @subpackage quicksand
- * @since Quicksand 0.2.1
+ * @subpackage quicksand 
  */
 ?> 
 

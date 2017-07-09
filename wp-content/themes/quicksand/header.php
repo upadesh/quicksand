@@ -6,7 +6,6 @@
  * 
  * @package WordPress
  * @subpackage quicksand
- * @since Quicksand 0.2.1
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">

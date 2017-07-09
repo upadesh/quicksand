@@ -1,17 +1,12 @@
 <?php
 /**
  * Quicksand Theme Customizer 
- *
- * @since Quicksand 0.2.1
- *
  */
 
 /**
  * Binds the JS listener to make Customizer color_scheme control.
  *
- * Passes color scheme data as colorScheme global.
- *
- * @since Quicksand 0.2.1
+ * Passes color scheme data as colorScheme global
  */
 function quicksand_customize_control_js() {
     wp_enqueue_script('color-scheme-control', get_template_directory_uri() . '/js/color-scheme-control.js', array('customize-controls', 'iris', 'underscore', 'wp-util'), 'quicksand', true);
@@ -21,9 +16,7 @@ function quicksand_customize_control_js() {
 add_action('customize_controls_enqueue_scripts', 'quicksand_customize_control_js');
 
 /**
- * Binds JS handlers to make the Customizer preview reload changes asynchronously.
- *
- * @since Quicksand1.0
+ * Binds JS handlers to make the Customizer preview reload changes asynchronously
  */
 function quicksand_customize_preview_js() {
     wp_enqueue_script('quicksand-customize-preview', get_template_directory_uri() . '/js/customize-preview.js', array('customize-preview'), 'quicksand', true);
@@ -923,8 +916,6 @@ if (!function_exists('quicksand_get_color_scheme')) :
      *
      * Create your own quicksand_get_color_scheme() function to override in a child theme.
      *
-     * @since Quicksand 0.2.1
-     *
      * @return array An associative array of either the current or default color scheme HEX values.
      */
     function quicksand_get_color_scheme() {
@@ -949,8 +940,6 @@ if (!function_exists('quicksand_get_color_scheme_choices')) :
      * Create your own quicksand_get_color_scheme_choices() function to override
      * in a child theme.
      *
-     * @since Quicksand 0.2.1
-     *
      * @return array Array of color schemes.
      */
     function quicksand_get_color_scheme_choices() {
@@ -974,8 +963,6 @@ if (!function_exists('quicksand_sanitize_color_scheme')) :
      *
      * Create your own quicksand_sanitize_color_scheme() function to override
      * in a child theme.
-     *
-     * @since Quicksand 0.2.1
      *
      * @param string $value Color scheme name value.
      * @return string Color scheme name.

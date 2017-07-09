@@ -17,8 +17,7 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage quicksand
- * @since Quicksand 0.2.1
+ * @subpackage quicksand 
  */
 //phpinfo();
 get_header();

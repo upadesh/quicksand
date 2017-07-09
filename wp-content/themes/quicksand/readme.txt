@@ -3,10 +3,9 @@
 Theme Name: Quicksand
 Theme URI: http://cafe-serendipity.com
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog
-Version: 0.6.4
+Version: 0.6.5
 Tested up to: WP 4.8
-Requires at least WP-Version: 4.6
-Requires at least PHP-Version: 5.4
+Requires at least WP-Version: 4.6 
 Author: Cafe Serendipity - Andreas Stephan
 Author URI: http://cafe-serendipity.com
 License: GPLv3 or later

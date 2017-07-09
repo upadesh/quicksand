@@ -23,7 +23,6 @@
  *
  * @package WordPress
  * @subpackage Quicksand
- * @since Quicksand 0.2.1
  */
 global $quicksand_version;
 global $wp_min_version;
@@ -49,8 +48,6 @@ if (!function_exists('quicksand_setup')) :
      * as indicating support for post thumbnails.
      *
      * Create your own quicksand_setup() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
      */
     function quicksand_setup() {
         /*
@@ -162,8 +159,6 @@ add_action('after_setup_theme', 'quicksand_setup');
  * Priority 0 to make it available to lower priority callbacks.
  *
  * @global int $content_width
- *
- * @since Quicksand 0.2.1
  */
 function quicksand_content_width() {
     $GLOBALS['content_width'] = apply_filters('quicksand_content_width', 992);
@@ -179,8 +174,6 @@ if (!function_exists('quicksand_widgets_init')) :
      * Registers a widget area.
      *
      * @link https://developer.wordpress.org/reference/functions/register_sidebar/
-     *
-     * @since Quicksand 0.2.1
      */
     function quicksand_widgets_init() {
 
@@ -228,8 +221,6 @@ if (!function_exists('quicksand_get_google_fonts')) :
     /**
      * define here the google fonts you want to use
      * 
-     * @since Quicksand 0.2.1
-     * 
      * @return string
      */
     function quicksand_get_google_fonts($font = NULL) {
@@ -246,8 +237,6 @@ if (!function_exists('quicksand_fonts_url')) :
      * Register Google fonts for Quicksand.
      *
      * Create your own quicksand_fonts_url() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
      *
      * @return string Google fonts URL for the theme.
      */
@@ -282,9 +271,7 @@ endif;
 if (!function_exists('quicksand_styles')) :
 
     /**
-     * Enqueues styles.
-     *
-     * @since Quicksand 0.2.1
+     * Enqueues styles
      */
     function quicksand_styles() {
 
@@ -338,8 +325,6 @@ if (!function_exists('quicksand_scripts')) :
 
     /**
      * Enqueues scripts 
-     *
-     * @since Quicksand 0.2.1
      */
     function quicksand_scripts() {
         global $quicksand_version;
@@ -409,12 +394,10 @@ if (!function_exists('quicksand_modify_attachment_link')) :
 endif;
 
 /**
- * Adds custom classes to the array of body classes.
+ * Adds custom classes to the array of body classes
  *
- * @since Quicksand 0.2.1
- *
- * @param array $classes Classes for the body element.
- * @return array (Maybe) filtered body classes.
+ * @param array $classes Classes for the body element
+ * @return array (Maybe) filtered body classes
  */
 function quicksand_body_classes($classes) {
     // Adds a class of custom-background-image to sites with a custom background image.
@@ -561,8 +544,6 @@ add_filter('the_password_form', 'quicksand_password_form');
 
 /**
  * Converts a HEX value to RGB. 
- *
- * @since Quicksand 0.2.1
  *
  * @param string $color The original color, in 3- or 6-digit hexadecimal form.
  * @return array Array containing RGB (red, green, and blue) values for the given
@@ -733,9 +714,7 @@ if (!function_exists('quicksand_add_editor_styles')) :
     /**
      * Apply theme's stylesheet to the visual editor.
      *
-     * @uses add_editor_style() Links a stylesheet to visual editor 
-     *
-     * @since Quicksand 0.3.0
+     * @uses add_editor_style() Links a stylesheet to visual editor
      */
     function quicksand_add_editor_styles() {
         add_editor_style('/css/custom-editor-style.css');

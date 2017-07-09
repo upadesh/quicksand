@@ -6,7 +6,6 @@
  *
  * @package WordPress
  * @subpackage quicksand
- * @since Quicksand 0.2.1
  */
 ?>
 

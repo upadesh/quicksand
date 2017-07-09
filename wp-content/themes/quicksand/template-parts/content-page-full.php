@@ -3,8 +3,7 @@
  * The template used for displaying page content in full width
  *
  * @package WordPress
- * @subpackage quicksand
- * @since Quicksand 0.2.1
+ * @subpackage quicksand 
  */
 ?> 
 

@@ -145,7 +145,6 @@ class QuicksandNavwalker extends Walker_Nav_Menu {
      * This method shouldn't be called directly, use the walk() method instead.
      *
      * @see Walker::start_el()
-     * @since 2.5.0
      *
      * @param object $element Data object
      * @param array $children_elements List of elements to continue traversing.

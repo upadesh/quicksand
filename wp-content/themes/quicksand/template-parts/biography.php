@@ -3,8 +3,7 @@
  * The template part for displaying an Author biography
  *
  * @package WordPress
- * @subpackage Quicksand
- * @since Quicksand 0.2.1
+ * @subpackage Quicksand 
  */
 $colorScheme = quicksand_get_color_scheme();
 if (!get_theme_mod('qs_biography_show', $colorScheme['settings']['qs_biography_show'])) {
@@ -15,9 +14,7 @@ if (!get_theme_mod('qs_biography_show', $colorScheme['settings']['qs_biography_s
 <div class="card-footer author-bio">  
 <?php
 /**
- * Filter the Quicksand author bio avatar size.
- *
- * @since Quicksand 0.2.1
+ * Filter the Quicksand author bio avatar size 
  *
  * @param int $size The avatar height and width size in pixels.
  */

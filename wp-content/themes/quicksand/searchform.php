@@ -3,8 +3,7 @@
  * Template for displaying search forms in Quicksand
  *
  * @package WordPress
- * @subpackage quicksand
- * @since Quicksand 0.2.1
+ * @subpackage quicksand 
  */
 ?>
 
