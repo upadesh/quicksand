@@ -131,7 +131,8 @@ if (!function_exists('quicksand_setup')) :
         /*
          * Enable support for Custom Background
          */
-        $colorSchemeDefault = quicksand_get_color_schemes()['default']['colors'];
+        $colorSchemes = quicksand_get_color_schemes();
+        $colorSchemeDefault = $colorSchemes['default']['colors'];
         $customBackgroundArgs = array(
             'default-color' => $colorSchemeDefault['background_color'],
         );
@@ -255,7 +256,8 @@ if (!function_exists('quicksand_fonts_url')) :
         $isSetGoogleFont = get_theme_mod('quicksand_google_font', FALSE);
 
         if ($hasApiKey && $isSetGoogleFont) {
-            $fonts = quicksand_get_google_fonts(get_theme_mod('quicksand_google_font', quicksand_get_color_scheme()['settings']['quicksand_google_font']));
+            $colorScheme = quicksand_get_color_scheme();
+            $fonts = quicksand_get_google_fonts(get_theme_mod('quicksand_google_font', $colorScheme['settings']['quicksand_google_font']));
             $fonts_url = '';
             $subsets = 'latin,latin-ext';
 
@@ -363,7 +365,7 @@ if (!function_exists('quicksand_scripts')) :
         wp_enqueue_script('quicksand');
 
         $colorScheme = quicksand_get_color_scheme();
-        $colorScheme['settings']['qs_content_use_lightgallery'] = get_theme_mod('qs_content_use_lightgallery', quicksand_get_color_scheme()['settings']['qs_content_use_lightgallery']);
+        $colorScheme['settings']['qs_content_use_lightgallery'] = get_theme_mod('qs_content_use_lightgallery', $colorScheme['settings']['qs_content_use_lightgallery']);
         wp_localize_script('quicksand', 'colorScheme', $colorScheme);
     }
 
@@ -387,9 +389,10 @@ if (!function_exists('quicksand_modify_attachment_link')) :
      */
     function quicksand_modify_attachment_link($content, $post_id, $size, $permalink) {
         // This returns an array of (url, width, height)
-        $image = wp_get_attachment_image_src($post_id, 'large');
-
-        if (empty($image) || !get_theme_mod('qs_content_use_lightgallery', quicksand_get_color_scheme()['settings']['qs_content_use_lightgallery'])) {
+        $image = wp_get_attachment_image_src($post_id, 'large'); 
+        $colorScheme = quicksand_get_color_scheme();
+        
+        if (empty($image) || !get_theme_mod('qs_content_use_lightgallery', $colorScheme['settings']['qs_content_use_lightgallery'])) {
             return $content;
         }
 
@@ -425,7 +428,8 @@ function quicksand_body_classes($classes) {
     }
 
     // Adds of the (none)-active sidebar. 
-    $classes[] = get_theme_mod('qs_sidebar_number', quicksand_get_color_scheme()['settings']['qs_sidebar_number']);
+    $colorScheme = quicksand_get_color_scheme();
+    $classes[] = get_theme_mod('qs_sidebar_number', $colorScheme['settings']['qs_sidebar_number']);
 
     // Adds a class of hfeed to non-singular pages.
     if (!is_page()) {
@@ -684,7 +688,8 @@ if (!function_exists('quicksand_show_masonry')) :
     function quicksand_show_masonry() {
         global $posts;
         $minNumberOfPost = 2;
-        return !is_single() && !is_attachment() && !is_page() && count($posts) > $minNumberOfPost && get_theme_mod('qs_content_masonry', quicksand_get_color_scheme()['settings']['qs_content_masonry']);
+        $colorScheme = quicksand_get_color_scheme();
+        return !is_single() && !is_attachment() && !is_page() && count($posts) > $minNumberOfPost && get_theme_mod('qs_content_masonry', $colorScheme['settings']['qs_content_masonry']);
     }
 
 endif;
