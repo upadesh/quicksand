@@ -759,13 +759,7 @@ require get_template_directory() . '/inc/QuicksandNavwalker.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Customize CSS
- */
-//require get_template_directory() . '/inc/customize-css.php';
-
+require get_template_directory() . '/inc/customizer.php'; 
 
 
 /**
