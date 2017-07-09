@@ -1115,7 +1115,7 @@ function quicksand_social_media_icons() {
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-envelope fa-stack-1x fa-inverse" title="<?php
                             /* translators: FontAwesome css-shortcode */
-                            printf(esc_html__('%s icon', 'quicksand'), $active_site);
+                            printf(esc_html__('%s icon', 'quicksand'), esc_html($active_site));
                             ?>"></i>
                         </span>
                     </a>
@@ -1127,7 +1127,7 @@ function quicksand_social_media_icons() {
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa <?php echo esc_attr($class); ?> fa-stack-1x fa-inverse" title="<?php
                                /* translators: FontAwesome css-shortcode */
-                               printf(esc_html__('%s icon', 'quicksand'), $active_site);
+                               printf(esc_html__('%s icon', 'quicksand'), esc_html($active_site));
                                ?>"></i>
                         </span>
                     </a>
