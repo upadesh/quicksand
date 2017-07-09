@@ -45,7 +45,8 @@ function quicksand_customize_register($wp_customize) {
     
     // get color-scheme
     $color_scheme_option = get_theme_mod('color_scheme', 'default');
-    $colorSchemeDefault = quicksand_get_color_schemes()[$color_scheme_option];
+    $colorSchemes = quicksand_get_color_schemes();
+    $colorSchemeDefault = $colorSchemes[$color_scheme_option];
 
     /* Main option Settings Panel */
     $wp_customize->add_panel('quicksand_main_options', array(
