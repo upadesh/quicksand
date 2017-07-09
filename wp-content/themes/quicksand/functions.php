@@ -318,6 +318,13 @@ if (!function_exists('quicksand_styles')) :
 
         // flexslider
         wp_enqueue_style('quicksand-flexslider', get_template_directory_uri() . '/js/flexslider/flexslider.css', array());
+
+        // custom styles from customizer
+        ob_start();
+        include_once('inc/customize-css.php');
+        $custom_css = ob_get_contents();
+        ob_end_clean();
+        wp_add_inline_style('quicksand-style-theme', $custom_css);
     }
 
 endif;
@@ -757,7 +764,7 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Customize CSS
  */
-require get_template_directory() . '/inc/customize-css.php';
+//require get_template_directory() . '/inc/customize-css.php';
 
 
 
@@ -781,6 +788,12 @@ if (!function_exists('quicksand_get_customizer_classes')) :
         require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandCustomizeControlCheckboxMultiple.php' );
         require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandCustomizeCategoryControl.php' );
     }
+
+
+
+
+
+
 
  
 endif; 
