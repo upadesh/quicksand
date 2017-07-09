@@ -2,15 +2,15 @@
  * extend post-scss-file
  *
  * @hint    please use the common-classes for styling
- * 
- * @see     http://www.wpbeginner.com/wp-themes/default-wordpress-generated-css-cheat-sheet-for-beginners/
- */
-
+ */ 
  
-
- /*meta-info, i.e. cats, tags, search, ...*/
-.card.quicksand-meta-list-header {
-    .card-block {
-            border: 1px solid #eceeef;
+article.card {
+    .card-header {
+        border-bottom: #fff !important;
+        padding-bottom: 0;
     }
+    .card-block.entry-meta {
+        padding-top: 0 !important;
+    }
+    border-bottom: 1px solid #eceeef !important;
 }
