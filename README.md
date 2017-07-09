@@ -6,6 +6,7 @@ Quicksand comes with 3 ready-to-use color-schemes, one with rounded, two with co
 - Readme.txt
 - style.css    
 - package.json
+- functions.php
 	
 ### Reinstall npm-modules
 
