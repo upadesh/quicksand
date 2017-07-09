@@ -1,7 +1,7 @@
 /*========= About Theme =========*/
 
 Theme Name: Quicksand
-Theme URI: http://cafe-serendipity.com
+Theme URI: https://quicksand.cafe-serendipity.com
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog
 Version: 0.6.5
 Tested up to: WP 4.8
