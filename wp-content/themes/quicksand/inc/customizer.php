@@ -455,7 +455,7 @@ function quicksand_customize_register($wp_customize) {
         'default' => '',
         'sanitize_callback' => 'sanitize_text_field',
     ));
-    $wp_customize->add_control(new GoogleFontDropdownCustomControl($wp_customize, 'quicksand_google_font', array(
+    $wp_customize->add_control(new QuicksandGoogleFontDropdownCustomControl($wp_customize, 'quicksand_google_font', array(
         'label' => 'Google Font',
         'section' => 'quicksand_content',
         'settings' => 'quicksand_google_font',
