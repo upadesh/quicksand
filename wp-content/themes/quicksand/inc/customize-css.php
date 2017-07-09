@@ -216,7 +216,7 @@
     /* === site-header === */
     .site-info-wrapper a,
     .site-info-wrapper .site-description {  
-        color: #<?php echo preg_replace('/^#/', '', get_header_textcolor()); ?>; 
+        color: #<?php echo esc_attr( preg_replace('/^#/', '', get_header_textcolor())); ?>; 
     }
 
     .site-info-wrapper.jumbotron  {
