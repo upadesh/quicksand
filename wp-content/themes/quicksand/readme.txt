@@ -27,7 +27,7 @@ Quicksand comes with 3 ready-to-use color-schemes, one with rounded, two with co
 
 == Credits ==
 
-Quicksand theme uses:
+Quicksand-Theme uses:
 * Bootstrap (http://getbootstrap.com/) licensed under MIT license (https://github.com/twbs/bootstrap/blob/master/LICENSE) 
 * FontAwesome (http://fontawesome.io) 
   ** The Font Awesome font is licensed under the SIL OFL 1.1 (http://scripts.sil.org/OFL)
