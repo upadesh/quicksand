@@ -31,32 +31,29 @@
         <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'quicksand'); ?></a> 
 
         <!-- site-header --> 
-        <header id="masthead" class="site-header <?php echo esc_attr(get_theme_mod('qs_header_fullwidth', quicksand_get_color_scheme()['settings']['qs_header_fullwidth']) ? 'container-fluid' : 'container'); ?>"> 
+        <header id="masthead" class="site-header <?php  
+        $colorScheme = quicksand_get_color_scheme();
+        echo esc_attr(get_theme_mod('qs_header_fullwidth', $colorScheme['settings']['qs_header_fullwidth']) ? 'container-fluid' : 'container'); 
+        ?>"> 
 
             <!-- header(-image)-->
             <?php
             // show header in general
-
-            $isHeaderEnabled = display_header_text() && get_theme_mod('qs_header_enabled', quicksand_get_color_scheme()['settings']['qs_header_enabled']);
-            $isSliderEnabled = get_theme_mod('qs_slider_enabled', quicksand_get_color_scheme()['settings']['qs_slider_enabled']);
+            $isHeaderEnabled = display_header_text() && get_theme_mod('qs_header_enabled', $colorScheme['settings']['qs_header_enabled']);
+            $isSliderEnabled = get_theme_mod('qs_slider_enabled', $colorScheme['settings']['qs_slider_enabled']);
 
             if ($isHeaderEnabled):
                 // hide header on frontpage when slider is enabled
-                $hideWhenSliderIsEnabled = get_theme_mod('qs_header_hide_when_slider_enabled', quicksand_get_color_scheme()['settings']['qs_header_hide_when_slider_enabled']);
+                $hideWhenSliderIsEnabled = get_theme_mod('qs_header_hide_when_slider_enabled', $colorScheme['settings']['qs_header_hide_when_slider_enabled']);
                 $isFront = is_home() || is_front_page();
 
                 // show header only on front-page
-                $showOnlyOnFrontPage = get_theme_mod('qs_header_show_front', quicksand_get_color_scheme()['settings']['qs_header_show_front']);
+                $showOnlyOnFrontPage = get_theme_mod('qs_header_show_front', $colorScheme['settings']['qs_header_show_front']);
 
                 $showHeader = ($isFront && (!$isSliderEnabled)) ||
                         ($isFront && (!$hideWhenSliderIsEnabled && $isSliderEnabled)) ||
                         ($isFront && $showOnlyOnFrontPage && (!$hideWhenSliderIsEnabled)) ||
-                        (!$isFront && !$showOnlyOnFrontPage);
-
-//                echo "<p>x:". ($isFront && (!$isSliderEnabled)) ."</p>";
-//                echo "<p>x:". ($isFront && (!$hideWhenSliderIsEnabled && $isSliderEnabled)) ."</p>";
-//                echo "<p>x:". ($isFront && $showOnlyOnFrontPage && (!$hideWhenSliderIsEnabled)) ."</p>";  
-//                echo "<p>x:". (!$isFront && !$showOnlyOnFrontPage ) ."</p>";  
+                        (!$isFront && !$showOnlyOnFrontPage); 
 
                 if ($showHeader) :
                     ?>
@@ -98,10 +95,10 @@
 
 
         <!-- slider-->
-        <?php
+        <?php 
         if ($isSliderEnabled && (is_home() || is_front_page() )) :
             ?> 
-            <div class="<?php echo esc_attr(get_theme_mod('qs_slider_fullwidth', quicksand_get_color_scheme()['settings']['qs_slider_fullwidth']) ? '' : 'container'); ?> quicksand-slider-header-wrapper"> 
+            <div class="<?php echo esc_attr(get_theme_mod('qs_slider_fullwidth', $colorScheme['settings']['qs_slider_fullwidth']) ? '' : 'container'); ?> quicksand-slider-header-wrapper"> 
                 <?php
                 get_template_part('template-parts/slider');
                 ?>
@@ -115,7 +112,7 @@
         $isFullWidth = FALSE;
         $fullWidthTemplate = '';
 
-        if (get_theme_mod('qs_content_fullwidth', quicksand_get_color_scheme()['settings']['qs_content_fullwidth'])) {
+        if (get_theme_mod('qs_content_fullwidth', $colorScheme['settings']['qs_content_fullwidth'])) {
             $isFullWidth = TRUE;
         } elseif (is_page_template('template-fullwidth.php')) {
             $isFullWidth = TRUE;

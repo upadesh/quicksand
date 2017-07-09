@@ -21,7 +21,8 @@ if (!function_exists('quicksand_entry_meta')) :
         echo '<div class="card-block entry-meta">';
 
         // only show what is saved in array 'qs_content_show_meta'
-        $onlyShowThisMetaInfo = get_theme_mod("qs_content_show_meta", quicksand_get_color_scheme()['settings']['qs_content_show_meta']);
+        $colorScheme = quicksand_get_color_scheme();
+        $onlyShowThisMetaInfo = get_theme_mod("qs_content_show_meta", $colorScheme['settings']['qs_content_show_meta']);
 
         // nothing to show
         if (empty($onlyShowThisMetaInfo)) {
@@ -695,13 +696,12 @@ if (!function_exists('quicksand_author_biography')) :
     /**
      * Displays the author biography. 
      *
-     * Create your own quicksand_author_biography() function to override in a child theme.
-     *
-     * @since Quicksand 0.2.1
+     * Create your own quicksand_author_biography() function to override in a child theme. 
      */
     function quicksand_author_biography() {
         $authorMeta = get_the_author_meta('description');
-        if (is_singular() && !empty($authorMeta) && get_theme_mod('qs_biography_show', quicksand_get_color_scheme()['settings']['qs_biography_show'])) :
+        $colorScheme = quicksand_get_color_scheme();
+        if (is_singular() && !empty($authorMeta) && get_theme_mod('qs_biography_show', $colorScheme['settings']['qs_biography_show'])) :
             get_template_part('template-parts/biography');
         endif;
     }

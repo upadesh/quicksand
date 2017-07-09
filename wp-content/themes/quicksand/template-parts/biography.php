@@ -6,7 +6,8 @@
  * @subpackage Quicksand
  * @since Quicksand 0.2.1
  */
-if (!get_theme_mod('qs_biography_show', quicksand_get_color_scheme()['settings']['qs_biography_show'])) {
+$colorScheme = quicksand_get_color_scheme();
+if (!get_theme_mod('qs_biography_show', $colorScheme['settings']['qs_biography_show'])) {
     return;
 }
 ?>
