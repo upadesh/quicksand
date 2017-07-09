@@ -32,7 +32,7 @@ function quicksand_customize_preview_js() {
 add_action('customize_preview_init', 'quicksand_customize_preview_js');
 
 /**
- * Add refresh support for site title and description for the Theme Customizer.
+ * Add specific Control-Classes
  *
  * @see https://codex.wordpress.org/Theme_Customization_API
  * 
