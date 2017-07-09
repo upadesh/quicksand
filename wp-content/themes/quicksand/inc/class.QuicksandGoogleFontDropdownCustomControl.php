@@ -4,7 +4,7 @@
  */
 if (class_exists('WP_Customize_Control')) {
 
-    class GoogleFontDropdownCustomControl extends WP_Customize_Control {
+    class QuicksandGoogleFontDropdownCustomControl extends WP_Customize_Control {
 
         private $fonts = false;
 
