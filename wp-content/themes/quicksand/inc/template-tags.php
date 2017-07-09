@@ -30,27 +30,27 @@ if (!function_exists('quicksand_entry_meta')) :
 
         // date 
         if (in_array('date', $onlyShowThisMetaInfo) && in_array(get_post_type(), array('post', 'attachment'))) {
-            $quicksand_entry_date = get_quicksand_entry_date();
-            echo $quicksand_entry_date;
+            $quicksand_entry_date = get_quicksand_entry_date(); 
+            echo wp_kses_post($quicksand_entry_date);
         }
 
         // author
         if (in_array('author', $onlyShowThisMetaInfo)) {
             $author = sprintf('<span class="post-author"><a href="%s">%s</a></span>', esc_url(get_author_posts_url(get_the_author_meta('ID'))), get_the_author());
-            echo $author;
+            echo wp_kses_post($author); 
         }
 
         // post-format
         $format = get_post_format();
         if (in_array('post-format', $onlyShowThisMetaInfo) && current_theme_supports('post-formats', $format)) {
             $post_format_string = sprintf('<span class="entry-format">%1$s<a href="%2$s">%3$s</a></span>', sprintf('<span class="screen-reader-text">%s </span>', _x('Format', 'Used before post format.', 'quicksand')), esc_url(get_post_format_link($format)), get_post_format_string($format));
-            echo $post_format_string;
+            echo wp_kses_post($post_format_string); 
         }
 
         // taxonomies
         if (in_array('taxonomies', $onlyShowThisMetaInfo) && 'post' === get_post_type()) {
-            $quicksandEntryTaxonomies = get_quicksand_entry_taxonomies();
-            echo $quicksandEntryTaxonomies['categories'];
+            $quicksandEntryTaxonomies = get_quicksand_entry_taxonomies(); 
+            echo wp_kses_post($quicksandEntryTaxonomies['categories']); 
         }
 
         // comments
@@ -255,7 +255,7 @@ if (!function_exists('quicksand_entry_title_postformat_link')) :
 
             <div class="post-link">  
                 <h2 class="card-title <?php echo esc_attr($class); ?>">
-                    <a href="<?php echo get_url_in_content(get_the_content()); ?>" target="_blank"><i class="fa fa-link" aria-hidden="true"></i> <?php the_title(); ?></a> 
+                    <a href="<?php echo esc_attr(get_url_in_content(get_the_content())); ?>" target="_blank"><i class="fa fa-link" aria-hidden="true"></i> <?php the_title(); ?></a> 
                 </h2> 
             </div><!-- .post-link -->
         </header><!-- .entry-header --> 
@@ -584,7 +584,7 @@ if (!function_exists('quicksand_the_entry_content_video')) :
                     $content = apply_filters('the_excerpt', get_the_excerpt());
                 }
 
-                echo $content;
+                echo wp_kses_post($content);
                 ?></p>
         </div>  
 
