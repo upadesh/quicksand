@@ -78,24 +78,24 @@ class QuicksandWidgetCategories extends WP_Widget {
         ?>
 
         <p>
-            <label for="<?php echo $this->get_field_id('title'); ?>"><?php esc_html_e('Title ', 'quicksand') ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_html_e('Title ', 'quicksand') ?></label>
             <input  type="text" value="<?php echo esc_attr($instance['title']); ?>"
-                    name="<?php echo $this->get_field_name('title'); ?>"
-                    id="<?php $this->get_field_id('title'); ?>" />
+                    name="<?php echo esc_attr($this->get_field_name('title')); ?>"
+                    id="<?php esc_attr($this->get_field_id('title')); ?>" />
         </p>
 
         <p>
-            <label for="<?php echo $this->get_field_id('limit'); ?>"> <?php esc_html_e('Limit Categories ', 'quicksand') ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('limit')); ?>"> <?php esc_html_e('Limit Categories ', 'quicksand') ?></label>
             <input type="number" min="0" value="<?php echo esc_attr($instance['limit']); ?>"
-                    name="<?php echo $this->get_field_name('limit'); ?>"
-                    id="<?php $this->get_field_id('limit'); ?>" />
+                    name="<?php echo esc_attr($this->get_field_name('limit')); ?>"
+                    id="<?php esc_attr($this->get_field_id('limit')); ?>" />
         </p>
 
         <p>
             <label>
                 <input  type="checkbox"
-                        name="<?php echo $this->get_field_name('enable_count'); ?>"
-                        id="<?php $this->get_field_id('enable_count'); ?>" <?php if ($instance['enable_count']) echo 'checked=checked '; ?>
+                        name="<?php echo esc_attr($this->get_field_name('enable_count')); ?>"
+                        id="<?php esc_attr($this->get_field_id('enable_count')); ?>" <?php if ($instance['enable_count']) echo esc_attr('checked=checked '); ?>
                         />
                         <?php esc_html_e('Enable Posts Count', 'quicksand') ?>
             </label>
