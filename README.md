@@ -78,7 +78,7 @@ cd ..; zip -r quicksand.zip quicksand
 cd  wp 
 vim wp-config.php 
 	define('FS_METHOD', 'direct');
-sudo chown -R piccard:www-data ../wp/
+sudo chown -R name:group ../wp/
 ```
 
 ### Install Plugins
