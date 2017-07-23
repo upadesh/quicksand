@@ -3,7 +3,7 @@ Quicksand comes with 3 ready-to-use color-schemes, one with rounded, two with co
 
 ## Release
 ### Change version in files
-- Readme.txt
+- readme.txt
 - style.css    
 - package.json
 - functions.php
