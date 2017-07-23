@@ -99,6 +99,9 @@ sudo su -c "gem install sass"
 sudo npm  -g install grunt grunt-cli coffee-script jshint node-gyp
 ```
 
+### Upload URL
+[Submit Theme](https://wordpress.org/themes/upload/)
+
 ### Install Quicksand
 ```
 cd /tmp
