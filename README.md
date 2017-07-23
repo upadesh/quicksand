@@ -46,7 +46,7 @@ cd /tmp/quicksand
 ```
 rm -Rf node_modules
 rm -Rf dev
-rm -f Gruntfile.js
+rm -f package.json
 rm -f Gruntfile.js
 ``` 
 
