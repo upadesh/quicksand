@@ -27,7 +27,7 @@
 global $quicksand_version;
 global $wp_min_version;
 
-$quicksand_version = '0.6.5';
+$quicksand_version = '0.6.6';
 $wp_min_version = '4.7';
 
 /**
