@@ -72,7 +72,7 @@ cd ..; zip -r quicksand.zip quicksand
 
 
 ## Development
-### Install XML-Unit-Test 
+### No FTP please
 
 ```
 cd  wp 
@@ -82,8 +82,8 @@ sudo chown -R piccard:www-data ../wp/
 ```
 
 ### Install Plugins
-[Theme-Check](http://ottopress.com/wordpress-plugins/theme-check/ )
-[NS Theme-Check](https://github.com/WPTRT/theme-sniffer )
+- [Theme-Check](http://ottopress.com/wordpress-plugins/theme-check/ )
+- [NS Theme-Check](https://github.com/WPTRT/theme-sniffer )
 
 ### Install XML-Unit-Test 
 [XML-Unit-Test](https://codex.wordpress.org/Theme_Unit_Test)
