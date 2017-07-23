@@ -15,7 +15,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge"> 
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <?php if (is_singular() && pings_open(get_queried_object())) : ?>
-            <link rel="pingback" href="<?php esc_attr(bloginfo('pingback_url')); ?>">
+            <link rel="pingback" href="<?php esc_url(bloginfo('pingback_url')); ?>">
         <?php endif; ?>  
         <?php wp_head(); ?> 
     </head>
@@ -61,7 +61,7 @@
                     <?php if (has_header_image()) { ?>
                         <div class="site-info header-image row">  
                             <div class="header-wrapper col-xs-12">
-                                <img class="custom-header-image" src="<?php header_image(); ?>" alt="" />
+                                <img class="custom-header-image" src="<?php esc_url(header_image()); ?>" alt="" />
                                 <div  class="site-info-wrapper"> 
                                     <div class="site-infos">
                                         <h1 class="site-title">
