@@ -41,30 +41,27 @@ cd /tmp/quicksand
 ```
 
 
-	
-### Delete node_modules-folder again
+### Delete development-files & -folders	
+#### node_modules
 ```
 rm -Rf node_modules
+rm -Rf dev
+rm -f Gruntfile.js
+rm -f Gruntfile.js
+```
 ```
 
 
-### Delete all hidden files
+#### all hidden files
 - .DS_Store
 - .dS_Store
 - .a.swp
 - .netbeans.xml	
 
-
 ```
 find . -iname '.*' -type f -delete
 ```
-
-### Delete dev-directory
-```
-rm -Rf dev
-```
-
-
+  
 ### zip the whole thing
 ```
 cd ..; zip -r quicksand.zip quicksand
