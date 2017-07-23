@@ -41,8 +41,8 @@ cd /tmp/quicksand
 ```
 
 
-### Delete development-files & -folders	
-#### node_modules
+### Delete development-files & -folders	 
+
 ```
 rm -Rf node_modules
 rm -Rf dev
