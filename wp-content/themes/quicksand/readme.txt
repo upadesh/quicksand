@@ -32,9 +32,18 @@ Quicksand-Theme uses:
 * FontAwesome (http://fontawesome.io) 
   ** The Font Awesome font is licensed under the SIL OFL 1.1 (http://scripts.sil.org/OFL)
   ** Font Awesome CSS, LESS, and Sass files are licensed under the MIT License (https://opensource.org/licenses/mit-license.html) 
+* Google Fonts (https://fonts.google.com/)
+  ** Abel (Matthew Desmond - http://www.madtype.com) licenesed under SIL Open Font License, Version 1.1 (http://scripts.sil.org/OFL)
+  ** Raleway (Matt McInerney - matt@pixelspread.com, Pablo Impallari - www.impallari.com, Rodrigo Fuenzalida - www.rfuenzalida.com) licenesed under SIL Open Font License, Version 1.1 (http://scripts.sil.org/OFL)
+  ** Rokkitt (Vernon Adams,vern@newtypography.co.uk) licenesed under SIL Open Font License, Version 1.1 (http://scripts.sil.org/OFL)
+  ** Source (Adobe Systems Incorporated,http://www.adobe.com/) licenesed under SIL Open Font License, Version 1.1 (http://scripts.sil.org/OFL)
 * Flexslider (http://flexslider.woothemes.com/) licensed under GPLv2 (http://www.gnu.org/licenses/gpl-2.0.html) 
 * Lightgallery (https://sachinchoolur.github.io/lightGallery/) licensed under GNU AGPLv3 (https://github.com/sachinchoolur/lightGallery/blob/master/LICENSE.md) 
+* lg-thumbnail (https://github.com/sachinchoolur/lg-thumbnail) licensed under GNU AGPLv3 (https://github.com/sachinchoolur/lightGallery/blob/master/LICENSE.md) 
+* FitVids (https://github.com/rosszurowski/fitvids)  licensed under „DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE“ (https://github.com/rosszurowski/fitvids/blob/master/LICENSE.md)
+* Tether (https://github.com/HubSpot/tether) licensed under MIT license (https://github.com/twbs/bootstrap/blob/master/LICENSE) 
 * Unless otherwise specified, all images are created by Andreas Stephan and licendes under GPLv3 or later (https://www.gnu.org/licenses/gpl-3.0.en.html)
+
  
 == Theme Features ==
 
