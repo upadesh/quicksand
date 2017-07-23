@@ -59,6 +59,10 @@ rm -Rf node_modules
 find . -iname '.*' -type f -delete
 ```
 
+### Delete dev-directory
+```
+rm -Rf dev
+```
 
 
 ### zip the whole thing

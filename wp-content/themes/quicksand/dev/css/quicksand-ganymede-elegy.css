@@ -656,6 +656,12 @@ maybe padding of cells smaller in media-query ... who knows????
  *
  * @hint    please use the common-classes for styling
  */
+/*meta-info, i.e. cats, tags, search, ...*/
+.card.quicksand-meta-list-header .card-block {
+  border-top: 1px solid #eceeef;
+  border-right: 1px solid #eceeef;
+  border-left: 1px solid #eceeef; }
+
 article.card {
   border-bottom: 1px solid #eceeef !important; }
   article.card .card-header {

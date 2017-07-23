@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Quicksand\n"
-"POT-Creation-Date: 2017-07-09 18:11+0200\n"
-"PO-Revision-Date: 2017-07-09 18:13+0200\n"
+"POT-Creation-Date: 2017-07-23 13:38+0200\n"
+"PO-Revision-Date: 2017-07-23 13:38+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -93,48 +93,48 @@ msgstr "Footer Sidebar"
 msgid "Add widgets here to appear at the bottom."
 msgstr "Füge Widgets hier hinzu, damit sie im Footer erscheinen."
 
-#: functions.php:472
+#: functions.php:476
 msgid "Comment"
 msgstr "Kommentar"
 
-#: functions.php:507
+#: functions.php:511
 msgid "Name"
 msgstr "Name"
 
-#: functions.php:509
+#: functions.php:513
 msgid "Email"
 msgstr "Email"
 
-#: functions.php:511
+#: functions.php:515
 msgid "Website"
 msgstr "Webseite"
 
-#: functions.php:531
+#: functions.php:535
 msgid "To view this protected post, enter the password below:"
 msgstr ""
 "Geben Sie bitte Ihr Kennwort ein, um diesen geschützten Beitrag zu sehen"
 
-#: functions.php:603 inc/template-tags.php:712
+#: functions.php:607 inc/template-tags.php:712
 msgid "Read more"
 msgstr "Weiter lesen"
 
-#: functions.php:625
+#: functions.php:629
 msgid "Category"
 msgstr "Kategorie"
 
-#: functions.php:627
+#: functions.php:631
 msgid "Tag"
 msgstr "Tag"
 
-#: functions.php:629 inc/customizer.php:502
+#: functions.php:633 inc/customizer.php:502
 msgid "Author"
 msgstr "Autor"
 
-#: functions.php:631
+#: functions.php:635
 msgid "Month"
 msgstr "Monat"
 
-#: functions.php:631
+#: functions.php:635
 msgid "F Y"
 msgstr "F Y"
 
@@ -165,12 +165,18 @@ msgstr ""
 "<span class=\"meta-nav\">Veröffentlicht in</span><span class=\"post-title\">"
 "%title</span>"
 
+#: inc/QuicksandNavwalker.php:209
+msgid "Add a menu"
+msgstr "Menü hinzufügen"
+
 #: inc/back-compat.php:40 inc/back-compat.php:52 inc/back-compat.php:69
 #, php-format
 msgid ""
 "Quicksand requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
+"Quicksand benötigt mindestens WordPress Version%1$s. Sie betreiben Version"
+"%2$s. Bitte aktualisieren Sie und versuchen Sie es erneut."
 
 #: inc/class.QuicksandCustomizeCategoryControl.php:11
 msgid "&mdash; Select &mdash;"
