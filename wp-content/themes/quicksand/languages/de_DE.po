@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Quicksand\n"
-"POT-Creation-Date: 2017-07-23 13:38+0200\n"
-"PO-Revision-Date: 2017-07-23 13:38+0200\n"
+"POT-Creation-Date: 2017-07-25 23:46+0200\n"
+"PO-Revision-Date: 2017-07-25 23:47+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -517,8 +517,7 @@ msgstr "Veröffentlicht am"
 msgid ", "
 msgstr ", "
 
-#: inc/template-tags.php:129 inc/widgets/class.QuicksandWidgetCategories.php:23
-#: inc/widgets/class.QuicksandWidgetCategories.php:73
+#: inc/template-tags.php:129 inc/widgets/class.QuicksandWidgetCategories.php:92
 msgid "Categories"
 msgstr "Categories"
 
@@ -549,22 +548,21 @@ msgstr "<span class=\"screen-reader-text\">&#8222;%s&#8220;</span> bearbeiten"
 msgid "Quicksand Archives"
 msgstr "Quicksand Archive"
 
-#: inc/widgets/class.QuicksandWidgetArchives.php:23
-#: inc/widgets/class.QuicksandWidgetArchives.php:73
+#: inc/widgets/class.QuicksandWidgetArchives.php:92
 msgid "Archives"
 msgstr "Archive"
 
-#: inc/widgets/class.QuicksandWidgetArchives.php:81
-#: inc/widgets/class.QuicksandWidgetCategories.php:81
+#: inc/widgets/class.QuicksandWidgetArchives.php:100
+#: inc/widgets/class.QuicksandWidgetCategories.php:100
 msgid "Title "
 msgstr "Title"
 
-#: inc/widgets/class.QuicksandWidgetArchives.php:88
+#: inc/widgets/class.QuicksandWidgetArchives.php:107
 msgid "Limit Archives "
 msgstr "Limitiere Archive"
 
-#: inc/widgets/class.QuicksandWidgetArchives.php:100
-#: inc/widgets/class.QuicksandWidgetCategories.php:100
+#: inc/widgets/class.QuicksandWidgetArchives.php:119
+#: inc/widgets/class.QuicksandWidgetCategories.php:119
 msgid "Enable Posts Count"
 msgstr "Zähler anzeigen"
 
@@ -572,7 +570,7 @@ msgstr "Zähler anzeigen"
 msgid "Quicksand Categories"
 msgstr "Quicksand Kategorien"
 
-#: inc/widgets/class.QuicksandWidgetCategories.php:88
+#: inc/widgets/class.QuicksandWidgetCategories.php:107
 msgid "Limit Categories "
 msgstr "Limitiere Kategorien"
 
@@ -580,8 +578,8 @@ msgstr "Limitiere Kategorien"
 msgid "Search Results for:"
 msgstr "Suche-Resultate für:"
 
-#: searchform.php:13 template-parts/navigation-primary.php:38
-#: template-parts/navigation-primary.php:54
+#: searchform.php:13 template-parts/searchform_nav.php:6
+#: template-parts/searchform_nav_mobile.php:8
 msgid "Search ..."
 msgstr "Suche …"
 
@@ -636,7 +634,20 @@ msgstr ""
 "Es sieht so aus, als ob wir nicht das finden könnten, wonach Sie gesucht "
 "haben. Möglicherweise hilft eine Suche."
 
-#: template-parts/navigation-primary.php:40
+#: template-parts/navigation-primary.php:16
+msgid "toggle navigation"
+msgstr "Navigation umschalten"
+
+#: template-parts/navigation-primary.php:21
+msgid "close"
+msgstr "schließen"
+
+#: template-parts/navigation-primary.php:24
+#: template-parts/navigation-primary.php:58
+msgid "search"
+msgstr "suchen"
+
+#: template-parts/searchform_nav_mobile.php:10
 msgid "Search"
 msgstr "Suche"
 
