@@ -755,15 +755,6 @@ if (!function_exists('quicksand_get_customizer_classes')) :
         require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandCustomizeCategoryControl.php' );
     }
 
-
-
-
-
-
-
-
-
-
-
+ 
  
 endif; 
