@@ -114,7 +114,7 @@ class QuicksandWidgetArchives extends WP_Widget {
             <label>
                 <input  type="checkbox"
                         name="<?php echo esc_attr($this->get_field_name('enable_count')); ?>"
-                        id="<?php esc_attr($this->get_field_id('enable_count')); ?>" <?php if ($instance['enable_count']) echo esc_attr('checked=checked '); ?>
+                        id="<?php esc_attr($this->get_field_id('enable_count')); ?>" <?php checked( $instance['enable_count'], 1 ); ?>
                         />
                         <?php esc_html_e('Enable Posts Count', 'quicksand') ?>
             </label>
@@ -124,4 +124,4 @@ class QuicksandWidgetArchives extends WP_Widget {
     }
 
 }
-?>
+?> 
