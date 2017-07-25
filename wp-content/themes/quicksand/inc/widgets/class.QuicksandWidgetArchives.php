@@ -37,12 +37,13 @@ class QuicksandWidgetArchives extends WP_Widget {
      * @param type $instance
      */
     function widget($args, $instance) {
-        extract($args);
-
-        if (isset($instance['title'])) {
-            echo wp_kses_post($before_widget);
+        extract($args); 
+        
+        echo wp_kses_post($before_widget);
+        
+        if (!empty($instance['title'])) {
             echo wp_kses_post($before_title);
-            echo wp_kses_post($instance['title']);
+            echo wp_kses_post(apply_filters('widget_title', $instance['title']));
             echo wp_kses_post($after_title);
         }
         ?>

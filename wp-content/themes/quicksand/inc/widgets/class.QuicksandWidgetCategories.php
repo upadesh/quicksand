@@ -20,7 +20,7 @@ class QuicksandWidgetCategories extends WP_Widget {
      * @param array $old_instance Previously saved values from database.
      *
      * @return array Updated safe values to be saved.
-     */ 
+     */
     public function update($new_instance, $old_instance) {
         $instance = array();
         $instance['title'] = sanitize_text_field((!empty($new_instance['title']) ) ? strip_tags($new_instance['title']) : '');
@@ -38,11 +38,12 @@ class QuicksandWidgetCategories extends WP_Widget {
      */
     function widget($args, $instance) {
         extract($args);
-
-        if (isset($instance['title'])) {
-            echo wp_kses_post($before_widget);
+ 
+        echo wp_kses_post($before_widget);
+        
+        if (!empty($instance['title'])) {
             echo wp_kses_post($before_title);
-            echo wp_kses_post($instance['title']);
+            echo wp_kses_post(apply_filters('widget_title', $instance['title']));
             echo wp_kses_post($after_title);
         }
         ?>
