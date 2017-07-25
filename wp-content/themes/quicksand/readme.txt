@@ -8,7 +8,7 @@ Tested up to: WP 4.8
 Requires at least WP-Version: 4.6 
 Author: Cafe Serendipity - Andreas Stephan
 Author URI: http://cafe-serendipity.com
-License: GPLv3 or later
+License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
 Here is a short description of the plugin. 
@@ -68,3 +68,8 @@ Quicksand-Theme uses:
 
 * Currently the top-menu supports only a hierarchical depth of 1 and the footer-menu is flat, which will be changed in the future. 
 
+
+---------------------------------------------------------
+Quicksand WordPress Theme, Copyright 2017 Andreas Stephan
+Quicksand is distributed under the terms of the GPLv3
+---------------------------------------------------------
