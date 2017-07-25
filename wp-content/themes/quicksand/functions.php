@@ -309,7 +309,7 @@ if (!function_exists('quicksand_styles')) :
         wp_enqueue_style('quicksand-flexslider', get_template_directory_uri() . '/js/flexslider/flexslider.css', array());
 
         // custom styles from customizer
-        ob_start(); 
+        ob_start();
         include_once( get_template_directory() . '/inc/customize-css.php');
         $custom_css = ob_get_contents();
         ob_end_clean();
@@ -339,7 +339,7 @@ if (!function_exists('quicksand_scripts')) :
             wp_enqueue_script('comment-reply');
         }
 
-        if (WP_DEBUG == true) { 
+        if (WP_DEBUG == true) {
             wp_register_script('woo-flexslider', get_template_directory_uri() . '/js/flexslider/jquery.flexslider.js', array('jquery'), FALSE, true);
             wp_register_script('woo-lg-thumbnail', get_template_directory_uri() . '/js/lg-thumbnail.js', array('woo-lightgallery'), FALSE, true);
             wp_register_script('woo-lightgallery', get_template_directory_uri() . '/js/lightgallery/js/lightgallery.js', array('jquery'), FALSE, true);
@@ -713,22 +713,6 @@ endif;
 
 
 
-if (!function_exists('quicksand_add_editor_styles')) :
-
-    /**
-     * Apply theme's stylesheet to the visual editor.
-     *
-     * @uses add_editor_style() Links a stylesheet to visual editor
-     */
-    function quicksand_add_editor_styles() {
-        add_editor_style('/css/custom-editor-style.css');
-    }
-
-endif;
-add_action('init', 'quicksand_add_editor_styles');
-
-
-
 /**
  * Custom template tags for this theme.
  */
@@ -770,6 +754,8 @@ if (!function_exists('quicksand_get_customizer_classes')) :
         require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandCustomizeControlCheckboxMultiple.php' );
         require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandCustomizeCategoryControl.php' );
     }
+
+
 
 
 
