@@ -12,6 +12,25 @@ class QuicksandWidgetArchives extends WP_Widget {
     }
 
     /**
+     * Sanitize widget form values as they are saved.
+     *
+     * @see WP_Widget::update()
+     *
+     * @param array $new_instance Values just sent to be saved.
+     * @param array $old_instance Previously saved values from database.
+     *
+     * @return array Updated safe values to be saved.
+     */
+    public function update($new_instance, $old_instance) {
+        $instance = array();
+        $instance['title'] = sanitize_text_field((!empty($new_instance['title']) ) ? strip_tags($new_instance['title']) : '');
+        $instance['enable_count'] = absint((!empty($new_instance['enable_count']) ) ? 1 : 0);
+        $instance['limit'] = absint((!empty($new_instance['limit']) ) ? strip_tags($new_instance['limit']) : 0);
+
+        return $instance;
+    }
+
+    /**
      * output of the widget
      * 
      * @param type $args
@@ -20,15 +39,14 @@ class QuicksandWidgetArchives extends WP_Widget {
     function widget($args, $instance) {
         extract($args);
 
-        $title = isset($instance['title']) ? $instance['title'] : esc_html__('Archives', 'quicksand');
-        $enable_count = isset($instance['enable_count']) ? $instance['enable_count'] : NULL;
-        $limit = isset($instance['limit']) ? $instance['limit'] : NULL;
-
-        echo wp_kses_post($before_widget);
-        echo wp_kses_post($before_title);
-        echo wp_kses_post($title);
-        echo wp_kses_post($after_title);
+        if (isset($instance['title'])) {
+            echo wp_kses_post($before_widget);
+            echo wp_kses_post($before_title);
+            echo wp_kses_post($instance['title']);
+            echo wp_kses_post($after_title);
+        }
         ?>
+
 
 
         <div class="archives-widget">
@@ -44,17 +62,17 @@ class QuicksandWidgetArchives extends WP_Widget {
                     'order' => 'DESC',
                     'post_type' => 'post'
                 );
-                if (isset($enable_count)) {
+                if (!empty($instance['enable_count'])) {
                     $args['show_post_count'] = 1;
                 }
-                if (!empty($limit)) {
-                    $args['limit'] = $limit;
+                if (!empty($instance['limit'])) {
+                    $args['limit'] = $instance['limit'];
                 }
 
-                $variable = wp_get_archives($args);
-                $variable = str_replace('(', '<span class="tag tag-default tag-pill float-xs-right">', $variable);
-                $variable = str_replace(')', '</span>', $variable);
-                echo wp_kses_post($variable);
+                $archive = wp_get_archives($args);
+                $archive = str_replace('(', '<span class="tag tag-default tag-pill float-xs-right">', $archive);
+                $archive = str_replace(')', '</span>', $archive);
+                echo wp_kses_post($archive);
                 ?>
             </ul>  
         </div><!-- end widget content -->
@@ -72,9 +90,9 @@ class QuicksandWidgetArchives extends WP_Widget {
         if (!isset($instance['title']))
             $instance['title'] = esc_html__('Archives', 'quicksand');
         if (!isset($instance['limit']))
-            $instance['limit'] = NULL;
+            $instance['limit'] = 0;
         if (!isset($instance['enable_count']))
-            $instance['enable_count'] = FALSE;
+            $instance['enable_count'] = 0;
         ?>
 
         <p>
@@ -87,8 +105,8 @@ class QuicksandWidgetArchives extends WP_Widget {
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('limit')); ?>"> <?php esc_html_e('Limit Archives ', 'quicksand') ?></label>
             <input type="number" min="0" value="<?php echo esc_attr($instance['limit']); ?>"
-                    name="<?php echo esc_attr($this->get_field_name('limit')); ?>"
-                    id="<?php esc_attr($this->get_field_id('limit')); ?>" />
+                   name="<?php echo esc_attr($this->get_field_name('limit')); ?>"
+                   id="<?php esc_attr($this->get_field_id('limit')); ?>" />
         </p>
 
         <p>
