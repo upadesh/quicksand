@@ -355,7 +355,7 @@ if (!function_exists('quicksand_scripts')) :
 
         $colorScheme = quicksand_get_color_scheme();
         $colorScheme['settings']['qs_content_use_lightgallery'] = get_theme_mod('qs_content_use_lightgallery', $colorScheme['settings']['qs_content_use_lightgallery']);
-        wp_localize_script('quicksand', 'colorScheme', $colorScheme);
+        wp_localize_script('quicksand', 'quicksandColorScheme', $colorScheme);
     }
 
 endif;

@@ -10,7 +10,7 @@
  */
 function quicksand_customize_control_js() {
     wp_enqueue_script('color-scheme-control', get_template_directory_uri() . '/js/color-scheme-control.js', array('customize-controls', 'iris', 'underscore', 'wp-util'), 'quicksand', true);
-    wp_localize_script('color-scheme-control', 'colorScheme', quicksand_get_color_schemes());
+    wp_localize_script('color-scheme-control', 'quicksandColorScheme', quicksand_get_color_schemes());
 }
 
 add_action('customize_controls_enqueue_scripts', 'quicksand_customize_control_js');
