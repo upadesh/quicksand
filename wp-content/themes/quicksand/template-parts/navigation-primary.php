@@ -13,15 +13,15 @@ $primary_nav_options = array(
 
 <div class="site-navigation"> 
     <nav class="navbar navbar-light bg-faded site-nav">
-        <button class="navbar-toggler hidden-md-up float-xs-left" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsing-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler hidden-md-up float-xs-left" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsing-navbar" aria-expanded="false" aria-label="<?php echo esc_html__('toggle navigation',  'quicksand'); ?>">
             &#9776;
         </button>
         <!--search & close buttons in mobile-->
         <div class="nav-search-mobile-wrapper hidden-md-up float-xs-right"> 
-            <a class="btn btn-secondary nav-search-close-mobile hidden-xs-up" href="#" aria-label="close">
+            <a class="btn btn-secondary nav-search-close-mobile hidden-xs-up" href="#" aria-label="<?php echo esc_html__('close',  'quicksand'); ?>">
                 <i class="fa fa-times fa-lg" aria-hidden="true"></i>
             </a> 
-            <a class="btn btn-secondary nav-search-mobile hidden-md-up"  href="#" aria-label="search">
+            <a class="btn btn-secondary nav-search-mobile hidden-md-up"  href="#" aria-label="<?php echo esc_html__('search',  'quicksand'); ?>">
                 <i class="fa fa-search" aria-hidden="true"></i>
             </a> 
         </div>
@@ -86,7 +86,7 @@ $primary_nav_options = array(
                     <?php wp_nav_menu($primary_nav_options); ?>   
                 </div>
                 <div class="nav-search-wrapper hidden-sm-down"> 
-                    <a class="btn btn-secondary nav-search" href="#" aria-label="search">
+                    <a class="btn btn-secondary nav-search" href="#" aria-label="<?php echo esc_html__('search',  'quicksand'); ?>">
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </a> 
                 </div>
