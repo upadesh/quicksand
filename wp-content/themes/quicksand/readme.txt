@@ -43,7 +43,8 @@ Quicksand-Theme uses:
 * FitVids (https://github.com/rosszurowski/fitvids)  licensed under „DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE“ (https://github.com/rosszurowski/fitvids/blob/master/LICENSE.md)
 * Tether (https://github.com/HubSpot/tether) licensed under MIT licensed (https://github.com/twbs/bootstrap/blob/master/LICENSE) 
 * Unless otherwise specified, all images are from https://www.pexels.com and licensed under the Creative Commons Zero (CC0) license (https://www.pexels.com/photo-license/)
- 
+* The screenshot-image was created by Andreas Stephan and licensed under GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
+
 == Theme Features ==
 
 * Bootstrap 4 
