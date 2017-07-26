@@ -654,6 +654,48 @@ if (!function_exists('quicksand_get_sidebars')) :
 endif;
 
 
+if (!function_exists('quicksand_get_searchform_nav_mobile')) :
+
+    /**
+     * returns the searchform for the navigation in mobile-mode 
+     */
+    function quicksand_get_searchform_nav_mobile($form) {
+        $form = '<form  id="nav-search-mobile" role="search" method="get" class="search-form" action="' . esc_url(home_url('/')) . '"> ';
+        $form .= '<div class="form-group">';
+        $form .= '<input id="quicksand-top-search-form-mobile" type="text" class="form-control" placeholder="' . esc_html_x('Search2 ...', 'label', 'quicksand') . '" value="' . get_search_query() . '" name="s" >';
+        $form .= '</div>';
+        $form .= '<button type="submit" class="btn btn-secondary nav-search-mobile-submit">' . esc_html__('Search', 'quicksand') . '</button>';
+        $form .= '</form>'; 
+        return $form;
+    }
+ 
+endif;
+
+
+if (!function_exists('quicksand_get_searchform_nav')) :
+
+    /**
+     * returns the searchform for the navigation
+     */
+    function quicksand_get_searchform_nav($form) {
+        $form = '<form id="nav-search" role="search" method="get" class="search-form" action="' . esc_url(home_url('/')) . '">';
+        $form .= '<div class="input-group">';
+        $form .= '<input id="quicksand-top-search-form" type="text" class="form-control" placeholder="' . esc_html_x('Search ...', 'label', 'quicksand') . '" value="' . get_search_query() . '" name="s" >';
+        $form .= '<span class="input-group-btn">';
+        $form .= '<button class="btn btn-secondary nav-search-submit" type="submit">';
+        $form .= '<i class="fa fa-search fa-lg"></i>';
+        $form .= '</button>';
+        $form .= '<a class="btn btn-secondary nav-search-cancel">';
+        $form .= '<i class="fa fa-times fa-lg"></i>';
+        $form .= '</a>';
+        $form .= '</span>';
+        $form .= '</div>';
+        $form .= '</form>';
+        
+        return $form;
+    }
+ 
+endif;
 
 
 
@@ -696,6 +738,12 @@ if (!function_exists('quicksand_get_customizer_classes')) :
         require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandCustomizeControlCheckboxMultiple.php' );
         require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandCustomizeCategoryControl.php' );
     }
+
+
+
+
+
+
 
 
 

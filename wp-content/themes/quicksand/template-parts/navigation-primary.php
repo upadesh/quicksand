@@ -28,12 +28,28 @@ $primary_nav_options = array(
         <!--workaround for safari-->
         <div style="clear:both"></div>
 
-        <?php get_template_part('template-parts/searchform_nav_mobile'); ?> 
+        <!--searchform in navbar-mobile-->
+        <div class="nav-searchform-mobile hidden-md-up">
+            <div class="card"> 
+                <div class="card-block"> 
+                    <?php
+                    add_filter('get_search_form', 'quicksand_get_searchform_nav_mobile');
+                    get_search_form();
+                    remove_filter('get_search_form', 'quicksand_get_searchform_nav_mobile');
+                    ?> 
+                </div>  
+            </div>
+        </div>
 
+        <!--searchform in navbar-->
         <div class="collapse navbar-toggleable-sm" id="collapsing-navbar">
-
-            <?php get_template_part('template-parts/searchform_nav'); ?>
-
+            <div class="nav-searchform hidden-xs-up">
+                <?php
+                add_filter('get_search_form', 'quicksand_get_searchform_nav');
+                get_search_form();
+                remove_filter('get_search_form', 'quicksand_get_searchform_nav');
+                ?>  
+            </div>
             <!--standard navigation-->
             <div class="nav-content">
                 <?php
