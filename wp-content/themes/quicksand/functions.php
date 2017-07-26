@@ -27,7 +27,7 @@
 global $quicksand_version;
 global $wp_min_version;
 
-$quicksand_version = '0.6.7';
+$quicksand_version = '0.6.8';
 $wp_min_version = '4.7';
 
 /**
@@ -750,7 +750,7 @@ if (!function_exists('quicksand_get_customizer_classes')) :
      */
     function quicksand_get_customizer_classes() {
 
-        require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandGoogleFontDropdownCustomControl.php' );
+//        require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandGoogleFontDropdownCustomControl.php' );
         require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandCustomizeControlCheckboxMultiple.php' );
         require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandCustomizeCategoryControl.php' );
     }

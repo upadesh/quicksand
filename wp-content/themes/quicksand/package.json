@@ -1,6 +1,6 @@
 {
     "name": "quicksand",
-    "version": "0.6.7",
+    "version": "0.6.8",
     "description": "Wordpress theme built with Bootstrap 4",
     "main": "Gruntfile.js",
     "scripts": {
