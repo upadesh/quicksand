@@ -1,11 +1,6 @@
 <?php $colorScheme = quicksand_get_color_scheme(); ?> 
     body,html {
         font-size: <?php echo esc_attr( get_theme_mod('qs_content_font_size', $colorScheme['settings']['qs_content_font_size'])); ?>px;
-
-        /*only include google-font if api-key is present & font is selected*/
-        <?php if (get_theme_mod('qs_content_google_api_key', FALSE) && get_theme_mod('quicksand_google_font', FALSE)) { ?> 
-            font-family: '<?php echo esc_attr( get_theme_mod('quicksand_google_font', $colorScheme['settings']['quicksand_google_font'])); ?>', sans-serif;
-        <?php } ?> 
     } 
 
 

@@ -44,10 +44,7 @@ cd /tmp/quicksand
 ### Delete development-files & -folders	 
 
 ```
-rm -Rf node_modules
-rm -Rf dev
-rm -f package.json
-rm -f Gruntfile.js
+rm -Rf node_modules dev package.json Gruntfile.js
 ``` 
 
 

@@ -216,56 +216,6 @@ endif;
 add_action('widgets_init', 'quicksand_widgets_init');
 
 
-if (!function_exists('quicksand_get_google_fonts')) :
-
-    /**
-     * define here the google fonts you want to use
-     * 
-     * @return string
-     */
-    function quicksand_get_google_fonts($font = NULL) {
-        $fonts[] = $font . ':400,400i,700,700i';
-        return $fonts;
-    }
-
-endif;
-
-
-if (!function_exists('quicksand_fonts_url')) :
-
-    /**
-     * Register Google fonts for Quicksand.
-     *
-     * Create your own quicksand_fonts_url() function to override in a child theme.
-     *
-     * @return string Google fonts URL for the theme.
-     */
-    function quicksand_fonts_url() {
-        $hasApiKey = get_theme_mod('qs_content_google_api_key', FALSE);
-        $isSetGoogleFont = get_theme_mod('quicksand_google_font', FALSE);
-
-        if ($hasApiKey && $isSetGoogleFont) {
-            $colorScheme = quicksand_get_color_scheme();
-            $fonts = quicksand_get_google_fonts(get_theme_mod('quicksand_google_font', $colorScheme['settings']['quicksand_google_font']));
-            $fonts_url = '';
-            $subsets = 'latin,latin-ext';
-
-            if ($fonts) {
-                $fonts_url = add_query_arg(array(
-                    'family' => urlencode(implode('|', $fonts)),
-                    'subset' => urlencode($subsets),
-                        ), 'https://fonts.googleapis.com/css');
-            }
-
-            return esc_url($fonts_url);
-        }
-
-        return FALSE;
-    }
-
-endif;
-
-
 
 
 if (!function_exists('quicksand_styles')) :
@@ -289,12 +239,6 @@ if (!function_exists('quicksand_styles')) :
 
         // Theme stylesheet-description
         wp_enqueue_style('quicksand-desc-style', get_stylesheet_uri());
-
-        // google-fonts
-        $urlGoogleFonts = quicksand_fonts_url();
-        if ($urlGoogleFonts) {
-            wp_enqueue_style('quicksand-fonts', $urlGoogleFonts, array(), null);
-        }
 
         // font-awesome
         wp_enqueue_style('quicksand-style-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), $quicksand_version);
@@ -749,11 +693,11 @@ if (!function_exists('quicksand_get_customizer_classes')) :
      * include extended WP-Custompizer classes  
      */
     function quicksand_get_customizer_classes() {
-
-//        require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandGoogleFontDropdownCustomControl.php' );
         require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandCustomizeControlCheckboxMultiple.php' );
         require_once( trailingslashit(get_template_directory()) . 'inc/class.QuicksandCustomizeCategoryControl.php' );
     }
+
+
 
  
  

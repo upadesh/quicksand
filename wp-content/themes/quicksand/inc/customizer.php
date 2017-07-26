@@ -35,7 +35,7 @@ function quicksand_customize_register($wp_customize) {
 
     // include extended WP-Custompizer classes 
     quicksand_get_customizer_classes();
-    
+
     // get color-scheme
     $color_scheme_option = get_theme_mod('color_scheme', 'default');
     $colorSchemes = quicksand_get_color_schemes();
@@ -447,29 +447,6 @@ function quicksand_customize_register($wp_customize) {
         'default' => '',
         'sanitize_callback' => 'sanitize_text_field',
     ));
-//    $wp_customize->add_control(new QuicksandGoogleFontDropdownCustomControl($wp_customize, 'quicksand_google_font', array(
-//        'label' => 'Google Font',
-//        'section' => 'quicksand_content',
-//        'settings' => 'quicksand_google_font',
-//        'priority' => 10,
-//    )));
-
-
-//    // Google API Key
-//    $wp_customize->add_setting('qs_content_google_api_key', array(
-//        'default' => '',
-//        'sanitize_callback' => 'sanitize_text_field',
-//        'transport' => 'refresh',
-//    ));
-//
-//    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'content_google_api_key', array(
-//        'label' => esc_html__('Google API Key', 'quicksand'),
-//        'section' => 'quicksand_content',
-//        'settings' => 'qs_content_google_api_key',
-//        'priority' => 10,
-//        'description' => wp_kses_post(__('You need an API-Key to use Google Fonts. Create one <a href="https://console.developers.google.com/" target="_blank">here</a>, save it & reload the page.', 'quicksand')),
-//        'type' => 'text',
-//    )));
 
 
     // font-size
