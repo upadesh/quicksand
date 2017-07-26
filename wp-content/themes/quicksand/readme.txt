@@ -42,8 +42,7 @@ Quicksand-Theme uses:
 * lg-thumbnail (https://github.com/sachinchoolur/lg-thumbnail) licensed under GNU AGPLv3 (https://github.com/sachinchoolur/lightGallery/blob/master/LICENSE.md) 
 * FitVids (https://github.com/rosszurowski/fitvids)  licensed under „DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE“ (https://github.com/rosszurowski/fitvids/blob/master/LICENSE.md)
 * Tether (https://github.com/HubSpot/tether) licensed under MIT licensed (https://github.com/twbs/bootstrap/blob/master/LICENSE) 
-* Unless otherwise specified, all images are created by Andreas Stephan and licendes under GPLv3 or later (https://www.gnu.org/licenses/gpl-3.0.en.html)
-
+* Unless otherwise specified, all images are from https://www.pexels.com and licensed under the Creative Commons Zero (CC0) license (https://www.pexels.com/photo-license/)
  
 == Theme Features ==
 
