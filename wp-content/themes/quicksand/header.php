@@ -44,7 +44,7 @@
             if ($isHeaderEnabled):
                 // hide header on frontpage when slider is enabled
                 $hideWhenSliderIsEnabled = get_theme_mod('qs_header_hide_when_slider_enabled', $colorScheme['settings']['qs_header_hide_when_slider_enabled']);
-                $isFront = is_home() || is_front_page();
+                $isFront = is_front_page();
 
                 // show header only on front-page
                 $showOnlyOnFrontPage = get_theme_mod('qs_header_show_front', $colorScheme['settings']['qs_header_show_front']);
