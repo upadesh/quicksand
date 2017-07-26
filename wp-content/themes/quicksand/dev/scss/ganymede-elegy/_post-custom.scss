@@ -7,13 +7,12 @@
 /*meta-info, i.e. cats, tags, search, ...*/
 .card.quicksand-meta-list-header {
     .card-block {
-        border-top: 1px solid #eceeef;
-        border-right: 1px solid #eceeef;
-        border-left: 1px solid #eceeef;
+        border: 1px solid #eceeef; 
     }
+    
 }
 
-article.card {
+article:not(.quicksand-meta-list-header).card  {
     .card-header {
         border-bottom: #fff !important;
         padding-bottom: 0;
