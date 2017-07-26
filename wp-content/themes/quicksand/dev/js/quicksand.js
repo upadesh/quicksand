@@ -1,7 +1,6 @@
 //custom JS for initializing & more
 
-jQuery(document).ready(function ($) {
-//    console.info(colorScheme);
+jQuery(document).ready(function ($) { 
 
     // add btn-classes to paginations 
     var addClasses = function () {
