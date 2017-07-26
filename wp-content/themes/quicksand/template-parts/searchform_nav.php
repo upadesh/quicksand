@@ -1,7 +1,7 @@
 
 <!--searchform in navbar-->
 <div class="nav-searchform hidden-xs-up">
-    <form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/')); ?>">
+    <form method="get" action="<?php echo esc_url(home_url('/')); ?>">
         <div class="input-group">
             <input id="quicksand-top-search-form" type="text" class="form-control" placeholder="<?php echo esc_html_x('Search ...', 'label', 'quicksand'); ?>" value="<?php echo get_search_query(); ?>" name="s" >
             <span class="input-group-btn"> 
