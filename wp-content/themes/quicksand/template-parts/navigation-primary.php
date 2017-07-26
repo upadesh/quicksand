@@ -28,11 +28,11 @@ $primary_nav_options = array(
         <!--workaround for safari-->
         <div style="clear:both"></div>
 
-        <?php include_once(get_template_directory() . '/template-parts/searchform_nav_mobile.php'); ?> 
+        <?php get_template_part('template-parts/searchform_nav_mobile'); ?> 
 
         <div class="collapse navbar-toggleable-sm" id="collapsing-navbar">
 
-            <?php include_once(get_template_directory() . '/template-parts/searchform_nav.php'); ?>
+            <?php get_template_part('template-parts/searchform_nav'); ?>
 
             <!--standard navigation-->
             <div class="nav-content">

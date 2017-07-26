@@ -3,7 +3,7 @@
 <div class="nav-searchform-mobile hidden-md-up">
     <div class="card"> 
         <div class="card-block"> 
-            <form method="get" action="<?php echo esc_url(home_url('/')); ?>"> 
+            <form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/')); ?>"> 
                 <div class="form-group"> 
                     <input id="quicksand-top-search-form-mobile" type="text" class="form-control" placeholder="<?php echo esc_html_x('Search ...', 'label', 'quicksand'); ?>" value="<?php echo get_search_query(); ?>" name="s" >
                 </div>
