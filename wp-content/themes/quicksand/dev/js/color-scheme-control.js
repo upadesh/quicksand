@@ -9,7 +9,7 @@
             if ('color_scheme' === this.id) {
                 this.setting.bind('change', function (value) {
                     // other settings
-                    var settings = colorScheme[value].settings;
+                    var settings = quicksandColorScheme[value].settings;
 
                     api('qs_nav_fullwidth').set(settings['qs_nav_fullwidth']);
                     api('qs_header_fullwidth').set(settings['qs_header_fullwidth']);
@@ -32,7 +32,7 @@
 
 
                     // colors
-                    var colors = colorScheme[value].colors;
+                    var colors = quicksandColorScheme[value].colors;
                     var color = colors['background_color'];
                     api('background_color').set(color);
                     api.control('background_color').container.find('.color-picker-hex')

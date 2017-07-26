@@ -33,7 +33,7 @@ jQuery(document).ready(function ($) {
     // lightgallery
     var initLightgallery = function () {
         // only trigger lightgallery when it is turned on
-        if (parseInt(colorScheme.settings.qs_content_use_lightgallery)) {
+        if (parseInt(quicksandColorScheme.settings.qs_content_use_lightgallery)) {
 
             // add an alt attribute with the img-caption, so lightgallery can use it
             $("figure").each(function () {
