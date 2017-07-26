@@ -341,16 +341,16 @@ if (!function_exists('quicksand_scripts')) :
 
         if (WP_DEBUG == true) {
             wp_register_script('woo-flexslider', get_template_directory_uri() . '/js/flexslider/jquery.flexslider.js', array('jquery'), FALSE, true);
-            wp_register_script('woo-lg-thumbnail', get_template_directory_uri() . '/js/lg-thumbnail.js', array('woo-lightgallery'), FALSE, true);
-            wp_register_script('woo-lightgallery', get_template_directory_uri() . '/js/lightgallery/js/lightgallery.js', array('jquery'), FALSE, true);
+            wp_register_script('jquery-lg-thumbnail', get_template_directory_uri() . '/js/lg-thumbnail.js', array('jquery-lightgallery'), FALSE, true);
+            wp_register_script('jquery-lightgallery', get_template_directory_uri() . '/js/lightgallery/js/lightgallery.js', array('jquery'), FALSE, true);
             wp_register_script('jquery-fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'), FALSE, true);
         } else {
             wp_register_script('woo-flexslider', get_template_directory_uri() . '/js/flexslider/jquery.flexslider-min.js', array('jquery'), NULL, true);
-            wp_register_script('woo-lg-thumbnail', get_template_directory_uri() . '/js/lg-thumbnail.min.js', array('woo-lightgallery'), NULL, true);
-            wp_register_script('woo-lightgallery', get_template_directory_uri() . '/js/lightgallery/js/lightgallery.min.js', array('jquery'), NULL, true);
+            wp_register_script('jquery-lg-thumbnail', get_template_directory_uri() . '/js/lg-thumbnail.min.js', array('jquery-lightgallery'), NULL, true);
+            wp_register_script('jquery-lightgallery', get_template_directory_uri() . '/js/lightgallery/js/lightgallery.min.js', array('jquery'), NULL, true);
             wp_register_script('jquery-fitvids', get_template_directory_uri() . '/js/fitvids.min.js', array('jquery'), NULL, true);
         }
-        wp_register_script('quicksand', get_template_directory_uri() . '/js/quicksand.js', array('jquery-effects-core', 'jquery-effects-fold', 'woo-lightgallery', 'woo-lg-thumbnail', 'jquery-fitvids', 'woo-flexslider'), '1.0', true);
+        wp_register_script('quicksand', get_template_directory_uri() . '/js/quicksand.js', array('jquery-effects-core', 'jquery-effects-fold', 'jquery-lightgallery', 'jquery-lg-thumbnail', 'jquery-fitvids', 'woo-flexslider'), '1.0', true);
         wp_enqueue_script('quicksand');
 
         $colorScheme = quicksand_get_color_scheme();
