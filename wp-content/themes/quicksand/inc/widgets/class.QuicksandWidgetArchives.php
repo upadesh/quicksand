@@ -124,4 +124,3 @@ class QuicksandWidgetArchives extends WP_Widget {
     }
 
 }
-?> 

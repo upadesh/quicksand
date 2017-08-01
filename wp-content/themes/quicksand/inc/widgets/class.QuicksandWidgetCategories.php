@@ -124,4 +124,3 @@ class QuicksandWidgetCategories extends WP_Widget {
     }
 
 }
-?>
