@@ -251,6 +251,8 @@
 
     /*2nd text color*/
     .card-header.comments-title,
+    .card-subtitle.quicksand_archive_subtitle,
+    .card-subtitle.quicksand-search-subtitle,
     .quicksand_search_title,
     .quicksand_archive_title,
     .site-content .card-header.entry-header h1,
