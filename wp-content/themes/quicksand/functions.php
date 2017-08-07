@@ -685,9 +685,9 @@ if (!function_exists('quicksand_get_searchform_nav')) :
         $form .= '<button class="btn btn-secondary nav-search-submit" type="submit">';
         $form .= '<i class="fa fa-search fa-lg"></i>';
         $form .= '</button>';
-        $form .= '<a class="btn btn-secondary nav-search-cancel">';
+        $form .= '<button class="btn btn-secondary nav-search-cancel">';
         $form .= '<i class="fa fa-times fa-lg"></i>';
-        $form .= '</a>';
+        $form .= '</button>';
         $form .= '</span>';
         $form .= '</div>';
         $form .= '</form>';
