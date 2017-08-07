@@ -70,6 +70,8 @@ Quicksand-Theme uses:
 
 == Changelog ==
 
+=== 0.6.9 - 08.07.2017 ===
+
 * Mobile Search placeholder changed
 * CSS of Navbar-Search Cancel-Button 
 * no border-bottom to .entry-summary anymore
