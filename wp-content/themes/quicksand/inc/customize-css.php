@@ -160,7 +160,7 @@
         background: <?php echo esc_attr( get_theme_mod('qs_nav_link_hover_background_color', $colorScheme['colors']['qs_nav_link_hover_background_color'])); ?>;
     } 
 
-    /*search-bar*/ 
+    /*searchbar*/ 
     .nav-search-mobile-wrapper .nav-search-mobile,
     .nav-search-mobile-wrapper .nav-search-close-mobile,
     .nav-search-wrapper .nav-search {
@@ -250,6 +250,7 @@
 
 
     /*2nd text color*/
+    .card-header.comments-title,
     .quicksand_search_title,
     .quicksand_archive_title,
     .site-content .card-header.entry-header h1,
@@ -269,13 +270,15 @@
 
 
     /*post*/
+
     .site-content-area .card {
         background: <?php echo esc_attr( get_theme_mod('qs_content_post_bg_color', $colorScheme['colors']['qs_content_post_bg_color'])); ?>;
         border: 1px solid <?php echo esc_attr( get_theme_mod('qs_content_post_border_color', $colorScheme['colors']['qs_content_post_border_color'])); ?>; 
-    }
-    .site-content-area .card .entry-summary {
+    }     
+
+    .site-content-area .card-header.entry-header {
         border-bottom: 1px solid <?php echo esc_attr( get_theme_mod('qs_content_post_border_color', $colorScheme['colors']['qs_content_post_border_color'])); ?>; 
-    } 
+    }
 
     .site-content-area .quicksand-meta-list-header,
     .site-content-area .card .entry-header {  

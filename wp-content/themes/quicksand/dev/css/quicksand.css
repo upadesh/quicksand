@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Color-Theme: Asteriod Blues
  *
@@ -585,14 +586,12 @@ cite {
   margin-bottom: 32px !important;
   margin-bottom: 2rem !important;
   /* excerpt */
-  /*    .entry-summary { 
-            color: $grey;
-            font-style: italic;
-        } */
   /* 
      * for the WP-Test: reduce size of massively large image with no alignment.
      *  http://wp.local/archives/tag/alignment-2
      */ }
+  .card .entry-summary {
+    border-bottom:  0; }
   .card .entry-header.card-header .entry-title.card-title {
     margin-top: 16px;
     margin-top: 1rem;

@@ -68,6 +68,10 @@ Quicksand-Theme uses:
 
 * Currently the top-menu supports only a hierarchical depth of 1 and the footer-menu is flat, which will be changed in the future. 
 
+== Changelog ==
+
+* Mobile Search placeholder changed
+* Navbar-Search Cancel-Button chanegd from a to button
 
 ---------------------------------------------------------
 Quicksand WordPress Theme, Copyright 2017 Andreas Stephan
