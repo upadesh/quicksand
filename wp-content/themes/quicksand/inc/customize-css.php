@@ -6,7 +6,7 @@
 
 
     /* === btn-secondary === */
-    .btn.btn-secondary {
+    .btn.btn-secondary, .btn.btn-secondary.nav-search-cancel {
         outline-style: none;
         color: <?php echo esc_attr( get_theme_mod('qs_button_color_secondary', $colorScheme['colors']['qs_button_color_secondary'])); ?>;
         background-color: <?php echo esc_attr( get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary'])); ?>;
@@ -36,7 +36,7 @@
      * don't change anything in input-group-btns
      */ 
     .input-group-btn .btn-secondary:hover {
-        color: <?php echo esc_attr( get_theme_mod('qs_button_color_secondary', $colorScheme['colors']['qs_button_color_secondary'])); ?>;
+        color: <?php echo esc_attr( get_theme_mod('qs_button_color_secondary', $colorScheme['colors']['qs_button_color_secondary'])); ?> !important;
         background-color: <?php echo esc_attr( get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary'])); ?>;
         border-color: <?php echo esc_attr( get_theme_mod('qs_button_color_primary', $colorScheme['colors']['qs_button_color_primary'])); ?>; 
     }
