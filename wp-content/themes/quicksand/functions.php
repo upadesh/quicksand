@@ -662,7 +662,7 @@ if (!function_exists('quicksand_get_searchform_nav_mobile')) :
     function quicksand_get_searchform_nav_mobile($form) {
         $form = '<form  id="nav-search-mobile" role="search" method="get" class="search-form" action="' . esc_url(home_url('/')) . '"> ';
         $form .= '<div class="form-group">';
-        $form .= '<input id="quicksand-top-search-form-mobile" type="text" class="form-control" placeholder="' . esc_html_x('Search2 ...', 'label', 'quicksand') . '" value="' . get_search_query() . '" name="s" >';
+        $form .= '<input id="quicksand-top-search-form-mobile" type="text" class="form-control" placeholder="' . esc_html_x('Search ...', 'label', 'quicksand') . '" value="' . get_search_query() . '" name="s" >';
         $form .= '</div>';
         $form .= '<button type="submit" class="btn btn-secondary nav-search-mobile-submit">' . esc_html__('Search', 'quicksand') . '</button>';
         $form .= '</form>';
