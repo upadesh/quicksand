@@ -3,7 +3,7 @@
 Theme Name: Quicksand
 Theme URI: https://quicksand.cafe-serendipity.com
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog
-Version: 0.6.8
+Version: 0.6.9
 Tested up to: WP 4.8
 Requires at least WP-Version: 4.6 
 Author: Cafe Serendipity - Andreas Stephan
@@ -71,7 +71,10 @@ Quicksand-Theme uses:
 == Changelog ==
 
 * Mobile Search placeholder changed
-* Navbar-Search Cancel-Button chanegd from a to button
+* CSS of Navbar-Search Cancel-Button 
+* no border-bottom to .entry-summary anymore
+* Comment Header CSS changed
+* subtitle of search, archive & months changed to 2nd color  
 
 ---------------------------------------------------------
 Quicksand WordPress Theme, Copyright 2017 Andreas Stephan
