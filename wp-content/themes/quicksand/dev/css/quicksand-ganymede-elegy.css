@@ -650,6 +650,10 @@ maybe padding of cells smaller in media-query ... who knows????
 .format-video .card-header.quicksand-post-video {
   padding: 0; }
 
+/* gallery */
+.format-gallery .card-header.quicksand-post-gallery {
+  border-bottom: 0 !important; }
+
 /*
  * extend post-scss-file
  *
@@ -2309,9 +2313,6 @@ pre {
     background-color: #fff;
     border-color: #66afe9;
     outline: none; }
-  .form-control::-webkit-input-placeholder {
-    color: #999;
-    opacity: 1; }
   .form-control:-ms-input-placeholder {
     color: #999;
     opacity: 1; }

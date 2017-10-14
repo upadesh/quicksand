@@ -182,3 +182,11 @@ maybe padding of cells smaller in media-query ... who knows????
         padding: 0;
     }
 }
+
+
+/* gallery */
+.format-gallery {
+    .card-header.quicksand-post-gallery {
+            border-bottom: 0 !important;
+    }
+} 
