@@ -74,6 +74,7 @@ Quicksand-Theme uses:
 
 * format-gallery CSS changed
 * header CSS changed
+* CSS for centering image fxed
 
 
 
