@@ -1,4 +1,4 @@
-/*! lightgallery - v1.5.0 - 2017-07-16
+/*! lightgallery - v1.6.2 - 2017-10-03
 * http://sachinchoolur.github.io/lightGallery/
 * Copyright (c) 2017 Sachin N; Licensed GPLv3 */
 (function (root, factory) {
@@ -917,6 +917,7 @@
             }
 
         }
+        _this.index = index;
 
     };
 
@@ -1110,7 +1111,7 @@
         var endCoords = 0;
         var isMoved = false;
 
-        if (_this.s.enableSwipe && _this.isTouch && _this.doCss()) {
+        if (_this.s.enableSwipe && _this.doCss()) {
 
             _this.$slide.on('touchstart.lg', function(e) {
                 if (!_this.$outer.hasClass('lg-zoomed') && !_this.lgBusy) {
@@ -1149,7 +1150,7 @@
         var endCoords = 0;
         var isDraging = false;
         var isMoved = false;
-        if (_this.s.enableDrag && !_this.isTouch && _this.doCss()) {
+        if (_this.s.enableDrag && _this.doCss()) {
             _this.$slide.on('mousedown.lg', function(e) {
                 // execute only on .lg-object
                 if (!_this.$outer.hasClass('lg-zoomed')) {
