@@ -70,6 +70,12 @@ Quicksand-Theme uses:
 
 == Changelog ==
 
+=== 0.7.0 - 14.10.2017 ===
+
+* format-gallery CSS changed
+
+
+
 === 0.6.9 - 08.07.2017 ===
 
 * Mobile Search placeholder changed

@@ -141,6 +141,11 @@
  * header
  */
 /*** Header-Image ***/
+/*header*/
+.site-header .site-info.header-image, .site-header .site-info.no-header-image {
+  margin-right: 0;
+  margin-left: 0; }
+
 /* fullwidth */
 .site-header.container-fluid .site-info.header-image {
   position: relative; }

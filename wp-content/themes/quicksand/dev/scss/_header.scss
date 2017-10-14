@@ -37,6 +37,13 @@
 }
 
 
+/*header*/
+.site-header {
+    .site-info.header-image, .site-info.no-header-image  {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
 
 /* fullwidth */
 .site-header.container-fluid {
