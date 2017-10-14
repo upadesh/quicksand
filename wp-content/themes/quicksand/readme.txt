@@ -73,6 +73,7 @@ Quicksand-Theme uses:
 === 0.7.0 - 14.10.2017 ===
 
 * format-gallery CSS changed
+* header CSS changed
 
 
 

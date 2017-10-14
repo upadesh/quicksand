@@ -5262,7 +5262,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   display: table;
   clear: both; }
 
-.d-block {
+.d-block, .aligncenter {
   display: block !important; }
 
 .d-inline-block {
