@@ -16,7 +16,7 @@
 
 <!-- site-footer-widgetbar -->
 <?php if (is_active_sidebar('sidebar-footer-bottom')) : ?>
-    <div class="container site-footer-widgetbar"> 
+    <div class="container-fluid site-footer-widgetbar"> 
         <!-- site-sidebar widget-area --> 
         <?php dynamic_sidebar('sidebar-footer-bottom'); ?>   
     </div><!-- .site-sidebar.widget-area --> 
